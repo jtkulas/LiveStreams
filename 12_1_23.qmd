@@ -1,0 +1,14 @@
+---
+title: "December 1"
+author: "PSP"
+format: revealjs
+---
+
+## Problem-solving panel Outline (Dec 1)
+
++   Focal issue: 
+    + `revealjs` images
++   Package review:
+    + `Schrute`
++   Shared problem-solving
+
