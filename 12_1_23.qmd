@@ -14,6 +14,16 @@ format:
 engine: knitr                        ## not picking up inline codes
 ---
 
+## Principles of PSP:
+
+### Orientation is fully... 
+
+1. Collaborative
+2. Interactive
+3. Learning  
+    + Mistakes `r emo::ji("sparkling_heart")`
+4. Fun
+
 ## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
 
 :::: {layout="[60,30]"}
@@ -32,4 +42,3 @@ engine: knitr                        ## not picking up inline codes
 :::
 
 ::::
-
