@@ -1,14 +1,34 @@
 ---
-title: "December 1"
-author: "PSP"
-format: revealjs
+title: "PSP"
+author: "Session #1"
+title-slide-attributes: 
+  data-background-image: kiddo.jpg
+  data-background-opacity: "0.8"
+format: 
+  revealjs:
+    theme: [night, custom.scss]
+    logo: "erg2.png"
+    transition: slide
+    background-transition: fade
+    scrollable: true
+engine: knitr                        ## not picking up inline codes
 ---
 
-## Problem-solving panel Outline (Dec 1)
+## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+:::: {layout="[60,30]"}
+
+::: {#first-column}
 
 +   Focal issue: 
     + `revealjs` images
-+   Package review:
-    + `Schrute`
++   Package review
 +   Shared problem-solving
 
+:::
+
+::: {#second-column}
+![](polite.png)
+:::
+
+::::
