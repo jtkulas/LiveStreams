@@ -24,6 +24,11 @@ engine: knitr                        ## not picking up inline codes
     + Mistakes `r emo::ji("sparkling_heart")`
 4. Fun
 
+<img src="https://media.giphy.com/media/l0MYsYmRd4ZQg2YGQ/giphy.gif"
+     width="400" height="400"
+     style="position:absolute; right:0px; top:0px;">
+
+
 ## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
 
 :::: {layout="[60,30]"}
