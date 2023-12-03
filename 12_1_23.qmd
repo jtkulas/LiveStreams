@@ -18,11 +18,11 @@ engine: knitr                        ## not picking up inline codes
 
 ### Orientation is fully... 
 
-1. Collaborative
-2. Interactive
-3. Learning  
+1. Collaborative  `r emo::ji("thought_balloon")`
+2. Interactive `r emo::ji("dizzy")`
+3. Learning `r emo::ji("hatching_chick")` 
     + Mistakes `r emo::ji("sparkling_heart")`
-4. Fun
+4. Fun `r emo::ji("zzz")`
 
 <img src="https://media.giphy.com/media/l0MYsYmRd4ZQg2YGQ/giphy.gif"
      width="400" height="400"
