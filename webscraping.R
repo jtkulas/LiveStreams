@@ -15,9 +15,10 @@ tds <- page %>% html_nodes(".Table__TD:nth-child(8)") %>% html_text()
 
 together <- as.data.frame(cbind(games, attempts, yards, tds))
 use <- data.frame(lapply(together, function(x) as.numeric(as.character(x))))
-use <- cbind(name,position,use)
+position2 <- position[c(TRUE,FALSE)]   ## appears to be reading in 2 at a time
+use <- cbind(name,position2,use)
 
 
 plot_ly(use, x = ~tds, y = ~yards, 
-        text = ~paste("Player: ", name, "<br>Position:", position), 
+        text = ~paste("Player: ", name, "<br>Position:", position2), 
         size = ~attempts, color = ~attempts)
