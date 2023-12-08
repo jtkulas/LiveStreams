@@ -1,6 +1,6 @@
 ---
-title: "PSP"
-author: "Session #1"
+title: "R for <br>Authoring!!"
+author: "PSP Session #1"
 title-slide-attributes: 
   data-background-image: kiddo.jpg
   data-background-opacity: "0.8"
@@ -10,7 +10,8 @@ format:
     logo: "erg2.png"
     transition: slide
     background-transition: fade
-    scrollable: true
+#    scrollable: true                 ## nope
+    mouse-wheel: true                ## yes enables mouse
 engine: knitr                        ## not picking up inline codes
 ---
 
@@ -18,11 +19,11 @@ engine: knitr                        ## not picking up inline codes
 
 ### Orientation is fully... 
 
-1. Collaborative  `r emo::ji("thought_balloon")`
-2. Interactive `r emo::ji("dizzy")`
+1. Collaborative  
+2. Interactive 
 3. Learning `r emo::ji("hatching_chick")` 
     + Mistakes `r emo::ji("sparkling_heart")`
-4. Fun `r emo::ji("zzz")`
+4. Fun `r emo::ji("woman_dancing")`
 
 <img src="https://media.giphy.com/media/l0MYsYmRd4ZQg2YGQ/giphy.gif"
      width="400" height="400"
@@ -37,6 +38,7 @@ engine: knitr                        ## not picking up inline codes
 
 +   Focal issue: 
     + `revealjs` images
+    + `pptx` quirks
 +   Package review
 +   Shared problem-solving
 
