@@ -1,0 +1,58 @@
+---
+title: "R for <br>Authoring!!"
+author: "PSP Session #2"
+title-slide-attributes: 
+  data-background-image: img/session2.jpg
+  data-background-opacity: "0.8"
+format: 
+  revealjs:
+    theme: [night, custom.scss]
+    logo: "erg2.png"
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+engine: knitr                        ## not picking up inline codes
+---
+
+## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+:::: {layout="[40,60]"}
+
+::: {.first-column}
+
++   Recap session #1
++   Focal issue: 
+    + `pptx` quirks `r emo::ji("thinking_face")`
+    + [pandoc guide](https://pandoc.org/MANUAL.html#structuring-the-slide-show)
++   Shared problem-solving
+
+:::
+
+::: {.second-column}
+![](img/title1.JPG)
+:::
+
+::::
+
+## Recap of Session #1:
+
+### `revealjs` column specification:
+
+
+:::: {.columns}
+
+::: {.column width="40%"}
+```{r}
+plot(cars)
+
+```
+:::
+
+::: {.column width="60%"}
+```{r}
+plot(cars)
+```
+:::
+
+::::
+
