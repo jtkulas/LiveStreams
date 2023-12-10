@@ -154,6 +154,9 @@ engine: knitr                        ## not picking up inline codes
 
 ![](img/pptxkittens.png)
 
-[^yabut]: Column width command nonfunctional & built-in capability limited to two columns
-
 :::::
+
+## Yabut...
+
+1. [column width command](https://quarto.org/docs/presentations/powerpoint.html#multiple-columns) nonfunctional, & 
+2. built-in capability [limited to two columns](https://quarto.org/docs/presentations/powerpoint.html)
