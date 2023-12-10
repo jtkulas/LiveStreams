@@ -4,7 +4,7 @@ author: "PSP Session #2"
 title-slide-attributes: 
   data-background-image: img/session2.jpg
   data-background-opacity: "0.8"
-format: 
+format:
   revealjs:
     theme: [night, custom.scss]
     logo: "erg2.png"
@@ -34,25 +34,126 @@ engine: knitr                        ## not picking up inline codes
 
 ::::
 
-## Recap of Session #1:
+# Recap of Session #1:
 
-### `revealjs` column specification:
+## `revealjs` column specification:
 
+::::: {.panel-tabset}
+
+### Code (`r emo::ji("kissing_cat")`)
+
+```
+:::: {.columns}
+
+::: {.column width="40%"}
+![](https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg)
+:::
+
+::: {.column width="60%"}
+![](https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg)
+:::
+
+::::
+```
+### Code (`r emo::ji("tiger")`)
+
+```
+:::: {layout="[60,40]"}
+
+::: {#first-column}
+![](https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg)
+:::
+
+::: {#second-column}
+![](https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg)
+:::
+
+::::
+```
+
+### Output (`r emo::ji("kissing_cat")`)
 
 :::: {.columns}
 
 ::: {.column width="40%"}
-```{r}
-plot(cars)
-
-```
+![](https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg)
 :::
 
 ::: {.column width="60%"}
-```{r}
-plot(cars)
-```
+![](https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg)
 :::
 
 ::::
 
+### Output (`r emo::ji("tiger")`)
+
+:::: {layout="[60,40]"}
+
+::: {#first-column}
+![](https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg)
+:::
+
+::: {#second-column}
+![](https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg)  
+
++ {#...} is merely an html id tag
++ line #96
+
+:::
+
+::::
+
+:::::
+
+## `pptx` column specification
+### both "work": 
+
+::::: {.panel-tabset}
+
+### Code
+
+::::{.columns}
+
+::: {.column width="50%"}
+
+```
+:::: {.columns}
+
+::: {.column width="40%"}
+![](https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg)
+:::
+
+::: {.column width="60%"}
+![](https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg)
+:::
+
+::::
+```
+:::
+
+::: {.column width="50%"}
+
+```
+:::: {layout="[60,40]"}
+
+::: {#first-column}
+![](https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg)
+:::
+
+::: {#second-column}
+![](https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg)
+:::
+
+::::
+```
+::: 
+
+::::
+
+### Output
+
+![](img/pptxkittens.png)
+
+[^yabut]: Column width command nonfunctional & built-in capability limited to two columns
+
+:::::
