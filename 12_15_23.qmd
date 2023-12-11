@@ -11,6 +11,7 @@ format:
     transition: slide
     background-transition: fade
     mouse-wheel: true                ## yes enables mouse
+    preview-links: true              ## true brings up iframe window instead of "site"
 engine: knitr                        ## not picking up inline codes
 ---
 
