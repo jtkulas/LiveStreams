@@ -161,3 +161,14 @@ engine: knitr                        ## not picking up inline codes
 
 1. [column width command](https://quarto.org/docs/presentations/powerpoint.html#multiple-columns) nonfunctional, & 
 2. built-in capability [limited to two columns](https://quarto.org/docs/presentations/powerpoint.html)
+
+::: {.fragment}
+### So Howbout:
+:::
+
+::: {.fragment}
+1. gridExtra `r emo::ji("question_mark")``r emo::ji("question_mark")``r emo::ji("question_mark")`
+2. parmf(row) `r emo::ji("question_mark")``r emo::ji("question_mark")``r emo::ji("question_mark")`
+3. play with .pptx "template" `r emo::ji("question_mark")``r emo::ji("question_mark")``r emo::ji("question_mark")`
+:::
+
