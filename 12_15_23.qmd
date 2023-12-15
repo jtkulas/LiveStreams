@@ -94,7 +94,7 @@ engine: knitr                        ## not picking up inline codes
 ![](https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg)
 :::
 
-::: {#second-column}
+::: {#heykitty}
 ![](https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg)  
 
 + {#...} is merely an html id tag
@@ -161,6 +161,7 @@ engine: knitr                        ## not picking up inline codes
 
 1. [column width command](https://quarto.org/docs/presentations/powerpoint.html#multiple-columns) nonfunctional, & 
 2. built-in capability [limited to two columns](https://quarto.org/docs/presentations/powerpoint.html)
+3. [Pandoc layout requirements](https://www.meyerperin.com/using-quarto/#powerpoint-layout-rules)
 
 ::: {.fragment}
 ### So Howbout:
@@ -170,5 +171,11 @@ engine: knitr                        ## not picking up inline codes
 1. gridExtra `r emo::ji("question_mark")``r emo::ji("question_mark")``r emo::ji("question_mark")`
 2. parmf(row) `r emo::ji("question_mark")``r emo::ji("question_mark")``r emo::ji("question_mark")`
 3. play with .pptx "template" `r emo::ji("question_mark")``r emo::ji("question_mark")``r emo::ji("question_mark")`
+4. Multiple images within columns (stacked)
 :::
 
+## trying
+
+![](https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg){.absolute bottom=0 right=50 width="300" height="300"}
+
+![](https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg){.absolute bottom=0 left=50 width="500" height="400"}
