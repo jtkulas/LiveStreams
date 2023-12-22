@@ -19,6 +19,7 @@ position2 <- position[c(TRUE,FALSE)]   ## appears to be reading in 2 at a time
 use <- cbind(name,position2,use)
 
 
-plot_ly(use, x = ~tds, y = ~yards, 
+rbs <- plot_ly(use, x = ~tds, y = ~yards, 
         text = ~paste("Player: ", name, "<br>Position:", position2), 
         size = ~attempts, color = ~attempts)
+
