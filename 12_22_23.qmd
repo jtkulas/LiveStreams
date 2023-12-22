@@ -44,11 +44,11 @@ engine: knitr                        ## not picking up inline codes
 
 ![](img/gotitpptx.JPG)
 
-### Not yet
+### Not yet {#not-yet}
 
 ![](img/notyetpptx.JPG)
 
-### Aspiration
+### Aspiration {#aspire}
 
 ![](img/desiredpptx.JPG)
 
@@ -93,14 +93,12 @@ engine: knitr                        ## not picking up inline codes
 ::: {.fragment}
 ### Possible work-arounds:
 
-1. `gridExtra` (& similar)[^footie]
+1. `gridExtra` (& similar)^[`ggpubr::ggarrange`; `cowplot::plot_grid`; `gridExtra::grid.arrange`;  `base::parmf(row)`]
 2. play with .pptx "template" 
 3. ~~Multiple images within columns (stacked)~~
 :::
-[^footie]: `ggpubr::ggarrange`; `cowplot::plot_grid`; `gridExtra::grid.arrange`;  `base::parmf(row)`
 
-
-## `ggpubr`:
+## "Not yet" (via `ggpubr`):
 
 ```{r}
 library(ggplot2)
@@ -115,15 +113,15 @@ p4 <-
   ggtitle("facetted plot")
 
 
-ggpubr::ggarrange(p1, p2, p3, p4, ncol=2,nrow=2, widths = c(2,1)) # First column twice as wide as second
+ggpubr::ggarrange(p2, p3, ncol=2,nrow=1, widths = c(2,1)) # First column twice as wide as second
 
 ```
 
-## `gridExtra`:
+## "Aspiration" (via `gridExtra`):
 
 ```{r}
-gridExtra::grid.arrange(p1,p2,p3,p4, layout_matrix = rbind(c(1,2,3),
-      c(4,4,4)))
+gridExtra::grid.arrange(p2,p3,p1, layout_matrix = rbind(c(3,3),
+      c(1,2)))
 ```
 
 
