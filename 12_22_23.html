@@ -336,8 +336,8 @@ PSP Session #3
 </div>
 
 </section>
-<section id="problem-solving-panel-december-21-2023" class="slide level2">
-<h2>Problem-Solving Panel <br>(December 21, 2023)</h2>
+<section id="problem-solving-panel-december-22-2023" class="slide level2">
+<h2>Problem-Solving Panel <br>(December 22, 2023)</h2>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="first-column quarto-layout-cell" style="flex-basis: 45.0%;justify-content: center;">
@@ -345,12 +345,7 @@ PSP Session #3
 <li>Recap session #2 ↪️</li>
 <li>Focal issue: 🤔
 <ul>
-<li><code>pptx</code> figure control
-<ul>
-<li><code>ggpubr::ggarrange</code></li>
-<li><code>cowplot::plot_grid</code></li>
-<li><code>gridExtra::</code></li>
-</ul></li>
+<li><code>pptx</code> figure control</li>
 </ul></li>
 <li>Shared problem-solving</li>
 </ul>
@@ -368,8 +363,21 @@ PSP Session #3
 </section>
 <section id="desired-.pptx-figure-locations" class="slide level2">
 <h2>Desired <code>.pptx</code> Figure locations:</h2>
-
-<img data-src="img/desiredpptx.JPG" class="r-stretch"></section>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Got it</a></li><li><a href="#tabset-1-2">Not yet</a></li><li><a href="#tabset-1-3">Aspiration</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<p><img data-src="img/gotitpptx.JPG"></p>
+</div>
+<div id="tabset-1-2">
+<p><img data-src="img/notyetpptx.JPG"></p>
+</div>
+<div id="tabset-1-3">
+<p><img data-src="img/desiredpptx.JPG"></p>
+</div>
+</div>
+</div>
+</section>
 <section id="pptx-column-specification" class="slide level2">
 <h2><code>pptx</code> column specification:</h2>
 <div class="columns">
@@ -401,16 +409,13 @@ PSP Session #3
 <div class="fragment">
 <!-- -->
 <h3 id="possible-work-arounds">Possible work-arounds:</h3>
-</div>
-<div class="fragment">
 <ol type="1">
-<li><code>gridExtra</code> (&amp; similar)</li>
-<li><code>parmf(row)</code></li>
+<li><code>gridExtra</code> (&amp; similar)<sup>1</sup></li>
 <li>play with .pptx “template”</li>
 <li><del>Multiple images within columns (stacked)</del></li>
 </ol>
 </div>
-</section>
+<aside><ol class="aside-footnotes"><li id="fn1"><p><code>ggpubr::ggarrange</code>; <code>cowplot::plot_grid</code>; <code>gridExtra::grid.arrange</code>; <code>base::parmf(row)</code></p></li></ol></aside></section>
 <section id="ggpubr" class="slide level2">
 <h2><code>ggpubr</code>:</h2>
 
@@ -427,6 +432,7 @@ PSP Session #3
 
 </div>
 </section></section>
+
     </div>
   </div>
 
