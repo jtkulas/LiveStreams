@@ -1,25 +1,48 @@
 ---
-title: "Untitled"
+title: "trying figure formatting"
+author: "3 cool people"
 format: 
   revealjs:
-    mouse-wheel: true  
-editor: visual
+    mouse-wheel: true 
 ---
 
-### Output
+## Trying 1
 
+```{r}
+library(ggplot2)
+library(palmerpenguins)
 
+iris2 <- ggplot(iris, aes(x=Petal.Length, y=Petal.Width)) +
+  geom_point()
 
-::: {layout="[60,40]"}
-::: {#first-column}
-![](https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg){fig.height="80%"} ![](https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg){fig.height="10%"}
-:::
+cars <- ggplot(mtcars, aes(x=hp, y=mpg)) + geom_point(size=3)
 
-::: {#second-column}
-![](https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg)
-:::
-:::
+mass_hist <- ggplot(data = penguins, aes(x = body_mass_g)) + geom_histogram(aes(fill = species), alpha = 0.5, position = "identity") + scale_fill_manual(values = c("darkorange","purple","cyan4")) + labs(x = "Body mass (g)", y = "Frequency", title = "Penguin body mass") 
 
-## Output 2
+iris2
+```
 
-![](cat-2083492_1280.jpg){.absolute bottom=0 left=50 width="500" height="400"}
+## Trying 2
+
+```{r}
+#| eval=TRUE
+#| 
+cars
+```
+
+## Trying 3
+
+```{r}
+mass_hist
+```
+
+## All together
+
+```{r}
+
+gridExtra::grid.arrange(cars,iris2,mass_hist, 
+                        layout_matrix = rbind(c(3,3),
+                                              c(1,2)))
+
+```
+
