@@ -76,17 +76,16 @@ engine: knitr                        ## not picking up inline codes
 
 ## Identified issues:
 
-1. [column width command](https://quarto.org/docs/presentations/powerpoint.html#multiple-columns) nonfunctional, & 
-2. built-in capability [limited to two columns](https://quarto.org/docs/presentations/powerpoint.html)
-3. [Pandoc layout requirements](https://www.meyerperin.com/using-quarto/#powerpoint-layout-rules)
+1. [column width command](https://quarto.org/docs/presentations/powerpoint.html#multiple-columns) nonfunctional (.pptx) 
+2. built-in [Pandoc](https://www.meyerperin.com/using-quarto/#powerpoint-layout-rules) functionality [limited to two columns](https://quarto.org/docs/presentations/powerpoint.html)
 
 ::: {.fragment}
 ### Possible work-arounds:
 :::
 
 ::: {.fragment}
-1. gridExtra (& similar)
-2. parmf(row) 
+1. `gridExtra` (& similar)
+2. `parmf(row)` 
 3. play with .pptx "template" 
 4. ~~Multiple images within columns (stacked)~~
 :::
@@ -113,14 +112,8 @@ ggpubr::ggarrange(p1, p2, p3, p4, ncol=2,nrow=2)#widths = c(1,3))
 ## `gridExtra`:
 
 ```{r}
-gridExtra::grid.arrange(p1,p2,p3,p4, layout_matrix = rbind(c(1,1,1),c(2,3,4)))
+gridExtra::grid.arrange(p1,p2,p3,p4, layout_matrix = rbind(c(1,2,3),
+      c(4,4,4)))
 ```
 
-## Trying source chunk
 
-```{r}
-source("webscraping.R", local = knitr::knit_global())
-
-rbs
-
-```
