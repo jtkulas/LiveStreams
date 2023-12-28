@@ -52,22 +52,25 @@ engine: knitr                        ## not picking up inline codes
 
 ![](https://media.giphy.com/media/9rifLrEnknU4Ko2LOV/giphy-downsized-large.gif){.absolute top="100" right="50" height="550"}
 
-## `gridExtra::grid.arrange`:
+## The `gridExtra` approach:
 
 ::::: {.panel-tabset}
 
 ### Code
 
-```{r, echo=TRUE, eval=FALSE, `code-line-numbers`="2|8,9"}
-
+```{r, echo=TRUE, eval=FALSE, `code-line-numbers`="3|12,13"}
 library(ggplot2)
+library(palmerpenguins)
 library(gridExtra)
 
-p1 <- qplot(mpg, wt, data = mtcars, colour = cyl)
-p2 <- qplot(mpg, data = mtcars) + ggtitle("title")
-p3 <- qplot(mpg, data = mtcars, geom = "dotplot")
+p1 <- ggplot(iris, aes(x=Petal.Length, y=Petal.Width)) +
+  geom_point()
 
-gridExtra::grid.arrange(p2,p3,p1, layout_matrix = rbind(c(3,3),
+p2 <- ggplot(mtcars, aes(x=hp, y=mpg)) + geom_point(size=3)
+
+p3 <- ggplot(data = penguins, aes(x = body_mass_g)) + geom_histogram(aes(fill = species), alpha = 0.5, position = "identity") + scale_fill_manual(values = c("darkorange","purple","cyan4")) + labs(x = "Body mass (g)", y = "Frequency", title = "Penguin body mass") 
+
+gridExtra::grid.arrange(p1,p2,p3, layout_matrix = rbind(c(3,3),
       c(1,2)))
 ```
 
@@ -75,14 +78,17 @@ gridExtra::grid.arrange(p2,p3,p1, layout_matrix = rbind(c(3,3),
 
 ```{r}
 library(ggplot2)
+library(palmerpenguins)
 library(gridExtra)
-library(gtable)
 
-p1 <- qplot(mpg, wt, data = mtcars, colour = cyl)
-p2 <- qplot(mpg, data = mtcars) + ggtitle("title")
-p3 <- qplot(mpg, data = mtcars, geom = "dotplot")
+p1 <- ggplot(iris, aes(x=Petal.Length, y=Petal.Width)) +
+  geom_point()
 
-gridExtra::grid.arrange(p2,p3,p1, layout_matrix = rbind(c(3,3),
+p2 <- ggplot(mtcars, aes(x=hp, y=mpg)) + geom_point(size=3)
+
+p3 <- ggplot(data = penguins, aes(x = body_mass_g)) + geom_histogram(aes(fill = species), alpha = 0.5, position = "identity") + scale_fill_manual(values = c("darkorange","purple","cyan4")) + labs(x = "Body mass (g)", y = "Frequency", title = "Penguin body mass") 
+
+gridExtra::grid.arrange(p1,p2,p3, layout_matrix = rbind(c(3,3),
       c(1,2)))
 ```
 
