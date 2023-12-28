@@ -1,0 +1,89 @@
+---
+title: "R for <br>Authoring!!"
+author: "PSP Session #4"
+title-slide-attributes: 
+  data-background-image: img/session5.webp
+  data-background-opacity: "0.8"
+format:
+  revealjs:
+    theme: [night, custom.scss]
+    logo: "erg2.png"
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: true              ## true brings up iframe window instead of "site"
+engine: knitr                        ## not picking up inline codes
+---
+
+## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+:::: {layout="[80,20]"}
+
+::: {.first-column}
++   Recap session #3 
++   Focal issue(s): 
+    + Short-term
+      + Academic paper <br>images `r emo::ji("books")`
+    + Long-term: 
+      + $\LaTeX$ dissertation template `r emo::ji("graduation_cap")`
++   Shared problem-solving
+:::
+
+::: {.second-column}
+:::
+
+::::
+
+![](img/titel3.PNG){.absolute top="170" right="0" width="500" height="300"}
+
+# Recap of Session #3:
+
+## Desired `.pptx` Figure locations:
+
+![](img/desiredpptx.JPG)
+
+
+## Verified work-arounds:
+
++ `ggpubr::ggarrange`
++ `cowplot::plot_grid` 
++ `gridExtra::grid.arrange`
++ `base::parmf(row)`
+
+![](https://media.giphy.com/media/9rifLrEnknU4Ko2LOV/giphy-downsized-large.gif){.absolute top="100" right="50" height="550"}
+
+## `gridExtra::grid.arrange`:
+
+::::: {.panel-tabset}
+
+### Code
+
+```{r, eval=FALSE}
+library(ggplot2)
+library(gridExtra)
+library(gtable)
+
+p1 <- qplot(mpg, wt, data = mtcars, colour = cyl)
+p2 <- qplot(mpg, data = mtcars) + ggtitle("title")
+p3 <- qplot(mpg, data = mtcars, geom = "dotplot")
+
+gridExtra::grid.arrange(p2,p3,p1, layout_matrix = rbind(c(3,3),
+      c(1,2)))
+```
+
+### Output
+
+```{r}
+library(ggplot2)
+library(gridExtra)
+library(gtable)
+
+p1 <- qplot(mpg, wt, data = mtcars, colour = cyl)
+p2 <- qplot(mpg, data = mtcars) + ggtitle("title")
+p3 <- qplot(mpg, data = mtcars, geom = "dotplot")
+
+gridExtra::grid.arrange(p2,p3,p1, layout_matrix = rbind(c(3,3),
+      c(1,2)))
+```
+
+::::
