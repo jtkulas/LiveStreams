@@ -20,7 +20,7 @@ engine: knitr                        ## not picking up inline codes
 :::: {layout="[80,20]"}
 
 ::: {.first-column}
-+   Recap session #3 
++   Recap session #3 `r emo::ji("left_right_arrow")`
 +   Focal issue(s): 
     + Short-term
       + Academic paper <br>images `r emo::ji("books")`
@@ -34,7 +34,7 @@ engine: knitr                        ## not picking up inline codes
 
 ::::
 
-![](img/titel3.PNG){.absolute top="170" right="0" width="500" height="300"}
+![](img/titel3.PNG){.absolute top="190" right="0" width="550" height="325"}
 
 # Recap of Session #3:
 
@@ -58,10 +58,10 @@ engine: knitr                        ## not picking up inline codes
 
 ### Code
 
-```{r, eval=FALSE}
+```{r, echo=TRUE, eval=FALSE, `code-line-numbers`="2|8,9"}
+
 library(ggplot2)
 library(gridExtra)
-library(gtable)
 
 p1 <- qplot(mpg, wt, data = mtcars, colour = cyl)
 p2 <- qplot(mpg, data = mtcars) + ggtitle("title")
