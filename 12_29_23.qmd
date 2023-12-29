@@ -93,3 +93,12 @@ gridExtra::grid.arrange(p1,p2,p3, layout_matrix = rbind(c(3,3),
 ```
 
 ::::
+
+## `r format(Sys.Date(),"%B %d, %Y")` focal issues:
+
++ Short-term
+  + Academic paper <br>images `r emo::ji("books")`
++ Long-term: 
+  + $\LaTeX$ dissertation <br>template `r emo::ji("graduation_cap")`
+  
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Magnifying_glass_CC0.svg/1200px-Magnifying_glass_CC0.svg.png){.absolute bottom="50" right="0" height="500"}
