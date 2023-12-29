@@ -102,5 +102,6 @@ gridExtra::grid.arrange(p1,p2,p3, layout_matrix = rbind(c(3,3),
   + $\LaTeX$ dissertation <br>template `r emo::ji("graduation_cap")`
     + [Bookdown-ish](https://github.com/ismayc/thesisdown)
     + [.cls-driven](https://tysonbarrett.com/jekyll/update/2018/02/11/r_dissertation/)
+      + [Writing .cls](https://www.overleaf.com/learn/latex/Writing_your_own_class)
   
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Magnifying_glass_CC0.svg/1200px-Magnifying_glass_CC0.svg.png){.absolute bottom="50" right="0" height="500"}
