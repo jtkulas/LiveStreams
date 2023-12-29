@@ -11,7 +11,7 @@ format:
     transition: slide
     background-transition: fade
     mouse-wheel: true                ## yes enables mouse
-    preview-links: true              ## true brings up iframe window instead of "site"
+    preview-links: false              ## true brings up iframe window instead of "site"
 engine: knitr                        ## not picking up inline codes
 ---
 
@@ -100,5 +100,7 @@ gridExtra::grid.arrange(p1,p2,p3, layout_matrix = rbind(c(3,3),
   + Academic paper <br>images `r emo::ji("books")`
 + Long-term: 
   + $\LaTeX$ dissertation <br>template `r emo::ji("graduation_cap")`
+    + [Bookdown-ish](https://github.com/ismayc/thesisdown)
+    + [.csl-driven](https://tysonbarrett.com/jekyll/update/2018/02/11/r_dissertation/)
   
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Magnifying_glass_CC0.svg/1200px-Magnifying_glass_CC0.svg.png){.absolute bottom="50" right="0" height="500"}
