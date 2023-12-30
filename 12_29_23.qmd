@@ -89,6 +89,8 @@ gridExtra::grid.arrange(p1,p2,p3, layout_matrix = rbind(c(3,3),
 ```
 :::
 
+# Forward focus
+
 ## `r format(Sys.Date(),"%B %d, %Y")` focal issues:
 
 -   Short-term
