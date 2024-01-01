@@ -1,0 +1,83 @@
+---
+title: "R for <br>Authoring!!"
+author: "PSP Session #5"
+title-slide-attributes: 
+  data-background-image: img/session4.png
+  data-background-opacity: "0.8"
+format:
+  revealjs:
+    theme: [night, custom.scss]
+    logo: "erg2.png"
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false              ## true brings up iframe window instead of "site"
+engine: knitr                        ## not picking up inline codes
+---
+
+## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #4 `r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    -   Short-term
+        -   Academic paper <br>images `r emo::ji("books")`
+    -   Long-term:
+        -   $\LaTeX$ dissertation template `r emo::ji("graduation_cap")`
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+:::
+
+![](img/title4.JPG){.absolute top="190" right="0" width="550" height="325"}
+
+# Recap of Session #4:
+
+## Images in academic papers:
+
+::: panel-tabset
+### Code
+
+```{r, echo=TRUE, eval=FALSE, fig.cap="LePine's (2022) revised challenge-hindrance stressor framework.", `code-line-numbers`="1,4|2,5"}
+library(magick)
+library(grid)
+
+figure <- image_read("Reproduced_LepineFigure.png")
+grid.raster(figure) # works well with margins/etc
+
+```
+
+### Output
+
+![](img/academicpaperimage.JPG){fig-align="center"}
+
+:::
+
+## Dissertation formatting `r emo::ji("graduation_cap")`:
+
+# Forward focus
+
+## `r format(Sys.Date(),"%B %d, %Y")` focal issues:
+
+-   Short-term
+    -   Academic paper <br>images `r emo::ji("books")`
+-   Long-term:
+    -   $\LaTeX$ dissertation <br>template `r emo::ji("graduation_cap")`
+        -   [Bookdown-ish](https://github.com/ismayc/thesisdown)
+        -   [.cls-driven](https://tysonbarrett.com/jekyll/update/2018/02/11/r_dissertation/)
+            -   [Writing .cls](https://www.overleaf.com/learn/latex/Writing_your_own_class)
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Magnifying_glass_CC0.svg/1200px-Magnifying_glass_CC0.svg.png){.absolute bottom="50" right="0" height="500"}
+
+## Next steps for $\LaTeX$:
+
+1. Check for current template
+    + Graduate school
+    + Hard sciences: Math, Computer Science, Physics, Astronomy
+    + Business school
+2. Choose path
+    + .cls specification
+    + Thesisdown
