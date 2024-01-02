@@ -22,7 +22,7 @@ engine: knitr                        ## not picking up inline codes
 -   Recap session #4 `r emo::ji("left_right_arrow")`
 -   Focal issue(s):
     -   Short-term
-        -   Academic paper <br>images `r emo::ji("books")`
+        -   font control `r emo::ji("black_nib")`
     -   Long-term:
         -   $\LaTeX$ dissertation template `r emo::ji("graduation_cap")`
 -   Shared problem-solving
@@ -58,26 +58,25 @@ grid.raster(figure) # works well with margins/etc
 
 ## Dissertation formatting `r emo::ji("graduation_cap")`:
 
-# Forward focus
+1. Check for current template
+    + Graduate school
+    + Hard sciences: Math, Computer Science, Physics, Astronomy
+2. Choose path
+    + [.cls specification](https://tysonbarrett.com/jekyll/update/2018/02/11/r_dissertation/)
+    + [Thesisdown](https://github.com/ismayc/thesisdown)
+
+![](https://embracethechaos.com/wp-content/uploads/2015/11/shutterstock_115238050-768x515-1.jpg){.absolute bottom="0" right="0" width="550" height="325"}
+
+# Today:
 
 ## `r format(Sys.Date(),"%B %d, %Y")` focal issues:
 
 -   Short-term
-    -   Academic paper <br>images `r emo::ji("books")`
+    -   font control `r emo::ji("black_nib")`
 -   Long-term:
     -   $\LaTeX$ dissertation <br>template `r emo::ji("graduation_cap")`
-        -   [Bookdown-ish](https://github.com/ismayc/thesisdown)
-        -   [.cls-driven](https://tysonbarrett.com/jekyll/update/2018/02/11/r_dissertation/)
-            -   [Writing .cls](https://www.overleaf.com/learn/latex/Writing_your_own_class)
-
+        
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Magnifying_glass_CC0.svg/1200px-Magnifying_glass_CC0.svg.png){.absolute bottom="50" right="0" height="500"}
 
-## Next steps for $\LaTeX$:
 
-1. Check for current template
-    + Graduate school
-    + Hard sciences: Math, Computer Science, Physics, Astronomy
-    + Business school
-2. Choose path
-    + .cls specification
-    + Thesisdown
+
