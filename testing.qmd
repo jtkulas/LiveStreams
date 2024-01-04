@@ -1,10 +1,12 @@
 ---
 title: "trying figure formatting"
 author: "3 cool people"
-format: 
-  revealjs:
-    mouse-wheel: true 
+format: pdf
+    #mainfont: Comic Sans MS
+    #mainfont: Arial
 ---
+
+The quick brown fox jumps over the lazy dog
 
 ## Trying 1
 
