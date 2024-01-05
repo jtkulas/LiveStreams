@@ -15,6 +15,10 @@ format:
 engine: knitr                        ## not picking up inline codes
 ---
 
+```{r}
+devtools::install_github("hadley/emo")
+```
+
 ## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
 
 ::: {layout="[80,20]"}

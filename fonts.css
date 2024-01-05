@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Big Shoulders Stencil Text');
-@import url('https://fonts.googleapis.com/css?family=Saira Stencil One');
+@import url('https://fonts.googleapis.com/css?family=Bungee Spice');
+@import url('https://fonts.googleapis.com/css?family=Allerta Stencil');
 
 body {
-  font-family: 'Big Shoulders Stencil Text';
+  font-family: 'Bungee Spice';
 }
 
 .kulas {
-  font-family: 'Saira Stencil One'
+  font-family: 'Allerta Stencil';
+}
+
+.bungee {
+  font-family: 'Bungee Spice';
 }
