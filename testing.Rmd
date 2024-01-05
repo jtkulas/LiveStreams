@@ -1,9 +1,9 @@
 ---
 title: "Untitled"
 format: 
-  pdf:
+  html:
     css: fonts.css
-#    mainfont: crackle
+#    mainfont: Oswald
 ---
 
 ## Quarto

@@ -32,7 +32,7 @@ engine: knitr                        ## not picking up inline codes
 :::
 :::
 
-![](img/title4.JPG){.absolute top="190" right="0" width="550" height="325"}
+![](img/title4.JPG){.absolute top="170" right="0" width="550" height="325"}
 
 # Recap of Session #4:
 
@@ -72,7 +72,10 @@ grid.raster(figure) # works well with margins/etc
 ## `r format(Sys.Date(),"%B %d, %Y")` focal issues:
 
 -   Short-term
-    -   font control `r emo::ji("black_nib")`
+    -   font control `r emo::ji("black_nib")`  
+          - YAML `mainfont:`
+          - Google API
+          - .css overriding
 -   Long-term:
     -   $\LaTeX$ dissertation <br>template `r emo::ji("graduation_cap")`
         
