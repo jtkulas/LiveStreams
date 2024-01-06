@@ -1,14 +1,14 @@
 ---
 title: "Untitled"
 format: 
-  revealjs:
+  html:
     css: fonts.css
 #    mainfont: Bungee Spice
 ---
 
 ## Quarto
 
-[Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.]{.bungee}
+[Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.]{.kulas}
 
 ## Running Code
 

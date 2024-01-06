@@ -1,12 +1,12 @@
 ---
 title: "R for <br>Authoring!!"
-author: "PSP Session #5"
+author: "PSP Session #6"
 title-slide-attributes: 
-  data-background-image: img/session4.png
+  data-background-image: img/session6c.jpg
   data-background-opacity: "0.8"
 format:
   revealjs:
-    theme: [night, custom2.scss]
+    theme: [night, custom.scss]
     logo: "erg2.png"
     transition: slide
     background-transition: fade
@@ -23,7 +23,7 @@ devtools::install_github("hadley/emo")
 
 ::: {layout="[80,20]"}
 ::: first-column
--   Recap session #4 `r emo::ji("left_right_arrow")`
+-   Recap session #5 `r emo::ji("left_right_arrow")`
 -   Focal issue(s):
     -   Short-term
         -   font control `r emo::ji("black_nib")`
@@ -36,11 +36,11 @@ devtools::install_github("hadley/emo")
 :::
 :::
 
-![](img/title4.JPG){.absolute top="170" right="0" width="550" height="325"}
+![](img/title5.JPG){.absolute top="170" right="0" width="550" height="325"}
 
-# Recap of Session #4:
+# Recap of Session #5:
 
-## Images in academic papers:
+## Font control:
 
 ::: panel-tabset
 ### Code
@@ -82,6 +82,7 @@ grid.raster(figure) # works well with margins/etc
           - .css overriding
 -   Long-term:
     -   $\LaTeX$ dissertation <br>template `r emo::ji("graduation_cap")`
+    - Custom a Quarto template: https://quarto.org/docs/extensions/formats.html
         
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Magnifying_glass_CC0.svg/1200px-Magnifying_glass_CC0.svg.png){.absolute bottom="50" right="0" height="500"}
 

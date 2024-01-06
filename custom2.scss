@@ -4,21 +4,11 @@ $body-bg: #191919;
 $body-color: #fff;
 $link-color: #42affa;
 $code-color: hotpink;
-$presentation-title-slide-text-align: right;
-$presentation-title-slide-text-color: black;
+$presentation-title-slide-text-align: left;
 
 /*-- scss:rules --*/
 
 .reveal .slide blockquote {
   border-left: 3px solid $text-muted;
   padding-left: 0.5em;
-}
-
-.title {
-  color: black !important;
-}
-
-.quarto-title-author-name {
-  font-size: 50px;
-  color: black !important;
 }
