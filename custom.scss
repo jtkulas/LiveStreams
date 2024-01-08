@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing Script');
+
 /*-- scss:defaults --*/
 
 $body-bg: #191919;
@@ -19,6 +21,8 @@ $presentation-title-slide-text-color: black;
 }
 
 .quarto-title-author-name {
-  font-size: 50px;
+  font-size: 65px;
   color: black !important;
+  font-weight: bold;
+  font-family: 'Dancing Script';
 }
