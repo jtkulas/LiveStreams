@@ -2,16 +2,18 @@
 title: "R for <br>Authoring!!"
 author: "PSP Session #6"
 title-slide-attributes: 
-  data-background-image: img/session6c.jpg
-  data-background-opacity: "0.8"
+  data-background-image: img/try.png
+  data-background-opacity: ".5"
 format:
   revealjs:
+    code-overflow: wrap              ## instead of horizontal scroll
     theme: [night, custom.scss]
     logo: "erg2.png"
     transition: slide
     background-transition: fade
     mouse-wheel: true                ## yes enables mouse
     preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
 engine: knitr                        ## not picking up inline codes
 ---
 
@@ -26,7 +28,7 @@ devtools::install_github("hadley/emo")
 -   Recap session #5 `r emo::ji("left_right_arrow")`
 -   Focal issue(s):
     -   Short-term
-        -   font control `r emo::ji("black_nib")`
+        -   "Callouts"
     -   Long-term:
         -   $\LaTeX$ dissertation template `r emo::ji("graduation_cap")`
 -   Shared problem-solving
@@ -43,48 +45,81 @@ devtools::install_github("hadley/emo")
 ## Font control:
 
 ::: panel-tabset
-### Code
+### Quarto file
 
-```{r, echo=TRUE, eval=FALSE, fig.cap="LePine's (2022) revised challenge-hindrance stressor framework.", `code-line-numbers`="1,4|2,5"}
-library(magick)
-library(grid)
+```{r}
+#| echo: true
+#| eval: false
+#| tidy.opts: 
+#|   - width.cutoff: 60
+---
+title: "Untitled"
+format: 
+  html:                       
+    css: fonts.css                  # <1>
+#    mainfont: Bungee Spice         # <1>
+---
 
-figure <- image_read("Reproduced_LepineFigure.png")
-grid.raster(figure) # works well with margins/etc
+## Quarto
+
+[Quarto enables you to weave together content and
+ executable code into a finished document. To learn 
+ more about Quarto see <https://quarto.org>.]{.kulas}
+
+## Running Code
+```
+1. `mainfont` specification requires local installation of font; .css chunk has same effect as isolated file
+
+### .css 
+
+```{r, echo=TRUE, eval=FALSE, `code-line-numbers`="1,4,5,6,12,13,14|2,8,9,10"}
+@import url('https://fonts.googleapis.com/css?family=Bungee Spice');
+@import url('https://fonts.googleapis.com/css?family=Allerta Stencil');
+
+body {                                    
+  font-family: 'Bungee Spice';           
+}                                        
+
+.kulas {
+  font-family: 'Allerta Stencil';
+}
+
+.bungee {
+  font-family: 'Bungee Spice';
+}
 
 ```
 
 ### Output
 
-![](img/academicpaperimage.JPG){fig-align="center"}
+![](img/bungeefont.JPG){fig-align="center"}
 
 :::
 
 ## Dissertation formatting `r emo::ji("graduation_cap")`:
 
-1. Check for current template
-    + Graduate school
-    + Hard sciences: Math, Computer Science, Physics, Astronomy
-2. Choose path
+1. Looked into & ran locally: `r emo::ji("ok")`
+    + [Thesisdown](https://github.com/ismayc/thesisdown) 
+3. Yet to look into: `r emo::ji("construction")`
+    + Current template already exist?
+        + Graduate school
+        + Hard sciences: Math, Computer Science, <br>Physics, Astronomy
     + [.cls specification](https://tysonbarrett.com/jekyll/update/2018/02/11/r_dissertation/)
-    + [Thesisdown](https://github.com/ismayc/thesisdown)
-
-![](https://embracethechaos.com/wp-content/uploads/2015/11/shutterstock_115238050-768x515-1.jpg){.absolute bottom="0" right="0" width="550" height="325"}
+    + Customize a [Quarto template](https://quarto.org/docs/extensions/formats.html); Also [see here](https://quarto.org/docs/authoring/front-matter.html)
 
 # Today:
 
 ## `r format(Sys.Date(),"%B %d, %Y")` focal issues:
 
 -   Short-term
-    -   font control `r emo::ji("black_nib")`  
-          - YAML `mainfont:`
-          - Google API
-          - .css overriding
+    -   "Callouts"
 -   Long-term:
     -   $\LaTeX$ dissertation <br>template `r emo::ji("graduation_cap")`
-    - Custom a Quarto template: https://quarto.org/docs/extensions/formats.html
+
         
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Magnifying_glass_CC0.svg/1200px-Magnifying_glass_CC0.svg.png){.absolute bottom="50" right="0" height="500"}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Magnifying_glass_CC0.svg/1200px-Magnifying_glass_CC0.svg.png){.absolute top="75" right="180" height="350"}
 
-
+::: {.callout-note}
+5 [pre-programmed callout types](https://quarto.org/docs/authoring/callouts.html) with Quarto
+:::
 
