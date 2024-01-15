@@ -1,28 +1,35 @@
 ---
 title: "Untitled"
-format: 
-  html:
-    css: fonts.css
-#    mainfont: Bungee Spice
+format: revealjs
 ---
 
 ## Quarto
 
-[Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.]{.kulas}
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
 
-## Running Code
+:::{.callout-note}
+Hey this is a note
+:::
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+## slide2
+:::{.callout-warning}
+Oh no lookout!!!!
+:::
 
-```{r}
-1 + 1
-```
+## Slide 43
 
-You can add options to executable code like this
+:::{.callout-important}
+Hey big dummy make sure to pay attention!!
+:::
 
-```{r}
-#| echo: false
-2 * 2
-```
+Slide 78
 
-The `echo: false` option disables the printing of code (only output is displayed).
+:::{.callout-tip}
+A tip is money that you leave your bartender
+:::
+
+## again
+:::{.callout-caution collapse="true"}
+Look out!!! Falling Rocks!!!
+![](https://www.shutterstock.com/image-vector/warning-falling-rocks-sign-symbol-260nw-666598048.jpg)
+:::

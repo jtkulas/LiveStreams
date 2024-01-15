@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing Script');
+
+/*-- scss:defaults --*/
+
+$body-bg: #191919;
+$body-color: #fff;
+$link-color: #42affa;
+$code-color: hotpink;
+$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-color: white;
+
+/*-- scss:rules --*/
+
+.reveal .slide blockquote {
+  border-left: 3px solid $text-muted;
+  padding-left: 0.5em;
+}
+
+.title {
+  color: white !important;
+}
+
+.quarto-title-author-name {
+  font-size: 65px;
+  color: white !important;
+  font-weight: bold;
+  font-family: 'Dancing Script';
+}

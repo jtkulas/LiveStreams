@@ -1,0 +1,121 @@
+---
+title: "R for <br>Authoring!!"
+author: "PSP Session #7"
+title-slide-attributes: 
+  data-background-image: img/session6.jpg
+  data-background-opacity: ".7"
+format:
+  revealjs:
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [night, custom6.scss]
+    logo: "erg2.png"
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+engine: knitr                        ## not picking up inline codes
+---
+
+```{r, warning=FALSE, message=FALSE}
+devtools::install_github("hadley/emo")
+```
+
+## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #6 `r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    -   Short-term
+        -   ????
+    -   Long-term:
+        -   $\LaTeX$ dissertation template `r emo::ji("graduation_cap")`
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+:::
+
+![](img/title6.JPG){.absolute top="170" right="0" width="550" height="325"}
+
+# Recap of Session #6:
+
+## Callouts:
+
+:::: panel-tabset
+### As seen on `r emo::ji("globe_with_meridians")`
+
+[![](img/warning.jpg)](https://quarto.org/docs/presentations/revealjs/advanced.html#slide-controls)
+
+
+### 5 Options 
+
+:::: {layout-ncol=2}
+
+:::{.callout-note}
+
+:::
+
+:::{.callout-warning}
+
+:::
+
+:::{.callout-important}
+
+:::
+
+:::{.callout-tip}
+:::
+
+:::{.callout-caution}
+...abominable snowmen ahead `r emo::ji("snowman")`  
+:::
+
+::::
+
+### Syntax
+```{r, eval=FALSE, echo=TRUE}
+:::{.callout-note}
+:::
+
+:::{.callout-important}
+:::
+  
+:::{.callout-caution}
+...abominable snowmen ahead `r emo::ji("snowman")`
+:::
+  
+:::{.callout-warning}
+:::
+
+:::{.callout-tip}
+:::
+
+```
+::::
+
+## Dissertation formatting `r emo::ji("graduation_cap")`:
+
+1. [Thesisdown](https://github.com/ismayc/thesisdown) vs. [.cls specification](https://tysonbarrett.com/jekyll/update/2018/02/11/r_dissertation/) `r emo::ji("boxing_glove")`
+2. Updates:
+    + Current template already exist?
+        + Graduate school
+        + Hard sciences: Math, Computer Science, <br>Physics, Astronomy
+3. Yet to look into: `r emo::ji("construction")`
+    + Customize a [Quarto template](https://quarto.org/docs/extensions/formats.html); Also [see here](https://quarto.org/docs/authoring/front-matter.html)
+
+# Today:
+
+## `r format(Sys.Date(),"%B %d, %Y")` focal issues:
+
+-   Short-term
+    -   ???
+-   Long-term:
+    -   $\LaTeX$ dissertation <br>template `r emo::ji("graduation_cap")`
+
+        
+![](https://media.istockphoto.com/id/540720716/vector/blue-yeti-funny-yeti.jpg?s=612x612&w=0&k=20&c=W5l74_eHFnnHxuaQsLTqF1i76P081v1wOQC06sPHpcs=){.absolute top="125" right="10" height="450"}
+
+
