@@ -1,35 +1,64 @@
 ---
 title: "Untitled"
-format: revealjs
+format: 
+  revealjs:
+    mouse-wheel: true                ## yes enables mouse
+---
+
+## {auto-animate=true}
+
+::: {style="margin-top: 100px;"}
+Same content on different slides
+:::
+
+## {auto-animate=true}
+
+::: {style="margin-top: 150px; font-size: 3em; color: #b4ceed; font-family: Times New Roman"}
+Same content on different slides
+:::
+
+:::{.callout-note}
+Hey I was here last week!
+:::
+
+## Code 1 {auto-animate=true}
+
+```{r}
+#| echo: true
+#| eval: false
+
+---
+title: "Untitled"
+format: 
+  html:                       
+    mainfont: Bungee Spice        
 ---
 
 ## Quarto
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+[Quarto enables you to weave together content and
+ executable code into a finished document. To learn 
+ more about Quarto see <https://quarto.org>.]{.kulas}
 
-:::{.callout-note}
-Hey this is a note
-:::
+```
 
-## slide2
-:::{.callout-warning}
-Oh no lookout!!!!
-:::
+## Code 2 {auto-animate=true}
 
-## Slide 43
+```{r, `code-line-numbers`="5"}
+#| echo: true
+#| eval: false
 
-:::{.callout-important}
-Hey big dummy make sure to pay attention!!
-:::
+---
+title: "Untitled"
+format: 
+  html:                       
+    css: fonts.css                 
+---
 
-Slide 78
+## Quarto
 
-:::{.callout-tip}
-A tip is money that you leave your bartender
-:::
+[Quarto enables you to weave together content and
+ executable code into a finished document. To learn 
+ more about Quarto see <https://quarto.org>.]{.kulas}
 
-## again
-:::{.callout-caution collapse="true"}
-Look out!!! Falling Rocks!!!
-![](https://www.shutterstock.com/image-vector/warning-falling-rocks-sign-symbol-260nw-666598048.jpg)
-:::
+```

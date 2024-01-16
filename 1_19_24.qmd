@@ -106,7 +106,8 @@ devtools::install_github("hadley/emo")
 3. Yet to look into: `r emo::ji("construction")`
     + Customize a [Quarto template](https://quarto.org/docs/extensions/formats.html); Also [see here](https://quarto.org/docs/authoring/front-matter.html)
 
-# Today:
+# Today:{auto-animate=true}
+# Today:{auto-animate=true style="font-size: 3em"}
 
 ## `r format(Sys.Date(),"%B %d, %Y")` focal issues:
 
