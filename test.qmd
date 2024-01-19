@@ -13,7 +13,7 @@ Same content on different slides
 
 ## {auto-animate=true}
 
-::: {style="margin-top: 150px; font-size: 3em; color: #b4ceed; font-family: Times New Roman"}
+::: {style="margin-top: 150px; font-size: 2em; color: #b4ceed; font-family: Times New Roman"}
 Same content on different slides
 :::
 
@@ -62,3 +62,28 @@ format:
  more about Quarto see <https://quarto.org>.]{.kulas}
 
 ```
+
+## {auto-animate=true}
+
+Watch me grow
+
+## {auto-animate=true}
+
+::: {.r-fit-text}
+Watch me grow
+:::
+
+## Kitty {auto-animate=true auto-animate-easing="ease-in-out"}
+:::{data-id="kitty" .center}
+![](https://m.media-amazon.com/images/I/81vrJYaNBpL._AC_SY879_.jpg)
+:::
+
+## Doggy {auto-animate=true auto-animate-easing="ease-in-out"}
+
+:::{data-id="kitty"}
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReC-Ll9LkphQAwIpsrhC3EcCEr1te89SrDjA&usqp=CAU)
+:::
+
+## Whazzup
+
+{.absolute top="125" right="300" height="450"}

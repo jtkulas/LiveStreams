@@ -112,7 +112,7 @@ devtools::install_github("hadley/emo")
 ## `r format(Sys.Date(),"%B %d, %Y")` focal issues:
 
 -   Feature feature `r emo::ji("clapper_board")`
-    -   Slide animations
+    -   [Slide animations](https://quarto.org/docs/presentations/revealjs/advanced.html#element-matching)
 -   Long-term:
     -   $\LaTeX$ dissertation <br>template `r emo::ji("graduation_cap")`
 + Shared problem-solving <br>(hiya chat)

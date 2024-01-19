@@ -112,3 +112,9 @@ gridExtra::grid.arrange(p1,p2,p3, layout_matrix = rbind(c(3,3),
 2. Choose path
     + .cls specification
     + Thesisdown
+    
+##
+
+:::{.callout-warning}
+**Hot stuff in here!!!**
+:::
