@@ -1,0 +1,103 @@
+---
+title: "R for <br>Authoring!!" 
+author: "PSP Session #8"
+title-slide-attributes: 
+  data-background-image: img/_sessionXXX.jpg
+  data-background-opacity: ".7"
+format:
+  revealjs:
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [night, custom6.scss]
+    logo: "erg2.png"
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+engine: knitr                        ## not picking up inline codes
+---
+
+```{r, warning=FALSE, message=FALSE}
+devtools::install_github("hadley/emo")
+```
+
+## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #7 `r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    -   Dat's no fun `r emo::ji("nauseated_face")`
+        -   Terminology
+    -   Long-term:
+        -   $\LaTeX$ dissertation template `r emo::ji("graduation_cap")`
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+:::
+
+![](img/title7.JPG){.absolute top="170" right="0" width="550" height="325"}
+
+# Recap of Session #7:
+
+## Animations: {auto-animate=true auto-animate-easing="ease-in-out"}
+
+::: {.r-hstack}
+::: {data-id="box1" auto-animate-delay="0.1" style="background: #2780e3; width: 300px; height: 300px; margin: 10px;" .absolute top="300" left="0"}
+:::
+
+::: {data-id="box2" auto-animate-delay="0" style="background: #3fb618; width: 300px; height: 300px; margin: 10px;"}
+:::
+
+::: {data-id="box3" auto-animate-delay="0.2" style="background: #e83e8c; width: 300px; height: 300px; margin: 10px;" .absolute top="300" right="0"}
+:::
+:::
+
+## Animations: {auto-animate=true auto-animate-easing="ease-in-out" style="font-size: 2em;"}
+
+::: {.r-stack}
+::: {data-id="box2" style="background: #3fb618; width: 350px; height: 350px; border-radius: 200px;"}
+:::
+
+::: {data-id="box1" style="background: #2780e3; width: 250px; height: 250px; border-radius: 200px;"}
+:::
+
+::: {data-id="box3" style="background: #e83e8c; width: 150px; height: 150px; border-radius: 200px;"}
+:::
+:::
+
+## Animations
+
+::: panel-tabset
+### Code
+
+### Effect
+
+:::
+
+## Dissertation formatting `r emo::ji("graduation_cap")`:
+
+1. Updates:
+    + Current template already exist?
+        + Graduate school
+        + Hard sciences: Math, Computer Science, <br>Physics, Astronomy
+2. [Thesisdown](https://github.com/ismayc/thesisdown) vs. [.cls specification](https://tysonbarrett.com/jekyll/update/2018/02/11/r_dissertation/) `r emo::ji("boxing_glove")`
+3. Yet to look into: `r emo::ji("construction")`
+    + Customize a [Quarto template](https://quarto.org/docs/extensions/formats.html); Also [see here](https://quarto.org/docs/authoring/front-matter.html)
+
+# Today:
+
+## `r format(Sys.Date(),"%B %d, %Y")` focal issues:
+
+-   Boring but necessary: 
+    -   Terminology `r emo::ji("zzz")`
+-   Long-term:
+    -   $\LaTeX$ dissertation <br>template `r emo::ji("graduation_cap")`
++ Shared problem-solving <br>(hiya chat)
+
+        
+![](https://designtlc.com/wp-content/uploads/2018/07/terminology.jpg){.absolute top="125" right="0" height="450" width="500"}
+
+
