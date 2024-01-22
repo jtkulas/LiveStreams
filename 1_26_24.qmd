@@ -79,13 +79,13 @@ devtools::install_github("hadley/emo")
 
 ## Dissertation formatting `r emo::ji("graduation_cap")`:
 
-1. Updates:
+1. E-mail updates:
     + Current template already exist?
         + Graduate school
         + Hard sciences: Math, Computer Science, <br>Physics, Astronomy
-2. [Thesisdown](https://github.com/ismayc/thesisdown) vs. [.cls specification](https://tysonbarrett.com/jekyll/update/2018/02/11/r_dissertation/) `r emo::ji("boxing_glove")`
+2. 1 inch margins (YAML)
 3. Yet to look into: `r emo::ji("construction")`
-    + Customize a [Quarto template](https://quarto.org/docs/extensions/formats.html); Also [see here](https://quarto.org/docs/authoring/front-matter.html)
+    + Where to poke & prod?
 
 # Today:
 
@@ -100,4 +100,25 @@ devtools::install_github("hadley/emo")
         
 ![](https://designtlc.com/wp-content/uploads/2018/07/terminology.jpg){.absolute top="125" right="0" height="450" width="500"}
 
+## Authoring Terminology:
 
+:::: {layout="[60,40]"}
+
+::: {#first-column}
+
++ Pandoc
++ Markdown, Markup
++ pdf, html  
++ $\LaTeX$, css
++ Quarto
+
+:::
+
+::: {#second-column}
++ fences
++ divs
++ classes
++ attributes
+:::
+
+::::

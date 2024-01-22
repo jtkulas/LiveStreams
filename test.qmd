@@ -2,26 +2,30 @@
 title: "Untitled"
 format: 
   revealjs:
-    mouse-wheel: true                ## yes enables mouse
+    mouse-wheel: true
 ---
 
 ## {auto-animate=true}
 
-::: {style="margin-top: 100px;"}
-Same content on different slides
-:::
+Look at me
 
 ## {auto-animate=true}
 
-::: {style="margin-top: 150px; font-size: 2em; color: #b4ceed; font-family: Times New Roman"}
-Same content on different slides
+::: {.r-fit-text}
+Look at me
 :::
 
-:::{.callout-note}
-Hey I was here last week!
+## Title {auto-animate=true}
+
+Hey there
+
+## Title {auto-animate=true}
+
+::: {style="font-family: Times New Roman; color: #8A49D4"}
+Hey there
 :::
 
-## Code 1 {auto-animate=true}
+## {auto-animate=true}
 
 ```{r}
 #| echo: true
@@ -33,16 +37,9 @@ format:
   html:                       
     mainfont: Bungee Spice        
 ---
-
-## Quarto
-
-[Quarto enables you to weave together content and
- executable code into a finished document. To learn 
- more about Quarto see <https://quarto.org>.]{.kulas}
-
 ```
-
-## Code 2 {auto-animate=true}
+  
+## {auto-animate=true}
 
 ```{r, `code-line-numbers`="5"}
 #| echo: true
@@ -52,38 +49,7 @@ format:
 title: "Untitled"
 format: 
   html:                       
-    css: fonts.css                 
+    css: fonts.css        
 ---
-
-## Quarto
-
-[Quarto enables you to weave together content and
- executable code into a finished document. To learn 
- more about Quarto see <https://quarto.org>.]{.kulas}
-
 ```
 
-## {auto-animate=true}
-
-Watch me grow
-
-## {auto-animate=true}
-
-::: {.r-fit-text}
-Watch me grow
-:::
-
-## Kitty {auto-animate=true auto-animate-easing="ease-in-out"}
-:::{data-id="kitty" .center}
-![](https://m.media-amazon.com/images/I/81vrJYaNBpL._AC_SY879_.jpg)
-:::
-
-## Doggy {auto-animate=true auto-animate-easing="ease-in-out"}
-
-:::{data-id="kitty"}
-![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReC-Ll9LkphQAwIpsrhC3EcCEr1te89SrDjA&usqp=CAU)
-:::
-
-## Whazzup
-
-{.absolute top="125" right="300" height="450"}
