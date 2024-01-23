@@ -30,7 +30,7 @@ devtools::install_github("hadley/emo")
     -   Dat's no fun `r emo::ji("nauseated_face")`
         -   Terminology
     -   Long-term:
-        -   $\LaTeX$ dissertation template `r emo::ji("graduation_cap")`
+        -   dissertation template `r emo::ji("graduation_cap")`
 -   Shared problem-solving
 :::
 
@@ -94,13 +94,13 @@ devtools::install_github("hadley/emo")
 -   Boring but necessary: 
     -   Terminology `r emo::ji("zzz")`
 -   Long-term:
-    -   $\LaTeX$ dissertation <br>template `r emo::ji("graduation_cap")`
+    -   dissertation <br>template `r emo::ji("graduation_cap")`
 + Shared problem-solving <br>(hiya chat)
 
         
 ![](https://designtlc.com/wp-content/uploads/2018/07/terminology.jpg){.absolute top="125" right="0" height="450" width="500"}
 
-## Authoring Terminology:
+# Authoring Terminology:
 
 :::: {layout="[60,40]"}
 
@@ -111,14 +111,101 @@ devtools::install_github("hadley/emo")
 + pdf, html  
 + $\LaTeX$, css
 + Quarto
-
 :::
 
 ::: {#second-column}
-+ fences
-+ divs
-+ classes
-+ attributes
+
++ element
++ fence
++ feature block
++ nesting
++ div
++ class
++ attribute
 :::
 
 ::::
+
+## [html]{.kulas}
+
++ original markup language <br>(aka document format)
++ HyperText Markup Language 
++ browsers are html <br>processors (analagous to Pandoc)
++ `<Tags>` communicate to browsers 
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png){.absolute top="150" right="-30" height="400" width="400"}
+
+## [Markdown]{.kulas}
+
++ Language (2004; *.md)
++ Readability key feature <br>(not a lot of markup)
++ RMarkdown just one of <br>several implementations
+
+![](img/markers.png){.absolute right="-200" height="400" top="150"}
+
+## [Pandoc]{.kulas} 
+
++ Software ([free](https://pandoc.org/))
++ Universal document <br>converter `r emo::ji("panda")`
++ Markdown processor
+
+
+![](https://i.natgeofe.com/k/6f2282df-1c6a-474a-9216-ed97b3dce858/Panda-Bamboo_Panda-Quiz_KIDS_1021.jpg?w=1084.125&h=721.875){.absolute top="150" right="-80" height="400" width="550"}
+
+## [pdf]{.kulas}  
+
++ file format
++ Adobe released 2008
+
+![](https://upload.wikimedia.org/wikipedia/commons/3/3f/Pdf_icon_file.png){.absolute right="0"}
+
+## [$\LaTeX$ & CSS]{.kulas}
+
+## [element]{.kulas2}
+
+:::: {layout="[80,20]"}
+
+::: {#first-column}
+
++ part of an HTML document
++ typically consists of:
+:::
+
+::: {#second-column}
+
+  1. opening tag
+  2. attribute(s)
+  3. content
+  4. closing tag
+:::
+
+::::
+
+![](https://developer.mozilla.org/en-US/docs/Glossary/Element/anatomy-of-an-html-element.png){.absolute height="250" width="800" bottom="20" left="-30"}
+
+## [tag]{.kulas2}
+
+:::: {layout="[50,50]"}
+
+:::{#righthandbit}
+:::
+
+::: {#lefthandbit}
++ Start `<>` and end `</>` of element
+  + ...as well as everything "inside"
++ Bit that formats content
++ Markdown bypasses tags
+:::
+::::
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Hello_my_name_is_sticker.svg/2560px-Hello_my_name_is_sticker.svg.png){.absolute height="300" bottom="150"}
+
+## [attribute & value]{.kulas2}
+
+
+## [fence]{.kulas2}
+
+## [CSS]{.kulas2}
+
++ language 
++ focused on styling of HTML content
