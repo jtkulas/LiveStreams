@@ -29,6 +29,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="1_26_24_files/libs/revealjs/dist/theme/quarto.css">
   <link href="1_26_24_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -336,8 +401,8 @@ PSP Session #8
 </div>
 
 </section>
-<section id="problem-solving-panel-january-23-2024" class="slide level2">
-<h2>Problem-Solving Panel <br>(January 23, 2024)</h2>
+<section id="problem-solving-panel-january-24-2024" class="slide level2">
+<h2>Problem-Solving Panel <br>(January 24, 2024)</h2>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="first-column quarto-layout-cell" style="flex-basis: 80.0%;justify-content: center;">
@@ -397,16 +462,62 @@ PSP Session #8
 </div>
 </div>
 </section>
-<section id="animations-2" class="slide level2">
-<h2>Animations</h2>
+<section id="animations-2" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Animations</h2>
+<p>Look at me</p>
+</section>
+<section id="animations-3" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Animations</h2>
+<div class="r-fit-text">
+<p>Look at me</p>
+</div>
+</section>
+<section id="code-controls" class="slide level2">
+<h2>Code controls:</h2>
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Code</a></li><li><a href="#tabset-1-2">Effect</a></li></ul>
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Shapes 🔵</a></li><li><a href="#tabset-1-2">Look at me 🧐</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
-
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="|1,14|1,3,14,16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="do">## Animations: {auto-animate=true auto-animate-easing="ease-in-out"}</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="sc">:::</span> {.r<span class="sc">-</span>hstack}</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="sc">:::</span> {data<span class="sc">-</span>id<span class="ot">=</span><span class="st">"box1"</span> auto<span class="sc">-</span>animate<span class="sc">-</span>delay<span class="ot">=</span><span class="st">"0.1"</span> style<span class="ot">=</span><span class="st">"background: #2780e3; width: 300px; height: 300px; margin: 10px;"</span> .absolute top<span class="ot">=</span><span class="st">"300"</span> left<span class="ot">=</span><span class="st">"0"</span>}</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="sc">:::</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="er">:::</span> {data<span class="sc">-</span>id<span class="ot">=</span><span class="st">"box2"</span> auto<span class="sc">-</span>animate<span class="sc">-</span>delay<span class="ot">=</span><span class="st">"0"</span> style<span class="ot">=</span><span class="st">"background: #3fb618; width: 300px; height: 300px; margin: 10px;"</span>}</span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="sc">:::</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="er">:::</span> {data<span class="sc">-</span>id<span class="ot">=</span><span class="st">"box3"</span> auto<span class="sc">-</span>animate<span class="sc">-</span>delay<span class="ot">=</span><span class="st">"0.2"</span> style<span class="ot">=</span><span class="st">"background: #e83e8c; width: 300px; height: 300px; margin: 10px;"</span> .absolute top<span class="ot">=</span><span class="st">"300"</span> right<span class="ot">=</span><span class="st">"0"</span>}</span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="sc">:::</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="er">:::</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="do">## Animations: {auto-animate=true auto-animate-easing="ease-in-out" style="font-size: 2em;"}</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="er">:::</span> {.r<span class="sc">-</span>stack}</span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="sc">:::</span> {data<span class="sc">-</span>id<span class="ot">=</span><span class="st">"box2"</span> style<span class="ot">=</span><span class="st">"background: #3fb618; width: 350px; height: 350px; border-radius: 200px;"</span>}</span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="sc">:::</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a></span>
+<span id="cb1-20"><a href="#cb1-20"></a><span class="er">:::</span> {data<span class="sc">-</span>id<span class="ot">=</span><span class="st">"box1"</span> style<span class="ot">=</span><span class="st">"background: #2780e3; width: 250px; height: 250px; border-radius: 200px;"</span>}</span>
+<span id="cb1-21"><a href="#cb1-21"></a><span class="sc">:::</span></span>
+<span id="cb1-22"><a href="#cb1-22"></a></span>
+<span id="cb1-23"><a href="#cb1-23"></a><span class="er">:::</span> {data<span class="sc">-</span>id<span class="ot">=</span><span class="st">"box3"</span> style<span class="ot">=</span><span class="st">"background: #e83e8c; width: 150px; height: 150px; border-radius: 200px;"</span>}</span>
+<span id="cb1-24"><a href="#cb1-24"></a><span class="sc">:::</span></span>
+<span id="cb1-25"><a href="#cb1-25"></a><span class="er">:::</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 <div id="tabset-1-2">
-
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="|1,5|1,5,7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="do">## Animations {auto-animate=true}</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a></span>
+<span id="cb2-3"><a href="#cb2-3"></a>Look at me</span>
+<span id="cb2-4"><a href="#cb2-4"></a></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="do">## Animations {auto-animate=true}</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="sc">:::</span> {.r<span class="sc">-</span>fit<span class="sc">-</span>text}</span>
+<span id="cb2-8"><a href="#cb2-8"></a>Look at me</span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="sc">:::</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </div>
 </div>
 </div>
@@ -434,8 +545,8 @@ PSP Session #8
 <h1>Today:</h1>
 
 </section>
-<section id="january-23-2024-focal-issues" class="slide level2">
-<h2>January 23, 2024 focal issues:</h2>
+<section id="january-24-2024-focal-issues" class="slide level2">
+<h2>January 24, 2024 focal issues:</h2>
 <ul>
 <li>Boring but necessary:
 <ul>
@@ -445,45 +556,60 @@ PSP Session #8
 <ul>
 <li>dissertation <br>template 🎓</li>
 </ul></li>
-<li>Shared problem-solving <br>(hiya chat)</li>
+<li>Shared problem-solving <br>(hiya chat) 👋</li>
 </ul>
 <p><img data-src="https://designtlc.com/wp-content/uploads/2018/07/terminology.jpg" class="absolute" style="top: 125px; right: 0px; width: 500px; height: 450px; "></p>
-</section></section>
-<section>
-<section id="authoring-terminology" class="title-slide slide level1 center">
-<h1>Authoring Terminology:</h1>
+</section>
+<section id="authoring-terminology" class="slide level2">
+<h2>Authoring Terminology:</h2>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
-<div id="first-column" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
+<div id="first-column" class="quarto-layout-cell" style="flex-basis: 33.0%;justify-content: center;">
+<h3 id="universal"><span class="kulascol">Universal:</span></h3>
 <ul>
-<li>Pandoc</li>
+<li>HTML</li>
 <li>Markdown, Markup</li>
-<li>pdf, html<br>
-</li>
-<li><span class="math inline">\(\LaTeX\)</span>, css</li>
-<li>Quarto</li>
+<li>Pandoc</li>
+<li>PDF</li>
 </ul>
 </div>
-<div id="second-column" class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
+<div id="second-column" class="quarto-layout-cell" style="flex-basis: 34.0%;justify-content: center;">
+<h3 id="foundational"><span class="kulascol2">Foundational:</span></h3>
 <ul>
 <li>element</li>
-<li>fence</li>
-<li>feature block</li>
 <li>nesting</li>
 <li>div</li>
 <li>class</li>
 <li>attribute</li>
 </ul>
 </div>
+<div id="third-column" class="quarto-layout-cell" style="flex-basis: 33.0%;justify-content: center;">
+<h3 id="applicable"><span class="kulascol3">Applicable:</span></h3>
+<ul>
+<li><span class="math inline">\(\LaTeX\)</span></li>
+<li>CSS</li>
+<li>Quarto</li>
+<li>fence</li>
+<li>feature block</li>
+</ul>
 </div>
 </div>
+</div>
+</section>
+<section id="the-universal" class="slide level2">
+<h2><span class="kulas">The Universal:</span></h2>
+<p><img data-src="https://i.etsystatic.com/24635155/r/il/f774b0/3198736065/il_570xN.3198736065_30za.jpg" class="absolute" style="bottom: 50px; right: 10px; width: 250px; "></p>
+<p><img data-src="https://cdn.shopify.com/s/files/1/0558/2081/files/Dombrowski_Creature_Reg_Lg.jpg?v=1603844040" class="absolute" style="bottom: 50px; right: 400px; width: 250px; "></p>
+<p><img data-src="https://i.ebayimg.com/images/g/bbQAAOSwRA9hXzjg/s-l1600.jpg" class="absolute" style="left: 10px; bottom: 50px; width: 250px; "></p>
 </section>
 <section id="html" class="slide level2">
 <h2><span class="kulas">html</span></h2>
 <ul>
-<li>original markup language <br>(aka document format)</li>
+<li>original “markup” language <br>(aka document format)
+<ul>
 <li>HyperText Markup Language</li>
-<li>browsers are html <br>processors (analagous to Pandoc)</li>
+</ul></li>
+<li>browsers are html <br>processors</li>
 <li><code>&lt;Tags&gt;</code> communicate to browsers</li>
 </ul>
 <p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" class="absolute" style="top: 150px; right: -30px; width: 400px; height: 400px; "></p>
@@ -491,9 +617,9 @@ PSP Session #8
 <section id="markdown" class="slide level2">
 <h2><span class="kulas">Markdown</span></h2>
 <ul>
-<li>Language (2004; *.md)</li>
+<li><strong>syntax</strong> &amp; <strong>text-to-HTML</strong> <br>conversion tool (2004; *.md)</li>
 <li>Readability key feature <br>(not a lot of markup)</li>
-<li>RMarkdown just one of <br>several implementations</li>
+<li><code>RMarkdown</code> just one of <br>several implementations</li>
 </ul>
 <p><img data-src="img/markers.png" class="absolute" style="top: 150px; right: -200px; height: 400px; "></p>
 </section>
@@ -503,20 +629,24 @@ PSP Session #8
 <li>Software (<a href="https://pandoc.org/">free</a>)</li>
 <li>Universal document <br>converter 🐼</li>
 <li>Markdown processor</li>
+<li>Creates many output <br>formats</li>
 </ul>
-<p><img data-src="https://i.natgeofe.com/k/6f2282df-1c6a-474a-9216-ed97b3dce858/Panda-Bamboo_Panda-Quiz_KIDS_1021.jpg?w=1084.125&amp;h=721.875" class="absolute" style="top: 150px; right: -80px; width: 550px; height: 400px; "></p>
+<p><img data-src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/19744/giant-panda-clipart-md.png" class="absolute" style="top: 150px; right: -80px; width: 550px; height: 550px; "></p>
 </section>
 <section id="pdf" class="slide level2">
 <h2><span class="kulas">pdf</span></h2>
 <ul>
 <li>file format</li>
-<li>Adobe released 2008</li>
+<li>original electronic representation <br>of traditional paper document</li>
+<li>standard appearance regardless <br>of operating system/software</li>
+<li>Adobe released in 2008</li>
 </ul>
-<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Pdf_icon_file.png" class="absolute" style="right: 0px; "></p>
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Pdf_icon_file.png" class="absolute" style="top: 150px; right: 0px; width: 300px; "></p>
 </section>
-<section id="latex-css" class="slide level2">
-<h2><span class="kulas"><span class="math inline">\(\LaTeX\)</span> &amp; CSS</span></h2>
-</section>
+<section id="the-foundational" class="slide level2">
+<h2><span class="kulas2">The Foundational:</span></h2>
+
+<img data-src="https://cdn.shopify.com/s/files/1/0255/5904/0072/files/AJ00220985_Category_Banner_Concealer_2133x667px.jpg?v=1695007743" class="r-stretch"></section>
 <section id="element" class="slide level2">
 <h2><span class="kulas2">element</span></h2>
 <div class="quarto-layout-panel">
@@ -524,16 +654,18 @@ PSP Session #8
 <div id="first-column" class="quarto-layout-cell" style="flex-basis: 80.0%;justify-content: center;">
 <ul>
 <li>part of an HTML document</li>
-<li>typically consists of:</li>
+<li>typically consists of…</li>
 </ul>
 </div>
-<div id="second-column" class="quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
+<div class="fragment quarto-layout-cell" style="flex-basis: 20.0%;justify-content: center;">
+<div id="second-column">
 <ol type="1">
 <li>opening tag</li>
 <li>attribute(s)</li>
 <li>content</li>
 <li>closing tag</li>
 </ol>
+</div>
 </div>
 </div>
 </div>
@@ -548,32 +680,75 @@ PSP Session #8
 </div>
 <div id="lefthandbit" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <ul>
-<li>Start <code>&lt;&gt;</code> and end <code>&lt;/&gt;</code> of element
-<ul>
-<li>…as well as everything “inside”</li>
-</ul></li>
-<li>Bit that formats content</li>
-<li>Markdown bypasses tags</li>
+<li>Start <code>&lt;&gt;</code> and end <code>&lt;/&gt;</code> of element</li>
+<li>Browsers use to interpret content</li>
+<li><a href="https://devdevout.com/html/how-many-html-tags-are-there">Finite number</a> of HTML tags</li>
 </ul>
 </div>
 </div>
 </div>
-<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Hello_my_name_is_sticker.svg/2560px-Hello_my_name_is_sticker.svg.png" class="absolute" style="bottom: 150px; height: 300px; "></p>
+<p><img data-src="https://www.freecodecamp.org/news/content/images/2021/08/anatomy-of-an-html-tag.png" class="absolute" style="left: -100px; bottom: 130px; height: 300px; "></p>
 </section>
 <section id="attribute-value" class="slide level2">
 <h2><span class="kulas2">attribute &amp; value</span></h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="righthandbit" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+
+</div>
+<div id="lefthandbit" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<ul>
+<li>additional information about element</li>
+<li>typically structured:
+<ul>
+<li><code>attribute="value"</code></li>
+</ul></li>
+<li>many attributes have default values</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="divs" class="slide level2">
+<h2><span class="kulas2">divs</span></h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="righthandbit" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+
+</div>
+<div id="lefthandbit" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<ul>
+<li>divisions of documents</li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="fence" class="slide level2">
 <h2><span class="kulas2">fence</span></h2>
 </section>
+<section id="the-applicable" class="slide level2">
+<h2><span class="kulas3">The Applicable:</span></h2>
+<p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/2560px-R_logo.svg.png" class="absolute" style="left: 50px; bottom: 120px; width: 400px; "> <img data-src="https://rstudio.github.io/cheatsheets/html/images/logo-quarto.png" class="absolute" style="bottom: 75px; right: 50px; width: 325px; "></p>
+</section>
+<section id="latex" class="slide level2">
+<h2><span class="kulas3"><span class="math inline">\(\LaTeX\)</span></span></h2>
+</section>
 <section id="css" class="slide level2">
-<h2><span class="kulas2">CSS</span></h2>
+<h2><span class="kulas3">CSS</span></h2>
 <ul>
-<li>language</li>
-<li>focused on styling of HTML content</li>
+<li>language - alters/enhances <br> HTML rendering</li>
+<li>focused on <em>styling</em> of HTML content</li>
 </ul>
-
-<img src="erg2.png" class="slide-logo r-stretch"><div class="footer footer-default">
+</section>
+<section id="process" class="slide level2">
+<h2><span class="kulas3">Process</span></h2>
+<p><img data-src="https://quarto.org/docs/get-started/hello/images/rstudio-qmd-how-it-works.png"></p>
+<div class="{.justify=&quot;right&quot;}">
+<p><span class="math inline">\(\LaTeX\)</span> &amp; CSS</p>
+</div>
+<p><img src="erg2.png" class="slide-logo"></p>
+<div class="footer footer-default">
 
 </div>
 </section></section>
