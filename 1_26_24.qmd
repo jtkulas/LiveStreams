@@ -179,7 +179,7 @@ Look at me
 ### [Applicable:]{.kulascol3}
 + $\LaTeX$
 + CSS
-+ Quarto
++ [Spans & Divs](https://github.com/quarto-dev/quarto-cli/discussions/1459)
 + fence
 + feature block
 :::
@@ -190,31 +190,31 @@ Look at me
 
 ![](https://i.etsystatic.com/24635155/r/il/f774b0/3198736065/il_570xN.3198736065_30za.jpg){.absolute width="250" bottom="50" right="10"}
 
-![](https://cdn.shopify.com/s/files/1/0558/2081/files/Dombrowski_Creature_Reg_Lg.jpg?v=1603844040){.absolute width="250" bottom="50" right="400"}
+![](https://cdn.shopify.com/s/files/1/0558/2081/files/Dombrowski_Creature_Reg_Lg.jpg?v=1603844040){.absolute width="250" bottom="50" left="10"}
 
-![](https://i.ebayimg.com/images/g/bbQAAOSwRA9hXzjg/s-l1600.jpg){.absolute width="250" bottom="50" left="10"}
+![](https://i.ebayimg.com/images/g/bbQAAOSwRA9hXzjg/s-l1600.jpg){.absolute width="250" bottom="50" left="400"}
 
 ## [html]{.kulas}
 
 + original "markup" language <br>(aka document format)
   + HyperText Markup Language 
 + browsers are html <br>processors 
-+ `<Tags>` communicate to browsers 
++ `<Tags>` communicate "look"<br>to browsers 
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png){.absolute top="150" right="-30" height="400" width="400"}
 
 ## [Markdown]{.kulas}
 
 + **syntax** & **text-to-HTML** <br>conversion tool (2004; *.md)
-+ Readability key feature <br>(not a lot of markup)
++ Readability key feature <br>(minimal markup)
 + `RMarkdown` just one of <br>several implementations
 
 ![](img/markers.png){.absolute right="-200" height="400" top="150"}
 
-## [Pandoc]{.kulas} 
+## [Pandoc]{.kulas} `r emo::ji("panda")`
 
 + Software ([free](https://pandoc.org/))
-+ Universal document <br>converter `r emo::ji("panda")`
++ Universal document <br>converter 
 + Markdown processor 
 + Creates many output <br>formats
 
@@ -236,7 +236,7 @@ Look at me
 
 ## [element]{.kulas2}
 
-:::: {layout="[80,20]"}
+:::: {layout="[70,30]"}
 
 ::: {#first-column}
 
@@ -248,15 +248,25 @@ Look at me
 ::: {#second-column}
 
   1. opening tag
+
+::: {.fragment}
   2. attribute(s)
+:::
+
+::: {.fragment}
   3. content
+:::
+
+::: {.fragment}
   4. closing tag
+:::
+
 :::
 :::
 
 ::::
 
-![](https://developer.mozilla.org/en-US/docs/Glossary/Element/anatomy-of-an-html-element.png){.absolute height="250" width="800" bottom="20" left="-30"}
+![](https://learn-to-code.london.cloudapps.digital/images/lesson-1/image7.png){.absolute height="270" width="700" bottom="25" left="-20"}
 
 ## [tag]{.kulas2}
 
@@ -267,7 +277,7 @@ Look at me
 
 ::: {#lefthandbit}
 + Start `<>` and end `</>` of element
-+ Browsers use to interpret content
++ Browsers use these to interpret content
 + [Finite number](https://devdevout.com/html/how-many-html-tags-are-there) of HTML tags
 :::
 ::::
@@ -276,20 +286,23 @@ Look at me
 
 ## [attribute & value]{.kulas2}
 
-:::: {layout="[50,50]"}
+:::: {layout="[65,35]"}
 
 :::{#righthandbit}
 :::
 
 ::: {#lefthandbit}
-+ additional information about element
-+ typically structured:
++ define "uniqueness" of element
++ typical structure:
   + `attribute="value"`
 + many attributes have default values
++ not all attributes apply to all elements
 :::
 ::::
 
-## [divs]{.kulas2}
+![](https://monadical.com/static/html-tag-attributes.png){.absolute bottom="100" left="-130"}
+
+## [div]{.kulas2}
 
 :::: {layout="[50,50]"}
 
@@ -297,7 +310,9 @@ Look at me
 :::
 
 ::: {#lefthandbit}
-+ divisions of documents
++ tag that divides documents into<br> self-contained sections
++ not earthshattering by itself
++ important for Quarto
 :::
 ::::
 
