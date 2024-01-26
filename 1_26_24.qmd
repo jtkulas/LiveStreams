@@ -78,13 +78,13 @@ Look at me
 Look at me
 :::
 
-## Code controls:
+## [Code controls](https://revealjs.com/auto-animate/):
 :::: panel-tabset
 
 ### Shapes `r emo::ji("blue_circle")`
 
 ```{r, echo=TRUE, eval=FALSE}
-#| code-line-numbers: "|1,14|1,3,14,16"
+#| code-line-numbers: "|1,14"
 
 ## Animations: {auto-animate=true auto-animate-easing="ease-in-out"}
 
@@ -143,6 +143,14 @@ Look at me
 
 # Today:
 
+## [Hear Ye!!!   Hear Ye!!!]{.oldenglish}
+
+![](https://media.istockphoto.com/id/186534190/vector/town-crier-yelling-message.jpg?s=612x612&w=0&k=20&c=Slm4yC3OfkdCnsj3SnR4P80gUweJO4CPV89GtyIWJ3Y=){.absolute left="200"}
+
+::: {.fragment .absolute width="200" right="210" bottom="210"}
+[![](https://rstudio.github.io/cheatsheets/html/images/logo-quarto.png)](https://quarto.org/docs/blog/posts/2024-01-24-1.4-release/)
+:::
+
 ## `r format(Sys.Date(),"%B %d, %Y")` focal issues:
 
 -   Boring but necessary: 
@@ -169,19 +177,18 @@ Look at me
 ::: {#second-column}
 ### [Foundational:]{.kulascol2}
 + element
-+ nesting
-+ div
-+ class
-+ attribute
++ tag
+  + div, span
++ attribute 
+  + class, id
 :::
 
 ::: {#third-column}
 ### [Applicable:]{.kulascol3}
-+ $\LaTeX$
 + CSS
-+ [Spans & Divs](https://github.com/quarto-dev/quarto-cli/discussions/1459)
-+ fence
-+ feature block
++ $\LaTeX$
++ fenced `<divs>`
++ bracketed `<spans>`
 :::
 
 ::::
@@ -199,7 +206,7 @@ Look at me
 + original "markup" language <br>(aka document format)
   + HyperText Markup Language 
 + browsers are html <br>processors 
-+ `<Tags>` communicate "look"<br>to browsers 
++ markup communicates "look"<br>to browsers 
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png){.absolute top="150" right="-30" height="400" width="400"}
 
@@ -284,6 +291,23 @@ Look at me
 
 ![](https://www.freecodecamp.org/news/content/images/2021/08/anatomy-of-an-html-tag.png){.absolute height="300" bottom="130" left="-100"}
 
+## [div & span]{.kulas2}
+
+:::: {layout="[50,50]"}
+
+:::{#lefthandbit}
+
+:::
+
+::: {#righthandbit}
++ tags that divide documents into self-contained sections
++ content within typically styled with CSS
++ divs contain blocks, spans wrap inline content
+:::
+::::
+
+![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20221226153304/10-Alternatives-to-the-div-HTML-Tag.png){.absolute width="600" left="-150" bottom="150"}
+
 ## [attribute & value]{.kulas2}
 
 :::: {layout="[65,35]"}
@@ -302,38 +326,152 @@ Look at me
 
 ![](https://monadical.com/static/html-tag-attributes.png){.absolute bottom="100" left="-130"}
 
-## [div]{.kulas2}
+## [class & id]{.kulas2}
 
 :::: {layout="[50,50]"}
 
-:::{#righthandbit}
+:::{#lefthandbit}
+
 :::
 
-::: {#lefthandbit}
-+ tag that divides documents into<br> self-contained sections
-+ not earthshattering by itself
-+ important for Quarto
+::: {#righthandbit}
++ attributes that help coordinate CSS applications
++ class attributes use `"."` prefix in CSS
++ id attributes use `"#"` prefix in CSS
 :::
 ::::
 
-## [fence]{.kulas2}
+![](https://bbensch09.github.io/imgs/class-vs-id-example.png){.absolute left="-50" width="500" top="200"}
 
 ## [The Applicable:]{.kulas3}
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/2560px-R_logo.svg.png){.absolute width="400" left="50" bottom="120"}
 ![](https://rstudio.github.io/cheatsheets/html/images/logo-quarto.png){.absolute width="325" right="50" bottom="75"}
 
-## [$\LaTeX$]{.kulas3}
-
 ## [CSS]{.kulas3}
 
-+ language - alters/enhances <br> HTML rendering
-+ focused on *styling* of HTML content
++ style attribute syntax 
++ finite [number of properties](https://www.w3schools.com/cssref/index.php)
++ preferred method of *styling*<br> HTML elements
++ finite number of tags<br>also important here
 
-## [Process]{.kulas3}
+![](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png){.absolute width="600" right="-180" bottom="140"}
 
-![](https://quarto.org/docs/get-started/hello/images/rstudio-qmd-how-it-works.png)
+## [$\LaTeX$]{.kulas3}
 
-::: {.justify="right"}
-$\LaTeX$ & CSS
+:::: {layout="[50,50]"}
+
+:::{#lefthandbit}
++ typesetting Markup language for pdf documents
++ focus on content - leave design decisions to others 
++ similar effect as CSS
+  + not as intuitive(?)
+:::
+
+::: {#righthandbit}
+![](https://latex-tutorial.com/wp-content/uploads/2021/07/Listing-code-in-LaTeX-Minted.png)
+
+::: {.callout-note}
+Yabut **TYPIST** [whazzat?!?](https://typst.app/about/) `r emo::ji("person_shrugging")`
+::: 
+
+
+:::
+::::
+
+## [Fences & Brackets]{.kulas3}
+
+...are attempts to consolidate styling attributes across document formats - the structure has more of a CSS flavor (as opposed to $\LaTeX$) 
+
+:::: {layout="[50,50]"}
+
+:::{#lefthandbit}
+### Fence
++ The Quarto implementation of `<div>`
+:::
+
+::: {#righthandbit}
+### Bracket
++ The Quarto implementation of `<span>`
+::: 
+
+::::
+
+## [Fenced Divs]{.kulas3}
+
+:::: {layout="[60,40]"}
+
+:::{#lefthandbit}
++ start and end with (at least) 3 colons
++ spacing can be persnickity
++ nesting is ok 
++ bracket defines styling attribute(s) to apply
+  + `{.class}` vs `{class}`?
+:::
+
+::: {#righthandbit}
+```{r, echo=TRUE, eval=FALSE}
+#| code-line-numbers: "6,7,8|3,5,9,11,13,15"
+## Nest different stylings:
+
+:::: {layout="[60,40]"}
+
+::: {#lefthandbit}
+:::{style="color:red;"}
+Whatcha talkin about Willis?
+:::
+:::
+  
+::: {#righthandbit}
+Nada mucho mi amigo 
+:::  
+  
+::::
+```
+:::
+::::
+
+## [Bracketed Spans]{.kulas3}
+
+:::: {layout="[60,40]"}
+
+:::{#lefthandbit}
++ content to be styled placed in [square] brackets
++ styling effect in adjacent {curly} brackets
++ same action as fences, just more targetted
+:::
+
+::: {#righthandbit}
+```{r, echo=TRUE, eval=FALSE}
+#| code-line-numbers: "3-4"
+## Nesting not recommended:
+
+Whatcha talkin about 
+[Willis?]{style="color:red;"}
+
+Nada mucho mi amigo 
+
+```
+:::
+
+::::
+
+## Terminology Summary
+
+:::{.fragment .fade-in-then-semi-out}
++ Knowing the terminology makes navigating the Quarto.org help pages much more effective
+:::
+
+:::{.fragment .fade-in-then-semi-out}
++ Using pre-existing classes should "work" across output formats (excluding interative elements)
+:::
+
+:::{.fragment .fade-in-then-semi-out}
++ May still need customized $\LaTeX$, HTML, or CSS if you want to get very specific stylings for given output
+:::
+
+:::{.fragment}
+![](https://quarto.org/docs/get-started/hello/images/rstudio-qmd-how-it-works.png){.absolute bottom="0"}
+
+![](https://download.logo.wine/logo/Lua_(programming_language)/Lua_(programming_language)-Logo.wine.png){.absolute width="250" right="280" bottom="-65"}
 :::

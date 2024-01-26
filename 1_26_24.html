@@ -8,7 +8,7 @@
 <link href="1_26_24_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="1_26_24_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="1_26_24_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.3.433">
+  <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="PSP Session #8">
   <title>R for  Authoring!!</title>
@@ -401,8 +401,8 @@ PSP Session #8
 </div>
 
 </section>
-<section id="problem-solving-panel-january-25-2024" class="slide level2">
-<h2>Problem-Solving Panel <br>(January 25, 2024)</h2>
+<section id="problem-solving-panel-january-26-2024" class="slide level2">
+<h2>Problem-Solving Panel <br>(January 26, 2024)</h2>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div class="first-column quarto-layout-cell" style="flex-basis: 80.0%;justify-content: center;">
@@ -473,13 +473,13 @@ PSP Session #8
 </div>
 </section>
 <section id="code-controls" class="slide level2">
-<h2>Code controls:</h2>
+<h2><a href="https://revealjs.com/auto-animate/">Code controls</a>:</h2>
 <div class="panel-tabset">
 <ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Shapes 🔵</a></li><li><a href="#tabset-1-2">Look at me 🧐</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="|1,14|1,3,14,16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="do">## Animations: {auto-animate=true auto-animate-easing="ease-in-out"}</span></span>
+<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="|1,14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="do">## Animations: {auto-animate=true auto-animate-easing="ease-in-out"}</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a></span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="sc">:::</span> {.r<span class="sc">-</span>hstack}</span>
 <span id="cb1-4"><a href="#cb1-4"></a><span class="sc">:::</span> {data<span class="sc">-</span>id<span class="ot">=</span><span class="st">"box1"</span> auto<span class="sc">-</span>animate<span class="sc">-</span>delay<span class="ot">=</span><span class="st">"0.1"</span> style<span class="ot">=</span><span class="st">"background: #2780e3; width: 300px; height: 300px; margin: 10px;"</span> .absolute top<span class="ot">=</span><span class="st">"300"</span> left<span class="ot">=</span><span class="st">"0"</span>}</span>
@@ -545,8 +545,19 @@ PSP Session #8
 <h1>Today:</h1>
 
 </section>
-<section id="january-25-2024-focal-issues" class="slide level2">
-<h2>January 25, 2024 focal issues:</h2>
+<section id="hear-ye-hear-ye" class="slide level2">
+<h2><span class="oldenglish">Hear Ye!!! Hear Ye!!!</span></h2>
+<p><img data-src="https://media.istockphoto.com/id/186534190/vector/town-crier-yelling-message.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=Slm4yC3OfkdCnsj3SnR4P80gUweJO4CPV89GtyIWJ3Y=" class="absolute" style="left: 200px; "></p>
+<div class="fragment absolute" style="bottom: 210px; right: 210px; width: 200px; ">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://quarto.org/docs/blog/posts/2024-01-24-1.4-release/"><img data-src="https://rstudio.github.io/cheatsheets/html/images/logo-quarto.png"></a></p>
+</figure>
+</div>
+</div>
+</section>
+<section id="january-26-2024-focal-issues" class="slide level2">
+<h2>January 26, 2024 focal issues:</h2>
 <ul>
 <li>Boring but necessary:
 <ul>
@@ -577,20 +588,23 @@ PSP Session #8
 <h3 id="foundational"><span class="kulascol2">Foundational:</span></h3>
 <ul>
 <li>element</li>
-<li>nesting</li>
-<li>div</li>
-<li>class</li>
-<li>attribute</li>
+<li>tag
+<ul>
+<li>div, span</li>
+</ul></li>
+<li>attribute
+<ul>
+<li>class, id</li>
+</ul></li>
 </ul>
 </div>
 <div id="third-column" class="quarto-layout-cell" style="flex-basis: 33.0%;justify-content: center;">
 <h3 id="applicable"><span class="kulascol3">Applicable:</span></h3>
 <ul>
-<li><span class="math inline">\(\LaTeX\)</span></li>
 <li>CSS</li>
-<li><a href="https://github.com/quarto-dev/quarto-cli/discussions/1459">Spans &amp; Divs</a></li>
-<li>fence</li>
-<li>feature block</li>
+<li><span class="math inline">\(\LaTeX\)</span></li>
+<li>fenced <code>&lt;divs&gt;</code></li>
+<li>bracketed <code>&lt;spans&gt;</code></li>
 </ul>
 </div>
 </div>
@@ -610,7 +624,7 @@ PSP Session #8
 <li>HyperText Markup Language</li>
 </ul></li>
 <li>browsers are html <br>processors</li>
-<li><code>&lt;Tags&gt;</code> communicate “look”<br>to browsers</li>
+<li>markup communicates “look”<br>to browsers</li>
 </ul>
 <p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png" class="absolute" style="top: 150px; right: -30px; width: 400px; height: 400px; "></p>
 </section>
@@ -701,6 +715,24 @@ PSP Session #8
 </div>
 <p><img data-src="https://www.freecodecamp.org/news/content/images/2021/08/anatomy-of-an-html-tag.png" class="absolute" style="left: -100px; bottom: 130px; height: 300px; "></p>
 </section>
+<section id="div-span" class="slide level2">
+<h2><span class="kulas2">div &amp; span</span></h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="lefthandbit" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+
+</div>
+<div id="righthandbit" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<ul>
+<li>tags that divide documents into self-contained sections</li>
+<li>content within typically styled with CSS</li>
+<li>divs contain blocks, spans wrap inline content</li>
+</ul>
+</div>
+</div>
+</div>
+<p><img data-src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20221226153304/10-Alternatives-to-the-div-HTML-Tag.png" class="absolute" style="left: -150px; bottom: 150px; width: 600px; "></p>
+</section>
 <section id="attribute-value" class="slide level2">
 <h2><span class="kulas2">attribute &amp; value</span></h2>
 <div class="quarto-layout-panel">
@@ -723,45 +755,172 @@ PSP Session #8
 </div>
 <p><img data-src="https://monadical.com/static/html-tag-attributes.png" class="absolute" style="left: -130px; bottom: 100px; "></p>
 </section>
-<section id="div" class="slide level2">
-<h2><span class="kulas2">div</span></h2>
+<section id="class-id" class="slide level2">
+<h2><span class="kulas2">class &amp; id</span></h2>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
-<div id="righthandbit" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="lefthandbit" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 
 </div>
-<div id="lefthandbit" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<div id="righthandbit" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <ul>
-<li>tag that divides documents into<br> self-contained sections</li>
-<li>not earthshattering by itself</li>
-<li>important for Quarto</li>
+<li>attributes that help coordinate CSS applications</li>
+<li>class attributes use <code>"."</code> prefix in CSS</li>
+<li>id attributes use <code>"#"</code> prefix in CSS</li>
 </ul>
 </div>
 </div>
 </div>
-</section>
-<section id="fence" class="slide level2">
-<h2><span class="kulas2">fence</span></h2>
+<p><img data-src="https://bbensch09.github.io/imgs/class-vs-id-example.png" class="absolute" style="top: 200px; left: -50px; width: 500px; "></p>
 </section>
 <section id="the-applicable" class="slide level2">
 <h2><span class="kulas3">The Applicable:</span></h2>
 <p><img data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/2560px-R_logo.svg.png" class="absolute" style="left: 50px; bottom: 120px; width: 400px; "> <img data-src="https://rstudio.github.io/cheatsheets/html/images/logo-quarto.png" class="absolute" style="bottom: 75px; right: 50px; width: 325px; "></p>
 </section>
-<section id="latex" class="slide level2">
-<h2><span class="kulas3"><span class="math inline">\(\LaTeX\)</span></span></h2>
-</section>
 <section id="css" class="slide level2">
 <h2><span class="kulas3">CSS</span></h2>
 <ul>
-<li>language - alters/enhances <br> HTML rendering</li>
-<li>focused on <em>styling</em> of HTML content</li>
+<li>style attribute syntax</li>
+<li>finite <a href="https://www.w3schools.com/cssref/index.php">number of properties</a></li>
+<li>preferred method of <em>styling</em><br> HTML elements</li>
+<li>finite number of tags<br>also important here</li>
 </ul>
+<p><img data-src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics/css-declaration-small.png" class="absolute" style="bottom: 140px; right: -180px; width: 600px; "></p>
 </section>
-<section id="process" class="slide level2">
-<h2><span class="kulas3">Process</span></h2>
-<p><img data-src="https://quarto.org/docs/get-started/hello/images/rstudio-qmd-how-it-works.png"></p>
-<div class="{.justify=&quot;right&quot;}">
-<p><span class="math inline">\(\LaTeX\)</span> &amp; CSS</p>
+<section id="latex" class="slide level2">
+<h2><span class="kulas3"><span class="math inline">\(\LaTeX\)</span></span></h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="lefthandbit" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<ul>
+<li>typesetting Markup language for pdf documents</li>
+<li>focus on content - leave design decisions to others</li>
+<li>similar effect as CSS
+<ul>
+<li>not as intuitive(?)</li>
+</ul></li>
+</ul>
+</div>
+<div id="righthandbit" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img data-src="https://latex-tutorial.com/wp-content/uploads/2021/07/Listing-code-in-LaTeX-Minted.png"></p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>Yabut <strong>TYPIST</strong> <a href="https://typst.app/about/">whazzat?!?</a> 🤷</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="fences-brackets" class="slide level2">
+<h2><span class="kulas3">Fences &amp; Brackets</span></h2>
+<p>…are attempts to consolidate styling attributes across document formats - the structure has more of a CSS flavor (as opposed to <span class="math inline">\(\LaTeX\)</span>)</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="lefthandbit" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<h3 id="fence">Fence</h3>
+<ul>
+<li>The Quarto implementation of <code>&lt;div&gt;</code></li>
+</ul>
+</div>
+<div id="righthandbit" class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<h3 id="bracket">Bracket</h3>
+<ul>
+<li>The Quarto implementation of <code>&lt;span&gt;</code></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="fenced-divs" class="slide level2">
+<h2><span class="kulas3">Fenced Divs</span></h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="lefthandbit" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
+<ul>
+<li>start and end with (at least) 3 colons</li>
+<li>spacing can be persnickity</li>
+<li>nesting is ok</li>
+<li>bracket defines styling attribute(s) to apply
+<ul>
+<li><code>{.class}</code> vs <code>{class}</code>?</li>
+</ul></li>
+</ul>
+</div>
+<div id="righthandbit" class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="6,7,8|3,5,9,11,13,15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="do">## Nest different stylings:</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="sc">:::</span><span class="er">:</span> {layout<span class="ot">=</span><span class="st">"[60,40]"</span>}</span>
+<span id="cb3-4"><a href="#cb3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="sc">:::</span> {<span class="co">#lefthandbit}</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="sc">:::</span>{style<span class="ot">=</span><span class="st">"color:red;"</span>}</span>
+<span id="cb3-7"><a href="#cb3-7"></a>Whatcha talkin about Willis?</span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="sc">:::</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="er">:::</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a>  </span>
+<span id="cb3-11"><a href="#cb3-11"></a><span class="er">:::</span> {<span class="co">#righthandbit}</span></span>
+<span id="cb3-12"><a href="#cb3-12"></a>Nada mucho mi amigo </span>
+<span id="cb3-13"><a href="#cb3-13"></a><span class="sc">:::</span>  </span>
+<span id="cb3-14"><a href="#cb3-14"></a>  </span>
+<span id="cb3-15"><a href="#cb3-15"></a><span class="er">::::</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="bracketed-spans" class="slide level2">
+<h2><span class="kulas3">Bracketed Spans</span></h2>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="lefthandbit" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
+<ul>
+<li>content to be styled placed in [square] brackets</li>
+<li>styling effect in adjacent {curly} brackets</li>
+<li>same action as fences, just more targetted</li>
+</ul>
+</div>
+<div id="righthandbit" class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" data-code-line-numbers="3-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="do">## Nesting not recommended:</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a>Whatcha talkin about </span>
+<span id="cb4-4"><a href="#cb4-4"></a>[Willis?]{style<span class="ot">=</span><span class="st">"color:red;"</span>}</span>
+<span id="cb4-5"><a href="#cb4-5"></a></span>
+<span id="cb4-6"><a href="#cb4-6"></a>Nada mucho mi amigo </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="terminology-summary" class="slide level2">
+<h2>Terminology Summary</h2>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>Knowing the terminology makes navigating the Quarto.org help pages much more effective</li>
+</ul>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>Using pre-existing classes should “work” across output formats (excluding interative elements)</li>
+</ul>
+</div>
+<div class="fragment fade-in-then-semi-out">
+<ul>
+<li>May still need customized <span class="math inline">\(\LaTeX\)</span>, HTML, or CSS if you want to get very specific stylings for given output</li>
+</ul>
+</div>
+<div class="fragment">
+<p><img data-src="https://quarto.org/docs/get-started/hello/images/rstudio-qmd-how-it-works.png" class="absolute" style="bottom: 0px; "></p>
+<p><img data-src="https://download.logo.wine/logo/Lua_(programming_language)/Lua_(programming_language)-Logo.wine.png" class="absolute" style="bottom: -65px; right: 280px; width: 250px; "></p>
 </div>
 <p><img src="erg2.png" class="slide-logo"></p>
 <div class="footer footer-default">
