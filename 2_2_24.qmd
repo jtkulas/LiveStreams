@@ -1,0 +1,95 @@
+---
+title: "R for <br>Authoring!!" 
+author: "PSP Session #9"
+title-slide-attributes: 
+  data-background-image: img/session9.jpg
+  data-background-opacity: ".7"
+format:
+  revealjs:
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [night, custom6.scss]
+    logo: "erg2.png"
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+engine: knitr                        ## not picking up inline codes
+---
+
+```{r, warning=FALSE, message=FALSE}
+devtools::install_github("hadley/emo")
+```
+
+## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #8 `r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    -   Short-term:
+        - Quarto 1.4
+    -   Long-term:
+        -   dissertation template `r emo::ji("graduation_cap")`
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+:::
+
+![](img/title8.JPG){.absolute top="170" right="0" width="550" height="325"}
+
+# Recap of Session #8:
+
+## Terminology:
+:::: {layout="[33,34,33]"}
+
+::: {#first-column}
+### [Universal:]{.kulascol}
++ HTML
++ Markdown, Markup
++ Pandoc
++ PDF
+:::
+
+::: {#second-column}
+### [Foundational:]{.kulascol2}
++ element
++ tag
+  + div, span
++ attribute 
+  + class, id
+:::
+
+::: {#third-column}
+### [Applicable:]{.kulascol3}
++ CSS
++ $\LaTeX$
++ fenced `<divs>`
++ bracketed `<spans>`
+:::
+
+::::
+
+## Dissertation formatting `r emo::ji("graduation_cap")`:
+
+1. E-mail updates:
+    + Current template already exist?
+        + Graduate school
+        + Hard sciences: Math, Computer Science, <br>Physics, Astronomy
+2. 1 inch margins (YAML)
+3. Yet to look into: `r emo::ji("construction")`
+    + Where to poke & prod?
+
+# Today:
+
+## [Hear Ye!!!   Hear Ye!!!]{.oldenglish}
+
+![](https://media.istockphoto.com/id/186534190/vector/town-crier-yelling-message.jpg?s=612x612&w=0&k=20&c=Slm4yC3OfkdCnsj3SnR4P80gUweJO4CPV89GtyIWJ3Y=){.absolute left="200"}
+
+::: {.fragment .absolute width="200" right="210" bottom="210"}
+[![](https://rstudio.github.io/cheatsheets/html/images/logo-quarto.png)](https://quarto.org/docs/blog/posts/2024-01-24-1.4-release/)
+:::
+
+
