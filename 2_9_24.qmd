@@ -1,0 +1,71 @@
+---
+title: "R for <br>Authoring!!" 
+author: "PSP Session #10"
+title-slide-attributes: 
+  data-background-image: img/pixabay-bible-clasp.webp
+  data-background-opacity: ".7"
+format:
+  revealjs:
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [night, custom10.scss]
+    logo: "erg2.png"
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+engine: knitr                        ## not picking up inline codes
+---
+
+```{r, warning=FALSE, message=FALSE}
+devtools::install_github("hadley/emo")
+```
+
+## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #9 `r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    -   Short-term:
+        - cross-references `r emo::ji("children_crossing")`
+    -   Long-term:
+        -   dissertation template `r emo::ji("graduation_cap")`
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+:::
+
+![](img/title9.JPG){.absolute top="170" right="-50" width="550" height="325"}
+
+# Recap of Session #9:
+
+## Quarto 1.4:
+
+::: {layout="[50,50]"}
+::: first-column
++ dashboards
++ typst
++ cross-references
++ manuscripts
+:::
+
+::: second
+
+:::
+:::
+
+
+
+## Dissertation formatting `r emo::ji("graduation_cap")`:
+
+1. Current template DOES NOT exist
+2. Yet to look into: `r emo::ji("construction")`
+    + Where best spot(s) to poke & prod?
+
+# Today:
+
+## 
+
