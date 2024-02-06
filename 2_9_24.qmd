@@ -46,6 +46,8 @@ devtools::install_github("hadley/emo")
 
 ::: {layout="[50,50]"}
 ::: first-column
+<br />
+
 + dashboards
 + typst
 + cross-references
@@ -56,14 +58,16 @@ devtools::install_github("hadley/emo")
 :::
 :::
 
-![](https://tapintobalance.com/wp-content/uploads/2013/09/new-release-banner.fw_1.png){.absolute top="-30" right="130"}
-![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExenVtbWFmNnJuaHY5Y2FmY3JnZHplcXJlbjUzMWxxa293amxjNXNjbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GStLeae4F7VIs/giphy-downsized-large.gif){.absolute right="0" top="200" height="350"}
+![](https://tapintobalance.com/wp-content/uploads/2013/09/new-release-banner.fw_1.png){.absolute top="0" right="30"}
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExenVtbWFmNnJuaHY5Y2FmY3JnZHplcXJlbjUzMWxxa293amxjNXNjbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GStLeae4F7VIs/giphy-downsized-large.gif){.absolute right="-50" top="200" height="350"}
 
-## Dissertation formatting `r emo::ji("graduation_cap")`:
+## Dissertation <br>formatting `r emo::ji("graduation_cap")`:
 
-1. Current template DOES NOT exist
+1. Current template <br>DOES NOT exist
 2. Yet to look into: `r emo::ji("construction")`
-    + Where best spot(s) to poke & prod?
+    + Where best spot(s) <br>to poke & prod?
+    
+![](https://workexposed.files.wordpress.com/2009/09/far_side002.jpg){.absolute right="-30" bottom="0"}
 
 # Today:
 
