@@ -38,7 +38,7 @@ devtools::install_github("hadley/emo")
 :::
 :::
 
-![](img/title9.JPG){.absolute top="170" right="-50" width="550" height="325"}
+![](img/title9.JPG){.absolute top="170" right="-100" width="550" height="325"}
 
 # Recap of Session #9:
 
@@ -63,7 +63,7 @@ devtools::install_github("hadley/emo")
 
 ## Dissertation <br>formatting `r emo::ji("graduation_cap")`:
 
-1. [Current template <br>DOES NOT exist]{.fragment .strike}
+1. [Current template]{.fragment .strike} <br>DOES NOT exist
 2. Yet to look into: `r emo::ji("construction")`
     + Where best spot(s) <br>to poke & prod?
     
