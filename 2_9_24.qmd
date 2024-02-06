@@ -42,16 +42,16 @@ devtools::install_github("hadley/emo")
 
 # Recap of Session #9:
 
-## Quarto 1.4:
+## Quarto [1.4](https://quarto.org/docs/blog/posts/2024-01-24-1.4-release/):
 
 ::: {layout="[50,50]"}
 ::: first-column
 <br />
 
-+ dashboards
-+ typst
++ [dashboards]{.fragment .semi-fade-out fragment-index=1}
++ [typst]{.fragment .semi-fade-out fragment-index=1}
++ [manuscripts]{.fragment .semi-fade-out fragment-index=1}
 + cross-references
-+ manuscripts
 :::
 
 ::: second
