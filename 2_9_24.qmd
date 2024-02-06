@@ -53,11 +53,11 @@ devtools::install_github("hadley/emo")
 :::
 
 ::: second
-
 :::
 :::
 
-
+![](https://tapintobalance.com/wp-content/uploads/2013/09/new-release-banner.fw_1.png){.absolute top="-30" right="130"}
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExenVtbWFmNnJuaHY5Y2FmY3JnZHplcXJlbjUzMWxxa293amxjNXNjbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GStLeae4F7VIs/giphy-downsized-large.gif){.absolute right="0" top="200" height="350"}
 
 ## Dissertation formatting `r emo::ji("graduation_cap")`:
 
@@ -67,5 +67,14 @@ devtools::install_github("hadley/emo")
 
 # Today:
 
-## 
+## [Cross-references](https://quarto.org/docs/authoring/cross-references.html) in Quarto
+
++ Images
++ Figures
++ Tables
++ equations
++ sections
++ code blocks
+
+![](https://conwaykitchen.com/cdn/shop/files/2207-LSTK.png?v=1689889598){.absolute top="100" right="100" height="600" width="600"}
 
