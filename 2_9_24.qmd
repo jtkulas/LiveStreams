@@ -63,7 +63,7 @@ devtools::install_github("hadley/emo")
 
 ## Dissertation <br>formatting `r emo::ji("graduation_cap")`:
 
-1. Current template <br>DOES NOT exist
+1. [Current template <br>DOES NOT exist]{.fragment .strike}
 2. Yet to look into: `r emo::ji("construction")`
     + Where best spot(s) <br>to poke & prod?
     
@@ -71,14 +71,24 @@ devtools::install_github("hadley/emo")
 
 # Today:
 
-## [Cross-references](https://quarto.org/docs/authoring/cross-references.html) in Quarto
+## [Cross-references](https://quarto.org/docs/authoring/cross-references.html) in Quarto:
 
-+ Images
+::: {layout="[60,30]"}
+
+::: first-column
+:::
+
+::: second-column
+<br />
+
++ images
 + Figures
 + Tables
 + equations
 + sections
 + code blocks
+:::
+:::
 
-![](https://conwaykitchen.com/cdn/shop/files/2207-LSTK.png?v=1689889598){.absolute top="100" right="100" height="600" width="600"}
+![](https://conwaykitchen.com/cdn/shop/files/2207-LSTK.png?v=1689889598){.absolute top="100" left="0" height="600" width="600"}
 
