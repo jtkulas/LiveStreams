@@ -29,6 +29,7 @@ devtools::install_github("hadley/emo")
 -   Focal issue(s):
     -   Short-term:
         - cross-references `r emo::ji("children_crossing")`
+        - R Studio live install
     -   Long-term:
         -   dissertation template `r emo::ji("graduation_cap")`
 -   Shared problem-solving
@@ -38,7 +39,7 @@ devtools::install_github("hadley/emo")
 :::
 :::
 
-![](img/title9.JPG){.absolute top="170" right="-100" width="550" height="325"}
+![](img/title9.JPG){.absolute top="200" right="-100" width="550" height="325"}
 
 # Recap of Session #9:
 
