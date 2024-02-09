@@ -25,7 +25,7 @@ devtools::install_github("hadley/emo")
 
 ::: {layout="[80,20]"}
 ::: first-column
--   Recap session #9 `r emo::ji("left_right_arrow")`
+-   Recap session #9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue(s):
     -   Short-term:
         - cross-references `r emo::ji("children_crossing")`
@@ -66,6 +66,7 @@ devtools::install_github("hadley/emo")
 1. [Current template]{.fragment .strike} <br>DOES NOT exist
 2. Yet to look into: `r emo::ji("construction")`
     + Where best spot(s) <br>to poke & prod?
+    + $\LaTeX$ [.cls & .sty <br>for noobs](https://latex-ninja.com/2020/03/25/your-first-time-tweaking-a-cls-file-on-the-example-of-creating-switchable-colour-themes/)
     
 ![](https://workexposed.files.wordpress.com/2009/09/far_side002.jpg){.absolute right="-30" bottom="0"}
 
@@ -90,5 +91,4 @@ devtools::install_github("hadley/emo")
 :::
 :::
 
-![](https://conwaykitchen.com/cdn/shop/files/2207-LSTK.png?v=1689889598){.absolute top="100" left="0" height="600" width="600"}
-
+![](https://conwaykitchen.com/cdn/shop/files/2207-LSTK.png?v=1689889598){.absolute top="80" left="0" height="600" width="600"}
