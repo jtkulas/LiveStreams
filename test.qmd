@@ -1,55 +1,68 @@
 ---
 title: "Untitled"
-format: 
-  revealjs:
-    mouse-wheel: true
+format: pdf
 ---
 
-## {auto-animate=true}
+\noindent\rule{8cm}{2pt}
 
-Look at me
+## Quarto
 
-## {auto-animate=true}
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
 
-::: {.r-fit-text}
-Look at me
-:::
+![Elephant](https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/babar-nostalgia-prints.jpg){#fig-elephant}
 
-## Title {auto-animate=true}
-
-Hey there
-
-## Title {auto-animate=true}
-
-::: {style="font-family: Times New Roman; color: #8A49D4"}
-Hey there
-:::
-
-## {auto-animate=true}
+See @fig-elephant for an illustration.
 
 ```{r}
-#| echo: true
-#| eval: false
+#| label: fig-penguins
+#| fig-cap: "Plot1"
+#| echo: false
+#| warning: false
+#| message: false
 
----
-title: "Untitled"
-format: 
-  html:                       
-    mainfont: Bungee Spice        
----
+library(ggplot2)
+library(palmerpenguins)
+
+ggplot(data = penguins, aes(x = body_mass_g)) + geom_histogram(aes(fill = species), alpha = 0.5, position = "identity") + scale_fill_manual(values = c("darkorange","purple","cyan4")) + labs(x = "Body mass (g)", y = "Frequency")
+
 ```
-  
-## {auto-animate=true}
 
-```{r, `code-line-numbers`="5"}
-#| echo: true
-#| eval: false
+See @fig-penguins for an additional illustration.
 
----
-title: "Untitled"
-format: 
-  html:                       
-    css: fonts.css        
----
+```{r}
+#| label: fig-plot
+#| fig-cap: "Plot2"
+#| echo: false
+#| warning: false
+#| message: false
+
+ggplot(iris, aes(x=Petal.Length, y=Petal.Width)) +
+  geom_point()
 ```
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet lectus eleifend, tempus neque et, luctus erat. Proin ac dapibus lacus. Nullam hendrerit laoreet dignissim. Nullam sed ultricies magna. Nam semper, sapien non tincidunt tristique, magna nulla accumsan lacus, in aliquet eros libero id sapien. Etiam eget molestie erat. Nunc lacus velit, accumsan et porta in, finibus vel tellus.
+
+@lst-customers
+
+Nulla ac consectetur libero. Fusce rhoncus convallis nisi in aliquam. Praesent hendrerit metus arcu, porta cursus urna tempus non. Nulla enim diam, tincidunt sit amet odio in, lacinia molestie elit. Proin iaculis leo et viverra tincidunt. Donec pellentesque mauris id odio convallis, dictum dapibus sem molestie. Pellentesque arcu dolor, vulputate quis risus ut, egestas lacinia orci. Vivamus scelerisque elementum tincidunt. Pellentesque commodo libero sit amet leo sollicitudin dictum. Sed vel nulla suscipit, ornare nulla ut, ullamcorper augue. Pellentesque neque arcu, eleifend nec lacus et, tristique ornare dui. Nulla laoreet ultricies sapien eu mattis. Proin laoreet porttitor felis in tempor. Ut placerat dui sit amet efficitur sollicitudin. Donec blandit, enim in tincidunt luctus, nunc lorem imperdiet metus, ac molestie lectus sem tristique augue.
+
+Nam vitae vestibulum sapien. Suspendisse eu nibh rhoncus, ultrices lacus sed, suscipit leo. Fusce non ex nec massa commodo dapibus a eget ex. Sed molestie nibh lorem, vel finibus ligula elementum placerat. Etiam pharetra dui in cursus mattis. Donec scelerisque malesuada quam a pharetra. Vivamus varius, sapien et condimentum laoreet, augue dui scelerisque odio, eu dictum sem erat sit amet purus. Etiam efficitur libero ac augue ultrices imperdiet. Nunc at tortor erat. In ultricies bibendum enim eu blandit. Nam commodo ante eget arcu venenatis interdum.
+
+Ut vitae eros a justo sagittis ultricies. Vestibulum id vulputate leo, sit amet vestibulum lorem. Nulla bibendum metus placerat sollicitudin mattis. Praesent consectetur tellus ut nulla maximus venenatis. Morbi blandit pulvinar ligula vitae accumsan. Nam sit amet tortor in metus semper egestas. Nulla facilisi.
+
+In hac habitasse platea dictumst. In porta, dui in volutpat tristique, purus leo gravida nisi, id tincidunt elit lorem et lorem. Maecenas aliquet dolor lacus, molestie faucibus enim luctus eget. Maecenas fringilla porttitor felis, vel suscipit dolor lacinia vitae. Sed in iaculis leo. Maecenas et massa id nisi hendrerit elementum et eu nunc. Aenean ornare vulputate sem eget molestie.
+
+For example, see @fig-plot.
+
+```{#lst-customers .sql lst-cap="Customers Query"}
+#| label: fig-plot
+#| fig-cap: "Plot2"
+#| echo: false
+#| warning: false
+#| message: false
+
+ggplot(iris, aes(x=Petal.Length, y=Petal.Width)) +
+  geom_point()
+```
+
 

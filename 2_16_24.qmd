@@ -1,0 +1,104 @@
+---
+title: "R for <br>Authoring!!" 
+author: "PSP Session #11"
+title-slide-attributes: 
+  data-background-image: img/_sessionXXXXXX.jpg
+  data-background-opacity: ".7"
+format:
+  revealjs:
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [night, custom7.scss]
+    logo: "erg2.png"
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+engine: knitr                        ## not picking up inline codes
+---
+
+```{r, warning=FALSE, message=FALSE}
+devtools::install_github("hadley/emo")
+```
+
+## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    -   Short-term:
+        - `r emo::ji("children_crossing")`Part II`r emo::ji("children_crossing")`
+    -   Long-term:
+        -   dissertation template `r emo::ji("graduation_cap")`
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+:::
+
+![](img/title10.JPG){.absolute top="170" right="-100" width="550" height="325"}
+
+# Recap of Session #10:
+
+## Cross-references `r emo::ji("children_crossing")`<br> & Quarto 1.4:
+
+::: {layout="[50,50]"}
+::: first-column
+
+:::
+
+::: second
+
+:::{.fragment .fade-in-then-semi-out fragment-index=1}
+
+### Software (v. 1.4):  
+
++ Software platform
+:::
+
+:::{.fragment .fade-in fragment-index=2}
+### Package (v. 1.3): 
+
+  + facilitates text editor (R Studio)
+  + duplicates Quarto terminal commands
+:::
+
+:::
+:::
+![](https://spencerschien.info/post/r_for_nonprofits/quarto_template/featured_hu01d0a08f0e42ea7dedbc82d0ac80cee3_11810_720x2500_fit_q75_h2_lanczos_3.webp){.absolute left="-150" top="160" height="150" .fragment .fade-in-then-semi-out fragment-index=1}
+![](img/quarto.png){.absolute left="200" bottom="35" height="300" .fragment .fade-in-then-semi-out fragment-index=2}
+
+## Dissertation <br>formatting `r emo::ji("graduation_cap")`:
+
+1. Yet to look into: `r emo::ji("construction")`
+    + Where best spot(s) <br>to poke & prod?
+    + $\LaTeX$ [.cls & .sty <br>for noobs](https://latex-ninja.com/2020/03/25/your-first-time-tweaking-a-cls-file-on-the-example-of-creating-switchable-colour-themes/)
+    
+![](https://workexposed.files.wordpress.com/2009/09/far_side002.jpg){.absolute right="-30" bottom="0"}
+
+# Today:
+
+## [Cross-references](https://quarto.org/docs/authoring/cross-references.html) in Quarto:
+
+::: {layout="[60,30]"}
+
+::: first-column
+:::
+
+::: second-column
+<br />
+
++ [images]{.fragment .semi-fade-out fragment-index=1}
++ [Figures]{.fragment .semi-fade-out fragment-index=1}
++ [code blocks]{.fragment .semi-fade-out fragment-index=1}
++ Callouts
++ Tables
++ equations
++ sections
+
+:::
+:::
+
+![](https://conwaykitchen.com/cdn/shop/files/2207-LSTK.png?v=1689889598){.absolute top="80" left="0" height="600" width="600"}
