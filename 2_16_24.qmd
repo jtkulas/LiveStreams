@@ -53,13 +53,13 @@ devtools::install_github("hadley/emo")
 
 :::{.fragment .fade-in-then-semi-out fragment-index=1}
 
-### Software (v. 1.4):  
+### [Software (v. 1.4):]{.steel}  
 
 + Software platform
 :::
 
 :::{.fragment .fade-in fragment-index=2}
-### Package (v. 1.3): 
+### [Package (v. 1.3):]{.steel} 
 
   + facilitates text editor (R Studio)
   + duplicates Quarto terminal commands
@@ -68,7 +68,7 @@ devtools::install_github("hadley/emo")
 :::
 :::
 ![](https://spencerschien.info/post/r_for_nonprofits/quarto_template/featured_hu01d0a08f0e42ea7dedbc82d0ac80cee3_11810_720x2500_fit_q75_h2_lanczos_3.webp){.absolute left="-150" top="160" height="150" .fragment .fade-in-then-semi-out fragment-index=1}
-![](img/quarto.png){.absolute left="200" bottom="35" height="300" .fragment .fade-in-then-semi-out fragment-index=2}
+![](img/quarto.png){.absolute left="185" bottom="35" height="300" .fragment .fade-in-then-semi-out fragment-index=2}
 
 ## Dissertation <br>formatting `r emo::ji("graduation_cap")`:
 
@@ -85,10 +85,7 @@ devtools::install_github("hadley/emo")
 ::: {layout="[60,30]"}
 
 ::: first-column
-:::
-
-::: second-column
-<br />
+[Content:]{.kulas2}
 
 + [images]{.fragment .semi-fade-out fragment-index=1}
 + [Figures]{.fragment .semi-fade-out fragment-index=1}
@@ -97,8 +94,17 @@ devtools::install_github("hadley/emo")
 + Tables
 + equations
 + sections
-
-:::
 :::
 
-![](https://conwaykitchen.com/cdn/shop/files/2207-LSTK.png?v=1689889598){.absolute top="80" left="0" height="600" width="600"}
+::: second-column
+
+:::{.fragment .fade-in fragment-index=1}
+[Method:]{.kulas3}
+
++ fences
++ brackets
+:::
+:::
+:::
+
+![](https://conwaykitchen.com/cdn/shop/files/2207-LSTK.png?v=1689889598){.absolute bottom="50" right="350" height="400" width="400"}

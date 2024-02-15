@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Dancing Script');
+@import url('https://fonts.googleapis.com/css?family=Protest Riot');
+@import url('https://fonts.googleapis.com/css?family=Protest Guerrilla');
 
 /*-- scss:defaults --*/
 
@@ -25,4 +27,22 @@ $presentation-title-slide-text-color: white;
   color: white !important;
   font-weight: bold;
   font-family: 'Dancing Script';
+}
+
+.steel {
+  color: #3d7ba2;
+}
+
+.kulas2 {
+  font-size: 80px;
+  text-decoration: underline;
+  color: #34eba8;
+  font-family: 'Protest Riot';
+}
+
+.kulas3 {
+  font-size: 80px;
+  text-decoration: underline;
+  color: #3d7ba2;
+  font-family: 'Protest Guerrilla';
 }
