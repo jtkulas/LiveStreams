@@ -68,6 +68,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="test_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="test_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -96,73 +125,83 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="quarto" class="level2">
-<h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ggplot2' was built under R version 4.2.3</code></pre>
+</div>
+</div>
+<section id="sec-main" class="level2">
+<h2 class="anchored" data-anchor-id="sec-main">Quarto</h2>
+<p>See the pretty map in <a href="#fig-nightmap" class="quarto-xref">Figure&nbsp;1</a></p>
 <p>Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <a href="https://quarto.org" class="uri">https://quarto.org</a>.</p>
-<div id="fig-elephant" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-elephant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/babar-nostalgia-prints.jpg" class="img-fluid figure-img">
+<div id="wrn-aliensarecoming" class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elephant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Elephant
-</figcaption>
-</figure>
+<div class="callout-title-container flex-fill">
+Warning&nbsp;1
 </div>
-<p>See <a href="#fig-elephant" class="quarto-xref">Figure&nbsp;1</a> for an illustration.</p>
+</div>
+<div class="callout-body-container callout-body">
+<p>Oh no lookout AGAIN!!</p>
+</div>
+</div>
+<div id="wrn-academicstalkweird" class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning&nbsp;2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Oh no lookout!!</p>
+</div>
+</div>
+<p><span id="eq-alpha"><span class="math display">\[
+\alpha
+\tag{1}\]</span></span></p>
 <div class="cell">
-<div class="cell-output-display">
-<div id="fig-penguins" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-penguins-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="test_files/figure-html/fig-penguins-1.png" class="img-fluid figure-img" width="672">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-penguins-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Plot1
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p>See <a href="#fig-penguins" class="quarto-xref">Figure&nbsp;2</a> for an additional illustration.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div id="fig-plot" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="test_files/figure-html/fig-plot-1.png" class="img-fluid figure-img" width="672">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Plot2
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet lectus eleifend, tempus neque et, luctus erat. Proin ac dapibus lacus. Nullam hendrerit laoreet dignissim. Nullam sed ultricies magna. Nam semper, sapien non tincidunt tristique, magna nulla accumsan lacus, in aliquet eros libero id sapien. Etiam eget molestie erat. Nunc lacus velit, accumsan et porta in, finibus vel tellus.</p>
-<p><a href="#lst-customers" class="quarto-xref">Listing&nbsp;1</a></p>
-<p>Nulla ac consectetur libero. Fusce rhoncus convallis nisi in aliquam. Praesent hendrerit metus arcu, porta cursus urna tempus non. Nulla enim diam, tincidunt sit amet odio in, lacinia molestie elit. Proin iaculis leo et viverra tincidunt. Donec pellentesque mauris id odio convallis, dictum dapibus sem molestie. Pellentesque arcu dolor, vulputate quis risus ut, egestas lacinia orci. Vivamus scelerisque elementum tincidunt. Pellentesque commodo libero sit amet leo sollicitudin dictum. Sed vel nulla suscipit, ornare nulla ut, ullamcorper augue. Pellentesque neque arcu, eleifend nec lacus et, tristique ornare dui. Nulla laoreet ultricies sapien eu mattis. Proin laoreet porttitor felis in tempor. Ut placerat dui sit amet efficitur sollicitudin. Donec blandit, enim in tincidunt luctus, nunc lorem imperdiet metus, ac molestie lectus sem tristique augue.</p>
-<p>Nam vitae vestibulum sapien. Suspendisse eu nibh rhoncus, ultrices lacus sed, suscipit leo. Fusce non ex nec massa commodo dapibus a eget ex. Sed molestie nibh lorem, vel finibus ligula elementum placerat. Etiam pharetra dui in cursus mattis. Donec scelerisque malesuada quam a pharetra. Vivamus varius, sapien et condimentum laoreet, augue dui scelerisque odio, eu dictum sem erat sit amet purus. Etiam efficitur libero ac augue ultrices imperdiet. Nunc at tortor erat. In ultricies bibendum enim eu blandit. Nam commodo ante eget arcu venenatis interdum.</p>
-<p>Ut vitae eros a justo sagittis ultricies. Vestibulum id vulputate leo, sit amet vestibulum lorem. Nulla bibendum metus placerat sollicitudin mattis. Praesent consectetur tellus ut nulla maximus venenatis. Morbi blandit pulvinar ligula vitae accumsan. Nam sit amet tortor in metus semper egestas. Nulla facilisi.</p>
-<p>In hac habitasse platea dictumst. In porta, dui in volutpat tristique, purus leo gravida nisi, id tincidunt elit lorem et lorem. Maecenas aliquet dolor lacus, molestie faucibus enim luctus eget. Maecenas fringilla porttitor felis, vel suscipit dolor lacinia vitae. Sed in iaculis leo. Maecenas et massa id nisi hendrerit elementum et eu nunc. Aenean ornare vulputate sem eget molestie.</p>
-<p>For example, see <a href="#fig-plot" class="quarto-xref">Figure&nbsp;3</a>.</p>
-<div id="lst-customers" class="sql listing quarto-float">
+<div id="lst-mapcode" class="r cell-code listing quarto-float">
 <figure class="quarto-float quarto-float-lst figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-customers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Listing&nbsp;1: Customers Query
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-mapcode-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Listing&nbsp;1: This is code to NOT zoom in on Spain
 </figcaption>
-<div aria-describedby="lst-customers-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode" id="lst-customers"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="lst-customers-1"><a href="#lst-customers-1" aria-hidden="true" tabindex="-1"></a>#| <span class="kw">label</span>: fig<span class="op">-</span>plot</span>
-<span id="lst-customers-2"><a href="#lst-customers-2" aria-hidden="true" tabindex="-1"></a>#| fig<span class="op">-</span>cap: <span class="ot">"Plot2"</span></span>
-<span id="lst-customers-3"><a href="#lst-customers-3" aria-hidden="true" tabindex="-1"></a>#| echo: <span class="kw">false</span></span>
-<span id="lst-customers-4"><a href="#lst-customers-4" aria-hidden="true" tabindex="-1"></a>#| warning: <span class="kw">false</span></span>
-<span id="lst-customers-5"><a href="#lst-customers-5" aria-hidden="true" tabindex="-1"></a>#| message: <span class="kw">false</span></span>
-<span id="lst-customers-6"><a href="#lst-customers-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="lst-customers-7"><a href="#lst-customers-7" aria-hidden="true" tabindex="-1"></a>ggplot(iris, aes(x<span class="op">=</span>Petal.<span class="fu">Length</span>, y<span class="op">=</span>Petal.Width)) <span class="op">+</span></span>
-<span id="lst-customers-8"><a href="#lst-customers-8" aria-hidden="true" tabindex="-1"></a>  geom_point()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div aria-describedby="lst-mapcode-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode cell-code" id="lst-mapcode"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="lst-mapcode-1"><a href="#lst-mapcode-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Library</span></span>
+<span id="lst-mapcode-2"><a href="#lst-mapcode-2" aria-hidden="true" tabindex="-1"></a><span class="co"># create a dataset</span></span>
+<span id="lst-mapcode-3"><a href="#lst-mapcode-3" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="lst-mapcode-4"><a href="#lst-mapcode-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">name=</span><span class="fu">c</span>( <span class="fu">rep</span>(<span class="st">"A"</span>,<span class="dv">500</span>), <span class="fu">rep</span>(<span class="st">"B"</span>,<span class="dv">500</span>), <span class="fu">rep</span>(<span class="st">"B"</span>,<span class="dv">500</span>), <span class="fu">rep</span>(<span class="st">"C"</span>,<span class="dv">20</span>), <span class="fu">rep</span>(<span class="st">'D'</span>, <span class="dv">100</span>)  ),</span>
+<span id="lst-mapcode-5"><a href="#lst-mapcode-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">value=</span><span class="fu">c</span>( <span class="fu">rnorm</span>(<span class="dv">500</span>, <span class="dv">10</span>, <span class="dv">5</span>), <span class="fu">rnorm</span>(<span class="dv">500</span>, <span class="dv">13</span>, <span class="dv">1</span>), <span class="fu">rnorm</span>(<span class="dv">500</span>, <span class="dv">18</span>, <span class="dv">1</span>), <span class="fu">rnorm</span>(<span class="dv">20</span>, <span class="dv">25</span>, <span class="dv">4</span>), <span class="fu">rnorm</span>(<span class="dv">100</span>, <span class="dv">12</span>, <span class="dv">1</span>) )</span>
+<span id="lst-mapcode-6"><a href="#lst-mapcode-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="lst-mapcode-7"><a href="#lst-mapcode-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="lst-mapcode-8"><a href="#lst-mapcode-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Most basic violin chart</span></span>
+<span id="lst-mapcode-9"><a href="#lst-mapcode-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x=</span>name, <span class="at">y=</span>value, <span class="at">fill=</span>name)) <span class="sc">+</span> <span class="co"># fill=name allow to automatically dedicate a color for each group</span></span>
+<span id="lst-mapcode-10"><a href="#lst-mapcode-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </figure>
 </div>
+<div class="cell-output-display">
+<div id="fig-nightmap" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-nightmap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="test_files/figure-html/fig-nightmap-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nightmap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: This is Fracais at Nite
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>hey here’s my document!!! Look at <a href="#wrn-academicstalkweird" class="quarto-xref">Warning&nbsp;2</a></p>
+<p>a fancy symbol is located in <a href="#eq-alpha" class="quarto-xref">Equation&nbsp;1</a></p>
+<p>if you want to see some empty boilerplate info please go to <a href="#sec-main" class="quarto-xref">1</a></p>
+<p>See the pretty map in <a href="#fig-nightmap" class="quarto-xref">Figure&nbsp;1</a></p>
+<p>the code is hidden in <a href="#lst-mapcode" class="quarto-xref">Code&nbsp;1</a></p>
 </section>
 
 </main>

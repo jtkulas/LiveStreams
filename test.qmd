@@ -1,68 +1,59 @@
 ---
 title: "Untitled"
-format: pdf
+format: html
 ---
+```{r}
+library(ggplot2)
+```
 
-\noindent\rule{8cm}{2pt}
+## Quarto {#sec-main}
 
-## Quarto
+See the pretty map in @fig-nightmap
 
 Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
 
-![Elephant](https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/babar-nostalgia-prints.jpg){#fig-elephant}
+:::{#wrn-aliensarecoming .callout-warning}
 
-See @fig-elephant for an illustration.
+Oh no lookout AGAIN!!
+:::
 
-```{r}
-#| label: fig-penguins
-#| fig-cap: "Plot1"
-#| echo: false
-#| warning: false
-#| message: false
+:::{#wrn-academicstalkweird .callout-warning}
 
-library(ggplot2)
-library(palmerpenguins)
+Oh no lookout!!
+:::
 
-ggplot(data = penguins, aes(x = body_mass_g)) + geom_histogram(aes(fill = species), alpha = 0.5, position = "identity") + scale_fill_manual(values = c("darkorange","purple","cyan4")) + labs(x = "Body mass (g)", y = "Frequency")
 
-```
-
-See @fig-penguins for an additional illustration.
+$$
+\alpha
+$$ {#eq-alpha}
 
 ```{r}
-#| label: fig-plot
-#| fig-cap: "Plot2"
-#| echo: false
+#| label: fig-nightmap
+#| fig-cap: This is Fracais at Nite
 #| warning: false
-#| message: false
+#| lst-label: lst-mapcode
+#| lst-cap: This is code to NOT zoom in on Spain
 
-ggplot(iris, aes(x=Petal.Length, y=Petal.Width)) +
-  geom_point()
-```
+# Library
+# create a dataset
+data <- data.frame(
+  name=c( rep("A",500), rep("B",500), rep("B",500), rep("C",20), rep('D', 100)  ),
+  value=c( rnorm(500, 10, 5), rnorm(500, 13, 1), rnorm(500, 18, 1), rnorm(20, 25, 4), rnorm(100, 12, 1) )
+)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet lectus eleifend, tempus neque et, luctus erat. Proin ac dapibus lacus. Nullam hendrerit laoreet dignissim. Nullam sed ultricies magna. Nam semper, sapien non tincidunt tristique, magna nulla accumsan lacus, in aliquet eros libero id sapien. Etiam eget molestie erat. Nunc lacus velit, accumsan et porta in, finibus vel tellus.
+# Most basic violin chart
+ggplot(data, aes(x=name, y=value, fill=name)) + # fill=name allow to automatically dedicate a color for each group
+  geom_violin()
 
-@lst-customers
-
-Nulla ac consectetur libero. Fusce rhoncus convallis nisi in aliquam. Praesent hendrerit metus arcu, porta cursus urna tempus non. Nulla enim diam, tincidunt sit amet odio in, lacinia molestie elit. Proin iaculis leo et viverra tincidunt. Donec pellentesque mauris id odio convallis, dictum dapibus sem molestie. Pellentesque arcu dolor, vulputate quis risus ut, egestas lacinia orci. Vivamus scelerisque elementum tincidunt. Pellentesque commodo libero sit amet leo sollicitudin dictum. Sed vel nulla suscipit, ornare nulla ut, ullamcorper augue. Pellentesque neque arcu, eleifend nec lacus et, tristique ornare dui. Nulla laoreet ultricies sapien eu mattis. Proin laoreet porttitor felis in tempor. Ut placerat dui sit amet efficitur sollicitudin. Donec blandit, enim in tincidunt luctus, nunc lorem imperdiet metus, ac molestie lectus sem tristique augue.
-
-Nam vitae vestibulum sapien. Suspendisse eu nibh rhoncus, ultrices lacus sed, suscipit leo. Fusce non ex nec massa commodo dapibus a eget ex. Sed molestie nibh lorem, vel finibus ligula elementum placerat. Etiam pharetra dui in cursus mattis. Donec scelerisque malesuada quam a pharetra. Vivamus varius, sapien et condimentum laoreet, augue dui scelerisque odio, eu dictum sem erat sit amet purus. Etiam efficitur libero ac augue ultrices imperdiet. Nunc at tortor erat. In ultricies bibendum enim eu blandit. Nam commodo ante eget arcu venenatis interdum.
-
-Ut vitae eros a justo sagittis ultricies. Vestibulum id vulputate leo, sit amet vestibulum lorem. Nulla bibendum metus placerat sollicitudin mattis. Praesent consectetur tellus ut nulla maximus venenatis. Morbi blandit pulvinar ligula vitae accumsan. Nam sit amet tortor in metus semper egestas. Nulla facilisi.
-
-In hac habitasse platea dictumst. In porta, dui in volutpat tristique, purus leo gravida nisi, id tincidunt elit lorem et lorem. Maecenas aliquet dolor lacus, molestie faucibus enim luctus eget. Maecenas fringilla porttitor felis, vel suscipit dolor lacinia vitae. Sed in iaculis leo. Maecenas et massa id nisi hendrerit elementum et eu nunc. Aenean ornare vulputate sem eget molestie.
-
-For example, see @fig-plot.
-
-```{#lst-customers .sql lst-cap="Customers Query"}
-#| label: fig-plot
-#| fig-cap: "Plot2"
-#| echo: false
-#| warning: false
-#| message: false
-
-ggplot(iris, aes(x=Petal.Length, y=Petal.Width)) +
-  geom_point()
 ```
 
 
+hey here's my document!!! Look at @wrn-academicstalkweird
+
+a fancy symbol is located in @eq-alpha
+
+if you want to see some empty boilerplate info please go to [-@sec-main]
+
+See the pretty map in @fig-nightmap
+
+the code is hidden in [Code @lst-mapcode]

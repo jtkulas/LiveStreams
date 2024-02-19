@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Dancing Script');
 @import url('https://fonts.googleapis.com/css?family=Pirata One');
+@import url('https://fonts.googleapis.com/css?family=Protest Riot');
+@import url('https://fonts.googleapis.com/css?family=Protest Guerrilla');
 
 /*-- scss:defaults --*/
 
@@ -18,12 +20,13 @@ $presentation-title-slide-text-color: white;
 }
 
 .title {
-  color: black !important;
+  color: #edf1fe;
+  text-shadow: black 1px 0 10px;
 }
 
 .quarto-title-author-name {
   font-size: 65px;
-  color: black !important;
+  color: #edf1fe !important;
   font-weight: bold;
   font-family: 'Dancing Script';
 }
@@ -63,4 +66,22 @@ $presentation-title-slide-text-color: white;
 .kulascol2 {
   color: #34eba8;
   font-family: 'Dancing Script';
+}
+
+.crossstyle {
+  font-size: 80px;
+  text-decoration: underline;
+  color: #34eba8;
+  font-family: 'Protest Riot';
+}
+
+.crossmethod {
+  font-size: 80px;
+  text-decoration: underline;
+  color: #3d7ba2;
+  font-family: 'Protest Guerrilla';
+}
+
+.center h2 {
+  text-align: center;
 }
