@@ -2,7 +2,7 @@
 title: "R for <br>Authoring!!" 
 author: "PSP Session #12"
 title-slide-attributes: 
-  data-background-image: img/_sessionX.jpg
+  data-background-image: img/Session12.webp
   data-background-opacity: ".7"
 format:
   revealjs:
@@ -44,35 +44,50 @@ devtools::install_github("hadley/emo")
 
 ## `r emo::ji("children_crossing")` Cross-references `r emo::ji("children_crossing")` {.center}
 
-::: {layout="[65,35]"}
+:::: {layout="[10,90]"}
 
-::: first-column
-[Content:]{.crossstyle}
+::: numerouno
 
-+ images
-+ Figures
-+ code blocks
-+ Callouts
-+ Tables
-+ equations
-+ sections
+For a false sense of superiority relative to your relatives, see @fig-plot
 :::
 
-::: second-column
+::: dos
 
-[Method:]{.crossmethod}
+```{r}
+#| label: fig-plot
+#| fig-cap: "Life expectancies (your grandparents vs. YOU!)"
+#| fig-height: 6
+#| cache: true
 
-+ fences
-+ brackets
+library(gapminder)
+library(ggplot2)
+library(gganimate)
+ 
+# Make a ggplot, but add frame=year: one image per year
+ggplot(gapminder, aes(gdpPercap, lifeExp, size = pop, colour = country)) +
+  geom_point(alpha = 0.7, show.legend = FALSE) +
+  scale_colour_manual(values = country_colors) +
+  scale_size(range = c(2, 12)) +
+  scale_x_log10() +
+  facet_wrap(vars(continent), nrow=1) +
+  # Here comes the gganimate specific bits
+  labs(title = 'Year: {frame_time}', x = 'GDP per capita', y = 'life expectancy') +
+  transition_time(year) +
+  ease_aes('linear')
+
+# Save at gif:
+#anim_save("271-ggplot2-animated-gif-chart-with-gganimate2.gif")
+```
 :::
-:::
+::::
 
-![](https://conwaykitchen.com/cdn/shop/files/2207-LSTK.png?v=1689889598){.absolute bottom="80" right="345" height="400" width="400"}
+![](https://conwaykitchen.com/cdn/shop/files/2207-LSTK.png?v=1689889598){.absolute bottom="40" left="-200" height="200" width="200"}
 
-## `r emo::ji("children_crossing")` `r emo::ji("children_crossing")` Cross-references `r emo::ji("children_crossing")` `r emo::ji("children_crossing")` {.center}
+## `r emo::ji("children_crossing")` `r emo::ji("children_crossing")` Cross-references `r emo::ji("children_crossing")` `r emo::ji("children_crossing")` 
 
 ::: panel-tabset
-### Callout `r emo::ji("fountain_pen")`
+
+### Callout`r emo::ji("fountain_pen")`
 
 ```{r}
 #| echo: true
@@ -88,7 +103,7 @@ See @tip-yourwaitress for some worldly advice
     
 ```
 
-### Callout `r emo::ji("scroll")` 
+### Callout`r emo::ji("scroll")` 
 
 See @tip-yourwaitress for some worldly advice
 
@@ -97,12 +112,14 @@ See @tip-yourwaitress for some worldly advice
 ...if you ever want another `r emo::ji("beer_mug")`
 :::
 
-### Section `r emo::ji("fountain_pen")`
+### Section`r emo::ji("fountain_pen")`
 
 ```{r}
 #| echo: true
 #| eval: false
-#| code-line-numbers: "1|5"
+#| code-line-numbers: "1,3|7,9"
+
+# Recap of Session #11: {#sec-recap}
 
 Let's skip back to @sec-recap
 
@@ -110,9 +127,11 @@ OR
 
 ahead to @sec-today
 
+# Today: {#sec-today}
+
 ```
 
-### Section `r emo::ji("scroll")`
+### Section`r emo::ji("scroll")`
 
 Let's skip back to @sec-recap
 
