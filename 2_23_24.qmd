@@ -81,7 +81,7 @@ ggplot(gapminder, aes(gdpPercap, lifeExp, size = pop, colour = country)) +
 :::
 ::::
 
-![](https://conwaykitchen.com/cdn/shop/files/2207-LSTK.png?v=1689889598){.absolute bottom="40" left="-200" height="200" width="200"}
+![](https://conwaykitchen.com/cdn/shop/files/2207-LSTK.png?v=1689889598){.absolute bottom="40" left="-180" height="200" width="200"}
 
 ## `r emo::ji("children_crossing")` `r emo::ji("children_crossing")` Cross-references `r emo::ji("children_crossing")` `r emo::ji("children_crossing")` 
 
@@ -92,7 +92,7 @@ ggplot(gapminder, aes(gdpPercap, lifeExp, size = pop, colour = country)) +
 ```{r}
 #| echo: true
 #| eval: false
-#| code-line-numbers: "1|3-6"
+#| code-line-numbers: "3-6|1"
 #| 
 See @tip-yourwaitress for some worldly advice
 
@@ -145,6 +145,8 @@ ahead to @sec-today
 
 ## Quarto dashboards `r emo::ji("coder")`:
 
+[![](img/dash1.JPG)](https://jjallaire.github.io/gapminder-dashboard/)
+
 ## Dissertation <br>formatting `r emo::ji("graduation_cap")`:
 
 1. Yet to look into: `r emo::ji("construction")`
@@ -152,3 +154,9 @@ ahead to @sec-today
     + $\LaTeX$ [.cls & .sty <br>for noobs](https://latex-ninja.com/2020/03/25/your-first-time-tweaking-a-cls-file-on-the-example-of-creating-switchable-colour-themes/)
     
 ![](https://workexposed.files.wordpress.com/2009/09/far_side002.jpg){.absolute right="-30" bottom="0"}
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
