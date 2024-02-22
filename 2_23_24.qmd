@@ -81,7 +81,7 @@ ggplot(gapminder, aes(gdpPercap, lifeExp, size = pop, colour = country)) +
 :::
 ::::
 
-![](https://conwaykitchen.com/cdn/shop/files/2207-LSTK.png?v=1689889598){.absolute bottom="40" left="-180" height="200" width="200"}
+![](https://conwaykitchen.com/cdn/shop/files/2207-LSTK.png?v=1689889598){.absolute bottom="40" left="-150" height="200" width="200"}
 
 ## `r emo::ji("children_crossing")` `r emo::ji("children_crossing")` Cross-references `r emo::ji("children_crossing")` `r emo::ji("children_crossing")` 
 
