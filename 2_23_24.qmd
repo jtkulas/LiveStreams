@@ -119,7 +119,7 @@ See @tip-yourwaitress for some worldly advice
 #| eval: false
 #| code-line-numbers: "1,3|7,9"
 
-# Recap of Session #11: {#sec-recap}
+# Recap of Session #11: {#sec-recap}                 # <1>
 
 Let's skip back to @sec-recap
 
@@ -127,9 +127,13 @@ OR
 
 ahead to @sec-today
 
-# Today: {#sec-today}
+# Today: {#sec-today}                                # <2>
 
 ```
+
+1. This section heading is located at a previous location within the slide deck script. 
+
+2. This section heading is located at a later location within the slide deck script.
 
 ### Section`r emo::ji("scroll")`
 
