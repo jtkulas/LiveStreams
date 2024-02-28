@@ -1,0 +1,54 @@
+---
+title: "Untitled"
+format: 
+  dashboard:
+    orientation: rows
+    nav-buttons: 
+      - github
+---
+
+# heya {.sidebar}
+
+Diego and Ian are here
+
+# not everything in sidebar
+
+## firstlevel {.tabset}
+
+```{r}
+#| title: bunch o flowers
+
+plot(iris)
+```
+
+```{r}
+#| title: not flowers
+#| 
+plot(cars)
+```
+
+# new page
+
+```{r}
+#| content: valuebox
+#| title: "Pink Panther"
+
+list(
+  icon = "alarm",         ## https://icons.getbootstrap.com/
+  color = "danger",
+  value = 50
+)
+
+```
+
+##
+
+[Bootstrap here](https://icons.getbootstrap.com/)
+
+##
+
+whazzup
+
+##
+
+again buddy

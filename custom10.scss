@@ -10,7 +10,7 @@ $body-color: #fff;
 $link-color: #42affa;
 $code-color: hotpink;
 $presentation-title-slide-text-align: left;
-$presentation-title-slide-text-color: white;
+$presentation-title-slide-text-color: black;
 
 /*-- scss:rules --*/
 
@@ -20,7 +20,8 @@ $presentation-title-slide-text-color: white;
 }
 
 .title {
-  color: #eb03fc;
+  color: white !important;
+  text-shadow: 4px 4px 8px black !important;
 }
 
 .quarto-title-author-name {
@@ -28,6 +29,7 @@ $presentation-title-slide-text-color: white;
   color: white;
   font-weight: bold;
   font-family: 'Dancing Script';
+  text-shadow: 6px 6px 10px black !important;
 }
 
 .oldenglish {
@@ -35,7 +37,7 @@ $presentation-title-slide-text-color: white;
 }
 
 .kulas {
-  font-size: 150px;
+  font-size: 60px;
   color: #03c6fc;
   font-family: 'Dancing Script';
 }
@@ -47,7 +49,7 @@ $presentation-title-slide-text-color: white;
 }
 
 .kulas2 {
-  font-size: 150px;
+  font-size: 60px;
   color: #34eba8;
   font-family: 'Dancing Script';
 }

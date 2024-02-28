@@ -1,0 +1,145 @@
+---
+title: "R for <br>Authoring!!" 
+author: "PSP Session #14"
+title-slide-attributes: 
+  data-background-image: img/Session14.webp
+  data-background-opacity: ".7"
+format:
+  revealjs:
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [night, custom10.scss]
+    logo: "erg2.png"
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+engine: knitr                        ## not picking up inline codes
+---
+
+```{r, warning=FALSE, message=FALSE}
+devtools::install_github("hadley/emo")
+```
+
+## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    -   Short-term:
+        - Quarto dashboards `r emo::ji("victory_hand")`
+    -   Long-term:
+        -   dissertation template `r emo::ji("graduation_cap")`
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+:::
+
+![](img/title12.JPG){.absolute top="170" right="-100" width="550" height="325"}
+
+# Recap of Session #12: {#sec-recap}
+
+## Dashboards (Part I) `r emo::ji("coder")`
+
+:::: {layout="[10,90]"}
+
+::: first
+### [Layout:]{.kulas}
+
++ Columns
++ Rows
++ Pages
++ Tabs
++ Sidebar
+
+:::
+
+::: second
+
+::: panel-tabset
+
+### Columns/Rows
+
+### Pages/Tabs
+
+### Sidebar
+:::
+
+:::
+::::
+
+# Today: 
+
+## `r emo::ji("coder")` Quarto dashboards (II) `r emo::ji("coder")` 
+
+:::: {layout="[50,50]"}
+::: {.fragment .semi-fade-out}
+
+### [Interactive elements:]{.kulas}
+
+```{r}
+#| echo: false
+
+library(plotly)
+
+data <- read.csv("https://raw.githubusercontent.com/plotly/datasets/master/gapminderDataFiveYear.csv")
+
+data_2007 <- data[which(data$year == 2007),]
+data_2007 <- data_2007[order(data_2007$continent, data_2007$country),]
+slope <- 2.666051223553066e-05
+data_2007$size <- sqrt(data_2007$pop * slope)
+colors <- c('#4AC6B7', '#1972A4', '#965F8A', '#FF7070', '#C61951')
+
+fig <- plot_ly(data_2007, x = ~gdpPercap, y = ~lifeExp, color = ~continent, size = ~size, colors = colors,
+        type = 'scatter', mode = 'markers', sizes = c(min(data_2007$size), max(data_2007$size)),
+        marker = list(symbol = 'circle', sizemode = 'diameter',
+                      line = list(width = 2, color = '#FFFFFF')),
+        text = ~paste('Country:', country, '<br>Life Expectancy:', lifeExp, '<br>GDP:', gdpPercap,
+                      '<br>Pop.:', pop))
+fig <- fig %>% layout(title = 'Life Expectancy v. Per Capita GDP, 2007',
+         xaxis = list(title = 'GDP per capita (2000 dollars)',
+                      gridcolor = 'rgb(255, 255, 255)',
+                      range = c(2.003297660701705, 5.191505530708712),
+                      type = 'log',
+                      zerolinewidth = 1,
+                      ticklen = 5,
+                      gridwidth = 2),
+         yaxis = list(title = 'Life Expectancy (years)',
+                      gridcolor = 'rgb(255, 255, 255)',
+                      range = c(36.12621671352166, 91.72921793264332),
+                      zerolinewidth = 1,
+                      ticklen = 5,
+                      gridwith = 2),
+         paper_bgcolor = 'rgb(243, 243, 243)',
+         plot_bgcolor = 'rgb(243, 243, 243)')
+
+fig
+
+```
+
+:::
+
+::: {.fragment .fade-in}
+
+### [Customized formatting:]{.kulas2}
+
+[![](img/WIfires.jpg)](https://dnrmaps.wi.gov/wildfiredashboard/?page=Historical)
+:::
+::::
+
+## Dissertation <br>formatting `r emo::ji("graduation_cap")`:
+
+1. Yet to look into: `r emo::ji("construction")`
+    + Where best spot(s) <br>to poke & prod?
+    + $\LaTeX$ [.cls & .sty <br>for noobs](https://latex-ninja.com/2020/03/25/your-first-time-tweaking-a-cls-file-on-the-example-of-creating-switchable-colour-themes/)
+    
+![](https://workexposed.files.wordpress.com/2009/09/far_side002.jpg){.absolute right="-30" bottom="0"}
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
