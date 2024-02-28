@@ -63,9 +63,41 @@ devtools::install_github("hadley/emo")
 
 ### Columns/Rows
 
+```{}
+---
+title: "Untitled"
+format: 
+  dashboard:
+    orientation: columns
+---
+```
+
+![](img/dashcard1.JPG)
+
 ### Pages/Tabs
 
+```{}
+# Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+# Running Code
+```
+
+![](img/dashcard2.JPG)
+
 ### Sidebar
+
+```{}
+# Quarto {.sidebar}
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+# Running Code
+```
+
+![](img/dashcard3.JPG)
+
 :::
 
 :::
