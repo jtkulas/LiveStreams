@@ -68,33 +68,43 @@ devtools::install_github("hadley/emo")
 title: "Untitled"
 format: 
   dashboard:
-    orientation: columns
+    orientation: columns                        # <1>
 ---
 ```
+
+1. Default card placement is `rows`. Can either be altered in `YAML` or within `fenced divs`.
 
 ![](img/dashcard1.JPG)
 
 ### Pages/Tabs
 
 ```{}
-# Quarto
+# Quarto                                  
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+Quarto enables you to weave together content 
+and executable code into a finished document. 
+To learn more about Quarto see <https://quarto.org>.
 
-# Running Code
+# Running Code                            # <1>
 ```
+
+1. First-level headers create new `pages`. `{.tabset}` command creates tabs within a page.
 
 ![](img/dashcard2.JPG)
 
 ### Sidebar
 
 ```{}
-# Quarto {.sidebar}
+# Quarto {.sidebar}                         # <1>
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+Quarto enables you to weave together content 
+and executable code into a finished document. 
+To learn more about Quarto see <https://quarto.org>.
 
 # Running Code
 ```
+
+1. `{.sidebar}` command creates a left-justified sidebar (interactive control elements are commonly placed in sidebars).
 
 ![](img/dashcard3.JPG)
 
