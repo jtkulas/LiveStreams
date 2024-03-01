@@ -9,7 +9,7 @@ format:
 
 # heya {.sidebar}
 
-Diego and Ian are here
+Diego and Ian are here. Level one heading means this sidebar is available on every page of the dashboard. `{.toolbar}` makes a horizontal "sidebar"
 
 # not everything in sidebar
 
