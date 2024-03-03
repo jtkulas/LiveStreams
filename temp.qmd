@@ -5,6 +5,8 @@ format:
     orientation: rows
     nav-buttons: 
       - github
+    theme: solar
+    logo: kiddo.jpg
 ---
 
 # heya {.sidebar}
@@ -13,18 +15,23 @@ Diego and Ian are here. Level one heading means this sidebar is available on eve
 
 # not everything in sidebar
 
-## firstlevel {.tabset}
+## firstlevel 
 
 ```{r}
-#| title: bunch o flowers
+library(plotly)
 
-plot(iris)
-```
+data <- read.csv("https://raw.githubusercontent.com/plotly/datasets/master/school_earnings.csv")
 
-```{r}
-#| title: not flowers
-#| 
-plot(cars)
+
+library(psych)
+data(bfi)
+
+bfi$jibberish <- rowMeans(bfi[1:10], na.rm=TRUE)
+bfi$gobbleyjook <- rowMeans(bfi[11:20], na.rm=TRUE)
+
+plot_ly(bfi, x = ~jibberish, y = ~gobbleyjook, text = ~age, type = 'scatter', mode = 'markers', color=~gender,
+        marker = list(size = ~age, opacity = 0.5))
+
 ```
 
 # new page
