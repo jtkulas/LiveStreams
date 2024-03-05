@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Pirata One');
 @import url('https://fonts.googleapis.com/css?family=Protest Riot');
 @import url('https://fonts.googleapis.com/css?family=Protest Guerrilla');
+@import url('https://fonts.googleapis.com/css?family=Lobster Two');
 
 /*-- scss:defaults --*/
 
@@ -9,7 +10,7 @@ $body-bg: #191919;
 $body-color: #fff;
 $link-color: #42affa;
 $code-color: hotpink;
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: left;
 $presentation-title-slide-text-color: black;
 
 /*-- scss:rules --*/
@@ -21,7 +22,7 @@ $presentation-title-slide-text-color: black;
 
 .title {
   color: white !important;
-  text-shadow: 4px 4px 8px black !important;
+  text-shadow: -14px 6px 2px black !important;
 }
 
 .quarto-title-author-name {
@@ -29,7 +30,7 @@ $presentation-title-slide-text-color: black;
   color: white;
   font-weight: bold;
   font-family: 'Dancing Script';
-  text-shadow: 6px 6px 10px black !important;
+  text-shadow: -26px 16px 3px black !important;
 }
 
 .oldenglish {
@@ -85,4 +86,10 @@ $presentation-title-slide-text-color: black;
 
 .center h2 {
   text-align: center;
+}
+
+.shiny {
+  font-size: 80px;
+  color: #eb03fc;
+  font-family: 'Lobster Two';
 }

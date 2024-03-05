@@ -2,8 +2,8 @@
 title: "R for <br>Authoring!!" 
 author: "PSP Session #15"
 title-slide-attributes: 
-  data-background-image: img/_sessionXXXX.jpg
-  data-background-opacity: ".7"
+  data-background-image: img/shiny.jpg
+#  data-background-opacity: ".7"
 format:
   revealjs:
     code-overflow: wrap              ## instead of horizontal scroll
@@ -28,7 +28,7 @@ devtools::install_github("hadley/emo")
 -   Recap session #14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue(s):
     -   Short-term:
-        - Quarto dashboards `r emo::ji("dizzy")`
+        - `r emo::ji("sparkles")``shiny``r emo::ji("sparkles")` dashboards 
     -   Long-term:
         -   dissertation template `r emo::ji("graduation_cap")`
 -   Shared problem-solving
@@ -38,7 +38,7 @@ devtools::install_github("hadley/emo")
 :::
 :::
 
-![](img/title14.JPG){.absolute top="170" right="-100" width="550" height="325"}
+![](img/title14.JPG){.absolute top="170" right="-120" width="550" height="325"}
 
 # Recap of Session #14: 
 
@@ -108,8 +108,26 @@ format:
 # Today: 
 
 ## `r emo::ji("coder")` Quarto dashboards (III) `r emo::ji("coder")` 
-
 <p style="text-align: center;">`r emo::ji("sparkles")` `shiny` integration `r emo::ji("sparkles")`</p>
+
+:::: {layout="[70,30]"}
+
+::: plot
+
+[![](img/shinyapp.jpg)](https://shiny.posit.co/r/gallery/)
+:::
+
+::: calloutspace
+
+:::{.callout-note}
+`shinylive` not quite ready-for-primetime ([yet](https://posit-dev.github.io/r-shinylive/))
+:::
+
+![](https://preview.redd.it/ekv54egco4331.jpg?auto=webp&s=928f27c87021279374afc3fc49e7be1ea2d7224d){.absolute height="300" left="70"}
+
+:::
+
+::::
 
 ## Dissertation <br>formatting `r emo::ji("graduation_cap")`:
 
