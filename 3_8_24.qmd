@@ -108,7 +108,7 @@ format:
 # Today: 
 
 ## `r emo::ji("coder")` Quarto dashboards (III) `r emo::ji("coder")` 
-<p style="text-align: center;">`r emo::ji("sparkles")` `shiny` integration `r emo::ji("sparkles")`</p>
+<p style="text-align: center;">`r emo::ji("sparkles")``r emo::ji("sparkles")``r emo::ji("sparkles")` `shiny` integration `r emo::ji("sparkles")``r emo::ji("sparkles")``r emo::ji("sparkles")`</p>
 
 :::: {layout="[70,30]"}
 
