@@ -1,59 +1,112 @@
 ---
 title: "Untitled"
-format: html
+format: 
+  dashboard:
+    orientation: rows
+    nav-buttons: 
+      - github
+    theme: solar
+    logo: kiddo.jpg
+server: shiny
 ---
+
+# heya {.sidebar}
+
+Diego and Ian are here. Level one heading means this sidebar is available on every page of the dashboard. `{.toolbar}` makes a horizontal "sidebar"
+
+# not everything in sidebar
+
+## firstlevel 
+
 ```{r}
+library(plotly)
+
+data <- read.csv("https://raw.githubusercontent.com/plotly/datasets/master/school_earnings.csv")
+
+
+library(psych)
+data(bfi)
+
+bfi$jibberish <- rowMeans(bfi[1:10], na.rm=TRUE)
+bfi$gobbleyjook <- rowMeans(bfi[11:20], na.rm=TRUE)
+
+plot_ly(bfi, x = ~jibberish, y = ~gobbleyjook, text = ~age, type = 'scatter', mode = 'markers', color=~gender,
+        marker = list(size = ~age, opacity = 0.5))
+
+```
+
+# Diamonds Explorer
+
+```{r}
+#| context: setup
 library(ggplot2)
+dataset <- diamonds
 ```
 
-## Quarto {#sec-main}
-
-See the pretty map in @fig-nightmap
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-:::{#wrn-aliensarecoming .callout-warning}
-
-Oh no lookout AGAIN!!
-:::
-
-:::{#wrn-academicstalkweird .callout-warning}
-
-Oh no lookout!!
-:::
-
-
-$$
-\alpha
-$$ {#eq-alpha}
+## {.sidebar}
 
 ```{r}
-#| label: fig-nightmap
-#| fig-cap: This is Fracais at Nite
-#| warning: false
-#| lst-label: lst-mapcode
-#| lst-cap: This is code to NOT zoom in on Spain
+sliderInput('sampleSize', 'Sample Size', 
+            min=0, max=nrow(dataset),
+            value=min(1000, nrow(dataset)), 
+            step=500, round=0)
+br()
+checkboxInput('jitter', 'Jitter')
+checkboxInput('smooth', 'Smooth')
+```
 
-# Library
-# create a dataset
-data <- data.frame(
-  name=c( rep("A",500), rep("B",500), rep("B",500), rep("C",20), rep('D', 100)  ),
-  value=c( rnorm(500, 10, 5), rnorm(500, 13, 1), rnorm(500, 18, 1), rnorm(20, 25, 4), rnorm(100, 12, 1) )
-)
+```{r}
+selectInput('x', 'X', names(dataset)) 
+selectInput('y', 'Y', names(dataset), names(dataset)[[2]])
+selectInput('color', 'Color', c('None', names(dataset)))
+```
 
-# Most basic violin chart
-ggplot(data, aes(x=name, y=value, fill=name)) + # fill=name allow to automatically dedicate a color for each group
-  geom_violin()
+```{r}
+selectInput('facet_row', 'Facet Row',
+  c(None='.', names(diamonds[sapply(diamonds, is.factor)])))
+selectInput('facet_col', 'Facet Column',
+  c(None='.', names(diamonds[sapply(diamonds, is.factor)])))
+```
+
+## Plot
+
+```{r}
+plotOutput('plot')
+```
+
+```{r}
+#| context: server
+
+dataset <- reactive({
+  diamonds[sample(nrow(diamonds), input$sampleSize),]
+})
+ 
+output$plot <- renderPlot({
+  
+  p <- ggplot(
+    dataset(), 
+    aes_string(x=input$x, y=input$y)) + geom_point()
+  
+  if (input$color != 'None')
+    p <- p + aes_string(color=input$color)
+  
+  facets <- paste(input$facet_row, '~', input$facet_col)
+  if (facets != '. ~ .')
+    p <- p + facet_grid(facets)
+  
+  if (input$jitter)
+    p <- p + geom_jitter()
+  if (input$smooth)
+    p <- p + geom_smooth()
+  
+  p
+  
+})
 
 ```
 
+# another one
 
-hey here's my document!!! Look at @wrn-academicstalkweird
-
-a fancy symbol is located in @eq-alpha
-
-if you want to see some empty boilerplate info please go to [-@sec-main]
-
-See the pretty map in @fig-nightmap
-
-the code is hidden in [Code @lst-mapcode]
+:::{.card}
+heya there's `r nrow(diamonds)` jewels in here!!!
+:::
