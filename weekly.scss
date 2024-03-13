@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing Script');
+@import url('https://fonts.googleapis.com/css?family=Pirata One');
+@import url('https://fonts.googleapis.com/css?family=Protest Riot');
+@import url('https://fonts.googleapis.com/css?family=Protest Guerrilla');
+@import url('https://fonts.googleapis.com/css?family=Lobster Two');
+@import url('https://fonts.googleapis.com/css?family=Indie Flower');
+@import url('https://fonts.googleapis.com/css?family=Londrina Solid');
+
+
+/*-- scss:defaults --*/
+
+$body-bg: #191919;
+$body-color: #fff;
+$link-color: #42affa;
+$code-color: hotpink;
+$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-color: black;
+
+/*-- scss:rules --*/
+
+.reveal .slide blockquote {
+  border-left: 3px solid $text-muted;
+  padding-left: 0.5em;
+}
+
+.title {
+  color: black !important;
+}
+
+.quarto-title-author-name {
+  font-size: 65px;
+  color: black;
+  font-weight: bold;
+  font-family: 'Dancing Script';
+}
+
+.oldenglish {
+  font-family: 'Pirata One';
+}
+
+.kulas {
+  font-size: 60px;
+  color: #03c6fc;
+  font-family: 'Dancing Script';
+}
+
+.kulas3 {
+  font-size: 150px;
+  color: #eb03fc;
+  font-family: 'Dancing Script';
+}
+
+.kulas2 {
+  font-size: 60px;
+  color: #34eba8;
+  font-family: 'Dancing Script';
+}
+
+.kulascol {
+  color: #03c6fc;
+  font-family: 'Dancing Script';
+}
+
+.kulascol3 {
+  color: white;
+  font-family: 'Londrina Solid';
+  text-shadow: 10px 12px 4px #36454f !important;
+}
+
+.kulascol2 {
+  color: #34eba8;
+  font-family: 'Londrina Solid';
+}
+
+.crossstyle {
+  font-size: 80px;
+  text-decoration: underline;
+  color: #34eba8;
+  font-family: 'Protest Riot';
+}
+
+.crossmethod {
+  font-size: 80px;
+  text-decoration: underline;
+  color: #3d7ba2;
+  font-family: 'Protest Guerrilla';
+}
+
+.center h2 {
+  text-align: center;
+}
+
+.shiny {
+  font-size: 80px;
+  color: #eb03fc;
+  font-family: 'Lobster Two';
+}

@@ -7,55 +7,48 @@ format:
       - github
     theme: solar
     logo: kiddo.jpg
+server: shiny
 ---
 
-# heya {.sidebar}
-
-Diego and Ian are here. Level one heading means this sidebar is available on every page of the dashboard. `{.toolbar}` makes a horizontal "sidebar"
-
-# not everything in sidebar
+#
 
 ## firstlevel 
 
 ```{r}
-library(plotly)
-
-data <- read.csv("https://raw.githubusercontent.com/plotly/datasets/master/school_earnings.csv")
-
-
+#| context: setup
 library(psych)
-data(bfi)
+bfi <- data(bfi)
+```
+
+## heya {.sidebar}
+
+```{r, eval=FALSE}
+library(shiny)
+sampleSize <- NULL
+sliderInput('sampleSize', 'Sample Size', 
+            min=0, max=nrow(bfi),
+            value=min(1000, nrow(bfi)), 
+            step=100, round=0)
+```
+
+##
+
+```{r}
+plotOutput('bfiplot')
+```
+
+```{r}
+library(ggplot2)
+
 
 bfi$jibberish <- rowMeans(bfi[1:10], na.rm=TRUE)
 bfi$gobbleyjook <- rowMeans(bfi[11:20], na.rm=TRUE)
 
-plot_ly(bfi, x = ~jibberish, y = ~gobbleyjook, text = ~age, type = 'scatter', mode = 'markers', color=~gender,
-        marker = list(size = ~age, opacity = 0.5))
-
+output$bfiplot <- renderPlot({
+ggplot(
+  bfi(), 
+  aes_string(x = jibberish, y = gobbleyjook)) + geom_point()
+  
+  })
 ```
 
-# new page
-
-```{r}
-#| content: valuebox
-#| title: "Pink Panther"
-
-list(
-  icon = "alarm",         ## https://icons.getbootstrap.com/
-  color = "danger",
-  value = 50
-)
-
-```
-
-##
-
-[Bootstrap here](https://icons.getbootstrap.com/)
-
-##
-
-whazzup
-
-##
-
-again buddy
