@@ -183,7 +183,7 @@ plot_ly(bfi, x = ~jibberish, y = ~gobbleyjook, text = ~age, type = 'scatter', mo
 
 ::::
     
-![](https://i.pinimg.com/474x/c9/c6/7d/c9c67de138b8b5d9274c3791ba71ff5c.jpg){.absolute right="-30" bottom="0" height="700"}
+![](https://i.pinimg.com/474x/15/44/60/1544604a568b8cdcfd55f9ecd6271cdb.jpg){.absolute right="-70" bottom="0" height="700"}
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 
