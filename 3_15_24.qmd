@@ -161,11 +161,29 @@ plot_ly(bfi, x = ~jibberish, y = ~gobbleyjook, text = ~age, type = 'scatter', mo
 
 ## Dissertation <br>formatting `r emo::ji("graduation_cap")`:
 
-1. Yet to look into: `r emo::ji("construction")`
-    + Where best spot(s) <br>to poke & prod?
-    + $\LaTeX$ [.cls & .sty <br>for noobs](https://latex-ninja.com/2020/03/25/your-first-time-tweaking-a-cls-file-on-the-example-of-creating-switchable-colour-themes/)
+
+:::: {layout="[45,55]"}
+
+::: listing
+
+1. Work zone: `r emo::ji("construction")`
+    + Get front matter <br>into .cls
+
+::: {.callout-tip}
+## $\LaTeX$ resource:
+
+.cls & .sty file specifications for noobs located [here](https://latex-ninja.com/2020/03/25/your-first-time-tweaking-a-cls-file-on-the-example-of-creating-switchable-colour-themes/)
+:::
     
-![](https://workexposed.files.wordpress.com/2009/09/far_side002.jpg){.absolute right="-30" bottom="0"}
+:::
+
+::: next
+
+:::
+
+::::
+    
+![](https://i.pinimg.com/474x/c9/c6/7d/c9c67de138b8b5d9274c3791ba71ff5c.jpg){.absolute right="-30" bottom="0" height="700"}
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 

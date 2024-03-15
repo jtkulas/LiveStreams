@@ -40,7 +40,17 @@ plot_ly(bfi, x = ~jibberish, y = ~gobbleyjook, text = ~age, type = 'scatter', mo
 ```{r}
 #| context: setup
 library(ggplot2)
-dataset <- diamonds
+library(psych)
+
+data(bfi)
+
+bfi$jibberish <- rowMeans(bfi[1:10], na.rm=TRUE)
+bfi$gobbleyjook <- rowMeans(bfi[11:20], na.rm=TRUE)
+
+bfi$education <- as.factor(as.character(bfi$education))
+
+dataset <- bfi
+
 ```
 
 ## {.sidebar}
@@ -63,9 +73,9 @@ selectInput('color', 'Color', c('None', names(dataset)))
 
 ```{r}
 selectInput('facet_row', 'Facet Row',
-  c(None='.', names(diamonds[sapply(diamonds, is.factor)])))
+  c(None='.', names(bfi[sapply(bfi, is.factor)])))
 selectInput('facet_col', 'Facet Column',
-  c(None='.', names(diamonds[sapply(diamonds, is.factor)])))
+  c(None='.', names(bfi[sapply(bfi, is.factor)])))
 ```
 
 ## Plot
@@ -78,7 +88,7 @@ plotOutput('plot')
 #| context: server
 
 dataset <- reactive({
-  diamonds[sample(nrow(diamonds), input$sampleSize),]
+  bfi[sample(nrow(bfi), input$sampleSize),]
 })
  
 output$plot <- renderPlot({
@@ -95,7 +105,7 @@ output$plot <- renderPlot({
     p <- p + facet_grid(facets)
   
   if (input$jitter)
-    p <- p + geom_jitter()
+    p <- p + geom_jitter(width=.8, height=.8)
   if (input$smooth)
     p <- p + geom_smooth()
   
