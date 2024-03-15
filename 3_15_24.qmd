@@ -28,7 +28,7 @@ devtools::install_github("hadley/emo")
 -   Recap session #15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue(s):
     -   Short-term:
-        - `r emo::ji("sparkles")``shiny``r emo::ji("sparkles")` dashboards 
+        - `r emo::ji("sparkles")`[shiny](https://shiny.posit.co/r/articles/start/cheatsheet/)`r emo::ji("sparkles")` dashboards 
     -   Long-term:
         -   dissertation template `r emo::ji("graduation_cap")`
 -   Shared problem-solving
