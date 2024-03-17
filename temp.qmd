@@ -18,45 +18,96 @@ server: shiny
 #| context: setup
 
 library(psych)
+library(plotly)
 data(bfi)
 
 bfi$jibberish <- rowMeans(bfi[1:10], na.rm=TRUE)
 bfi$gobbleyjook <- rowMeans(bfi[11:20], na.rm=TRUE)
 
+plot_ly(bfi, x = ~jibberish, y = ~gobbleyjook, text = ~age, type = 'scatter', mode = 'markers', color=~gender,
+        marker = list(size = ~age, opacity = 0.5))
+
+```
+
+
+```{r}
+#| context: setup
+library(ggplot2)
+
+bfi$gender <- as.factor(as.character(bfi$gender))
+bfi$education <- as.factor(as.character(bfi$education))
+
+dataset <- bfi
+```
+
+# {.sidebar}
+
+```{r}
+sliderInput('sampleSize', 'Sample Size', 
+            min=1, max=nrow(dataset),
+            value=min(1000, nrow(dataset)), 
+            step=500, round=0)
+br()
+checkboxInput('jitter', 'Jitter')
+checkboxInput('smooth', 'Smooth')
+```
+
+```{r}
+selectInput('x', 'X', names(dataset)) 
+selectInput('Kulas', 'Size', c('None', names(dataset[26:28])))
+selectInput('y', 'Y', names(dataset), names(dataset)[[2]])
+selectInput('color', 'Color', c('None', names(dataset)))
+```
+
+```{r}
+selectInput('facet_row', 'Facet Row',
+  c(None='.', names(bfi[sapply(bfi, is.factor)])))
+selectInput('facet_col', 'Facet Column',
+  c(None='.', names(bfi[sapply(bfi, is.factor)])))
+```
+
+# Plot
+
+```{r}
+plotOutput('plot')
+```
+
+# Data
+
+```{r}
+tableOutput('data')
+```
+
+```{r}
+#| context: server
+
 dataset <- reactive({
   bfi[sample(nrow(bfi), input$sampleSize),]
 })
-
-```
-
-## heya {.sidebar}
-
-```{r, eval=FALSE}
-library(shiny)
-
-sliderInput('sampleSize', 'Sample Size', 
-            min=0, max=nrow(dataset),
-            value=min(1000, nrow(dataset)), 
-            step=100, round=0)
-```
-
-##
-
-```{r}
-output('bfiplot')
-```
-
-```{r}
-library(ggplot2)
-
-output$bfiplot <- renderPlot({
+ 
+output$plot <- renderPlot({
   
-p <- ggplot(
-  dataset(), 
-  aes_string(x = jibberish, y = gobbleyjook)) + geom_point()
+  p <- ggplot(
+    dataset(), 
+    aes_string(x=input$x, y=input$y)) + geom_point(aes(size=input$Kulas))
+  
+  if (input$color != 'None')
+    p <- p + aes_string(color=input$color)
+  
+  facets <- paste(input$facet_row, '~', input$facet_col)
+  if (facets != '. ~ .')
+    p <- p + facet_grid(facets)
+  
+  if (input$jitter)
+    p <- p + geom_jitter(width = 0.8, height = .8)
+  if (input$smooth)
+    p <- p + geom_smooth()
+  
+  p
+  
+})
 
-p
-
-  })
+output$data <- renderTable({
+  dataset()
+})
 ```
-

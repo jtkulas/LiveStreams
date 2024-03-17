@@ -1,0 +1,136 @@
+---
+title: "R for <br>Authoring!!" 
+author: "PSP Session #17...<br>[...Books]{.shiny}"
+title-slide-attributes: 
+  data-background-image: https://img.freepik.com/premium-photo/pretty-coquettish-pinup-girl-reads-book-retro-interior_215274-1032.jpg
+  data-background-opacity: ".6"
+format:
+  revealjs:
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [night, weekly.scss]
+    logo: "erg2.png"
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+engine: knitr                        ## not picking up inline codes
+---
+
+```{r, warning=FALSE, message=FALSE}
+devtools::install_github("hadley/emo")
+```
+
+## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    -   Short-term:
+        - Quarto Books `r emo::ji("books")` 
+    -   Long-term:
+        -   dissertation template `r emo::ji("graduation_cap")`
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+:::
+
+![](img/title16.JPG){.absolute top="170" right="-120" width="550" height="325"}
+
+# Recap of Session #16: 
+
+## `r emo::ji("sparkles")``r emo::ji("coder")` [Shiny Dashboards](https://quarto.org/docs/interactive/shiny/execution.html) `r emo::ji("coder")``r emo::ji("sparkles")`
+
+::: panel-tabset
+
+### `shiny` Dashboard
+
+![](img/shinyplot.JPG)
+
+### syntax `r emo::ji("black_nib")`
+
+:::: {.columns}
+::: {.column width="40%"}
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "1"
+
+#| context: setup                            # <1>
+
+library(ggplot2)
+
+bfi$gender <- as.factor(as.character(bfi$gender))
+bfi$education <- as.factor(as.character(bfi$education))
+
+dataset <- bfi
+```                    
+
+1. code in this chunk will execute *both* when: 1) initially rendered, and 2) when "served"
+:::
+
+::: {.column width="60%"}
+
+```{r}
+#| eval: false
+#| echo: true
+
+#| context: server                         # <2>
+
+dataset <- reactive({
+  bfi[sample(nrow(bfi), input$sampleSize),]
+})
+ 
+output$plot <- renderPlot({
+  
+  p <- ggplot(
+    dataset(), 
+    aes_string(x=input$x, y=input$y)) + geom_point(aes(size=input$Kulas))
+```
+2. Chunk *does not* execute at render, but only when document is "served" (chunk replaces old `server.R` shiny element)
+
+:::
+::::
+:::
+
+# Today: 
+
+## `r emo::ji("books")``r emo::ji("books")` Quarto Books `r emo::ji("books")``r emo::ji("books")`
+
+[Quarto books](https://quarto.org/docs/books/)
+
+## Dissertation <br>formatting `r emo::ji("graduation_cap")`:
+
+
+:::: {layout="[45,55]"}
+
+::: listing
+
+1. Work zone: `r emo::ji("construction")`
+    + Specify YAML fields
+    + Communication <br>(`.Rmd` with `.cls`)
+    
+::: {.callout-tip}
+## $\LaTeX$ resource:
+
+.cls & .sty file specifications for noobs located [here](https://latex-ninja.com/2020/03/25/your-first-time-tweaking-a-cls-file-on-the-example-of-creating-switchable-colour-themes/)
+:::
+    
+:::
+
+::: next
+
+:::
+
+::::
+    
+![](https://nebusresearch.files.wordpress.com/2019/12/the-far-side_gary-larson_19-december-2019.gif){.absolute right="-70" bottom="0" height="700"}
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
