@@ -17,7 +17,7 @@ server: shiny
 ```{r}
 #| context: setup
 
-library(psych)
+library(psych) 
 library(plotly)
 data(bfi)
 
@@ -32,7 +32,7 @@ plot_ly(bfi, x = ~jibberish, y = ~gobbleyjook, text = ~age, type = 'scatter', mo
 
 ```{r}
 #| context: setup
-library(ggplot2)
+library(ggplot2)     
 
 bfi$gender <- as.factor(as.character(bfi$gender))
 bfi$education <- as.factor(as.character(bfi$education))
@@ -54,7 +54,7 @@ checkboxInput('smooth', 'Smooth')
 
 ```{r}
 selectInput('x', 'X', names(dataset)) 
-selectInput('Kulas', 'Size', c('None', names(dataset[26:28])))
+selectInput('size', 'Size', c('None', names(dataset[26:28])))
 selectInput('y', 'Y', names(dataset), names(dataset)[[2]])
 selectInput('color', 'Color', c('None', names(dataset)))
 ```
@@ -89,8 +89,14 @@ output$plot <- renderPlot({
   
   p <- ggplot(
     dataset(), 
-    aes_string(x=input$x, y=input$y)) + geom_point(aes(size=input$Kulas))
+    aes_string(x=input$x, y=input$y)) 
   
+  if (input$size == 'None')
+    p <- p + geom_point()
+  
+  if (input$size != 'None')
+    p <- p + geom_point(aes_string(size = input$size))
+
   if (input$color != 'None')
     p <- p + aes_string(color=input$color)
   
