@@ -5,7 +5,7 @@ account: jtkulas
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 11509292
-bundleId: 8380727
+bundleId: 8381862
 url: https://jtkulas.shinyapps.io/shinyexample/
 version: 1
 quarto_version: 1.4.549

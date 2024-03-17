@@ -1,38 +1,35 @@
 ---
-title: "Untitled"
+title: "Tickled Pink"
 format: 
   dashboard:
     orientation: rows
     nav-buttons: 
       - github
     theme: solar
-    logo: kiddo.jpg
+    logo: https://i.pinimg.com/originals/4c/09/e6/4c09e608d548b4abf525f3bb2b215c68.png
 server: shiny
 ---
-
-#
-
-## firstlevel 
 
 ```{r}
 #| context: setup
 
 library(psych) 
 library(plotly)
+library(fontawesome)
+
 data(bfi)
 
 bfi$jibberish <- rowMeans(bfi[1:10], na.rm=TRUE)
 bfi$gobbleyjook <- rowMeans(bfi[11:20], na.rm=TRUE)
 
-plot_ly(bfi, x = ~jibberish, y = ~gobbleyjook, text = ~age, type = 'scatter', mode = 'markers', color=~gender,
+q <- plot_ly(bfi, x = ~jibberish, y = ~gobbleyjook, text = ~age, type = 'scatter', mode = 'markers', color=~gender,
         marker = list(size = ~age, opacity = 0.5))
 
 ```
 
-
 ```{r}
 #| context: setup
-library(ggplot2)     
+library(ggplot2) 
 
 bfi$gender <- as.factor(as.character(bfi$gender))
 bfi$education <- as.factor(as.character(bfi$education))
@@ -40,22 +37,44 @@ bfi$education <- as.factor(as.character(bfi$education))
 dataset <- bfi
 ```
 
-# {.sidebar}
+## 
+
+The script used to generate this document is called `temp.qmd` and is located within the repository linked in the upper-right hand corner (hit the `r fa("github")` symbol).  
+
+
+This silliness itself was generated during a 3/15/24 [LiveStream on `r fa("youtube", fill="red")`](https://www.youtube.com/watch?v=7PSr2B_9zlA).
+
+# Plots
+
+## 
+```{r}
+#| fig-cap: "Plotly object"
+q
+```
+##
+
+```{r}
+#| fig-cap: "Reactive shiny app (use selctors on right)"
+
+plotOutput('plot')
+```
+
+## {.sidebar}
 
 ```{r}
 sliderInput('sampleSize', 'Sample Size', 
-            min=1, max=nrow(dataset),
-            value=min(1000, nrow(dataset)), 
-            step=500, round=0)
+            min=0, max=nrow(dataset),
+            value=min(2800, nrow(dataset)), 
+            step=400, round=0)
 br()
 checkboxInput('jitter', 'Jitter')
 checkboxInput('smooth', 'Smooth')
 ```
 
 ```{r}
-selectInput('x', 'X', names(dataset)) 
+selectInput('x', 'X', names(dataset[c(29:30,1:25)])) 
+selectInput('y', 'Y', names(dataset), names(dataset)[[30]])
 selectInput('size', 'Size', c('None', names(dataset[26:28])))
-selectInput('y', 'Y', names(dataset), names(dataset)[[2]])
 selectInput('color', 'Color', c('None', names(dataset)))
 ```
 
@@ -64,12 +83,6 @@ selectInput('facet_row', 'Facet Row',
   c(None='.', names(bfi[sapply(bfi, is.factor)])))
 selectInput('facet_col', 'Facet Column',
   c(None='.', names(bfi[sapply(bfi, is.factor)])))
-```
-
-# Plot
-
-```{r}
-plotOutput('plot')
 ```
 
 # Data
@@ -116,4 +129,5 @@ output$plot <- renderPlot({
 output$data <- renderTable({
   dataset()
 })
+
 ```

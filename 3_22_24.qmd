@@ -48,7 +48,7 @@ devtools::install_github("hadley/emo")
 
 ### `shiny` Dashboard
 
-[![](img/shinyplot.JPG)](https://jtkulas.shinyapps.io/shinyexample/#plot)
+[![](img/shinyplot.JPG)](https://jtkulas.shinyapps.io/shinyexample/#plots)
 
 ### syntax `r emo::ji("black_nib")`
 
