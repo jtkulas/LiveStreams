@@ -48,7 +48,7 @@ devtools::install_github("hadley/emo")
 
 ### `shiny` Dashboard
 
-[![](img/shinyplot.JPG)](https://jtkulas.shinyapps.io/shinyexample/#plots)
+[![](img/shinyplot.JPG)](https://jtkulas.shinyapps.io/shinyexample/#plots )
 
 ### syntax `r emo::ji("black_nib")`
 
@@ -98,9 +98,17 @@ output$plot <- renderPlot({
 
 # Today: 
 
-## `r emo::ji("books")``r emo::ji("books")` Quarto Books `r emo::ji("books")``r emo::ji("books")`
+## `r emo::ji("books")``r emo::ji("books")` [Quarto Books](https://quarto.org/docs/books/) `r emo::ji("books")``r emo::ji("books")`
 
-[Quarto books](https://quarto.org/docs/books/)
+:::: {.columns}
+::: {.column width="50%"}
+[![](https://r4ds.hadley.nz/cover.jpg)](https://r4ds.hadley.nz/)
+:::
+
+::: {.column width="50%"}
+[![](https://wesmckinney.com/book/images/cover.png)](https://wesmckinney.com/book/)
+:::
+::::
 
 ## Dissertation <br>formatting `r emo::ji("graduation_cap")`:
 
