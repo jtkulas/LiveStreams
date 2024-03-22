@@ -122,9 +122,11 @@ output$plot <- renderPlot({
     + Communication <br>(`.Rmd` with `.cls`)
     
 ::: {.callout-tip}
-## $\LaTeX$ resource:
+## $\LaTeX$ resources:
 
 .cls & .sty file specifications for noobs located [here](https://latex-ninja.com/2020/03/25/your-first-time-tweaking-a-cls-file-on-the-example-of-creating-switchable-colour-themes/)
+
+[Reed College](https://www.reed.edu/it/help/LaTeX/)
 :::
     
 :::
