@@ -28,7 +28,7 @@ devtools::install_github("hadley/emo")
 -   Recap session #17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue(s):
     -   Short-term:
-        - Quarto Websites `r emo::ji("globe_with_meridians")` 
+        - `r emo::ji("globe_with_meridians")` Quarto Websites `r emo::ji("globe_with_meridians")` 
     -   Long-term:
         -   dissertation template `r emo::ji("graduation_cap")`
 -   Shared problem-solving
@@ -48,10 +48,7 @@ devtools::install_github("hadley/emo")
 
 ## Script
 
-```{r}
-#| eval: FALSE
-#| echo: true
-
+``` yaml
 project:
   type: book
   output-dir: _book
@@ -67,22 +64,96 @@ book:
 ```
 
 ## Output
-:::: {.columns}
-::: {.column width="50%"}
+::: {layout="[25,70,5]"}
+
+::: nothing
+:::
+
+::: image
 [![](https://r4ds.hadley.nz/cover.jpg)](https://r4ds.hadley.nz/)
 :::
 
-::: {.column width="50%"}
-[![](https://wesmckinney.com/book/images/cover.png)](https://wesmckinney.com/book/)
+::: hack
 :::
 
-::::
+:::
 
 :::
 
 # Today: 
 
-## Quarto Websites `r emo::ji("globe_with_meridians")`:
+## `r emo::ji("globe_with_meridians")` `r emo::ji("globe_with_meridians")` Quarto [Websites](https://quarto.org/docs/websites/) `r emo::ji("globe_with_meridians")` `r emo::ji("globe_with_meridians")`:
+
+:::: {layout="[10,90]"}
+
+::: similar
+
+<br>
+`r emo::ji("clinking_glasses")` [VERY]{.kulascol} similar to book specification:
+
+:::
+
+::: webstuff
+
+:::{.panel-tabset}
+
+## Book `r emo::ji("books")`
+
+``` yaml
+project:
+  type: book
+
+book:
+  title: "mybook"
+  author: "Jane Doe"
+  date: "8/18/2021"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreport
+  epub:
+    cover-image: cover.png
+```
+
+## Web `r emo::ji("globe_with_meridians")`
+
+``` yaml
+project:
+  type: website
+
+website:
+  title: "today"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+```
+
+## Pretty
+
+![](https://i.ytimg.com/vi/c-tedcgfl1g/mqdefault.jpg)
+
+:::
+
+:::
+
+::::
 
 ## Dissertation <br>formatting `r emo::ji("graduation_cap")`:
 
