@@ -1,0 +1,120 @@
+---
+title: "R for <br>Authoring!!" 
+author: "PSP Session #18...<br>[...Websites]{.shiny}"
+title-slide-attributes: 
+  data-background-image: https://mycomicrelief.files.wordpress.com/2024/01/pull-list-2-2.jpg?w=1200
+  data-background-opacity: ".6"
+format:
+  revealjs:
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [night, weekly.scss]
+    logo: "erg2.png"
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+engine: knitr                        ## not picking up inline codes
+---
+
+```{r, warning=FALSE, message=FALSE}
+devtools::install_github("hadley/emo")
+```
+
+## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    -   Short-term:
+        - Quarto Websites `r emo::ji("globe_with_meridians")` 
+    -   Long-term:
+        -   dissertation template `r emo::ji("graduation_cap")`
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+:::
+
+![](img/title17.JPG){.absolute top="170" right="-120" width="550" height="325"}
+
+# Recap of Session #17: 
+
+## `r emo::ji("books")``r emo::ji("books")` [Quarto Books](https://quarto.org/docs/books/) `r emo::ji("books")``r emo::ji("books")`
+
+:::{.panel-tabset}
+
+## Script
+
+```{r}
+#| eval: FALSE
+#| echo: true
+
+project:
+  type: book
+  output-dir: _book
+
+book:
+  title: "R for Data Science (2e)"
+  reader-mode: true
+
+  page-footer:
+    left: |
+      R for Data Science (2e) was written by Hadley Wickham, Mine
+      Çetinkaya-Rundel, and Garrett Grolemund.
+```
+
+## Output
+:::: {.columns}
+::: {.column width="50%"}
+[![](https://r4ds.hadley.nz/cover.jpg)](https://r4ds.hadley.nz/)
+:::
+
+::: {.column width="50%"}
+[![](https://wesmckinney.com/book/images/cover.png)](https://wesmckinney.com/book/)
+:::
+
+::::
+
+:::
+
+# Today: 
+
+## Quarto Websites `r emo::ji("globe_with_meridians")`:
+
+## Dissertation <br>formatting `r emo::ji("graduation_cap")`:
+
+
+:::: {layout="[45,55]"}
+
+::: listing
+
+1. Work zone: `r emo::ji("construction")`
+    + Specify YAML fields
+    + Communication <br>(`.Rmd` with `.cls`)
+    
+::: {.callout-tip}
+## $\LaTeX$ resources:
+
+.cls & .sty file specifications for noobs located [here](https://latex-ninja.com/2020/03/25/your-first-time-tweaking-a-cls-file-on-the-example-of-creating-switchable-colour-themes/)
+
+[Reed College](https://www.reed.edu/it/help/LaTeX/)
+:::
+    
+:::
+
+::: next
+
+:::
+
+::::
+    
+![](https://humag.co/assets/uploads/images/larson_1-740x0.jpg){.absolute right="-70" bottom="0" height="700"}
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
