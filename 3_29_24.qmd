@@ -145,11 +145,12 @@ format:
     toc: true
 ```
 
-## Pretty
+## Examples
 
-![](https://i.ytimg.com/vi/c-tedcgfl1g/mqdefault.jpg)
+[![](https://www.svgrepo.com/show/395783/artist-palette.svg){width="65%"}](https://quarto.org/docs/gallery/#websites)
 
-:::
+
+::: 
 
 :::
 
