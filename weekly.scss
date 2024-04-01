@@ -13,7 +13,7 @@ $body-bg: #191919;
 $body-color: #fff;
 $link-color: #42affa;
 $code-color: hotpink;
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: left;
 $presentation-title-slide-text-color: black;
 
 /*-- scss:rules --*/
@@ -98,7 +98,7 @@ $presentation-title-slide-text-color: black;
 
 .shiny {
   font-size: 80px;
-  color: #880808;
+  color: #0324fc;
   font-family: 'Lobster Two';
   text-shadow: 
     1px 1px 2px white,

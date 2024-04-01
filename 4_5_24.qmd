@@ -1,0 +1,179 @@
+---
+title: "R for <br>Authoring!!" 
+author: "PSP Session #19...<br>[...APA Manuscripts]{.shiny}"
+title-slide-attributes: 
+  data-background-image: img/couch.jpg
+  data-background-opacity: ".6"
+format:
+  revealjs:
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [night, weekly.scss]
+    logo: "erg2.png"
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+engine: knitr                        ## not picking up inline codes
+---
+
+```{r, warning=FALSE, message=FALSE}
+devtools::install_github("hadley/emo")
+```
+
+## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    -   Short-term:
+        - APA Manuscripts 
+    -   Long-term:
+        -   dissertation template `r emo::ji("graduation_cap")`
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+:::
+
+![](img/title18.JPG){.absolute top="170" right="-120" width="550" height="325"}
+
+# Recap of Session #18: 
+
+## `r emo::ji("globe_with_meridians")` `r emo::ji("globe_with_meridians")` Quarto [Websites](https://quarto.org/docs/websites/) `r emo::ji("globe_with_meridians")` `r emo::ji("globe_with_meridians")`
+
+:::{.panel-tabset}
+
+## Script
+
+``` yaml
+project:
+  type: website
+
+website:
+  title: "today"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+```
+
+## Output
+
+[![](https://r4ds.hadley.nz/cover.jpg)](https://r4ds.hadley.nz/)
+
+:::
+
+# Today: 
+
+## `r emo::ji("scroll")` `r emo::ji("scroll")` APA Manuscripts `r emo::ji("scroll")` `r emo::ji("scroll")`:
+
+:::: {layout="[40,60]"}
+
+::: similar
+
+![](https://www.easybib.com/wp-content/uploads/2020/02/APA-format-professional-title-page-1024x783.webp)
+![](https://www.citationmachine.net/wp-content/uploads/2020/03/APA-7-format-table.png)
+
+:::
+
+::: webstuff
+
+:::{.panel-tabset}
+
+## `papaja`
+
+``` yaml
+project:
+  type: book
+
+book:
+  title: "mybook"
+  author: "Jane Doe"
+  date: "8/18/2021"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreport
+  epub:
+    cover-image: cover.png
+```
+
+## [Quarto](https://quarto.org/docs/manuscripts/)
+
+``` yaml
+project:
+  type: website
+
+website:
+  title: "today"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+```
+::: 
+
+:::
+
+::::
+
+## Dissertation <br>formatting `r emo::ji("graduation_cap")`:
+
+
+:::: {layout="[45,55]"}
+
+::: listing
+
+1. Work zone: `r emo::ji("construction")`
+    + `papaja`? `r emo::ji("mango")`
+    + Communication <br>(`.Rmd` with `.cls`)
+    
+::: {.callout-tip}
+## $\LaTeX$ resources:
+
+.cls & .sty file specifications for noobs located [here](https://latex-ninja.com/2020/03/25/your-first-time-tweaking-a-cls-file-on-the-example-of-creating-switchable-colour-themes/)
+
+[Reed College](https://www.reed.edu/it/help/LaTeX/)
+:::
+    
+:::
+
+::: next
+
+:::
+
+::::
+    
+![](https://ogden_images.s3.amazonaws.com/www.ljworld.com/images/2003/11/23021156/sulfarside.jpg){.absolute right="-70" bottom="0" height="700"}
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
