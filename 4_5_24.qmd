@@ -212,8 +212,17 @@ output            : papaja::apa6_pdf
 
 ## Tigures `r emo::ji("tiger")`
 
-+ `apaTables` package
-+ `papaja` built-in options
++ [[`apaTables`](https://dstanley4.github.io/apaTables/articles/apaTables.html)]{.smaller}
+  + ["...for.pdf()" structure]{.smaller}
++ [[`jtools`](https://search.r-project.org/CRAN/refmans/jtools/html/theme_apa.html)]{.smaller}
+  + ["theme_apa" ggplots]{.smaller}
++ [`papaja` [built-in options](https://frederikaust.com/papaja_man/reporting.html#figures)]{.smaller}
+  + [also "theme_apa" (`flextable` too)]{.smaller}
+
+## inline
+
++ [`apa`](https://github.com/dgromer/apa)
++ [`apastats`](https://github.com/achetverikov/APAstats)
 
 ::: 
 
