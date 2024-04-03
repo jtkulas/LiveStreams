@@ -44,21 +44,38 @@ devtools::install_github("hadley/emo")
 
 ## `r emo::ji("globe_with_meridians")` `r emo::ji("globe_with_meridians")` Quarto [Websites](https://quarto.org/docs/websites/) `r emo::ji("globe_with_meridians")` `r emo::ji("globe_with_meridians")`
 
-:::{.panel-tabset}
+::: {layout="[30,70]"}
 
-## Script
+::: first-column
+
+<br>
+<br>
+
++ `_quarto.yml`
++ `index.qmd`
++ `redcar.qmd`
++ `green.qmd`
+
+:::
+
+::: second-column
+
+::::{.panel-tabset}
+
+## `r emo::ji("motorway")`
 
 ``` yaml
 project:
   type: website
 
 website:
-  title: "today"
+  title: "Test Ride"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - redcar.qmd
+      - green.qmd
 
 format:
   html:
@@ -67,9 +84,51 @@ format:
     toc: true
 ```
 
-## Output
+## `r emo::ji("motor_scooter")`
 
-[![](https://r4ds.hadley.nz/cover.jpg)](https://r4ds.hadley.nz/)
+``` yaml
+---
+title: "Test Ride"
+---
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+1 + 1
+
+My icon is a scooter (`r emo::ji("motor_scooter")`)
+
+```
+
+## `r emo::ji("automobile")`
+
+``` yaml
+---
+title: "RedCar"
+---
+
+Vroom vroom!!
+
+![](https://encrypted-tbn0.gstatic.com{.lightbox}         
+
+```
+
+## `r emo::ji("sport_utility_vehicle")`
+
+``` yaml
+---
+title: "Green"
+---
+
+![](https://i.ytimg.com/vi/MGzag6tA9WU/hqdefault.jpg)
+```
+
+[![](img/webshot.JPG)](https://bookdown.org/jtkulas/example_website/)
+
+::::
+
+:::
 
 :::
 
@@ -90,53 +149,72 @@ format:
 
 :::{.panel-tabset}
 
-## `papaja`
+## [`papaja`](https://frederikaust.com/papaja_man/r-markdown-components.html#yaml-front-matter)
 
 ``` yaml
-project:
-  type: book
+---
+title             : "The title"
+shorttitle        : "Title"
 
-book:
-  title: "mybook"
-  author: "Jane Doe"
-  date: "8/18/2021"
-  chapters:
-    - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - references.qmd
+author: 
+  - name          : "First Author"
+    affiliation   : "1"
+    corresponding : yes    # Define only one 
+    address       : "Postal address"
+    email         : "my@email.com"
+    role:         # Contributorship roles 
+      - Conceptualization
+      - Writing - Original Draft Preparation
+      - Writing - Review & Editing
+  - name          : "Ernst-August Doelle"
+    affiliation   : "1,2"
+    role:
+      - Writing - Review & Editing
 
-bibliography: references.bib
+affiliation:
+  - id            : "1"
+    institution   : "Wilhelm-Wundt-University"
+  - id            : "2"
+    institution   : "Konstanz Business School"
+    
+authornote: |
+  keep space/indent
 
-format:
-  html:
-    theme: cosmo
-  pdf:
-    documentclass: scrreport
-  epub:
-    cover-image: cover.png
+  Enter author note here.
+
+abstract: |
+  keep space/indent
+  
+  <!-- https://tinyurl.com/ybremelq -->
+  
+keywords          : "keywords"
+wordcount         : "X"
+
+bibliography      : ["r-references.bib"]
+
+floatsintext      : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : yes
+mask              : no
+draft             : no
+
+documentclass     : "apa6"
+classoption       : "man"
+output            : papaja::apa6_pdf
+---    
 ```
 
-## [Quarto](https://quarto.org/docs/manuscripts/)
+## .csl files
 
-``` yaml
-project:
-  type: website
+[![](img/zotero.JPG)](https://www.zotero.org/styles)
 
-website:
-  title: "today"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+## Tigures `r emo::ji("tiger")`
 
-format:
-  html:
-    theme: cosmo
-    css: styles.css
-    toc: true
-```
++ `apaTables` package
++ `papaja` built-in options
+
 ::: 
 
 :::
