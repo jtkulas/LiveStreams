@@ -100,6 +100,7 @@ To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 My icon is a scooter (`r emo::ji("motor_scooter")`)
 
 ```
+[![](img/webshot.JPG)](https://bookdown.org/jtkulas/example_website/)
 
 ## `r emo::ji("automobile")`
 
@@ -113,6 +114,7 @@ Vroom vroom!!
 ![](https://encrypted-tbn0.gstatic.com{.lightbox}         
 
 ```
+[![](img/webshot2.JPG)](https://bookdown.org/jtkulas/example_website/)
 
 ## `r emo::ji("sport_utility_vehicle")`
 
@@ -124,7 +126,7 @@ title: "Green"
 ![](https://i.ytimg.com/vi/MGzag6tA9WU/hqdefault.jpg)
 ```
 
-[![](img/webshot.JPG)](https://bookdown.org/jtkulas/example_website/)
+[![](img/webshot3.JPG)](https://bookdown.org/jtkulas/example_website/)
 
 ::::
 
@@ -133,6 +135,56 @@ title: "Green"
 :::
 
 # Today: 
+
+## `r emo::ji("scroll")` `r emo::ji("scroll")` APA Manuscripts `r emo::ji("scroll")` `r emo::ji("scroll")`
+
+::::: {layout="[50,50]"}
+
+::: first
+![](https://www.easybib.com/wp-content/uploads/2020/02/APA-format-professional-title-page-1024x783.webp)
+![](https://www.apaword.com/images/figure_example.png)
+:::
+
+::: second
+![](https://www.citationmachine.net/wp-content/uploads/2020/03/APA-7-format-table.png)
+:::
+
+:::::
+
+## Dissertation <br>formatting `r emo::ji("graduation_cap")`:
+
+
+:::: {layout="[45,55]"}
+
+::: listing
+
+1. Work zone: `r emo::ji("construction")`
+    + Maybe `papaja`? `r emo::ji("mango")`
+    + Communication <br>(`.Rmd` with `.cls`)
+    
+::: {.callout-tip}
+## $\LaTeX$ resources:
+
+.cls & .sty file specifications for noobs located [here](https://latex-ninja.com/2020/03/25/your-first-time-tweaking-a-cls-file-on-the-example-of-creating-switchable-colour-themes/)
+
+[Reed College](https://www.reed.edu/it/help/LaTeX/)
+:::
+    
+:::
+
+::: next
+
+:::
+
+::::
+    
+![](https://ogden_images.s3.amazonaws.com/www.ljworld.com/images/2003/11/23021156/sulfarside.jpg){.absolute right="-70" bottom="0" height="700"}
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
 
 ## `r emo::ji("scroll")` `r emo::ji("scroll")` APA Manuscripts `r emo::ji("scroll")` `r emo::ji("scroll")`:
 
@@ -229,38 +281,3 @@ output            : papaja::apa6_pdf
 :::
 
 ::::
-
-## Dissertation <br>formatting `r emo::ji("graduation_cap")`:
-
-
-:::: {layout="[45,55]"}
-
-::: listing
-
-1. Work zone: `r emo::ji("construction")`
-    + `papaja`? `r emo::ji("mango")`
-    + Communication <br>(`.Rmd` with `.cls`)
-    
-::: {.callout-tip}
-## $\LaTeX$ resources:
-
-.cls & .sty file specifications for noobs located [here](https://latex-ninja.com/2020/03/25/your-first-time-tweaking-a-cls-file-on-the-example-of-creating-switchable-colour-themes/)
-
-[Reed College](https://www.reed.edu/it/help/LaTeX/)
-:::
-    
-:::
-
-::: next
-
-:::
-
-::::
-    
-![](https://ogden_images.s3.amazonaws.com/www.ljworld.com/images/2003/11/23021156/sulfarside.jpg){.absolute right="-70" bottom="0" height="700"}
-
-## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
-
-```{r}
-sessionInfo()
-```
