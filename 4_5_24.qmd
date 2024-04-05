@@ -188,7 +188,7 @@ sessionInfo()
 
 ## `r emo::ji("scroll")` `r emo::ji("scroll")` APA Manuscripts `r emo::ji("scroll")` `r emo::ji("scroll")`:
 
-:::: {layout="[40,60]"}
+:::: {layout="[20,80]"}
 
 ::: similar
 
