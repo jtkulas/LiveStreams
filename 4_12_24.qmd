@@ -1,0 +1,226 @@
+---
+title: "R for <br>Authoring!!" 
+author: "PSP Session #20...<br>[...more APA]{.shiny}"
+title-slide-attributes: 
+  data-background-image: https://d23.com/app/uploads/2016/09/780x463-092216_ludwig-von-drake-did-you-know_4.jpg
+  data-background-opacity: ".3"
+format:
+  revealjs:
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [night, weekly.scss]
+    logo: "erg2.png"
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+engine: knitr                        ## not picking up inline codes
+---
+
+```{r, warning=FALSE, message=FALSE}
+devtools::install_github("hadley/emo")
+```
+
+## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    -   Short-term:
+        - APA (again) `r emo::ji("face_with_rolling_eyes")`
+    -   Long-term:
+        -   dissertation template `r emo::ji("graduation_cap")`
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+:::
+
+![](img/title19.JPG){.absolute top="170" right="-120" width="550" height="325"}
+
+# Recap of Session #19: 
+
+## APA Part I: [citations](https://www.zotero.org/styles) and [`papaja`](https://github.com/crsh/papaja)
+
+::: {.panel-tabset}
+
+## $\mathrm{Bib\TeX}$ citations 
+
+:::: {layout="[40,60]"}
+
+::: first
+
+Only affects *in text* references and bibliography citations...
+
+```yaml
+---
+title: "citations"
+output: pdf_document
+date: "2024-04-05"
+bibliography: quake.bib                # <1>
+csl: "apa.csl"                         # <2>
+---
+```
+1. Include references **within any type of document** by creating and referencing a `.bib` file
+
+2. Specify citation format **within any type of document** by referencing the associated `.csl` file
+
+:::
+
+::: second
+[![](img/zotero.JPG)](https://www.zotero.org/styles)
+::: 
+
+::::
+
+## `papaja`
+
+heya 
+
+:::
+
+# Today: 
+
+## `r emo::ji("scroll")` `r emo::ji("scroll")` APA Manuscripts `r emo::ji("scroll")` `r emo::ji("scroll")`
+
+::::: {layout="[50,50]"}
+
+::: first
+![](https://www.easybib.com/wp-content/uploads/2020/02/APA-format-professional-title-page-1024x783.webp)
+![](https://www.apaword.com/images/figure_example.png)
+:::
+
+::: second
+![](https://www.citationmachine.net/wp-content/uploads/2020/03/APA-7-format-table.png)
+:::
+
+:::::
+
+## Dissertation <br>formatting `r emo::ji("graduation_cap")`:
+
+
+:::: {layout="[45,55]"}
+
+::: listing
+
+1. Work zone: `r emo::ji("construction")`
+    + Maybe `papaja`? `r emo::ji("mango")`
+    + Communication <br>(`.Rmd` with `.cls`)
+    
+::: {.callout-tip}
+## $\LaTeX$ resources:
+
+.cls & .sty file specifications for noobs located [here](https://latex-ninja.com/2020/03/25/your-first-time-tweaking-a-cls-file-on-the-example-of-creating-switchable-colour-themes/)
+
+[Reed College](https://www.reed.edu/it/help/LaTeX/)
+:::
+    
+:::
+
+::: next
+
+:::
+
+::::
+    
+![](https://cutemonster.com/wp-content/uploads/2020/07/GaryLarson_Scientists-e1595716938477.gif){.absolute right="-70" bottom="0" height="700"}
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
+## `r emo::ji("scroll")` `r emo::ji("scroll")` APA Manuscripts `r emo::ji("scroll")` `r emo::ji("scroll")`:
+
+:::: {layout="[20,80]"}
+
+::: similar
+
+![](https://www.easybib.com/wp-content/uploads/2020/02/APA-format-professional-title-page-1024x783.webp)
+![](https://www.citationmachine.net/wp-content/uploads/2020/03/APA-7-format-table.png)
+
+:::
+
+::: webstuff
+
+:::{.panel-tabset}
+
+## [`papaja`](https://frederikaust.com/papaja_man/r-markdown-components.html#yaml-front-matter)
+
+``` yaml
+---
+title             : "The title"
+shorttitle        : "Title"
+
+author: 
+  - name          : "First Author"
+    affiliation   : "1"
+    corresponding : yes    # Define only one 
+    address       : "Postal address"
+    email         : "my@email.com"
+    role:         # Contributorship roles 
+      - Conceptualization
+      - Writing - Original Draft Preparation
+      - Writing - Review & Editing
+  - name          : "Ernst-August Doelle"
+    affiliation   : "1,2"
+    role:
+      - Writing - Review & Editing
+
+affiliation:
+  - id            : "1"
+    institution   : "Wilhelm-Wundt-University"
+  - id            : "2"
+    institution   : "Konstanz Business School"
+    
+authornote: |
+  keep space/indent
+
+  Enter author note here.
+
+abstract: |
+  keep space/indent
+  
+  <!-- https://tinyurl.com/ybremelq -->
+  
+keywords          : "keywords"
+wordcount         : "X"
+
+bibliography      : ["r-references.bib"]
+
+floatsintext      : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : yes
+mask              : no
+draft             : no
+
+documentclass     : "apa6"
+classoption       : "man"
+output            : papaja::apa6_pdf
+---    
+```
+
+## Tigures `r emo::ji("tiger")`
+
++ [[`apaTables`](https://dstanley4.github.io/apaTables/articles/apaTables.html)]{.smaller}
+  + ["...for.pdf()" structure]{.smaller}
++ [[`jtools`](https://search.r-project.org/CRAN/refmans/jtools/html/theme_apa.html)]{.smaller}
+  + ["theme_apa" ggplots]{.smaller}
++ [`papaja` [built-in options](https://frederikaust.com/papaja_man/reporting.html#figures)]{.smaller}
+  + [also "theme_apa" (`flextable` too)]{.smaller}
+
+## inline
+
++ [`apa`](https://github.com/dgromer/apa)
++ [`apastats`](https://github.com/achetverikov/APAstats)
+
+::: 
+
+:::
+
+::::
