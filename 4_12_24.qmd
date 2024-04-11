@@ -52,7 +52,7 @@ devtools::install_github("hadley/emo")
 
 ::: first
 
-Only affects *in text* references and bibliography citations...
+Only affects: A) **in-text** reference style, and B) bibliography citations
 
 ```yaml
 ---
@@ -63,27 +63,81 @@ bibliography: quake.bib                # <1>
 csl: "apa.csl"                         # <2>
 ---
 ```
-1. Include references **within any type of document** by creating and referencing a `.bib` file
+1. Include references **within any type of document** by creating and referencing a standard `.bib` file
 
-2. Specify citation format **within any type of document** by referencing the associated `.csl` file
+2. Specify *citation format* within any type of document by referencing the associated `.csl` file ([download from Zotero](https://www.zotero.org/styles))
 
 :::
 
 ::: second
-[![](img/zotero.JPG)](https://www.zotero.org/styles)
+![](img/citations.png)
 ::: 
 
 ::::
 
-## `papaja`
+## `papaja` YAML
 
-heya 
+``` yaml
+---
+title             : "The title"                       # <1>
+shorttitle        : "Title"                           # <1>
+
+author:                                               # <2>
+  - name          : "First Author"                    # <2>
+    affiliation   : "1"                               # <2> 
+    corresponding : yes    # Define only one          # <2>
+    address       : "Postal address"                  # <2>
+    email         : "my@email.com"                    # <2> 
+
+affiliation:
+  - id            : "1"                               # <3>
+    institution   : "Wilhelm-Wundt-University"        # <3>
+  - id            : "2"
+    institution   : "Konstanz Business School"
+    
+authornote: |                                        # <4>
+  keep space/indent                                  # <4>
+                                                     # <4>
+  Enter author note here.                            # <4>
+
+abstract: |                                          # <5>
+  keep space/indent                                  # <5>
+                                                     # <5>
+  <!-- https://tinyurl.com/ybremelq -->              # <5>
+  
+keywords          : "keywords"
+wordcount         : "X"
+
+bibliography      : ["r-references.bib"]                # <6>
+
+floatsintext      : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : yes                                 # <7>
+mask              : no                                  # <8>
+draft             : no
+
+documentclass     : "apa7"
+classoption       : "man"                               # <9>
+output            : papaja::apa6_pdf
+---    
+```
+1. Title and running head
+2. Repeat as many times as necessary for co-authors (entire `5-10` block or just name and affiliation)
+3. Provides the formal affiliation (here, for example, will define the line `7` author affiliation)
+4. Declarations such as conflicts of interest or funding sources go here - not applicable for many projects
+5. Start with a "space". Hyperlink is a *Nature* magazine suggestion regarding Abstract structure 
+6. One of most important inclusions - you may have many `.bib` files for any one project (simply expand the filenames within the square brackets)
+7. Extremely helpful for reviewers - your professors will thank you!
+8. Omits author information from title page - helpful for journal submissions
+9. Format of rendered document. Try `jou` instead of `man` to see a copy-edited preview of your paper
 
 :::
 
 # Today: 
 
-## `r emo::ji("scroll")` `r emo::ji("scroll")` APA Manuscripts `r emo::ji("scroll")` `r emo::ji("scroll")`
+## `r emo::ji("scroll")` [APA Manuscripts: The Revenge]{.smaller} `r emo::ji("ghost")`
 
 ::::: {layout="[50,50]"}
 
@@ -106,7 +160,7 @@ heya
 ::: listing
 
 1. Work zone: `r emo::ji("construction")`
-    + Maybe `papaja`? `r emo::ji("mango")`
+    + Moar `papaja`!! `r emo::ji("mango")`
     + Communication <br>(`.Rmd` with `.cls`)
     
 ::: {.callout-tip}
@@ -133,94 +187,34 @@ heya
 sessionInfo()
 ```
 
-## `r emo::ji("scroll")` `r emo::ji("scroll")` APA Manuscripts `r emo::ji("scroll")` `r emo::ji("scroll")`:
+## `r emo::ji("scroll")` APA Formatting Support `r emo::ji("scroll")` 
 
-:::: {layout="[20,80]"}
+:::: {layout="[50,10,40]"}
 
-::: similar
+::: figures
 
-![](https://www.easybib.com/wp-content/uploads/2020/02/APA-format-professional-title-page-1024x783.webp)
-![](https://www.citationmachine.net/wp-content/uploads/2020/03/APA-7-format-table.png)
+[Tigures]{.kulas3} `r emo::ji("tiger")`
 
++ [`apaTables`](https://dstanley4.github.io/apaTables/articles/apaTables.html)
+  + "...for.pdf()" structure
++ [`jtools`](https://search.r-project.org/CRAN/refmans/jtools/html/theme_apa.html)
+  + "theme_apa" ggplots
++ `papaja` [built-in options](https://frederikaust.com/papaja_man/reporting.html#figures)
+  + also "theme_apa" (`flextable` too)
 :::
 
-::: webstuff
+::: space
+:::
 
-:::{.panel-tabset}
+::: inline
 
-## [`papaja`](https://frederikaust.com/papaja_man/r-markdown-components.html#yaml-front-matter)
-
-``` yaml
----
-title             : "The title"
-shorttitle        : "Title"
-
-author: 
-  - name          : "First Author"
-    affiliation   : "1"
-    corresponding : yes    # Define only one 
-    address       : "Postal address"
-    email         : "my@email.com"
-    role:         # Contributorship roles 
-      - Conceptualization
-      - Writing - Original Draft Preparation
-      - Writing - Review & Editing
-  - name          : "Ernst-August Doelle"
-    affiliation   : "1,2"
-    role:
-      - Writing - Review & Editing
-
-affiliation:
-  - id            : "1"
-    institution   : "Wilhelm-Wundt-University"
-  - id            : "2"
-    institution   : "Konstanz Business School"
-    
-authornote: |
-  keep space/indent
-
-  Enter author note here.
-
-abstract: |
-  keep space/indent
-  
-  <!-- https://tinyurl.com/ybremelq -->
-  
-keywords          : "keywords"
-wordcount         : "X"
-
-bibliography      : ["r-references.bib"]
-
-floatsintext      : no
-figurelist        : no
-tablelist         : no
-footnotelist      : no
-linenumbers       : yes
-mask              : no
-draft             : no
-
-documentclass     : "apa6"
-classoption       : "man"
-output            : papaja::apa6_pdf
----    
-```
-
-## Tigures `r emo::ji("tiger")`
-
-+ [[`apaTables`](https://dstanley4.github.io/apaTables/articles/apaTables.html)]{.smaller}
-  + ["...for.pdf()" structure]{.smaller}
-+ [[`jtools`](https://search.r-project.org/CRAN/refmans/jtools/html/theme_apa.html)]{.smaller}
-  + ["theme_apa" ggplots]{.smaller}
-+ [`papaja` [built-in options](https://frederikaust.com/papaja_man/reporting.html#figures)]{.smaller}
-  + [also "theme_apa" (`flextable` too)]{.smaller}
-
-## inline
+[Inline text]{.kulas3} `r emo::ji("speech_balloon")`
 
 + [`apa`](https://github.com/dgromer/apa)
+  + Statistics reporting
 + [`apastats`](https://github.com/achetverikov/APAstats)
-
-::: 
-
+  + Statistics reporting
 :::
 
 ::::
+
