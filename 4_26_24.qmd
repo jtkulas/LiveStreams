@@ -1,9 +1,9 @@
 ---
 title: "R for <br>Authoring!!" 
-author: "PSP Session #20...<br>[...more APA]{.shiny}"
+author: "PSP Session #22...<br>[...yet again here we go APA]{.shiny}"
 title-slide-attributes: 
-  data-background-image: https://d23.com/app/uploads/2016/09/780x463-092216_ludwig-von-drake-did-you-know_4.jpg
-  data-background-opacity: ".3"
+  data-background-image: https://www.simplypsychology.org/wp-content/uploads/freud-couch-1024x657.jpg
+  data-background-opacity: ".8"
 format:
   revealjs:
     code-overflow: wrap              ## instead of horizontal scroll
@@ -25,10 +25,10 @@ devtools::install_github("hadley/emo")
 
 ::: {layout="[80,20]"}
 ::: first-column
--   Recap session #19&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Recap session #'s 20 & 21&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue(s):
     -   Short-term:
-        - APA (again) `r emo::ji("face_with_rolling_eyes")`
+        - APA (WAT again?!?) `r emo::ji("face_with_head_bandage")`
     -   Long-term:
         -   dissertation template `r emo::ji("graduation_cap")`
 -   Shared problem-solving
@@ -38,9 +38,9 @@ devtools::install_github("hadley/emo")
 :::
 :::
 
-![](img/title19.JPG){.absolute top="170" right="-120" width="550" height="325"}
+![](img/title20.JPG){.absolute top="170" right="-120" width="550" height="325"}
 
-# Recap of Session #19: 
+# Recap of Session #'s 20 & 21: 
 
 ## APA Part I: [citations](https://www.zotero.org/styles) and [`papaja`](https://github.com/crsh/papaja)
 
@@ -137,12 +137,11 @@ output            : papaja::apa6_pdf
 
 # Today: 
 
-## `r emo::ji("scroll")` [APA Manuscripts: The Revenge]{.smaller} `r emo::ji("ghost")`
+## `r emo::ji("chart_decreasing")` APA II: Tables & Figures `r emo::ji("chart_increasing")`
 
 ::::: {layout="[50,50]"}
 
 ::: first
-![](https://www.easybib.com/wp-content/uploads/2020/02/APA-format-professional-title-page-1024x783.webp)
 ![](https://www.apaword.com/images/figure_example.png)
 :::
 
@@ -161,7 +160,7 @@ output            : papaja::apa6_pdf
 
 1. Work zone: `r emo::ji("construction")`
     + Moar `papaja`!! `r emo::ji("mango")`
-    + Communication <br>(`.Rmd` with `.cls`)
+    + TOC for graphs & tables
     
 ::: {.callout-tip}
 ## $\LaTeX$ resources:
@@ -179,7 +178,7 @@ output            : papaja::apa6_pdf
 
 ::::
     
-![](https://cutemonster.com/wp-content/uploads/2020/07/GaryLarson_Scientists-e1595716938477.gif){.absolute right="-70" bottom="0" height="700"}
+![](https://www.operationsworklife.com/wp-content/uploads/2020/07/14605D29-A49F-4B88-8EC9-28BF277CFDB8.gif){.absolute right="-70" bottom="0" height="700"}
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 
