@@ -142,7 +142,7 @@ output            : papaja::apa6_pdf
 ::::: {layout="[50,50]"}
 
 ::: first
-![](https://www.apaword.com/images/figure_example.png)
+![](https://apastyle.apa.org/images/figure-setup-image_tcm11-262908_w1024_n.jpg)
 :::
 
 ::: second
