@@ -40,6 +40,11 @@ $presentation-title-slide-text-color: black;
     -3px -3px 3px black
 }
 
+/*-- supposedly helps with content overflow --*/
+.slides {
+    overflow-y: auto;
+}
+
 .oldenglish {
   font-family: 'Pirata One';
 }

@@ -42,40 +42,14 @@ devtools::install_github("hadley/emo")
 
 # Recap of Session #'s 20 & 21: 
 
-## APA Part I: [citations](https://www.zotero.org/styles) and [`papaja`](https://github.com/crsh/papaja)
+## [`papaja`](https://github.com/crsh/papaja) & [revealjs](https://quarto.org/docs/presentations/revealjs/) slides
 
 ::: {.panel-tabset}
 
-## $\mathrm{Bib\TeX}$ citations 
-
-:::: {layout="[40,60]"}
-
-::: first
-
-Only affects: A) **in-text** reference style, and B) bibliography citations
-
-```yaml
----
-title: "citations"
-output: pdf_document
-date: "2024-04-05"
-bibliography: quake.bib                # <1>
-csl: "apa.csl"                         # <2>
----
-```
-1. Include references **within any type of document** by creating and referencing a standard `.bib` file
-
-2. Specify *citation format* within any type of document by referencing the associated `.csl` file ([download from Zotero](https://www.zotero.org/styles))
-
-:::
-
-::: second
-![](img/citations.png)
-::: 
-
-::::
-
 ## `papaja` YAML
+
+::::: {layout="[70,30]"}
+::: yamlstuff
 
 ``` yaml
 ---
@@ -132,6 +106,51 @@ output            : papaja::apa6_pdf
 7. Extremely helpful for reviewers - your professors will thank you!
 8. Omits author information from title page - helpful for journal submissions
 9. Format of rendered document. Try `jou` instead of `man` to see a copy-edited preview of your paper
+:::
+
+::: picturestuff
+![](img/title20.JPG)
+:::
+
+:::::
+
+## revealjs YAML
+
+::::: {layout="[70,30]"}
+::: revealyaml
+```yaml
+---
+title: "R for <br>Authoring!!" 
+author: "PSP Session #21...<br>
+...quarto presentations ...FROM SCRATCH!"
+title-slide-attributes: 
+  data-background-image: baking.jpg
+  data-background-opacity: ".8"      #<1>
+format:
+  revealjs:
+    code-overflow: wrap              #<2> 
+    theme: [night, weekly.scss]      #<3>
+    logo: "erg2.png"
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                #<4> 
+    preview-links: false             #<5>  
+    code-annotations: hover
+engine: knitr                        #<6> 
+---
+```
+1. Helps with visibility of overlaying text on title slide
+2. *Supposed to* wrap instead of horizontal scroll within code chunks; [other option](https://quarto.org/docs/output-formats/html-code.html#code-overflow) is `scroll`
+3. `night` is [one of 11 built-in](https://quarto.org/docs/presentations/revealjs/themes.html) Reveal themes; `weekly.scss` is our customizing CSS that is mostly font specifications
+3. `true` enables mouse-wheel navigation across slides
+4. `true` brings up iframe window instead of "site"
+5. Attempt to force `r fontawesome::fa("r-project", fill="#4287f5")` priority because Quarto scripts are sometimes not picking up inline codes
+:::
+
+::: picture
+![](img/title21.JPG)
+:::
+:::::
 
 :::
 
@@ -142,11 +161,11 @@ output            : papaja::apa6_pdf
 ::::: {layout="[50,50]"}
 
 ::: first
-![](https://apastyle.apa.org/images/figure-setup-image_tcm11-262908_w1024_n.jpg)
+[![](https://apastyle.apa.org/images/figure-setup-image_tcm11-262908_w1024_n.jpg)](https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/apa_tables_and_figures.html)
 :::
 
 ::: second
-![](https://www.citationmachine.net/wp-content/uploads/2020/03/APA-7-format-table.png)
+[![](https://www.citationmachine.net/wp-content/uploads/2020/03/APA-7-format-table.png)](https://apastyle.apa.org/style-grammar-guidelines/tables-figures/tables)
 :::
 
 :::::
