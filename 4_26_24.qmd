@@ -56,7 +56,7 @@ devtools::install_github("hadley/emo")
 + co-founder of [CRAN](https://cran.r-project.org/)
 + Developed [`Sweave`](https://stat.ethz.ch/R-manual/R-devel/library/utils/doc/Sweave.pdf) 
     + combines `r fontawesome::fa("r-project", fill="#4287f5")` and $\LaTeX$
-    + Makes R for Authoring possible 
+    + Makes "R for Authoring" possible 
 :::
 :::
 
@@ -176,16 +176,18 @@ engine: knitr                        #<6>
 
 # Today: 
 
-## `r emo::ji("chart_decreasing")` APA II: Tables & Figures `r emo::ji("chart_increasing")`
+## `r emo::ji("chart_increasing")` APA II: Tables & Figures `r emo::ji("chart_decreasing")`
+
+...plus maybe some inline reporting (time permitting)...
 
 ::::: {layout="[50,50]"}
 
 ::: first
-[![](https://apastyle.apa.org/images/figure-setup-image_tcm11-262908_w1024_n.jpg)](https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/apa_tables_and_figures.html)
+[![](https://www.citationmachine.net/wp-content/uploads/2020/03/APA-7-format-table.png)](https://apastyle.apa.org/style-grammar-guidelines/tables-figures/tables)
 :::
 
 ::: second
-[![](https://www.citationmachine.net/wp-content/uploads/2020/03/APA-7-format-table.png)](https://apastyle.apa.org/style-grammar-guidelines/tables-figures/tables)
+[![](https://apastyle.apa.org/images/figure-setup-image_tcm11-262908_w1024_n.jpg)](https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/apa_tables_and_figures.html)
 :::
 
 :::::
