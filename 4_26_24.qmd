@@ -40,6 +40,26 @@ devtools::install_github("hadley/emo")
 
 ![](img/title20.JPG){.absolute top="170" right="-120" width="550" height="325"}
 
+## `r emo::ji("bouquet")` `r emo::ji("rose")` `r emo::ji("rose")` RIP [Dr. Leisch](https://www.r-project.org/doc/obit/fritz.html
+) `r emo::ji("rose")` `r emo::ji("rose")` `r emo::ji("bouquet")`
+
+::: {layout="[35,65]"}
+::: fritz
+<br>
+![](https://www.r-project.org/doc/obit/fritz.jpg)
+:::
+
+::: description
+<br>  
+
++ Member of [R Core Development Team](https://www.r-project.org/contributors.html) (1997)
++ co-founder of [CRAN](https://cran.r-project.org/)
++ Developed [`Sweave`](https://stat.ethz.ch/R-manual/R-devel/library/utils/doc/Sweave.pdf) 
+    + combines `r fontawesome::fa("r-project", fill="#4287f5")` and $\LaTeX$
+    + Makes R for Authoring possible 
+:::
+:::
+
 # Recap of Session #'s 20 & 21: 
 
 ## [`papaja`](https://github.com/crsh/papaja) & [revealjs](https://quarto.org/docs/presentations/revealjs/) slides
