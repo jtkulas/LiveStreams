@@ -13,7 +13,7 @@ $body-bg: #191919;
 $body-color: #fff;
 $link-color: #42affa;
 $code-color: hotpink;
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: left;
 $presentation-title-slide-text-color: black;
 
 /*-- scss:rules --*/
@@ -103,7 +103,7 @@ $presentation-title-slide-text-color: black;
 
 .shiny {
   font-size: 80px;
-  color: #00c0a3;
+  color: #00c0a3;           /* #00c0a3 */
   font-family: 'Lobster Two';
   text-shadow: 
     3px 3px 4px black,
@@ -112,4 +112,14 @@ $presentation-title-slide-text-color: black;
 
 .smaller {
   font-size: 80%;
+}
+
+.my_class1 {       /* code chunk dimensions */
+height: 300px;
+width: 450px;
+}
+
+.my_class2 {       /* code chunk dimensions */
+height: 100px;
+width: 200px;
 }

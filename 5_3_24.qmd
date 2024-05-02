@@ -1,0 +1,142 @@
+---
+title: "R for <br>Authoring!!" 
+author: "PSP Session #23...<br>[...you just messing<br>with me now APA?!?]{.shiny}"
+title-slide-attributes: 
+  data-background-image: https://www.retroactivejealousycrusher.com/wp-content/uploads/2017/04/psicoterapias-2.jpg
+  data-background-opacity: ".5"
+format:
+  revealjs:
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [night, weekly.scss]
+    logo: "erg2.png"
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+engine: knitr                        ## not picking up inline codes
+---
+
+```{r, warning=FALSE, message=FALSE}
+devtools::install_github("hadley/emo")
+```
+
+## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #22&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    - APA (aw c'mon now) `r emo::ji("pleading_face")`
+      + in-line statistics
+      + Pull it all together
+      + [yabut](https://wjschne.github.io/apaquarto/)
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+:::
+
+![](img/title22.JPG){.absolute top="170" right="-120" width="550" height="325"}
+
+# Recap of Session #22: 
+
+## APA [Tables](https://dstanley4.github.io/apaTables/articles/apaTables.html#correlation-table) & [Figures](https://search.r-project.org/CRAN/refmans/jtools/html/theme_apa.html) `r emo::ji("tiger")`
+
+::: {.panel-tabset}
+
+## Tables
+
+```{r}
+#| echo: true
+#| eval: false                 ## decided to just clip snip (5/2)
+#| class-source: my_class1
+#| classes: my_class1
+## papaja 
+## apaTables
+## flextable
+
+data(iris)
+iris2 <- iris[c(1:6),c(1:2)]
+
+papaja::apa_table(iris2,
+      caption="six flowers")
+
+```
+
+::: {.fragment}
+![](img/apatable.JPG){.absolute width="700" height="450" top="200" right="-150"}
+:::
+
+## `jtools` Figures
+
+```{r}
+#| echo: true
+#| output-location: column-fragment
+#| collapse: true
+#| code-line-numbers: "10"
+## jtools
+## papaja
+## local template
+
+library(ggplot2)
+
+ggplot(iris, aes(Sepal.Length, 
+      Sepal.Width)) +
+      geom_jitter() + 
+      jtools::theme_apa()
+```
+
+##
+
+## `papaja` Figures
+
+```{r}
+#| echo: true
+#| output-location: column-fragment
+#| collapse: true
+#| code-line-numbers: "10"
+## jtools
+## papaja
+## local template
+
+library(ggplot2)
+
+ggplot(iris, aes(Sepal.Length, 
+      Sepal.Width)) +
+      geom_jitter() + 
+      papaja::theme_apa()
+```
+:::
+
+# Today: 
+
+## `r emo::ji("writing_hand")` APA III: data reporting `r emo::ji("scroll")`
+
+[Inline text:]{.kulas3} 
+
++ Pull from object
++ "Common" statistics<br>helpers:
+  + [`apa`](https://github.com/dgromer/apa)
+  + [`schoRsch`](https://www.tqmp.org/RegularArticles/vol12-2/p147/p147.pdf)
+  + [`apastats`](https://github.com/achetverikov/APAstats)
+  + [`papaja`](https://github.com/crsh/papaja)
+
+![](https://www.pngall.com/wp-content/uploads/15/Bracket-PNG-Image-File.png){.absolute bottom="155" left="-15" width="35" height="120"}
+
+
+::: {.notes}
+apa/schoRsch: ANOVA, $\chi^2$, correlation, t-test  
+apastats: + Bayesian, regression, descriptives  
+papaja: + MANOVA, mixed
+:::
+
+![](https://slideplayer.com/slide/9481929/29/images/32/Sample+Result.jpg){.absolute top="100" right="-115" width="700" height="550"}
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
