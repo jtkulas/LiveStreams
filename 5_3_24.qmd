@@ -58,7 +58,7 @@ devtools::install_github("hadley/emo")
 ## flextable
 
 data(iris)
-iris2 <- iris[c(1:6),c(1:2)]
+iris2 <- iris[c(1:6),]
 
 papaja::apa_table(iris2,
       caption="six flowers")
