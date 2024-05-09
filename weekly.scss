@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css?family=Indie Flower');
 @import url('https://fonts.googleapis.com/css?family=Londrina Solid');
 @import url('https://fonts.googleapis.com/css?family=Lovers Quarrel');
+@import url('https://fonts.googleapis.com/css?family=Poetsen One');
 
 /*-- scss:defaults --*/
 
@@ -46,7 +47,7 @@ $presentation-title-slide-text-color: black;
 }
 
 .oldenglish {
-  font-family: 'Pirata One';
+  font-family: 'Poetsen One';
 }
 
 .kulas {
@@ -120,5 +121,8 @@ width: 450px;
 }
 
 .my_class2 {       /* code chunk dimensions */
-height: 300px;
+height: 200px;
+width: 10px;
 }
+
+                   /* https://stackoverflow.com/questions/73460033/how-to-change-code-block-height-and-width-in-quarto-presentation */

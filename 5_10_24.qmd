@@ -41,7 +41,7 @@ devtools::install_github("hadley/emo")
 
 # Recap of Session #23: 
 
-## APA inline reporting
+## APA inline reporting `r emo::ji("writing_hand")`
 
 ::: {.panel-tabset}
 
@@ -55,115 +55,161 @@ Intended for ["cutting and pasting" into a processor](https://www.tqmp.org/Regul
 ::: second
 Supports:
 
-   + t test
+   + t-test
    + ANOVA
    + $\chi^2$
    + correlation
 :::
 :::
 
+![](https://s.abcnews.com/images/US/california-wildfire-01-ap-jef-210712_1626106441721_hpMain.jpg){.absolute bottom="0" left="10" height="250" width="670"}
+
 ## `apa`
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE}
+:::: .columns
+
+::: {.column width="50%"}
+```{r}
+#| echo: true
+#| code-line-numbers: "2,13-14"
+
 library(psych)
 library(apa)
 data(bfi)
 
-bfi$a<- rowMeans(bfi[1:5], na.rm=TRUE)
-bfi$gender <- as.factor(as.character(bfi$gender))
+bfi$a<- rowMeans(bfi[1:5], 
+                 na.rm=TRUE)
+bfi$gender <- as.factor(as.character
+                        (bfi$gender))
 
-analysis <- t.test(a ~ gender, data = bfi, var.equal=TRUE)
+analysis <- t.test(a ~ gender, 
+          data = bfi, var.equal=TRUE)
 
-## Trying the `apa` t-test wrapper here, `r apa(analysis)` 
+## Trying the `apa` t-test wrapper 
+## here: `r apa(analysis)` 
 
 ```
 
-Wrapper is simply, `apa()`. Last week mistake was trying to use the `t_apa()` function (which produces similar output, but perhaps not intended for rMarkdown/Quarto).
+:::
 
-Trying the `apa` t-test wrapper here: `r apa(analysis)`
+::: {.column width="5%"}
+:::
 
-## testing
+::: {.column width="40%" .smaller}
+Wrapper is simply, `apa()`.  
 
-```{r, echo=TRUE, warning=FALSE, message=FALSE, R.options=list(width=10)}
+Last week mistake was trying to use the `t_apa()` function (which produces similar output as `schoRsch`).
+<br>
+<br>
+<br>
+
+::: {.fragment}
+
+[Trying the `apa` t-test wrapper here: `r apa(analysis)`]{.oldenglish}
+
+:::
+
+:::
+::::
+
+## `apastats`
+
+::: .columns
+
+::: {.column width="60%"}
+```{r}
+#| echo: true
+#| code-line-numbers: "2,13-14"
+
 library(psych)
-library(apa)
+library(apastats)
 data(bfi)
 
-bfi$a<- rowMeans(bfi[1:5], na.rm=TRUE)
-bfi$gender <- as.factor(as.character(bfi$gender))
+bfi$a<- rowMeans(bfi[1:5], 
+                 na.rm=TRUE)
+bfi$gender <- as.factor(as.character
+                        (bfi$gender))
 
-analysis <- t.test(a ~ gender, data = bfi, var.equal=TRUE)
+analysis <- t.test(a ~ gender, 
+          data = bfi, var.equal=TRUE)
 
-## Trying the `apa` t-test wrapper here: `r apa(analysis)` 
+## Trying the `apastats` t-test wrapper 
+## here: `r describe.ttest(analysis)` 
 
 ```
 
-## `jtools` Figures
+:::
 
+::: {.column width="5%"}
+:::
+
+::: {.column width="30%"}
+
+[Trying the `apastats` t-test wrapper here: `r describe.ttest(analysis)`
+]{.oldenglish}
+
+:::
+:::
+
+## `papaja`
+
+:::: .columns
+
+::: {.column width="60%"}
 ```{r}
 #| echo: true
-#| output-location: column-fragment
-#| collapse: true
-#| code-line-numbers: "10"
-## jtools
-## papaja
-## local template
+#| code-line-numbers: "2,10,12,14-15"
 
-library(ggplot2)
+library(psych)
+library(papaja)
+data(bfi)
 
-ggplot(iris, aes(Sepal.Length,      #<1>
-      Sepal.Width)) +               #<1>
-      geom_jitter() +               #<1>
-      jtools::theme_apa()
+bfi$a<- rowMeans(bfi[1:5], 
+                 na.rm=TRUE)
+bfi$gender <- as.factor(as.character
+                        (bfi$gender))
+
+analysis <- aov(a ~ gender, data = bfi)
+
+papastat <- apa_print(analysis)
+
+## Trying one of the `papaja` ANOVA  
+## wrappers here: `r papastat$full_result` 
+
 ```
-1. nothing different here from standard `ggplot` scatterplot
 
-##
+:::
 
-## `papaja` Figures
+::: {.column width="5%"}
+:::
 
-```{r}
-#| echo: true
-#| output-location: column-fragment
-#| collapse: true
-#| code-line-numbers: "10"
-## jtools
-## papaja
-## local template
+::: {.column width="30%"}
 
-library(ggplot2)
+[Trying one of the `papaja` ANOVA wrappers here: `r papastat$full_result`]{.oldenglish}
 
-ggplot(iris, aes(Sepal.Length, 
-      Sepal.Width)) +
-      geom_jitter() + 
-      papaja::theme_apa()        #<1>
-```
-1. `papaja` and `jtools` share the same function name, "theme_apa()"
+:::
+
+::::
 :::
 
 # Today: 
 
-## `r emo::ji("scroll")` APA III: data reporting `r emo::ji("writing_hand")`
+## APA IV: Together at last `r emo::ji("man_in_tuxedo")``r emo::ji("bride_with_veil")` 
 
-[Inline text:]{.kulas3} 
+[Manuscript:]{.kulas3} 
 
-+ Pull from object
-+ "Common" statistics<br>helpers:
-  + [`apa`](https://github.com/dgromer/apa)
-  + [`schoRsch`](https://www.tqmp.org/RegularArticles/vol12-2/p147/p147.pdf)
-  + [`apastats`](https://github.com/achetverikov/APAstats)
-  + [`papaja`](https://github.com/crsh/papaja)
-
-![](https://www.pngall.com/wp-content/uploads/15/Bracket-PNG-Image-File.png){.absolute bottom="155" left="-15" width="35" height="120"}
-
++ `papaja`
+    + framework `r emo::ji("building_construction")`
+    + tables `r emo::ji("abacus")`
+    + figures `r emo::ji("bar_chart")`
+    + in-line stats `r emo::ji("desktop_computer")`
+    + citations `r emo::ji("oncoming_police_car")`
 
 ::: {.notes}
-apa/schoRsch: ANOVA, $\chi^2$, correlation, t-test  
-apastats: + Bayesian, regression, descriptives  
-papaja: + MANOVA, mixed
+Other packages also support tables, figures, and in-line stats, but `papaja` also supports each of these and our suggestion is to rely on `papaja` until "you can't" (e.g., inline reporting of rudimentary analysis summaries). 
 :::
 
-![](https://slideplayer.com/slide/9481929/29/images/32/Sample+Result.jpg){.absolute top="100" right="-115" width="700" height="550"}
+![](https://i1.rgstatic.net/publication/313267124_100_Years_of_Applied_Psychology_Research_on_Individual_Careers_From_Career_Management_to_Retirement/links/5f538f33a6fdcc9879ce24e3/largepreview.png){.absolute top="100" right="80" width="400" height="550"}
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 

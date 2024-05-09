@@ -8,7 +8,7 @@
 <link href="5_10_24_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="5_10_24_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="5_10_24_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.549">
+  <meta name="generator" content="quarto-1.4.552">
 
   <meta name="author" content="PSP Session #24… …one more time APA">
   <title>R for  Authoring!!</title>
@@ -402,8 +402,8 @@ PSP Session #24…<br><span class="shiny">…one more time APA</span>
 </div>
 
 </section>
-<section id="problem-solving-panel-may-08-2024" class="slide level2">
-<h2>Problem-Solving Panel <br>(May 08, 2024)</h2>
+<section id="problem-solving-panel-may-09-2024" class="slide level2">
+<h2>Problem-Solving Panel <br>(May 09, 2024)</h2>
 <div class="quarto-layout-panel" data-layout="[80,20]">
 <div class="quarto-layout-row">
 <div class="first-column quarto-layout-cell" style="flex-basis: 80.0%;justify-content: flex-start;">
@@ -433,9 +433,9 @@ PSP Session #24…<br><span class="shiny">…one more time APA</span>
 
 </section>
 <section id="apa-inline-reporting" class="slide level2">
-<h2>APA inline reporting</h2>
+<h2>APA inline reporting ✍️</h2>
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1"><code>schoRsch</code></a></li><li><a href="#tabset-1-2"><code>apa</code></a></li><li><a href="#tabset-1-3">testing</a></li><li><a href="#tabset-1-4"><code>jtools</code> Figures</a></li><li><a href="#tabset-1-5"></a></li><li><a href="#tabset-1-6"><code>papaja</code> Figures</a></li></ul>
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1"><code>schoRsch</code></a></li><li><a href="#tabset-1-2"><code>apa</code></a></li><li><a href="#tabset-1-3"><code>apastats</code></a></li><li><a href="#tabset-1-4"><code>papaja</code></a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
 <div class="quarto-layout-panel" data-layout="[70,30]">
@@ -446,7 +446,7 @@ PSP Session #24…<br><span class="shiny">…one more time APA</span>
 <div class="second quarto-layout-cell" style="flex-basis: 30.0%;justify-content: flex-start;">
 <p>Supports:</p>
 <ul>
-<li>t test</li>
+<li>t-test</li>
 <li>ANOVA</li>
 <li><span class="math inline">\(\chi^2\)</span></li>
 <li>correlation</li>
@@ -454,89 +454,94 @@ PSP Session #24…<br><span class="shiny">…one more time APA</span>
 </div>
 </div>
 </div>
+<p><img data-src="https://s.abcnews.com/images/US/california-wildfire-01-ap-jef-210712_1626106441721_hpMain.jpg" class="absolute" style="left: 10px; bottom: 0px; width: 670px; height: 250px; "></p>
 </div>
 <div id="tabset-1-2">
-<p>Wrapper is simply, <code>apa()</code>. Last week mistake was trying to use the <code>t_apa()</code> function (which produces similar output, but perhaps not intended for rMarkdown/Quarto).</p>
-<p>Trying the <code>apa</code> t-test wrapper here: <em>t</em>(2798) = -7.13, <em>p</em> &lt; .001, <em>d</em> = -0.27</p>
-</div>
-<div id="tabset-1-3">
+<div class=".columns">
+<div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">library</span>(psych)</span>
+<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="2,13-14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">library</span>(psych)</span>
 <span id="cb1-2"><a href=""></a><span class="fu">library</span>(apa)</span>
 <span id="cb1-3"><a href=""></a><span class="fu">data</span>(bfi)</span>
 <span id="cb1-4"><a href=""></a></span>
-<span id="cb1-5"><a href=""></a>bfi<span class="sc">$</span>a<span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(bfi[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>], <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
-<span id="cb1-6"><a href=""></a>bfi<span class="sc">$</span>gender <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(<span class="fu">as.character</span>(bfi<span class="sc">$</span>gender))</span>
-<span id="cb1-7"><a href=""></a></span>
-<span id="cb1-8"><a href=""></a>analysis <span class="ot">&lt;-</span> <span class="fu">t.test</span>(a <span class="sc">~</span> gender, <span class="at">data =</span> bfi, <span class="at">var.equal=</span><span class="cn">TRUE</span>)</span>
+<span id="cb1-5"><a href=""></a>bfi<span class="sc">$</span>a<span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(bfi[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>], </span>
+<span id="cb1-6"><a href=""></a>                 <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
+<span id="cb1-7"><a href=""></a>bfi<span class="sc">$</span>gender <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(as.character</span>
+<span id="cb1-8"><a href=""></a>                        (bfi<span class="sc">$</span>gender))</span>
 <span id="cb1-9"><a href=""></a></span>
-<span id="cb1-10"><a href=""></a><span class="do">## Trying the `apa` t-test wrapper here: `r apa(analysis)` </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-10"><a href=""></a>analysis <span class="ot">&lt;-</span> <span class="fu">t.test</span>(a <span class="sc">~</span> gender, </span>
+<span id="cb1-11"><a href=""></a>          <span class="at">data =</span> bfi, <span class="at">var.equal=</span><span class="cn">TRUE</span>)</span>
+<span id="cb1-12"><a href=""></a></span>
+<span id="cb1-13"><a href=""></a><span class="do">## Trying the `apa` t-test wrapper </span></span>
+<span id="cb1-14"><a href=""></a><span class="do">## here: `r apa(analysis)` </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="column" style="width:5%;">
+
+</div>
+<div class="column smaller" style="width:40%;">
+<p>Wrapper is simply, <code>apa()</code>.</p>
+<p>Last week mistake was trying to use the <code>t_apa()</code> function (which produces similar output as <code>schoRsch</code>). <br> <br> <br></p>
+<div class="fragment">
+<p><span class="oldenglish">Trying the <code>apa</code> t-test wrapper here: <em>t</em>(2798) = -7.13, <em>p</em> &lt; .001, <em>d</em> = -0.27</span></p>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-3">
+<div class=".columns">
+<div class="column" style="width:60%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="2,13-14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="fu">library</span>(psych)</span>
+<span id="cb2-2"><a href=""></a><span class="fu">library</span>(apastats)</span>
+<span id="cb2-3"><a href=""></a><span class="fu">data</span>(bfi)</span>
+<span id="cb2-4"><a href=""></a></span>
+<span id="cb2-5"><a href=""></a>bfi<span class="sc">$</span>a<span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(bfi[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>], </span>
+<span id="cb2-6"><a href=""></a>                 <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
+<span id="cb2-7"><a href=""></a>bfi<span class="sc">$</span>gender <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(as.character</span>
+<span id="cb2-8"><a href=""></a>                        (bfi<span class="sc">$</span>gender))</span>
+<span id="cb2-9"><a href=""></a></span>
+<span id="cb2-10"><a href=""></a>analysis <span class="ot">&lt;-</span> <span class="fu">t.test</span>(a <span class="sc">~</span> gender, </span>
+<span id="cb2-11"><a href=""></a>          <span class="at">data =</span> bfi, <span class="at">var.equal=</span><span class="cn">TRUE</span>)</span>
+<span id="cb2-12"><a href=""></a></span>
+<span id="cb2-13"><a href=""></a><span class="do">## Trying the `apastats` t-test wrapper </span></span>
+<span id="cb2-14"><a href=""></a><span class="do">## here: `r describe.ttest(analysis)` </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="column" style="width:5%;">
+
+</div>
+<div class="column" style="width:30%;">
+<p><span class="oldenglish">Trying the <code>apastats</code> t-test wrapper here: <em>t</em>(2798.0) = -7.13, <em>p</em> &lt; .001</span></p>
+</div>
 </div>
 </div>
 <div id="tabset-1-4">
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="sourceCode cell-code" id="annotated-cell-2" data-code-line-numbers="10"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-2-1"><a href="#annotated-cell-2-1"></a><span class="do">## jtools</span></span>
-<span id="annotated-cell-2-2"><a href="#annotated-cell-2-2"></a><span class="do">## papaja</span></span>
-<span id="annotated-cell-2-3"><a href="#annotated-cell-2-3"></a><span class="do">## local template</span></span>
-<span id="annotated-cell-2-4"><a href="#annotated-cell-2-4"></a></span>
-<span id="annotated-cell-2-5"><a href="#annotated-cell-2-5"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="annotated-cell-2-6"><a href="#annotated-cell-2-6"></a></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="1">1</button><span id="annotated-cell-2-7" class="code-annotation-target"><a href="#annotated-cell-2-7"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(Sepal.Length,</span>
-<span id="annotated-cell-2-8"><a href="#annotated-cell-2-8"></a>      Sepal.Width)) <span class="sc">+</span></span>
-<span id="annotated-cell-2-9"><a href="#annotated-cell-2-9"></a>      <span class="fu">geom_jitter</span>() <span class="sc">+</span></span>
-<span id="annotated-cell-2-10"><a href="#annotated-cell-2-10"></a>      jtools<span class="sc">::</span><span class="fu">theme_apa</span>()</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column fragment">
-<div class="cell-annotation">
-<dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
-<dd>
-<span data-code-cell="annotated-cell-2" data-code-lines="7,8,9" data-code-annotation="1">nothing different here from standard <code>ggplot</code> scatterplot</span>
-</dd>
-</dl>
-</div>
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="5_10_24_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
-</figure>
+<div class=".columns">
+<div class="column" style="width:60%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="2,10,12,14-15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="fu">library</span>(psych)</span>
+<span id="cb3-2"><a href=""></a><span class="fu">library</span>(papaja)</span>
+<span id="cb3-3"><a href=""></a><span class="fu">data</span>(bfi)</span>
+<span id="cb3-4"><a href=""></a></span>
+<span id="cb3-5"><a href=""></a>bfi<span class="sc">$</span>a<span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(bfi[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>], </span>
+<span id="cb3-6"><a href=""></a>                 <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
+<span id="cb3-7"><a href=""></a>bfi<span class="sc">$</span>gender <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(as.character</span>
+<span id="cb3-8"><a href=""></a>                        (bfi<span class="sc">$</span>gender))</span>
+<span id="cb3-9"><a href=""></a></span>
+<span id="cb3-10"><a href=""></a>analysis <span class="ot">&lt;-</span> <span class="fu">aov</span>(a <span class="sc">~</span> gender, <span class="at">data =</span> bfi)</span>
+<span id="cb3-11"><a href=""></a></span>
+<span id="cb3-12"><a href=""></a>papastat <span class="ot">&lt;-</span> <span class="fu">apa_print</span>(analysis)</span>
+<span id="cb3-13"><a href=""></a></span>
+<span id="cb3-14"><a href=""></a><span class="do">## Trying one of the `papaja` ANOVA  </span></span>
+<span id="cb3-15"><a href=""></a><span class="do">## wrappers here: `r papastat$full_result` </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-</div>
-</div>
-</div>
-<div id="tabset-1-5">
+<div class="column" style="width:5%;">
 
 </div>
-<div id="tabset-1-6">
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="sourceCode cell-code" id="annotated-cell-3" data-code-line-numbers="10"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-3-1"><a href="#annotated-cell-3-1"></a><span class="do">## jtools</span></span>
-<span id="annotated-cell-3-2"><a href="#annotated-cell-3-2"></a><span class="do">## papaja</span></span>
-<span id="annotated-cell-3-3"><a href="#annotated-cell-3-3"></a><span class="do">## local template</span></span>
-<span id="annotated-cell-3-4"><a href="#annotated-cell-3-4"></a></span>
-<span id="annotated-cell-3-5"><a href="#annotated-cell-3-5"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="annotated-cell-3-6"><a href="#annotated-cell-3-6"></a></span>
-<span id="annotated-cell-3-7"><a href="#annotated-cell-3-7"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(Sepal.Length, </span>
-<span id="annotated-cell-3-8"><a href="#annotated-cell-3-8"></a>      Sepal.Width)) <span class="sc">+</span></span>
-<span id="annotated-cell-3-9"><a href="#annotated-cell-3-9"></a>      <span class="fu">geom_jitter</span>() <span class="sc">+</span> </span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="1">1</button><span id="annotated-cell-3-10" class="code-annotation-target"><a href="#annotated-cell-3-10"></a>      papaja<span class="sc">::</span><span class="fu">theme_apa</span>()</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column fragment">
-<div class="cell-annotation">
-<dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-3" data-target-annotation="1">1</dt>
-<dd>
-<span data-code-cell="annotated-cell-3" data-code-lines="10" data-code-annotation="1"><code>papaja</code> and <code>jtools</code> share the same function name, “theme_apa()”</span>
-</dd>
-</dl>
-</div>
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="5_10_24_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
-</figure>
-</div>
-</div>
+<div class="column" style="width:30%;">
+<p><span class="oldenglish">Trying one of the <code>papaja</code> ANOVA wrappers here: <span class="math inline">\(F(1, 2798) = 50.86\)</span>, <span class="math inline">\(\mathit{MSE} = 0.53\)</span>, <span class="math inline">\(p &lt; .001\)</span>, <span class="math inline">\(\hat{\eta}^2_G = .018\)</span></span></p>
 </div>
 </div>
 </div>
@@ -548,24 +553,21 @@ PSP Session #24…<br><span class="shiny">…one more time APA</span>
 <h1>Today:</h1>
 
 </section>
-<section id="apa-iii-data-reporting" class="slide level2">
-<h2>📜 APA III: data reporting ✍️</h2>
-<p><span class="kulas3">Inline text:</span></p>
+<section id="apa-iv-together-at-last" class="slide level2">
+<h2>APA IV: Together at last 🤵👰</h2>
+<p><span class="kulas3">Manuscript:</span></p>
 <ul>
-<li>Pull from object</li>
-<li>“Common” statistics<br>helpers:
+<li><code>papaja</code>
 <ul>
-<li><a href="https://github.com/dgromer/apa"><code>apa</code></a></li>
-<li><a href="https://www.tqmp.org/RegularArticles/vol12-2/p147/p147.pdf"><code>schoRsch</code></a></li>
-<li><a href="https://github.com/achetverikov/APAstats"><code>apastats</code></a></li>
-<li><a href="https://github.com/crsh/papaja"><code>papaja</code></a></li>
+<li>framework 🏗</li>
+<li>tables 🧮</li>
+<li>figures 📊</li>
+<li>in-line stats 🖥</li>
+<li>citations 🚔</li>
 </ul></li>
 </ul>
-<p><img data-src="https://www.pngall.com/wp-content/uploads/15/Bracket-PNG-Image-File.png" class="absolute" style="left: -15px; bottom: 155px; width: 35px; height: 120px; "></p>
 <aside class="notes">
-<p>apa/schoRsch: ANOVA, <span class="math inline">\(\chi^2\)</span>, correlation, t-test<br>
-apastats: + Bayesian, regression, descriptives<br>
-papaja: + MANOVA, mixed</p>
+<p>Other packages also support tables, figures, and in-line stats, but <code>papaja</code> also supports each of these and our suggestion is to rely on <code>papaja</code> until “you can’t” (e.g., inline reporting of rudimentary analysis summaries).</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -577,17 +579,18 @@ papaja: + MANOVA, mixed</p>
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
-<p><img data-src="https://slideplayer.com/slide/9481929/29/images/32/Sample+Result.jpg" class="absolute" style="top: 100px; right: -115px; width: 700px; height: 550px; "></p>
+<p><img data-src="https://i1.rgstatic.net/publication/313267124_100_Years_of_Applied_Psychology_Research_on_Individual_Careers_From_Career_Management_to_Retirement/links/5f538f33a6fdcc9879ce24e3/largepreview.png" class="absolute" style="top: 100px; right: 80px; width: 400px; height: 550px; "></p>
 </section>
-<section id="session-info-may-08-2024-rendering" class="slide level2">
-<h2><svg aria-hidden="true" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4287f5;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg> Session Info (May 08, 2024) Rendering:</h2>
+<section id="session-info-may-09-2024-rendering" class="slide level2">
+<h2><svg aria-hidden="true" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4287f5;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg> Session Info (May 09, 2024) Rendering:</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>R version 4.2.2 (2022-10-31 ucrt)
+<pre><code>R version 4.3.1 (2023-06-16 ucrt)
 Platform: x86_64-w64-mingw32/x64 (64-bit)
 Running under: Windows 10 x64 (build 19045)
 
 Matrix products: default
+
 
 locale:
 [1] LC_COLLATE=English_United States.utf8 
@@ -596,34 +599,36 @@ locale:
 [4] LC_NUMERIC=C                          
 [5] LC_TIME=English_United States.utf8    
 
+time zone: America/Chicago
+tzcode source: internal
+
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] ggplot2_3.5.1 apa_0.3.4     psych_2.4.1  
+[1] papaja_0.1.2     tinylabels_0.2.4 apastats_0.4     apa_0.3.4       
+[5] psych_2.3.9     
 
 loaded via a namespace (and not attached):
- [1] pkgload_1.3.2     jsonlite_1.8.8    datawizard_0.7.1  shiny_1.7.4      
- [5] assertthat_0.2.1  emo_0.0.0.9000    pander_0.6.5      yaml_2.3.8       
- [9] remotes_2.4.2     bayestestR_0.13.1 sessioninfo_1.2.2 pillar_1.9.0     
-[13] lattice_0.20-45   glue_1.6.2        jtools_2.2.2      digest_0.6.31    
-[17] promises_1.2.0.1  colorspace_2.1-0  htmltools_0.5.7   httpuv_1.6.9     
-[21] pkgconfig_2.0.3   devtools_2.4.5    purrr_1.0.1       xtable_1.8-4     
-[25] scales_1.3.0      fontawesome_0.5.2 processx_3.8.1    later_1.3.1      
-[29] tinylabels_0.2.3  timechange_0.3.0  tibble_3.2.1      generics_0.1.3   
-[33] farver_2.1.1      usethis_2.2.3     ellipsis_0.3.2    cachem_1.0.8     
-[37] withr_3.0.0       cli_3.6.0         mnormt_2.1.1      magrittr_2.0.3   
-[41] crayon_1.5.2      effectsize_0.8.3  mime_0.12         memoise_2.0.1    
-[45] evaluate_0.23     ps_1.7.5          papaja_0.1.2      fs_1.6.2         
-[49] fansi_1.0.6       nlme_3.1-160      pkgbuild_1.4.0    profvis_0.3.7    
-[53] MBESS_4.9.2       tools_4.2.2       prettyunits_1.2.0 lifecycle_1.0.4  
-[57] stringr_1.5.1     munsell_0.5.1     callr_3.7.3       compiler_4.2.2   
-[61] rlang_1.1.3       grid_4.2.2        parameters_0.20.3 rstudioapi_0.15.0
-[65] htmlwidgets_1.6.4 miniUI_0.1.1.1    labeling_0.4.3    rmarkdown_2.26   
-[69] gtable_0.3.5      curl_5.2.1        R6_2.5.1          lubridate_1.9.3  
-[73] knitr_1.45        dplyr_1.1.4       fastmap_1.1.1     utf8_1.2.4       
-[77] insight_0.19.1    stringi_1.7.12    parallel_4.2.2    Rcpp_1.0.10      
-[81] vctrs_0.6.5       tidyselect_1.2.1  xfun_0.42         urlchecker_1.0.1 </code></pre>
+ [1] gtable_0.3.4      xfun_0.40         ggplot2_3.4.3     htmlwidgets_1.6.2
+ [5] devtools_2.4.5    remotes_2.4.2.1   processx_3.8.2    lattice_0.21-8   
+ [9] callr_3.7.3       vctrs_0.6.3       tools_4.3.1       ps_1.7.5         
+[13] generics_0.1.3    curl_5.0.2        parallel_4.3.1    tibble_3.2.1     
+[17] fansi_1.0.4       pkgconfig_2.0.3   assertthat_0.2.1  lifecycle_1.0.4  
+[21] compiler_4.3.1    stringr_1.5.1     munsell_0.5.0     mnormt_2.1.1     
+[25] fontawesome_0.5.2 httpuv_1.6.11     htmltools_0.5.7   usethis_2.2.2    
+[29] MBESS_4.9.3       yaml_2.3.7        later_1.3.1       pillar_1.9.0     
+[33] crayon_1.5.2      urlchecker_1.0.1  ellipsis_0.3.2    cachem_1.0.8     
+[37] sessioninfo_1.2.2 nlme_3.1-162      mime_0.12         tidyselect_1.2.0 
+[41] digest_0.6.33     stringi_1.7.12    dplyr_1.1.3       purrr_1.0.2      
+[45] fastmap_1.1.1     grid_4.3.1        colorspace_2.1-0  cli_3.6.1        
+[49] magrittr_2.0.3    emo_0.0.0.9000    pkgbuild_1.4.2    utf8_1.2.3       
+[53] prettyunits_1.2.0 scales_1.2.1      promises_1.2.1    lubridate_1.9.2  
+[57] timechange_0.2.0  rmarkdown_2.25    memoise_2.0.1     shiny_1.7.5      
+[61] evaluate_0.23     knitr_1.45        miniUI_0.1.1.1    profvis_0.3.8    
+[65] rlang_1.1.1       Rcpp_1.0.11       xtable_1.8-4      glue_1.6.2       
+[69] pkgload_1.3.3     rstudioapi_0.15.0 jsonlite_1.8.8    R6_2.5.1         
+[73] fs_1.6.3         </code></pre>
 </div>
 </div>
 <div class="quarto-auto-generated-content">
@@ -844,42 +849,80 @@ loaded via a namespace (and not attached):
       });
     </script>
     
+
     <script>
+
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
       // slide changes (different for each slide format).
+
       (function () {
+
         // dispatch for htmlwidgets
+
         function fireSlideEnter() {
+
           const event = window.document.createEvent("Event");
+
           event.initEvent("slideenter", true, true);
+
           window.document.dispatchEvent(event);
+
         }
+
+    
 
         function fireSlideChanged(previousSlide, currentSlide) {
+
           fireSlideEnter();
 
+    
+
           // dispatch for shiny
+
           if (window.jQuery) {
+
             if (previousSlide) {
+
               window.jQuery(previousSlide).trigger("hidden");
+
             }
+
             if (currentSlide) {
+
               window.jQuery(currentSlide).trigger("shown");
+
             }
+
           }
+
         }
+
+    
 
         // hookup for slidy
+
         if (window.w3c_slidy) {
+
           window.w3c_slidy.add_observer(function (slide_num) {
+
             // slide_num starts at position 1
+
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
           });
+
         }
 
+    
+
       })();
+
     </script>
+
+    
 
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -957,6 +1000,24 @@ loaded via a namespace (and not attached):
         // clear code selection
         e.clearSelection();
       });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -993,7 +1054,11 @@ loaded via a namespace (and not attached):
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
           let selectedAnnoteEl;
