@@ -1,9 +1,9 @@
 ---
 title: "R for <br>Authoring!!" 
-author: "PSP Session #23...<br>[...you just messing<br>with me now APA?!?]{.shiny}"
+author: "PSP Session #24...<br>[...one more time APA]{.shiny}"
 title-slide-attributes: 
-  data-background-image: https://www.retroactivejealousycrusher.com/wp-content/uploads/2017/04/psicoterapias-2.jpg
-  data-background-opacity: ".5"
+  data-background-image: https://thumbs.dreamstime.com/b/psychologist-woman-tears-laughter-family-relationships-emotions-mental-problems-pop-art-retro-style-60241431.jpg
+  data-background-opacity: ".3"
 format:
   revealjs:
     code-overflow: wrap              ## instead of horizontal scroll
@@ -25,12 +25,11 @@ devtools::install_github("hadley/emo")
 
 ::: {layout="[80,20]"}
 ::: first-column
--   Recap session #22&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Recap session #23&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue(s):
-    - APA (aw c'mon now) `r emo::ji("pleading_face")`
-      + in-line statistics
-      + Pull it all together
-      + [yabut](https://wjschne.github.io/apaquarto/)
+    - APA again `r emo::ji("face_with_head_bandage")`
+      + Paper from scratch
+      + [Quarto extension](https://wjschne.github.io/apaquarto/)
 -   Shared problem-solving
 :::
 
@@ -38,36 +37,66 @@ devtools::install_github("hadley/emo")
 :::
 :::
 
-![](img/title22.JPG){.absolute top="170" right="-120" width="550" height="325"}
+![](img/title23.JPG){.absolute top="170" right="-120" width="550" height="325"}
 
-# Recap of Session #22: 
+# Recap of Session #23: 
 
-## APA [Tables](https://dstanley4.github.io/apaTables/articles/apaTables.html#correlation-table) & [Figures](https://search.r-project.org/CRAN/refmans/jtools/html/theme_apa.html) `r emo::ji("tiger")`
+## APA inline reporting
 
 ::: {.panel-tabset}
 
-## Tables
+## `schoRsch`
 
-```{r}
-#| echo: true
-#| eval: false                 ## decided to just clip snip (5/2)
-#| class-source: my_class1
-#| classes: my_class1
-## papaja 
-## apaTables
-## flextable
+::: {layout="[70,30]"}
+::: first-column
+Intended for ["cutting and pasting" into a processor](https://www.tqmp.org/RegularArticles/vol12-2/p147/p147.pdf) such as Word - not ideal for inline reporting for reproducible research. 
+:::
 
-data(iris)
-iris2 <- iris[c(1:6),]
+::: second
+Supports:
 
-papaja::apa_table(iris2,
-      caption="six flowers")
+   + t test
+   + ANOVA
+   + $\chi^2$
+   + correlation
+:::
+:::
+
+## `apa`
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+library(psych)
+library(apa)
+data(bfi)
+
+bfi$a<- rowMeans(bfi[1:5], na.rm=TRUE)
+bfi$gender <- as.factor(as.character(bfi$gender))
+
+analysis <- t.test(a ~ gender, data = bfi, var.equal=TRUE)
+
+## Trying the `apa` t-test wrapper here, `r apa(analysis)` 
 
 ```
 
-::: {.fragment}
-![](img/apatable.JPG){.absolute width="700" height="450" top="200" right="-150"}
-:::
+Wrapper is simply, `apa()`. Last week mistake was trying to use the `t_apa()` function (which produces similar output, but perhaps not intended for rMarkdown/Quarto).
+
+Trying the `apa` t-test wrapper here: `r apa(analysis)`
+
+## testing
+
+```{r, echo=TRUE, warning=FALSE, message=FALSE, R.options=list(width=10)}
+library(psych)
+library(apa)
+data(bfi)
+
+bfi$a<- rowMeans(bfi[1:5], na.rm=TRUE)
+bfi$gender <- as.factor(as.character(bfi$gender))
+
+analysis <- t.test(a ~ gender, data = bfi, var.equal=TRUE)
+
+## Trying the `apa` t-test wrapper here: `r apa(analysis)` 
+
+```
 
 ## `jtools` Figures
 
