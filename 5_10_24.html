@@ -512,7 +512,7 @@ PSP Session #24…<br><span class="shiny">…one more time APA</span>
 
 </div>
 <div class="column" style="width:30%;">
-<p><span class="oldenglish">Trying the <code>apastats</code> t-test wrapper here: <em>t</em>(2798.0) = -7.13, <em>p</em> &lt; .001</span></p>
+<p><span class="oldenglish smaller">Trying the <code>apastats</code> t-test wrapper here: <em>t</em>(2798.0) = -7.13, <em>p</em> &lt; .001</span></p>
 </div>
 </div>
 </div>
@@ -520,7 +520,7 @@ PSP Session #24…<br><span class="shiny">…one more time APA</span>
 <div class=".columns">
 <div class="column" style="width:60%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="2,10,12,14-15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="fu">library</span>(psych)</span>
+<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="2,13,15-16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="fu">library</span>(psych)</span>
 <span id="cb3-2"><a href=""></a><span class="fu">library</span>(papaja)</span>
 <span id="cb3-3"><a href=""></a><span class="fu">data</span>(bfi)</span>
 <span id="cb3-4"><a href=""></a></span>
@@ -529,19 +529,20 @@ PSP Session #24…<br><span class="shiny">…one more time APA</span>
 <span id="cb3-7"><a href=""></a>bfi<span class="sc">$</span>gender <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(as.character</span>
 <span id="cb3-8"><a href=""></a>                        (bfi<span class="sc">$</span>gender))</span>
 <span id="cb3-9"><a href=""></a></span>
-<span id="cb3-10"><a href=""></a>analysis <span class="ot">&lt;-</span> <span class="fu">aov</span>(a <span class="sc">~</span> gender, <span class="at">data =</span> bfi)</span>
-<span id="cb3-11"><a href=""></a></span>
-<span id="cb3-12"><a href=""></a>papastat <span class="ot">&lt;-</span> <span class="fu">apa_print</span>(analysis)</span>
-<span id="cb3-13"><a href=""></a></span>
-<span id="cb3-14"><a href=""></a><span class="do">## Trying one of the `papaja` ANOVA  </span></span>
-<span id="cb3-15"><a href=""></a><span class="do">## wrappers here: `r papastat$full_result` </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-10"><a href=""></a>analysis <span class="ot">&lt;-</span> <span class="fu">t.test</span>(a <span class="sc">~</span> gender, </span>
+<span id="cb3-11"><a href=""></a>          <span class="at">data =</span> bfi, <span class="at">var.equal=</span><span class="cn">TRUE</span>)</span>
+<span id="cb3-12"><a href=""></a></span>
+<span id="cb3-13"><a href=""></a>papastat <span class="ot">&lt;-</span> <span class="fu">apa_print</span>(analysis)</span>
+<span id="cb3-14"><a href=""></a></span>
+<span id="cb3-15"><a href=""></a><span class="do">## Trying the `papaja` t-test  </span></span>
+<span id="cb3-16"><a href=""></a><span class="do">## wrapper here: `r papastat$full_result` </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div class="column" style="width:5%;">
 
 </div>
 <div class="column" style="width:30%;">
-<p><span class="oldenglish">Trying one of the <code>papaja</code> ANOVA wrappers here: <span class="math inline">\(F(1, 2798) = 50.86\)</span>, <span class="math inline">\(\mathit{MSE} = 0.53\)</span>, <span class="math inline">\(p &lt; .001\)</span>, <span class="math inline">\(\hat{\eta}^2_G = .018\)</span></span></p>
+<p><span class="oldenglish smaller">Trying the <code>papaja</code> t-test wrapper here: <span class="math inline">\(\Delta M = -0.21\)</span>, 95% CI <span class="math inline">\([-0.27, -0.15]\)</span>, <span class="math inline">\(t(2798) = -7.13\)</span>, <span class="math inline">\(p &lt; .001\)</span></span></p>
 </div>
 </div>
 </div>

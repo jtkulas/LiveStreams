@@ -146,7 +146,7 @@ analysis <- t.test(a ~ gender,
 ::: {.column width="30%"}
 
 [Trying the `apastats` t-test wrapper here: `r describe.ttest(analysis)`
-]{.oldenglish}
+]{.oldenglish .smaller}
 
 :::
 :::
@@ -158,7 +158,7 @@ analysis <- t.test(a ~ gender,
 ::: {.column width="60%"}
 ```{r}
 #| echo: true
-#| code-line-numbers: "2,10,12,14-15"
+#| code-line-numbers: "2,13,15-16"
 
 library(psych)
 library(papaja)
@@ -169,12 +169,13 @@ bfi$a<- rowMeans(bfi[1:5],
 bfi$gender <- as.factor(as.character
                         (bfi$gender))
 
-analysis <- aov(a ~ gender, data = bfi)
+analysis <- t.test(a ~ gender, 
+          data = bfi, var.equal=TRUE)
 
 papastat <- apa_print(analysis)
 
-## Trying one of the `papaja` ANOVA  
-## wrappers here: `r papastat$full_result` 
+## Trying the `papaja` t-test  
+## wrapper here: `r papastat$full_result` 
 
 ```
 
@@ -185,7 +186,7 @@ papastat <- apa_print(analysis)
 
 ::: {.column width="30%"}
 
-[Trying one of the `papaja` ANOVA wrappers here: `r papastat$full_result`]{.oldenglish}
+[Trying the `papaja` t-test wrapper here: `r papastat$full_result`]{.oldenglish .smaller}
 
 :::
 
