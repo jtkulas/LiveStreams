@@ -1,0 +1,25 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{Neuroticism_files/figure-latex/neuroplot-1.pdf}
+\caption{\label{fig:neuroplot}scatter of Conscientiousness and Neuroticism}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{Neuroticism_files/figure-latex/funky-1.pdf}
+\caption{\label{fig:funky}Don't have a seizure}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{Neuroticism_files/figure-latex/queenbee-1.pdf}
+\caption{\label{fig:queenbee}Ian says this wins}
+\end{figure*}

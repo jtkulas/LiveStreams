@@ -17,12 +17,16 @@ author:
     role:
       - "Writing - Review & Editing"
       - "Supervision"
-
+  - name          : "Ian"
+    affiliation   : "3"
+    
 affiliation:
   - id            : "1"
     institution   : "Millie University"
   - id            : "2"
     institution   : "Krusty's Hamburger School"
+  - id            : "3"
+    institution   : "Smooth Hacker University"
 
 authornote: |
   Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
@@ -68,7 +72,7 @@ library("papaja")
 ```{r analysis-preferences}
 # Seed for random number generation
 set.seed(42)
-knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed, echo=FALSE, warning=FALSE, message=FALSE)
 ```
 
 # Introduction
@@ -87,7 +91,7 @@ We report how we determined our sample size, all data exclusions (if any), all m
 ## Data analysis
 We used `r cite_r("r-references.bib")` for all our analyses.
 
-```{r}
+```{r, warning=FALSE, echo=FALSE, message=FALSE}
 library(psych)
 library(lavaan)
 library(semPlot)
@@ -129,15 +133,81 @@ r <- corx::corx(bfi.recoded[,c(29:33)],
 
 papaja::apa_table(r$apa,
                   escape=FALSE,
-                  note="Neuroticism ROCKS!!!")
+                  note="Neuroticism ROCKS!!!",
+                  caption = "Bunch of correlations among personality traits")
 ```
 
 # Results
 
-The correlations are presented 
+```{r}
+multreg <- lm(n ~ a+o+c+e, bfi.recoded)
+
+reportreg <- apa_print(multreg)
+```
+
+The correlations are presented in Table \@ref(tab:corrmatrix). Regression with Neuroticism as a DV and the other four traits as predictors returned `r reportreg$statistic$modelfit`.
+
+```{r neuroplot, fig.cap="scatter of Conscientiousness and Neuroticism"}
+library(ggplot2)
+
+plot <- ggplot(bfi.recoded, aes(x=c, y=n, color=gender)) + geom_point() + geom_jitter() + papaja::theme_apa() + geom_smooth(method=lm, se=TRUE)
+  
+plot
+```
+
+You can see associations between C and N in Figure \@ref(fig:neuroplot)  
+
+```{r funky, fig.cap="Don't have a seizure"}
+#graph
+library(tidyverse)
+library(treemap)
+
+data_bfi<-bfi.recoded%>%select(A1:O5)%>%pivot_longer(cols=c(1:25), names_to="Factor")
+data_bfi$Dimension<-substr(data_bfi$Factor, 1, 1)
+
+treemap(data_bfi, index=c("Dimension","Factor"),     vSize="value", type="index",
+ 
+    fontsize.labels=c(15,12),                # size of labels. Give the size per level of aggregation: size for group, size for subgroup, sub-subgroups...
+    fontcolor.labels=c("white","orange"),    # Color of labels
+    fontface.labels=c(2,1),                  # Font of labels: 1,2,3,4 for normal, bold, italic, bold-italic...
+    bg.labels=c("transparent"),              # Background color of labels
+    align.labels=list(
+        c("center", "center"),
+        c("right", "bottom")
+        ),                                   # Where to place labels in the rectangle?
+    overlap.labels=0.5,                      # number between 0 and 1 that determines the tolerance of the overlap between labels. 0 means that labels of lower levels are not printed if higher level labels overlap, 1  means that labels are always printed. In-between values, for instance the default value .5, means that lower level labels are printed if other labels do not overlap with more than .5  times their area size.
+    inflate.labels=F,                        # If true, labels are bigger when rectangle is bigger.
+ 
+)
+
+```
+
+You can see dizzying colors in Figure \@ref(fig:funky)  
+
+```{r queenbee, fig.cap="Ian says this wins"}
+
+df <- as.data.frame(cbind(bfi.recoded[26:33]))
+df<-na.omit(df)
+df <- df[ -c(2,3) ]
+means<-aggregate(df,by=list(df$gender),mean)
+means<-aggregate(df,by=list(df$gender),mean)
+means <- means[ -c(2) ]
+
+library(reshape2)
+means.long<-melt(means,id.vars="Group.1")
+
+library(ggplot2)
+ggplot(means.long,aes(x=variable,y=value,fill=factor(Group.1)))+
+  geom_bar(stat="identity",position="dodge")+
+  scale_fill_discrete(name="Gender",
+                      breaks=c(1, 2),
+                      labels=c("Male", "Female"))+
+  xlab("BFI")+ylab("Average") + papaja::theme_apa()
+```
+
+A barplot is available in Figure \@ref(fig:queenbee)
 
 # Discussion
-
 
 \newpage
 

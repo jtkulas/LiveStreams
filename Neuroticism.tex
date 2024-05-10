@@ -177,14 +177,14 @@
 \urlstyle{same}
 \hypersetup{
   pdftitle={Neuroticism's association with other factors: The revenge},
-  pdfauthor={Diego1 \& Catrina1,2},
+  pdfauthor={Diego1, Catrina1,2, \& Ian3},
   pdflang={en-EN},
   pdfkeywords={keywords},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
 \title{Neuroticism's association with other factors: The revenge}
-\author{Diego\textsuperscript{1} \& Catrina\textsuperscript{1,2}}
+\author{Diego\textsuperscript{1}, Catrina\textsuperscript{1,2}, \& Ian\textsuperscript{3}}
 \date{}
 
 
@@ -202,7 +202,7 @@ Correspondence concerning this article should be addressed to Diego, Postal addr
 
 }
 
-\affiliation{\vspace{0.5cm}\textsuperscript{1} Millie University\\\textsuperscript{2} Krusty's Hamburger School}
+\affiliation{\vspace{0.5cm}\textsuperscript{1} Millie University\\\textsuperscript{2} Krusty's Hamburger School\\\textsuperscript{3} Smooth Hacker University}
 
 \abstract{%
 One or two sentences providing a \textbf{basic introduction} to the field, comprehensible to a scientist in any discipline.
@@ -243,24 +243,12 @@ We report how we determined our sample size, all data exclusions (if any), all m
 
 We used R (Version 4.2.2; R Core Team, 2022) and the R-packages \emph{papaja} (Version 0.1.2; Aust \& Barth, 2022), and \emph{tinylabels} (Version 0.2.3; Barth, 2022) for all our analyses.
 
-\begin{verbatim}
-## Warning: package 'psych' was built under R version 4.2.3
-\end{verbatim}
-
-\begin{verbatim}
-## Warning: package 'lavaan' was built under R version 4.2.3
-\end{verbatim}
-
-\begin{verbatim}
-## Warning: package 'dplyr' was built under R version 4.2.3
-\end{verbatim}
-
 \begin{table}[tbp]
 
 \begin{center}
 \begin{threeparttable}
 
-\caption{\label{tab:corrmatrix}}
+\caption{\label{tab:corrmatrix}Bunch of correlations among personality traits}
 
 \begin{tabular}{lllllll}
 \toprule
@@ -286,6 +274,32 @@ We used R (Version 4.2.2; R Core Team, 2022) and the R-packages \emph{papaja} (V
 
 \hypertarget{results}{%
 \section{Results}\label{results}}
+
+The correlations are presented in Table \ref{tab:corrmatrix}. Regression with Neuroticism as a DV and the other four traits as predictors returned \(F(4, 2431) = 59.63\), \(p < .001\).
+
+\begin{figure}
+\centering
+\includegraphics{Neuroticism_files/figure-latex/neuroplot-1.pdf}
+\caption{\label{fig:neuroplot}scatter of Conscientiousness and Neuroticism}
+\end{figure}
+
+You can see associations between C and N in Figure \ref{fig:neuroplot}
+
+\begin{figure}
+\centering
+\includegraphics{Neuroticism_files/figure-latex/funky-1.pdf}
+\caption{\label{fig:funky}Don't have a seizure}
+\end{figure}
+
+You can see dizzying colors in Figure \ref{fig:funky}
+
+\begin{figure}
+\centering
+\includegraphics{Neuroticism_files/figure-latex/queenbee-1.pdf}
+\caption{\label{fig:queenbee}Ian says this wins}
+\end{figure}
+
+A barplot is available in Figure \ref{fig:queenbee}
 
 \hypertarget{discussion}{%
 \section{Discussion}\label{discussion}}
