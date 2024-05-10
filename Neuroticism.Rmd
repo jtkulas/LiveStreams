@@ -1,0 +1,147 @@
+---
+title             : "Neuroticism's association with other factors: The revenge"
+shorttitle        : "Everyone's Neurotic"
+
+author: 
+  - name          : "Diego"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "Postal address"
+    email         : "my@email.com"
+    role: # Contributorship roles (e.g., CRediT, https://credit.niso.org/)
+      - "Conceptualization"
+      - "Writing - Original Draft Preparation"
+      - "Writing - Review & Editing"
+  - name          : "Catrina"
+    affiliation   : "1,2"
+    role:
+      - "Writing - Review & Editing"
+      - "Supervision"
+
+affiliation:
+  - id            : "1"
+    institution   : "Millie University"
+  - id            : "2"
+    institution   : "Krusty's Hamburger School"
+
+authornote: |
+  Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
+
+  Enter author note here.
+
+abstract: |
+  One or two sentences providing a **basic introduction** to the field,  comprehensible to a scientist in any discipline.
+  Two to three sentences of **more detailed background**, comprehensible  to scientists in related disciplines.
+  One sentence clearly stating the **general problem** being addressed by  this particular study.
+  One sentence summarizing the main result (with the words "**here we show**" or their equivalent).
+  Two or three sentences explaining what the **main result** reveals in direct comparison to what was thought to be the case previously, or how the  main result adds to previous knowledge.
+  One or two sentences to put the results into a more **general context**.
+  Two or three sentences to provide a **broader perspective**, readily comprehensible to a scientist in any discipline.
+  
+  <!-- https://tinyurl.com/ybremelq -->
+  
+keywords          : "keywords"
+wordcount         : "X"
+
+bibliography      : "r-references.bib"
+
+floatsintext      : no
+linenumbers       : yes
+draft             : no
+mask              : no
+
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+
+csl               : "apa (2).csl"
+documentclass     : "apa7"
+classoption       : "man"
+output            : papaja::apa6_pdf
+---
+
+```{r setup, include = FALSE}
+library("papaja")
+
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+
+# Introduction
+
+Neuroticism means you will die young and alone - ha ha ha [@widiger2017neuroticism]. Is Neuroticism negatively correlated with the other four Big Five personalty dimensions? THE WORLD WANTS TO KNOW!!!!
+
+# Methods
+We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
+
+## Participants
+
+## Material
+
+## Procedure
+
+## Data analysis
+We used `r cite_r("r-references.bib")` for all our analyses.
+
+```{r}
+library(psych)
+library(lavaan)
+library(semPlot)
+library(semTools)
+
+data(bfi)
+
+#Recode A1, C4, C5, E1, E2, O2, O5
+library(dplyr)
+bfi.recoded<- bfi %>% 
+  mutate_at(vars(c(1,9,10,11,12,22,25)), 
+            ~as.numeric(recode(.,
+                               "6"=1,
+                               "5"=2, 
+                               "4"=3,
+                               "3"=4,
+                               "2"=5,
+                               "1"=6))) 
+
+#Scale Scores
+bfi.recoded$a<- rowMeans(bfi.recoded[1:5])
+bfi.recoded$c<- rowMeans(bfi.recoded[6:10])
+bfi.recoded$e<- rowMeans(bfi.recoded[11:15])
+bfi.recoded$n<- rowMeans(bfi.recoded[16:20])
+bfi.recoded$o<- rowMeans(bfi.recoded[21:25])
+
+#reclassify gender
+bfi.recoded$gender<- as.factor(as.character(bfi.recoded$gender))
+
+```
+
+```{r corrmatrix, caption="Correlation Table", echo=FALSE}
+#cor(bfi.recoded[29:33], use="complete.obs")
+
+r <- corx::corx(bfi.recoded[,c(29:33)],
+                triangle = "lower",
+                stars = c(0.05, 0.01, 0.001),
+                describe = c(`$M$`=mean, `$SD$`=sd))
+
+papaja::apa_table(r$apa,
+                  escape=FALSE,
+                  note="Neuroticism ROCKS!!!")
+```
+
+# Results
+
+The correlations are presented 
+
+# Discussion
+
+
+\newpage
+
+# References
+
+::: {#refs custom-style="Bibliography"}
+:::

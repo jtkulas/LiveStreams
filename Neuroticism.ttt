@@ -1,0 +1,30 @@
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:corrmatrix}}
+
+\begin{tabular}{lllllll}
+\toprule
+ & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{3} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{$M$} & \multicolumn{1}{c}{$SD$}\\
+\midrule
+1. a & - &  &  &  & 4.64 & 0.90\\
+2. c & .26*** & - &  &  & 4.26 & 0.95\\
+3. e & .46*** & .26*** & - &  & 4.14 & 1.06\\
+4. n & -.19*** & -.24*** & -.23*** & - & 3.16 & 1.19\\
+5. o & .15*** & .20*** & .22*** & -.09*** & 4.59 & 0.81\\
+\bottomrule
+\addlinespace
+\end{tabular}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} Neuroticism ROCKS!!!}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}

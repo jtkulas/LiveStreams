@@ -170,7 +170,7 @@ bfi$gender <- as.factor(as.character
                         (bfi$gender))
 
 analysis <- t.test(a ~ gender, 
-          data = bfi, var.equal=TRUE)
+          data = bfi, var.equal=FALSE)
 
 papastat <- apa_print(analysis)
 
