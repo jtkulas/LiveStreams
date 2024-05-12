@@ -25,7 +25,7 @@ $presentation-title-slide-text-color: black;
 }
 
 .title {
-  color: 	white !important;
+  color: 	#ffdd4d !important;
     text-shadow: 
     3px 3px 3px black,
     -3px -3px 3px black !important;
@@ -33,7 +33,7 @@ $presentation-title-slide-text-color: black;
 
 .quarto-title-author-name {
   font-size: 65px;
-  color: 	white;
+  color: 	#ffdd4d;
   font-weight: bold;
   font-family: 'Dancing Script';
   text-shadow: 
@@ -104,11 +104,11 @@ $presentation-title-slide-text-color: black;
 
 .shiny {
   font-size: 80px;
-  color: #00c0a3;           /* #00c0a3 */
+  color: #FDFEFF;           /* #00c0a3 */
   font-family: 'Lobster Two';
   text-shadow: 
-    3px 3px 4px black,
-    -3px -3px 4px black !important;
+    2px 2px 3px #ffdd4d,
+    -2px -2px 3px #ffdd4d !important;
 }
 
 .smaller {

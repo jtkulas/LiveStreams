@@ -1,0 +1,150 @@
+---
+title: "R for <br>Authoring!!" 
+author: "PSP Session #25...<br>[...shiny reports]{.shiny}"
+title-slide-attributes: 
+  data-background-image: https://www.feit.com/cdn/shop/collections/Vintage__published__Farah_Prochaska__farahpro__instagram_carousel__3__high_res.jpg?v=1675268282
+#  data-background-opacity: ".3"
+format:
+  revealjs:
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [night, weekly.scss]
+    logo: "erg2.png"
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+engine: knitr                        ## not picking up inline codes
+---
+
+```{r, warning=FALSE, message=FALSE}
+devtools::install_github("hadley/emo")
+```
+
+## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue:
+    - Dashboard reports `r emo::ji("notebook_with_decorative_cover")`
+    - Shiny `r emo::ji("sparkles")`
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+:::
+
+![](img/title24.JPG){.absolute top="170" right="-120" width="550" height="325"}
+
+![](https://rstudio-data.com/wp-content/uploads/2023/05/Shiny-logo.png){.absolute bottom="-20" left="80" width="350" height="180"}
+
+# Recap of Session #24: 
+
+## APA manuscripts `r emo::ji("scroll")``r emo::ji("scroll")`
+
+::: {layout="[30,70]"}
+
+::: one
++ `papaja`
+    + framework `r emo::ji("building_construction")`
+    + tables `r emo::ji("abacus")`
+    + figures `r emo::ji("bar_chart")`
+    + in-line stats `r emo::ji("desktop_computer")`
+    + citations `r emo::ji("oncoming_police_car")`
+:::
+
+::: two
+
+::: {.panel-tabset}
+
+## `r emo::ji("building_construction")`
+
+```yaml
+---
+title             : "Neuroticism's association with 
+                      other factors: The revenge"
+shorttitle        : "Everyone's Neurotic"
+
+author: 
+  - name          : "Diego"
+    affiliation   : "1"
+    corresponding : yes    
+    address       : "Postal address"
+    email         : "my@email.com"
+    role: 
+      - "Conceptualization"
+      - "Writing - Original Draft Preparation"
+      - "Writing - Review & Editing"
+  - name          : "Catrina"
+    affiliation   : "1,2"
+    role:
+      - "Writing - Review & Editing"
+      - "Supervision"
+  - name          : "Ian"
+    affiliation   : "3"
+    
+affiliation:
+  - id            : "1"
+    institution   : "Millie University"
+  - id            : "2"
+    institution   : "Krusty's Hamburger School"
+  - id            : "3"
+    institution   : "Smooth Hacker University"
+
+authornote: |
+  Enter author note here.
+
+abstract: |
+  One or two sentences 
+  
+keywords          : "keywords"
+wordcount         : "X"
+
+bibliography      : "r-references.bib"
+
+floatsintext      : no
+linenumbers       : yes
+draft             : no
+mask              : no
+
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+
+csl               : "apa (2).csl"        #<1>
+documentclass     : "apa7"               #<2>
+classoption       : "man"
+output            : papaja::apa6_pdf
+---
+```
+1. Grab your desired citation style [from Zotero](https://www.zotero.org/styles)
+2. This field is necessary to render consistent with the most recent APA publication manual (don't worry about the output command on line #55)
+
+## `r emo::ji("abacus")`
+
+Hello
+
+## `r emo::ji("bar_chart")`
+
+## `r emo::ji("desktop_computer")`
+
+## `r emo::ji("oncoming_police_car")`
+
+:::
+
+:::
+:::
+
+# Today: 
+
+## Rendering from `Shiny` dashboards 
+
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
