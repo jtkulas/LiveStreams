@@ -1,0 +1,49 @@
+---
+title: "Untitled"
+format: dashboard
+server: shiny
+---
+
+## Shiny Documents
+
+This Quarto document is made interactive using Shiny. Interactive documents allow readers to modify parameters and see the results immediately. Learn more about Shiny interactive documents at <https://quarto.org/docs/interactive/shiny/>.
+
+## Inputs and Outputs
+
+![](https://th.bing.com/th/id/R.9dbdb528fef91228583c3485e39ec60e?rik=f6yhMH4k5Hq0AA&pid=ImgRaw&r=0)
+
+You can embed Shiny inputs and outputs in your document. Outputs are automatically updated whenever inputs change. This demonstrates how a standard R plot can be made interactive:
+
+```{r}
+sliderInput("bins", "Number of bins:", 
+            min = 1, max = 50, value = 30)
+
+downloadLink('downloadData', 'Download')
+
+plotOutput("distPlot")
+
+data <- as.data.frame(faithful[, 2])
+
+## https://stackoverflow.com/questions/74947736/how-to-download-quarto-pdf-reports-from-r-shiny-application
+```
+
+```{r}
+#| context: server
+
+output$distPlot <- renderPlot({
+   x <- faithful[, 2]  # Old Faithful Geyser data
+   bins <- seq(min(x), max(x), length.out = input$bins + 1)
+   hist(x, breaks = bins, col = 'darkgray', border = 'white',
+        xlab = 'Waiting time to next eruption (in mins)',
+        main = 'Histogram of waiting times')
+})
+
+output$downloadData <- downloadHandler(
+   filename = function() {
+     paste('data-', Sys.Date(), '.csv', sep='')
+   },
+   content = function(con) {
+     write.csv(data, con)
+   }
+ )
+```

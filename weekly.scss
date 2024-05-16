@@ -25,20 +25,20 @@ $presentation-title-slide-text-color: black;
 }
 
 .title {
-  color: 	#ffdd4d !important;
+  color: 	black !important;
     text-shadow: 
-    3px 3px 3px black,
-    -3px -3px 3px black !important;
+    3px 3px 3px white,
+    -3px -3px 3px white !important;
 }
 
 .quarto-title-author-name {
   font-size: 65px;
-  color: 	#ffdd4d;
+  color: 	black;
   font-weight: bold;
   font-family: 'Dancing Script';
   text-shadow: 
-    3px 3px 3px black,
-    -3px -3px 3px black
+    3px 3px 3px #8b008b,
+    -3px -3px 3px white
 }
 
 /*-- supposedly helps with content overflow --*/

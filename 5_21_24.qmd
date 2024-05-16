@@ -1,9 +1,10 @@
 ---
 title: "R for <br>Authoring!!" 
-author: "PSP Session #25...<br>[...shiny reports]{.shiny}"
+author: "PSP Session #26...<br>...more [shiny]{.shiny} buttons"
 title-slide-attributes: 
-  data-background-image: https://www.feit.com/cdn/shop/collections/Vintage__published__Farah_Prochaska__farahpro__instagram_carousel__3__high_res.jpg?v=1675268282
-#  data-background-opacity: ".3"
+  data-background-image: https://cdn3.vectorstock.com/i/1000x1000/46/72/glossy-buttons-set-vector-864672.jpg
+  #https://peoplepowerpress.org/cdn/shop/products/silver_buttonsforblog.jpg?v=1571438546
+#  data-background-opacity: ".5"
 format:
   revealjs:
     code-overflow: wrap              ## instead of horizontal scroll
@@ -22,14 +23,15 @@ bibliography: r-references.bib
 ---
 
 ```{r, warning=FALSE, message=FALSE}
-devtools::install_github("hadley/emo")
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
 ```
 
 ## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
 
 ::: {layout="[80,20]"}
 ::: first-column
--   Recap session #24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Recap session #25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue:
     - Dashboard reports `r emo::ji("notebook_with_decorative_cover")`
     - [Shiny](https://github.com/quarto-dev/quarto-cli/issues/999) `r emo::ji("sparkles")`
@@ -40,15 +42,13 @@ devtools::install_github("hadley/emo")
 :::
 :::
 
-![](img/title24.JPG){.absolute top="170" right="-120" width="550" height="325"}
+![](img/title25.JPG){.absolute top="170" right="-120" width="550" height="325"}
 
-::: {.fragment}
 ![](https://rstudio-data.com/wp-content/uploads/2023/05/Shiny-logo.png){.absolute bottom="-20" left="375" width="350" height="190"}
-:::
 
-# Recap of Session #24: 
+# Recap of Session #25: 
 
-## APA manuscripts `r emo::ji("scroll")``r emo::ji("scroll")`
+## [Shiny]{.shiny} dashboard downloads `r fa("download",fill="#0077b5")`
 
 ::: {.columns}
 

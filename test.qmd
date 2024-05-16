@@ -65,7 +65,7 @@ checkboxInput('jitter', 'Jitter')
 checkboxInput('smooth', 'Smooth')
 ```
 
-```{r}
+```{r, eval=TRUE}
 selectInput('x', 'X', names(dataset)) 
 selectInput('y', 'Y', names(dataset), names(dataset)[[2]])
 selectInput('color', 'Color', c('None', names(dataset)))
@@ -77,6 +77,13 @@ selectInput('facet_row', 'Facet Row',
 selectInput('facet_col', 'Facet Column',
   c(None='.', names(bfi[sapply(bfi, is.factor)])))
 ```
+
+```{r}
+
+downloadLink(outputId = "report", label = "Generate Report:", icon=shiny::icon("download"))
+
+```
+
 
 ## Plot
 
@@ -112,6 +119,9 @@ output$plot <- renderPlot({
   p
   
 })
+
+output$downFile <- downloadHandler(
+  filename = "Reprod_ex.html") 
 
 ```
 
