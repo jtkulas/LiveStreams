@@ -105,10 +105,19 @@ $presentation-title-slide-text-color: black;
 .shiny {
   font-size: 80px;
   color: #FDFEFF;           /* #00c0a3 */
-  font-family: 'Lobster Two';
+  font-family: 'Dancing Script';
   text-shadow: 
     2px 2px 3px #ffdd4d,
     -2px -2px 3px #ffdd4d !important;
+}
+
+.shiny2 {
+  font-size: 80px;
+  color: #FDFEFF;           /* #00c0a3 */
+  font-family: 'Dancing Script';
+  text-shadow: 
+    2px 2px 3px #8b008b,
+    -2px -2px 3px #8b008b !important;
 }
 
 .smaller {

@@ -1,6 +1,6 @@
 ---
 title: "R for <br>Authoring!!" 
-author: "PSP Session #26...<br>...more [shiny]{.shiny} buttons"
+author: "PSP Session #26...<br>...more [Shiny]{.shiny} buttons"
 title-slide-attributes: 
   data-background-image: https://cdn3.vectorstock.com/i/1000x1000/46/72/glossy-buttons-set-vector-864672.jpg
   #https://peoplepowerpress.org/cdn/shop/products/silver_buttonsforblog.jpg?v=1571438546
@@ -19,7 +19,7 @@ format:
       method: mathjax        ## LaTeX in code annotations
       url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
 engine: knitr                        ## not picking up inline codes
-bibliography: r-references.bib
+# bibliography: r-references.bib
 ---
 
 ```{r, warning=FALSE, message=FALSE}
@@ -208,28 +208,20 @@ A neat paper is @eysenck1983psychophysiology
 
 # Today: 
 
-## Reports from `Shiny` dashboards 
+## Reporting from [Shiny]{.shiny} 
 
-::: {.columns}
+:::: {.columns}
+::: {.column width="40%"}
++ [Excel reports](https://i1.wp.com/res.cloudinary.com/dxqnb8xjb/image/upload/v1563802321/app_dashboard_daapzg.png?w=584&ssl=1)
++ [Multiple output formats](https://stackoverflow.com/questions/47368360/make-a-download-button-in-shiny-app-that-saves-a-data-frame-in-an-excel-file-and)
 
-::: {.column width="20%"}
-+ Possible [Quarto issue](https://github.com/quarto-dev/quarto-cli/issues/999)
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-+ [Work- around?](https://fmmattioni.github.io/downloadthis/)
+![](https://i1.wp.com/res.cloudinary.com/dxqnb8xjb/image/upload/v1563802329/app_modal_hspqzn.png?w=584&ssl=1)
 :::
 
-::: {.column width="75%"}
-[![](https://epirhandbook.com/en/images/shiny/download_button_view.png)](https://epirhandbook.com/en/dashboards-with-shiny.html#adding-a-download-button)
+::: {.column width="60%"}
+![](https://i1.wp.com/res.cloudinary.com/dxqnb8xjb/image/upload/v1563802321/app_dashboard_daapzg.png?w=584&ssl=1){.absolute right="-400" height="600"}
 :::
-
-:::
-
-![](https://www.truelovescam.com/wp-content/uploads/2021/03/WOMAN_SHOCKED_COMIC_STYLE__.jpeg){.absolute bottom="175" left="-70"}
+::::
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 
