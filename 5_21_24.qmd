@@ -33,7 +33,7 @@ library(fontawesome)
 -   Recap session #25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue:
     - Dashboard reports `r emo::ji("notebook_with_decorative_cover")`
-    - Shiny `r emo::ji("sparkles")` downloads
+    - [Shiny]{.shiny}`r emo::ji("sparkles")` downloads
 -   Shared problem-solving
 :::
 
@@ -51,16 +51,65 @@ library(fontawesome)
 
 ::: {.columns}
 
-::: {.column width="30%"}
-+ [downloadthis](https://cran.r-project.org/web/packages/downloadthis/vignettes/downloadthis.html)
-
+::: {.column width="25%"}
+<br>
+Working with `Old Faithful` [Shiny]{.shiny} template:
 :::
 
-::: {.column width="70%"}
+::: {.column width="75%"}
 
-![](https://fmmattioni.github.io/downloadthis/logo.png)
+::: {.panel-tabset}
+
+## Inputs `r emo::ji("computer_mouse")`
+
+```{r, echo=TRUE, eval=FALSE}
+#| code-line-numbers: "4"
+
+sliderInput("bins", "Number of bins:", 
+            min = 1, max = 50, value = 30)
+
+downloadLink('downloadData', 'Download')           #<1>
+
+plotOutput("distPlot")
+
+## https://stackoverflow.com/questions/74947736/
+## how-to-download-quarto-pdf-reports-from-r-
+## shiny-application
+```
+1. `downloadLink` was appearing but `downloadButton` was *not* last week - ran out of time before could fully explore
+
+## Server `r emo::ji("mage")`
+
+```{r, echo=TRUE, eval=FALSE}
+#| code-line-numbers: "11-18"
+
+
+output$distPlot <- renderPlot({
+   x <- faithful[, 2]  # Old Faithful Geyser data
+   bins <- seq(min(x), max(x), 
+               length.out = input$bins + 1)
+   hist(x, breaks = bins, 
+        col = 'darkgray', border = 'white',
+        xlab = 'Waiting time to next eruption (in mins)',
+        main = 'Histogram of waiting times')
+})
+
+output$downloadData <- downloadHandler(                     #<1>
+   filename = function() {
+     paste('data-', Sys.Date(), '.csv', sep='')
+   },
+   content = function(con) {
+     write.csv(data, con)
+   }
+ )
+```
+1. Ran out of time last week, but `downloadHandler` seemed like a promising Plan A
+
 :::
 :::
+:::
+
+![](https://static.vecteezy.com/system/resources/thumbnails/014/391/900/small/right-arrow-curved-icon-isolated-on-transparent-background-free-png.png){.absolute bottom="50" left="30" height="120"}
 
 # Today: 
 
@@ -68,8 +117,8 @@ library(fontawesome)
 
 :::: {.columns}
 ::: {.column width="40%"}
-+ [Excel reports](https://i1.wp.com/res.cloudinary.com/dxqnb8xjb/image/upload/v1563802321/app_dashboard_daapzg.png?w=584&ssl=1)
 + [Multiple output formats](https://stackoverflow.com/questions/47368360/make-a-download-button-in-shiny-app-that-saves-a-data-frame-in-an-excel-file-and)
++ [downloadthis](https://cran.r-project.org/web/packages/downloadthis/vignettes/downloadthis.html)
 
 ![](https://i1.wp.com/res.cloudinary.com/dxqnb8xjb/image/upload/v1563802329/app_modal_hspqzn.png?w=584&ssl=1)
 :::
@@ -78,6 +127,8 @@ library(fontawesome)
 ![](https://i1.wp.com/res.cloudinary.com/dxqnb8xjb/image/upload/v1563802321/app_dashboard_daapzg.png?w=584&ssl=1){.absolute right="-400" height="600"}
 :::
 ::::
+
+![](https://fmmattioni.github.io/downloadthis/logo.png){.absolute bottom="0" height="300" left="320"}
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 
