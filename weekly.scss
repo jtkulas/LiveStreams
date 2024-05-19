@@ -14,7 +14,7 @@ $body-bg: #191919;
 $body-color: #fff;
 $link-color: #42affa;
 $code-color: hotpink;
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 $presentation-title-slide-text-color: black;
 
 /*-- scss:rules --*/
@@ -25,20 +25,20 @@ $presentation-title-slide-text-color: black;
 }
 
 .title {
-  color: 	black !important;
+  color: 	white !important;
     text-shadow: 
-    3px 3px 3px white,
-    -3px -3px 3px white !important;
+    5px 5px 5px black,
+    -5px -5px 5px black !important;
 }
 
 .quarto-title-author-name {
   font-size: 65px;
-  color: 	black;
+  color: 	white;
   font-weight: bold;
   font-family: 'Dancing Script';
   text-shadow: 
-    3px 3px 3px #8b008b,
-    -3px -3px 3px white
+    2px 2px 2px black,
+    -3px -3px 3px black
 }
 
 /*-- supposedly helps with content overflow --*/

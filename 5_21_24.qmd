@@ -2,8 +2,7 @@
 title: "R for <br>Authoring!!" 
 author: "PSP Session #26...<br>...more [Shiny]{.shiny} buttons"
 title-slide-attributes: 
-  data-background-image: https://cdn3.vectorstock.com/i/1000x1000/46/72/glossy-buttons-set-vector-864672.jpg
-  #https://peoplepowerpress.org/cdn/shop/products/silver_buttonsforblog.jpg?v=1571438546
+  data-background-image: https://www.artnews.com/wp-content/uploads/2020/08/AdobeStock_325659585.jpeg?w=1500
 #  data-background-opacity: ".5"
 format:
   revealjs:
@@ -34,7 +33,7 @@ library(fontawesome)
 -   Recap session #25&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue:
     - Dashboard reports `r emo::ji("notebook_with_decorative_cover")`
-    - [Shiny](https://github.com/quarto-dev/quarto-cli/issues/999) `r emo::ji("sparkles")`
+    - Shiny `r emo::ji("sparkles")` downloads
 -   Shared problem-solving
 :::
 
@@ -44,7 +43,7 @@ library(fontawesome)
 
 ![](img/title25.JPG){.absolute top="170" right="-120" width="550" height="325"}
 
-![](https://rstudio-data.com/wp-content/uploads/2023/05/Shiny-logo.png){.absolute bottom="-20" left="375" width="350" height="190"}
+![](https://rstudio-data.com/wp-content/uploads/2023/05/Shiny-logo.png){.absolute bottom="70" right="-90" width="350" height="190"}
 
 # Recap of Session #25: 
 
@@ -53,156 +52,13 @@ library(fontawesome)
 ::: {.columns}
 
 ::: {.column width="30%"}
-+ `papaja`
-    + framework `r emo::ji("building_construction")`
-    + tables `r emo::ji("abacus")`
-    + figures `r emo::ji("bar_chart")`
-    + in-line stats `r emo::ji("desktop_computer")`
-    + citations `r emo::ji("oncoming_police_car")`
++ [downloadthis](https://cran.r-project.org/web/packages/downloadthis/vignettes/downloadthis.html)
+
 :::
 
 ::: {.column width="70%"}
 
-::: {.panel-tabset}
-
-## `r emo::ji("building_construction")`
-
-```yaml
----
-title             : "Neuroticism's association with 
-                      other factors: The revenge"
-shorttitle        : "Everyone's Neurotic"
-
-author: 
-  - name          : "Diego"
-    affiliation   : "1"
-    corresponding : yes    
-    address       : "Postal address"
-    email         : "my@email.com"
-    role: 
-      - "Conceptualization"
-      - "Writing - Original Draft Preparation"
-      - "Writing - Review & Editing"
-  - name          : "Catrina"
-    affiliation   : "1,2"
-    role:
-      - "Writing - Review & Editing"
-      - "Supervision"
-  - name          : "Ian"
-    affiliation   : "3"
-    
-affiliation:
-  - id            : "1"
-    institution   : "Millie University"
-  - id            : "2"
-    institution   : "Krusty's Hamburger School"
-  - id            : "3"
-    institution   : "Smooth Hacker University"
-
-authornote: |
-  Enter author note here.
-
-abstract: |
-  One or two sentences 
-  
-keywords          : "keywords"
-wordcount         : "X"
-
-bibliography      : "r-references.bib"
-
-floatsintext      : no
-linenumbers       : yes
-draft             : no
-mask              : no
-
-figurelist        : no
-tablelist         : no
-footnotelist      : no
-
-csl               : "apa (2).csl"        #<1>
-documentclass     : "apa7"               #<2>
-classoption       : "man"
-output            : papaja::apa6_pdf
----
-```
-1. Grab your desired citation style [from Zotero](https://www.zotero.org/styles)
-2. This field is necessary to render consistent with the most recent APA publication manual (don't worry about the output command on line #55)
-
-## `r emo::ji("abacus")`
-
-```{r corrmatrix, caption="Correlation Table", echo=TRUE, eval=FALSE}
-#| code-line-numbers: "1,7"
-r <- corx::corx(bfi.recoded[,c(29:33)],            #<1>
-                triangle = "lower",
-                stars = c(0.05, 0.01, 0.001),
-                describe = c(`$M$`=mean, 
-                             `$SD$`=sd))
-
-papaja::apa_table(r$apa,
-                  escape=FALSE,                    
-                  note="Neuroticism ROCKS!!!",
-                  caption = "Bunch of correlations 
-                  among personality traits")       
-```
-1. Will produce `object$apa` matrix (line #7) that works well with APA tables
-
-## `r emo::ji("bar_chart")`
-
-```{r neuroplot, fig.cap="scatter of Conscientiousness and Neuroticism", echo=TRUE, eval=FALSE}
-#| code-line-numbers: "7"
-library(ggplot2)
-
-plot <- ggplot(bfi.recoded, 
-               aes(x=c, y=n, color=gender)) +
-                        geom_point() + 
-                        geom_jitter() + 
-                        papaja::theme_apa() + 
-                        geom_smooth(method=lm)
-  
-plot
-```
-
-## `r emo::ji("desktop_computer")`
-
-```{r}
-#| eval: true
-#| echo: true
-#| code-line-numbers: "5"
-data(iris)
-multreg <- lm(Sepal.Length ~ Petal.Width+
-                Petal.Length, iris)
-
-reportreg <- papaja::apa_print(multreg)       #<1>
-
-## The model fit was `r reportreg$estimate$modelfit`
-```
-1. `reportreg` list will have multiple options for you to pull into body of report
-
-The model fit was `r reportreg$estimate$modelfit`
-
-## `r emo::ji("oncoming_police_car")`
-
-```
-@incollection{eysenck1983psychophysiology,
-  title={Psychophysiology and personality: 
-              Extraversion, neuroticism 
-              and psychoticism},
-  author={Eysenck, Hans J},
-  booktitle={Individual differences and 
-              psychopathology},
-  pages={13--30},
-  year={1983},
-  publisher={Elsevier}
-}
-
-## A neat paper is @eysenck1983psychophysiology  #<1>
-```
-1. `@` precedes the citation tag located on line #1
-
-A neat paper is @eysenck1983psychophysiology
-
-:::
-
+![](https://fmmattioni.github.io/downloadthis/logo.png)
 :::
 :::
 
