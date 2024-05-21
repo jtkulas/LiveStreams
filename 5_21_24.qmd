@@ -113,7 +113,7 @@ output$downloadData <- downloadHandler(                     #<1>
 
 # Today: 
 
-## Reporting from [Shiny]{.shiny} 
+## Reporting from [Shiny]{.shiny}:
 
 :::: {.columns}
 ::: {.column width="40%"}
