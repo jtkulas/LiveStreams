@@ -60,12 +60,12 @@ Working with `Old Faithful` [Shiny]{.shiny} template:
 
 ::: {.panel-tabset}
 
-## Inputs `r emo::ji("computer_mouse")`
+## Inputs (kinda `ui`-ish) `r emo::ji("computer_mouse")`
 
 ```{r, echo=TRUE, eval=FALSE}
 #| code-line-numbers: "4"
 
-sliderInput("bins", "Number of bins:", 
+sliderInput("bins", "Number of bins:",           
             min = 1, max = 50, value = 30)
 
 downloadLink('downloadData', 'Download')           #<1>
@@ -77,6 +77,8 @@ plotOutput("distPlot")
 ## shiny-application
 ```
 1. `downloadLink` was appearing but `downloadButton` was *not* last week - ran out of time before could fully explore
+
+All elements within this chunk are executed when the document is rendered
 
 ## Server `r emo::ji("mage")`
 
