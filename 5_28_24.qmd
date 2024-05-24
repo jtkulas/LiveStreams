@@ -1,0 +1,140 @@
+---
+title: "R for <br>Authoring!!" 
+author: "PSP Session #27...<br>...[Shiny]{.shiny} on the download"
+title-slide-attributes: 
+  data-background-image: https://media.istockphoto.com/id/693210524/vector/pop-art-style-comics-panel-gossip-girl-whispering-secret-in-ear-word-of-mouth-vector.jpg?s=612x612&w=0&k=20&c=4YeSgU2oo9qW6tObPktTy_bW0L8RZKRw4X7B3YPi5pk=
+  data-background-opacity: ".4"
+format:
+  revealjs:
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [night, weekly.scss]
+    logo: "erg2.png"
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+# bibliography: r-references.bib
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #26&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue:
+    - Dashboard reports `r emo::ji("notebook_with_decorative_cover")`
+    - [Shiny]{.shiny}`r emo::ji("sparkles")` downloads
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+:::
+
+![](img/title26.JPG){.absolute top="170" right="-120" width="550" height="325"}
+
+# Recap of Session #26: 
+
+## [Shiny]{.shiny} dashboard downloads `r fa("download",fill="#0077b5")`
+
+::: {.columns}
+
+::: {.column width="25%"}
+<br>
+Working with `Old Faithful` [Shiny]{.shiny} template:
+:::
+
+::: {.column width="75%"}
+
+::: {.panel-tabset}
+
+## Inputs (kinda `ui`-ish) `r emo::ji("computer_mouse")`
+
+```{r, echo=TRUE, eval=FALSE}
+#| code-line-numbers: "4"
+
+sliderInput("bins", "Number of bins:",           
+            min = 1, max = 50, value = 30)
+
+downloadLink('downloadData', 'Download')           #<1>
+
+plotOutput("distPlot")
+
+## https://stackoverflow.com/questions/74947736/
+## how-to-download-quarto-pdf-reports-from-r-
+## shiny-application
+```
+1. `downloadLink` was appearing but `downloadButton` was *not* last week - ran out of time before could fully explore
+
+All elements within this chunk are executed when the document is rendered
+
+## Server `r emo::ji("mage")`
+
+```{r, echo=TRUE, eval=FALSE}
+#| code-line-numbers: "11-18"
+
+
+output$distPlot <- renderPlot({
+   x <- faithful[, 2]  # Old Faithful Geyser data
+   bins <- seq(min(x), max(x), 
+               length.out = input$bins + 1)
+   hist(x, breaks = bins, 
+        col = 'darkgray', border = 'white',
+        xlab = 'Waiting time to next eruption (in mins)',
+        main = 'Histogram of waiting times')
+})
+
+output$downloadData <- downloadHandler(                     #<1>
+   filename = function() {
+     paste('data-', Sys.Date(), '.csv', sep='')
+   },
+   content = function(con) {
+     write.csv(data, con)
+   }
+ )
+```
+1. Ran out of time last week, but `downloadHandler` seemed like a promising Plan A
+
+:::
+:::
+:::
+
+![](https://static.vecteezy.com/system/resources/thumbnails/014/391/900/small/right-arrow-curved-icon-isolated-on-transparent-background-free-png.png){.absolute bottom="50" left="30" height="120"}
+
+# Today: 
+
+## Moar reactive `r fa("download",fill="#0077b5")` from [Shiny]{.shiny}:
+
+:::: {.columns}
+::: {.column width="40%"}
++ Data `r fa("check",fill="#228B22")`
++ Figure `r fa("circle-xmark",fill="#D22B2B")`
++ Report
++ [downloadthis](https://cran.r-project.org/web/packages/downloadthis/vignettes/downloadthis.html)
+
+![](https://i1.wp.com/res.cloudinary.com/dxqnb8xjb/image/upload/v1563802329/app_modal_hspqzn.png?w=584&ssl=1)
+:::
+
+::: {.column width="60%"}
+![](https://i1.wp.com/res.cloudinary.com/dxqnb8xjb/image/upload/v1563802321/app_dashboard_daapzg.png?w=584&ssl=1){.absolute right="-400" height="600"}
+:::
+::::
+
+![](https://fmmattioni.github.io/downloadthis/logo.png){.absolute bottom="0" height="300" left="320"}
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
