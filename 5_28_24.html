@@ -10,7 +10,7 @@
 <link href="5_28_24_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.549">
 
-  <meta name="author" content="PSP Session #27… …Shiny on the download">
+  <meta name="author" content="PSP Session #27… …Shiny on the Down Low(d)">
   <title>R for  Authoring!!</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -396,14 +396,20 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-PSP Session #27…<br>…<span class="shiny">Shiny</span> on the download 
+PSP Session #27…<br><span class="shiny">…Shiny</span> on the Down Low(d) 
 </div>
 </div>
 </div>
 
 </section>
-<section id="problem-solving-panel-may-24-2024" class="slide level2">
-<h2>Problem-Solving Panel <br>(May 24, 2024)</h2>
+<section class="slide level2">
+
+<div class="cell">
+
+</div>
+</section>
+<section id="problem-solving-panel-may-27-2024" class="slide level2">
+<h2>Problem-Solving Panel <br>(May 27, 2024)</h2>
 <div class="quarto-layout-panel" data-layout="[80,20]">
 <div class="quarto-layout-row">
 <div class="first-column quarto-layout-cell" style="flex-basis: 80.0%;justify-content: flex-start;">
@@ -411,8 +417,10 @@ PSP Session #27…<br>…<span class="shiny">Shiny</span> on the download
 <li>Recap session #26&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↔︎️</li>
 <li>Focal issue:
 <ul>
-<li>Dashboard reports 📔</li>
-<li><span class="shiny">Shiny</span>✨ downloads</li>
+<li><span class="shiny">Shiny</span> downloads
+<ul>
+<li>Figures &amp; Graphs 📈</li>
+</ul></li>
 </ul></li>
 <li>Shared problem-solving</li>
 </ul>
@@ -429,98 +437,132 @@ PSP Session #27…<br>…<span class="shiny">Shiny</span> on the download
 <h1>Recap of Session #26:</h1>
 
 </section>
-<section id="shiny-dashboard-downloads" class="slide level2">
-<h2><span class="shiny">Shiny</span> dashboard downloads <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#0077b5;overflow:visible;position:relative;"><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg></h2>
-<div class="columns">
-<div class="column" style="width:25%;">
-<p><br> Working with <code>Old Faithful</code> <span class="shiny">Shiny</span> template:</p>
-</div><div class="column" style="width:75%;">
-<div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Inputs (kinda <code>ui</code>-ish) 🖱</a></li><li><a href="#tabset-1-2">Server 🧙</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1">
+<section id="data-from-shiny" class="slide level2">
+<h2>Data <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#0077b5;overflow:visible;position:relative;"><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg> from <span class="shiny">Shiny</span></h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="annotated-cell-1" data-code-line-numbers="4"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-1-1"><a href="#annotated-cell-1-1"></a><span class="fu">sliderInput</span>(<span class="st">"bins"</span>, <span class="st">"Number of bins:"</span>,           </span>
-<span id="annotated-cell-1-2"><a href="#annotated-cell-1-2"></a>            <span class="at">min =</span> <span class="dv">1</span>, <span class="at">max =</span> <span class="dv">50</span>, <span class="at">value =</span> <span class="dv">30</span>)</span>
+<div class="sourceCode cell-code" id="annotated-cell-1"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-1-1"><a href="#annotated-cell-1-1"></a><span class="fu">library</span>(shiny)</span>
+<span id="annotated-cell-1-2"><a href="#annotated-cell-1-2"></a><span class="fu">library</span>(DT)</span>
 <span id="annotated-cell-1-3"><a href="#annotated-cell-1-3"></a></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="1">1</button><span id="annotated-cell-1-4" class="code-annotation-target"><a href="#annotated-cell-1-4"></a><span class="fu">downloadLink</span>(<span class="st">'downloadData'</span>, <span class="st">'Download'</span>)</span>
-<span id="annotated-cell-1-5"><a href="#annotated-cell-1-5"></a></span>
-<span id="annotated-cell-1-6"><a href="#annotated-cell-1-6"></a><span class="fu">plotOutput</span>(<span class="st">"distPlot"</span>)</span>
-<span id="annotated-cell-1-7"><a href="#annotated-cell-1-7"></a></span>
-<span id="annotated-cell-1-8"><a href="#annotated-cell-1-8"></a><span class="do">## https://stackoverflow.com/questions/74947736/</span></span>
-<span id="annotated-cell-1-9"><a href="#annotated-cell-1-9"></a><span class="do">## how-to-download-quarto-pdf-reports-from-r-</span></span>
-<span id="annotated-cell-1-10"><a href="#annotated-cell-1-10"></a><span class="do">## shiny-application</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="annotated-cell-1-4"><a href="#annotated-cell-1-4"></a><span class="co"># Sample dataset</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="1">1</button><span id="annotated-cell-1-5" class="code-annotation-target"><a href="#annotated-cell-1-5"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="annotated-cell-1-6"><a href="#annotated-cell-1-6"></a>  <span class="at">ID =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,</span>
+<span id="annotated-cell-1-7"><a href="#annotated-cell-1-7"></a>  <span class="at">Name =</span> <span class="fu">c</span>(<span class="st">"John"</span>, <span class="st">"Paul"</span>, <span class="st">"George"</span>, <span class="st">"Ringo"</span>,</span>
+<span id="annotated-cell-1-8"><a href="#annotated-cell-1-8"></a>           <span class="st">"Mick"</span>, <span class="st">"Keith"</span>, <span class="st">"Charlie"</span>, <span class="st">"Ronnie"</span>, <span class="st">"Roger"</span>,</span>
+<span id="annotated-cell-1-9"><a href="#annotated-cell-1-9"></a>           <span class="st">"Pete"</span>),</span>
+<span id="annotated-cell-1-10"><a href="#annotated-cell-1-10"></a>  <span class="at">Age =</span> <span class="fu">c</span>(<span class="dv">40</span>, <span class="dv">42</span>, <span class="dv">38</span>, <span class="dv">41</span>, <span class="dv">43</span>, <span class="dv">45</span>, <span class="dv">39</span>, <span class="dv">40</span>, <span class="dv">44</span>, <span class="dv">42</span>)</span>
+<span id="annotated-cell-1-11"><a href="#annotated-cell-1-11"></a>)</span>
+<span id="annotated-cell-1-12"><a href="#annotated-cell-1-12"></a></span>
+<span id="annotated-cell-1-13"><a href="#annotated-cell-1-13"></a><span class="co"># Define UI</span></span>
+<span id="annotated-cell-1-14"><a href="#annotated-cell-1-14"></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(                                            </span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="2">2</button><span id="annotated-cell-1-15" class="code-annotation-target"><a href="#annotated-cell-1-15"></a>  <span class="fu">titlePanel</span>(<span class="st">"Download CSV Example"</span>),</span>
+<span id="annotated-cell-1-16"><a href="#annotated-cell-1-16"></a>  <span class="fu">fluidRow</span>(</span>
+<span id="annotated-cell-1-17"><a href="#annotated-cell-1-17"></a>    <span class="fu">sidebarPanel</span>(</span>
+<span id="annotated-cell-1-18"><a href="#annotated-cell-1-18"></a>      <span class="fu">sliderInput</span>(<span class="st">'ageRange'</span>, <span class="st">'Age Range'</span>, </span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="3">3</button><span id="annotated-cell-1-19" class="code-annotation-target"><a href="#annotated-cell-1-19"></a>                  <span class="at">min =</span> <span class="dv">30</span>,</span>
+<span id="annotated-cell-1-20"><a href="#annotated-cell-1-20"></a>                  <span class="at">max =</span> <span class="dv">45</span>,</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="4">4</button><span id="annotated-cell-1-21" class="code-annotation-target"><a href="#annotated-cell-1-21"></a>                  <span class="at">value =</span> <span class="fu">c</span>(<span class="dv">30</span>, <span class="dv">40</span>))</span>
+<span id="annotated-cell-1-22"><a href="#annotated-cell-1-22"></a>    ),</span>
+<span id="annotated-cell-1-23"><a href="#annotated-cell-1-23"></a>    <span class="fu">mainPanel</span>(</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="5">5</button><span id="annotated-cell-1-24" class="code-annotation-target"><a href="#annotated-cell-1-24"></a>      <span class="fu">DTOutput</span>(<span class="st">"table"</span>),</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="6">6</button><span id="annotated-cell-1-25" class="code-annotation-target"><a href="#annotated-cell-1-25"></a>      <span class="fu">downloadButton</span>(<span class="st">"downloadData"</span>, <span class="st">"Download CSV"</span>)</span>
+<span id="annotated-cell-1-26"><a href="#annotated-cell-1-26"></a>    )</span>
+<span id="annotated-cell-1-27"><a href="#annotated-cell-1-27"></a>  )</span>
+<span id="annotated-cell-1-28"><a href="#annotated-cell-1-28"></a>)</span>
+<span id="annotated-cell-1-29"><a href="#annotated-cell-1-29"></a></span>
+<span id="annotated-cell-1-30"><a href="#annotated-cell-1-30"></a><span class="co"># Define server logic</span></span>
+<span id="annotated-cell-1-31"><a href="#annotated-cell-1-31"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output) {</span>
+<span id="annotated-cell-1-32"><a href="#annotated-cell-1-32"></a>  <span class="co"># Reactive expression to filter data based on age range</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="7">7</button><span id="annotated-cell-1-33" class="code-annotation-target"><a href="#annotated-cell-1-33"></a>  filtered_data <span class="ot">&lt;-</span> <span class="fu">reactive</span>({</span>
+<span id="annotated-cell-1-34"><a href="#annotated-cell-1-34"></a>    data[data<span class="sc">$</span>Age <span class="sc">&gt;=</span> input<span class="sc">$</span>ageRange[<span class="dv">1</span>] <span class="sc">&amp;</span> data<span class="sc">$</span>Age <span class="sc">&lt;=</span> input<span class="sc">$</span>ageRange[<span class="dv">2</span>], ]</span>
+<span id="annotated-cell-1-35"><a href="#annotated-cell-1-35"></a>  })</span>
+<span id="annotated-cell-1-36"><a href="#annotated-cell-1-36"></a>  </span>
+<span id="annotated-cell-1-37"><a href="#annotated-cell-1-37"></a>  <span class="co"># Display the table</span></span>
+<span id="annotated-cell-1-38"><a href="#annotated-cell-1-38"></a>  output<span class="sc">$</span>table <span class="ot">&lt;-</span> <span class="fu">renderDT</span>({</span>
+<span id="annotated-cell-1-39"><a href="#annotated-cell-1-39"></a>    <span class="fu">filtered_data</span>()</span>
+<span id="annotated-cell-1-40"><a href="#annotated-cell-1-40"></a>  })</span>
+<span id="annotated-cell-1-41"><a href="#annotated-cell-1-41"></a>  </span>
+<span id="annotated-cell-1-42"><a href="#annotated-cell-1-42"></a>  <span class="co"># Download handler</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="8">8</button><span id="annotated-cell-1-43" class="code-annotation-target"><a href="#annotated-cell-1-43"></a>  output<span class="sc">$</span>downloadData <span class="ot">&lt;-</span> <span class="fu">downloadHandler</span>(</span>
+<span id="annotated-cell-1-44"><a href="#annotated-cell-1-44"></a>    <span class="at">filename =</span> <span class="cf">function</span>() {</span>
+<span id="annotated-cell-1-45"><a href="#annotated-cell-1-45"></a>      <span class="fu">paste</span>(<span class="st">"data-"</span>, <span class="fu">Sys.Date</span>(), <span class="st">".csv"</span>, <span class="at">sep =</span> <span class="st">""</span>)</span>
+<span id="annotated-cell-1-46"><a href="#annotated-cell-1-46"></a>    },</span>
+<span id="annotated-cell-1-47"><a href="#annotated-cell-1-47"></a>    <span class="at">content =</span> <span class="cf">function</span>(file) {</span>
+<span id="annotated-cell-1-48"><a href="#annotated-cell-1-48"></a>      <span class="fu">write.csv</span>(<span class="fu">filtered_data</span>(), file, <span class="at">row.names =</span> <span class="cn">FALSE</span>)  </span>
+<span id="annotated-cell-1-49"><a href="#annotated-cell-1-49"></a>    }</span>
+<span id="annotated-cell-1-50"><a href="#annotated-cell-1-50"></a>  )</span>
+<span id="annotated-cell-1-51"><a href="#annotated-cell-1-51"></a>}</span>
+<span id="annotated-cell-1-52"><a href="#annotated-cell-1-52"></a></span>
+<span id="annotated-cell-1-53"><a href="#annotated-cell-1-53"></a><span class="co"># Run the app</span></span>
+<span id="annotated-cell-1-54"><a href="#annotated-cell-1-54"></a><span class="fu">shinyApp</span>(<span class="at">ui =</span> ui, <span class="at">server =</span> server)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-1" data-code-lines="4" data-code-annotation="1"><code>downloadLink</code> was appearing but <code>downloadButton</code> was <em>not</em> last week - ran out of time before could fully explore</span>
+<span data-code-cell="annotated-cell-1" data-code-lines="5,6,7,8,9,10,11" data-code-annotation="1">Creating a small dataframe</span>
 </dd>
-</dl>
-</div>
-</div>
-<p>All elements within this chunk are executed when the document is rendered</p>
-</div>
-<div id="tabset-1-2">
-<div class="cell">
-<div class="sourceCode cell-code" id="annotated-cell-2" data-code-line-numbers="11-18"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-2-1"><a href="#annotated-cell-2-1"></a>output<span class="sc">$</span>distPlot <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
-<span id="annotated-cell-2-2"><a href="#annotated-cell-2-2"></a>   x <span class="ot">&lt;-</span> faithful[, <span class="dv">2</span>]  <span class="co"># Old Faithful Geyser data</span></span>
-<span id="annotated-cell-2-3"><a href="#annotated-cell-2-3"></a>   bins <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="fu">min</span>(x), <span class="fu">max</span>(x), </span>
-<span id="annotated-cell-2-4"><a href="#annotated-cell-2-4"></a>               <span class="at">length.out =</span> input<span class="sc">$</span>bins <span class="sc">+</span> <span class="dv">1</span>)</span>
-<span id="annotated-cell-2-5"><a href="#annotated-cell-2-5"></a>   <span class="fu">hist</span>(x, <span class="at">breaks =</span> bins, </span>
-<span id="annotated-cell-2-6"><a href="#annotated-cell-2-6"></a>        <span class="at">col =</span> <span class="st">'darkgray'</span>, <span class="at">border =</span> <span class="st">'white'</span>,</span>
-<span id="annotated-cell-2-7"><a href="#annotated-cell-2-7"></a>        <span class="at">xlab =</span> <span class="st">'Waiting time to next eruption (in mins)'</span>,</span>
-<span id="annotated-cell-2-8"><a href="#annotated-cell-2-8"></a>        <span class="at">main =</span> <span class="st">'Histogram of waiting times'</span>)</span>
-<span id="annotated-cell-2-9"><a href="#annotated-cell-2-9"></a>})</span>
-<span id="annotated-cell-2-10"><a href="#annotated-cell-2-10"></a></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="1">1</button><span id="annotated-cell-2-11" class="code-annotation-target"><a href="#annotated-cell-2-11"></a>output<span class="sc">$</span>downloadData <span class="ot">&lt;-</span> <span class="fu">downloadHandler</span>(</span>
-<span id="annotated-cell-2-12"><a href="#annotated-cell-2-12"></a>   <span class="at">filename =</span> <span class="cf">function</span>() {</span>
-<span id="annotated-cell-2-13"><a href="#annotated-cell-2-13"></a>     <span class="fu">paste</span>(<span class="st">'data-'</span>, <span class="fu">Sys.Date</span>(), <span class="st">'.csv'</span>, <span class="at">sep=</span><span class="st">''</span>)</span>
-<span id="annotated-cell-2-14"><a href="#annotated-cell-2-14"></a>   },</span>
-<span id="annotated-cell-2-15"><a href="#annotated-cell-2-15"></a>   <span class="at">content =</span> <span class="cf">function</span>(con) {</span>
-<span id="annotated-cell-2-16"><a href="#annotated-cell-2-16"></a>     <span class="fu">write.csv</span>(data, con)</span>
-<span id="annotated-cell-2-17"><a href="#annotated-cell-2-17"></a>   }</span>
-<span id="annotated-cell-2-18"><a href="#annotated-cell-2-18"></a> )</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-annotation">
-<dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-2" data-code-lines="11" data-code-annotation="1">Ran out of time last week, but <code>downloadHandler</code> seemed like a promising Plan A</span>
+<span data-code-cell="annotated-cell-1" data-code-lines="15" data-code-annotation="2">Title of app (see next slide)</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="19,20" data-code-annotation="3">Max and minimum scale input values</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="4">4</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="21" data-code-annotation="4">“Starting” points for slider scale</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="5">5</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="24" data-code-annotation="5">Table to be displayed (from DT package)</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="6">6</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="25" data-code-annotation="6">Download button with “Download CSV” label</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="7">7</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="33,34,35" data-code-annotation="7">Filter applied creating new data object, <code>filtered_data</code>. <code>$ageRange</code> is defined above in <code>ui</code> object.</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="8">8</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="43,50" data-code-annotation="8"><code>downloadHandler</code> in combination with <code>write.csv</code> most instructive here</span>
 </dd>
 </dl>
 </div>
 </div>
+
+</section><section id="data-from-shiny-output" class="slide level2 output-location-slide"><h2>Data <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#0077b5;overflow:visible;position:relative;"><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg> from <span class="shiny">Shiny</span></h2><div class="cell output-location-slide">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="5_28_24_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
+</figure>
 </div>
 </div>
-</div>
-</div>
-</div>
-<p><img data-src="https://static.vecteezy.com/system/resources/thumbnails/014/391/900/small/right-arrow-curved-icon-isolated-on-transparent-background-free-png.png" class="absolute" style="left: 30px; bottom: 50px; height: 120px; "></p>
-</section></section>
+</div></section></section>
 <section>
 <section id="today" class="title-slide slide level1 center">
 <h1>Today:</h1>
 
 </section>
-<section id="moar-reactive-from-shiny" class="slide level2">
-<h2>Moar reactive <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#0077b5;overflow:visible;position:relative;"><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg> from <span class="shiny">Shiny</span>:</h2>
+<section id="reactive-s-from-shiny" class="slide level2">
+<h2>Reactive <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#0077b5;overflow:visible;position:relative;"><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg>’s from <span class="shiny">Shiny</span>✨</h2>
 <div class="columns">
-<div class="column" style="width:40%;">
+<div class="column" style="width:25%;">
 <ul>
 <li>Data <svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#228B22;overflow:visible;position:relative;"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></li>
 <li>Figure <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#D22B2B;overflow:visible;position:relative;"><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"></path></svg></li>
-<li>Report</li>
-<li><a href="https://cran.r-project.org/web/packages/downloadthis/vignettes/downloadthis.html">downloadthis</a></li>
+<li>Report <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#D22B2B;overflow:visible;position:relative;"><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z"></path></svg> <br> <br></li>
+<li>Quarto 👀</li>
 </ul>
-<p><img data-src="https://i1.wp.com/res.cloudinary.com/dxqnb8xjb/image/upload/v1563802329/app_modal_hspqzn.png?w=584&amp;ssl=1"></p>
-</div><div class="column" style="width:60%;">
-<p><img data-src="https://i1.wp.com/res.cloudinary.com/dxqnb8xjb/image/upload/v1563802321/app_dashboard_daapzg.png?w=584&amp;ssl=1" class="absolute" style="right: -400px; height: 600px; "></p>
+</div><div class="column" style="width:75%;">
+<p><img data-src="https://tilburgsciencehub.com/topics/visualization/data-visualization/dashboarding/images/demo_app.png" class="absolute" style="height: 500px; "></p>
 </div>
 </div>
-<p><img data-src="https://fmmattioni.github.io/downloadthis/logo.png" class="absolute" style="left: 320px; bottom: 0px; height: 300px; "></p>
 </section>
-<section id="session-info-may-24-2024-rendering" class="slide level2">
-<h2><svg aria-hidden="true" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4287f5;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg> Session Info (May 24, 2024) Rendering:</h2>
+<section id="session-info-may-27-2024-rendering" class="slide level2">
+<h2><svg aria-hidden="true" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4287f5;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg> Session Info (May 27, 2024) Rendering:</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.2.2 (2022-10-31 ucrt)
@@ -540,16 +582,22 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] fontawesome_0.5.2
+[1] DT_0.27           shiny_1.7.4       fontawesome_0.5.2
 
 loaded via a namespace (and not attached):
- [1] lubridate_1.9.3   emo_0.0.0.9000    digest_0.6.31     crayon_1.5.2     
- [5] assertthat_0.2.1  lifecycle_1.0.4   jsonlite_1.8.8    magrittr_2.0.3   
- [9] evaluate_0.23     stringi_1.7.12    rlang_1.1.3       cli_3.6.0        
-[13] rstudioapi_0.15.0 vctrs_0.6.5       generics_0.1.3    rmarkdown_2.26   
-[17] tools_4.2.2       stringr_1.5.1     glue_1.6.2        purrr_1.0.1      
-[21] xfun_0.42         yaml_2.3.8        fastmap_1.1.1     compiler_4.2.2   
-[25] timechange_0.3.0  htmltools_0.5.7   knitr_1.45       </code></pre>
+ [1] Rcpp_1.0.10       jquerylib_0.1.4   compiler_4.2.2    bslib_0.6.1      
+ [5] later_1.3.1       tools_4.2.2       digest_0.6.31     memoise_2.0.1    
+ [9] lubridate_1.9.3   jsonlite_1.8.8    evaluate_0.23     lifecycle_1.0.4  
+[13] timechange_0.3.0  rlang_1.1.3       cli_3.6.0         rstudioapi_0.15.0
+[17] crosstalk_1.2.0   yaml_2.3.8        xfun_0.42         emo_0.0.0.9000   
+[21] fastmap_1.1.1     webshot2_0.1.1    stringr_1.5.1     knitr_1.45       
+[25] sass_0.4.9        generics_0.1.3    vctrs_0.6.5       htmlwidgets_1.6.4
+[29] webshot_0.5.5     websocket_1.4.1   chromote_0.2.0    glue_1.6.2       
+[33] R6_2.5.1          processx_3.8.1    rmarkdown_2.26    callr_3.7.3      
+[37] purrr_1.0.1       magrittr_2.0.3    ps_1.7.5          promises_1.2.0.1 
+[41] htmltools_0.5.7   ellipsis_0.3.2    assertthat_0.2.1  mime_0.12        
+[45] xtable_1.8-4      httpuv_1.6.9      stringi_1.7.12    cachem_1.0.8     
+[49] crayon_1.5.2     </code></pre>
 </div>
 </div>
 <div class="quarto-auto-generated-content">

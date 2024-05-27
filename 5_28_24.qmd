@@ -1,11 +1,12 @@
 ---
 title: "R for <br>Authoring!!" 
-author: "PSP Session #27...<br>...[Shiny]{.shiny} on the download"
+author: "PSP Session #27...<br>[...Shiny]{.shiny} on the Down Low(d)"
 title-slide-attributes: 
   data-background-image: https://media.istockphoto.com/id/693210524/vector/pop-art-style-comics-panel-gossip-girl-whispering-secret-in-ear-word-of-mouth-vector.jpg?s=612x612&w=0&k=20&c=4YeSgU2oo9qW6tObPktTy_bW0L8RZKRw4X7B3YPi5pk=
   data-background-opacity: ".4"
 format:
   revealjs:
+    output-location: slide           ## column-fragment
     code-overflow: wrap              ## instead of horizontal scroll
     theme: [night, weekly.scss]
     logo: "erg2.png"
@@ -32,8 +33,8 @@ library(fontawesome)
 ::: first-column
 -   Recap session #26&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue:
-    - Dashboard reports `r emo::ji("notebook_with_decorative_cover")`
-    - [Shiny]{.shiny}`r emo::ji("sparkles")` downloads
+    - [Shiny]{.shiny} downloads
+      - Figures & Graphs `r emo::ji("chart_increasing")`
 -   Shared problem-solving
 :::
 
@@ -45,92 +46,92 @@ library(fontawesome)
 
 # Recap of Session #26: 
 
-## [Shiny]{.shiny} dashboard downloads `r fa("download",fill="#0077b5")`
+## Data `r fa("download",fill="#0077b5")` from [Shiny]{.shiny} 
 
-::: {.columns}
+```{r, echo=TRUE}
+library(shiny)
+library(DT)
 
-::: {.column width="25%"}
-<br>
-Working with `Old Faithful` [Shiny]{.shiny} template:
-:::
+# Sample dataset
+data <- data.frame(                                         #<1>
+  ID = 1:10,                                                #<1>
+  Name = c("John", "Paul", "George", "Ringo",               #<1>
+           "Mick", "Keith", "Charlie", "Ronnie", "Roger",   #<1>
+           "Pete"),                                         #<1>
+  Age = c(40, 42, 38, 41, 43, 45, 39, 40, 44, 42)           #<1>
+)                                                           #<1>
 
-::: {.column width="75%"}
+# Define UI
+ui <- fluidPage(                                            
+  titlePanel("Download CSV Example"),                       #<2>
+  fluidRow(
+    sidebarPanel(
+      sliderInput('ageRange', 'Age Range', 
+                  min = 30,                                 #<3>
+                  max = 45,                                 #<3>
+                  value = c(30, 40))                        #<4>
+    ),
+    mainPanel(
+      DTOutput("table"),                                    #<5>
+      downloadButton("downloadData", "Download CSV")        #<6>
+    )
+  )
+)
 
-::: {.panel-tabset}
+# Define server logic
+server <- function(input, output) {
+  # Reactive expression to filter data based on age range
+  filtered_data <- reactive({                              #<7>
+    data[data$Age >= input$ageRange[1] & data$Age <= input$ageRange[2], ]                                       #<7>
+  })                                                       #<7>
+  
+  # Display the table
+  output$table <- renderDT({
+    filtered_data()
+  })
+  
+  # Download handler
+  output$downloadData <- downloadHandler(                  #<8>
+    filename = function() {
+      paste("data-", Sys.Date(), ".csv", sep = "")
+    },
+    content = function(file) {
+      write.csv(filtered_data(), file, row.names = FALSE)  
+    }
+  )                                                        #<8>
+}
 
-## Inputs (kinda `ui`-ish) `r emo::ji("computer_mouse")`
-
-```{r, echo=TRUE, eval=FALSE}
-#| code-line-numbers: "4"
-
-sliderInput("bins", "Number of bins:",           
-            min = 1, max = 50, value = 30)
-
-downloadLink('downloadData', 'Download')           #<1>
-
-plotOutput("distPlot")
-
-## https://stackoverflow.com/questions/74947736/
-## how-to-download-quarto-pdf-reports-from-r-
-## shiny-application
+# Run the app
+shinyApp(ui = ui, server = server)
 ```
-1. `downloadLink` was appearing but `downloadButton` was *not* last week - ran out of time before could fully explore
-
-All elements within this chunk are executed when the document is rendered
-
-## Server `r emo::ji("mage")`
-
-```{r, echo=TRUE, eval=FALSE}
-#| code-line-numbers: "11-18"
-
-
-output$distPlot <- renderPlot({
-   x <- faithful[, 2]  # Old Faithful Geyser data
-   bins <- seq(min(x), max(x), 
-               length.out = input$bins + 1)
-   hist(x, breaks = bins, 
-        col = 'darkgray', border = 'white',
-        xlab = 'Waiting time to next eruption (in mins)',
-        main = 'Histogram of waiting times')
-})
-
-output$downloadData <- downloadHandler(                     #<1>
-   filename = function() {
-     paste('data-', Sys.Date(), '.csv', sep='')
-   },
-   content = function(con) {
-     write.csv(data, con)
-   }
- )
-```
-1. Ran out of time last week, but `downloadHandler` seemed like a promising Plan A
-
-:::
-:::
-:::
-
-![](https://static.vecteezy.com/system/resources/thumbnails/014/391/900/small/right-arrow-curved-icon-isolated-on-transparent-background-free-png.png){.absolute bottom="50" left="30" height="120"}
+1. Creating a small dataframe
+2. Title of app (see next slide)
+3. Max and minimum scale input values
+4. "Starting" points for slider scale
+5. Table to be displayed (from DT package)
+6. Download button with "Download CSV" label
+7. Filter applied creating new data object, `filtered_data`. `$ageRange` is defined above in `ui` object.
+8. `downloadHandler` in combination with `write.csv` most instructive here
 
 # Today: 
 
-## Moar reactive `r fa("download",fill="#0077b5")` from [Shiny]{.shiny}:
+## Reactive `r fa("download",fill="#0077b5")`'s from [Shiny]{.shiny}`r emo::ji("sparkles")`
 
 :::: {.columns}
-::: {.column width="40%"}
+::: {.column width="25%"}
 + Data `r fa("check",fill="#228B22")`
 + Figure `r fa("circle-xmark",fill="#D22B2B")`
-+ Report
-+ [downloadthis](https://cran.r-project.org/web/packages/downloadthis/vignettes/downloadthis.html)
++ Report `r fa("circle-xmark",fill="#D22B2B")`
+<br>
+<br>
++ Quarto `r emo::ji("eyes")`
 
-![](https://i1.wp.com/res.cloudinary.com/dxqnb8xjb/image/upload/v1563802329/app_modal_hspqzn.png?w=584&ssl=1)
 :::
 
-::: {.column width="60%"}
-![](https://i1.wp.com/res.cloudinary.com/dxqnb8xjb/image/upload/v1563802321/app_dashboard_daapzg.png?w=584&ssl=1){.absolute right="-400" height="600"}
+::: {.column width="75%"}
+![](https://tilburgsciencehub.com/topics/visualization/data-visualization/dashboarding/images/demo_app.png){.absolute height="500"}
 :::
 ::::
-
-![](https://fmmattioni.github.io/downloadthis/logo.png){.absolute bottom="0" height="300" left="320"}
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 
