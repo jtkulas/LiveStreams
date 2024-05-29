@@ -1,5 +1,6 @@
 library(shiny)
 library(DT)
+library(ggplot2)
 
 # Sample dataset
 data <- data.frame(
@@ -16,7 +17,9 @@ ui <- fluidPage(
       sliderInput('ageRange', 'Age Range', 
                   min = 30, 
                   max = 45, 
-                  value = c(30, 40))
+                  value = c(30, 45)),
+      plotOutput("distPlot"),
+      downloadButton("downloadPlot", "Download Histogram")
     ),
     mainPanel(
       DTOutput("table"),
@@ -37,7 +40,7 @@ server <- function(input, output) {
     filtered_data()
   })
   
-  # Download handler
+  # Download handlers
   output$downloadData <- downloadHandler(
     filename = function() {
       paste("data-", Sys.Date(), ".csv", sep = "")
@@ -46,6 +49,28 @@ server <- function(input, output) {
       write.csv(filtered_data(), file, row.names = FALSE)
     }
   )
+
+## Copied from above (that works) - want to download image; 5/28/24
+  output$downloadPlot <- downloadHandler(          
+    filename = function() {
+      paste("data-", Sys.Date(), ".png", sep = "")
+    },
+    content = function(file) {
+      png(file)
+      print(ggplot(filtered_data(),aes(x=Age)) + geom_histogram()
+)
+      dev.off()
+    }
+  )
+  
+  output$distPlot <- renderPlot({
+    # generate bins based on input$bins from ui.R
+#    x    <- filtered_data$Age
+#    bins <- seq(min(x), max(x), length.out = input$bins + 1)
+    
+    # draw the histogram with the specified number of bins
+    ggplot(filtered_data(),aes(x=Age)) + geom_histogram()
+  })
 }
 
 # Run the app

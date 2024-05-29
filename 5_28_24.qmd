@@ -120,7 +120,7 @@ shinyApp(ui = ui, server = server)
 :::: {.columns}
 ::: {.column width="25%"}
 + Data `r fa("check",fill="#228B22")`
-+ Figure `r fa("circle-xmark",fill="#D22B2B")`
++ [Figure](https://mastering-shiny.org/action-transfer.html) `r fa("circle-xmark",fill="#D22B2B")`
 + Report `r fa("circle-xmark",fill="#D22B2B")`
 <br>
 <br>
