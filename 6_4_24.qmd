@@ -1,0 +1,172 @@
+---
+title: "R for <br>Authoring!!" 
+author: "PSP Session #28...<br>...reporting from [Shiny]{.shiny}"
+title-slide-attributes: 
+  data-background-image: https://lh5.googleusercontent.com/proxy/VSifJQILSN5_loRVIjMMcP7dEc8tgDrWOR5D1RJjJR0z_aKruSY29mui1vP4vB0YzcyJxCnJ9-xnKaHJYJla0iS9IHKRKB4
+  data-background-opacity: ".4"
+format:
+  revealjs:
+    output-location: slide           ## column-fragment
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [night, weekly.scss]
+    logo: "erg2.png"
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+# bibliography: r-references.bib
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #27&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue:
+    - [Shiny]{.shiny} downloads
+      - Data reports `r emo::ji("notebook_with_decorative_cover")`
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+:::
+
+![](img/title27.JPG){.absolute top="170" right="-120" width="550" height="325"}
+
+# Recap of Session #27: 
+
+## Figure `r fa("download",fill="#0077b5")`'s from [Shiny]{.shiny} 
+
+```{r}
+#| echo: true
+#| code-line-numbers: "3,22,23,56-67,75"
+
+library(shiny)
+library(DT)
+library(ggplot2)                                              #<1>
+
+# Sample dataset
+data <- data.frame(
+  ID = 1:10,
+  Name = c("John", "Paul", "George", "Ringo", "Mick", 
+           "Keith", "Charlie", "Ronnie", "Roger", "Pete"),
+  Age = c(40, 42, 38, 41, 43, 45, 39, 40, 44, 42)
+)
+
+# Define UI
+ui <- fluidPage(
+  titlePanel("Download CSV Example"),
+  fluidRow(
+    sidebarPanel(
+      sliderInput('ageRange', 'Age Range', 
+                  min = 30, 
+                  max = 45, 
+                  value = c(30, 45)),
+      plotOutput("distPlot"),                                   #<2>
+      downloadButton("downloadPlot", "Download Histogram")      #<2>
+    ),
+    mainPanel(
+      DTOutput("table"),
+      downloadButton("downloadData", "Download CSV")
+    )
+  )
+)
+
+# Define server logic
+server <- function(input, output) {
+  # Reactive expression to filter data based on age range
+  filtered_data <- reactive({
+    data[data$Age >= input$ageRange[1] & 
+           data$Age <= input$ageRange[2], ]
+  })
+  
+  # Display the table
+  output$table <- renderDT({
+    filtered_data()
+  })
+  
+  # Download handlers
+  output$downloadData <- downloadHandler(
+    filename = function() {
+      paste("data-", Sys.Date(), ".csv", sep = "")
+    },
+    content = function(file) {
+      write.csv(filtered_data(), file, row.names = FALSE)
+    }
+  )
+
+## Copied from above (that works) - want to download image; 5/28/24
+  output$downloadPlot <- downloadHandler(                       #<4>
+    filename = function() {
+      paste("data-", Sys.Date(), ".png", sep = "")
+    },
+    content = function(file) {
+      png(file)
+      print(ggplot(filtered_data(),aes(x=Age)) + 
+              geom_histogram()
+)
+      dev.off() 
+    }
+  )                                                            #<4>
+  
+  output$distPlot <- renderPlot({
+    # generate bins based on input$bins from ui.R
+#    x    <- filtered_data$Age
+#    bins <- seq(min(x), max(x), length.out = input$bins + 1)
+    
+    # draw the histogram with the specified number of bins
+    ggplot(filtered_data(),aes(x=Age)) + geom_histogram()          #<3>
+  })
+}
+
+# Run the app
+shinyApp(ui = ui, server = server)
+```
+1. Histogram rendered as a `ggplot` (see line 75)
+2. Placing in left-most "sidebar" underneath pre-existing slider
+3. Figure specification - scripted this first, then *repeated* on lines 62-63
+4. Copied from previous `downloadHandler`. `png()` -> `dev.off()` sandwich (lines 61-65) likely not most efficient way to specify
+
+# Today: 
+
+## Different [`r fa("download",fill="#0077b5")`'s](https://mastering-shiny.org/action-transfer.html) from [Shiny]{.shiny}`r emo::ji("sparkles")`
+
+:::: {.columns}
+::: {.column width="35%"}
++ Data `r fa("check",fill="#228B22")`
++ Figure `r fa("check",fill="#228B22")`
++ Report `r fa("circle-xmark",fill="#D22B2B")`
+<br>
+<br>
++ Quarto `r emo::ji("eyes")`
+
+::: {.callout-tip}
+## General structure 
+
+[Nice tutorial](https://tilburgsciencehub.com/topics/visualization/data-visualization/dashboarding/shiny-apps/) on scripting [Shiny]{.shiny2} apps
+:::
+
+:::
+
+::: {.column width="65%"}
+![](https://tilburgsciencehub.com/topics/visualization/data-visualization/dashboarding/images/demo_app.png){.absolute height="500"}
+:::
+::::
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
