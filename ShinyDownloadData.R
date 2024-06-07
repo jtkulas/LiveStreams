@@ -23,8 +23,9 @@ ui <- fluidPage(
     ),
     mainPanel(
       DTOutput("table"),
-      downloadButton("downloadData", "Download CSV")
-    )
+      downloadButton("downloadData", "Download CSV"),
+      downloadButton("downloadReport", "Download Report")
+      )
   )
 )
 
@@ -60,6 +61,15 @@ server <- function(input, output) {
       print(ggplot(filtered_data(),aes(x=Age)) + geom_histogram()
 )
       dev.off()
+    }
+  )
+  
+  output$downloadReport <- downloadHandler(
+    filename = function() {
+      paste("data-", Sys.Date(), ".pdf", sep = "")
+    },
+    content = function(file) {
+      render("child_script.Rmd", output_format="pdf_document")
     }
   )
   

@@ -6,13 +6,7 @@ output: pdf_document
 ---
 
 ```{r}
-
 df<- filtered_data
-
-
-
-
-
 
 ```
 
