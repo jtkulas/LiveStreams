@@ -149,7 +149,7 @@ shinyApp(ui = ui, server = server)
 ## Different [`r fa("download",fill="#0077b5")`'s](https://mastering-shiny.org/action-transfer.html) from [Shiny]{.shiny}`r emo::ji("sparkles")`
 
 :::: {.columns}
-::: {.column width="40%"}
+::: {.column width="30%"}
 + Data `r fa("check",fill="#228B22")`
 + Figure `r fa("check",fill="#228B22")`
 + Report `r fa("circle-xmark",fill="#D22B2B")`
@@ -166,8 +166,8 @@ shinyApp(ui = ui, server = server)
 :::
 
 ::: {.column width="60%"}
-![](https://www.stonybrook.edu/commcms/irpe/about/_data_governance_archive/_files/ReportStandardExample.jpg){.absolute height="500" right="-150"}
-![](https://cdn-icons-png.flaticon.com/512/4573/4573148.png){.absolute height="150" top="50" right="-75"}
+![](https://cdnwebsite.databox.com/wp-content/uploads/2023/11/30094738/HS-for-CS-1000x554.png){.absolute height="500" right="-200"}
+
 :::
 ::::
 
