@@ -3,6 +3,9 @@ title: "Child script"
 author: "Diego Figueiras"
 date: "2024-06-04"
 output: pdf_document
+params: 
+  text: 'NULL'
+  outp: 'NULL'
 ---
 
 ```{r}

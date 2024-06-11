@@ -32,7 +32,8 @@ library(fontawesome)
 ::: {layout="[80,20]"}
 ::: first-column
 -   Recap session #28&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
--   Focal issue:
+-   Focal issues:
+    - Job talk presentations`r emo::ji("studio_microphone")` 
     - [Shiny]{.shiny}`r emo::ji("sparkles")` downloads
       - Data reports `r emo::ji("clipboard")`
 -   Shared problem-solving
@@ -152,7 +153,7 @@ shinyApp(ui = ui, server = server)
 ::: {.column width="30%"}
 + Data `r fa("check",fill="#228B22")`
 + Figure `r fa("check",fill="#228B22")`
-+ Report `r fa("circle-xmark",fill="#D22B2B")`
++ [Report](https://stackoverflow.com/questions/65786335/how-can-you-make-customized-downloadable-reports-in-r-shiny) `r fa("circle-xmark",fill="#D22B2B")`
 <br>
 <br>
 + Quarto `r emo::ji("eyes")`
@@ -170,6 +171,23 @@ shinyApp(ui = ui, server = server)
 
 :::
 ::::
+
+## `r emo::ji("speaking_head")` Job talk [presentations](https://quarto.org/docs/presentations/) `r emo::ji("studio_microphone")`
+
+:::: {.columns}
+::: {.column width="30%"}
+<br>
+
++ [Quarto](https://quarto.org/docs/presentations/revealjs/presenting.html) `r emo::ji("writing_hand")`
++ Hosting `r emo::ji("house_with_garden")`
++ Hyperlinks `r emo::ji("globe_with_meridians")`
+:::
+
+::: {.column width="70%"}
+
+[![](https://static1.squarespace.com/static/555fc0a0e4b0c18afa3bbf8d/5564f3fae4b095c0ebcf9b25/61b92b87e498486daef126d0/1639526020423/seminar-photo.jpg?format=1500w)](https://apreshill.github.io/ohsu-biodatavis/slides.html#1)
+:::
+:::
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 
