@@ -175,7 +175,7 @@ shinyApp(ui = ui, server = server)
 ## `r emo::ji("speaking_head")` Job talk [presentations](https://quarto.org/docs/presentations/) `r emo::ji("studio_microphone")`
 
 :::: {.columns}
-::: {.column width="30%"}
+::: {.column width="40%"}
 <br>
 
 + [Quarto](https://quarto.org/docs/presentations/revealjs/presenting.html) `r emo::ji("writing_hand")`
@@ -183,9 +183,9 @@ shinyApp(ui = ui, server = server)
 + Hyperlinks `r emo::ji("globe_with_meridians")`
 :::
 
-::: {.column width="70%"}
+::: {.column width="60%"}
 
-[![](https://static1.squarespace.com/static/555fc0a0e4b0c18afa3bbf8d/5564f3fae4b095c0ebcf9b25/61b92b87e498486daef126d0/1639526020423/seminar-photo.jpg?format=1500w)](https://apreshill.github.io/ohsu-biodatavis/slides.html#1)
+[![](https://i.pinimg.com/736x/2c/9b/b4/2c9bb491276120cf60169f4cc1210835.jpg)](https://apreshill.github.io/ohsu-biodatavis/slides.html#1)
 :::
 :::
 
@@ -195,3 +195,6 @@ shinyApp(ui = ui, server = server)
 sessionInfo()
 ```
 
+## Diego
+
+[![](https://wallpapers.com/images/featured-full/goofy-pictures-pjo2kh4ski3sq65a.jpg)](https://www.montclair.edu/information-technology/)
