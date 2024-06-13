@@ -32,7 +32,7 @@ library(fontawesome)
 ::: {layout="[80,20]"}
 ::: first-column
 -   Recap session #29&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
--   Focal issues:
+-   Focal issue:
     - [Shiny]{.shiny}`r emo::ji("sparkles")` downloads
       - Data reports `r emo::ji("clipboard")`
 -   Shared problem-solving
