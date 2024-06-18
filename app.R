@@ -1,6 +1,26 @@
 library(shiny)
 library(rmarkdown)
+library(ggplot2)
+
+# Sample dataset
+data <- data.frame(
+  ID = 1:10,
+  Name = c("John", "Paul", "George", "Ringo", "Mick", "Keith", "Charlie", "Ronnie", "Roger", "Pete"),
+  Age = c(40, 42, 38, 41, 43, 45, 39, 40, 44, 42)
+)
+
 server <- function(input, output) {
+  filtered_data <- reactive({
+    data[data$Age >= input$ageRange[1] & data$Age <= input$ageRange[2], ]
+  })
+  output$distPlot <- renderPlot({
+    # generate bins based on input$bins from ui.R
+    #    x    <- filtered_data$Age
+    #    bins <- seq(min(x), max(x), length.out = input$bins + 1)
+    
+    # draw the histogram with the specified number of bins
+    ggplot(filtered_data(),aes(x=Age)) + geom_histogram()
+  })
   output$downloadReport <- downloadHandler(
     filename = function() {
       paste('my-report', sep = '.', switch(
@@ -17,7 +37,7 @@ server <- function(input, output) {
       file.copy(src, 'test2.Rmd', overwrite = TRUE)
       
       out <- rmarkdown::render('test2.Rmd',
-                               params = list(text = input$text,outp=input$Try),
+                               params = list(text = input$text,outp=input$Try,graph=input$ageRange),
                                switch(input$format,
                                       PDF = pdf_document(), 
                                       HTML = html_document(), 
@@ -32,7 +52,12 @@ ui <- fluidPage(
   tags$textarea(id="text", rows=20, cols=155, 
                 placeholder="Some placeholder text"),
   
-  flowLayout(radioButtons('format', 'Document format', c('HTML', 'Word','PDF'),
+  flowLayout(sliderInput('ageRange', 'Age Range', 
+                               min = 30, 
+                               max = 45, 
+                               value = c(30, 45)),
+                   plotOutput("distPlot"),
+                   radioButtons('format', 'Document format', c('HTML', 'Word','PDF'),
                           inline = FALSE),
              checkboxGroupInput("Try","Let's hope this works",choiceNames = list("include hi","include hey","include hello","include how are you"),choiceValues = list("HI","HEY","HELLO","HOW ARE YOU")),
              downloadButton('downloadReport'))

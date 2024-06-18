@@ -4,9 +4,21 @@ output: html_document
 params:
   text: 'NULL'
   outp: 'NULL'
+  graph: 'NULL'
 ---
 
 # Some title
 
 `r params[["text"]]`
 `r params[["outp"]]`
+
+`r params[["graph"]]`
+
+```{r}
+library(ggplot2)
+ggplot(filtered_data(),aes(x=Age)) + geom_histogram()
+```
+
+
+
+
