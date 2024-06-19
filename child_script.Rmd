@@ -1,16 +1,24 @@
 ---
-title: "Child script"
-author: "Diego Figueiras"
-date: "2024-06-04"
-output: pdf_document
-params: 
+title: "Testing with Diego"
+output: html_document
+params:
   text: 'NULL'
   outp: 'NULL'
+  age: 'NULL'
 ---
 
-```{r}
-df<- filtered_data
+# Fiddling around
+
+`r params[["text"]]`
+`r params[["outp"]]`
+
+the selected age range is `r params[["age"]]`
+
+```{r, warning=FALSE, echo=FALSE, message=FALSE}
+library(ggplot2)
+
+ggplot(filtered_data(),aes(x=Age)) + geom_histogram()
 
 ```
 
-The number of rockers is `r nrow(df)`
+the picture above is reflecting ages from `r nrow(filtered_data())` British rockers.

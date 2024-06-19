@@ -1,0 +1,149 @@
+---
+title: "R for <br>Authoring!!" 
+author: "PSP Session #31...<br>...return of the APA"
+title-slide-attributes: 
+  data-background-image: https://kidsthinkwide.com/wp-content/uploads/2023/05/0139-1024x574.png #https://img.freepik.com/premium-photo/anthropomorphic-gorilla-reading-book-library_593195-5935.jpg
+  data-background-opacity: ".4"
+format:
+  revealjs:
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [night, weekly.scss]
+    logo: "erg2.png"
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+# bibliography: r-references.bib
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue:
+    - [Shiny]{.shiny}`r emo::ji("sparkles")` downloads
+      - Data reports `r emo::ji("clipboard")`
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+:::
+
+![](img/title30.JPG){.absolute top="170" right="-120" width="550" height="325"}
+
+# Recap of Session #30: 
+
+## `r emo::ji("speaking_head")` Job talk [presentations](https://quarto.org/docs/presentations/revealjs/presenting.html) `r emo::ji("studio_microphone")` 
+
+::: {.panel-tabset}
+
+## Quarto `r emo::ji("writing_hand")`
+
+:::: {.columns}
+::: {.column width="30%"}
+
++ [`r fontawesome::fa("html5", fill="#FF5733")`](https://quarto.org/docs/presentations/revealjs/) `revealjs` 
++ [`r fontawesome::fa("windows", fill="#4287f5")`](https://quarto.org/docs/presentations/powerpoint.html) `pptx`
++ [`r fontawesome::fa("file-pdf", fill="#C70039")`](https://quarto.org/docs/presentations/beamer.html) `beamer` 
+
+:::
+
+::: {.column width="70%"}
+```{yaml}
+#| echo: true
+#| code-line-numbers: "5"
+---
+title: "My misspelled tittel"
+author: "Anon"
+format: revealjs
+engine: knitr                                     #<1>
+---
+
+```
+1. not a bad idea to "make explicit" if all of your scripting is via `r fontawesome::fa("r-project")`
+
+:::
+::::
+
+![](https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs2/274303829/original/ea8e7c8da01cb831231b356097c12179c381f59d/create-presentations-on-your-behalf.jpg){.absolute width="450" right="70" bottom="-20"}
+
+## Hosting `r emo::ji("house_with_garden")`
+
+[![](img/shinyapps.JPG)](https://www.shinyapps.io/)
+
+## Hyperlinks `r emo::ji("globe_with_meridians")`
+
+::: {.columns}
+::: {.column width="50%"}
+```{yaml}
+#| echo: true
+#| code-line-numbers: "5-8|4,9-11"
+
+
+"Double-wrapped" image:
+
+[
+![](https://wallpapers.                     #<1>
+com/images/featured-full
+/goofy-pictures-pjo2kh4s
+ki3sq65a.jpg)                               #<1>
+](https://                                  #<2>
+www.montclair.edu/
+information-technology/)                    #<2>
+
+```
+1. standard rMarkdown *image* syntax
+2. standard rMarkdown *hyperlink* syntax
+:::
+
+::: {.column width="50%"}
+[![](https://wallpapers.com/images/featured-full/goofy-pictures-pjo2kh4ski3sq65a.jpg)](https://www.montclair.edu/information-technology/)
+:::
+:::
+:::
+
+# Today: 
+
+## Different [`r fa("download",fill="#0077b5")`'s](https://mastering-shiny.org/action-transfer.html) from [Shiny]{.shiny}`r emo::ji("sparkles")`
+
+:::: {.columns}
+::: {.column width="30%"}
++ Data `r fa("check",fill="#228B22")`
++ Figure `r fa("check",fill="#228B22")`
++ [Report](https://stackoverflow.com/questions/65786335/how-can-you-make-customized-downloadable-reports-in-r-shiny) `r fa("circle-xmark",fill="#D22B2B")`
++ Quarto `r emo::ji("eyes")`
+
+::: {.callout-tip}
+## General structure 
+
+[Nice tutorial](https://tilburgsciencehub.com/topics/visualization/data-visualization/dashboarding/shiny-apps/) on scripting [Shiny]{.shiny2} apps
+:::
+
+:::
+
+::: {.column width="60%"}
+![](https://cdnwebsite.databox.com/wp-content/uploads/2023/11/30094738/HS-for-CS-1000x554.png){.absolute height="500" right="-200"}
+
+:::
+::::
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
+
