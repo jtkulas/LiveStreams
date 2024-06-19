@@ -33,8 +33,7 @@ library(fontawesome)
 ::: first-column
 -   Recap session #30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue:
-    - [Shiny]{.shiny}`r emo::ji("sparkles")` downloads
-      - Data reports `r emo::ji("clipboard")`
+    - APA Quarto extension
 -   Shared problem-solving
 :::
 
