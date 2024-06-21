@@ -1,6 +1,6 @@
 ---
 title: "R for <br>Authoring!!" 
-author: "PSP Session #31...<br>...return of the APA"
+author: "PSP Session #31...<br>...return of the [APA]{.apa}"
 title-slide-attributes: 
   data-background-image: https://kidsthinkwide.com/wp-content/uploads/2023/05/0139-1024x574.png #https://img.freepik.com/premium-photo/anthropomorphic-gorilla-reading-book-library_593195-5935.jpg
   data-background-opacity: ".4"
@@ -33,7 +33,7 @@ library(fontawesome)
 ::: first-column
 -   Recap session #30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue:
-    - APA [Quarto extension](https://quarto.org/docs/extensions/) `r emo::ji("monkey")`
+    - [APA]{.apa} [Quarto extension](https://quarto.org/docs/extensions/) `r emo::ji("monkey")`
 -   Shared problem-solving
 :::
 
@@ -196,7 +196,7 @@ the picture above is reflecting ages from
 
 # Today: 
 
-## [$\Psi$ APA](https://wjschne.github.io/apaquarto/) Quarto Extension `r emo::ji("see_no_evil_monkey")`
+## [$\Psi$ [APA]{.apa}](https://wjschne.github.io/apaquarto/) Quarto Extension `r emo::ji("see_no_evil_monkey")`
 
 ![](https://www.bibme.org/wp-content/uploads/2020/03/BibMe-APA-format-student-title-page.png){.absolute left="-230"}
 ![](https://www.citationmachine.net/wp-content/uploads/2020/03/APA-7-format-table.png){.absolute right="-230"}

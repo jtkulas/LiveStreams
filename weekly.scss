@@ -7,6 +7,8 @@
 @import url('https://fonts.googleapis.com/css?family=Londrina Solid');
 @import url('https://fonts.googleapis.com/css?family=Lovers Quarrel');
 @import url('https://fonts.googleapis.com/css?family=Poetsen One');
+@import url('https://fonts.googleapis.com/css?family=Notable');
+@import url('https://fonts.googleapis.com/css?family=Rye');
 
 /*-- scss:defaults --*/
 
@@ -117,6 +119,11 @@ $presentation-title-slide-text-color: black;
   text-shadow: 
     2px 2px 3px #ffdd4d,
     -2px -2px 3px #ffdd4d !important;
+}
+
+.apa {
+  color: #184978;     /* #0B809F; */        
+  font-family: 'Rye';
 }
 
 .smaller {
