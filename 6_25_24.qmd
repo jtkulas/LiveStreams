@@ -33,7 +33,7 @@ library(fontawesome)
 ::: first-column
 -   Recap session #30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue:
-    - APA Quarto extension
+    - APA [Quarto extension](https://quarto.org/docs/extensions/) `r emo::ji("monkey")`
 -   Shared problem-solving
 :::
 
@@ -45,99 +45,159 @@ library(fontawesome)
 
 # Recap of Session #30: 
 
-## `r emo::ji("speaking_head")` Job talk [presentations](https://quarto.org/docs/presentations/revealjs/presenting.html) `r emo::ji("studio_microphone")` 
+## [Shiny]{.shiny}`r emo::ji("sparkles")` `r fa("download",fill="#0077b5")`'s 
+
+:::: {.columns}
+::: {.column width="25%"}
++ Data `r fa("check",fill="#228B22")`
++ Figure `r fa("check",fill="#228B22")`
++ `r fontawesome::fa("file-pdf", fill="#C70039")` Report `r fa("check",fill="#228B22")`
++ Quarto `r emo::ji("eyes")`
+
+:::
+
+::: {.column width="75%"}
 
 ::: {.panel-tabset}
 
-## Quarto `r emo::ji("writing_hand")`
+## App script `r emo::ji("writing_hand")`
 
-:::: {.columns}
-::: {.column width="30%"}
-
-+ [`r fontawesome::fa("html5", fill="#FF5733")`](https://quarto.org/docs/presentations/revealjs/) `revealjs` 
-+ [`r fontawesome::fa("windows", fill="#4287f5")`](https://quarto.org/docs/presentations/powerpoint.html) `pptx`
-+ [`r fontawesome::fa("file-pdf", fill="#C70039")`](https://quarto.org/docs/presentations/beamer.html) `beamer` 
-
-:::
-
-::: {.column width="70%"}
-```{yaml}
+```{r}
+#| eval: false
 #| echo: true
-#| code-line-numbers: "5"
----
-title: "My misspelled tittel"
-author: "Anon"
-format: revealjs
-engine: knitr                                     #<1>
----
+#| code-line-numbers: "13-16,25-30,33-48,61-65"
 
+library(shiny)
+library(rmarkdown)
+library(ggplot2)
+
+data <- data.frame(
+  ID = 1:10,
+  Name = c("John", "Paul", "George", "Ringo", "Mick", 
+           "Keith", "Charlie", "Ronnie", "Roger", "Pete"),
+  Age = c(40, 42, 38, 41, 43, 45, 39, 40, 44, 42)
+)
+
+server <- function(input, output) {
+  filtered_data <- reactive({                       #<1>
+    data[data$Age >= input$ageRange[1] & 
+           data$Age <= input$ageRange[2], ]
+  })                                                #<1>
+  
+  output$distPlot <- renderPlot({
+    ggplot(filtered_data(),aes(x=Age)) + 
+      geom_histogram()
+  })
+  
+  output$downloadReport <- downloadHandler(
+    filename = function() {
+      paste('my-report', sep = '.', switch(          #<2>
+        input$format, PDF = 'pdf', 
+                      HTML = 'html', 
+                      Word = 'docx'
+      ))
+    },                                               #<2>
+    
+    content = function(file) {                       
+      src <- normalizePath('child_script.Rmd')       #<3>
+      owd <- setwd(tempdir())
+      on.exit(setwd(owd))
+      file.copy(src, 'child_script.Rmd', 
+                overwrite = TRUE)
+      
+     out <- rmarkdown::render('child_script.Rmd',
+       params = list(text = input$text, 
+                     outp=input$Try, 
+                     age=input$ageRange),
+       switch(input$format,
+            PDF = pdf_document(), 
+            HTML = html_document(), 
+            Word = word_document()
+                               ))
+      file.rename(out, file)                        #<3>
+    }
+  )
+}
+
+ui <- fluidPage(
+  tags$textarea(id="text", rows=10, cols=15, 
+            placeholder="Some placeholder text"),
+  
+  flowLayout(sliderInput('ageRange', 'Age Range', 
+                         min = 30, 
+                         max = 45, 
+                         value = c(30, 45)),
+             plotOutput("distPlot"),                 #<4>
+             radioButtons('format',                  
+                'Document format', 
+                c('HTML', 'Word','PDF'),
+                    inline = FALSE),                 #<4>
+             checkboxGroupInput(
+    "Try","Let's hope this works",
+    choiceNames = list("include hi",
+                       "include hey",
+                       "include hello",
+                       "include how are you"),
+    choiceValues = list("HI",
+                        "HEY",
+                        "HELLO",
+                        "HOW ARE YOU")),
+             downloadButton('downloadReport'))
+)
+
+shinyApp(ui = ui, server = server)
 ```
-1. not a bad idea to "make explicit" if all of your scripting is via `r fontawesome::fa("r-project")`
+1. Most interactive functionality currently dependent on this `filtered_data` object (dataframe)
+2. Rendered report name and proper file extension (.html, .pdf, or .docx)
+3. Locates and renders "child" .Rmd report template -- parameters also identified here
+4. Our two elements of most immediate interest (in addition to the `downloadReport` button on line #76)
 
+## .Rmd specs `r emo::ji("bookmark_tabs")`
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "3,5-7,20,25"
+---
+title: "Testing with Diego"
+output: html_document                                             #<1>
+params:
+  text: 'NULL'                                                    #<2>
+  outp: 'NULL'
+  age: 'NULL'                                                     #<2>
+---
+
+# Fiddling around
+
+`r params[["text"]]`
+`r params[["outp"]]`
+
+the selected age range is `r params[["age"]]`
+
+``{r, warning=FALSE, echo=FALSE, message=FALSE}
+library(ggplot2)
+
+ggplot(filtered_data(),aes(x=Age)) +                           #<3>
+  geom_histogram()                                             #<3>
+``
+
+the picture above is reflecting ages from 
+`r nrow(filtered_data())` British rockers.                     #<3>
+```
+
+1. Default output type for report -- UI has check-box options to override this default
+2. One way to "call in" values from dynamic reactive app elements 
+3. `dataname()` convention used with reactive dataframes
+:::
 :::
 ::::
-
-![](https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs2/274303829/original/ea8e7c8da01cb831231b356097c12179c381f59d/create-presentations-on-your-behalf.jpg){.absolute width="450" right="70" bottom="-20"}
-
-## Hosting `r emo::ji("house_with_garden")`
-
-[![](img/shinyapps.JPG)](https://www.shinyapps.io/)
-
-## Hyperlinks `r emo::ji("globe_with_meridians")`
-
-::: {.columns}
-::: {.column width="50%"}
-```{yaml}
-#| echo: true
-#| code-line-numbers: "5-8|4,9-11"
-
-
-"Double-wrapped" image:
-
-[
-![](https://wallpapers.                     #<1>
-com/images/featured-full
-/goofy-pictures-pjo2kh4s
-ki3sq65a.jpg)                               #<1>
-](https://                                  #<2>
-www.montclair.edu/
-information-technology/)                    #<2>
-
-```
-1. standard rMarkdown *image* syntax
-2. standard rMarkdown *hyperlink* syntax
-:::
-
-::: {.column width="50%"}
-[![](https://wallpapers.com/images/featured-full/goofy-pictures-pjo2kh4ski3sq65a.jpg)](https://www.montclair.edu/information-technology/)
-:::
-:::
-:::
 
 # Today: 
 
-## Different [`r fa("download",fill="#0077b5")`'s](https://mastering-shiny.org/action-transfer.html) from [Shiny]{.shiny}`r emo::ji("sparkles")`
+## [$\Psi$ APA](https://wjschne.github.io/apaquarto/) Quarto Extension `r emo::ji("see_no_evil_monkey")`
 
-:::: {.columns}
-::: {.column width="30%"}
-+ Data `r fa("check",fill="#228B22")`
-+ Figure `r fa("check",fill="#228B22")`
-+ [Report](https://stackoverflow.com/questions/65786335/how-can-you-make-customized-downloadable-reports-in-r-shiny) `r fa("circle-xmark",fill="#D22B2B")`
-+ Quarto `r emo::ji("eyes")`
-
-::: {.callout-tip}
-## General structure 
-
-[Nice tutorial](https://tilburgsciencehub.com/topics/visualization/data-visualization/dashboarding/shiny-apps/) on scripting [Shiny]{.shiny2} apps
-:::
-
-:::
-
-::: {.column width="60%"}
-![](https://cdnwebsite.databox.com/wp-content/uploads/2023/11/30094738/HS-for-CS-1000x554.png){.absolute height="500" right="-200"}
-
-:::
-::::
+![](https://www.bibme.org/wp-content/uploads/2020/03/BibMe-APA-format-student-title-page.png){.absolute left="-230"}
+![](https://www.citationmachine.net/wp-content/uploads/2020/03/APA-7-format-table.png){.absolute right="-230"}
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 

@@ -22,3 +22,4 @@ ggplot(filtered_data(),aes(x=Age)) + geom_histogram()
 ```
 
 the picture above is reflecting ages from `r nrow(filtered_data())` British rockers.
+
