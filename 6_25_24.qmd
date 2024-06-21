@@ -43,6 +43,8 @@ library(fontawesome)
 
 ![](img/title30.JPG){.absolute top="170" right="-120" width="550" height="325"}
 
+![](https://static.vecteezy.com/system/resources/previews/035/982/836/original/ai-generated-monkey-isolated-on-transparent-background-free-png.png){.absolute left="250" bottom="-50" width="300"}
+
 # Recap of Session #30: 
 
 ## [Shiny]{.shiny}`r emo::ji("sparkles")` `r fa("download",fill="#0077b5")`'s 
