@@ -10,6 +10,7 @@ format:
     code-overflow: wrap              ## instead of horizontal scroll
     theme: [night, weekly.scss]
     logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
     transition: slide
     background-transition: fade
     mouse-wheel: true                ## yes enables mouse
@@ -20,6 +21,8 @@ format:
       url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
 engine: knitr                        ## not picking up inline codes
 # bibliography: r-references.bib
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
 ---
 
 ```{r, warning=FALSE, message=FALSE}
