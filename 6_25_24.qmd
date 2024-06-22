@@ -56,6 +56,11 @@ library(fontawesome)
 + `r fontawesome::fa("file-pdf", fill="#C70039")` Report `r fa("check",fill="#228B22")`
 + Quarto `r emo::ji("eyes")`
 
+::: {.callout-caution}
+
+If you copy .Rmd, please add one tick mark to lines #17 and #22 
+:::
+
 :::
 
 ::: {.column width="75%"}
