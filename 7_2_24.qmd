@@ -46,7 +46,8 @@ library(fontawesome)
 
 ![](img/title31.JPG){.absolute top="170" right="-120" width="550" height="325"}
 
-![](https://static.vecteezy.com/system/resources/thumbnails/035/982/838/small_2x/ai-generated-monkey-isolated-on-transparent-background-free-png.png){.absolute bottom="-80" left="290"}
+![](https://static.vecteezy.com/system/resources/thumbnails/035/982/838/small_2x/ai-generated-monkey-isolated-on-transparent-background-free-png.png){.absolute bottom="-80" right="-165"}
+![](https://static.vecteezy.com/system/resources/thumbnails/035/982/838/small_2x/ai-generated-monkey-isolated-on-transparent-background-free-png.png){.mirror .absolute bottom="-80" left="-165"}
 
 # Recap of Session #31: 
 
@@ -54,25 +55,24 @@ library(fontawesome)
 
 :::: {.columns}
 ::: {.column width="45%"}
-+ `setwd()`
+1. `setwd()`
   + empty folder
-+ quarto (package) 
-  + up-to-date
-
-<img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExM21saDc0NmlpeTk2dml2NzNwZ2N0em52aXRlb3Zzbmh4bHA5YTAzcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5Zesu5VPNGJlm/giphy.gif"
-     width="500" height="300"
-     style="position:absolute; left:-120px; bottom:-20px;">
-     
+2. quarto (package) 
+  + up-to-date (v 1.4)
+3. Console install
+  + `quarto::quarto_use_template("wjschne/apaquarto")`
 :::
 
 ::: {.column width="55%"}
-more monkeys
+<img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExM21saDc0NmlpeTk2dml2NzNwZ2N0em52aXRlb3Zzbmh4bHA5YTAzcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5Zesu5VPNGJlm/giphy.gif"
+     width="700" height="400"
+     style="position:absolute; right:-150px; bottom:150px;">
 :::
 ::::
 
 # Today: 
 
-## [[apa]{.apa}quarto](https://wjschne.github.io/apaquarto/) implementation `r emo::ji("speak_no_evil_monkey")`
+## [$\Psi$ [apa]{.apa}quarto](https://wjschne.github.io/apaquarto/) implementation `r emo::ji("speak_no_evil_monkey")`
 
 ![](https://www.bibme.org/wp-content/uploads/2020/03/BibMe-APA-format-student-title-page.png){.absolute left="-230"}
 ![](https://www.citationmachine.net/wp-content/uploads/2020/03/APA-7-format-table.png){.absolute right="-230"}
