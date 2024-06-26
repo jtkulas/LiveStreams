@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="6_25_24_files/libs/clipboard/clipboard.min.js"></script>
-<script src="6_25_24_files/libs/quarto-html/tabby.min.js"></script>
-<script src="6_25_24_files/libs/quarto-html/popper.min.js"></script>
-<script src="6_25_24_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="6_25_24_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="6_25_24_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="6_25_24_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="6_25_24_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="6_25_24_files/libs/quarto-contrib/reveal-header-1.0.0/add_header.js" defer="true"></script>
-<link href="6_25_24_files/libs/quarto-contrib/reveal-header-1.0.0/add_header.css" rel="stylesheet">
-<link href="6_25_24_files/libs/quarto-contrib/grid-no-htext-1.0.0/grid_no_htext.css" rel="stylesheet"><meta charset="utf-8">
+<script src="7_2_24_files/libs/clipboard/clipboard.min.js"></script>
+<script src="7_2_24_files/libs/quarto-html/tabby.min.js"></script>
+<script src="7_2_24_files/libs/quarto-html/popper.min.js"></script>
+<script src="7_2_24_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="7_2_24_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="7_2_24_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="7_2_24_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="7_2_24_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="7_2_24_files/libs/quarto-contrib/reveal-header-1.0.0/add_header.js" defer="true"></script>
+<link href="7_2_24_files/libs/quarto-contrib/reveal-header-1.0.0/add_header.css" rel="stylesheet">
+<link href="7_2_24_files/libs/quarto-contrib/grid-no-htext-1.0.0/grid_no_htext.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.47">
 
-  <meta name="author" content="PSP Session #31… …return of the APA">
+  <meta name="author" content="PSP Session #32… …more APA monkeybusiness">
   <title>R for  Authoring!!</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="6_25_24_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="6_25_24_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="7_2_24_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="7_2_24_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -32,77 +32,12 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-      }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-    div.sourceCode
-      { color: #f8f8f2;  }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #f8f8f2; } /* Normal */
-    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
-    code span.an { color: #d4d0ab; } /* Annotation */
-    code span.at { color: #00e0e0; } /* Attribute */
-    code span.bn { color: #d4d0ab; } /* BaseN */
-    code span.bu { color: #abe338; } /* BuiltIn */
-    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #abe338; } /* Char */
-    code span.cn { color: #ffd700; } /* Constant */
-    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
-    code span.cv { color: #ffd700; } /* CommentVar */
-    code span.do { color: #f8f8f2; } /* Documentation */
-    code span.dt { color: #ffa07a; } /* DataType */
-    code span.dv { color: #d4d0ab; } /* DecVal */
-    code span.er { color: #f07178; text-decoration: underline; } /* Error */
-    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
-    code span.fl { color: #d4d0ab; } /* Float */
-    code span.fu { color: #ffa07a; } /* Function */
-    code span.im { color: #abe338; } /* Import */
-    code span.in { color: #d4d0ab; } /* Information */
-    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
-    code span.op { color: #ffa07a; } /* Operator */
-    code span.ot { color: #00e0e0; } /* Other */
-    code span.pp { color: #dcc6e0; } /* Preprocessor */
-    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
-    code span.sc { color: #abe338; } /* SpecialChar */
-    code span.ss { color: #abe338; } /* SpecialString */
-    code span.st { color: #abe338; } /* String */
-    code span.va { color: #00e0e0; } /* Variable */
-    code span.vs { color: #abe338; } /* VerbatimString */
-    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="6_25_24_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="6_25_24_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="6_25_24_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="6_25_24_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="6_25_24_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="7_2_24_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="7_2_24_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="7_2_24_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="7_2_24_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="7_2_24_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -393,13 +328,13 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="https://kidsthinkwide.com/wp-content/uploads/2023/05/0139-1024x574.png" data-background-opacity=".4" class="quarto-title-block center">
+<section id="title-slide" data-background-image="https://us.123rf.com/450wm/brita123/brita1232311/brita123231100065/217936054-a-monkey-sits-annoyed-in-front-of-the-computer.jpg?ver=6" data-background-opacity=".4" class="quarto-title-block center">
   <h1 class="title">R for <br>Authoring!!</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-PSP Session #31…<br>…return of the <span class="apa">APA</span> 
+PSP Session #32…<br>…more <span class="apa">APA</span> monkeybusiness 
 </div>
 </div>
 </div>
@@ -414,10 +349,10 @@ PSP Session #31…<br>…return of the <span class="apa">APA</span>
 <div class="quarto-layout-row">
 <div class="first-column quarto-layout-cell" style="flex-basis: 80.0%;justify-content: flex-start;">
 <ul>
-<li>Recap session #30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↔︎️</li>
+<li>Recap session #31&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↔︎️</li>
 <li>Focal issue:
 <ul>
-<li><span class="apa">APA</span> <a href="https://quarto.org/docs/extensions/">Quarto extension</a> 🐒</li>
+<li>🦍 <span class="apa">apa</span><a href="https://wjschne.github.io/apaquarto/">quarto</a></li>
 </ul></li>
 <li>Shared problem-solving</li>
 </ul>
@@ -427,191 +362,31 @@ PSP Session #31…<br>…return of the <span class="apa">APA</span>
 </div>
 </div>
 </div>
-<p><img data-src="img/title30.JPG" class="absolute" style="top: 170px; right: -120px; width: 550px; height: 325px; "></p>
-<p><img data-src="https://static.vecteezy.com/system/resources/previews/035/982/836/original/ai-generated-monkey-isolated-on-transparent-background-free-png.png" class="absolute" style="left: 250px; bottom: -50px; width: 300px; "></p>
+<p><img data-src="img/title31.JPG" class="absolute" style="top: 170px; right: -120px; width: 550px; height: 325px; "></p>
+<p><img data-src="https://static.vecteezy.com/system/resources/thumbnails/035/982/838/small_2x/ai-generated-monkey-isolated-on-transparent-background-free-png.png" class="absolute" style="left: 290px; bottom: -80px; "></p>
 </section>
 <section>
-<section id="recap-of-session-30" class="title-slide slide level1 center">
-<h1>Recap of Session #30:</h1>
+<section id="recap-of-session-31" class="title-slide slide level1 center">
+<h1>Recap of Session #31:</h1>
 
 </section>
-<section id="shiny-s" class="slide level2">
-<h2><span class="shiny">Shiny</span>✨ <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#0077b5;overflow:visible;position:relative;"><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg>’s</h2>
+<section id="extensions-for-quarto" class="slide level2">
+<h2><a href="https://quarto.org/docs/extensions/">Extensions</a> for Quarto</h2>
 <div class="columns">
-<div class="column" style="width:25%;">
+<div class="column" style="width:45%;">
 <ul>
-<li>Data <svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#228B22;overflow:visible;position:relative;"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></li>
-<li>Figure <svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#228B22;overflow:visible;position:relative;"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></li>
-<li><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#C70039;overflow:visible;position:relative;"><path d="M64 464H96v48H64c-35.3 0-64-28.7-64-64V64C0 28.7 28.7 0 64 0H229.5c17 0 33.3 6.7 45.3 18.7l90.5 90.5c12 12 18.7 28.3 18.7 45.3V288H336V160H256c-17.7 0-32-14.3-32-32V48H64c-8.8 0-16 7.2-16 16V448c0 8.8 7.2 16 16 16zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"></path></svg> Report <svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#228B22;overflow:visible;position:relative;"><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"></path></svg></li>
-<li>Quarto 👀</li>
+<li><code>setwd()</code>
+<ul>
+<li>empty folder</li>
+</ul></li>
+<li>quarto (package)
+<ul>
+<li>up-to-date</li>
+</ul></li>
 </ul>
-<div class="callout callout-caution callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Caution</strong></p>
-</div>
-<div class="callout-content">
-<p>If you copy .Rmd, please add one tick mark to lines #17 and #22</p>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:75%;">
-<div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">App script ✍️</a></li><li><a href="#tabset-1-2">.Rmd specs 📑</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1">
-<div class="cell">
-<div class="sourceCode cell-code" id="annotated-cell-1" data-code-line-numbers="13-16,25-30,33-48,61-65"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-1-1"><a href="#annotated-cell-1-1"></a><span class="fu">library</span>(shiny)</span>
-<span id="annotated-cell-1-2"><a href="#annotated-cell-1-2"></a><span class="fu">library</span>(rmarkdown)</span>
-<span id="annotated-cell-1-3"><a href="#annotated-cell-1-3"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="annotated-cell-1-4"><a href="#annotated-cell-1-4"></a></span>
-<span id="annotated-cell-1-5"><a href="#annotated-cell-1-5"></a>data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="annotated-cell-1-6"><a href="#annotated-cell-1-6"></a>  <span class="at">ID =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,</span>
-<span id="annotated-cell-1-7"><a href="#annotated-cell-1-7"></a>  <span class="at">Name =</span> <span class="fu">c</span>(<span class="st">"John"</span>, <span class="st">"Paul"</span>, <span class="st">"George"</span>, <span class="st">"Ringo"</span>, <span class="st">"Mick"</span>, </span>
-<span id="annotated-cell-1-8"><a href="#annotated-cell-1-8"></a>           <span class="st">"Keith"</span>, <span class="st">"Charlie"</span>, <span class="st">"Ronnie"</span>, <span class="st">"Roger"</span>, <span class="st">"Pete"</span>),</span>
-<span id="annotated-cell-1-9"><a href="#annotated-cell-1-9"></a>  <span class="at">Age =</span> <span class="fu">c</span>(<span class="dv">40</span>, <span class="dv">42</span>, <span class="dv">38</span>, <span class="dv">41</span>, <span class="dv">43</span>, <span class="dv">45</span>, <span class="dv">39</span>, <span class="dv">40</span>, <span class="dv">44</span>, <span class="dv">42</span>)</span>
-<span id="annotated-cell-1-10"><a href="#annotated-cell-1-10"></a>)</span>
-<span id="annotated-cell-1-11"><a href="#annotated-cell-1-11"></a></span>
-<span id="annotated-cell-1-12"><a href="#annotated-cell-1-12"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output) {</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="1">1</button><span id="annotated-cell-1-13" class="code-annotation-target"><a href="#annotated-cell-1-13"></a>  filtered_data <span class="ot">&lt;-</span> <span class="fu">reactive</span>({</span>
-<span id="annotated-cell-1-14"><a href="#annotated-cell-1-14"></a>    data[data<span class="sc">$</span>Age <span class="sc">&gt;=</span> input<span class="sc">$</span>ageRange[<span class="dv">1</span>] <span class="sc">&amp;</span> </span>
-<span id="annotated-cell-1-15"><a href="#annotated-cell-1-15"></a>           data<span class="sc">$</span>Age <span class="sc">&lt;=</span> input<span class="sc">$</span>ageRange[<span class="dv">2</span>], ]</span>
-<span id="annotated-cell-1-16"><a href="#annotated-cell-1-16"></a>  })</span>
-<span id="annotated-cell-1-17"><a href="#annotated-cell-1-17"></a>  </span>
-<span id="annotated-cell-1-18"><a href="#annotated-cell-1-18"></a>  output<span class="sc">$</span>distPlot <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
-<span id="annotated-cell-1-19"><a href="#annotated-cell-1-19"></a>    <span class="fu">ggplot</span>(<span class="fu">filtered_data</span>(),<span class="fu">aes</span>(<span class="at">x=</span>Age)) <span class="sc">+</span> </span>
-<span id="annotated-cell-1-20"><a href="#annotated-cell-1-20"></a>      <span class="fu">geom_histogram</span>()</span>
-<span id="annotated-cell-1-21"><a href="#annotated-cell-1-21"></a>  })</span>
-<span id="annotated-cell-1-22"><a href="#annotated-cell-1-22"></a>  </span>
-<span id="annotated-cell-1-23"><a href="#annotated-cell-1-23"></a>  output<span class="sc">$</span>downloadReport <span class="ot">&lt;-</span> <span class="fu">downloadHandler</span>(</span>
-<span id="annotated-cell-1-24"><a href="#annotated-cell-1-24"></a>    <span class="at">filename =</span> <span class="cf">function</span>() {</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="2">2</button><span id="annotated-cell-1-25" class="code-annotation-target"><a href="#annotated-cell-1-25"></a>      <span class="fu">paste</span>(<span class="st">'my-report'</span>, <span class="at">sep =</span> <span class="st">'.'</span>, <span class="cf">switch</span>(</span>
-<span id="annotated-cell-1-26"><a href="#annotated-cell-1-26"></a>        input<span class="sc">$</span>format, <span class="at">PDF =</span> <span class="st">'pdf'</span>, </span>
-<span id="annotated-cell-1-27"><a href="#annotated-cell-1-27"></a>                      <span class="at">HTML =</span> <span class="st">'html'</span>, </span>
-<span id="annotated-cell-1-28"><a href="#annotated-cell-1-28"></a>                      <span class="at">Word =</span> <span class="st">'docx'</span></span>
-<span id="annotated-cell-1-29"><a href="#annotated-cell-1-29"></a>      ))</span>
-<span id="annotated-cell-1-30"><a href="#annotated-cell-1-30"></a>    },</span>
-<span id="annotated-cell-1-31"><a href="#annotated-cell-1-31"></a>    </span>
-<span id="annotated-cell-1-32"><a href="#annotated-cell-1-32"></a>    <span class="at">content =</span> <span class="cf">function</span>(file) {                       </span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="3">3</button><span id="annotated-cell-1-33" class="code-annotation-target"><a href="#annotated-cell-1-33"></a>      src <span class="ot">&lt;-</span> <span class="fu">normalizePath</span>(<span class="st">'child_script.Rmd'</span>)</span>
-<span id="annotated-cell-1-34"><a href="#annotated-cell-1-34"></a>      owd <span class="ot">&lt;-</span> <span class="fu">setwd</span>(<span class="fu">tempdir</span>())</span>
-<span id="annotated-cell-1-35"><a href="#annotated-cell-1-35"></a>      <span class="fu">on.exit</span>(<span class="fu">setwd</span>(owd))</span>
-<span id="annotated-cell-1-36"><a href="#annotated-cell-1-36"></a>      <span class="fu">file.copy</span>(src, <span class="st">'child_script.Rmd'</span>, </span>
-<span id="annotated-cell-1-37"><a href="#annotated-cell-1-37"></a>                <span class="at">overwrite =</span> <span class="cn">TRUE</span>)</span>
-<span id="annotated-cell-1-38"><a href="#annotated-cell-1-38"></a>      </span>
-<span id="annotated-cell-1-39"><a href="#annotated-cell-1-39"></a>     out <span class="ot">&lt;-</span> rmarkdown<span class="sc">::</span><span class="fu">render</span>(<span class="st">'child_script.Rmd'</span>,</span>
-<span id="annotated-cell-1-40"><a href="#annotated-cell-1-40"></a>       <span class="at">params =</span> <span class="fu">list</span>(<span class="at">text =</span> input<span class="sc">$</span>text, </span>
-<span id="annotated-cell-1-41"><a href="#annotated-cell-1-41"></a>                     <span class="at">outp=</span>input<span class="sc">$</span>Try, </span>
-<span id="annotated-cell-1-42"><a href="#annotated-cell-1-42"></a>                     <span class="at">age=</span>input<span class="sc">$</span>ageRange),</span>
-<span id="annotated-cell-1-43"><a href="#annotated-cell-1-43"></a>       <span class="cf">switch</span>(input<span class="sc">$</span>format,</span>
-<span id="annotated-cell-1-44"><a href="#annotated-cell-1-44"></a>            <span class="at">PDF =</span> <span class="fu">pdf_document</span>(), </span>
-<span id="annotated-cell-1-45"><a href="#annotated-cell-1-45"></a>            <span class="at">HTML =</span> <span class="fu">html_document</span>(), </span>
-<span id="annotated-cell-1-46"><a href="#annotated-cell-1-46"></a>            <span class="at">Word =</span> <span class="fu">word_document</span>()</span>
-<span id="annotated-cell-1-47"><a href="#annotated-cell-1-47"></a>                               ))</span>
-<span id="annotated-cell-1-48"><a href="#annotated-cell-1-48"></a>      <span class="fu">file.rename</span>(out, file)</span>
-<span id="annotated-cell-1-49"><a href="#annotated-cell-1-49"></a>    }</span>
-<span id="annotated-cell-1-50"><a href="#annotated-cell-1-50"></a>  )</span>
-<span id="annotated-cell-1-51"><a href="#annotated-cell-1-51"></a>}</span>
-<span id="annotated-cell-1-52"><a href="#annotated-cell-1-52"></a></span>
-<span id="annotated-cell-1-53"><a href="#annotated-cell-1-53"></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
-<span id="annotated-cell-1-54"><a href="#annotated-cell-1-54"></a>  tags<span class="sc">$</span><span class="fu">textarea</span>(<span class="at">id=</span><span class="st">"text"</span>, <span class="at">rows=</span><span class="dv">10</span>, <span class="at">cols=</span><span class="dv">15</span>, </span>
-<span id="annotated-cell-1-55"><a href="#annotated-cell-1-55"></a>            <span class="at">placeholder=</span><span class="st">"Some placeholder text"</span>),</span>
-<span id="annotated-cell-1-56"><a href="#annotated-cell-1-56"></a>  </span>
-<span id="annotated-cell-1-57"><a href="#annotated-cell-1-57"></a>  <span class="fu">flowLayout</span>(<span class="fu">sliderInput</span>(<span class="st">'ageRange'</span>, <span class="st">'Age Range'</span>, </span>
-<span id="annotated-cell-1-58"><a href="#annotated-cell-1-58"></a>                         <span class="at">min =</span> <span class="dv">30</span>, </span>
-<span id="annotated-cell-1-59"><a href="#annotated-cell-1-59"></a>                         <span class="at">max =</span> <span class="dv">45</span>, </span>
-<span id="annotated-cell-1-60"><a href="#annotated-cell-1-60"></a>                         <span class="at">value =</span> <span class="fu">c</span>(<span class="dv">30</span>, <span class="dv">45</span>)),</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="4">4</button><span id="annotated-cell-1-61" class="code-annotation-target"><a href="#annotated-cell-1-61"></a>             <span class="fu">plotOutput</span>(<span class="st">"distPlot"</span>),</span>
-<span id="annotated-cell-1-62"><a href="#annotated-cell-1-62"></a>             <span class="fu">radioButtons</span>(<span class="st">'format'</span>,                  </span>
-<span id="annotated-cell-1-63"><a href="#annotated-cell-1-63"></a>                <span class="st">'Document format'</span>, </span>
-<span id="annotated-cell-1-64"><a href="#annotated-cell-1-64"></a>                <span class="fu">c</span>(<span class="st">'HTML'</span>, <span class="st">'Word'</span>,<span class="st">'PDF'</span>),</span>
-<span id="annotated-cell-1-65"><a href="#annotated-cell-1-65"></a>                    <span class="at">inline =</span> <span class="cn">FALSE</span>),</span>
-<span id="annotated-cell-1-66"><a href="#annotated-cell-1-66"></a>             <span class="fu">checkboxGroupInput</span>(</span>
-<span id="annotated-cell-1-67"><a href="#annotated-cell-1-67"></a>    <span class="st">"Try"</span>,<span class="st">"Let's hope this works"</span>,</span>
-<span id="annotated-cell-1-68"><a href="#annotated-cell-1-68"></a>    <span class="at">choiceNames =</span> <span class="fu">list</span>(<span class="st">"include hi"</span>,</span>
-<span id="annotated-cell-1-69"><a href="#annotated-cell-1-69"></a>                       <span class="st">"include hey"</span>,</span>
-<span id="annotated-cell-1-70"><a href="#annotated-cell-1-70"></a>                       <span class="st">"include hello"</span>,</span>
-<span id="annotated-cell-1-71"><a href="#annotated-cell-1-71"></a>                       <span class="st">"include how are you"</span>),</span>
-<span id="annotated-cell-1-72"><a href="#annotated-cell-1-72"></a>    <span class="at">choiceValues =</span> <span class="fu">list</span>(<span class="st">"HI"</span>,</span>
-<span id="annotated-cell-1-73"><a href="#annotated-cell-1-73"></a>                        <span class="st">"HEY"</span>,</span>
-<span id="annotated-cell-1-74"><a href="#annotated-cell-1-74"></a>                        <span class="st">"HELLO"</span>,</span>
-<span id="annotated-cell-1-75"><a href="#annotated-cell-1-75"></a>                        <span class="st">"HOW ARE YOU"</span>)),</span>
-<span id="annotated-cell-1-76"><a href="#annotated-cell-1-76"></a>             <span class="fu">downloadButton</span>(<span class="st">'downloadReport'</span>))</span>
-<span id="annotated-cell-1-77"><a href="#annotated-cell-1-77"></a>)</span>
-<span id="annotated-cell-1-78"><a href="#annotated-cell-1-78"></a></span>
-<span id="annotated-cell-1-79"><a href="#annotated-cell-1-79"></a><span class="fu">shinyApp</span>(<span class="at">ui =</span> ui, <span class="at">server =</span> server)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-annotation">
-<dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
-<dd>
-<span data-code-cell="annotated-cell-1" data-code-lines="13,16" data-code-annotation="1">Most interactive functionality currently dependent on this <code>filtered_data</code> object (dataframe)</span>
-</dd>
-<dt data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
-<dd>
-<span data-code-cell="annotated-cell-1" data-code-lines="25,30" data-code-annotation="2">Rendered report name and proper file extension (.html, .pdf, or .docx)</span>
-</dd>
-<dt data-target-cell="annotated-cell-1" data-target-annotation="3">3</dt>
-<dd>
-<span data-code-cell="annotated-cell-1" data-code-lines="33,48" data-code-annotation="3">Locates and renders “child” .Rmd report template – parameters also identified here</span>
-</dd>
-<dt data-target-cell="annotated-cell-1" data-target-annotation="4">4</dt>
-<dd>
-<span data-code-cell="annotated-cell-1" data-code-lines="61,65" data-code-annotation="4">Our two elements of most immediate interest (in addition to the <code>downloadReport</code> button on line #76)</span>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div id="tabset-1-2">
-<div class="cell">
-<div class="sourceCode cell-code" id="annotated-cell-2" data-code-line-numbers="3,5-7,20,25"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-2-1"><a href="#annotated-cell-2-1"></a><span class="sc">---</span></span>
-<span id="annotated-cell-2-2"><a href="#annotated-cell-2-2"></a>title<span class="sc">:</span> <span class="st">"Testing with Diego"</span></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="1">1</button><span id="annotated-cell-2-3" class="code-annotation-target"><a href="#annotated-cell-2-3"></a>output<span class="sc">:</span> html_document</span>
-<span id="annotated-cell-2-4"><a href="#annotated-cell-2-4"></a>params<span class="sc">:</span></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="2">2</button><span id="annotated-cell-2-5" class="code-annotation-target"><a href="#annotated-cell-2-5"></a>  text<span class="sc">:</span> <span class="st">'NULL'</span></span>
-<span id="annotated-cell-2-6"><a href="#annotated-cell-2-6"></a>  outp<span class="sc">:</span> <span class="st">'NULL'</span></span>
-<span id="annotated-cell-2-7"><a href="#annotated-cell-2-7"></a>  age<span class="sc">:</span> <span class="st">'NULL'</span></span>
-<span id="annotated-cell-2-8"><a href="#annotated-cell-2-8"></a><span class="sc">---</span></span>
-<span id="annotated-cell-2-9"><a href="#annotated-cell-2-9"></a></span>
-<span id="annotated-cell-2-10"><a href="#annotated-cell-2-10"></a><span class="co"># Fiddling around</span></span>
-<span id="annotated-cell-2-11"><a href="#annotated-cell-2-11"></a></span>
-<span id="annotated-cell-2-12"><a href="#annotated-cell-2-12"></a><span class="st">`</span><span class="at">r params[["text"]]</span><span class="st">`</span></span>
-<span id="annotated-cell-2-13"><a href="#annotated-cell-2-13"></a><span class="st">`</span><span class="at">r params[["outp"]]</span><span class="st">`</span></span>
-<span id="annotated-cell-2-14"><a href="#annotated-cell-2-14"></a></span>
-<span id="annotated-cell-2-15"><a href="#annotated-cell-2-15"></a>the selected age range is <span class="st">`</span><span class="at">r params[["age"]]</span><span class="st">`</span></span>
-<span id="annotated-cell-2-16"><a href="#annotated-cell-2-16"></a></span>
-<span id="annotated-cell-2-17"><a href="#annotated-cell-2-17"></a><span class="st">``</span>{r, warning<span class="ot">=</span><span class="cn">FALSE</span>, echo<span class="ot">=</span><span class="cn">FALSE</span>, message<span class="ot">=</span><span class="cn">FALSE</span>}</span>
-<span id="annotated-cell-2-18"><a href="#annotated-cell-2-18"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="annotated-cell-2-19"><a href="#annotated-cell-2-19"></a></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="3">3</button><span id="annotated-cell-2-20" class="code-annotation-target"><a href="#annotated-cell-2-20"></a><span class="fu">ggplot</span>(<span class="fu">filtered_data</span>(),<span class="fu">aes</span>(<span class="at">x=</span>Age)) <span class="sc">+</span></span>
-<span id="annotated-cell-2-21"><a href="#annotated-cell-2-21"></a>  <span class="fu">geom_histogram</span>()</span>
-<span id="annotated-cell-2-22"><a href="#annotated-cell-2-22"></a><span class="st">``</span></span>
-<span id="annotated-cell-2-23"><a href="#annotated-cell-2-23"></a></span>
-<span id="annotated-cell-2-24"><a href="#annotated-cell-2-24"></a>the picture above is reflecting ages from </span>
-<span id="annotated-cell-2-25"><a href="#annotated-cell-2-25"></a><span class="st">`</span><span class="at">r nrow(filtered_data())</span><span class="st">`</span> British rockers.</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-annotation">
-<dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
-<dd>
-<span data-code-cell="annotated-cell-2" data-code-lines="3" data-code-annotation="1">Default output type for report – UI has check-box options to override this default</span>
-</dd>
-<dt data-target-cell="annotated-cell-2" data-target-annotation="2">2</dt>
-<dd>
-<span data-code-cell="annotated-cell-2" data-code-lines="5,7" data-code-annotation="2">One way to “call in” values from dynamic reactive app elements</span>
-</dd>
-<dt data-target-cell="annotated-cell-2" data-target-annotation="3">3</dt>
-<dd>
-<span data-code-cell="annotated-cell-2" data-code-lines="20,21,25" data-code-annotation="3"><code>dataname()</code> convention used with reactive dataframes</span>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-</div>
-</div>
+<p><img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExM21saDc0NmlpeTk2dml2NzNwZ2N0em52aXRlb3Zzbmh4bHA5YTAzcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5Zesu5VPNGJlm/giphy.gif" width="500" height="300" style="position:absolute; left:-120px; bottom:-20px;"></p>
+</div><div class="column" style="width:55%;">
+<p>more monkeys</p>
 </div></div>
 </section></section>
 <section>
@@ -619,8 +394,8 @@ PSP Session #31…<br>…return of the <span class="apa">APA</span>
 <h1>Today:</h1>
 
 </section>
-<section id="psi-apa-quarto-extension" class="slide level2">
-<h2><a href="https://wjschne.github.io/apaquarto/"><span class="math inline">\(\Psi\)</span> <span class="apa">APA</span></a> Quarto Extension 🙈</h2>
+<section id="apaquarto-implementation" class="slide level2">
+<h2><a href="https://wjschne.github.io/apaquarto/"><span class="apa">apa</span>quarto</a> implementation 🙊</h2>
 <p><img data-src="https://www.bibme.org/wp-content/uploads/2020/03/BibMe-APA-format-student-title-page.png" class="absolute" style="left: -230px; "> <img data-src="https://www.citationmachine.net/wp-content/uploads/2020/03/APA-7-format-table.png" class="absolute" style="right: -230px; "></p>
 </section>
 <section id="session-info-june-25-2024-rendering" class="slide level2">
@@ -681,19 +456,19 @@ loaded via a namespace (and not attached):
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="6_25_24_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="7_2_24_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="6_25_24_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="6_25_24_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="6_25_24_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="6_25_24_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="6_25_24_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="7_2_24_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="7_2_24_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="7_2_24_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="7_2_24_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="7_2_24_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="6_25_24_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="6_25_24_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="6_25_24_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="6_25_24_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="7_2_24_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="7_2_24_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="7_2_24_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="7_2_24_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

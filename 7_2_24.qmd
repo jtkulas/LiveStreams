@@ -1,0 +1,86 @@
+---
+title: "R for <br>Authoring!!" 
+author: "PSP Session #32...<br>...more [APA]{.apa} monkeybusiness"
+title-slide-attributes: 
+  data-background-image: https://us.123rf.com/450wm/brita123/brita1232311/brita123231100065/217936054-a-monkey-sits-annoyed-in-front-of-the-computer.jpg?ver=6
+  data-background-opacity: ".4"
+format:
+  revealjs:
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [night, weekly.scss]
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+# bibliography: r-references.bib
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #31&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue:
+    - `r emo::ji("gorilla")` [apa]{.apa}[quarto](https://wjschne.github.io/apaquarto/) 
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+:::
+
+![](img/title31.JPG){.absolute top="170" right="-120" width="550" height="325"}
+
+![](https://static.vecteezy.com/system/resources/thumbnails/035/982/838/small_2x/ai-generated-monkey-isolated-on-transparent-background-free-png.png){.absolute bottom="-80" left="290"}
+
+# Recap of Session #31: 
+
+## [Extensions](https://quarto.org/docs/extensions/) for Quarto 
+
+:::: {.columns}
+::: {.column width="45%"}
++ `setwd()`
+  + empty folder
++ quarto (package) 
+  + up-to-date
+
+<img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExM21saDc0NmlpeTk2dml2NzNwZ2N0em52aXRlb3Zzbmh4bHA5YTAzcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5Zesu5VPNGJlm/giphy.gif"
+     width="500" height="300"
+     style="position:absolute; left:-120px; bottom:-20px;">
+     
+:::
+
+::: {.column width="55%"}
+more monkeys
+:::
+::::
+
+# Today: 
+
+## [[apa]{.apa}quarto](https://wjschne.github.io/apaquarto/) implementation `r emo::ji("speak_no_evil_monkey")`
+
+![](https://www.bibme.org/wp-content/uploads/2020/03/BibMe-APA-format-student-title-page.png){.absolute left="-230"}
+![](https://www.citationmachine.net/wp-content/uploads/2020/03/APA-7-format-table.png){.absolute right="-230"}
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
+
