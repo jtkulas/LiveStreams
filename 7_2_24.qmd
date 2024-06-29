@@ -1,6 +1,6 @@
 ---
 title: "R for <br>Authoring!!" 
-author: "PSP Session #32...<br>...more [APA]{.apa} monkeybusiness"
+author: "OOH Session #32...<br>...more [APA]{.apa} monkeybusiness"
 title-slide-attributes: 
   data-background-image: https://us.123rf.com/450wm/brita123/brita1232311/brita123231100065/217936054-a-monkey-sits-annoyed-in-front-of-the-computer.jpg?ver=6
   data-background-opacity: ".4"
@@ -30,7 +30,7 @@ filters:
 library(fontawesome)
 ```
 
-## Problem-Solving Panel <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
 
 ::: {layout="[80,20]"}
 ::: first-column
