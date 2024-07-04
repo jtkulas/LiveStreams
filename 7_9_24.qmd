@@ -1,9 +1,9 @@
 ---
 title: "R for <br>Authoring!!" 
-author: "OOH Session #32...<br>...more [APA]{.apa} monkeybusiness"
+author: "OOH Session #33...<br>...Return of the Escape from the Reach <br>of the Kingdom of the Planet of the  [APA]{.apa}"
 title-slide-attributes: 
-  data-background-image: https://us.123rf.com/450wm/brita123/brita1232311/brita123231100065/217936054-a-monkey-sits-annoyed-in-front-of-the-computer.jpg?ver=6
-  data-background-opacity: ".4"
+  data-background-image: https://t4.ftcdn.net/jpg/07/97/72/83/360_F_797728373_LeLYiwkCe1Sn9BQkGj2w4XUTidRXBZcJ.jpg
+  data-background-opacity: ".6"
 format:
   revealjs:
 #    output-location: slide           ## column-fragment; inserts blank 2nd slide
@@ -34,9 +34,9 @@ library(fontawesome)
 
 ::: {layout="[80,20]"}
 ::: first-column
--   Recap session #31&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Recap session #32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue:
-    - `r emo::ji("gorilla")` [apa]{.apa}[quarto](https://wjschne.github.io/apaquarto/) 
+    - Moar [apa]{.apa}[quarto](https://wjschne.github.io/apaquarto/) `r emo::ji("monkey")`
 -   Shared problem-solving
 :::
 
@@ -44,14 +44,15 @@ library(fontawesome)
 :::
 :::
 
-![](img/title31.JPG){.absolute top="170" right="-120" width="550" height="325"}
+![](img/title32.JPG){.absolute top="170" right="-120" width="550" height="325"}
 
-![](https://static.vecteezy.com/system/resources/thumbnails/035/982/838/small_2x/ai-generated-monkey-isolated-on-transparent-background-free-png.png){.absolute bottom="-80" right="-165"}
-![](https://static.vecteezy.com/system/resources/thumbnails/035/982/838/small_2x/ai-generated-monkey-isolated-on-transparent-background-free-png.png){.mirror .absolute bottom="-80" left="-165"}
+![](https://pngimg.com/uploads/monkey/monkey_PNG18742.png){.absolute bottom="-80" right="-165"}
 
-# Recap of Session #31: 
+![](https://png.pngtree.com/png-clipart/20230215/ourmid/pngtree-wild-of-beautiful-monkey-png-image_6602335.png){.absolute bottom="-50" left="400" .mirror}
 
-## [Extensions](https://quarto.org/docs/extensions/) for Quarto 
+# Recap of Session #32: 
+
+## [apa]{.apa}quarto test drive 
 
 :::: {.columns}
 ::: {.column width="45%"}
