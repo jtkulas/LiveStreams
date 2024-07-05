@@ -36,7 +36,7 @@ library(fontawesome)
 ::: first-column
 -   Recap session #32&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue:
-    - Moar [apa]{.apa}[quarto](https://wjschne.github.io/apaquarto/) `r emo::ji("monkey")`
+    - Moar [[apa]{.apa}quarto](https://wjschne.github.io/apaquarto/) `r emo::ji("monkey")`
 -   Shared problem-solving
 :::
 
@@ -46,34 +46,127 @@ library(fontawesome)
 
 ![](img/title32.JPG){.absolute top="170" right="-120" width="550" height="325"}
 
-![](https://pngimg.com/uploads/monkey/monkey_PNG18742.png){.absolute bottom="-80" right="-165"}
+![](https://png.pngtree.com/png-clipart/20230215/ourmid/pngtree-wild-of-beautiful-monkey-png-image_6602335.png){.absolute top="-10" right="250" height="200" .mirror}
 
-![](https://png.pngtree.com/png-clipart/20230215/ourmid/pngtree-wild-of-beautiful-monkey-png-image_6602335.png){.absolute bottom="-50" left="400" .mirror}
+![](https://pngimg.com/uploads/monkey/monkey_PNG18742.png){.absolute bottom="-80" left="-160" height="400" .mirror}
+![](https://pngimg.com/d/monkey_PNG18716.png){.absolute top="45" right="-115" height="150" .mirror}
 
 # Recap of Session #32: 
 
-## [apa]{.apa}quarto test drive 
+## `r emo::ji("motor_scooter")``r emo::ji("dashing_away")` [apa]{.apa}quarto test drive 
 
-:::: {.columns}
-::: {.column width="45%"}
-1. `setwd()`
-  + empty folder
-2. quarto (package) 
-  + up-to-date (v 1.4)
-3. Console install
-  + `quarto::quarto_use_template("wjschne/apaquarto")`
+:::: {.panel-tabset}
+
+### YAML
+
+:::{.columns}
+
+::: {.column width="75%"}
+```{yaml}
+#| echo: true
+#| eval: false
+---
+title: "Diego uses long dashes"
+shorttitle: "but only sometimes"
+author:
+  - name: Jane Doe a Deer
+    corresponding: true
+    orcid: 0000-0000-0000-0001
+    email: janedoe@generic.edu
+    affiliations:
+      - name: Generic University
+        department: Department of Scholarly Studies
+        address: 1234 Capital St.
+        city: New York
+        region: NY
+        country: USA
+        postal-code: 12084-1234
+numbered-lines: yes                                                 #<1>
+abstract: "This document is a template."
+keywords: [keyword1, keyword2, keyword3]
+bibliography: bibliography.bib
+format:
+#  apaquarto-docx: default
+  apaquarto-html: default
+  apaquarto-pdf: default                                            #<2>
+  apaquarto-typst: default                                          #<2>
+  #    documentmode: jou
+---
+  
+  
+```
+1. Didn't get this working last week `r emo::ji("face_with_head_bandage")` -- will take another look today
+2. Also boomer'ed these last week `r emo::ji("airplane")` -- will rectify today
 :::
 
-::: {.column width="55%"}
-<img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExM21saDc0NmlpeTk2dml2NzNwZ2N0em52aXRlb3Zzbmh4bHA5YTAzcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5Zesu5VPNGJlm/giphy.gif"
-     width="700" height="400"
-     style="position:absolute; right:-150px; bottom:150px;">
+::: {.column width="25%"}
+::: {.callout-note}
+Many more `YAML` options available [on the extension site](https://wjschne.github.io/apaquarto/options.html)
 :::
+:::
+
+:::
+
+### body
+
+```{yaml}
+#| echo: true
+#| eval: false
+# Introduction
+
+The origins of Utini!! [@upper1974unsuccessful]          #<1>
+
+## A new hope
+
+### Tatoinne: The sequel
+
+YES!!!!!
+
+#### The Acolyte
+
+Apparently not too good
+
+# Method
+
+## Participants
+
+## Measures
+
+## Procedure
+
+# Results
+
+# Discussion
+
+## Limitations and Future Directions
+
+## Conclusion
+
+This is great
+
+# References
+
+<!-- References will auto-populate in the refs div below -->
+
+::: {#refs}                                            #<2>
+:::                                                    #<2>
+
+# Appendix
+
+# Title for Appendix
+
+
+
+
+
+```
+1. Citation format the same as `rMarkdown`
+2. Leave as is -- references will render automatically from this fenced div
 ::::
 
 # Today: 
 
-## [$\Psi$ [apa]{.apa}quarto](https://wjschne.github.io/apaquarto/) implementation `r emo::ji("speak_no_evil_monkey")`
+## `r emo::ji("construction")``r emo::ji("construction")` `r fontawesome::fa("file-pdf", fill="#C70039")` & figures & tables `r emo::ji("construction")``r emo::ji("construction")`
 
 ![](https://www.bibme.org/wp-content/uploads/2020/03/BibMe-APA-format-student-title-page.png){.absolute left="-230"}
 ![](https://www.citationmachine.net/wp-content/uploads/2020/03/APA-7-format-table.png){.absolute right="-230"}
