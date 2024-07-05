@@ -162,14 +162,21 @@ This is great
 ```
 1. Citation format the same as `rMarkdown`
 2. Leave as is -- references will render automatically from this fenced div
+
+### .html doc
+
+[![](img/apaquarto.JPG)](https://htmlpreview.github.io/?https://github.com/jtkulas/LiveStreams/blob/main/apaquarto.html)
+
+![](https://dejpknyizje2n.cloudfront.net/media/carstickers/versions/curious-monkey-chimpanzee-sticker-ue7bf-x450.png){.absolute bottom="0" right="0"}
 ::::
 
 # Today: 
 
 ## `r emo::ji("construction")``r emo::ji("construction")` `r fontawesome::fa("file-pdf", fill="#C70039")` & figures & tables `r emo::ji("construction")``r emo::ji("construction")`
 
-![](https://www.bibme.org/wp-content/uploads/2020/03/BibMe-APA-format-student-title-page.png){.absolute left="-230"}
-![](https://www.citationmachine.net/wp-content/uploads/2020/03/APA-7-format-table.png){.absolute right="-230"}
+![](https://cms.bibliography.com/wp-content/uploads/2020/02/APA_Table_Example-1.png){.absolute height="550" left="-50"}
+![](https://cms.bibliography.com/wp-content/uploads/2020/08/APA_Figure_Labeled-1.png){.absolute height="550" right="-50"}
+![](https://i.pinimg.com/originals/ce/1d/e1/ce1de1a213e65e9692f3b57fe57a3f0a.png){.absolute right="370" bottom="0"}
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 
