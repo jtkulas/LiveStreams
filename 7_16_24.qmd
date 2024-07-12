@@ -48,7 +48,7 @@ library(fontawesome)
 
 # Recap of Session #33: 
 
-## `r emo::ji("motor_scooter")``r emo::ji("dashing_away")` [apa]{.apa}quarto test drive 
+## `r emo::ji("scroll")` [apa]{.apa}quarto author visit `r emo::ji("writing_hand")`
 
 :::: {.panel-tabset}
 
@@ -57,7 +57,7 @@ library(fontawesome)
 ```{yaml}
 #| echo: true
 #| eval: false
-#| code-line-numbers: "115-122"
+#| code-line-numbers: "89-90|99-101|115-122"
 ---
 title: "Using Quarto to Generate Documents in APA Style (7th Edition)"
 # If blank, the running header is the title in upper case.
@@ -186,13 +186,27 @@ format:
       
       
 ```
-1. First encountered (topmost) format will render if using the R Studio IDE execution "buttons"
+1. First encountered (topmost) format will render if using the `r fontawesome::fa("r-project", fill="#4287f5")` Studio IDE execution "buttons"
 
 ### Future Developments `r fontawesome::fa("github", fill="#FFFFFF")`
 
-Link to GitHub page
+::: {.columns}
 
-[Changelog description](https://www.freecodecamp.org/news/a-beginners-guide-to-git-what-is-a-changelog-and-how-to-generate-it/)
+::: {.column width="60%"}
++ Letter to editor
++ Issues as they arise
+    + [How to](https://docs.github.com/en/issues/tracking-your-work-with-issues/creating-an-issue) create an issue
++ [apa]{.apa}quarto [changelog](https://wjschne.github.io/apaquarto/changelog.html) `r emo::ji("notebook_with_decorative_cover")` 
+    + What is a [Changelog](https://www.freecodecamp.org/news/a-beginners-guide-to-git-what-is-a-changelog-and-how-to-generate-it/)?
+
+:::
+
+::: {.column width="40%"}
+
+[![](https://avatars.githubusercontent.com/u/7905240?v=4)](https://github.com/wjschne/apaquarto)
+
+:::
+:::
 
 ::::
 
