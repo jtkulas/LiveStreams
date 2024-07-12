@@ -3,7 +3,7 @@ title: "R for <br>Authoring!!"
 author: "OOH Session #34...<br>...diagrams"
 title-slide-attributes: 
   data-background-image: https://i.ytimg.com/vi/RNhinA8ajoI/maxresdefault.jpg
-  data-background-opacity: ".6"
+  data-background-opacity: ".4"
 format:
   revealjs:
 #    output-location: slide           ## column-fragment; inserts blank 2nd slide
@@ -36,7 +36,7 @@ library(fontawesome)
 ::: first-column
 -   Recap session #33&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue:
-    - diagrams `r emo::ji("right_arrow_curving_up")``r fontawesome::fa("shapes", fill="#4287f5")``r emo::ji("right_arrow_curving_down")`
+    - [diagrams](https://quarto.org/docs/authoring/diagrams.html) `r emo::ji("right_arrow_curving_up")``r fontawesome::fa("shapes", fill="#4287f5")``r emo::ji("right_arrow_curving_down")`
 -   Shared problem-solving
 :::
 
@@ -52,126 +52,225 @@ library(fontawesome)
 
 :::: {.panel-tabset}
 
-### YAML
+### Format Specification `r fontawesome::fa("file-pdf", fill="#C70039")`
 
-:::{.columns}
-
-::: {.column width="75%"}
 ```{yaml}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "115-122"
 ---
-title: "Diego uses long dashes"
-shorttitle: "but only sometimes"
+title: "Using Quarto to Generate Documents in APA Style (7th Edition)"
+# If blank, the running header is the title in upper case.
+shorttitle: "Template for the apaquarto Extension"
+# Set names and affiliations.
+# It is nice to specify everyone's orcid, if possible.
+# There can be only one corresponding author, but declaring one is optional.
 author:
-  - name: Jane Doe a Deer
+  - name: Ana Fulano
     corresponding: true
     orcid: 0000-0000-0000-0001
-    email: janedoe@generic.edu
+    email: sm@example.org
+    url: https://example.org/
+    # Roles are optional. 
+    # Select from the CRediT: Contributor Roles Taxonomy https://credit.niso.org/
+    # conceptualization, data curation, formal Analysis, funding acquisition, investigation, 
+    # methodology, project administration, resources, software, supervision, validation, 
+    # visualization, writing, editing
+    roles:
+      - conceptualization
+      - writing
     affiliations:
-      - name: Generic University
-        department: Department of Scholarly Studies
+      - id: id1
+        name: "Ana and Blanca's University"
+        group: Clinical Psychology Program
+        department: Department of Psychology
         address: 1234 Capital St.
-        city: New York
+        city: Albany
         region: NY
         country: USA
         postal-code: 12084-1234
-numbered-lines: yes                                                 #<1>
-abstract: "This document is a template."
+  - name: Blanca Zutano
+    orcid: 0000-0000-0000-0002
+    roles:
+      - project administration
+      - formal analysis
+    affiliations: 
+      - ref: id1
+  - name: Carina Mengano
+    orcid: 0000-0000-0000-0003
+    deceased: true
+    roles:
+      - formal analysis
+      - writing
+    affiliations:
+      - name: "Carina's Primary Affiliation"
+      - name: "Carina's Secondary Affiliation"
+    # Because Dolorita is unaffiliated, specify her city instead
+  - name: 
+      - given: Dolorita C.
+        family: Perengano
+    orcid: 0000-0000-0000-0004
+    roles:
+      - writing
+      - methodology
+      - formal analysis
+    # List city and region/state for unaffiliated authors
+    affiliations:
+      - city: Buffalo
+        region: NY
+author-note:
+  status-changes: 
+    # Example: [Author name] is now at [affiliation].
+    affiliation-change: Carina Mengano is now at Generic University.
+    # Example: [Author name] is deceased.
+    deceased: ~
+  # Disclosures condensed to one paragraph, but you can start a field with two line breaks to break them up: \n\nNew Paragraph
+  disclosures:
+    # Example: This study was registered at X (Identifier Y).
+    study-registration: ~
+    # Acknowledge and cite data/materials to be shared.
+    data-sharing: ~
+    # Example: This article is based on data published in [Reference].
+    # Example: This article is based on the dissertation completed by [citation].  
+    related-report: ~
+    # Example: [Author name] has been a paid consultant for Corporation X, which funded this study.
+    conflict-of-interest: The authors have no conflicts of interest to disclose.
+    # Example: This study was supported by Grant [Grant Number] from [Funding Source].
+    financial-support: ~
+    # Example: The authors are grateful to [Person] for [Reason].
+    gratitude: ~
+    # Example. Because the authors are equal contributors, order of authorship was determined by a fair coin toss.
+    authorship-agreements: ~
+abstract: "This document is a template demonstrating the apaquarto format."
+# Put as many keywords at you like, separated by commmas (e.g., [reliability, validity, generalizability])
 keywords: [keyword1, keyword2, keyword3]
+# If true, tables and figures are mingled with the text instead of listed at the end of the document.
+floatsintext: true
+# Numbered lines (.pdf and .docx only)
+numbered-lines: false
+# File with references
 bibliography: bibliography.bib
+# Suppress title page
+suppress-title-page: false
+# Link citations to references
+link-citations: true
+# Masks references that appear in the masked-citations list
+mask: false
+masked-citations:
+  - schneider2012cattell
+  - schneider2015intelligence
+# Language options. See https://quarto.org/docs/authoring/language.html
+lang: en
+language:
+  citation-last-author-separator: "and"
+  citation-masked-author: "Masked Citation"
+  citation-masked-date: "n.d."
+  citation-masked-title: "Masked Title"
+  email: "Email"
+  title-block-author-note: "Author Note"
+  title-block-correspondence-note: "Correspondence concerning this article should be addressed to"
+  title-block-role-introduction: "Author roles were classified using the Contributor Role Taxonomy (CRediT; https://credit.niso.org/) as follows:"
+  references-meta-analysis: "References marked with an asterisk indicate studies included in the meta-analysis."
 format:
-#  apaquarto-docx: default
+  apaquarto-docx: default                                                #<1>
   apaquarto-html: default
-  apaquarto-pdf: default                                            #<2>
-  apaquarto-typst: default                                          #<2>
-  #    documentmode: jou
+  apaquarto-typst: 
+    keep-typ: true
+  apaquarto-pdf:
+    # Can be jou (journal), man (manuscript), stu (student), or doc (document)
+    documentmode: man
+    keep-tex: true                                                      #<1>
 ---
-  
-  
+
+      
+      
+      
 ```
-1. Didn't get this working last week `r emo::ji("face_with_head_bandage")` -- will take another look today
-2. Also boomer'ed these last week `r emo::ji("airplane")` -- will rectify today
-:::
+1. First encountered (topmost) format will render if using the R Studio IDE execution "buttons"
 
-::: {.column width="25%"}
-::: {.callout-note}
-Many more `YAML` options available [on the extension site](https://wjschne.github.io/apaquarto/options.html)
-:::
-:::
+### Future Developments `r fontawesome::fa("github", fill="#FFFFFF")`
 
-:::
+Link to GitHub page
 
-### body
+[Changelog description](https://www.freecodecamp.org/news/a-beginners-guide-to-git-what-is-a-changelog-and-how-to-generate-it/)
 
-```{yaml}
-#| echo: true
-#| eval: false
-# Introduction
-
-The origins of Utini!! [@upper1974unsuccessful]          #<1>
-
-## A new hope
-
-### Tatoinne: The sequel
-
-YES!!!!!
-
-#### The Acolyte
-
-Apparently not too good
-
-# Method
-
-## Participants
-
-## Measures
-
-## Procedure
-
-# Results
-
-# Discussion
-
-## Limitations and Future Directions
-
-## Conclusion
-
-This is great
-
-# References
-
-<!-- References will auto-populate in the refs div below -->
-
-::: {#refs}                                            #<2>
-:::                                                    #<2>
-
-# Appendix
-
-# Title for Appendix
-
-
-
-
-
-```
-1. Citation format the same as `rMarkdown`
-2. Leave as is -- references will render automatically from this fenced div
-
-### .html doc
-
-[![](img/apaquarto.JPG)](https://htmlpreview.github.io/?https://github.com/jtkulas/LiveStreams/blob/main/apaquarto.html)
-
-![](https://dejpknyizje2n.cloudfront.net/media/carstickers/versions/curious-monkey-chimpanzee-sticker-ue7bf-x450.png){.absolute bottom="0" right="0"}
 ::::
 
 # Today: 
 
-## `r emo::ji("construction")``r emo::ji("construction")` `r fontawesome::fa("file-pdf", fill="#C70039")` & figures & tables `r emo::ji("construction")``r emo::ji("construction")`
+## Diagrams `r emo::ji("right_arrow_curving_up")``r fontawesome::fa("shapes", fill="#4287f5")``r emo::ji("right_arrow_curving_down")`
 
-![](https://cms.bibliography.com/wp-content/uploads/2020/02/APA_Table_Example-1.png){.absolute height="550" left="-50"}
-![](https://cms.bibliography.com/wp-content/uploads/2020/08/APA_Figure_Labeled-1.png){.absolute height="550" right="-50"}
-![](https://i.pinimg.com/originals/ce/1d/e1/ce1de1a213e65e9692f3b57fe57a3f0a.png){.absolute right="370" bottom="0"}
+:::{.columns}
+
+::: {.column width="20%"}
+
+[![](https://m.media-amazon.com/images/I/71R7rm0JQlL._AC_SY500_.jpg)](https://mermaid.js.org/syntax/flowchart.html)
+[![](https://graphviz.org/Resources/app.png)](https://graphviz.org/Gallery/directed/datastruct.html)
+
+:::
+
+::: {.column width="80%"}
+
+::: {.panel-tabset}
+
+### Mermaid `r emo::ji("mermaid")` 
+
+```{mermaid}
+%%| echo: true
+%%| output-location: column-fragment
+%%| classes: custom7030
+
+%% Mermaid:
+
+flowchart TD
+  A[Hard edge] --> B(Round edge)                                       
+  B --> C{Decision}                                                    
+  C --> D{{Result one}}
+  C --> E[("Love it <br/> #10084;")]
+
+  style C fill:#f9f,stroke:#333,stroke-width:4px
+
+```
+
+### Graphviz `r fontawesome::fa("chart-pie", fill="#F49FF6")`
+
+```{dot}
+//| echo: true
+//| output-location: column-fragment
+//| classes: custom4060
+//| fig-width: 5
+
+// Graphviz:
+
+graph G {
+  layout=neato
+  run -- intr;
+  intr -- runbl;
+  runbl -- run;
+  run -- kernel;
+  kernel -- zombie;
+  kernel -- sleep;
+  kernel -- runmem;
+  sleep -- swap;
+  swap -- runswap;
+  runswap -- new;
+  runswap -- runmem;
+  new -- runmem;
+  sleep -- runmem;
+}
+
+```
+
+:::
+
+:::
+
+:::{.notes}
+Note that square brackets `[]`, parentheses `()`, and curly brackets `{}` are controlling the object borders
+
+The "heart" icon is rendered via [HTML decimal code](https://www.rapidtables.com/web/html/html-codes/html-code-heart.html)
+:::
+:::
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 

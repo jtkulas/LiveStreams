@@ -143,4 +143,19 @@ width: 10px;
 .mirror {
   transform: rotateY(180deg);
 }
+
+.reveal .custom7030 > div.column:first-child {
+  width: 70%;
+}
+.reveal .custom7030 div.column:not(:first-child) {
+  width: 30%;
+}
+
+.reveal .custom4060 > div.column:first-child {
+  width: 40%;
+}
+.reveal .custom4060 div.column:not(:first-child) {
+  width: 60%;
+}
+
                    /* https://stackoverflow.com/questions/73460033/how-to-change-code-block-height-and-width-in-quarto-presentation */
