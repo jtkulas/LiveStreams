@@ -232,6 +232,15 @@ flowchart TD
 
 ```
 
+
+:::{.notes}
+Square brackets `[]`, parentheses `()`, and curly brackets `{}` are controlling the object borders
+
+The "heart" icon is rendered via [HTML decimal code](https://www.rapidtables.com/web/html/html-codes/html-code-heart.html)
+
+Theming seems easier via [within-chunk modifications](https://github.com/squidfunk/mkdocs-material/discussions/4582) rather than attempting [CSS modifications](https://quarto.org/docs/authoring/diagrams.html#customizing-mermaid)
+:::
+
 ### Graphviz `r fontawesome::fa("chart-pie", fill="#F49FF6")`
 
 ```{dot}
@@ -265,11 +274,6 @@ graph G {
 
 :::
 
-:::{.notes}
-Note that square brackets `[]`, parentheses `()`, and curly brackets `{}` are controlling the object borders
-
-The "heart" icon is rendered via [HTML decimal code](https://www.rapidtables.com/web/html/html-codes/html-code-heart.html)
-:::
 :::
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
