@@ -1,0 +1,136 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #35...<br>...diagrams Part II"
+title-slide-attributes: 
+  data-background-image: https://media.istockphoto.com/id/484669341/vector/operator.jpg?s=612x612&w=0&k=20&c=woDDFgm_l4d-QlRd5M0FyOabAkdMoqSteybnOHIij-4=
+  data-background-opacity: ".3"
+format:
+  revealjs:
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [night, weekly.scss]
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+# bibliography: r-references.bib
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #34&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue:
+    - `r fontawesome::fa("chart-pie", fill="#9FF6E3")` [Graphviz](https://quarto.org/docs/authoring/diagrams.html) `r fontawesome::fa("chart-pie", fill="#F49FF6")` 
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+:::
+
+![](img/title34.JPG){.absolute top="170" right="-120" width="550" height="325"}
+
+# Recap of Session #34: 
+
+## `r emo::ji("mermaid")``r emo::ji("mermaid")`Mermaid diagrams`r emo::ji("mermaid")``r emo::ji("mermaid")`  
+
+# Today: 
+
+## `r fontawesome::fa("chart-pie", fill="#F49FF6")` Graphviz Diagrams `r fontawesome::fa("chart-pie", fill="#9FF6E3")`
+
+:::{.columns}
+
+::: {.column width="20%"}
+
+[![](https://m.media-amazon.com/images/I/71R7rm0JQlL._AC_SY500_.jpg)](https://mermaid.js.org/syntax/flowchart.html)
+[![](https://graphviz.org/Resources/app.png)](https://graphviz.org/Gallery/directed/datastruct.html)
+
+:::
+
+::: {.column width="80%"}
+
+::: {.panel-tabset}
+
+### Type I
+
+Maybe different graphviz types as tabs
+```{mermaid}
+%%| echo: true
+%%| output-location: column-fragment
+%%| classes: custom7030
+
+%% Mermaid:
+
+flowchart LR
+  A[Hard edge] --> B(Round edge)                                       
+  B --> C{Decision}                                                    
+  C --> D{{Result one}}
+  C --> E[("Love it <br/> #10084;")]
+
+  style C fill:#f9f,stroke:#333,stroke-width:4px
+
+```
+
+### Graphviz `r fontawesome::fa("chart-pie", fill="#F49FF6")`
+
+```{dot}
+//| echo: true
+//| output-location: column-fragment
+//| classes: custom4060
+//| fig-width: 5
+
+// Graphviz:
+
+graph G {
+  layout=neato
+  run -- intr;
+  intr -- runbl;
+  runbl -- run;
+  run -- kernel;
+  kernel -- zombie;
+  kernel -- sleep;
+  kernel -- runmem;
+  sleep -- swap;
+  swap -- runswap;
+  runswap -- new;
+  runswap -- runmem;
+  new -- runmem;
+  sleep -- runmem;
+}
+
+```
+
+:::
+
+:::
+
+:::{.notes}
+Note that square brackets `[]`, parentheses `()`, and curly brackets `{}` are controlling the object borders
+
+The "heart" icon is rendered via [HTML decimal code](https://www.rapidtables.com/web/html/html-codes/html-code-heart.html)
+:::
+:::
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
+

@@ -1,8 +1,8 @@
 ---
 title: "R for <br>Authoring!!" 
-author: "OOH Session #34...<br>...diagrams"
+author: "OOH Session #35...<br>...diagrams Part II"
 title-slide-attributes: 
-  data-background-image: https://i.ytimg.com/vi/RNhinA8ajoI/maxresdefault.jpg
+  data-background-image: https://images.pond5.com/historical-old-telegraph-operator-neo-footage-081223534_iconl.jpeg
   data-background-opacity: ".4"
 format:
   revealjs:
@@ -236,7 +236,7 @@ format:
 
 %% Mermaid:
 
-flowchart TD
+flowchart LR
   A[Hard edge] --> B(Round edge)                                       
   B --> C{Decision}                                                    
   C --> D{{Result one}}
