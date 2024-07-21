@@ -9,6 +9,8 @@
 @import url('https://fonts.googleapis.com/css?family=Poetsen One');
 @import url('https://fonts.googleapis.com/css?family=Notable');
 @import url('https://fonts.googleapis.com/css?family=Rye');
+@import url('https://fonts.googleapis.com/css?family=Notable');
+@import url('https://fonts.googleapis.com/css?family=Kalnia Glaze');
 
 /*-- scss:defaults --*/
 
@@ -126,6 +128,17 @@ $presentation-title-slide-text-color: black;
   font-family: 'Rye';
 }
 
+.diagram {
+  color: #9FF6E3;
+  font-family: 'Notable';
+}
+
+.mermaid {
+  font-family: 'Kalnia Glaze';
+  font-size: 150%;
+  font-weight: bold;
+}
+
 .smaller {
   font-size: 80%;
 }
@@ -158,4 +171,11 @@ width: 10px;
   width: 60%;
 }
 
+.reveal .custom5050 > div.column:first-child {
+  width: 50%;
+}
+.reveal .custom5050 div.column:not(:first-child) {
+  width: 50%;
+}
                    /* https://stackoverflow.com/questions/73460033/how-to-change-code-block-height-and-width-in-quarto-presentation */
+                   
