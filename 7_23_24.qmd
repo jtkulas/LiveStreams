@@ -10,7 +10,7 @@ format:
       theme: forest
 #    output-location: slide           ## column-fragment; inserts blank 2nd slide
     code-overflow: wrap              ## instead of horizontal scroll
-    theme: [night, weekly.scss]
+    theme: [league, weekly.scss]       ## night
     logo: "erg2.png"
     footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
     transition: slide
@@ -66,7 +66,7 @@ library(fontawesome)
 %%| classes: custom6040
 
 flowchart LR
-  A[Hard edge] --> B(Round edge)
+  A[   Hard edge   ] --> B(Round edge)
   B --> C{Decision}
   C --> D(((Result one)))
   C --> E((Result two))
@@ -100,6 +100,10 @@ gantt
         Task in Another :2014-01-12, 12d
         another task    :24d
 ```
+
+::: aside
+Scaling (text/image) issues seem to be [operating system-related](https://forum.obsidian.md/t/mermaid-scaling-text-cufoff-or-overflowing/4594/36). <br>`Ctrl-0` followed by `ctrl-r` will reset screens in html browsers.
+:::
 
 ## `r emo::ji("mermaid")``r emo::ji("mermaid")`[Mermaid diagrams](https://mermaid.js.org/syntax/flowchart.html)`r emo::ji("mermaid")``r emo::ji("mermaid")`
 
