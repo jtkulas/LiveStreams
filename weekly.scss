@@ -179,7 +179,12 @@ width: 10px;
 }
                    /* https://stackoverflow.com/questions/73460033/how-to-change-code-block-height-and-width-in-quarto-presentation */
                    
-.mermaid svg { 
-  max-width: 100%; 
-  height: auto;
+.protestriot {
+  font-family: 'Protest Riot';
+}
+
+.pirate {
+  color: #c2b236;
+  font-family: 'Pirata One';
+  font-style: italic;
 }

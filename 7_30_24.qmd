@@ -1,16 +1,16 @@
 ---
 title: "R for <br>Authoring!!" 
-author: "OOH Session #35...<br>...[diagrams]{.diagram} Part II"
+author: "OOH Session #36...<br>[...Exploratory Graph Analyses]{.pirate}"
 title-slide-attributes: 
-  data-background-image: https://media.istockphoto.com/id/484669341/vector/operator.jpg?s=612x612&w=0&k=20&c=woDDFgm_l4d-QlRd5M0FyOabAkdMoqSteybnOHIij-4=
-  data-background-opacity: ".3"
+  data-background-image: https://knightstemplar.co/wp-content/uploads/2023/09/galileus_Famous_Vikings_during_the_MIddle_Ages_7540cd8c-6f4e-47fc-b8b3-0d4427b4d153-1024x512.jpg
+  data-background-opacity: ".5"
 format:
   revealjs:
     mermaid:
       theme: forest
 #    output-location: slide           ## column-fragment; inserts blank 2nd slide
     code-overflow: wrap              ## instead of horizontal scroll
-    theme: [league, weekly.scss]       ## night
+    theme: [night, weekly.scss]       ## league (fades out middle)
     logo: "erg2.png"
     footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
     transition: slide
@@ -46,9 +46,9 @@ library(fontawesome)
 :::
 :::
 
-![](img/title34.JPG){.absolute top="170" right="-120" width="600" height="325"}
+![](img/title35.JPG){.absolute top="170" right="-120" width="600" height="325"}
 
-# Recap of Session #34: 
+# Recap of Session #35: 
 
 ## `r emo::ji("mermaid")``r emo::ji("mermaid")`[Mermaid diagrams](https://mermaid.js.org/syntax/flowchart.html)`r emo::ji("mermaid")``r emo::ji("mermaid")`
 
