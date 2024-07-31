@@ -2,8 +2,8 @@
 title: "R for <br>Authoring!!" 
 author: "OOH Session #37...<br>...[Lightbox]{.lightbox} images"
 title-slide-attributes: 
-  data-background-image: img/37_2.png
-  data-background-opacity: ".6"
+  data-background-image: img/37.3.png
+  data-background-opacity: ".5"
 format:
   revealjs:
     mermaid:
