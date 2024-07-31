@@ -9,7 +9,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poetsen One');
 @import url('https://fonts.googleapis.com/css?family=Notable');
 @import url('https://fonts.googleapis.com/css?family=Rye');
-@import url('https://fonts.googleapis.com/css?family=Notable');
 @import url('https://fonts.googleapis.com/css?family=Kalnia Glaze');
 
 /*-- scss:defaults --*/
@@ -187,4 +186,13 @@ width: 10px;
   color: #c2b236;
   font-family: 'Pirata One';
   font-style: italic;
+}
+
+.lightbox {
+  font-size: 60px;
+  color: #FDFEFF;           /* #00c0a3 */
+  font-family: 'Poetsen One';
+  text-shadow: 
+    3px 3px 3px #8ffcff,
+    -3px -3px 3px #8ffcff !important;
 }
