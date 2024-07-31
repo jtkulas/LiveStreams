@@ -163,6 +163,13 @@ width: 10px;
   width: 30%;
 }
 
+.reveal .custom6040 > div.column:first-child {
+  width: 60%;
+}
+.reveal .custom6040 div.column:not(:first-child) {
+  width: 40%;
+}
+
 .reveal .custom4060 > div.column:first-child {
   width: 40%;
 }
@@ -188,6 +195,7 @@ width: 10px;
   font-style: italic;
 }
 
+
 .lightbox {
   font-size: 60px;
   color: #FDFEFF;           /* #00c0a3 */
@@ -195,4 +203,28 @@ width: 10px;
   text-shadow: 
     3px 3px 3px #8ffcff,
     -3px -3px 3px #8ffcff !important;
+
+.blue1 {
+  color: #03045e;
+}
+.blue2 {
+  color: #023e8a;
+}
+.blue3 {
+  color: #0077b6;
+}
+.blue4 {
+  color: #0096c7;
+}
+.blue5 {
+  color: #00b4d8;
+}
+.blue6 {
+  color: #48cae4;
+}
+.blue7 {
+  color: #90e0ef;
+}
+.blue8 {
+  color: #ade8f4;
 }
