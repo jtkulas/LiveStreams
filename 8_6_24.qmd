@@ -1,8 +1,8 @@
 ---
 title: "R for <br>Authoring!!" 
-author: "OOH Session #37...<br>...[Lightbox]{.lightbox} images" 
+author: "OOH Session #37...<br>...[Lightbox]{.lbox} images" 
 title-slide-attributes: 
-  data-background-image: img/37.3.png
+  data-background-image: img/neonsign.png
   data-background-opacity: ".5"
 format:
   revealjs:
@@ -22,7 +22,7 @@ format:
       method: mathjax        ## LaTeX in code annotations
       url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
 engine: knitr                        ## not picking up inline codes
-# bibliography: r-references.bib
+bibliography: temp.bib
 filters: 
   - reveal-header          ## extension to add a hyperlink to slide logo
 ---
@@ -38,7 +38,7 @@ library(fontawesome)
 ::: first-column
 -   Recap session #36&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue:
-    - [Lightbox]{.lightbox} <br>images `r emo::ji("light_bulb")``r emo::ji("light_bulb")``r emo::ji("camera")``r emo::ji("light_bulb")``r emo::ji("light_bulb")`
+    - [Lightbox]{.lbox} <br>images `r emo::ji("light_bulb")``r emo::ji("light_bulb")``r emo::ji("camera")``r emo::ji("light_bulb")``r emo::ji("light_bulb")`
 -   Shared problem-solving
 :::
 
@@ -50,41 +50,50 @@ library(fontawesome)
 
 # Recap of Session #36: 
 
-## `r emo::ji("mermaid")``r emo::ji("mermaid")`[Mermaid diagrams](https://mermaid.js.org/syntax/flowchart.html)`r emo::ji("mermaid")``r emo::ji("mermaid")`
+## [Exploratory Graph Analyses](https://r-ega.net/)
 
-[Gantt Charts:]{.mermaid}
+```{r}
+#| echo: true
+#| output-location: column
+#| lightbox: true
 
-![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3dja3F4M2tmeThzYXdhaXNmYXM4c2pwbWNhdmNmNGx0a3E1dzBwYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/C7h03NzNQgYtG/giphy.gif){.absolute height="300" right="-150" bottom="0"}
+library(EGAnet)
+library(psych) ## for bfi data
 
-```{mermaid}
-%%| echo: true
-%%| output-location: column-fragment
-%%| classes: custom4060
-gantt
-    title A Gantt Diagram
-    dateFormat YYYY-MM-DD
-    section Section
-        A task          :a1, 2014-01-01, 30d
-        Another task    :after a1, 20d
-    section Another
-        Task in Another :2014-01-12, 12d
-        another task    :24d
+bfi_uva <- UVA(         #<1> 
+  data = bfi[,1:25]
+)                       #<1>
+
+bfi_ega <- EGA(data = bfi)    #<2>
+
 ```
+1. Per recommendation of package authors
+2. Actual EGA - note entire dataframe accomodated (we didn't kick out redundancies or demographics)
 
-::: aside
->[NOTE: Scaling (text/image) issues may be [OS-related](https://forum.obsidian.md/t/mermaid-scaling-text-cufoff-or-overflowing/4594/36). <br>`Ctrl-0` followed by `ctrl-r` will reset screens in html browsers.]{.protestriot}
+::: {.callout-note}
+@golino2017exploratory source article can be [downloaded here](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0174035)
 :::
 
 # Today: 
 
-## [[Lightbox]{.lightbox} images](https://quarto.org/docs/output-formats/html-lightbox-figures.html) `r emo::ji("light_bulb")``r emo::ji("light_bulb")``r emo::ji("camera")``r emo::ji("light_bulb")``r emo::ji("light_bulb")`
+## [[Lightbox]{.lbox} images](https://quarto.org/docs/output-formats/html-lightbox-figures.html) `r emo::ji("light_bulb")``r emo::ji("light_bulb")``r emo::ji("camera")``r emo::ji("light_bulb")``r emo::ji("light_bulb")`
 
-![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ__QyQ908lefHexldPIj22nJ5B0GJzsR_EhA&s)
-![](https://kitleyskrypt.com/wp-content/uploads/2016/02/edwigefenech.jpg?w=620)
-![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC5MXkt7IrDqaggo2lKItTSCohdcSBWI_H6g&s)
-![](https://upload.wikimedia.org/wikipedia/commons/2/2b/Edwige_Fenech_in_Top_Sensation_%281%29.jpg)
-![](https://image.tmdb.org/t/p/w300/AplCfkkWGoPdh6FgOI1sKvlg9IY.jpg)
+:::: {.columns}
+::: {.column width="50%"}
 
+### Unboxed:
+
+![](https://cdn.hanna-barberawiki.com/thumb/b/b9/Snagglepuss_Lion.png/300px-Snagglepuss_Lion.png){.absolute height="345"}
+
+:::
+
+::: {.column width="50%"}
+
+### Boxed:
+![](https://i.pinimg.com/736x/01/ff/45/01ff45cc072005ce57c8b4b1e3b3a676.jpg){.lightbox}
+
+:::
+::::
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 
