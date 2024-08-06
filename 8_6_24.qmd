@@ -1,6 +1,6 @@
 ---
 title: "R for <br>Authoring!!" 
-author: "OOH Session #37...<br>...[Lightbox]{.lightbox} images"
+author: "OOH Session #37...<br>...[Lightbox]{.lightbox} images" 
 title-slide-attributes: 
   data-background-image: img/37.3.png
   data-background-opacity: ".5"
@@ -38,7 +38,7 @@ library(fontawesome)
 ::: first-column
 -   Recap session #36&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue:
-    - [Lightbox]{.lightbox} <br>images
+    - [Lightbox]{.lightbox} <br>images `r emo::ji("light_bulb")``r emo::ji("light_bulb")``r emo::ji("camera")``r emo::ji("light_bulb")``r emo::ji("light_bulb")`
 -   Shared problem-solving
 :::
 
@@ -49,36 +49,6 @@ library(fontawesome)
 ![](img/title36.JPG){.absolute top="170" right="-120" width="600" height="325"}
 
 # Recap of Session #36: 
-
-## `r emo::ji("mermaid")``r emo::ji("mermaid")`[Mermaid diagrams](https://mermaid.js.org/syntax/flowchart.html)`r emo::ji("mermaid")``r emo::ji("mermaid")`
-
-![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXdpZGJiMng1dHljanVuZHIwdWtpcjdkdnF6eWpzYmdsMWN4YzBneiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pRv0P6b7FqWek/giphy.gif){.absolute left="-120" bottom="0" height="300"}
-
-[Flowcharts:]{.mermaid}
-
-```{mermaid}
-%%|echo: true
-%%|warning: false
-%%|include: true
-%%|label: fig-diagram
-%%|fig-cap: better than semPlot
-%%| output-location: column-fragment
-%%| classes: custom6040
-
-flowchart LR
-  A[   Hard edge   ] --> B(Round edge)
-  B --> C{Decision}
-  C --> D(((Result one)))
-  C --> E((Result two))
-  F -. go there smarty .-> F[Result three]
-  A == go here dummy ==> G[(Result four)]
-  
-  
-  
-  
-  
-
-```
 
 ## `r emo::ji("mermaid")``r emo::ji("mermaid")`[Mermaid diagrams](https://mermaid.js.org/syntax/flowchart.html)`r emo::ji("mermaid")``r emo::ji("mermaid")`
 
@@ -105,286 +75,16 @@ gantt
 >[NOTE: Scaling (text/image) issues may be [OS-related](https://forum.obsidian.md/t/mermaid-scaling-text-cufoff-or-overflowing/4594/36). <br>`Ctrl-0` followed by `ctrl-r` will reset screens in html browsers.]{.protestriot}
 :::
 
-## `r emo::ji("mermaid")``r emo::ji("mermaid")`[Mermaid diagrams](https://mermaid.js.org/syntax/flowchart.html)`r emo::ji("mermaid")``r emo::ji("mermaid")`
-
-[State Diagrams:]{.mermaid}
-
-```{mermaid}
-%%| echo: true
-%%| output-location: column-fragment
-%%| classes: custom3070
----
-title: Simple sample
----
-stateDiagram-v2
-direction LR
-    [*] --> Still
-    Still --> [*]
-
-    Still --> Moving
-    Moving --> Still
-    Moving --> Crash
-    Crash --> [*]
-
-```
-
-![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHg2dW03ZTZtdDhxcjBqdzF3dHU3MXQxZW1rNnpoN25tNjdjbWNyMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/b6WB5QiCPqr6/giphy.gif){.absolute height="300" right="-50" bottom="0"}
-
-## `r emo::ji("mermaid")``r emo::ji("mermaid")`[Mermaid diagrams](https://mermaid.js.org/syntax/flowchart.html)`r emo::ji("mermaid")``r emo::ji("mermaid")`
-
-[Journeys:]{.mermaid}
-
-![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGdrcHFtYnh0YjNiY3RpdW9saW9nN2x3YmdjM2gyNW5qZWFibmVvbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/b04IUMBQrT5Sw/giphy.gif){.absolute right="-130" top="-10" height="250"}
-
-```{mermaid}
-%%| echo: true
-%%| output-location: column-fragment
-%%| classes: custom4060
-%%| fig-width: 6
-
-journey
-    title My working day
-    section Go to work
-      Make tea: 5: Me
-      Go upstairs: 3: Me
-      Yell at cat: 4: Me, Cat, Eunice
-      Do work: 1: Me, Cat, Diego
-    section Go home
-      Go downstairs: 2: Me
-      Sit down: 5: Me
-
-```
-
 # Today: 
 
-## `r fontawesome::fa("chart-pie", fill="#F49FF6")` [Graphviz Diagrams](https://quarto.org/docs/authoring/diagrams.html) `r fontawesome::fa("chart-pie", fill="#9FF6E3")`
+## [[Lightbox]{.lightbox} images](https://quarto.org/docs/output-formats/html-lightbox-figures.html) `r emo::ji("light_bulb")``r emo::ji("light_bulb")``r emo::ji("camera")``r emo::ji("light_bulb")``r emo::ji("light_bulb")`
 
-::: {.panel-tabset}
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ__QyQ908lefHexldPIj22nJ5B0GJzsR_EhA&s)
+![](https://kitleyskrypt.com/wp-content/uploads/2016/02/edwigefenech.jpg?w=620)
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC5MXkt7IrDqaggo2lKItTSCohdcSBWI_H6g&s)
+![](https://upload.wikimedia.org/wikipedia/commons/2/2b/Edwige_Fenech_in_Top_Sensation_%281%29.jpg)
+![](https://image.tmdb.org/t/p/w300/AplCfkkWGoPdh6FgOI1sKvlg9IY.jpg)
 
-### Finite Automation
-
-```{dot}
-//| echo: true
-//| output-location: column-fragment
-//| classes: custom5050
-//| fig-width: 5
-
-digraph finite_state_machine {
-	fontname="Helvetica,Arial,sans-serif"
-	node [fontname="Helvetica,Arial,sans-serif"]
-	edge [fontname="Helvetica,Arial,sans-serif"]
-	rankdir=LR;
-	node [shape = doublecircle]; 0 3 4 8;
-	node [shape = circle];
-	0 -> 2 [label = "SS(B)"];
-	0 -> 1 [label = "SS(S)"];
-	1 -> 3 [label = "S($end)"];
-	2 -> 6 [label = "SS(b)"];
-	2 -> 5 [label = "SS(a)"];
-	2 -> 4 [label = "S(A)"];
-	5 -> 7 [label = "S(b)"];
-	5 -> 5 [label = "S(a)"];
-	6 -> 6 [label = "S(b)"];
-	6 -> 5 [label = "S(a)"];
-	7 -> 8 [label = "S(b)"];
-	7 -> 5 [label = "S(a)"];
-	8 -> 6 [label = "S(b)"];
-	8 -> 5 [label = "S(a)"];
-}
-```
-
-### Neato 
-
-```{dot}
-//| echo: true
-//| output-location: column-fragment
-//| classes: custom4060
-//| fig-width: 5
-
-digraph Twelve_colors {
-	label = "Twelve colors. Neato layout"
-	labelloc = "b"
-	layout = neato
-	fontname = Arial
-	node [
-		shape = circle
-		width = 1.5
-		color="#00000088"
-		style = filled
-		fontname="Helvetica,Arial,sans-serif"
-	]
-	edge [len = 2 penwidth = 1.5 arrowhead=open]
-	start = regular
-	normalize = 0
-	green -> {white yellow cyan yellowgreen springgreen} [color = green]
-	green [fillcolor = green fontcolor = white]
-	white [fillcolor = white]
-	blue [fillcolor = blue fontcolor = white]
-	red [fillcolor = red fontcolor = white]
-	red -> {white yellow magenta orange deeppink } [color = red]
-	yellow [fillcolor = yellow]
-	yellow -> {orange yellowgreen} [color = yellow]
-	blue -> {white cyan magenta deepskyblue purple} [color = blue]
-	cyan [fillcolor = cyan]
-	magenta [fillcolor = magenta fontcolor = white]
-	deepskyblue [fillcolor = deepskyblue]
-	cyan -> {springgreen deepskyblue} [color  = cyan]
-	orange [fillcolor = orange]
-	yellowgreen [fillcolor = yellowgreen]
-	deeppink [fillcolor = deeppink fontcolor = white]
-	magenta -> {deeppink purple} [color = magenta]
-	purple [fillcolor = purple fontcolor = white]
-	springgreen [fillcolor = springgreen]
-	// © 2022 Costa Shulyupin, licensed under EPL
-}
-
-```
-
-### Radial
-
-```{dot}
-//| echo: true
-//| output-location: column-fragment
-//| classes: custom4060
-//| fig-width: 5
-graph happiness {
-	labelloc="t"
-	label="Mind map of Happiness.\nTwopi radial graph."
-	fontname="URW Chancery L, Apple Chancery, Comic Sans MS, cursive"
-	layout=twopi; graph [ranksep=2];
-	edge [penwidth=5 color="#f0f0ff"]
-	node [fontname="URW Chancery L, Apple Chancery, Comic Sans MS, cursive"]
-	node [style="filled" penwidth=0 fillcolor="#f0f0ffA0" fontcolor=indigo]
-	Happiness [fontsize=50 fontcolor=red URL="https://en.wikipedia.org/wiki/Category:Happiness"]
-	node [fontsize=40]
-	Happiness -- {
-		Peace
-		Love
-		Soul
-		Mind
-		Life
-		Health
-	}
-	Life [fontcolor=seagreen]
-	Health [fontcolor=mediumvioletred]
-	node [fontsize=25]
-	Love [fontcolor=orchid URL="https://en.wikipedia.org/wiki/Category:Love"]
-	Love -- {
-		Giving
-		People
-		Beauty
-	}
-	Success [fontcolor=goldenrod]
-	Life -- {
-		Nature
-		Wellbeing
-		Success
-	}
-	Peace [URL="https://en.wikipedia.org/wiki/Category:Peace"]
-	Peace -- {
-		Connection
-		Relationship
-		Caring
-	}
-	Health -- {
-		Body
-		Recreation
-	}
-	Mind [URL="https://en.wikipedia.org/wiki/Category:Mind"]
-	Mind -- {
-		Cognition
-		Consciousness
-		Intelligence
-	}
-	Soul [URL="https://en.wikipedia.org/wiki/Soul"]
-	Soul -- {
-		Emotions
-		Self
-		Meditation
-	}
-	node [fontsize=""]
-	Beauty -- {
-		Esthetics
-		Art
-	}
-	People -- {
-		Family
-		Partner
-		Hug
-	}
-	Giving -- {
-		Feelings
-		Support
-	}
-	Self -- {
-		Delight
-		Joy
-		Expression 
-	}
-	Success -- {
-		Creation
-		Profit
-		Win
-		Career
-	}
-	Recreation -- {
-		Leisure
-		Sleep
-	}
-	Emotions [URL="https://en.wikipedia.org/wiki/Soul"]
-	Emotions -- {
-		Positiveness Tranquility
-	}
-	Self -- Emotions [weight=10 penwidth=1 style=dotted constraint=false]
-	Body -- {
-		Medicine Exercises Nutrition Water Heart
-	}
-	Wellbeing -- {
-		Home Work Finance Clothes Transport
-	}
-	Relationship -- {
-		Friends Community Society
-	}
-	Connection -- {
-		Acceptance
-		Forgiveness
-		Gratitude
-		Agreement
-	}
-	Caring -- {
-		Respect
-		Empathy
-		Help
-	}
-	Consciousness -- {
-		Awareness
-	}
-	Meditation -- {
-		Contemplation Breath
-	}
-	Cognition -- {
-		Imagination
-		Perception
-		Thinking
-		Understanding
-		Memory
-	}
-	Intelligence -- {
-		Learning
-		Experiment
-		Education
-	}
-	Nature -- {
-		Ocean
-		Forest
-		Pets
-		Wildlife
-	}
-	c [label="© 2020-2022 Costa Shulyupin" fontsize=12 shape=plain style="" fontcolor=gray]
-}
-```
-
-:::
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 
