@@ -10,6 +10,7 @@
 @import url('https://fonts.googleapis.com/css?family=Notable');
 @import url('https://fonts.googleapis.com/css?family=Rye');
 @import url('https://fonts.googleapis.com/css?family=Kalnia Glaze');
+@import url('https://fonts.googleapis.com/css?family=Permanent Marker');
 
 /*-- scss:defaults --*/
 
@@ -17,7 +18,7 @@ $body-bg: #191919;
 $body-color: #fff;
 $link-color: #42affa;
 $code-color: hotpink;
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 $presentation-title-slide-text-color: black;
 
 /*-- scss:rules --*/
@@ -228,4 +229,9 @@ width: 10px;
 }
 .blue8 {
   color: #ade8f4;
+}
+
+.pmarker {
+  color: #34ebc6;
+  font-family: 'Permanent Marker';
 }

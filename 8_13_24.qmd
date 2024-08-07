@@ -1,0 +1,159 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #38...<br>...customizing [Callouts]{.pmarker}" 
+title-slide-attributes: 
+  data-background-image: https://img.freepik.com/premium-vector/beautiful-woman-with-megaphone-pop-art-retro-vector-illustration_113655-177.jpg
+  data-background-opacity: ".3"
+format:
+  revealjs:
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [night, weekly.scss]       ## league (fades out middle)
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #37&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue:
+    - [Callout]{.pmarker} customization
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+:::
+
+![](img/title37.JPG){.absolute top="170" right="-120" width="600" height="325"}
+
+# Recap of Session #37: 
+
+## [[Lightbox]{.lbox} images](https://quarto.org/docs/output-formats/html-lightbox-figures.html) `r emo::ji("light_bulb")``r emo::ji("light_bulb")``r emo::ji("camera")``r emo::ji("light_bulb")``r emo::ji("light_bulb")`
+
+::: {.panel-tabset}
+
+### Code chunk
+
+```{r}
+#| echo: true
+#| output-location: column
+#| lightbox: true
+
+# lightbox: true              #<1>
+
+library(ggplot2)
+library(palmerpenguins)
+
+ggplot(data = penguins,
+ mapping = aes(x = body_mass_g, 
+           y = bill_length_mm, 
+           colour = species)) +
+  geom_point() +
+  labs(x = "Body mass, g", 
+       y = "Bill length, mm", 
+       colour = "Species") 
+
+```
+1. add `#| lightbox: true` to code chunk commands
+
+### in-line `{span}`
+
+:::: {.columns}
+::: {.column width="50%"}
+
+```{yaml}
+#| echo: true
+#| eval: false
+#| 
+![](pinkpanther.jpg){.lightbox}
+```
+
+:::
+
+::: {.column width="50%"}
+
+![](https://i.pinimg.com/736x/01/ff/45/01ff45cc072005ce57c8b4b1e3b3a676.jpg){.lightbox}
+
+:::
+::::
+
+### Galleries
+
+:::: {.columns}
+::: {.column width="50%"}
+
+```{yaml}
+#| echo: true
+#| eval: false
+
+
+![](snagglepuss.jpg){group="pinkos"}      #<1>
+![](pinkpanther.jpg){group="pinkos"}
+```
+1. To use galleries most effectively, first "turn on" lightbox within the YAML: `lightbox: true`
+
+
+:::
+
+::: {.column width="50%"}
+
+![](https://cdn.hanna-barberawiki.com/thumb/b/b9/Snagglepuss_Lion.png/300px-Snagglepuss_Lion.png){group="pinkos"} 
+![](https://i.pinimg.com/736x/01/ff/45/01ff45cc072005ce57c8b4b1e3b3a676.jpg){group="pinkos"}
+
+:::
+::::
+
+
+:::
+
+# Today: 
+
+## [Callout]{.pmarker} customization:
+
+:::{.callout-note}
+There are five built-in callouts:  
+
++ note  
++ tip  
++ warning   
++ caution
++ important
+:::
+
+:::{.callout-tip}
+## `r fontawesome::fa("youtube", fill="#FF0000")` Tutorial
+
+Fantastic walk-through available [here](https://www.youtube.com/watch?v=DDQO_3R-q74)
+:::
+
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
+
