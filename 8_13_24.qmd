@@ -10,7 +10,7 @@ format:
       theme: forest
 #    output-location: slide           ## column-fragment; inserts blank 2nd slide
     code-overflow: wrap              ## instead of horizontal scroll
-    theme: [night, weekly.scss]       ## league (fades out middle)
+    theme: [league, weekly.scss]       ## night & league
     logo: "erg2.png"
     footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
     transition: slide
@@ -23,7 +23,7 @@ format:
       url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
 engine: knitr                        ## not picking up inline codes
 bibliography: temp.bib
-lightbox: true
+#lightbox: true
 filters: 
   - reveal-header          ## extension to add a hyperlink to slide logo
 ---
@@ -45,6 +45,7 @@ library(fontawesome)
 
 ::: second-column
 :::
+
 :::
 
 ![](img/title37.JPG){.absolute top="170" right="-120" width="600" height="325"}
@@ -91,6 +92,10 @@ ggplot(data = penguins,
 ![](pinkpanther.jpg){.lightbox}
 ```
 
+::: {.callout-tip}
+To use *galleries* most effectively, first "turn on" lightbox within the YAML: `lightbox: true`
+:::
+
 :::
 
 ::: {.column width="50%"}
@@ -100,38 +105,62 @@ ggplot(data = penguins,
 :::
 ::::
 
-### Galleries
-
-:::: {.columns}
-::: {.column width="50%"}
-
-```{yaml}
-#| echo: true
-#| eval: false
-
-
-![](snagglepuss.jpg){group="pinkos"}      #<1>
-![](pinkpanther.jpg){group="pinkos"}
-```
-1. To use galleries most effectively, first "turn on" lightbox within the YAML: `lightbox: true`
-
-
-:::
-
-::: {.column width="50%"}
-
-![](https://cdn.hanna-barberawiki.com/thumb/b/b9/Snagglepuss_Lion.png/300px-Snagglepuss_Lion.png){group="pinkos"} 
-![](https://i.pinimg.com/736x/01/ff/45/01ff45cc072005ce57c8b4b1e3b3a676.jpg){group="pinkos"}
-
-:::
-::::
-
-
 :::
 
 # Today: 
 
-## [Callout]{.pmarker} customization:
+## [Callout]{.pmarker} [customization](https://github.com/quarto-dev/quarto-cli/blob/fe989e5468f2a5e0545a0db441a771a74f9e3098/src/resources/formats/html/styles-callout.html#L3):
+
+```{css}
+
+.trynew {
+  margin-top: 1em;
+  margin-bottom: 1em;  
+  border-radius: .25rem;
+  border-left: solid #acacac .3rem;
+  border-right: solid 1px silver;
+  border-top: solid 1px silver;
+  border-bottom: solid 1px silver;
+  border-left-color: #34ebc6 !important;
+}
+
+.trynew-icon {
+  height: 5.0rem;
+  width: 6.0rem;
+  display: inline-block;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: 7.0rem 7.0rem;
+  margin-top: -1.5rem;
+  padding-right: 2.1rem;
+  background-image: url('https://i.pinimg.com/originals/4c/09/e6/4c09e608d548b4abf525f3bb2b215c68.png');
+}
+
+.trynew-header {
+  margin-top: 0.0em;
+  margin-bottom: 0.5em;
+  border-bottom: none;
+  font-weight: 800;
+  color: #71797E;
+  font-family: 'Dancing Script';
+  opacity: 85%;
+  font-size: 2.0rem;
+  padding-left: 0.5em;
+  padding-right: 2.5em;
+  display: flex;
+  background-color: #34ebc6; 
+}
+
+.trynew-body {
+  font-size: 1.9rem;
+  font-weight: 400;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+```
+
+:::: {.columns}
+::: {.column width="60%"}
 
 :::{.callout-note}
 There are five built-in callouts:  
@@ -143,12 +172,28 @@ There are five built-in callouts:
 + important
 :::
 
-:::{.callout-tip}
-## `r fontawesome::fa("youtube", fill="#FF0000")` Tutorial
-
-Fantastic walk-through available [here](https://www.youtube.com/watch?v=DDQO_3R-q74)
 :::
 
+::: {.column width="40%"}
+
+<br>
+<br>
+
+:::{.trynew}
+
+::::{.trynew-header}
+:::::{.trynew-icon}
+:::::
+`r fontawesome::fa("youtube", fill="#FF0000")` Tutorial
+::::
+
+::::{.trynew-body}
+[Fantastic]{.kulas3} walk-through available [here](https://www.youtube.com/watch?v=DDQO_3R-q74)
+::::
+
+:::
+:::
+::::
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 
