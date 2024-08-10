@@ -93,7 +93,7 @@ ggplot(data = penguins,
 ```
 
 ::: {.callout-tip}
-To use *galleries* most effectively, first "turn on" lightbox within the YAML: `lightbox: true`
+Image-by-image (using `{spans}` or `#| lightbox: true` code-chunk specifications) seems to be a preferred method *within revealjs presentations* because...
 :::
 
 :::
@@ -102,6 +102,32 @@ To use *galleries* most effectively, first "turn on" lightbox within the YAML: `
 
 ![](https://i.pinimg.com/736x/01/ff/45/01ff45cc072005ce57c8b4b1e3b3a676.jpg){.lightbox}
 
+:::
+::::
+
+### Galleries
+
+:::: {.columns}
+::: {.column width="50%"}
+
+```{yaml}
+#| echo: true
+#| eval: false
+#| 
+![](pinkpanther.jpg){.lightbox group="pinko"}
+
+![](snagglepuss.jpg){.lightbox group="pinko"}
+```
+
+::: {.callout-warning}
+...you can also "turn on" lightbox within the YAML: `lightbox: true` -- however, this appears to interfere with `.absolute` image placement specifications
+:::
+
+:::
+
+::: {.column width="50%"}
+![](https://upload.wikimedia.org/wikipedia/en/9/96/Pink_Panther.png){.lightbox group="pinko"}
+![](https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Snagglepuss.png/225px-Snagglepuss.png){.lightbox group="pinko"}
 :::
 ::::
 

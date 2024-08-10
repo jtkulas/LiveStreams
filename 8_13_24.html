@@ -14,7 +14,7 @@
 <script src="8_13_24_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="8_13_24_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="8_13_24_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.47">
+  <meta name="generator" content="quarto-1.5.52">
 
   <meta name="author" content="OOH Session #38… …customizing Callouts">
   <title>R for  Authoring!!</title>
@@ -408,8 +408,8 @@ OOH Session #38…<br>…customizing <span class="pmarker">Callouts</span>
 </div>
 
 </section>
-<section id="open-office-hours-august-09-2024" class="slide level2">
-<h2>Open Office Hours <br>(August 09, 2024)</h2>
+<section id="open-office-hours-august-10-2024" class="slide level2">
+<h2>Open Office Hours <br>(August 10, 2024)</h2>
 <div>
 
 </div>
@@ -440,7 +440,7 @@ OOH Session #38…<br>…customizing <span class="pmarker">Callouts</span>
 <section id="lightbox-images" class="slide level2">
 <h2><a href="https://quarto.org/docs/output-formats/html-lightbox-figures.html"><span class="lbox">Lightbox</span> images</a> 💡💡📷💡💡</h2>
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Code chunk</a></li><li><a href="#tabset-1-2">in-line <code>{span}</code></a></li></ul>
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Code chunk</a></li><li><a href="#tabset-1-2">in-line <code>{span}</code></a></li><li><a href="#tabset-1-3">Galleries</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
 <div class="cell columns column-output-location">
@@ -491,12 +491,37 @@ OOH Session #38…<br>…customizing <span class="pmarker">Callouts</span>
 <p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p>To use <em>galleries</em> most effectively, first “turn on” lightbox within the YAML: <code>lightbox: true</code></p>
+<p>Image-by-image (using <code>{spans}</code> or <code>#| lightbox: true</code> code-chunk specifications) seems to be a preferred method <em>within revealjs presentations</em> because…</p>
 </div>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
 <p><a href="https://i.pinimg.com/736x/01/ff/45/01ff45cc072005ce57c8b4b1e3b3a676.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img data-src="https://i.pinimg.com/736x/01/ff/45/01ff45cc072005ce57c8b4b1e3b3a676.jpg"></a></p>
+</div></div>
+</div>
+<div id="tabset-1-3">
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href=""></a><span class="at">![](pinkpanther.jpg){.lightbox group="pinko"}</span></span>
+<span id="cb2-2"><a href=""></a></span>
+<span id="cb2-3"><a href=""></a><span class="at">![](snagglepuss.jpg){.lightbox group="pinko"}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>…you can also “turn on” lightbox within the YAML: <code>lightbox: true</code> – however, this appears to interfere with <code>.absolute</code> image placement specifications</p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p><a href="https://upload.wikimedia.org/wikipedia/en/9/96/Pink_Panther.png" class="lightbox" data-gallery="pinko"><img data-src="https://upload.wikimedia.org/wikipedia/en/9/96/Pink_Panther.png"></a> <a href="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Snagglepuss.png/225px-Snagglepuss.png" class="lightbox" data-gallery="pinko"><img data-src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Snagglepuss.png/225px-Snagglepuss.png"></a></p>
 </div></div>
 </div>
 </div>
@@ -598,15 +623,16 @@ OOH Session #38…<br>…customizing <span class="pmarker">Callouts</span>
 </div>
 </div></div>
 </section>
-<section id="session-info-august-09-2024-rendering" class="slide level2">
-<h2><svg aria-hidden="true" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4287f5;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg> Session Info (August 09, 2024) Rendering:</h2>
+<section id="session-info-august-10-2024-rendering" class="slide level2">
+<h2><svg aria-hidden="true" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4287f5;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg> Session Info (August 10, 2024) Rendering:</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>R version 4.2.2 (2022-10-31 ucrt)
+<pre><code>R version 4.3.1 (2023-06-16 ucrt)
 Platform: x86_64-w64-mingw32/x64 (64-bit)
 Running under: Windows 10 x64 (build 19045)
 
 Matrix products: default
+
 
 locale:
 [1] LC_COLLATE=English_United States.utf8 
@@ -615,6 +641,9 @@ locale:
 [4] LC_NUMERIC=C                          
 [5] LC_TIME=English_United States.utf8    
 
+time zone: America/Chicago
+tzcode source: internal
+
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
@@ -622,17 +651,17 @@ other attached packages:
 [1] palmerpenguins_0.1.1 ggplot2_3.5.1        fontawesome_0.5.2   
 
 loaded via a namespace (and not attached):
- [1] compiler_4.2.2    pillar_1.9.0      tools_4.2.2       digest_0.6.31    
- [5] lubridate_1.9.3   jsonlite_1.8.8    evaluate_0.23     lifecycle_1.0.4  
- [9] tibble_3.2.1      gtable_0.3.5      timechange_0.3.0  pkgconfig_2.0.3  
-[13] rlang_1.1.3       cli_3.6.0         rstudioapi_0.15.0 yaml_2.3.8       
-[17] xfun_0.42         emo_0.0.0.9000    fastmap_1.1.1     withr_3.0.0      
-[21] stringr_1.5.1     dplyr_1.1.4       knitr_1.45        generics_0.1.3   
-[25] vctrs_0.6.5       grid_4.2.2        tidyselect_1.2.1  glue_1.6.2       
-[29] R6_2.5.1          fansi_1.0.6       rmarkdown_2.26    farver_2.1.1     
-[33] purrr_1.0.1       magrittr_2.0.3    scales_1.3.0      htmltools_0.5.7  
-[37] assertthat_0.2.1  colorspace_2.1-0  labeling_0.4.3    utf8_1.2.4       
-[41] stringi_1.7.12    munsell_0.5.1     crayon_1.5.2     </code></pre>
+ [1] gtable_0.3.4      jsonlite_1.8.8    dplyr_1.1.3       compiler_4.3.1   
+ [5] crayon_1.5.2      tidyselect_1.2.0  stringr_1.5.1     assertthat_0.2.1 
+ [9] scales_1.3.0      yaml_2.3.7        fastmap_1.1.1     R6_2.5.1         
+[13] labeling_0.4.3    generics_0.1.3    knitr_1.45        tibble_3.2.1     
+[17] munsell_0.5.0     lubridate_1.9.2   pillar_1.9.0      rlang_1.1.1      
+[21] utf8_1.2.3        stringi_1.7.12    xfun_0.40         timechange_0.2.0 
+[25] cli_3.6.1         withr_2.5.0       magrittr_2.0.3    digest_0.6.33    
+[29] grid_4.3.1        rstudioapi_0.15.0 lifecycle_1.0.4   vctrs_0.6.3      
+[33] evaluate_0.23     glue_1.6.2        farver_2.1.1      emo_0.0.0.9000   
+[37] fansi_1.0.4       colorspace_2.1-0  rmarkdown_2.25    purrr_1.0.2      
+[41] tools_4.3.1       pkgconfig_2.0.3   htmltools_0.5.7  </code></pre>
 </div>
 </div>
 <div class="quarto-auto-generated-content">
@@ -1281,7 +1310,7 @@ loaded via a namespace (and not attached):
       }
     });
     </script>
-    <script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","loop":false});
+    <script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":false,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});
     (function() {
       let previousOnload = window.onload;
       window.onload = () => {
