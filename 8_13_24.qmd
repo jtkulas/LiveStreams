@@ -147,7 +147,7 @@ Image-by-image (using `{spans}` or `#| lightbox: true` code-chunk specifications
   border-right: solid 1px silver;
   border-top: solid 1px silver;
   border-bottom: solid 1px silver;
-  border-left-color: #34ebc6 !important;
+  border-left-color: #ff99ff !important;
 }
 
 .trynew-icon {
@@ -174,7 +174,7 @@ Image-by-image (using `{spans}` or `#| lightbox: true` code-chunk specifications
   padding-left: 0.5em;
   padding-right: 2.5em;
   display: flex;
-  background-color: #34ebc6; 
+  background-color: #ff99ff; 
 }
 
 .trynew-body {
