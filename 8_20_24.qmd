@@ -1,0 +1,261 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #39...<br>...introducing [interactivity]{.electric}" 
+title-slide-attributes: 
+  data-background-image: https://images.pond5.com/woman-hand-touching-plasma-ball-footage-164460940_iconl.jpeg
+  data-background-opacity: ".8"
+format:
+  revealjs:
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [league, weekly.scss]       ## night & league
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #38&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue:
+    - `r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")`[[Interactivity]{.electric}](https://quarto.org/docs/interactive/)`r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")`
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title38.JPG){.absolute top="170" right="-120" width="600" height="325"}
+
+# Recap of Session #38: 
+
+## [Customized]{.pmarker} Callouts:
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{css}
+#| eval: true
+#| echo: true
+#| code-line-numbers: "3-46"
+
+@import url('https://fonts.googleapis.com/css?family=Dancing Script');
+
+.trynew {                             /*<1>*/
+  margin-top: 1em;
+  margin-bottom: 1em;  
+  border-radius: .25rem;
+  border-left: solid #acacac .3rem;
+  border-right: solid 1px silver;
+  border-top: solid 1px silver;
+  border-bottom: solid 1px silver;
+  border-left-color: #ff99ff !important;    /*<1>*/
+}                                     
+
+.trynew-header {                      /*<2>*/
+  margin-top: 0.0em;
+  margin-bottom: 0.5em;
+  border-bottom: none;
+  font-weight: 800;
+  color: #71797E;
+  font-family: 'Dancing Script';
+  font-size: 2.0rem;
+  opacity: 85%;
+  padding-left: 0.5em;
+  padding-right: 2.5em;
+  display: flex;
+  background-color: #ff99ff;       /*<2>*/
+}  
+
+.trynew-icon {                        /*<3>*/
+  height: 5.0rem;
+  width: 6.0rem;
+  display: inline-block;
+  content: "";
+  background-repeat: no-repeat;
+  background-size: 7.0rem 7.0rem;
+  margin-top: -1.5rem;
+  padding-right: 2.1rem;
+  background-image: url('https://i.pinimg.com/originals/4c/09/e6/4c09e608d548b4abf525f3bb2b215c68.png');           /*<3>*/
+}                                      
+
+.trynew-body {                     /*<4>*/
+  font-size: 1.9rem;
+  font-weight: 400;
+  padding-left: 0.5em;
+  padding-right: 0.5em;            /*<4>*/
+}
+
+.kulas3 {
+  font-size: 35px;
+  font-weight: bold;
+  color: #ff99ff;
+  font-family: 'Dancing Script';
+}
+```
+1. General shape of callout -- outermost "rectangle". Note line 11 parrots the intended header color `r emo::ji("parrot")`
+2. Color (line 26), font (lines 18--21), and padding/size of top-most header 
+3. Icon specification -- here pulling image from internet (line 38)
+4. Actual content of callout -- messaging typically goes inside this portion of the container
+:::
+
+::: {.column width="50%"}
+
+```{yaml}
+#| echo: true
+#| eval: false
+
+:::{.trynew}
+::::{.trynew-header}
+:::::{.trynew-icon}
+:::::
+`r fontawesome::fa("youtube", fill="#FF0000")` Tutorial
+::::
+
+::::{.trynew-body}
+[Fantastic]{.kulas3} walk-through available [here](https://www.youtube.com/watch?v=DDQO_3R-q74)
+::::
+:::
+```
+
+:::{.trynew}
+
+::::{.trynew-header}
+:::::{.trynew-icon}
+:::::
+`r fontawesome::fa("youtube", fill="#FF0000")` Tutorial
+::::
+
+::::{.trynew-body}
+[Fantastic]{.kulas3} walk-through available [here](https://www.youtube.com/watch?v=DDQO_3R-q74)
+::::
+
+:::
+:::
+::::
+
+# Today: 
+
+## Element `r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")`[[Interactivity]{.electric}](https://quarto.org/docs/interactive/)`r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")`
+
+::: {.panel-tabset}
+### Plotly`r fontawesome::fa("chart-pie", fill="#fdefb2")`
+
+```{r}
+#| echo: false
+#| 
+library(plotly)
+
+data <- read.csv("https://raw.githubusercontent.com/plotly/datasets/master/gapminderDataFiveYear.csv")
+
+data_2007 <- data[which(data$year == 2007),]
+data_2007 <- data_2007[order(data_2007$continent, data_2007$country),]
+slope <- 2.666051223553066e-05
+data_2007$size <- sqrt(data_2007$pop * slope)
+colors <- c('#4AC6B7', '#1972A4', '#965F8A', '#FF7070', '#C61951')
+
+fig <- plot_ly(data_2007, x = ~gdpPercap, y = ~lifeExp, color = ~continent, size = ~size, colors = colors,
+        type = 'scatter', mode = 'markers', sizes = c(min(data_2007$size), max(data_2007$size)),
+        marker = list(symbol = 'circle', sizemode = 'diameter',
+                      line = list(width = 2, color = '#FFFFFF')),
+        text = ~paste('Country:', country, '<br>Life Expectancy:', lifeExp, '<br>GDP:', gdpPercap,
+                      '<br>Pop.:', pop))
+fig <- fig %>% layout(title = 'Life Expectancy v. Per Capita GDP, 2007',
+         xaxis = list(title = 'GDP per capita (2000 dollars)',
+                      gridcolor = 'rgb(255, 255, 255)',
+                      range = c(2.003297660701705, 5.191505530708712),
+                      type = 'log',
+                      zerolinewidth = 1,
+                      ticklen = 5,
+                      gridwidth = 2),
+         yaxis = list(title = 'Life Expectancy (years)',
+                      gridcolor = 'rgb(255, 255, 255)',
+                      range = c(36.12621671352166, 91.72921793264332),
+                      zerolinewidth = 1,
+                      ticklen = 5,
+                      gridwith = 2),
+         paper_bgcolor = 'rgb(243, 243, 243)',
+         plot_bgcolor = 'rgb(243, 243, 243)')
+
+fig
+```
+
+### leaflet`r emo::ji("leaf_fluttering_in_wind")`
+
+```{r}
+library(leaflet)
+
+circles <- data.frame(lng = c(-74.2115, -74.1990), lat = c(40.8178, 40.8610))
+
+leaflet() %>%
+  addTiles() %>%
+  setView(lng = -74.2100, lat = 40.84, zoom = 13) %>%
+  addCircles(data = circles, radius = 500,
+             popup = c("Play", "Work")) %>%
+  addCircleMarkers(data = circles,
+                   popup = c("Irish Bar", "Psych Building")) 
+ 
+```
+
+### threejs `r fontawesome::fa("js", fill="#f7df1e")`
+
+```{r}
+suppressPackageStartupMessages(library(threejs, quietly=TRUE))
+data(LeMis)
+graphjs(LeMis, vertex.size = 1)
+```
+
+### htmlwidgets`r emo::ji("gear")`
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {.callout-note}
+Recommended wrapper for interactive objects -- not always seemingly necessary
+:::
+:::
+
+::: {.column width="50%"}
+::: {.callout-important}
+None of the previous 3 visuals utilized `htmlwidgets` functions within this current slide presentation
+:::
+:::
+::::
+
+::: {.callout-caution}
+The `threejs` object lost "spinnability" interactivity without `htmlwidgets` being utilized (online hosted slides versus locally rendered slides) 
+:::
+
+:::
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
+

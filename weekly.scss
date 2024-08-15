@@ -11,6 +11,9 @@
 @import url('https://fonts.googleapis.com/css?family=Rye');
 @import url('https://fonts.googleapis.com/css?family=Kalnia Glaze');
 @import url('https://fonts.googleapis.com/css?family=Permanent Marker');
+@import url('https://fonts.googleapis.com/css?family=Rock Salt');
+@import url('https://fonts.googleapis.com/css?family=Shojumaru');
+@import url('https://fonts.googleapis.com/css?family=Fascinate Inline');
 
 /*-- scss:defaults --*/
 
@@ -18,7 +21,7 @@ $body-bg: #191919;
 $body-color: #fff;
 $link-color: #42affa;
 $code-color: hotpink;
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: left;
 $presentation-title-slide-text-color: black;
 
 /*-- scss:rules --*/
@@ -235,4 +238,13 @@ width: 10px;
 .pmarker {
   color: #34ebc6;
   font-family: 'Permanent Marker';
+}
+
+.electric {
+  font-family: 'Shojumaru';
+  font-style: italic;
+  color: #FDFEFF;           /* #00c0a3 */
+  text-shadow: 
+    3px 3px 3px #B026FF,
+    -3px -3px 3px #8ffcff !important;
 }
