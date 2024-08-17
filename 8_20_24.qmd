@@ -234,13 +234,13 @@ graphjs(LeMis, vertex.size = 1)
 :::: {.columns}
 
 ::: {.column width="50%"}
-::: {.callout-note}
-Recommended wrapper for interactive objects -- not always seemingly necessary
+::: {.callout-important}
+Recommended wrapper for interactive objects -- seemingly not always necessary
 :::
 :::
 
 ::: {.column width="50%"}
-::: {.callout-important}
+::: {.callout-note}
 None of the previous 3 visuals utilized `htmlwidgets` functions within this current slide presentation
 :::
 :::
