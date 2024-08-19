@@ -229,7 +229,23 @@ data(LeMis)
 graphjs(LeMis, vertex.size = 1)
 ```
 
-### htmlwidgets`r emo::ji("gear")`
+### dygraphs `r emo::ji("chart_increasing")`
+
+```{r}
+library(dygraphs)
+lungDeaths <- cbind(mdeaths, fdeaths)
+dygraph(lungDeaths) %>%
+  dySeries("mdeaths", label = "Male") %>%
+  dySeries("fdeaths", label = "Female") %>%
+  dyOptions(stackedGraph = TRUE) %>%
+  dyRangeSelector(height = 20) %>%
+  dyShading(from = "1912-1-1", to = "1990-1-1", color = "#dbe2e9")
+
+```
+
+:::
+
+## [htmlwidgets](https://www.htmlwidgets.org/)`r emo::ji("gear")`
 
 :::: {.columns}
 
@@ -241,15 +257,13 @@ Recommended wrapper for interactive objects -- seemingly not always necessary
 
 ::: {.column width="50%"}
 ::: {.callout-note}
-None of the previous 3 visuals utilized `htmlwidgets` functions within this current slide presentation
+None of the previous 4 visuals utilized `htmlwidgets` functions within this current slide presentation
 :::
 :::
 ::::
 
 ::: {.callout-caution}
-The `threejs` object lost "spinnability" interactivity without `htmlwidgets` being utilized (online hosted slides versus locally rendered slides) 
-:::
-
+The `threejs` object lost "spinnability" interactivity without `htmlwidgets` being explicitly utilized (online hosted slides versus locally rendered "client" slides) 
 :::
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
