@@ -14,6 +14,7 @@
 @import url('https://fonts.googleapis.com/css?family=Rock Salt');
 @import url('https://fonts.googleapis.com/css?family=Shojumaru');
 @import url('https://fonts.googleapis.com/css?family=Fascinate Inline');
+@import url('https://fonts.googleapis.com/css?family=Fleur De Leah');
 
 /*-- scss:defaults --*/
 
@@ -21,7 +22,7 @@ $body-bg: #191919;
 $body-color: #fff;
 $link-color: #42affa;
 $code-color: hotpink;
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 $presentation-title-slide-text-color: black;
 
 /*-- scss:rules --*/
@@ -247,4 +248,10 @@ width: 10px;
   text-shadow: 
     3px 3px 3px #B026FF,
     -3px -3px 3px #8ffcff !important;
+}
+
+.leaflet {
+  font-family: 'Fleur De Leah';
+  font-size: 140px;
+  color: #adebb3;
 }

@@ -1,9 +1,9 @@
 ---
 title: "R for <br>Authoring!!" 
-author: "OOH Session #39...<br>...introducing [interactivity]{.electric}" 
+author: "OOH Session #40...<br>[...Leaflet Maps]{.leaflet}" 
 title-slide-attributes: 
-  data-background-image: https://images.pond5.com/woman-hand-touching-plasma-ball-footage-164460940_iconl.jpeg
-  data-background-opacity: ".8"
+  data-background-image:   https://img.pikbest.com/wp/202413/leaves-green-plants-cartoon-drawing-plant-illustration-background_10465601.jpg!w700wp
+  data-background-opacity: ".3"
 format:
   revealjs:
     mermaid:
@@ -37,7 +37,7 @@ library(fontawesome)
 
 ::: {layout="[80,20]"}
 ::: first-column
--   Recap session #38&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Recap session #39&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue:
     - `r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")`[[Interactivity]{.electric}](https://quarto.org/docs/interactive/)`r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")`
 -   Shared problem-solving
@@ -48,121 +48,12 @@ library(fontawesome)
 
 :::
 
-![](img/title38.JPG){.absolute top="170" right="-120" width="600" height="325"}
+![](img/title39.JPG){.absolute top="170" right="-120" width="600" height="325"}
 
-# Recap of Session #38: 
+# Recap of Session #39: 
 
-## [Customized]{.pmarker} Callouts:
+## `Plotly` `r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")`[[Interactivity]{.electric}](https://quarto.org/docs/interactive/)`r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")`
 
-:::: {.columns}
-
-::: {.column width="50%"}
-
-```{css}
-#| eval: true
-#| echo: true
-#| code-line-numbers: "3-46"
-
-@import url('https://fonts.googleapis.com/css?family=Dancing Script');
-
-.trynew {                             /*<1>*/
-  margin-top: 1em;
-  margin-bottom: 1em;  
-  border-radius: .25rem;
-  border-left: solid #acacac .3rem;
-  border-right: solid 1px silver;
-  border-top: solid 1px silver;
-  border-bottom: solid 1px silver;
-  border-left-color: #ff99ff !important;    /*<1>*/
-}                                     
-
-.trynew-header {                      /*<2>*/
-  margin-top: 0.0em;
-  margin-bottom: 0.5em;
-  border-bottom: none;
-  font-weight: 800;
-  color: #71797E;
-  font-family: 'Dancing Script';
-  font-size: 2.0rem;
-  opacity: 85%;
-  padding-left: 0.5em;
-  padding-right: 2.5em;
-  display: flex;
-  background-color: #ff99ff;       /*<2>*/
-}  
-
-.trynew-icon {                        /*<3>*/
-  height: 5.0rem;
-  width: 6.0rem;
-  display: inline-block;
-  content: "";
-  background-repeat: no-repeat;
-  background-size: 7.0rem 7.0rem;
-  margin-top: -1.5rem;
-  padding-right: 2.1rem;
-  background-image: url('https://i.pinimg.com/originals/4c/09/e6/4c09e608d548b4abf525f3bb2b215c68.png');           /*<3>*/
-}                                      
-
-.trynew-body {                     /*<4>*/
-  font-size: 1.9rem;
-  font-weight: 400;
-  padding-left: 0.5em;
-  padding-right: 0.5em;            /*<4>*/
-}
-
-.kulas3 {
-  font-size: 35px;
-  font-weight: bold;
-  color: #ff99ff;
-  font-family: 'Dancing Script';
-}
-```
-1. General shape of callout -- outermost "rectangle". Note line 11 parrots the intended header color `r emo::ji("parrot")`
-2. Color (line 26), font (lines 18--21), and padding/size of top-most header 
-3. Icon specification -- here pulling image from internet (line 38)
-4. Actual content of callout -- messaging typically goes inside this portion of the container
-:::
-
-::: {.column width="50%"}
-
-```{yaml}
-#| echo: true
-#| eval: false
-
-:::{.trynew}
-::::{.trynew-header}
-:::::{.trynew-icon}
-:::::
-`r fontawesome::fa("youtube", fill="#FF0000")` Tutorial
-::::
-
-::::{.trynew-body}
-[Fantastic]{.kulas3} walk-through available [here](https://www.youtube.com/watch?v=DDQO_3R-q74)
-::::
-:::
-```
-
-:::{.trynew}
-
-::::{.trynew-header}
-:::::{.trynew-icon}
-:::::
-`r fontawesome::fa("youtube", fill="#FF0000")` Tutorial
-::::
-
-::::{.trynew-body}
-[Fantastic]{.kulas3} walk-through available [here](https://www.youtube.com/watch?v=DDQO_3R-q74)
-::::
-
-:::
-:::
-::::
-
-# Today: 
-
-## Element `r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")`[[Interactivity]{.electric}](https://quarto.org/docs/interactive/)`r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")`
-
-::: {.panel-tabset}
 ### Plotly`r fontawesome::fa("chart-pie", fill="#fdefb2")`
 
 ```{r}
@@ -204,6 +95,12 @@ fig <- fig %>% layout(title = 'Life Expectancy v. Per Capita GDP, 2007',
 fig
 ```
 
+# Today: 
+
+## Moar `r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")`[[Interactivity]{.electric}](https://quarto.org/docs/interactive/)`r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")`
+
+::: {.panel-tabset}
+
 ### leaflet`r emo::ji("leaf_fluttering_in_wind")`
 
 ```{r}
@@ -234,12 +131,18 @@ graphjs(LeMis, vertex.size = 1)
 ```{r}
 library(dygraphs)
 lungDeaths <- cbind(mdeaths, fdeaths)
-dygraph(lungDeaths) %>%
+
+hc_gdpr <- dygraph(lungDeaths) %>%
   dySeries("mdeaths", label = "Male") %>%
   dySeries("fdeaths", label = "Female") %>%
   dyOptions(stackedGraph = TRUE) %>%
   dyRangeSelector(height = 20) %>%
   dyShading(from = "1912-1-1", to = "1990-1-1", color = "#dbe2e9")
+
+htmlwidgets::saveWidget(hc_gdpr, "hc_gdpr.html", 
+             selfcontained = TRUE, knitrOptions = list())
+
+widgetframe::frameWidget(hc_gdpr) 
 
 ```
 
