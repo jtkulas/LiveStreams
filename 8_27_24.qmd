@@ -40,7 +40,7 @@ library(fontawesome)
 -   Recap session #39&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue:
     - [[Interactivity]{.electric}](https://quarto.org/docs/interactive/) (`r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")``r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")`)
-      + [Leaflet Maps]{.leaflet2}
+      + [[Leaflet Maps]{.leaflet2}](https://r-charts.com/spatial/interactive-maps-leaflet/)
 -   Shared problem-solving
 :::
 
@@ -53,7 +53,11 @@ library(fontawesome)
 
 # Recap of Session #39: 
 
-## Plotly`r fontawesome::fa("chart-pie", fill="#fdefb2")` [[Interactivity]{.electric}](https://quarto.org/docs/interactive/)`r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")``r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")`
+## Plotly`r fontawesome::fa("chart-pie", fill="#fdefb2")` [[Interactivity]{.electric}](https://quarto.org/docs/interactive/)`r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")`
+
+::: {.panel-tabset}
+
+### Bubbles `r fontawesome::fa("soap", fill="#b592f1")`
 
 ```{r}
 #| echo: false
@@ -94,9 +98,51 @@ fig <- fig %>% layout(title = 'Life Expectancy v. Per Capita GDP, 2007',
 fig
 ```
 
+### Ogives `r fontawesome::fa("chart-column", fill="#4deeea")`
+
+### Maps `r emo::ji("globe")`
+
+```{r}
+library(plotly)
+
+us_cities = read.csv("https://raw.githubusercontent.com/plotly/datasets/master/us-cities-top-1k.csv")
+
+fig <- us_cities 
+fig <- fig %>%
+  plot_ly(
+    lat = ~lat,
+    lon = ~lon,
+    marker = list(color = "fuchsia", size=us_cities$Population/60000),
+    type = 'scattermapbox',
+    hovertext = us_cities[,"City"]) 
+fig <- fig %>%
+  layout(
+    mapbox = list(
+      style = 'open-street-map',
+      zoom =2.5,
+      center = list(lon = -88, lat = 34))) 
+
+fig
+```
+
+:::
+
 # Today: 
 
 ##  [L]{.leaflet2}[eaflet]{.leaflet_lower}`r emo::ji("leaf_fluttering_in_wind")` [[Interactivity]{.electric}](https://quarto.org/docs/interactive/)`r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")``r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")`
+
+:::: {.columns}
+
+::: {.column width="25%"}
+
+`r fa("check",fill="#228B22")` plotly  
+`r fa("circle-xmark",fill="#D22B2B")` leaflet  
+`r fa("circle-xmark",fill="#D22B2B")` threejs  
+`r fa("circle-xmark",fill="#D22B2B")` dygraphs
+
+:::
+
+::: {.column width="75%"}
 
 ::: {.panel-tabset}
 
@@ -104,77 +150,67 @@ fig
 
 ```{r}
 library(leaflet)
-
-circles <- data.frame(lng = c(-74.2115, -74.1990), lat = c(40.8178, 40.8610))
+library(leaflet.extras)
 
 leaflet() %>%
   addTiles() %>%
-  setView(lng = -74.2100, lat = 40.84, zoom = 13) %>%
-  addCircles(data = circles, radius = 500,
-             popup = c("Play", "Work")) %>%
-  addCircleMarkers(data = circles,
-                   popup = c("Irish Bar", "Psych Building")) 
+  setView(lng = -73, lat = 3.5, zoom = 5) %>%
+  addDrawToolbar() 
  
 ```
 
 ### threejs `r fontawesome::fa("js", fill="#f7df1e")`
 
 ```{r}
-suppressPackageStartupMessages(library(threejs, quietly=TRUE))
-data(LeMis)
-graphjs(LeMis, vertex.size = 1)
+library("threejs")
+
+N     = 20000
+theta = runif(N)*2*pi
+phi   = runif(N)*2*pi
+R     = 1.5
+r     = 1.0
+
+x = (R + r*cos(theta))*cos(phi)
+y = (R + r*cos(theta))*sin(phi)
+z = r*sin(theta)
+
+d = 6
+h = 6
+t = 2*runif(N) - 1
+w = t^2*sqrt(1-t^2)
+x1 = d*cos(theta)*sin(phi)*w
+y1 = d*sin(theta)*sin(phi)*w
+
+i = order(phi)
+j = order(t)
+col = c(rainbow(length(phi))[order(i)],
+        rainbow(length(t), start=0, end=2/6)[order(j)])
+
+M = cbind(x=c(x, x1), y=c(y, y1), z=c(z, h*t))
+scatterplot3js(M, size=0.1, color=col, bg="black", pch=".")
 ```
 
 ### dygraphs `r emo::ji("chart_increasing")`
 
 ```{r}
+#| warning: false
+#| message: false
+
 library(dygraphs)
-lungDeaths <- cbind(mdeaths, fdeaths)
 
-hc_gdpr <- dygraph(lungDeaths) %>%
-  dySeries("mdeaths", label = "Male") %>%
-  dySeries("fdeaths", label = "Female") %>%
-  dyOptions(stackedGraph = TRUE) %>%
-  dyRangeSelector(height = 20) %>%
-  dyShading(from = "1912-1-1", to = "1990-1-1", color = "#dbe2e9")
+dygraph(nhtemp, main = "New Haven Temperatures")
 
-htmlwidgets::saveWidget(hc_gdpr, "hc_gdpr.html", 
-             selfcontained = TRUE, knitrOptions = list())
-
-widgetframe::frameWidget(hc_gdpr) 
+dygraph(nhtemp, main = "New Haven Temperatures") %>%
+  dyAxis("y", label = "Temp (F)", valueRange = c(40, 60)) %>%
+  dyOptions(fillGraph = TRUE, drawGrid = FALSE) %>%
+  dyRangeSelector()
 
 ```
 
 :::
 
-## [htmlwidgets](https://www.htmlwidgets.org/)`r emo::ji("gear")`
-
-:::: {.columns}
-
-::: {.column width="50%"}
-::: {.callout-caution}
-Old (??) wrapper for interactive objects. Current application seemingly integrated within `plotly`, `leaflet`, `dygraphs`, etc... 
-:::
-:::
-
-::: {.column width="50%"}
-::: {.callout-note}
-None of the previous 4 visuals explicitly specified `htmlwidgets` functions within this current slide presentation
-:::
 :::
 ::::
-
-```{r}
-#| eval: false
-#| echo: true
-
-## Old utilization (prob 2019-ish):
-
-htmlwidgets::saveWidget(hc_gdpr, "hc_gdpr.html", 
-             selfcontained = TRUE, knitrOptions = list())
-
-widgetframe::frameWidget(hc_gdpr)           ## trying for online
-```
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 
