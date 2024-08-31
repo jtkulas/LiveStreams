@@ -1,0 +1,315 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #41...<br>...[threejs]{.threejs}" 
+title-slide-attributes: 
+  data-background-image:   https://www.shutterstock.com/image-photo/three-blue-jays-on-railing-260nw-1248913702.jpg
+  data-background-opacity: ".5"
+format:
+  revealjs:
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [league, weekly.scss]       ## night & league
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue:
+    - `r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")` [[Interactivity]{.electric}](https://quarto.org/docs/interactive/) `r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")`
+      + [[threejs]{.threejs}](https://r-charts.com/spatial/interactive-maps-leaflet/) `r fontawesome::fa("js", fill="#f7df1e")`
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title40.JPG){.absolute top="170" right="-120" width="600" height="325"}
+
+# Recap of Session #40: 
+
+## [L]{.leaflet2}[eaflet]{.leaflet_lower}`r emo::ji("leaf_fluttering_in_wind")` [[Interactivity]{.electric}](https://quarto.org/docs/interactive/)`r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")``r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")`
+
+::: {.panel-tabset}
+
+### Basic`r emo::ji("globe_with_meridians")`
+
+```{r}
+#| echo: true
+#| output-location: column
+#| classes: custom4060
+#| fig-width: 8
+#| code-line-numbers: "4,5|6-8"
+#| 
+library(tidyverse)
+library(leaflet)
+
+leaflet() %>%
+  addTiles() %>%       #<1>
+  setView(lat = 41.93,
+          lng = -88.71, 
+          zoom = 12) 
+
+```
+1. Default (unspecified) "tile" is OpenStreetMap
+
+### Tiles`r emo::ji("world_map")`
+
+```{r}
+#| echo: true
+#| output-location: column
+#| classes: custom6040
+#| fig-width: 8
+#| code-line-numbers: "5"
+#| 
+library(tidyverse)
+library(leaflet)
+
+leaflet() %>%
+  addProviderTiles(providers$Esri.WorldImagery) %>%  #<1>
+  setView(lat = 41.93,
+          lng = -88.76, 
+          zoom = 12) 
+  
+
+```
+1. Listings (with preview capability) of [free tiles](https://leaflet-extras.github.io/leaflet-providers/preview/)
+
+### Markers`r emo::ji("pushpin")` 
+
+```{r}
+#| echo: true
+#| output-location: column
+#| classes: custom4060
+#| fig-width: 8
+#| code-line-numbers: "9-11"
+#| 
+library(tidyverse)
+library(leaflet)
+
+leaflet() %>%
+  addProviderTiles(providers$Esri.WorldImagery) %>%  #<1>
+  setView(lat = 41.93,
+          lng = -88.76, 
+          zoom = 12) %>%
+  addMarkers(
+    lat=41.93155,
+    lng=-88.76512)
+  
+
+```
+
+### Sliding blobs`r emo::ji("microbe")`
+
+[![](img/norms.JPG)](https://ergreports.com/workforce-engagement/)
+
+:::
+
+# Today: 
+
+## [[threejs]{.threejs}](https://r-charts.com/spatial/interactive-maps-leaflet/)  [[Interactivity]{.electric}](https://quarto.org/docs/interactive/)`r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")``r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")`
+
+:::: {.columns}
+
+::: {.column width="25%"}
+
+`r fa("check",fill="#228B22")` plotly  
+`r fa("check",fill="#228B22")` [leaflet](https://lauriebaker.rbind.io/post/where_work/)   
+`r fa("circle-xmark",fill="#D22B2B")` threejs `r fontawesome::fa("js", fill="#f7df1e")`  
+`r fa("circle-xmark",fill="#D22B2B")` dygraphs
+
+:::
+
+::: {.column width="75%"}
+
+::: {.panel-tabset}
+
+### threejs 
+
+```{ojs, message=FALSE, results='hide'}
+
+THREE = {
+  const THREE = window.THREE = await require("three@0.130.0/build/three.min.js");
+  await require("three@0.130.0/examples/js/controls/OrbitControls.js").catch(() => {});
+  return THREE;
+}
+
+height = 350
+width = 350
+
+cube = {
+  const material = new THREE.MeshNormalMaterial();
+  const geometry = new THREE.BoxGeometry(1, 1, 1);
+  const cube = new THREE.Mesh(geometry, material);
+  return cube;
+}
+
+scene = {
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(0x001b42);
+  scene.add(cube);
+  return scene;
+}
+
+camera = {
+  const fov = 45;
+  const aspect = width / height;
+  const near = 1;
+  const far = 1000;
+  const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+  camera.position.set(2, 2, -2)
+  camera.lookAt(new THREE.Vector3(0, 0, 0));
+  return camera;
+}
+
+renderer = {
+  const renderer = new THREE.WebGLRenderer({antialias: true});
+  renderer.setSize(width, height);
+  renderer.setPixelRatio(devicePixelRatio);
+  const controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.addEventListener("change", () => renderer.render(scene, camera));
+  invalidation.then(() => (controls.dispose(), renderer.dispose()));
+  return renderer;
+}
+
+// Continuously updates
+{
+  while (true) {
+    cube.rotation.z += 0.01;
+    cube.rotation.y += 0.01;
+    renderer.render(scene, camera);
+    yield null;
+  }
+}
+
+renderer.domElement
+
+```
+
+### leaflet
+
+```{r}
+library(leaflet)
+library(leaflet.extras)
+
+leaflet() %>%
+  addTiles() %>%
+  setView(lng = -73, lat = 3.5, zoom = 5) %>%
+  addDrawToolbar() 
+ 
+```
+
+### plotly 
+
+```{r}
+library(plotly)
+
+df <- read.csv("https://raw.githubusercontent.com/plotly/datasets/master/violin_data.csv")
+
+fig <- df %>%
+  plot_ly(type = 'violin') 
+fig <- fig %>%
+  add_trace(
+    x = ~day[df$smoker == 'Yes'],
+    y = ~total_bill[df$smoker == 'Yes'],
+    legendgroup = 'Yes',
+    scalegroup = 'Yes',
+    name = 'Yes',
+    side = 'negative',
+    box = list(
+      visible = T
+    ),
+    meanline = list(
+      visible = T
+    ),
+    color = I("blue")
+  ) 
+fig <- fig %>%
+  add_trace(
+    x = ~day[df$smoker == 'No'],
+    y = ~total_bill[df$smoker == 'No'],
+    legendgroup = 'No',
+    scalegroup = 'No',
+    name = 'No',
+    side = 'positive',
+    box = list(
+      visible = T
+    ),
+    meanline = list(
+      visible = T
+    ),
+    color = I("green")
+  ) 
+
+fig <- fig %>%
+  layout(
+    xaxis = list(
+      title = ""  
+    ),
+    yaxis = list(
+      title = "",
+      zeroline = F
+    ),
+    violingap = 0,
+    violingroupgap = 0,
+    violinmode = 'overlay'
+  )
+
+fig
+
+```
+
+### dygraphs 
+
+```{r}
+#| warning: false
+#| message: false
+
+library(dygraphs)
+
+dygraph(nhtemp, main = "New Haven Temperatures")
+
+dygraph(nhtemp, main = "New Haven Temperatures") %>%
+  dyAxis("y", label = "Temp (F)", valueRange = c(40, 60)) %>%
+  dyOptions(fillGraph = TRUE, drawGrid = FALSE) %>%
+  dyRangeSelector()
+
+```
+
+:::
+
+:::
+::::
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
+

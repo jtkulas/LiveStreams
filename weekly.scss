@@ -15,6 +15,7 @@
 @import url('https://fonts.googleapis.com/css?family=Shojumaru');
 @import url('https://fonts.googleapis.com/css?family=Fascinate Inline');
 @import url('https://fonts.googleapis.com/css?family=Fleur De Leah');
+@import url('https://fonts.googleapis.com/css?family=Gloria Hallelujah');
 
 /*-- scss:defaults --*/
 
@@ -22,7 +23,7 @@ $body-bg: #191919;
 $body-color: #fff;
 $link-color: #42affa;
 $code-color: hotpink;
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: left;
 $presentation-title-slide-text-color: black;
 
 /*-- scss:rules --*/
@@ -265,4 +266,9 @@ width: 10px;
   font-family: 'Fleur De Leah';
   text-transform: lowercase !important; 
   color: #adebb3;
+}  
+
+.threejs {
+  font-family: 'Gloria Hallelujah';
+  color: #6495ED;
 }  
