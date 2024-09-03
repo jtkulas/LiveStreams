@@ -126,8 +126,43 @@ leaflet() %>%
 
 ### Sliding blobs`r emo::ji("microbe")`
 
-[![](img/norms.JPG)](https://ergreports.com/workforce-engagement/)
+:::: {.columns}
 
+::: {.column width="60%"}
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "1-5,15|12-14,16-17"
+
+ergIcon <- makeIcon(
+  iconUrl = "https://ergreports.com/images/erg2.png",
+  iconWidth = 60, iconHeight = 50,
+  iconAnchorX = 30, iconAnchorY = 30,
+)
+
+## create leaflet map
+leaflet() %>% 
+  setView(lng= -93.24, lat=44.99, 
+          zoom=5) %>%
+  addTiles() %>%
+  addMarkers(data=together, 
+          ~LocationLongitude, 
+          ~LocationLatitude, 
+          icon = ergIcon,  
+   clusterOptions = 
+           markerClusterOptions(spiderfyDistanceMultiplier=1.5)) %>%
+   addProviderTiles("Stamen.TonerBackground") 
+
+
+```
+
+:::
+
+::: {.column width=40%}
+[![](img/norms.JPG)](https://ergreports.com/workforce-engagement/)
+:::
+
+::::
 :::
 
 # Today: 
@@ -150,6 +185,17 @@ leaflet() %>%
 ::: {.panel-tabset}
 
 ### threejs 
+
+:::: {.columns}
+::: {.column width="50%"}
+
+:::{.callout-tip}
+A helpful guide and description of three.js elements [is available here](https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene)
+:::
+
+:::
+
+:::{.column width="50%"}
 
 ```{ojs, message=FALSE, results='hide'}
 
@@ -210,6 +256,19 @@ renderer = {
 renderer.domElement
 
 ```
+:::
+::::
+
+### plotly 
+
+```{r}
+library(plotly)
+
+fig <- plot_ly(z = ~volcano, type = "contour")
+
+fig
+
+```
 
 ### leaflet
 
@@ -218,70 +277,10 @@ library(leaflet)
 library(leaflet.extras)
 
 leaflet() %>%
-  addTiles() %>%
-  setView(lng = -73, lat = 3.5, zoom = 5) %>%
-  addDrawToolbar() 
+      setView(lng= -93.24, lat=44.99, zoom=2) %>%
+      addTiles() %>%
+      addTerminator()
  
-```
-
-### plotly 
-
-```{r}
-library(plotly)
-
-df <- read.csv("https://raw.githubusercontent.com/plotly/datasets/master/violin_data.csv")
-
-fig <- df %>%
-  plot_ly(type = 'violin') 
-fig <- fig %>%
-  add_trace(
-    x = ~day[df$smoker == 'Yes'],
-    y = ~total_bill[df$smoker == 'Yes'],
-    legendgroup = 'Yes',
-    scalegroup = 'Yes',
-    name = 'Yes',
-    side = 'negative',
-    box = list(
-      visible = T
-    ),
-    meanline = list(
-      visible = T
-    ),
-    color = I("blue")
-  ) 
-fig <- fig %>%
-  add_trace(
-    x = ~day[df$smoker == 'No'],
-    y = ~total_bill[df$smoker == 'No'],
-    legendgroup = 'No',
-    scalegroup = 'No',
-    name = 'No',
-    side = 'positive',
-    box = list(
-      visible = T
-    ),
-    meanline = list(
-      visible = T
-    ),
-    color = I("green")
-  ) 
-
-fig <- fig %>%
-  layout(
-    xaxis = list(
-      title = ""  
-    ),
-    yaxis = list(
-      title = "",
-      zeroline = F
-    ),
-    violingap = 0,
-    violingroupgap = 0,
-    violinmode = 'overlay'
-  )
-
-fig
-
 ```
 
 ### dygraphs 
@@ -292,12 +291,11 @@ fig
 
 library(dygraphs)
 
-dygraph(nhtemp, main = "New Haven Temperatures")
-
-dygraph(nhtemp, main = "New Haven Temperatures") %>%
-  dyAxis("y", label = "Temp (F)", valueRange = c(40, 60)) %>%
-  dyOptions(fillGraph = TRUE, drawGrid = FALSE) %>%
-  dyRangeSelector()
+lungDeaths <- cbind(ldeaths, mdeaths, fdeaths)
+dygraph(lungDeaths, main = "Deaths from Lung Disease (UK)") %>%
+  dyHighlight(highlightCircleSize = 5, 
+              highlightSeriesBackgroundAlpha = 0.2,
+              hideOnMouseOut = FALSE)
 
 ```
 
