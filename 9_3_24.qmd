@@ -41,6 +41,7 @@ library(fontawesome)
 -   Focal issue:
     - `r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")` [[Interactivity]{.electric}](https://quarto.org/docs/interactive/) `r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")`
       + [[threejs]{.threejs}](https://r-charts.com/spatial/interactive-maps-leaflet/) `r fontawesome::fa("js", fill="#f7df1e")`
+    -   `r emo::ji("construction")`Work issue (new)`r emo::ji("construction")`
 -   Shared problem-solving
 :::
 
@@ -303,6 +304,13 @@ dygraph(lungDeaths, main = "Deaths from Lung Disease (UK)") %>%
 
 :::
 ::::
+
+## Issue from work this week...
+
+![](img/fig3.JPG){.absolute width="500" left="-50" bottom="150"}
+![](img/fig4.JPG){.absolute width="500" right="-50" bottom="150"} 
+![](https://png.pngtree.com/png-vector/20230910/ourmid/pngtree-isolated-portrait-of-a-curious-man-peeking-over-a-white-wall-png-image_9226118.png){.absolute top="80" right="-100"}
+![](https://www.pngkey.com/png/full/215-2151190_girl-peeking-over1-peeking-over-png.png){.absolute width="250" left="70" top="130"}
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 

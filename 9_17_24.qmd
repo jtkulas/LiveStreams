@@ -1,0 +1,122 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #43...<br>[...htmlwidgets]{.widgets}" 
+title-slide-attributes: 
+  data-background-image:   https://t3.ftcdn.net/jpg/08/33/40/68/360_F_833406846_3RuSGXFSQghqBU6kT1m2tXxTWoVgQr6I.jpg
+  data-background-opacity: ".25"
+format:
+  revealjs:
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [league, weekly.scss]       ## night & league
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #42&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    - `r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")` [[Interactivity]{.electric}](https://quarto.org/docs/interactive/) `r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")`
+      + [htmlwidgets]{.widgets}
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title42.JPG){.absolute top="170" right="-120" width="600" height="325"}
+
+# Recap of Session #42: 
+
+## `r emo::ji("chart_increasing")` [[dygraphs]{.dygraphs}](https://dygraphs.com/) `r emo::ji("chart_decreasing")` 
+
+```{r}
+#| echo: true
+#| output-location: column
+#| classes: custom4060
+
+library(dygraphs)
+
+Harris <- c(10,8,14,
+          6,9,12,15,
+          12,7,13)
+Trump <- c(8,13,12,
+          4,7,10,13,
+          14,10,12)
+
+debate <- ts(                    #<1>
+      cbind(Harris,Trump),       #<2>
+      frequency=12,              #<3>
+      start=c(2023,1))           #<4>
+
+dygraph(debate)
+```
+1. Creating a `time series` object (from `stats` package -- included in base `r fa("r-project",fill="#6495ED")`)
+2. Specifying the data (row sequence important)
+3. How many rows equal 1 calendar year?
+4. What year and month to begin (first row)?
+
+# Today: 
+
+## `r emo::ji("gear")``r emo::ji("gear")` [htmlwidgets]{.widgets} `r emo::ji("gear")``r emo::ji("gear")` 
+
+:::: {.columns}
+
+::: {.column width="25%"}
+
+`r fa("check",fill="#228B22")` plotly  
+`r fa("check",fill="#228B22")` leaflet   
+`r fa("check",fill="#228B22")` threejs   
+`r fa("check",fill="#228B22")` dygraphs
+
+:::
+
+::: {.column width="75%"}
+
+::: {.panel-tabset}
+
+### plotly 
+
+### leaflet
+
+### threejs 
+
+### dygraphs 
+
+:::
+
+:::
+::::
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
+

@@ -1,0 +1,310 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #42...<br>...[dygraphs]{.dygraphs} (plus a little [threejs]{.threejs})" 
+title-slide-attributes: 
+  data-background-image:   https://static.tradingview.com/static/bundles/lightweight-charts.5c935e728656427cb801.jpg
+  data-background-opacity: ".5"
+format:
+  revealjs:
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [league, weekly.scss]       ## night & league
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #41&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    - `r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")` [[Interactivity]{.electric}](https://quarto.org/docs/interactive/) `r fontawesome::fa("plug-circle-bolt", fill="#8ffcff")`
+      + [dygraphs]{.dygraphs} `r emo::ji("chart_decreasing")`
+        + [[threejs]{.threejs}](https://r-charts.com/spatial/interactive-maps-leaflet/) `r fontawesome::fa("js", fill="#f7df1e")`
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title41.JPG){.absolute top="170" right="-120" width="600" height="325"}
+
+# Recap of Session #41: 
+
+## [[threejs]{.threejs}](https://bwlewis.github.io/rthreejs/) `r fontawesome::fa("js", fill="#f7df1e")` 
+
+::: {.panel-tabset}
+
+### Direct OJS
+
+```{ojs, message=FALSE, results='hide', echo=TRUE}
+//| echo: true
+//| output-location: column
+//| classes: custom7030
+THREE = {
+  const THREE = window.THREE = await require("three@0.130.0/build/three.min.js");
+  await require("three@0.130.0/examples/js/controls/OrbitControls.js").catch(() => {});
+  return THREE;
+}
+
+height = 350
+width = 350
+
+cube = {
+  const material = new THREE.MeshNormalMaterial();
+  const geometry = new THREE.BoxGeometry(1, 1, 1);
+  const cube = new THREE.Mesh(geometry, material);
+  return cube;
+}
+
+scene = {
+  const scene = new THREE.Scene();
+  scene.background = new THREE.Color(0x001b42);
+  scene.add(cube);
+  return scene;
+}
+
+camera = {
+  const fov = 45;
+  const aspect = width / height;
+  const near = 1;
+  const far = 1000;
+  const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+  camera.position.set(2, 2, -2)
+  camera.lookAt(new THREE.Vector3(0, 0, 0));
+  return camera;
+}
+
+renderer = {
+  const renderer = new THREE.WebGLRenderer({antialias: true});
+  renderer.setSize(width, height);
+  renderer.setPixelRatio(devicePixelRatio);
+  const controls = new THREE.OrbitControls(camera, renderer.domElement);
+  controls.addEventListener("change", () => renderer.render(scene, camera));
+  invalidation.then(() => (controls.dispose(), renderer.dispose()));
+  return renderer;
+}
+
+// Continuously updates
+{
+  while (true) {
+    cube.rotation.z += 0.03;
+    cube.rotation.y += 0.03;
+    cube.rotation.x += 0.03;
+    renderer.render(scene, camera);
+    yield null;
+  }
+}
+
+renderer.domElement
+
+```
+
+### Big Bang `r emo::ji("collision")`
+
+```{r}
+#| echo: true
+#| output-location: column
+#| classes: custom4060
+
+## Actually "social network"
+## facebook from Stanford SNAP
+
+library(threejs)
+data(ego)
+graphjs(ego, bg="cyan")
+
+```
+
+
+### Planet Toupee`r emo::ji("barber_pole")` 
+
+```{r}
+#| echo: true
+#| output-location: column
+#| classes: custom4060
+#| fig-width: 8
+#| 
+
+## Actually flight patterns
+
+library(threejs)
+
+# Approximate locations as factors
+data(flights)
+
+f <- flights
+
+dest   <- factor(sprintf("%.2f:%.2f", f[,3], f[,4]))
+
+# A table of destination frequencies
+freq <- sort(table(dest), decreasing=TRUE)
+
+# The most frequent destinations in these data
+frequent_destinations <- names(freq)[1:10]
+
+# Subset the flight data by destination frequency
+idx <- dest %in% frequent_destinations
+frequent_flights <- f[idx, ]
+
+# Lat/long and counts of frequent flights
+ll <- unique(frequent_flights[, 3:4])
+
+# Plot frequent destinations as bars, and the flights to and from
+# them as arcs. Adjust arc width and color by frequency.
+globejs(lat=ll[, 1], long=ll[, 2], arcs=frequent_flights,
+        bodycolor="#aaaaff", arcsHeight=0.3, arcsLwd=2,
+        arcsColor="#ffff00", arcsOpacity=0.15,
+        atmosphere=TRUE, color="#00aaff", pointsize=0.5)
+```
+
+::::
+:::
+
+# Today: 
+
+## [dygraphs]{.dygraphs} [[Interactivity]{.electric}](https://quarto.org/docs/interactive/)
+
+:::: {.columns}
+
+::: {.column width="25%"}
+
+`r fa("check",fill="#228B22")` plotly  
+`r fa("check",fill="#228B22")` leaflet   
+`r fa("check",fill="#228B22")` threejs   
+`r fa("circle-xmark",fill="#D22B2B")` [dygraphs](https://dygraphs.com/)
+
+:::
+
+::: {.column width="75%"}
+
+::: {.panel-tabset}
+
+### dygraphs 
+
+```{r}
+#| warning: false
+#| message: false
+
+library(dygraphs)
+
+# define mts with distinct y-axis scales
+temperature <- ts(frequency = 12, start = c(1980, 1),
+  data = c(7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 
+           25.2, 26.5, 23.3, 18.3, 13.9, 9.6))
+rainfall <- ts(frequency = 12, start = c(1980, 1),
+  data = c(49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 
+           135.6, 148.5, 216.4, 194.1, 95.6, 54.4))
+weather <- cbind(rainfall, temperature)
+
+# assign the "rainfall" series to the y2 axis
+dygraph(weather) %>%
+  dySeries("rainfall", axis = 'y2')
+```
+
+### plotly 
+
+```{r}
+library(plotly)
+library(rjson)
+
+url <- 'https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json'
+counties <- rjson::fromJSON(file=url)
+url2<- "https://raw.githubusercontent.com/plotly/datasets/master/fips-unemp-16.csv"
+df <- read.csv(url2, colClasses=c(fips="character"))
+g <- list(
+  scope = 'usa',
+  projection = list(type = 'albers usa'),
+  showlakes = TRUE,
+  lakecolor = toRGB('white')
+)
+fig <- plot_ly()
+fig <- fig %>% add_trace(
+    type="choropleth",
+    geojson=counties,
+    locations=df$fips,
+    z=df$unemp,
+    colorscale="Viridis",
+    zmin=0,
+    zmax=12,
+    marker=list(line=list(
+      width=0)
+    )
+  )
+fig <- fig %>% colorbar(title = "Unemployment Rate (%)")
+fig <- fig %>% layout(
+    title = "2016 US Unemployment by County"
+)
+
+fig <- fig %>% layout(
+    geo = g
+  )
+
+fig
+
+```
+
+### leaflet
+
+```{r}
+library(leaflet)
+
+leaflet() %>%
+  addTiles(group = "StreetMap") %>%
+  setView(lng = -92.6, lat = 39.86, zoom = 4) %>%
+  addMeasure(
+    position = "bottomleft",
+    primaryLengthUnit = "meters",
+    primaryAreaUnit = "sqmeters",
+    activeColor = "#3D535D",
+    completedColor = "#7D4479")
+ 
+
+```
+
+### threejs 
+
+```{r}
+library(threejs)
+z <- seq(-10, 10, 0.1)
+x <- cos(z)
+y <- sin(z)
+scatterplot3js(x, y, z, color=rainbow(length(z)),bg="black")
+```
+
+
+:::
+
+:::
+::::
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
+
