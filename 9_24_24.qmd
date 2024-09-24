@@ -15,7 +15,7 @@ format:
     footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
     transition: slide
     background-transition: fade
-    mouse-wheel: true                ## yes enables mouse
+    mouse-wheel: false                ## yes enables mouse
     preview-links: false             ## true brings up iframe window instead of "site"
     code-annotations: hover 
     html-math-method: 
@@ -53,65 +53,143 @@ library(fontawesome)
 
 # Recap of Session #43: 
 
-## `r emo::ji("chart_increasing")` [[dygraphs]{.dygraphs}](https://dygraphs.com/) `r emo::ji("chart_decreasing")` 
-
-```{r}
-#| echo: true
-#| output-location: column
-#| classes: custom4060
-
-library(dygraphs)
-
-Harris <- c(10,8,14,
-          6,9,12,15,
-          12,7,13)
-Trump <- c(8,13,12,
-          4,7,10,13,
-          14,10,12)
-
-debate <- ts(                    #<1>
-      cbind(Harris,Trump),       #<2>
-      frequency=12,              #<3>
-      start=c(2023,1))           #<4>
-
-dygraph(debate)
-```
-1. Creating a `time series` object (from `stats` package -- included in base `r fa("r-project",fill="#6495ED")`)
-2. Specifying the data (row sequence important)
-3. [One could use a value of 7 for frequency when the data are sampled daily, and the natural time period is a week, or 12 when the data are sampled monthly and the natural time period is a year. Values of 4 and 12 are assumed in (e.g.) print methods to imply a quarterly and monthly series respectively.](https://www.rdocumentation.org/packages/stats/versions/3.6.2/topics/ts)
-4. What year and month to begin (first row)?
-
-# Today: 
-
-## `r emo::ji("gear")``r emo::ji("gear")` [[htmlwidgets]{.widgets}](https://www.htmlwidgets.org/develop_sizing.html) `r emo::ji("gear")``r emo::ji("gear")` 
+## [[htmlwidgets:]{.widgets}](https://www.htmlwidgets.org/develop_sizing.html) 
 
 :::: {.columns}
 
-::: {.column width="25%"}
-
-`r fa("check",fill="#228B22")` plotly  
-`r fa("check",fill="#228B22")` [leaflet](https://tomjenkins.netlify.app/tutorials/r-leaflet-introduction/)   
-`r fa("check",fill="#228B22")` threejs   
-`r fa("check",fill="#228B22")` dygraphs
-
+::: {.column width="40%"}
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWd4YTA2NHdodHlzNnFwcGZoODljb2E4OTRtbnlzYXVzM2gydTU3biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6x0YwnavyPeqeAiZ2T/giphy.gif){.absolute left="-150" top="200"}
 :::
 
-::: {.column width="75%"}
+::: {.column width="60%"}
+```{r}
+#| echo: false
+
+library(plotly)
+
+# custom grid style
+axx <- list(
+  gridcolor='rgb(255, 255, 255)',
+  zerolinecolor='rgb(255, 255, 255)',
+  showbackground=TRUE,
+  backgroundcolor='rgb(230, 230,230)'
+)
+
+# individual plots
+fig1 <- plot_ly(z = ~volcano, scene='scene1') 
+fig1 <- fig1 %>% add_surface(showscale=FALSE)
+
+fig2 <- plot_ly(z = ~volcano, scene='scene2') 
+fig2 <- fig2 %>% add_surface(showscale=FALSE)
+
+fig3 <- plot_ly(z = ~volcano, scene='scene3') 
+fig3 <- fig3 %>% add_surface(showscale=FALSE)
+
+fig4 <- plot_ly(z = ~volcano, scene='scene4') 
+fig4 <- fig4 %>% add_surface(showscale=FALSE)
+
+# subplot and define scene
+fig <- subplot(fig1, fig2, fig3, fig4) 
+fig <- fig %>% layout(title = "3D Subplots",
+         scene = list(domain=list(x=c(0,0.5),y=c(0.5,1)),
+                      xaxis=axx, yaxis=axx, zaxis=axx,
+                      aspectmode='cube'),
+         scene2 = list(domain=list(x=c(0.5,1),y=c(0.5,1)),
+                       xaxis=axx, yaxis=axx, zaxis=axx,
+                       aspectmode='cube'),
+         scene3 = list(domain=list(x=c(0,0.5),y=c(0,0.5)),
+                       xaxis=axx, yaxis=axx, zaxis=axx,
+                       aspectmode='cube'),
+         scene4 = list(domain=list(x=c(0.5,1),y=c(0,0.5)),
+                       xaxis=axx, yaxis=axx, zaxis=axx,
+                       aspectmode='cube'))
+
+fig
+
+```
+:::
+::::
+
+# Today: 
+
+## `r emo::ji("gear")``r emo::ji("gear")` [[htmlwidgets II]{.widgets}](https://www.htmlwidgets.org/develop_sizing.html) `r emo::ji("gear")``r emo::ji("gear")` 
+
+:::: {.columns}
+
+::: {.column width="70%"}
 
 ::: {.panel-tabset}
 
-### plotly 
+### `r emo::ji("face_with_raised_eyebrow")`Default`r emo::ji("face_with_rolling_eyes")` 
 
-### leaflet
+```{r}
+#| echo: false
+#| 
+library(leaflet)
+library(widgetframe)
 
-### threejs 
+# Coordinates of the centre point of the UK: Whitendale Hanging Stones
+whitendale = c(-2.547855, 54.00366)
 
-### dygraphs 
+l1 = leaflet() %>%
+  # Centre map on Whitendale Hanging Stones
+  setView(lng = whitendale[1], lat = whitendale[2], zoom = 6) %>% 
+  # Add OSM basemap
+  addProviderTiles(providers$OpenStreetMap, group = "Open Street Map") %>% 
+  # Add additional basemap layers
+  addProviderTiles(providers$Esri.WorldImagery, group = "ESRI World Imagery") %>% 
+  # Add a User-Interface (UI) control to switch layers
+  addLayersControl(
+    baseGroups = c("Open Street Map","ESRI World Imagery"),
+    options = layersControlOptions(collapsed = FALSE)
+    )
 
+l1
+```
+
+### `r emo::ji("gear")`Widget-ized`r emo::ji("gear")`
+
+```{r}
+#| echo: false
+#| 
+library(leaflet)
+library(htmlwidgets)
+
+# Coordinates of the centre point of the UK: Whitendale Hanging Stones
+whitendale = c(-2.547855, 54.00366)
+
+l2 = leaflet() %>%
+  # Centre map on Whitendale Hanging Stones
+  setView(lng = whitendale[1], lat = whitendale[2], zoom = 6) %>% 
+  # Add OSM basemap
+  addProviderTiles(providers$OpenStreetMap, group = "Open Street Map") %>% 
+  # Add additional basemap layers
+  addProviderTiles(providers$Esri.WorldImagery, group = "ESRI World Imagery") %>% 
+  # Add a User-Interface (UI) control to switch layers
+  addLayersControl(
+    baseGroups = c("Open Street Map","ESRI World Imagery"),
+    options = layersControlOptions(collapsed = FALSE)
+    )
+
+frameWidget(l2, width="100%")
+
+```
+
+![](hc_gdpr.html)
 
 :::
 
 :::
+
+::: {.column width="30%"}
+
+<br>
+<br>
+<br>
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjJ1aWV1OWppNWR3OXJzZXg0c2xtcWM1MjAyOHNpdmF3b2FydWFieCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/G2MPcSmq0DZcs/giphy.gif)
+
+:::
+
 ::::
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
