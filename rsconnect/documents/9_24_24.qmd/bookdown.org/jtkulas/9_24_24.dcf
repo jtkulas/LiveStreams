@@ -5,7 +5,7 @@ account: jtkulas
 server: bookdown.org
 hostUrl: https://bookdown.org/__api__
 appId: 14605
-bundleId: 100886
+bundleId: 100890
 url: https://bookdown.org/jtkulas/9_24_24/
 version: 1
 asMultiple: FALSE

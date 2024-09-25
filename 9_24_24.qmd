@@ -53,7 +53,7 @@ library(fontawesome)
 
 # Recap of Session #43: 
 
-## [[htmlwidgets:]{.widgets}](https://www.htmlwidgets.org/develop_sizing.html) 
+## [[htmlwidgets:]{.widgets}](https://gallery.htmlwidgets.org/) 
 
 :::: {.columns}
 

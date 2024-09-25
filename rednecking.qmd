@@ -1,0 +1,60 @@
+---
+title: "size rendering"
+format: revealjs
+---
+
+## Quarto
+
+```{r}
+#| echo: true
+#| output-location: column
+#| classes: custom4060
+
+library(widgetframe)
+library(networkD3)
+
+# Create fake data
+src <- c("A", "A", "A", "A",
+        "B", "B", "C", "C", "D")
+target <- c("B", "C", "D", "J",
+            "E", "F", "G", "H", "I")
+networkData <- data.frame(src, target)
+
+# Plot
+frameWidget(simpleNetwork(networkData))
+```
+
+## Bullets
+
+```{r}
+#| echo: true
+#| output-location: column
+#| classes: custom5050
+
+library(networkD3)
+library(widgetframe)
+
+# Create fake data
+data(MisLinks)
+data(MisNodes)
+
+# Plot
+p <- forceNetwork(Links = MisLinks, Nodes = MisNodes,
+            Source = "source", Target = "target",
+            Value = "value", NodeID = "name",
+            Group = "group", opacity = 0.8)
+
+frameWidget(p)
+
+```
+
+
+## Code
+
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+

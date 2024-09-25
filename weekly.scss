@@ -18,6 +18,7 @@
 @import url('https://fonts.googleapis.com/css?family=Gloria Hallelujah');
 @import url('https://fonts.googleapis.com/css?family=Silkscreen');
 @import url('https://fonts.googleapis.com/css?family=Fascinate Inline');
+@import url('https://fonts.googleapis.com/css?family=Creepster');
 
 /*-- scss:defaults --*/
 
@@ -25,7 +26,7 @@ $body-bg: #191919;
 $body-color: #fff;
 $link-color: #42affa;
 $code-color: hotpink;
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 $presentation-title-slide-text-color: black;
 
 /*-- scss:rules --*/
@@ -283,4 +284,15 @@ width: 10px;
 .widgets {
   font-family: 'Fascinate Inline';
   color: #d4bf85;
+}  
+
+.creepy {
+  font-family: 'Creepster';
+  color: #ffde21;
+} 
+
+.creepyBig {
+  font-family: 'Creepster';
+  font-size: 1.7em;
+  color: #ffde21;
 }  
