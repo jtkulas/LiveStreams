@@ -52,17 +52,16 @@ library(fontawesome)
 
 # Recap of Session #44: 
 
-## [[htmlwidgets II]{.widgets}](https://gallery.htmlwidgets.org/) 
+## [[htmlwidgets (II)]{.widgets}](https://gallery.htmlwidgets.org/) 
 
-:::: {.columns}
+:::: {.panel-tabset}
 
-::: {.column width="40%"}
-![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWd4YTA2NHdodHlzNnFwcGZoODljb2E4OTRtbnlzYXVzM2gydTU3biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6x0YwnavyPeqeAiZ2T/giphy.gif){.absolute left="-150" top="200"}
-:::
+## `r emo::ji("face_with_raised_eyebrow")`Default`r emo::ji("face_with_rolling_eyes")`
 
-::: {.column width="60%"}
 ```{r}
-#| echo: false
+#| echo: true
+#| output-location: column
+#| classes: custom4060
 
 library(plotly)
 
@@ -106,90 +105,26 @@ fig <- fig %>% layout(title = "3D Subplots",
 fig
 
 ```
-:::
+
+## `r emo::ji("gear")`Widget-ized`r emo::ji("gear")`
+
+```{r}
+#| echo: true
+#| output-location: column
+#| classes: custom4060
+#| 
+library(widgetframe)
+
+frameWidget(fig)   #<1>
+
+```
+1. Note the "scrollability" difference between default and widgit-ized.
+
 ::::
 
 # Today: 
 
-## [Parallax images]{.creepy} 
-
-:::: {.columns}
-
-::: {.column width="70%"}
-
-::: {.panel-tabset}
-
-### `r emo::ji("face_with_raised_eyebrow")`Default`r emo::ji("face_with_rolling_eyes")` 
-
-```{r}
-#| echo: false
-#| 
-library(leaflet)
-library(widgetframe)
-
-# Coordinates of the centre point of the UK: Whitendale Hanging Stones
-whitendale = c(-2.547855, 54.00366)
-
-l1 = leaflet() %>%
-  # Centre map on Whitendale Hanging Stones
-  setView(lng = whitendale[1], lat = whitendale[2], zoom = 6) %>% 
-  # Add OSM basemap
-  addProviderTiles(providers$OpenStreetMap, group = "Open Street Map") %>% 
-  # Add additional basemap layers
-  addProviderTiles(providers$Esri.WorldImagery, group = "ESRI World Imagery") %>% 
-  # Add a User-Interface (UI) control to switch layers
-  addLayersControl(
-    baseGroups = c("Open Street Map","ESRI World Imagery"),
-    options = layersControlOptions(collapsed = FALSE)
-    )
-
-l1
-```
-
-### `r emo::ji("gear")`Widget-ized`r emo::ji("gear")`
-
-```{r}
-#| echo: false
-#| 
-library(leaflet)
-library(htmlwidgets)
-
-# Coordinates of the centre point of the UK: Whitendale Hanging Stones
-whitendale = c(-2.547855, 54.00366)
-
-l2 = leaflet() %>%
-  # Centre map on Whitendale Hanging Stones
-  setView(lng = whitendale[1], lat = whitendale[2], zoom = 6) %>% 
-  # Add OSM basemap
-  addProviderTiles(providers$OpenStreetMap, group = "Open Street Map") %>% 
-  # Add additional basemap layers
-  addProviderTiles(providers$Esri.WorldImagery, group = "ESRI World Imagery") %>% 
-  # Add a User-Interface (UI) control to switch layers
-  addLayersControl(
-    baseGroups = c("Open Street Map","ESRI World Imagery"),
-    options = layersControlOptions(collapsed = FALSE)
-    )
-
-frameWidget(l2, width="100%")
-
-```
-
-![](hc_gdpr.html)
-
-:::
-
-:::
-
-::: {.column width="30%"}
-
-<br>
-<br>
-<br>
-![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjJ1aWV1OWppNWR3OXJzZXg0c2xtcWM1MjAyOHNpdmF3b2FydWFieCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/G2MPcSmq0DZcs/giphy.gif)
-
-:::
-
-::::
+## [Parallax images]{.creepyBig}{.center background-image="https://13thdimension.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-04-at-1.13.38-PM-copy.jpg"} 
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 
