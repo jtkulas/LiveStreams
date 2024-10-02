@@ -1,0 +1,110 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #46...<br>...[slide navigation]{.navigation}" 
+title-slide-attributes: 
+  data-background-image: https://s3.envato.com/files/281975076/_M2_7030.jpg
+  data-background-opacity: ".5"
+format:
+  revealjs:
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [league, weekly.scss]       ## night & league
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #45&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    - [Slide navigation]{.navigation} `r emo::ji("compass")` 
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title45.JPG){.absolute top="170" right="-120" width="600" height="325"}
+
+# Recap of Session #45: 
+
+## [Parallax images]{.creepy} 
+
+:::: {.columns}
+
+::: {.column width="60%"}
+```{yaml}
+#| echo: true
+#| eval: false
+
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #46..." 
+format:
+  revealjs:
+    parallax-background-image:      #<1>
+       www.awesomebackground.png    #<1>
+    parallax-background-size:        #<2>
+      "2100px 900px"                 #<2>
+    parallax-background-horizontal:  #<3>
+      200
+    parallax-background-vertical: 
+      100                            #<3>
+---
+```
+1. Image you'd like as universal background here (can override if necessary with  CSS: `background-image="www.newimage.jpg"`)
+2. Width Height. If ignore, will tile/fill
+3. Determines the "distance" travelled across horizontally- and vertically-navigated slides
+
+:::
+
+::: {.column width="40%"}
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3lyZTM2YXRzZTRwempwYzYweWtxcnZuaWdxdmY1Z2hpYWo2cGRtbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xThtaluUHpTUz7knny/giphy.gif)
+:::
+::::
+
+# Today: 
+
+## `r emo::ji("compass")``r emo::ji("compass")` [Slide Navigation]{.navigation} `r emo::ji("compass")``r emo::ji("compass")`
+
+:::: {.columns}
+::: {.column width="50%"}
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExczFzd3JpNHJwenJhb3E3M2VseDRtajh4Z3RrbWViaWtheDFpdTdtNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YI4HOLERIuNQ620ZLq/giphy.gif)
+:::
+
+::: {.column width="50%"}
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGIyM3oxaXZkajdwYmlnZGdpYWhnZzlxNHhram43ZGkycmVoMnBzdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dYHFEFJEt4cYkOVkK3/giphy.gif)
+:::
+::::
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
+

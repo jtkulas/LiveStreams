@@ -2,14 +2,14 @@
 title: "R for <br>Authoring!!" 
 author: "OOH Session #45...<br>[...parallax images]{.creepyBig}" 
 title-slide-attributes: 
-  data-background-image:   https://13thdimension.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-04-at-1.13.38-PM-copy.jpg
+#  data-background-image:   https://13thdimension.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-04-at-1.13.38-PM-copy.jpg
   data-background-opacity: ".4"
 format:
   revealjs:
-#    parallax-background-image:   https://13thdimension.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-04-at-1.13.38-PM-copy.jpg
-#    parallax-background-size: "2100px 900px"
-#    parallax-background-horizontal: 200
-#    parallax-background-vertical: 100
+    parallax-background-image:   https://13thdimension.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-04-at-1.13.38-PM-copy.jpg
+    parallax-background-size: "2100px 900px"
+    parallax-background-horizontal: 200
+    parallax-background-vertical: 100
     mermaid:
       theme: forest
 #    output-location: slide           ## column-fragment; inserts blank 2nd slide
