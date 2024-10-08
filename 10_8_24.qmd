@@ -39,7 +39,7 @@ library(fontawesome)
 ::: first-column
 -   Recap session #45&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue(s):
-    - [Slide navigation]{.navigation} `r emo::ji("compass")` 
+    - `r emo::ji("compass")`[Slide navigation]{.navigation}`r emo::ji("compass")` 
 -   Shared problem-solving
 :::
 
@@ -52,7 +52,7 @@ library(fontawesome)
 
 # Recap of Session #45: 
 
-## [Parallax images]{.creepy} 
+## [Parallax]{.creepy} Backgrounds
 
 :::: {.columns}
 
@@ -77,7 +77,7 @@ format:
 ---
 ```
 1. Image you'd like as universal background here (can override if necessary with  CSS: `background-image="www.newimage.jpg"`)
-2. Width Height. If ignore, will tile/fill
+2. Width Height. If ignore, background image will likley tile as scroll (depending on size of image)
 3. Determines the "distance" travelled across horizontally- and vertically-navigated slides
 
 :::
@@ -89,7 +89,7 @@ format:
 
 # Today: 
 
-## `r emo::ji("compass")``r emo::ji("compass")` [Slide Navigation]{.navigation} `r emo::ji("compass")``r emo::ji("compass")`
+## `r emo::ji("compass")``r emo::ji("compass")` [[Slide Navigation]{.navigation}](https://revealjs.com/vertical-slides/) `r emo::ji("compass")``r emo::ji("compass")`
 
 :::: {.columns}
 ::: {.column width="50%"}
