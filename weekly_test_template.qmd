@@ -1,19 +1,28 @@
 ---
 title: "R for <br>Authoring!!" 
 author: "OOH Session #46..." 
-format:
+format: 
   revealjs:
-    parallax-background-image: https://www.purina.co.uk/sites/default/files/2020-12/Understanding%20Your%20Cat%27s%20Body%20LanguageTEASER.jpg
-    parallax-background-size: "1500px 700px"
-    parallax-background-horizontal: 200
-    parallax-background-vertical: 100
-    chalkboard: true
+    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
 ---
 
-# One
+# farfegnugen 1
 
-## TwO
+## farfegnugen 1a
 
-## Three
+## farfegnugen 1b
 
-# Four
+## farfegnugen 1c
+
+## farfegnugen 1d
+
+# farfegnugen 2
+
+## farfegnugen 2a
+
+## farfegnugen 2b
+
+## farfegnugen 2c
+

@@ -1,0 +1,114 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #47...<br>...[slide navigation II]{.navigation}" 
+title-slide-attributes: 
+  data-background-image: https://aadl.org/sites/default/files/photos/N015_0796_004.jpg
+  data-background-opacity: ".3"
+format:
+  revealjs:
+    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [league, weekly.scss]       ## night & league
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #46&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    - `r emo::ji("globe")`[Slide navigation II]{.navigation}`r emo::ji("globe")`
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title46.JPG){.absolute top="170" right="-120" width="600" height="325"}
+
+# Recap of Session #46: 
+
+## `r emo::ji("compass")`[[Slide Navigation]{.navigation}](https://revealjs.com/vertical-slides/) (Directionality) 
+
+:::: {.columns}
+::: {.column width="50%"}
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExczFzd3JpNHJwenJhb3E3M2VseDRtajh4Z3RrbWViaWtheDFpdTdtNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YI4HOLERIuNQ620ZLq/giphy.gif)
+:::
+
+::: {.column width="50%"}
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGIyM3oxaXZkajdwYmlnZGdpYWhnZzlxNHhram43ZGkycmVoMnBzdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dYHFEFJEt4cYkOVkK3/giphy.gif)
+:::
+::::
+
+## `r emo::ji("compass")``r emo::ji("compass")`[Slide Navigation]{.navigation} (YAML Controls)
+
+:::: {.columns}
+::: {.column width="50%"}
+
+```{yaml}
+#| echo: true
+#| eval: false
+
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #46..." 
+format: 
+  revealjs:
+    navigation-mode: vertical    #<1>
+    transition: convex           #<2>
+    transition-speed: slow       #<3>
+---
+
+```
+1. Allows for ["stacking"](https://quarto.org/docs/presentations/revealjs/advanced.html#vertical-slides) of slides (nesting within hierarchies). Quarto help pages warn that this should be only used cautiously (viewers may accidentally "miss" slides)
+2. [Six](https://quarto.org/docs/presentations/revealjs/advanced.html#slide-transitions) different "out-of-the-box" options `r emo::ji("package")`
+3. Three "out-of-the-box" options `r emo::ji("package")`: default, fast, or slow
+
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2NiZWhmdXRqMDJqOHFoZnVsNHk3djRqejRldWp2eWM0OGhtaTVsNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jl0c8K26HQbkI/giphy.gif){.absolute left="50" bottom="50"}
+
+:::
+
+::: {.column width="50%"}
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWI1ODA3M2ZkaW5uNjQ4amI1M2s0aGZ0bWViYmxwaW05bnBjYXpkayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dg/Y4wMVKCBZxS56UoC3l/giphy.gif){.absolute top="200"}
+:::
+::::
+
+# Today: 
+
+## Moar [[slide navigation]{.navigation}](https://revealjs.com/vertical-slides/) `r emo::ji("compass")``r emo::ji("compass")`
+
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaDF3djh3d3ptZW82ZDVtemhzZzF0eWJxMGU4cTUyMHFwZWpzbXE5aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0HlMG1EX2H38cZeE/giphy.gif){.absolute left="0"}
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmc4MTRwZnd5ZHcwNDE4d21vc3RleTlkbWszY2t3MTliY2N5d3dwNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/25J5U01DC6qI61Kiez/giphy.gif){.absolute right="-50" top="180" width="500"}
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
+
