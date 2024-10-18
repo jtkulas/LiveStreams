@@ -1,28 +1,39 @@
 ---
-title: "R for <br>Authoring!!" 
-author: "OOH Session #46..." 
+title: "Playing with <br> revealjs presentations" 
+author: "Rocky & Bullwinkle" 
 format: 
   revealjs:
-    navigation-mode: vertical
+    navigation-mode: grid
     transition: convex
     transition-speed: slow
+    menu:
+      numbers: true
+    controls-layout: bottom-right
+    controls-tutorial: true
+    auto-slide: 1000
+    loop: true
 ---
 
-# farfegnugen 1
+# Stack 1
 
-## farfegnugen 1a
+## Slide 1 
 
-## farfegnugen 1b
+![](https://i.ytimg.com/vi/i66Ixw5o85w/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBdYsotJFrVAe2tbM3qy6LOdYxcjQ)
 
-## farfegnugen 1c
+::: {.notes}
+Speaker notes go here. 
+:::
 
-## farfegnugen 1d
+## Slide 2
 
-# farfegnugen 2
+![](https://wallpapers.com/images/featured/funny-cats-pictures-uu9qufqc5zq8l7el.jpg)
 
-## farfegnugen 2a
+# Stack 2
 
-## farfegnugen 2b
+## Slide 3
 
-## farfegnugen 2c
+![](https://s.yimg.com/ny/api/res/1.2/C5uryMno9srLXTTHJWNllw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQ4MA--/https://s.yimg.com/os/en_US/News/BGR_News/funny-cat.jpg)
 
+## Slide 4
+
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNRp3SyzQ4cx5mP8VWUNHQMtZGRRDnQRHkjw&s)

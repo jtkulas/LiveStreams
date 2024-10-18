@@ -6,7 +6,7 @@ title-slide-attributes:
   data-background-opacity: ".3"
 format:
   revealjs:
-    navigation-mode: vertical
+    navigation-mode: grid
     transition: convex
     transition-speed: slow
     mermaid:

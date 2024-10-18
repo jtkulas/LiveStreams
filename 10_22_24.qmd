@@ -1,0 +1,203 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #48...<br>...[Shiny]{.shiny2} AI bot" 
+title-slide-attributes: 
+  data-background-image:  https://img.freepik.com/premium-photo/retro-robot-distant-planet-robot-is-standing-rocky-hilltop-looking-out-vast-landscape-mountains-craters_14117-262871.jpg
+  data-background-opacity: ".5"
+format:
+  revealjs:
+    slide-tone: true
+    navigation-mode: vertical
+    transition: concave
+    transition-speed: slow
+    controls-layout: bottom-right
+    controls-tutorial: true
+    slide-number: h.v
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [league, weekly.scss]       ## night & league
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+    menu:
+     side: right
+     width: third
+     numbers: true
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #47&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    - [Shiny]{.shiny2} AI bot `r emo::ji("robot")`
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title47.JPG){.absolute top="170" right="-120" width="600" height="325"}
+
+# Recap of Session #47: 
+
+## [[Slide Navigation]{.navigation}](https://revealjs.com/vertical-slides/) (Part II)`r emo::ji("compass")``r emo::ji("compass")`
+
+:::: {.columns}
+::: {.column width="65%"}
+
+::: {.panel-tabset}
+
+### `r fontawesome::fa("bars", fill="#499ecc")`
+
+```{yaml}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "9-12"
+
+---
+title: "Playing with revealjs presentations" 
+author: "Rocky & Bullwinkle" 
+format: 
+  revealjs:
+    navigation-mode: vertical
+    transition: concave 
+    transition-speed: slow
+    menu:                     #<1>     
+      side: right             #<2>
+      width: third            #<3>
+      numbers: true           #<4>
+---
+```
+1. Can set this value to `false` if you'd like to hide the `r fontawesome::fa("bars", fill="#499ecc")` in the bottom left corner -- menu content will still be available via keyboard shortcuts ("m" button)
+2. Emergent location of activated menu (`left` or `right`)
+3. Width of activated menu (`normal`, `wide`, `third`, `half`, `full` [or other .CSS length values])
+4. Adds slide number (within menu only)
+
+### Slides
+
+```{yaml}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "9-12"
+
+---
+title: "Playing with revealjs presentations" 
+author: "Rocky & Bullwinkle" 
+format: 
+  revealjs:
+    navigation-mode: vertical
+    transition: concave
+    transition-speed: slow
+    slide-number: h.v                  #<1>
+    controls-layout: bottom-right      #<2>
+    controls-tutorial: true            #<3>
+    slide-tone: true                   #<4>
+---
+```
+1. Creates slide number. Default is `true` but can also be: `c/t`, `c`, `h/v`, or `h.v` -- [can also limit location and medium](https://quarto.org/docs/presentations/revealjs/presenting.html#slide-numbers) (e.g., only .pdf)
+2. Locates navigation cues "together" in lower right-hand corner
+3. "Wiggle" animation added to navigation cues
+4. [Tone cue](https://quarto.org/docs/presentations/revealjs/presenting.html#slide-tone) for visually impaired -- might need to refresh browser
+
+:::
+
+:::
+
+::: {.column width="35%"}
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzJkMTl5eXlsNTQzNWhtNG5xYXZ0MjhjZnM5bnJyeTMwdjM4bWEwNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QmHmjEwtbQtlkOx8T1/giphy.gif){.absolute right="-150"}
+:::
+::::
+
+## Auto-Slide (with [embedio](https://quarto.thecoatlessprofessor.com/embedio/) extension)
+
+:::: {.columns}
+::: {.column width="50%"}
+
+```{yaml}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "9-10"
+
+---
+title: "Playing with <br> revealjs presentations" 
+author: "Rocky & Bullwinkle" 
+format: 
+  revealjs:
+    navigation-mode: grid
+    transition: convex
+    transition-speed: slow
+    auto-slide: 1000               #<1>
+    loop: true                     #<2>
+---
+
+# Stack 1
+
+## Slide 1 
+
+![](https://i.ytimg.com/vi/i66Ixw5o85w/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBdYsotJFrVAe2tbM3qy6LOdYxcjQ)
+
+::: {.notes}
+Speaker notes go here. 
+:::
+
+## Slide 2
+
+![](https://wallpapers.com/images/featured/funny-cats-pictures-uu9qufqc5zq8l7el.jpg)
+
+# Stack 2
+
+## Slide 3
+
+![](https://s.yimg.com/ny/api/res/1.2/C5uryMno9srLXTTHJWNllw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQ4MA--/https://s.yimg.com/os/en_US/News/BGR_News/funny-cat.jpg)
+
+## Slide 4
+
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNRp3SyzQ4cx5mP8VWUNHQMtZGRRDnQRHkjw&s)
+
+```
+1. Milleseconds - currently set at "ludicrous" `r emo::ji("dizzy_face")`
+2. Whether to end at final slide or just keep looping
+
+:::
+
+::: {.column width="50%"}
+{{< revealjs file="weekly_test_template.html" height="500px" class="ratio ratio-16x9" full-screen-link="false">}}
+:::
+::::
+
+# Today: 
+
+## [Shiny]{.shiny2} [AI bot](https://gallery.shinyapps.io/assistant/) `r emo::ji("robot")`
+
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHVmdjA4dXRncHhlemRqMW9kYzN6cmI2ZTJrdWY2OWRoOWZiM2xuOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ohc1bPSrYxJpwsZlS/giphy.gif){.absolute left="-150" height="425"}
+
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHRxNXdxYnU5aXVvcjV4Z25tYmcyZzYwNW5jM2JsNnhub2FmMGN6MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/h4Hz4w9Jgrc1EY9VkL/giphy.gif){.absolute right="-150" height="425"}
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
+
