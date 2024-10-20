@@ -3,7 +3,7 @@ title: "Playing with <br> revealjs presentations"
 author: "Rocky & Bullwinkle" 
 format: 
   revealjs:
-    navigation-mode: grid
+    navigation-mode: vertical
     transition: convex
     transition-speed: slow
     menu:
