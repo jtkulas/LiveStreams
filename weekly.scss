@@ -19,6 +19,7 @@
 @import url('https://fonts.googleapis.com/css?family=Silkscreen');
 @import url('https://fonts.googleapis.com/css?family=Fascinate Inline');
 @import url('https://fonts.googleapis.com/css?family=Creepster');
+@import url('https://fonts.googleapis.com/css?family=Nosifer');
 
 /*-- scss:defaults --*/
 
@@ -302,3 +303,9 @@ width: 10px;
   color: #ffefdb;
 } 
 
+.bloody {
+  font-family: 'Nosifer';
+  color: #568203;
+  text-shadow: 
+    6px 6px 1px black;
+} 

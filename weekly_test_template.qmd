@@ -6,12 +6,9 @@ format:
     navigation-mode: vertical
     transition: convex
     transition-speed: slow
-    menu:
-      numbers: true
     controls-layout: bottom-right
     controls-tutorial: true
-    auto-slide: 1000
-    loop: true
+    multiplex: true
 ---
 
 # Stack 1

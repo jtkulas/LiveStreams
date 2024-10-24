@@ -1,0 +1,106 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #49...<br>[...zombie]{.bloody} slides" 
+title-slide-attributes: 
+  data-background-image: https://www.postershoppe.com/cdn/shop/files/1721-monsters-playing-poker_black_framed_1200x1200.jpg?v=1687833456  
+  data-background-opacity: ".4"
+format:
+  revealjs:
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+#    controls-layout: bottom-right
+#    controls-tutorial: true
+#    slide-number: h.v
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [league, weekly.scss]       ## night & league
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #48&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    - [zombie]{.bloody} slides `r emo::ji("zombie")`
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title48.JPG){.absolute top="170" right="-120" width="600" height="325"}
+
+# Recap of Session #48: 
+
+## [Shiny]{.shiny2} AI bot `r emo::ji("robot")`
+
+[![](img/shinybot.JPG)](https://gallery.shinyapps.io/assistant/)
+
+# Today: 
+
+## `r emo::ji("zombie")` [zombie]{.bloody} `r emo::ji("zombie")` slides... 
+
+:::: {.columns}
+::: {.column width="50%"}
+
+<br>
+...via [Multiplex](https://quarto.org/docs/presentations/revealjs/presenting.html#multiplex) plugin:
+
+```{yaml}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "5"
+
+---
+title: "Presentation"
+format:
+  revealjs:
+    multiplex: true
+---
+```
+
+![](https://media.contentapi.ea.com/content/dam/eacom/en-us/migrated-images/2016/11/editorial-zombie-hand-xl.png.adapt.crop16x9.320w.png){.absolute bottom="150" left="-160"}
+
+:::
+
+::: {.column width="50%"}
+
+<div class="tenor-gif-embed" data-postid="13231144" data-share-method="host" data-aspect-ratio="0.554113" ><a href="https://tenor.com/view/followme-duck-duck-go-run-gif-13231144">Followme Duck Duck Go GIF</a>from <a href="https://tenor.com/search/followme-gifs">Followme GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+![](https://www.freeiconspng.com/thumbs/zombie/drawing-sketch-animation-clip-art-transparency-image-23.png){.absolute top="100" right="-250"}
+
+:::
+::::
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
+

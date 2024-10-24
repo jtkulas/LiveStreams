@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="weekly_test_template_files/libs/clipboard/clipboard.min.js"></script>
-<script src="weekly_test_template_files/libs/quarto-html/tabby.min.js"></script>
-<script src="weekly_test_template_files/libs/quarto-html/popper.min.js"></script>
-<script src="weekly_test_template_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="weekly_test_template_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="weekly_test_template_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="weekly_test_template_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="weekly_test_template_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="10_29_24_files/libs/clipboard/clipboard.min.js"></script>
+<script src="10_29_24_files/libs/quarto-html/tabby.min.js"></script>
+<script src="10_29_24_files/libs/quarto-html/popper.min.js"></script>
+<script src="10_29_24_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="10_29_24_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="10_29_24_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="10_29_24_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="10_29_24_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="10_29_24_files/libs/quarto-contrib/reveal-header-1.0.0/add_header.js" defer="true"></script>
+<link href="10_29_24_files/libs/quarto-contrib/reveal-header-1.0.0/add_header.css" rel="stylesheet">
+<link href="10_29_24_files/libs/quarto-contrib/grid-no-htext-1.0.0/grid_no_htext.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.47">
 
-  <meta name="author" content="Rocky &amp; Bullwinkle">
-  <title>Playing with   revealjs presentations</title>
+  <meta name="author" content="OOH Session #49… …zombie slides">
+  <title>R for  Authoring!!</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="weekly_test_template_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="weekly_test_template_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="10_29_24_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="10_29_24_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -29,12 +32,77 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="weekly_test_template_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="weekly_test_template_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="weekly_test_template_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="weekly_test_template_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="weekly_test_template_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="10_29_24_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="10_29_24_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="10_29_24_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="10_29_24_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="10_29_24_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -321,63 +389,133 @@
     }
   </style>
 </head>
-<body class="quarto-light">
+<body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Playing with <br> revealjs presentations</h1>
+<section id="title-slide" data-background-image="https://www.postershoppe.com/cdn/shop/files/1721-monsters-playing-poker_black_framed_1200x1200.jpg?v=1687833456" data-background-opacity=".4" class="quarto-title-block center">
+  <h1 class="title">R for <br>Authoring!!</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Rocky &amp; Bullwinkle 
+OOH Session #49…<br><span class="bloody">…zombie</span> slides 
 </div>
 </div>
 </div>
 
+</section>
+<section id="open-office-hours-october-24-2024" class="slide level2">
+<h2>Open Office Hours <br>(October 24, 2024)</h2>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout="[80,20]">
+<div class="quarto-layout-row">
+<div class="first-column quarto-layout-cell" style="flex-basis: 80.0%;justify-content: flex-start;">
+<ul>
+<li>Recap session #48&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↔︎️</li>
+<li>Focal issue(s):
+<ul>
+<li><span class="bloody">zombie</span> slides 🧟</li>
+</ul></li>
+<li>Shared problem-solving</li>
+</ul>
+</div>
+<div class="second-column quarto-layout-cell" style="flex-basis: 20.0%;justify-content: flex-start;">
+
+</div>
+</div>
+</div>
+<p><img data-src="img/title48.JPG" class="absolute" style="top: 170px; right: -120px; width: 600px; height: 325px; "></p>
 </section>
 <section>
-<section id="stack-1" class="title-slide slide level1 center">
-<h1>Stack 1</h1>
+<section id="recap-of-session-48" class="title-slide slide level1 center">
+<h1>Recap of Session #48:</h1>
 
 </section>
-<section id="slide-1" class="slide level2">
-<h2>Slide 1</h2>
-
-<img data-src="https://i.ytimg.com/vi/i66Ixw5o85w/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&amp;rs=AOn4CLBdYsotJFrVAe2tbM3qy6LOdYxcjQ" class="r-stretch"><aside class="notes">
-<p>Speaker notes go here.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="slide-2" class="slide level2">
-<h2>Slide 2</h2>
-
-<img data-src="https://wallpapers.com/images/featured/funny-cats-pictures-uu9qufqc5zq8l7el.jpg" class="r-stretch"></section></section>
+<section id="shiny-ai-bot" class="slide level2">
+<h2><span class="shiny2">Shiny</span> AI bot 🤖</h2>
+<p><a href="https://gallery.shinyapps.io/assistant/"><img data-src="img/shinybot.JPG"></a></p>
+</section></section>
 <section>
-<section id="stack-2" class="title-slide slide level1 center">
-<h1>Stack 2</h1>
+<section id="today" class="title-slide slide level1 center">
+<h1>Today:</h1>
 
 </section>
-<section id="slide-3" class="slide level2">
-<h2>Slide 3</h2>
+<section id="zombie-slides" class="slide level2">
+<h2>🧟 <span class="bloody">zombie</span> 🧟 slides…</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><br> …via <a href="https://quarto.org/docs/presentations/revealjs/presenting.html#multiplex">Multiplex</a> plugin:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="5"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href=""></a><span class="pp">---</span></span>
+<span id="cb1-2"><a href=""></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Presentation"</span></span>
+<span id="cb1-3"><a href=""></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb1-4"><a href=""></a><span class="at">  </span><span class="fu">revealjs</span><span class="kw">:</span></span>
+<span id="cb1-5"><a href=""></a><span class="at">    </span><span class="fu">multiplex</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-6"><a href=""></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><img data-src="https://media.contentapi.ea.com/content/dam/eacom/en-us/migrated-images/2016/11/editorial-zombie-hand-xl.png.adapt.crop16x9.320w.png" class="absolute" style="left: -160px; bottom: 150px; "></p>
+</div><div class="column" style="width:50%;">
+<div class="tenor-gif-embed" data-postid="13231144" data-share-method="host" data-aspect-ratio="0.554113">
+<a href="https://tenor.com/view/followme-duck-duck-go-run-gif-13231144">Followme Duck Duck Go GIF</a>from <a href="https://tenor.com/search/followme-gifs">Followme GIFs</a>
+</div>
+<script type="text/javascript" async="" src="https://tenor.com/embed.js"></script>
+<p><img data-src="https://www.freeiconspng.com/thumbs/zombie/drawing-sketch-animation-clip-art-transparency-image-23.png" class="absolute" style="top: 100px; right: -250px; "></p>
+</div></div>
+</section>
+<section id="session-info-october-24-2024-rendering" class="slide level2">
+<h2><svg aria-hidden="true" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4287f5;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg> Session Info (October 24, 2024) Rendering:</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>R version 4.2.2 (2022-10-31 ucrt)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 10 x64 (build 19045)
 
-<img data-src="https://s.yimg.com/ny/api/res/1.2/C5uryMno9srLXTTHJWNllw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQ4MA--/https://s.yimg.com/os/en_US/News/BGR_News/funny-cat.jpg" class="r-stretch"></section>
-<section id="slide-4" class="slide level2">
-<h2>Slide 4</h2>
+Matrix products: default
 
-<img data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNRp3SyzQ4cx5mP8VWUNHQMtZGRRDnQRHkjw&amp;s.png" class="r-stretch"><div class="quarto-auto-generated-content">
+locale:
+[1] LC_COLLATE=English_United States.utf8 
+[2] LC_CTYPE=English_United States.utf8   
+[3] LC_MONETARY=English_United States.utf8
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.utf8    
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] fontawesome_0.5.2
+
+loaded via a namespace (and not attached):
+ [1] lubridate_1.9.3   emo_0.0.0.9000    digest_0.6.31     crayon_1.5.2     
+ [5] assertthat_0.2.1  lifecycle_1.0.4   jsonlite_1.8.9    magrittr_2.0.3   
+ [9] evaluate_1.0.0    stringi_1.7.12    rlang_1.1.3       cli_3.6.0        
+[13] rstudioapi_0.15.0 vctrs_0.6.5       generics_0.1.3    rmarkdown_2.28   
+[17] tools_4.2.2       stringr_1.5.1     glue_1.6.2        purrr_1.0.1      
+[21] xfun_0.42         yaml_2.3.10       fastmap_1.1.1     compiler_4.2.2   
+[25] timechange_0.3.0  htmltools_0.5.7   knitr_1.45       </code></pre>
+</div>
+</div>
+<div class="quarto-auto-generated-content">
+<p><img src="erg2.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
+</div>
+</div>
+<div class="reveal-header">
+<div class="header-logo" data-footer-logo-link="https://ergreports.com/">
+<img data-src="">
+</div>
+<div class="sc-title">
+<p> </p>
+</div>
+<div class="header-text">
+<p> </p>
+</div>
+<div class="sb-title">
+<p> </p>
 </div>
 </div>
 </section></section>
@@ -385,21 +523,19 @@ Rocky &amp; Bullwinkle
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="weekly_test_template_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="10_29_24_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="weekly_test_template_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="weekly_test_template_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="weekly_test_template_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="weekly_test_template_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="weekly_test_template_files/libs/revealjs/plugin/multiplex/socket.io.js"></script>
-  <script src="weekly_test_template_files/libs/revealjs/plugin/multiplex/multiplex.js"></script>
-  <script src="weekly_test_template_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="10_29_24_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="10_29_24_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="10_29_24_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="10_29_24_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="10_29_24_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="weekly_test_template_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="weekly_test_template_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="weekly_test_template_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="weekly_test_template_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="10_29_24_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="10_29_24_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="10_29_24_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="10_29_24_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -414,7 +550,6 @@ Rocky &amp; Bullwinkle
 'autoAnimateDuration': 1,
 'autoAnimateUnmatched': true,
 'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
-'multiplex': {"secret":null,"id":"c302e8e7227551fb","url":"https://reveal-multiplex.glitch.me/"},
 'smaller': false,
  
         // Display controls in the bottom right corner
@@ -422,10 +557,10 @@ Rocky &amp; Bullwinkle
 
         // Help the user learn the controls by providing hints, for example by
         // bouncing the down arrow when they first encounter a vertical slide
-        controlsTutorial: true,
+        controlsTutorial: false,
 
         // Determines where controls appear, "edges" or "bottom-right"
-        controlsLayout: 'bottom-right',
+        controlsLayout: 'edges',
 
         // Visibility rule for backwards navigation arrows; "faded", "hidden"
         // or "visible"
@@ -476,7 +611,7 @@ Rocky &amp; Bullwinkle
         rtl: false,
 
         // see https://revealjs.com/vertical-slides/#navigation-mode
-        navigationMode: 'default',
+        navigationMode: 'linear',
 
         // Randomizes the order of slides each time the presentation loads
         shuffle: false,
@@ -525,7 +660,7 @@ Rocky &amp; Bullwinkle
         defaultTiming: null,
 
         // Enable slide navigation via mouse wheel
-        mouseWheel: false,
+        mouseWheel: true,
 
         // The display mode that will be used to show slides
         display: 'block',
@@ -568,7 +703,7 @@ Rocky &amp; Bullwinkle
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -588,12 +723,88 @@ Rocky &amp; Bullwinkle
         plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
 
           RevealMath,
-          
+          RevealNotes,
           RevealSearch,
           RevealZoom
         ]
       });
     </script>
+    
+
+    <script>
+
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
+      // slide changes (different for each slide format).
+
+      (function () {
+
+        // dispatch for htmlwidgets
+
+        function fireSlideEnter() {
+
+          const event = window.document.createEvent("Event");
+
+          event.initEvent("slideenter", true, true);
+
+          window.document.dispatchEvent(event);
+
+        }
+
+    
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          fireSlideEnter();
+
+    
+
+          // dispatch for shiny
+
+          if (window.jQuery) {
+
+            if (previousSlide) {
+
+              window.jQuery(previousSlide).trigger("hidden");
+
+            }
+
+            if (currentSlide) {
+
+              window.jQuery(currentSlide).trigger("shown");
+
+            }
+
+          }
+
+        }
+
+    
+
+        // hookup for slidy
+
+        if (window.w3c_slidy) {
+
+          window.w3c_slidy.add_observer(function (slide_num) {
+
+            // slide_num starts at position 1
+
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
+          });
+
+        }
+
+    
+
+      })();
+
+    </script>
+
+    
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
@@ -742,6 +953,158 @@ Rocky &amp; Bullwinkle
           }
         });
       }
+          let selectedAnnoteEl;
+          const selectorForAnnotation = ( cell, annotation) => {
+            let cellAttr = 'data-code-cell="' + cell + '"';
+            let lineAttr = 'data-code-annotation="' +  annotation + '"';
+            const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+            return selector;
+          }
+          const selectCodeLines = (annoteEl) => {
+            const doc = window.document;
+            const targetCell = annoteEl.getAttribute("data-target-cell");
+            const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+            const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+            const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+            const lineIds = lines.map((line) => {
+              return targetCell + "-" + line;
+            })
+            let top = null;
+            let height = null;
+            let parent = null;
+            if (lineIds.length > 0) {
+                //compute the position of the single el (top and bottom and make a div)
+                const el = window.document.getElementById(lineIds[0]);
+                top = el.offsetTop;
+                height = el.offsetHeight;
+                parent = el.parentElement.parentElement;
+              if (lineIds.length > 1) {
+                const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+                const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+                height = bottom - top;
+              }
+              if (top !== null && height !== null && parent !== null) {
+                // cook up a div (if necessary) and position it 
+                let div = window.document.getElementById("code-annotation-line-highlight");
+                if (div === null) {
+                  div = window.document.createElement("div");
+                  div.setAttribute("id", "code-annotation-line-highlight");
+                  div.style.position = 'absolute';
+                  parent.appendChild(div);
+                }
+                div.style.top = top - 2 + "px";
+                div.style.height = height + 4 + "px";
+                div.style.left = 0;
+                let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+                if (gutterDiv === null) {
+                  gutterDiv = window.document.createElement("div");
+                  gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                  gutterDiv.style.position = 'absolute';
+                  const codeCell = window.document.getElementById(targetCell);
+                  const gutter = codeCell.querySelector('.code-annotation-gutter');
+                  gutter.appendChild(gutterDiv);
+                }
+                gutterDiv.style.top = top - 2 + "px";
+                gutterDiv.style.height = height + 4 + "px";
+              }
+              selectedAnnoteEl = annoteEl;
+            }
+          };
+          const unselectCodeLines = () => {
+            const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+            elementsIds.forEach((elId) => {
+              const div = window.document.getElementById(elId);
+              if (div) {
+                div.remove();
+              }
+            });
+            selectedAnnoteEl = undefined;
+          };
+            // Handle positioning of the toggle
+        window.addEventListener(
+          "resize",
+          throttle(() => {
+            elRect = undefined;
+            if (selectedAnnoteEl) {
+              selectCodeLines(selectedAnnoteEl);
+            }
+          }, 10)
+        );
+        function throttle(fn, ms) {
+        let throttle = false;
+        let timer;
+          return (...args) => {
+            if(!throttle) { // first call gets through
+                fn.apply(this, args);
+                throttle = true;
+            } else { // all the others get throttled
+                if(timer) clearTimeout(timer); // cancel #2
+                timer = setTimeout(() => {
+                  fn.apply(this, args);
+                  timer = throttle = false;
+                }, ms);
+            }
+          };
+        }
+          const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+          for (let i=0; i<annoteTargets.length; i++) {
+            const annoteTarget = annoteTargets[i];
+            const targetCell = annoteTarget.getAttribute("data-target-cell");
+            const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+            const contentFn = () => {
+              const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+              if (content) {
+                const tipContent = content.cloneNode(true);
+                tipContent.classList.add("code-annotation-tip-content");
+                return tipContent.outerHTML;
+              }
+            }
+            const config = {
+              allowHTML: true,
+              content: contentFn,
+              onShow: (instance) => {
+                selectCodeLines(instance.reference);
+                instance.reference.classList.add('code-annotation-active');
+                window.tippy.hideAll();
+              },
+              onHide: (instance) => {
+                unselectCodeLines();
+                instance.reference.classList.remove('code-annotation-active');
+              },
+              maxWidth: 300,
+              delay: [50, 0],
+              duration: [200, 0],
+              offset: [5, 10],
+              arrow: true,
+              appendTo: function(el) {
+                return el.parentElement.parentElement.parentElement;
+              },
+              interactive: true,
+              interactiveBorder: 10,
+              theme: 'light-border',
+              placement: 'right',
+              popperOptions: {
+                modifiers: [
+                {
+                  name: 'flip',
+                  options: {
+                    flipVariations: false, // true by default
+                    allowedAutoPlacements: ['right'],
+                    fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+                  },
+                },
+                {
+                  name: 'preventOverflow',
+                  options: {
+                    mainAxis: false,
+                    altAxis: false
+                  }
+                }
+                ]        
+              }      
+            };
+            window.tippy(annoteTarget, config); 
+          }
       const findCites = (el) => {
         const parentEl = el.parentElement;
         if (parentEl) {
