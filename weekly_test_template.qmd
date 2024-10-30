@@ -1,36 +1,17 @@
 ---
-title: "Playing with <br> revealjs presentations" 
-author: "Rocky & Bullwinkle" 
+title: "Halloween is at least better than day after Election Day"
 format: 
   revealjs:
-    navigation-mode: vertical
-    transition: convex
-    transition-speed: slow
-    controls-layout: bottom-right
-    controls-tutorial: true
     multiplex: true
+    theme: [weekly.scss]
 ---
 
-# Stack 1
+## Happy Halloween
 
-## Slide 1 
+![](https://m.media-amazon.com/images/I/81xJ+-2I3-L.jpg)
 
-![](https://i.ytimg.com/vi/i66Ixw5o85w/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBdYsotJFrVAe2tbM3qy6LOdYxcjQ)
+## Is this Linus?
 
-::: {.notes}
-Speaker notes go here. 
-:::
+![](https://marketplace.canva.com/EAFxyWcMshM/1/0/900w/canva-black-orange-illustrative-happy-halloween-phone-wallpaper-H1IH113dh7s.jpg)
 
-## Slide 2
-
-![](https://wallpapers.com/images/featured/funny-cats-pictures-uu9qufqc5zq8l7el.jpg)
-
-# Stack 2
-
-## Slide 3
-
-![](https://s.yimg.com/ny/api/res/1.2/C5uryMno9srLXTTHJWNllw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQ4MA--/https://s.yimg.com/os/en_US/News/BGR_News/funny-cat.jpg)
-
-## Slide 4
-
-![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNRp3SyzQ4cx5mP8VWUNHQMtZGRRDnQRHkjw&s)
+## [BOO!!!]{.electric} {.center background-image="https://tracyhighscholarandathlete.com/wp-content/uploads/2023/10/halloween.png"} 
