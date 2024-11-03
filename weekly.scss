@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lovers Quarrel');
 @import url('https://fonts.googleapis.com/css?family=Poetsen One');
 @import url('https://fonts.googleapis.com/css?family=Notable');
-@import url('https://fonts.googleapis.com/css?family=Rye');
+@import url('https://fonts.googleapis.com/css?family=Spicy Rice');
 @import url('https://fonts.googleapis.com/css?family=Kalnia Glaze');
 @import url('https://fonts.googleapis.com/css?family=Permanent Marker');
 @import url('https://fonts.googleapis.com/css?family=Rock Salt');
@@ -17,7 +17,6 @@
 @import url('https://fonts.googleapis.com/css?family=Fleur De Leah');
 @import url('https://fonts.googleapis.com/css?family=Gloria Hallelujah');
 @import url('https://fonts.googleapis.com/css?family=Silkscreen');
-@import url('https://fonts.googleapis.com/css?family=Fascinate Inline');
 @import url('https://fonts.googleapis.com/css?family=Creepster');
 @import url('https://fonts.googleapis.com/css?family=Nosifer');
 
@@ -167,6 +166,10 @@ width: 10px;
   transform: rotateY(180deg);
 }
 
+.tilt {
+  rotate: 30deg;
+}
+
 .reveal .custom7030 > div.column:first-child {
   width: 70%;
 }
@@ -309,4 +312,10 @@ width: 10px;
   color: #568203;
   text-shadow: 
     6px 6px 1px black;
+} 
+
+.election {
+  font-family: 'Londrina Solid';
+  font-size: 1.7em;
+  color: #77b1d4;
 } 
