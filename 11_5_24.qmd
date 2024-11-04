@@ -84,10 +84,11 @@ format:
 
 :::: {.columns}
 ::: {.column width="50%"}
+![](https://www.zonkafeedback.com/hs-fs/hubfs/custoomer%20service%20survey%20Likert%20Scale%20example.png?width=752&height=438&name=custoomer%20service%20survey%20Likert%20Scale%20example.png)
 :::
 
 ::: {.column width="50%"}
-
+![](https://qualaroo.com/blog/wp-content/uploads/2023/02/Single-Choice-Questions.png)
 :::
 ::::
 
