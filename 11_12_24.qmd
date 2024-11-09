@@ -1,9 +1,9 @@
 ---
 title: "R for <br>Authoring!!" 
-author: "OOH Session #50...<br>...[polling]{.election} via R" 
+author: "OOH Session #51...<br>...[polling]{.election} via R: Part II" 
 title-slide-attributes: 
-  data-background-image: https://d2eehagpk5cl65.cloudfront.net/img/q60/uploads/2020/10/VitalVote.jpg
-  data-background-opacity: ".7"
+  data-background-image: https://img.freepik.com/premium-vector/pop-art-surprised-lady_81894-2801.jpg?w=740
+  data-background-opacity: ".3"
 format:
   revealjs:
     slide-tone: false
@@ -42,9 +42,9 @@ library(fontawesome)
 
 ::: {layout="[80,20]"}
 ::: first-column
--   Recap session #49&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Recap session #50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue(s):
-    - [polling]{.election} via `r fontawesome::fa("r-project", fill="#4287f5")`
+    - [polling]{.election} via `r fontawesome::fa("r-project", fill="#4287f5")`: Part II
       + [surveydown](https://surveydown.org/) `r emo::ji("down_arrow")`
 -   Shared problem-solving
 :::
@@ -54,11 +54,11 @@ library(fontawesome)
 
 :::
 
-![](img/title49.JPG){.absolute top="170" right="-120" width="600" height="325"}
+![](img/title50.JPG){.absolute top="170" right="-120" width="600" height="325"}
 
-# Recap of Session #49: 
+# Recap of Session #50: 
 
-## [zombie]{.bloody} slides `r emo::ji("zombie")`
+## [Polling]{.election} via [Surveydown](https://surveydown.org/)
 
 ```{yaml}
 #| eval: false
@@ -80,24 +80,15 @@ format:
 
 # Today: 
 
-## [Polling]{.election} via [Surveydown](https://surveydown.org/)
+## Further [Surveydown](https://surveydown.org/) Exploration
 
-:::: {.columns}
-::: {.column width="50%"}
-![](https://www.zonkafeedback.com/hs-fs/hubfs/custoomer%20service%20survey%20Likert%20Scale%20example.png?width=752&height=438&name=custoomer%20service%20survey%20Likert%20Scale%20example.png)
-:::
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjVsdzZvN3B6MWJzbXplcjc0MGg5MG50ZGVhMjkyb2l1bWo5MTI3cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LwzJu1FeQaERgwo110/giphy.gif){.absolute right="0"}
 
-::: {.column width="50%"}
-![](https://qualaroo.com/blog/wp-content/uploads/2023/02/Single-Choice-Questions.png)
-:::
-::::
+![](https://surveydown.org/images/logo.png){.absolute bottom="40" left="-20" height="250"}
 
-![](https://cdn-icons-png.flaticon.com/512/3782/3782275.png){.tilt .absolute right="-130" top="-20" height="200"}
+![](https://pngimg.com/d/bush_PNG7202.png){.absolute left="45" top="150"}
 
-![](https://static.vecteezy.com/system/resources/thumbnails/009/687/793/small_2x/american-flag-usa-flag-png.png){.tilt .absolute left="-160" bottom="50" height="200"}
-
-![](https://surveydown.org/images/logo.png){.absolute top="0" right="190" height="200"}
-
+![](https://www.onlygfx.com/wp-content/uploads/2021/12/magnifying-glass-clipart.png){.absolute height="200" right="280" bottom="165"}
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 
