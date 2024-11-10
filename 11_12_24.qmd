@@ -58,29 +58,128 @@ library(fontawesome)
 
 # Recap of Session #50: 
 
-## [Polling]{.election} via [Surveydown](https://surveydown.org/)
+## [Polling]{.election} via [Surveydown](https://surveydown.org/)  ...Part I
 
-```{yaml}
+:::: {.panel-tabset}
+
+### Overview
+![](https://surveydown.org/images/technologies.png){.absolute height="400" right="0"}
+
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjh0dWxhOWJlZ2xkNTZ0MmRvYm55NG54NHQ4cXV3eXI1aTdxMmlxMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TzmXkFao3dXXExjKvJ/giphy.gif){.absolute left="0" bottom="80"}
+
+### Setup
+
+:::: {.columns}
+::: {.column width="50%"}
+```{r}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "5"
 
----
-title: "Presentation"
-format:
-  revealjs:
-    multiplex: true           #<1>
----
+install.packages("surveydown")
+
+library(surveydown)
+sd_create_survey("path/to/folder") #<1>
 ```
-1. Creates 2 .html files -- one for presenter and one "zombie"`r emo::ji("zombie")` for viewers. The zombie can be published and shared -- these slides will parrot`r emo::ji("parrot")` actions taken by the presenter's slides.
+1. Currently each survey needs to be stored in it's own separate **project folder**. 
 
-![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzd6anVxemVpeXc3OHhsMHgwaXAwNHl2MG55bW1meDM5ZDZiaXAxZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LRzK37z3km2v6/giphy.gif){.absolute right="0" height="287"}
+![](https://www.mediastorehouse.com/p/690/young-boys-setting-bowling-pins-arcade-bowling-22335978.jpg.webp){.absolute width="500"}
+:::
 
-![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDZlbXY0dWczdGl6aHk3OXpnZnVxazhkdmxleHJ4eXpwMzBvbDNsNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cmMtxnhPB6eSHMln1w/giphy.gif){.absolute left="0" height="287"}
+::: {.column width="50%"}
 
-# Today: 
+::: {.fragment}
+![](img/surveydown.JPG)
 
-## Further [Surveydown](https://surveydown.org/) Exploration
+::: {.fragment}
+![](https://pngimg.com/d/red_arrow_PNG12.png){.absolute height="300" bottom="65" right="50"}
+:::
+:::
+
+:::
+::::
+
+### Survey Specs
+
+:::: {.columns}
+::: {.column width="50%"}
+```
+---
+echo: false
+warning: false
+---
+
+``{r}
+library(surveydown)
+``
+
+::: {#welcome .sd-page}
+# Welcome to our survey!
+
+This is a simple demonstration of a `surveydown` survey. It has two pages with one question on each page.
+
+Here is a basic "multiple choice" question, created using `type = 'mc'` inside the `sd_question()` function:
+
+``{r}
+sd_question(
+  type  = 'mc',
+  id    = 'penguins',
+  label = "Which type of penguin do you like the best?",
+  option = c(
+    'Adélie'       = 'adelie',
+    'Chinstrap'    = 'chinstrap',
+    'Chilly Willy' = 'chilly',
+    'Gentoo'       = 'gentoo'
+  )
+)
+``
+
+You need to insert next buttons with `sd_next()` and set the `next_page` argument to the name of the page you want to go to next.
+
+``{r}
+sd_next(next_page = 'page2')
+``
+
+:::
+
+::: {#page2 .sd-page}
+This is another page in your survey.
+
+{surveydown} supports many types of questions. For example, here is a simple `text` type question:
+
+``{r}
+sd_question(
+  type  = "text",
+  id    = "silly_word",
+  label = "Write a silly word here:"
+)
+
+sd_next(next_page = 'end')
+``
+:::
+
+::: {#end .sd-page}
+## End
+
+This it the last page in the survey.
+
+``{r}
+sd_close("Exit Survey")
+``
+:::
+
+```
+:::
+
+::: {.column width="50%"}
+{{< revealjs file="survey.html" height="500px" class="ratio ratio-16x9" full-screen-link="false">}}
+:::
+::::
+
+::::
+
+# Today... 
+
+## ...on the hunt for more [surveydown](https://surveydown.org/) d-tails
 
 ![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjVsdzZvN3B6MWJzbXplcjc0MGg5MG50ZGVhMjkyb2l1bWo5MTI3cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LwzJu1FeQaERgwo110/giphy.gif){.absolute right="0"}
 
