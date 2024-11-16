@@ -33,7 +33,48 @@ ul.task-list li input[type="checkbox"] {
 <script src="survey_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="survey_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="survey_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="survey_files/libs/shinyWidgets-0.8.7/shinyWidgets.min.css" rel="stylesheet">
 
+<script src="survey_files/libs/shinyWidgets-0.8.7/shinyWidgets-bindings.min.js"></script>
+
+<script src="survey_files/libs/ionrangeslider-javascript-2.3.1/js/ion.rangeSlider.min.js"></script>
+
+<script src="survey_files/libs/strftime-0.9.2/strftime-min.js"></script>
+
+<link href="survey_files/libs/ionrangeslider-css-2.3.1/css/ion.rangeSlider.css" rel="stylesheet">
+
+<script src="survey_files/libs/sw-buttons-group-0.8.7/buttons-group.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -46,16 +87,18 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<p><img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/Woody_Woodpecker.svg/1200px-Woody_Woodpecker.svg.png" class="absolute" height="100"></p>
 <div id="welcome" class="sd-page">
 <section id="welcome-to-our-survey" class="level1">
 <h1>Welcome to our survey!</h1>
-<p>This is a simple demonstration of a <code>surveydown</code> survey. It has two pages with one question on each page.</p>
+<p><span class="math inline">\(I_i(\theta)=a^{2}_iP_i(\theta)Q_i(\theta)\)</span></p>
+<p><span class="kulas3">This is a simple demonstration of a <code>surveydown</code> survey. It has two pages with one question on each page.</span></p>
 <p>Here is a basic “multiple choice” question, created using <code>type = 'mc'</code> inside the <code>sd_question()</code> function:</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="container-penguins" data-question-id="penguins" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('penguins_interacted', true, {priority: 'event'});">
 <div id="penguins" class="form-group shiny-input-radiogroup shiny-input-container" role="radiogroup" aria-labelledby="penguins-label">
-<label class="control-label" id="penguins-label" for="penguins"><p>Which type of penguin do you like the best?</p>
+<label class="control-label" id="penguins-label" for="penguins"><p>\(I_i(\theta)=a^{2}_iP_i(\theta)Q_i(\theta)\)</p>
 </label>
 <div class="shiny-options-group">
 <div class="radio">
@@ -74,6 +117,12 @@ ul.task-list li input[type="checkbox"] {
 <label>
 <input type="radio" name="penguins" value="chilly">
 <span>Chilly Willy</span>
+</label>
+</div>
+<div class="radio">
+<label>
+<input type="radio" name="penguins" value="woody">
+<span>Downy WP</span>
 </label>
 </div>
 <div class="radio">
@@ -116,6 +165,81 @@ ul.task-list li input[type="checkbox"] {
 <div data-next-page="end" style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
 <button class="btn btn-default action-button sd-enter-button" id="page_id_next" onclick="Shiny.setInputValue('next_page', this.parentElement.getAttribute('data-next-page'));" style="display: block; margin: auto;" type="button">Next</button>
 </div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="container-climate_care" data-question-id="climate_care" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('climate_care_interacted', true, {priority: 'event'});">
+<div class="form-group shiny-input-container">
+<label class="control-label" id="climate_care-label" for="climate_care"><p>To what extent do you believe human-caused climate change is real?</p>
+</label>
+<input class="js-range-slider sw-slider-text" data-data-type="text" data-force-edges="true" data-from="0" data-from-fixed="false" data-from-shadow="false" data-grid="true" data-hide-min-max="false" data-keyboard="true" data-prettify-enabled="false" data-skin="shiny" data-swvalues="[&quot;dont_believe&quot;,&quot;somewhat&quot;,&quot;neutral&quot;,&quot;believe&quot;,&quot;strongly_believe&quot;]" data-to-fixed="false" data-to-shadow="false" id="climate_care">
+</div>
+<span class="hidden-asterisk">*</span>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="container-fruit" data-question-id="fruit" class="question-container" style="width: 100%;" oninput="Shiny.setInputValue('fruit_interacted', true, {priority: 'event'});">
+<div class="form-group shiny-input-container shiny-input-radiogroup shiny-input-container-inline">
+<label class="control-label" id="fruit-label" for="fruit"><p>Which fruit do you prefer most from this list?</p>
+</label>
+<br>
+<div id="fruit" class="radio-group-buttons">
+<div aria-labelledby="fruit-label" class="btn-group btn-group-container-sw" data-toggle="buttons" role="group">
+<div class="btn-group btn-group-toggle" role="group">
+<button class="btn radiobtn btn-default">
+<input type="radio" autocomplete="off" name="fruit" value="apple">
+Apple
+</button>
+</div>
+<div class="btn-group btn-group-toggle" role="group">
+<button class="btn radiobtn btn-default">
+<input type="radio" autocomplete="off" name="fruit" value="banana">
+Banana
+</button>
+</div>
+<div class="btn-group btn-group-toggle" role="group">
+<button class="btn radiobtn btn-default">
+<input type="radio" autocomplete="off" name="fruit" value="pear">
+Pear
+</button>
+</div>
+<div class="btn-group btn-group-toggle" role="group">
+<button class="btn radiobtn btn-default">
+<input type="radio" autocomplete="off" name="fruit" value="strawberry">
+Strawberry
+</button>
+</div>
+<div class="btn-group btn-group-toggle" role="group">
+<button class="btn radiobtn btn-default">
+<input type="radio" autocomplete="off" name="fruit" value="grape">
+Grape
+</button>
+</div>
+<div class="btn-group btn-group-toggle" role="group">
+<button class="btn radiobtn btn-default">
+<input type="radio" autocomplete="off" name="fruit" value="mango">
+Mango
+</button>
+</div>
+<div class="btn-group btn-group-toggle" role="group">
+<button class="btn radiobtn btn-default">
+<input type="radio" autocomplete="off" name="fruit" value="watermelon">
+Watermelon
+</button>
+</div>
+</div>
+</div>
+<script>
+            $(document).on('click', '#fruit .btn', function() {
+                Shiny.setInputValue('fruit_interacted', true, {priority: 'event'});
+            });
+        </script>
+</div>
+<span class="hidden-asterisk">*</span>
 </div>
 </div>
 </div>

@@ -1,0 +1,200 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #52...<br>...[polling]{.election} via R: The [Shiny]{.shiny .tilt} Element" 
+title-slide-attributes: 
+  data-background-image: https://img.freepik.com/premium-photo/3d-realistic-flashlight-with-gold-glow-glare-bright-starlike-shine-magical-light-beams-dark-night-background_1162141-48833.jpg  
+  data-background-opacity: ".6"
+format:
+  revealjs:
+    mouse-wheel: true                ## yes enables mouse
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+#    controls-layout: bottom-right
+#    controls-tutorial: true
+#    slide-number: h.v
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [league, weekly.scss]       ## night & league
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    - [polling]{.election} via `r fontawesome::fa("r-project", fill="#4287f5")`: Part III
+      + [surveydown](https://surveydown.org/) `r emo::ji("down_arrow")`
+        + The [Shiny]{.shiny2} Element
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title51.JPG){.absolute top="170" right="-120" width="600" height="325"}
+
+# Recap of Session #51: 
+
+## [Polling]{.election} via [Surveydown](https://surveydown.org/)  ...Part II 
+
+
+![](https://surveydown.org/images/technologies.png){.absolute right="-100" top="0" height="200"}
+
+![](https://static.vecteezy.com/system/resources/thumbnails/015/241/249/small/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute right="160" top="70" width="100"}
+
+:::: {.columns}
+::: {.column width="50%"}
+```
+---
+echo: false
+warning: false
+theme: [league, weekly.scss]       ## night & league
+---
+
+``{r, echo=FALSE}
+library(surveydown)
+``
+
+![](https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/Woody_Woodpecker.svg/1200px-Woody_Woodpecker.svg.png){.absolute height="100"}
+
+::: {#welcome .sd-page}
+# Welcome to our survey!
+
+$I_i(\theta)=a^{2}_iP_i(\theta)Q_i(\theta)$
+
+[This is a simple demonstration of a `surveydown` survey. It has two pages with one question on each page.]{.kulas3}
+
+Here is a basic "multiple choice" question, created using `type = 'mc'` inside the `sd_question()` function:
+
+``{r}
+#| echo: false
+
+sd_question(
+  type  = 'mc',
+  id    = 'penguins',
+  label = "$I_i(\\theta)=a^{2}_iP_i(\\theta)Q_i(\\theta)$",
+  option = c(
+    'Adélie'       = 'adelie',
+    'Chinstrap'    = 'chinstrap',
+    'Chilly Willy' = "chilly",
+    'Downy WP'     = 'woody',
+    "Gentoo"       = 'gentoo'
+  )
+)
+``
+
+You need to insert next buttons with `sd_next()` and set the `next_page` argument to the name of the page you want to go to next.
+
+``{r}
+sd_next(next_page = 'page2')
+``
+:::
+
+::: {#page2 .sd-page}
+This is another page in your survey.
+
+{surveydown} supports many types of questions. For example, here is a simple `text` type question:
+
+``{r}
+sd_question(
+  type  = "text",
+  id    = "silly_word",
+  label = "Write a silly word here:"
+)
+
+sd_next(next_page = 'end')
+``
+
+:::
+
+``{r}
+sd_question(
+  type  = 'slider',
+  id    = 'climate_care',
+  label = "To what extent do you believe human-caused climate change is real?",
+  option = c(
+    "Don't Believe"    = "dont_believe",
+    "Somewhat Believe" = "somewhat",
+    "Neutral"          = "neutral",
+    "Believe"          = "believe",
+    "Strongly Believe" = "strongly_believe"
+  )
+)
+``
+
+
+``{r}
+sd_question(
+  type   = 'mc_buttons',
+  id     = 'fruit',
+  label  = "Which fruit do you prefer most from this list?",
+  option = c(
+    "Apple"      = "apple",
+    "Banana"     = "banana",
+    "Pear"       = "pear",
+    "Strawberry" = "strawberry",
+    "Grape"      = "grape",
+    "Mango"      = "mango",
+    "Watermelon" = "watermelon"
+  )
+)
+``
+
+::: {#end .sd-page}
+## End
+
+This it the last page in the survey.
+
+``{r}
+sd_close("Exit Survey")
+``
+:::
+
+
+```
+:::
+
+::: {.column width="50%"}
+{{< revealjs file="survey.html" height="500px" class="ratio ratio-16x9" full-screen-link="false">}}
+:::
+::::
+
+# Today... 
+
+## [surveydown](https://surveydown.org/) Part III -- The [S]{.shiny .tilt}[hiny]{.shiny3 .tilt} Element:
+
+![](https://surveydown.org/images/technologies.png){.absolute left="100" height="600"}
+
+![](https://static.vecteezy.com/system/resources/thumbnails/015/241/249/small/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute left="200" bottom="170"}
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
+
