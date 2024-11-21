@@ -3,7 +3,7 @@ title: "R for <br>Authoring!!"
 author: "Getting started...<br> ...a [step-by-step]{.notable} guide" 
 title-slide-attributes: 
   data-background-image: https://media.istockphoto.com/id/1356621379/vector/cute-baby-boy-reaching-for-mothers-loving-hand-first-steps.jpg?s=612x612&w=0&k=20&c=WXrbTMnYYqYATVV1WAvPzbCouaYQ4lkblDqzLlPbt0w=
-  data-background-opacity: ".6"
+  data-background-opacity: ".4"
 format:
   revealjs:
     mouse-wheel: true                ## yes enables mouse
@@ -38,13 +38,13 @@ filters:
 library(fontawesome)
 ```
 
-## To do:
+## Steps:
 
 ::: {layout="[80,20]"}
 ::: first-column
 
  
-+ [Install software]{.fragment .highlight-blue}
++ [Install software]{.fragment .highlight-blue fragment-index=1}
 + Choose type
 + Write prose  
   - rMarkdown
@@ -58,7 +58,9 @@ library(fontawesome)
 :::
 :::
 
+::: {.fragment fragment-index=1}
 ![](https://ih1.redbubble.net/image.2687504552.3406/flat,750x1000,075,t.u1.jpg){.absolute right="0" top="0"}
+:::
 
 # Software Installation...
 
@@ -84,8 +86,15 @@ library(fontawesome)
 
 ## Setup
 
-`tinytex`
-`Quarto`
+::: {.panel-tabset}
 
+### here
+
+`tinytex`
+
+### there
+
+`Quarto`
+:::
 
 # Today... 

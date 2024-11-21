@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="getting_started_files/libs/clipboard/clipboard.min.js"></script>
-<script src="getting_started_files/libs/quarto-html/tabby.min.js"></script>
-<script src="getting_started_files/libs/quarto-html/popper.min.js"></script>
-<script src="getting_started_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="getting_started_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="getting_started_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="getting_started_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="getting_started_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="getting_started_files/libs/quarto-contrib/reveal-header-1.0.0/add_header.js" defer="true"></script>
-<link href="getting_started_files/libs/quarto-contrib/reveal-header-1.0.0/add_header.css" rel="stylesheet">
-<link href="getting_started_files/libs/quarto-contrib/grid-no-htext-1.0.0/grid_no_htext.css" rel="stylesheet"><meta charset="utf-8">
+<script src="11_26_24_files/libs/clipboard/clipboard.min.js"></script>
+<script src="11_26_24_files/libs/quarto-html/tabby.min.js"></script>
+<script src="11_26_24_files/libs/quarto-html/popper.min.js"></script>
+<script src="11_26_24_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="11_26_24_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="11_26_24_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="11_26_24_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="11_26_24_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="11_26_24_files/libs/quarto-contrib/reveal-header-1.0.0/add_header.js" defer="true"></script>
+<link href="11_26_24_files/libs/quarto-contrib/reveal-header-1.0.0/add_header.css" rel="stylesheet">
+<link href="11_26_24_files/libs/quarto-contrib/grid-no-htext-1.0.0/grid_no_htext.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.47">
 
-  <meta name="author" content="Getting started…  …a step-by-step guide">
+  <meta name="author" content="OOH Session #53… …polling via R: Capturing the data">
   <title>R for  Authoring!!</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="getting_started_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="getting_started_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="11_26_24_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="11_26_24_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -32,12 +32,77 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="getting_started_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="getting_started_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="getting_started_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="getting_started_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="getting_started_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="11_26_24_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="11_26_24_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="11_26_24_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="11_26_24_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="11_26_24_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -323,25 +388,33 @@
       margin-right: 0; 
     }
   </style>
+   
+    <style>
+    .slide-deck {
+        border: 3px solid #dee2e6;
+        width: 100%;
+    }
+    </style>
+    
 </head>
 <body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="https://media.istockphoto.com/id/1356621379/vector/cute-baby-boy-reaching-for-mothers-loving-hand-first-steps.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=WXrbTMnYYqYATVV1WAvPzbCouaYQ4lkblDqzLlPbt0w=" data-background-opacity=".4" class="quarto-title-block center">
+<section id="title-slide" data-background-image="https://m.media-amazon.com/images/M/MV5BMGJmYjExODUtMjEzYy00YzBkLWJlMDItNjQ0MDcxODJmYzZmXkEyXkFqcGc@._V1_.jpg" data-background-opacity=".4" class="quarto-title-block center">
   <h1 class="title">R for <br>Authoring!!</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-Getting started…<br> …a <span class="notable">step-by-step</span> guide 
+OOH Session #53…<br>…<span class="election">polling</span> via R: Capturing the <span class="pmarker">data</span> 
 </div>
 </div>
 </div>
 
 </section>
-<section id="steps" class="slide level2">
-<h2>Steps:</h2>
+<section id="open-office-hours-november-21-2024" class="slide level2">
+<h2>Open Office Hours <br>(November 21, 2024)</h2>
 <div>
 
 </div>
@@ -349,17 +422,18 @@ Getting started…<br> …a <span class="notable">step-by-step</span> guide
 <div class="quarto-layout-row">
 <div class="first-column quarto-layout-cell" style="flex-basis: 80.0%;justify-content: flex-start;">
 <ul>
-<li><span class="fragment highlight-blue" data-fragment-index="1">Install software</span></li>
-<li>Choose type</li>
-<li>Write prose
+<li>Recap session #52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↔︎️</li>
+<li>Focal issue(s):
 <ul>
-<li>rMarkdown</li>
-</ul></li>
-<li>Write analyses
+<li><span class="election">polling</span> via <svg aria-hidden="true" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4287f5;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg>: Part IV
 <ul>
-<li>R</li>
-<li>Python</li>
+<li><a href="https://surveydown.org/">surveydown</a> ⬇️
+<ul>
+<li>Capturing the <span class="pmarker">data</span></li>
 </ul></li>
+</ul></li>
+</ul></li>
+<li>Shared problem-solving</li>
 </ul>
 </div>
 <div class="second-column quarto-layout-cell" style="flex-basis: 20.0%;justify-content: flex-start;">
@@ -367,49 +441,234 @@ Getting started…<br> …a <span class="notable">step-by-step</span> guide
 </div>
 </div>
 </div>
-<div class="fragment" data-fragment-index="1">
-<p><img data-src="https://ih1.redbubble.net/image.2687504552.3406/flat,750x1000,075,t.u1.jpg" class="absolute" style="top: 0px; right: 0px; "></p>
-</div>
+<p><img data-src="img/title52.JPG" class="absolute" style="top: 170px; right: -120px; width: 600px; height: 325px; "></p>
 </section>
 <section>
-<section id="software-installation" class="title-slide slide level1 center">
-<h1>Software Installation…</h1>
+<section id="recap-of-session-52" class="title-slide slide level1 center">
+<h1>Recap of Session #52:</h1>
 
 </section>
-<section id="downloads" class="slide level2">
-<h2>Downloads:</h2>
+<section id="polling-via-surveydown-part-iii" class="slide level2">
+<h2><span class="election">Polling</span> via <a href="https://surveydown.org/">Surveydown</a> – Part III…</h2>
+<div class="columns">
+<div class="column" style="width:15%;">
+<p>…the <span class="shiny2">Shiny</span> element:</p>
+</div><div class="column" style="width:85%;">
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1"></a><a href="https://cran.r-project.org/"><svg aria-hidden="true" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4287f5;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg></a></li><li><a href="#tabset-1-2"></a><a href="https://posit.co/downloads/">IDE</a></li><li><a href="#tabset-1-3"></a><a href="https://quarto.org/docs/get-started/">Quarto</a></li></ul>
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">.qmd spex</a></li><li><a href="#tabset-1-2">Preview</a></li><li><a href="#tabset-1-3"><span class="shiny2">Shiny</span> spex</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
-<p><img data-src="img/cran.JPG" class="absolute" style="left: 150px; bottom: 100px; "></p>
+<pre><code>---
+echo: false
+warning: false
+theme: [league, weekly.scss]       ## night &amp; league
+---
+
+``{r, echo=FALSE}
+library(surveydown)
+``
+
+![](https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/Woody_Woodpecker.svg/1200px-Woody_Woodpecker.svg.png){.absolute height="100"}
+
+::: {#welcome .sd-page}
+# Welcome to our survey!
+
+$I_i(\theta)=a^{2}_iP_i(\theta)Q_i(\theta)$
+
+[This is a simple demonstration of a `surveydown` survey. It has two pages with one question on each page.]{.kulas3}
+
+Here is a basic "multiple choice" question, created using `type = 'mc'` inside the `sd_question()` function:
+
+``{r}
+#| echo: false
+
+sd_question(
+  type  = 'mc',
+  id    = 'penguins',
+  label = "$I_i(\\theta)=a^{2}_iP_i(\\theta)Q_i(\\theta)$",
+  option = c(
+    'Adélie'       = 'adelie',
+    'Chinstrap'    = 'chinstrap',
+    'Chilly Willy' = "chilly",
+    'Downy WP'     = 'woody',
+    "Gentoo"       = 'gentoo'
+  )
+)
+``
+
+You need to insert next buttons with `sd_next()` and set the `next_page` argument to the name of the page you want to go to next.
+
+``{r}
+sd_next(next_page = 'page2')
+``
+:::
+
+::: {#page2 .sd-page}
+This is another page in your survey.
+
+{surveydown} supports many types of questions. For example, here is a simple `text` type question:
+
+``{r}
+sd_question(
+  type  = "text",
+  id    = "silly_word",
+  label = "Write a silly word here:"
+)
+
+sd_next(next_page = 'end')
+``
+
+:::
+
+``{r}
+sd_question(
+  type  = 'slider',
+  id    = 'climate_care',
+  label = "To what extent do you believe human-caused climate change is real?",
+  option = c(
+    "Don't Believe"    = "dont_believe",
+    "Somewhat Believe" = "somewhat",
+    "Neutral"          = "neutral",
+    "Believe"          = "believe",
+    "Strongly Believe" = "strongly_believe"
+  )
+)
+``
+
+
+``{r}
+sd_question(
+  type   = 'mc_buttons',
+  id     = 'fruit',
+  label  = "Which fruit do you prefer most from this list?",
+  option = c(
+    "Apple"      = "apple",
+    "Banana"     = "banana",
+    "Pear"       = "pear",
+    "Strawberry" = "strawberry",
+    "Grape"      = "grape",
+    "Mango"      = "mango",
+    "Watermelon" = "watermelon"
+  )
+)
+``
+
+::: {#end .sd-page}
+## End
+
+This it the last page in the survey.
+
+``{r}
+sd_close("Exit Survey")
+``
+:::
+
+</code></pre>
 </div>
 <div id="tabset-1-2">
-<p><img data-src="https://gsp.humboldt.edu/OLM/R/Images/RStudio_1.png" class="absolute" style="left: 250px; bottom: 0px; "></p>
+     <div class="ratio ratio-16x9">
+      <iframe class="slide-deck" src="survey.html" height="500px"></iframe>
+    </div>
+  
 </div>
 <div id="tabset-1-3">
-<p><img data-src="img/quarto1.JPG" class="absolute" style="bottom: 0px; right: 250px; "></p>
-<p><img data-src="img/quarto2.JPG" class="absolute" style="left: 250px; bottom: 0px; "></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="co"># remotes::install_github("surveydown-dev/surveydown", force = TRUE)</span></span>
+<span id="cb2-2"><a href=""></a><span class="fu">library</span>(surveydown)</span>
+<span id="cb2-3"><a href=""></a></span>
+<span id="cb2-4"><a href=""></a><span class="co"># Database setup</span></span>
+<span id="cb2-5"><a href=""></a></span>
+<span id="cb2-6"><a href=""></a><span class="co"># surveydown stores data on a database that you define at https://supabase.com/</span></span>
+<span id="cb2-7"><a href=""></a><span class="co"># To connect to a database, update the sd_database() function with details</span></span>
+<span id="cb2-8"><a href=""></a><span class="co"># from your supabase database. For this demo, we set ignore = TRUE, which will</span></span>
+<span id="cb2-9"><a href=""></a><span class="co"># ignore the settings and won't attempt to connect to the database. This is</span></span>
+<span id="cb2-10"><a href=""></a><span class="co"># helpful for local testing if you don't want to record testing data in the</span></span>
+<span id="cb2-11"><a href=""></a><span class="co"># database table. See the documentation for details:</span></span>
+<span id="cb2-12"><a href=""></a><span class="co"># https://surveydown.org/store-data</span></span>
+<span id="cb2-13"><a href=""></a></span>
+<span id="cb2-14"><a href=""></a>db <span class="ot">&lt;-</span> <span class="fu">sd_database</span>(</span>
+<span id="cb2-15"><a href=""></a>  <span class="at">host   =</span> <span class="st">""</span>,</span>
+<span id="cb2-16"><a href=""></a>  <span class="at">dbname =</span> <span class="st">""</span>,</span>
+<span id="cb2-17"><a href=""></a>  <span class="at">port   =</span> <span class="st">""</span>,</span>
+<span id="cb2-18"><a href=""></a>  <span class="at">user   =</span> <span class="st">""</span>,</span>
+<span id="cb2-19"><a href=""></a>  <span class="at">table  =</span> <span class="st">""</span>,</span>
+<span id="cb2-20"><a href=""></a>  <span class="at">ignore =</span> <span class="cn">TRUE</span></span>
+<span id="cb2-21"><a href=""></a>)</span>
+<span id="cb2-22"><a href=""></a></span>
+<span id="cb2-23"><a href=""></a></span>
+<span id="cb2-24"><a href=""></a><span class="co"># Server setup</span></span>
+<span id="cb2-25"><a href=""></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output, session) {</span>
+<span id="cb2-26"><a href=""></a></span>
+<span id="cb2-27"><a href=""></a>  <span class="co"># Define any conditional skip logic here (skip to page if a condition is true)</span></span>
+<span id="cb2-28"><a href=""></a>  <span class="fu">sd_skip_if</span>()</span>
+<span id="cb2-29"><a href=""></a></span>
+<span id="cb2-30"><a href=""></a>  <span class="co"># Define any conditional display logic here (show a question if a condition is true)</span></span>
+<span id="cb2-31"><a href=""></a>  <span class="fu">sd_show_if</span>()</span>
+<span id="cb2-32"><a href=""></a></span>
+<span id="cb2-33"><a href=""></a>  <span class="co"># Database designation and other settings</span></span>
+<span id="cb2-34"><a href=""></a>  <span class="fu">sd_server</span>(</span>
+<span id="cb2-35"><a href=""></a>    <span class="at">db =</span> db</span>
+<span id="cb2-36"><a href=""></a>  )</span>
+<span id="cb2-37"><a href=""></a></span>
+<span id="cb2-38"><a href=""></a>}</span>
+<span id="cb2-39"><a href=""></a></span>
+<span id="cb2-40"><a href=""></a><span class="co"># shinyApp() initiates your app - don't change it</span></span>
+<span id="cb2-41"><a href=""></a>shiny<span class="sc">::</span><span class="fu">shinyApp</span>(<span class="at">ui =</span> <span class="fu">sd_ui</span>(), <span class="at">server =</span> server)</span>
+<span id="cb2-42"><a href=""></a></span>
+<span id="cb2-43"><a href=""></a></span>
+<span id="cb2-44"><a href=""></a></span>
+<span id="cb2-45"><a href=""></a><span class="co"># viola</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="setup" class="slide level2">
-<h2>Setup</h2>
-<div class="panel-tabset">
-<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">here</a></li><li><a href="#tabset-2-2">there</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1">
-<p><code>tinytex</code></p>
 </div>
-<div id="tabset-2-2">
-<p><code>Quarto</code></p>
-</div>
-</div>
-</div>
+</div></div>
+<p><img data-src="https://surveydown.org/images/technologies.png" class="absolute" style="top: 0px; right: -130px; height: 200px; "></p>
+<p><img data-src="https://static.vecteezy.com/system/resources/thumbnails/015/241/249/small/glowing-neon-arrow-doodle-transparent-free-png.png" class="absolute" style="top: 65px; right: 20px; width: 100px; "></p>
 </section></section>
+<section>
 <section id="today" class="title-slide slide level1 center">
 <h1>Today…</h1>
+
+</section>
+<section id="surveydown-part-iv-capturing-the-data" class="slide level2">
+<h2><a href="https://surveydown.org/">surveydown</a> Part IV – Capturing the <span class="pmarker">data</span>:</h2>
+<p><img data-src="https://surveydown.org/images/technologies.png" class="absolute" style="left: 100px; height: 600px; "></p>
+<p><img data-src="https://static.vecteezy.com/system/resources/thumbnails/015/241/249/small/glowing-neon-arrow-doodle-transparent-free-png.png" class="absolute" style="left: 470px; bottom: 170px; "></p>
+</section>
+<section id="session-info-november-21-2024-rendering" class="slide level2">
+<h2><svg aria-hidden="true" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4287f5;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg> Session Info (November 21, 2024) Rendering:</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>R version 4.2.2 (2022-10-31 ucrt)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 10 x64 (build 19045)
+
+Matrix products: default
+
+locale:
+[1] LC_COLLATE=English_United States.utf8 
+[2] LC_CTYPE=English_United States.utf8   
+[3] LC_MONETARY=English_United States.utf8
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.utf8    
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+[1] fontawesome_0.5.2
+
+loaded via a namespace (and not attached):
+ [1] lubridate_1.9.3   emo_0.0.0.9000    digest_0.6.31     crayon_1.5.2     
+ [5] assertthat_0.2.1  lifecycle_1.0.4   jsonlite_1.8.9    magrittr_2.0.3   
+ [9] evaluate_1.0.0    stringi_1.7.12    rlang_1.1.3       cli_3.6.0        
+[13] rstudioapi_0.15.0 vctrs_0.6.5       generics_0.1.3    rmarkdown_2.28   
+[17] tools_4.2.2       stringr_1.5.1     glue_1.6.2        purrr_1.0.1      
+[21] xfun_0.42         yaml_2.3.10       fastmap_1.1.1     compiler_4.2.2   
+[25] timechange_0.3.0  htmltools_0.5.7   knitr_1.45       </code></pre>
+</div>
+</div>
 <div class="quarto-auto-generated-content">
 <p><img src="erg2.png" class="slide-logo"></p>
 <div class="footer footer-default">
@@ -430,24 +689,24 @@ Getting started…<br> …a <span class="notable">step-by-step</span> guide
 <p> </p>
 </div>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="getting_started_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="11_26_24_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="getting_started_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="getting_started_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="getting_started_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="getting_started_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="getting_started_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="11_26_24_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="11_26_24_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="11_26_24_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="11_26_24_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="11_26_24_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="getting_started_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="getting_started_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="getting_started_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="getting_started_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="11_26_24_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="11_26_24_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="11_26_24_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="11_26_24_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
