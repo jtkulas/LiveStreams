@@ -19,6 +19,7 @@
 @import url('https://fonts.googleapis.com/css?family=Silkscreen');
 @import url('https://fonts.googleapis.com/css?family=Creepster');
 @import url('https://fonts.googleapis.com/css?family=Nosifer');
+@import url('https://fonts.googleapis.com/css?family=Sixtyfour Convergence');
 
 /*-- scss:defaults --*/
 
@@ -274,8 +275,8 @@ width: 10px;
 
 .leaflet {
   font-family: 'Fleur De Leah';
-  font-size: 140px;
-  color: #adebb3;
+  font-size: 1.5em;
+  color: #0f4d0f;
 }
 
 .leaflet2 {
@@ -341,3 +342,7 @@ width: 10px;
   max-height: 400px;
   word-wrap: normal;
   }
+  
+.figgie {
+  font-family: 'Sixtyfour Convergence';
+}

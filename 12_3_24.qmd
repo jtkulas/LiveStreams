@@ -1,8 +1,8 @@
 ---
 title: "R for <br>Authoring!!" 
-author: "OOH Session #53...<br>...gettin' [Figgie]{.leaflet} with it!!!" 
+author: "OOH Session #54...<br>...[polling]{.election} via R: Capturing the [data]{.pmarker}" 
 title-slide-attributes: 
-  data-background-image: img/figgie.JPG
+  data-background-image: https://m.media-amazon.com/images/M/MV5BMGJmYjExODUtMjEzYy00YzBkLWJlMDItNjQ0MDcxODJmYzZmXkEyXkFqcGc@._V1_.jpg
   data-background-opacity: ".4"
 format:
   revealjs:
@@ -42,7 +42,7 @@ library(fontawesome)
 
 ::: {layout="[80,20]"}
 ::: first-column
--   Recap session #52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Recap session #'s 52 & 53 &nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue(s):
     - [polling]{.election} via `r fontawesome::fa("r-project", fill="#4287f5")`: Part IV
       + [surveydown](https://surveydown.org/) `r emo::ji("down_arrow")`
