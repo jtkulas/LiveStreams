@@ -55,7 +55,8 @@ library(fontawesome)
 
 :::
 
-![](img/title52.JPG){.absolute top="170" right="-120" width="600" height="325"}
+![](img/title52.JPG){.absolute top="-5" right="-140" width="600" height="325"}
+![](img/title53.JPG){.absolute top="330" right="-140" width="600" height="325"}
 
 # Recap of Session #52: 
 
@@ -192,6 +193,8 @@ sd_close("Exit Survey")
 ```{r}
 #| eval: false
 #| echo: true
+#| code-line-numbers: "14-21,33-36,4-12"
+
 # remotes::install_github("surveydown-dev/surveydown", force = TRUE)
 library(surveydown)
 
