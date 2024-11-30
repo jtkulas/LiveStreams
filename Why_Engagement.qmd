@@ -1,0 +1,121 @@
+---
+title: "Employee <br>Engagement" 
+author: "...why??" 
+title-slide-attributes: 
+  data-background-image: img/engage.PNG
+  data-background-opacity: ".7"
+format:
+  revealjs:
+#    multiplex: true
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [moon, engage.scss]       ## solarized
+    header-logo: "erg2.png"
+    header-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    transition: slide
+    background-transition: fade
+    mouse-wheel: true                ## yes enables mouse
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Engagement (Conceptual)
+
+
+
+# eRg Engagement 
+
+## Dimensions
+
+::: {layout="[70,30]"}
+::: first-column
++ Dedication
++ Vigor
++ Absorption
+:::
+
+::: second-column
++ Think
++ Feel
++ Do
+:::
+:::
+
+## Comparative
+
+```{r norms, eval=FALSE, warning=FALSE, echo=FALSE, fig.cap=paste("Engagement survey normative information (geographic constituency - most recently updated", format(Sys.time(),'%A, %B %d, %Y'),").")}
+
+## Trying to recapture data for norms reporting - pilot, qualtrics, prolific, and snowball (Eagle; final data collection at MSU); 4/12/23
+
+pilot <- read.csv("C:\\Kulas\\Git\\erg\\content\\product\\data\\qualtrics_pilot_data.csv")[-c(1:2),c(14:15)]  ## n = 232 (November 2021)
+qualtrics1 <- read.csv("C:\\Kulas\\Git\\erg\\content\\product\\data\\Engagement+(Attitudinal)_October+12,+2021_08.02.csv")[-c(1:2),c(14:15)]
+qualtrics2 <- read.csv("C:\\Kulas\\Git\\erg\\content\\product\\data\\Engagement+(Substantive)_October+12,+2021_08.01.csv")[-c(1:2),c(14:15)]
+prolific1 <- read.csv("C:\\Kulas\\Git\\erg\\content\\product\\data\\inprogress.csv")[-c(1:2),] ## lat/long missing
+prolific2 <- read.csv("C:\\Kulas\\Git\\erg\\content\\product\\data\\initial_data_screen.csv")[-c(1:2),c(14:15)]
+snowball <- read.csv("C:\\Kulas\\Git\\erg\\content\\product\\data\\lookie.12.2.csv")[-c(1:2),c(14:15)]
+
+library(rgeolocate)     ## installed old version 4/12/23
+
+ip_lst = prolific1$V6
+
+prolific1_est <- maxmind(ip_lst, "Data//GeoLite2-City.mmdb", 
+        fields=c("latitude", "longitude"))
+
+names(prolific1_est)[1] <- "LocationLatitude"
+names(prolific1_est)[2] <- "LocationLongitude"
+
+together <- rbind(pilot, qualtrics1, qualtrics2, prolific2, snowball, prolific1_est)
+
+library(leaflet)
+library(maps)  ## us.cities data
+
+together$`LocationLongitude` <- round(as.numeric(as.character(together$`LocationLongitude`)),1) ## mask actual geographic location
+together$`LocationLatitude` <- round(as.numeric(as.character(together$`LocationLatitude`)),1)
+
+ergIcon <- makeIcon(
+  iconUrl = "https://ergreports.com/images/erg2.png",
+  iconWidth = 60, iconHeight = 50,
+  iconAnchorX = 30, iconAnchorY = 30,
+)
+
+## create leaflet map
+leaflet() %>% 
+#   addProviderTiles(
+#    "Stamen.TonerBackground") %>% 
+  setView(lng= -93.24649681376336, lat=44.99948959471243, zoom=5) %>%
+  addTiles() %>%
+  addMarkers(data=together, ~LocationLongitude, ~LocationLatitude, icon = ergIcon,  clusterOptions = markerClusterOptions(spiderfyDistanceMultiplier=1.5)) %>%
+   addProviderTiles("Stamen.TonerBackground") 
+
+```
+
+## Why eRg...
+
+[...Evidence-based]{.fragment .fade-in-then-semi-out fragment-index=1} 
+<br>[...Outcome-oriented]{.fragment .fade-in-then-semi-out fragment-index=2}
+<br>[...Cost equivalence]{.fragment .fade-in-then-semi-out fragment-index=3}
+<br>[...Visualizations]{.fragment .fade-in-then-semi-out fragment-index=4}
+<br>[...Access]{.fragment .fade-in fragment-index=5}
+
+![](img/quarto.png){.fragment .fade-in-then-out fragment-index=1 .absolute height="300" right="0" top="0"}
+
+![](img/couch.jpg){.fragment .fade-in-then-out fragment-index=2 .absolute height="300" right="0" top="0"}
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+
+>Hide
+
+```{r}
+sessionInfo()
+```
+
+
