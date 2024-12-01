@@ -55,10 +55,23 @@ library(fontawesome)
 
 :::
 
-![](img/title52.JPG){.absolute top="-5" right="-140" width="600" height="325"}
-![](img/title53.JPG){.absolute top="330" right="-140" width="600" height="325"}
+![](img/title53.JPG){.absolute top="-5" right="-140" width="600" height="325"}
+![](img/title52.JPG){.absolute top="330" right="-140" width="600" height="325"}
 
-# Recap of Session #52: 
+# Recap of Session <br>#s 52 & 53: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+![](https://www.pngall.com/wp-content/uploads/2/Question-Mark-PNG-HD-Image.png){.absolute right="125" top="280" width="200"}
+
+## Network Psychometrics -- Part `r emo::ji("boxing_glove")``r emo::ji("boxing_glove")`...
+
+Exploratory Graph Analysis vs Exploratory Factor Analysis!!
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Wiki-grafik_peats-de_big_five_ENG.svg/1200px-Wiki-grafik_peats-de_big_five_ENG.svg.png){.absolute right="-170" top="180" height="450"}
+
+![](img/EGA.JPG){.absolute height="400" left="-150" bottom="100"}
+
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjd0eTl4Z3BhODlibXJrYjdlMWF1bjJxZWdxMWVtZ3Zma2o0bWE0OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xBAreNGk5DapO/giphy.gif){.absolute right="305" height="300" top="270"}
 
 ## [Polling]{.election} via [Surveydown](https://surveydown.org/) -- Part III... 
 
