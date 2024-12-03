@@ -1,9 +1,9 @@
 ---
 title: "Employee <br>Engagement" 
-author: "...why??" 
+author: "...why" 
 title-slide-attributes: 
   data-background-image: img/engage.PNG
-  data-background-opacity: ".7"
+  data-background-opacity: ".9"
 format:
   revealjs:
 #    multiplex: true
@@ -100,11 +100,13 @@ leaflet() %>%
 
 ## Why eRg...
 
+::: {.bigger}
 [...Evidence-based]{.fragment .fade-in-then-semi-out fragment-index=1} 
 <br>[...Outcome-oriented]{.fragment .fade-in-then-semi-out fragment-index=2}
 <br>[...Cost equivalence]{.fragment .fade-in-then-semi-out fragment-index=3}
 <br>[...Visualizations]{.fragment .fade-in-then-semi-out fragment-index=4}
 <br>[...Access]{.fragment .fade-in fragment-index=5}
+:::
 
 ![](img/quarto.png){.fragment .fade-in-then-out fragment-index=1 .absolute height="300" right="0" top="0"}
 

@@ -270,9 +270,20 @@ shiny::shinyApp(ui = sd_ui(), server = server)
 
 ## [surveydown](https://surveydown.org/) Part IV -- Capturing the [data]{.pmarker}:
 
+::: {.fragment .semi-fade-out}
 ![](https://surveydown.org/images/technologies.png){.absolute left="100" height="600"}
 
 ![](https://static.vecteezy.com/system/resources/thumbnails/015/241/249/small/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute left="470" bottom="170"}
+:::
+
+:::{.fragment}
+![](https://static.vecteezy.com/system/resources/previews/018/930/500/non_2x/discord-logo-discord-icon-transparent-free-png.png){.absolute top="-100" right="-250"}
+
+![](https://static.vecteezy.com/system/resources/thumbnails/023/741/066/small/discord-logo-icon-social-media-icon-free-png.png){.absolute height="300" top="115" left="-120"}
+
+![](https://www.pngarts.com/files/4/Question-Mark-PNG-Image-Transparent-Background.png){.absolute width="700" top="300" left="120"}
+
+:::
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 

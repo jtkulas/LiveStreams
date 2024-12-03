@@ -39,9 +39,6 @@ $presentation-title-slide-text-color: black;
 
 .title {
   color: 	#ffefdb !important;
-    text-shadow: 
-    -4px -2px 7px #6495ED,
-    9px 11px 7px black !important;
 }
 
 .quarto-title-author-name {
@@ -50,7 +47,7 @@ $presentation-title-slide-text-color: black;
   font-weight: bold;
   font-family: 'Dancing Script';
   text-shadow: 
-    -4px -2px 7px #6495ED,
+    -4px -2px 7px black,
     7px 9px 5px black
 }
 
@@ -59,108 +56,16 @@ $presentation-title-slide-text-color: black;
     overflow-y: auto;
 }
 
-.oldenglish {
-  font-family: 'Poetsen One';
-}
-
-.kulas {
-  font-size: 60px;
-  color: #03c6fc;
-  font-family: 'Dancing Script';
-}
-
-.kulas3 {
-  font-size: 35px;
-  font-weight: bold;
-  color: #ff99ff;
-  font-family: 'Dancing Script';
-}
-
-.kulas2 {
-  font-size: 60px;
-  color: #34eba8;
-  font-family: 'Dancing Script';
-}
-
-.kulascol {
-  color: white;
-  font-family: 'Lovers Quarrel';
-}
-
-.kulascol3 {
-  color: white;
-  font-family: 'Londrina Solid';
-  text-shadow: 10px 12px 4px #36454f !important;
-}
-
-.kulascol2 {
-  color: #34eba8;
-  font-family: 'Londrina Solid';
-}
-
-.crossstyle {
-  font-size: 80px;
-  text-decoration: underline;
-  color: #34eba8;
-  font-family: 'Protest Riot';
-}
-
-.crossmethod {
-  font-size: 80px;
-  text-decoration: underline;
-  color: #3d7ba2;
-  font-family: 'Protest Guerrilla';
-}
-
 .center h2 {
   text-align: center;
 }
 
 .shiny {
-  font-size: 80px;
   color: #FDFEFF;           /* #00c0a3 */
   font-family: 'Dancing Script';
   text-shadow: 
     2px 2px 3px #ffdd4d,
     -2px -2px 3px #ffdd4d !important;
-}
-
-.shiny2 {
-  color: #FDFEFF;           /* #00c0a3 */
-  font-family: 'Dancing Script';
-  text-shadow: 
-    2px 2px 3px #ffdd4d,
-    -2px -2px 3px #ffdd4d !important;
-}
-
-.shiny3 {
-  color: #FDFEFF;           /* #00c0a3 */
-  font-family: 'Dancing Script';
-  font-size: 80px;
-  text-transform: lowercase;
-  text-shadow: 
-    2px 2px 3px #ffdd4d,
-    -2px -2px 3px #ffdd4d !important;
-}
-
-.apa {
-  color: #184978;     /* #0B809F; */        
-  font-family: 'Rye';
-}
-
-.diagram {
-  color: #9FF6E3;
-  font-family: 'Notable';
-}
-
-.mermaid {
-  font-family: 'Kalnia Glaze';
-  font-size: 150%;
-  font-weight: bold;
-}
-
-.smaller {
-  font-size: 80%;
 }
 
 .my_class1 {       /* code chunk dimensions */
@@ -191,124 +96,13 @@ width: 10px;
 .reveal .custom7030 div.column:not(:first-child) {
   width: 30%;
 }
-
-.reveal .custom6040 > div.column:first-child {
-  width: 60%;
-}
-.reveal .custom6040 div.column:not(:first-child) {
-  width: 40%;
-}
-
-.reveal .custom4060 > div.column:first-child {
-  width: 40%;
-}
-.reveal .custom4060 div.column:not(:first-child) {
-  width: 60%;
-}
-
-.reveal .custom5050 > div.column:first-child {
-  width: 50%;
-}
-.reveal .custom5050 div.column:not(:first-child) {
-  width: 50%;
-}
                    /* https://stackoverflow.com/questions/73460033/how-to-change-code-block-height-and-width-in-quarto-presentation */
                    
-.protestriot {
-  font-family: 'Protest Riot';
-}
-
-.pirate {
-  color: #c2b236;
-  font-family: 'Pirata One';
-  font-style: italic;
-}
-
-
-.lbox {
-  font-size: 60px;
-  color: #FDFEFF;           /* #00c0a3 */
-  font-family: 'Poetsen One';
-  text-shadow: 
-    3px 3px 3px #8ffcff,
-    -3px -3px 3px #8ffcff !important;
-}
-
-.pmarker {
-  color: #b6d0e2;
-  font-family: 'Permanent Marker';
-}
-
-.electric {
-  font-family: 'Shojumaru';
-  font-style: italic;
-  color: #FDFEFF;           /* #00c0a3 */
-  text-shadow: 
-    3px 3px 3px #B026FF,
-    -3px -3px 3px #8ffcff !important;
-}
-
 .leaflet {
   font-family: 'Fleur De Leah';
   font-size: 1.5em;
   color: #0f4d0f;
 }
-
-.leaflet2 {
-  font-family: 'Fleur De Leah';
-  color: #adebb3;
-}
-
-.leaflet_lower {
-  font-family: 'Fleur De Leah';
-  text-transform: lowercase !important; 
-  color: #adebb3;
-}  
-
-.threejs {
-  font-family: 'Gloria Hallelujah';
-  font-size: 140px;
-  color: #6495ED;
-}  
-
-.dygraphs {
-  font-family: 'Silkscreen';
-  color: #e0115f;
-}  
-
-.widgets {
-  font-family: 'Fascinate Inline';
-  color: #d4bf85;
-}  
-
-.creepy {
-  font-family: 'Creepster';
-  color: #ffde21;
-} 
-
-.creepyBig {
-  font-family: 'Creepster';
-  font-size: 1.7em;
-  color: #ffde21;
-}  
-
-.navigation {
-  font-family: 'Pirata One';
-  color: #ffefdb;
-} 
-
-.bloody {
-  font-family: 'Nosifer';
-  color: #568203;
-  text-shadow: 
-    6px 6px 1px black;
-} 
-
-.election {
-  font-family: 'Londrina Solid';
-  font-size: 1.7em;
-  color: #77b1d4;
-} 
 
 .reveal pre code {
   display: block;
@@ -318,11 +112,6 @@ width: 10px;
   word-wrap: normal;
   }
   
-.engage {
-  font-size: 2em;
-  color: #FDFEFF;           /* #00c0a3 */
-  font-family: 'Poetsen One';
-  text-shadow: 
-    7px 7px 7px #D22B2B,
-    -7px -7px 7px #D22B2B !important;
+.bigger {
+  font-size: 1.5em;
 }
