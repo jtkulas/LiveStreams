@@ -6,7 +6,7 @@ title-slide-attributes:
   data-background-opacity: ".4"
 format:
   revealjs:
-    mouse-wheel: true                ## yes enables mouse
+    mouse-wheel: false                ## yes enables mouse
     slide-tone: false
 #    navigation-mode: vertical
     transition: convex
