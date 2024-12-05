@@ -1,0 +1,169 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #55...<br>...[polling]{.election} via R: [Survey Launch]{.launch}" 
+title-slide-attributes: 
+  data-background-image: https://fdczvxmwwjwpwbeeqcth.supabase.co/storage/v1/object/public/images/268c4b03-533f-4e81-aec1-0c22df466a90/311d3704-300d-49ac-abbf-d2472ae5efed.png
+  data-background-opacity: ".5"
+format:
+  revealjs:
+    mouse-wheel: true                ## yes enables mouse
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+#    controls-layout: bottom-right
+#    controls-tutorial: true
+#    slide-number: h.v
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [league, weekly.scss]       ## night & league
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #54&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    - [polling]{.election} via `r fontawesome::fa("r-project", fill="#4287f5")`: Part V
+      + [surveydown](https://surveydown.org/) `r emo::ji("down_arrow")`
+        + [Survey Launch]{.launch}
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title54.JPG){.absolute top="170" right="-120" width="600" height="325"}
+
+# Recap of Session <br>#53: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+![](https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png){.absolute right="150" top="300" width="150"}
+
+## [Polling]{.election} via [Surveydown](https://surveydown.org/) -- Part IV... 
+
+:::: {.panel-tabset}
+
+## Supabase
+
+[![](img/supabase.PNG)](https://surveydown.org/store-data#create-a-supabase-account)
+
+## Set password
+
+![](img/supabase3.PNG)
+
+## DB Info
+
+[![](img/supabase2.PNG)](https://surveydown.org/store-data#copy-your-credentials)
+
+## app.R 
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "14-20"
+
+# remotes::install_github("surveydown-dev/surveydown", force = TRUE)
+library(surveydown)
+
+# Database setup
+
+# surveydown stores data on a database that you define at https://supabase.com/
+# To connect to a database, update the sd_database() function with details
+# from your supabase database. For this demo, we set ignore = TRUE, which will
+# ignore the settings and won't attempt to connect to the database. This is
+# helpful for local testing if you don't want to record testing data in the
+# database table. See the documentation for details:
+# https://surveydown.org/store-data
+
+db <- sd_database(
+  host   = "aws-0-us-west-1.pooler.supabase.com",     #<1>
+  dbname = "postgres",
+  port   = "6543",
+  user   = "postgres.yppmohklyshsiwkpadqa",           #<1>
+  table  = "Woody",                                   #<2>
+#  ignore = TRUE                                      #<3>
+)
+
+
+# Server setup
+server <- function(input, output, session) {
+
+  # Define any conditional skip logic here (skip to page if a condition is true)
+  sd_skip_if()
+
+  # Define any conditional display logic here (show a question if a condition is true)
+  sd_show_if()
+
+  # Database designation and other settings
+  sd_server(
+    db = db
+  )
+
+}
+
+# shinyApp() initiates your app - don't change it
+shiny::shinyApp(ui = sd_ui(), server = server)
+
+
+
+
+# viola
+```
+1. `copy-paste` from Supabase "Connection parameters" (see previous tab).
+2. Supabase has a "Table Editor" identifier. The name you choose here will appear on the Supabase site.
+3. Allows the survey to be launched [without connecting to the database](https://surveydown.org/store-data#ignoring-the-supabase-connection). If responses are provided, they will be stored within a local `preview_data.csv` file (within your project directory).
+
+::::
+
+![](https://surveydown.org/images/technologies.png){.absolute right="-130" top="0" height="200"}
+
+![](https://static.vecteezy.com/system/resources/thumbnails/015/241/249/small/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute right="-75" top="65" width="100"}
+
+# Today... 
+
+## [surveydown](https://surveydown.org/) Part V -- [Survey Launch]{.launch}:
+
+![](https://surveydown.org/images/technologies.png){.absolute left="100" height="600"}
+
+:::{.fragment}
+![](https://www.freeiconspng.com/thumbs/rocket-png/red-rocket-png-5.png){.absolute width="700" right="170" top="110" .tilt}
+![](https://www.freeiconspng.com/thumbs/rocket-png/red-rocket-png-5.png){.absolute width="400" left="50" top="130" .tilt}
+
+![](https://www.freeiconspng.com/thumbs/rocket-png/red-rocket-png-5.png){.absolute width="200" left="160" top="500" .tilt}
+
+![](https://www.freeiconspng.com/thumbs/rocket-png/red-rocket-png-5.png){.absolute width="250" right="85" top="125" .tilt}
+
+![](https://www.freeiconspng.com/thumbs/rocket-png/red-rocket-png-5.png){.absolute width="350" right="80" bottom="0" .tilt}
+
+:::
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
+

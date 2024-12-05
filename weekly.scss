@@ -19,7 +19,7 @@
 @import url('https://fonts.googleapis.com/css?family=Silkscreen');
 @import url('https://fonts.googleapis.com/css?family=Creepster');
 @import url('https://fonts.googleapis.com/css?family=Nosifer');
-@import url('https://fonts.googleapis.com/css?family=Sixtyfour Convergence');
+@import url('https://fonts.googleapis.com/css?family=Nabla');
 
 /*-- scss:defaults --*/
 
@@ -27,7 +27,7 @@ $body-bg: #191919;
 $body-color: #fff;
 $link-color: #42affa;
 $code-color: hotpink;
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: left;
 $presentation-title-slide-text-color: black;
 
 /*-- scss:rules --*/
@@ -343,6 +343,6 @@ width: 10px;
   word-wrap: normal;
   }
   
-.figgie {
-  font-family: 'Sixtyfour Convergence';
+.launch {
+  font-family: 'Nabla';
 }
