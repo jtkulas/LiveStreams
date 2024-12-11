@@ -20,6 +20,8 @@
 @import url('https://fonts.googleapis.com/css?family=Creepster');
 @import url('https://fonts.googleapis.com/css?family=Nosifer');
 @import url('https://fonts.googleapis.com/css?family=Nabla');
+@import url('https://fonts.googleapis.com/css?family=Agu Display');
+@import url('https://fonts.googleapis.com/css?family=Arizonia');
 
 /*-- scss:defaults --*/
 
@@ -27,7 +29,7 @@ $body-bg: #191919;
 $body-color: #fff;
 $link-color: #42affa;
 $code-color: hotpink;
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 $presentation-title-slide-text-color: black;
 
 /*-- scss:rules --*/
@@ -345,4 +347,19 @@ width: 10px;
   
 .launch {
   font-family: 'Nabla';
+}
+
+.tinkerbell {
+  font-family: "Arizonia";
+  color: #f9e79b;
+  font-size: 1.5em;
+}
+
+.tinkerbell2 {
+  font-family: "Arizonia";
+  color: #f9e79b;
+}
+
+.bigger {
+  font-size: 1.5em;
 }
