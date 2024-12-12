@@ -62,10 +62,15 @@ library(fontawesome)
 # Recap of Session <br>#55: 
 
 ![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
-![](https://www.freeiconspng.com/thumbs/rocket-png/red-rocket-png-5.png){.absolute width="250" right="110" top="270" .tilt}
+![](https://www.freeiconspng.com/thumbs/rocket-png/red-rocket-png-5.png){.absolute width="230" right="110" top="270" .tilt}
 
 ## [surveydown](https://surveydown.org/) Part V -- [Survey Launch]{.launch}:
 
+:::: {.columns}
+::: {.column width="20%"}
+:::
+
+::: {.column width="80%"}
 :::: {.panel-tabset}
 
 ## app.R 
@@ -94,7 +99,7 @@ db <- sd_database(
   port   = "6543",
   user   = "postgres.yppmohklyshsiwkpadqa",           
   table  = "Woody",                                   #<1>
-#  ignore = TRUE                                      #<2>
+#  ignore = TRUE                                     
 )
 
 
@@ -122,22 +127,37 @@ shiny::shinyApp(ui = sd_ui(), server = server)
 
 # viola
 ```
-1. Supabase has a "Table Editor" identifier. The name you choose here will appear on the Supabase site.
-2. Allows the survey to be launched [without connecting to the database](https://surveydown.org/store-data#ignoring-the-supabase-connection). If responses are provided, they will be stored within a local `preview_data.csv` file (within your project directory).
-
-## Supabase
-
-[![](img/supabase.PNG)](https://surveydown.org/store-data#create-a-supabase-account)
+1. The name you choose here will appear as a database table on the Supabase site -- data itself is exportable as .csv or .sql.
 
 ## Survey
 
 [![](img/survey1.JPG)](https://jtkulas.shinyapps.io/Kulas/)
 
-## DB Info
+## Supabase
 
-[![](img/supabase2.PNG)](https://surveydown.org/store-data#copy-your-credentials)
+[![](img/survey2.JPG)](https://surveydown.org/store-data#create-a-supabase-account)
+
+## Data
+```{r}
+#| echo: true
+#| output-location: column
+
+data <- read.csv("Woody.csv")
+
+descr::freq(data$einstein)
+
+
+```
+
 
 ::::
+
+:::
+::::
+
+![](https://png.pngtree.com/png-vector/20240216/ourmid/pngtree-emc2-handwritten-with-chalk-on-a-blackboard-nobody-mc-message-png-image_11695489.png){.absolute left="-250" top="200" width="500"}
+
+![](https://png.pngtree.com/png-vector/20230909/ourmid/pngtree-shades-of-yellow-popsicles-stick-png-image_9223254.png){.absolute left="0" top="260" width="200" .mirror}
 
 # Today... 
 

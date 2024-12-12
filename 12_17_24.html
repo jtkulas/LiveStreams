@@ -405,8 +405,8 @@ OOH Session #56…<br>…<span class="election">polling</span> via R: <span clas
 </div>
 
 </section>
-<section id="open-office-hours-december-11-2024" class="slide level2">
-<h2>Open Office Hours <br>(December 11, 2024)</h2>
+<section id="open-office-hours-december-12-2024" class="slide level2">
+<h2>Open Office Hours <br>(December 12, 2024)</h2>
 <div>
 
 </div>
@@ -439,12 +439,16 @@ OOH Session #56…<br>…<span class="election">polling</span> via R: <span clas
 <section>
 <section id="recap-of-session-55" class="title-slide slide level1 center">
 <h1>Recap of Session <br>#55:</h1>
-<p><img data-src="https://pngimg.com/d/sticky_note_PNG18964.png" class="absolute" style="top: 200px; right: 50px; "> <img data-src="https://www.freeiconspng.com/thumbs/rocket-png/red-rocket-png-5.png" class="absolute tilt" style="top: 270px; right: 110px; width: 250px; "></p>
+<p><img data-src="https://pngimg.com/d/sticky_note_PNG18964.png" class="absolute" style="top: 200px; right: 50px; "> <img data-src="https://www.freeiconspng.com/thumbs/rocket-png/red-rocket-png-5.png" class="absolute tilt" style="top: 270px; right: 110px; width: 230px; "></p>
 </section>
 <section id="surveydown-part-v-survey-launch" class="slide level2">
 <h2><a href="https://surveydown.org/">surveydown</a> Part V – <span class="launch">Survey Launch</span>:</h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+
+</div><div class="column" style="width:80%;">
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">app.R</a></li><li><a href="#tabset-1-2">Supabase</a></li><li><a href="#tabset-1-3">Survey</a></li><li><a href="#tabset-1-4">DB Info</a></li></ul>
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">app.R</a></li><li><a href="#tabset-1-2">Survey</a></li><li><a href="#tabset-1-3">Supabase</a></li><li><a href="#tabset-1-4">Data</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
 <div class="cell">
@@ -467,7 +471,7 @@ OOH Session #56…<br>…<span class="election">polling</span> via R: <span clas
 <span id="annotated-cell-1-17"><a href="#annotated-cell-1-17"></a>  <span class="at">port   =</span> <span class="st">"6543"</span>,</span>
 <span id="annotated-cell-1-18"><a href="#annotated-cell-1-18"></a>  <span class="at">user   =</span> <span class="st">"postgres.yppmohklyshsiwkpadqa"</span>,           </span>
 <button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="1">1</button><span id="annotated-cell-1-19" class="code-annotation-target"><a href="#annotated-cell-1-19"></a>  <span class="at">table  =</span> <span class="st">"Woody"</span>,</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="2">2</button><span id="annotated-cell-1-20" class="code-annotation-target"><a href="#annotated-cell-1-20"></a><span class="co">#  ignore = TRUE</span></span>
+<span id="annotated-cell-1-20"><a href="#annotated-cell-1-20"></a><span class="co">#  ignore = TRUE                                     </span></span>
 <span id="annotated-cell-1-21"><a href="#annotated-cell-1-21"></a>)</span>
 <span id="annotated-cell-1-22"><a href="#annotated-cell-1-22"></a></span>
 <span id="annotated-cell-1-23"><a href="#annotated-cell-1-23"></a></span>
@@ -498,27 +502,47 @@ OOH Session #56…<br>…<span class="election">polling</span> via R: <span clas
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-1" data-code-lines="19" data-code-annotation="1">Supabase has a “Table Editor” identifier. The name you choose here will appear on the Supabase site.</span>
-</dd>
-<dt data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
-<dd>
-<span data-code-cell="annotated-cell-1" data-code-lines="20" data-code-annotation="2">Allows the survey to be launched <a href="https://surveydown.org/store-data#ignoring-the-supabase-connection">without connecting to the database</a>. If responses are provided, they will be stored within a local <code>preview_data.csv</code> file (within your project directory).</span>
+<span data-code-cell="annotated-cell-1" data-code-lines="19" data-code-annotation="1">The name you choose here will appear as a database table on the Supabase site – data itself is exportable as .csv or .sql.</span>
 </dd>
 </dl>
 </div>
 </div>
 </div>
 <div id="tabset-1-2">
-<p><a href="https://surveydown.org/store-data#create-a-supabase-account"><img data-src="img/supabase.PNG"></a></p>
-</div>
-<div id="tabset-1-3">
 <p><a href="https://jtkulas.shinyapps.io/Kulas/"><img data-src="img/survey1.JPG"></a></p>
 </div>
+<div id="tabset-1-3">
+<p><a href="https://surveydown.org/store-data#create-a-supabase-account"><img data-src="img/survey2.JPG"></a></p>
+</div>
 <div id="tabset-1-4">
-<p><a href="https://surveydown.org/store-data#copy-your-credentials"><img data-src="img/supabase2.PNG"></a></p>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"Woody.csv"</span>)</span>
+<span id="cb1-2"><a href=""></a></span>
+<span id="cb1-3"><a href=""></a>descr<span class="sc">::</span><span class="fu">freq</span>(data<span class="sc">$</span>einstein)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="12_17_24_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>data$einstein 
+              Frequency Percent
+                      7   53.85
+2                     2   15.38
+lemon_posicle         4   30.77
+Total                13  100.00</code></pre>
+</div>
+</div></div>
 </div>
 </div>
 </div>
+</div></div>
+<p><img data-src="https://png.pngtree.com/png-vector/20240216/ourmid/pngtree-emc2-handwritten-with-chalk-on-a-blackboard-nobody-mc-message-png-image_11695489.png" class="absolute" style="top: 200px; left: -250px; width: 500px; "></p>
+<p><img data-src="https://png.pngtree.com/png-vector/20230909/ourmid/pngtree-shades-of-yellow-popsicles-stick-png-image_9223254.png" class="absolute mirror" style="top: 260px; left: 0px; width: 200px; "></p>
 </section></section>
 <section>
 <section id="today" class="title-slide slide level1 center">
@@ -540,8 +564,8 @@ OOH Session #56…<br>…<span class="election">polling</span> via R: <span clas
 <p><img data-src="https://www.disneyclips.com/images/images/tinkerbell29.png" class="absolute mirror" style="bottom: 0px; right: -150px; width: 200px; "></p>
 <p><img data-src="https://www.pngall.com/wp-content/uploads/14/Tinkerbell-PNG.png" class="absolute" style="top: 30px; left: -140px; height: 300px; "></p>
 </section>
-<section id="session-info-december-11-2024-rendering" class="slide level2">
-<h2><svg aria-hidden="true" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4287f5;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg> Session Info (December 11, 2024) Rendering:</h2>
+<section id="session-info-december-12-2024-rendering" class="slide level2">
+<h2><svg aria-hidden="true" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4287f5;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg> Session Info (December 12, 2024) Rendering:</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.2.2 (2022-10-31 ucrt)
@@ -565,12 +589,13 @@ other attached packages:
 
 loaded via a namespace (and not attached):
  [1] lubridate_1.9.3   emo_0.0.0.9000    digest_0.6.31     crayon_1.5.2     
- [5] assertthat_0.2.1  lifecycle_1.0.4   jsonlite_1.8.9    magrittr_2.0.3   
- [9] evaluate_1.0.0    stringi_1.7.12    rlang_1.1.3       cli_3.6.0        
-[13] rstudioapi_0.15.0 vctrs_0.6.5       generics_0.1.3    rmarkdown_2.28   
-[17] tools_4.2.2       stringr_1.5.1     glue_1.6.2        purrr_1.0.1      
-[21] xfun_0.42         yaml_2.3.10       fastmap_1.1.1     compiler_4.2.2   
-[25] timechange_0.3.0  htmltools_0.5.7   knitr_1.45       </code></pre>
+ [5] assertthat_0.2.1  xtable_1.8-4      lifecycle_1.0.4   jsonlite_1.8.9   
+ [9] magrittr_2.0.3    evaluate_1.0.0    descr_1.1.7       stringi_1.7.12   
+[13] rlang_1.1.3       cli_3.6.0         rstudioapi_0.15.0 vctrs_0.6.5      
+[17] generics_0.1.3    rmarkdown_2.28    tools_4.2.2       stringr_1.5.1    
+[21] glue_1.6.2        purrr_1.0.1       xfun_0.42         yaml_2.3.10      
+[25] fastmap_1.1.1     compiler_4.2.2    timechange_0.3.0  htmltools_0.5.7  
+[29] knitr_1.45       </code></pre>
 </div>
 </div>
 <div class="quarto-auto-generated-content">
