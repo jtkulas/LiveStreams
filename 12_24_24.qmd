@@ -1,9 +1,9 @@
 ---
 title: "R for <br>Authoring!!" 
-author: "OOH Session #56...<br>...[polling]{.election} via R: [Tinkering]{.tinkerbell}" 
+author: "OOH Session #57...<br>[...Season's Greetings!!]{.ballet} (cards)" 
 title-slide-attributes: 
-  data-background-image: img/tink.jpg
-  data-background-opacity: ".6"
+  data-background-image: https://i.ytimg.com/vi/hOHW8uX1QwQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB06XtSYdgxgtkIP0u0-iWPkFBntg 
+  data-background-opacity: ".4"
 format:
   revealjs:
     mouse-wheel: true                ## yes enables mouse
@@ -42,11 +42,9 @@ library(fontawesome)
 
 ::: {layout="[80,20]"}
 ::: first-column
--   Recap session #55&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Recap session #56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue(s):
-    - [polling]{.election} via `r fontawesome::fa("r-project", fill="#4287f5")`: Part VI
-      + [surveydown](https://surveydown.org/) `r emo::ji("down_arrow")`
-        + [Tinkering]{.tinkerbell}
+    - [Season's Greetings]{.ballet}<br>(cards)
 -   Shared problem-solving
 :::
 
@@ -55,22 +53,20 @@ library(fontawesome)
 
 :::
 
-![](img/title55.JPG){.absolute top="170" right="-120" width="600" height="325"}
+![](img/title56.JPG){.absolute top="170" right="-120" width="600" height="325"}
 
-![](https://www.pngall.com/wp-content/uploads/14/Tinkerbell-PNG.png){.absolute height="150" bottom="100" left="350" .mirror}
-
-# Recap of Session <br>#55: 
+# Recap of Session <br>#56: 
 
 ![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
-![](https://www.freeiconspng.com/thumbs/rocket-png/red-rocket-png-5.png){.absolute width="230" right="110" top="270" .tilt}
+![](https://www.pngall.com/wp-content/uploads/14/Tinkerbell-PNG.png){.absolute width="150" top="270" right="160" .mirror}
 
-## [surveydown](https://surveydown.org/) Part V -- [Survey Launch]{.launch}:
+## [surveydown](https://surveydown.org/) Part VI -- [Tinkering]{.tinkerbell2}:
 
 :::: {.columns}
-::: {.column width="20%"}
+::: {.column width="15%"}
 :::
 
-::: {.column width="80%"}
+::: {.column width="85%"}
 :::: {.panel-tabset}
 
 ## app.R 
@@ -155,41 +151,19 @@ descr::freq(data$einstein)
 :::
 ::::
 
-![](https://png.pngtree.com/png-vector/20240216/ourmid/pngtree-emc2-handwritten-with-chalk-on-a-blackboard-nobody-mc-message-png-image_11695489.png){.absolute left="-250" top="200" width="500"}
+![](https://www.disneyclips.com/images/images/tinkerbell29.png){.absolute width="250" bottom="50" left="-150"}
 
-![](https://png.pngtree.com/png-vector/20230909/ourmid/pngtree-shades-of-yellow-popsicles-stick-png-image_9223254.png){.absolute left="0" top="260" width="200" .mirror}
+# Today...
 
-# Today... 
+![](https://pngimg.com/d/santa_sleigh_PNG15.png){.nostretch fig-align="right" width="800px"}
 
-![](https://cdn.inspireuplift.com/uploads/images/seller_products/1698978351_TinkerbellOnTummy.png){.absolute height="200" left="40" bottom="150"}
+## [S]{.ballet}[eason's]{.ballet3} [G]{.ballet}[reetings]{.ballet3} (cards)
 
-## [surveydown](https://surveydown.org/) Part VI -- [Tinkering]{.tinkerbell2}:
+![](https://cdn11.bigcommerce.com/s-gki9t8g2p/images/stencil/1280x1280/products/12540/28650/NLSVX001__90676.1730923959.jpg?c=2?imbypass=on){.absolute width="400" left="320" bottom="0"}
 
+![](https://i.pinimg.com/736x/9a/5c/6f/9a5c6ff49fba2221653983ade79788b8.jpg){.absolute width="300" left="-70" bottom="100" .tilt}
 
-:::: {.columns}
-::: {.column width="14%"}
-:::
-
-::: {.column width="70%"}
-
-::: {.bigger}
-[[...Conditional Logic]{.fragment .fade-in-then-semi-out fragment-index=1}](https://surveydown.org/conditional-control#conditional-display)
-<br>[[...Response Images]{.fragment .fade-in-then-semi-out fragment-index=2}](https://surveydown.org/question-formatting#html-formatting)
-<br>[[...Theming]{.fragment .fade-in-then-semi-out fragment-index=3}](https://surveydown.org/survey-components#changing-the-look-and-feel)
-:::
-:::
-::::
-
-![](https://cdn-icons-png.flaticon.com/512/9304/9304430.png){.absolute bottom="30" left="-100" width="350" .fragment .fade-in-then-semi-out fragment-index=1}
-![](https://seeklogo.com/images/P/pink-panther-logo-A115084B7A-seeklogo.com.png){.absolute bottom="0" left="330" .fragment .fade-in-then-semi-out fragment-index=2}
-![](https://cdn1.iconfinder.com/data/icons/survey/500/Questionnaire_knight_helmet-512.png){.absolute height="200" bottom="0" left="430" .fragment .fade-in-then-semi-out fragment-index=2}
-![](https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Snagglepuss.png/225px-Snagglepuss.png){.absolute bottom="-10" left="570" height="300" .fragment .fade-in-then-semi-out fragment-index=2}
-
-![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzZiaHQzMWx3ajNlNmcyZmNjb3gxd2FvenNnOHdkNmp0b3J6cjQwdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xTiTnA6bXJXwHBw9uE/giphy.gif){.absolute right="-125" top="0" .fragment .fade-in-then-semi-out fragment-index=3}
-
-![](https://www.disneyclips.com/images/images/tinkerbell29.png){.absolute width="200" bottom="0" right="-150" .mirror}
-
-![](https://www.pngall.com/wp-content/uploads/14/Tinkerbell-PNG.png){.absolute height="300" top="30" left="-140"}
+![](https://www.warnerpress.org/media/catalog/product/cache/52a1499fffa046429a9b5055fe9a2d86/g/9/g9394xd_web.jpg){.absolute width="300" right="-40" bottom="100" .tilt2}
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 

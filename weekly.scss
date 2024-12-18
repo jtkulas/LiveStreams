@@ -22,6 +22,7 @@
 @import url('https://fonts.googleapis.com/css?family=Nabla');
 @import url('https://fonts.googleapis.com/css?family=Agu Display');
 @import url('https://fonts.googleapis.com/css?family=Arizonia');
+@import url('https://fonts.googleapis.com/css?family=Ballet');
 
 /*-- scss:defaults --*/
 
@@ -29,7 +30,7 @@ $body-bg: #191919;
 $body-color: #fff;
 $link-color: #42affa;
 $code-color: hotpink;
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: left;
 $presentation-title-slide-text-color: black;
 
 /*-- scss:rules --*/
@@ -187,6 +188,10 @@ width: 10px;
   rotate: 30deg;
 }
 
+.tilt2 {
+  rotate: -20deg;
+}
+
 .reveal .custom7030 > div.column:first-child {
   width: 70%;
 }
@@ -225,7 +230,6 @@ width: 10px;
   font-family: 'Pirata One';
   font-style: italic;
 }
-
 
 .lbox {
   font-size: 60px;
@@ -358,6 +362,23 @@ width: 10px;
 .tinkerbell2 {
   font-family: "Arizonia";
   color: #f9e79b;
+}
+
+.ballet {
+  font-family: "ballet";
+  color: #008000;
+  font-size: 1.4em;
+  text-shadow: 
+   2px 2px 1px #00ff00 !important;
+}
+
+.ballet3 {
+  font-family: "ballet";
+  color: #008000;
+  font-size: 1.4em;
+  text-transform: lowercase !important; 
+  text-shadow: 
+   2px 2px 1px #00ff00 !important;
 }
 
 .bigger {
