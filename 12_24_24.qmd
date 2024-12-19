@@ -1,9 +1,9 @@
 ---
 title: "R for <br>Authoring!!" 
-author: "OOH Session #57...<br>[...Season's Greetings!!]{.ballet} (cards)" 
+author: "OOH Session #57...<br>[...Season's Greetings!!]{.ballet} ...cards" 
 title-slide-attributes: 
   data-background-image: https://i.ytimg.com/vi/hOHW8uX1QwQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB06XtSYdgxgtkIP0u0-iWPkFBntg 
-  data-background-opacity: ".4"
+  data-background-opacity: ".25"
 format:
   revealjs:
     mouse-wheel: true                ## yes enables mouse
@@ -44,7 +44,7 @@ library(fontawesome)
 ::: first-column
 -   Recap session #56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue(s):
-    - [Season's Greetings]{.ballet}<br>(cards)
+    - [Season's Greetings...]{.ballet .thicker}<br>...cards
 -   Shared problem-solving
 :::
 
@@ -60,7 +60,7 @@ library(fontawesome)
 ![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
 ![](https://www.pngall.com/wp-content/uploads/14/Tinkerbell-PNG.png){.absolute width="150" top="270" right="160" .mirror}
 
-## [surveydown](https://surveydown.org/) Part VI -- [Tinkering]{.tinkerbell2}:
+## [surveydown](https://surveydown.org/) Part VI -- [Tinkering]{.tinkerbell2} (Logic):
 
 :::: {.columns}
 ::: {.column width="15%"}
@@ -69,12 +69,16 @@ library(fontawesome)
 ::: {.column width="85%"}
 :::: {.panel-tabset}
 
-## app.R 
+## Survey
+
+[![](img/logic.JPG)](https://jtkulas.shinyapps.io/logic/)
+
+## Skips (app)
 
 ```{r}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "14-20"
+#| code-line-numbers: "31-36"
 
 # remotes::install_github("surveydown-dev/surveydown", force = TRUE)
 library(surveydown)
@@ -90,12 +94,12 @@ library(surveydown)
 # https://surveydown.org/store-data
 
 db <- sd_database(
-  host   = "aws-0-us-west-1.pooler.supabase.com",     
+  host   = "aws-0-us-west-1.pooler.supabase.com",
   dbname = "postgres",
   port   = "6543",
-  user   = "postgres.yppmohklyshsiwkpadqa",           
-  table  = "Woody",                                   #<1>
-#  ignore = TRUE                                     
+  user   = "postgres.yppmohklyshsiwkpadqa",
+  table  = "Woody",
+  ignore = TRUE
 )
 
 
@@ -106,7 +110,12 @@ server <- function(input, output, session) {
   sd_skip_if()
 
   # Define any conditional display logic here (show a question if a condition is true)
-  sd_show_if()
+  sd_show_if(
+    input$penguins == "chinstrap" ~ "penguins2",    #<1>
+    input$penguins == "chilly" ~ "penguins3",
+    input$penguins == "woody" ~ "penguins4",
+    input$penguins == "gentoo" ~ "penguins5"        #<1>
+  )
 
   # Database designation and other settings
   sd_server(
@@ -123,28 +132,76 @@ shiny::shinyApp(ui = sd_ui(), server = server)
 
 # viola
 ```
-1. The name you choose here will appear as a database table on the Supabase site -- data itself is exportable as .csv or .sql.
+1. Format for "conditional on response option" is: <br>`item` == `response` ~ `go-to-item`
 
-## Survey
+## Skips (.qmd)
 
-[![](img/survey1.JPG)](https://jtkulas.shinyapps.io/Kulas/)
-
-## Supabase
-
-[![](img/survey2.JPG)](https://surveydown.org/store-data#create-a-supabase-account)
-
-## Data
 ```{r}
 #| echo: true
-#| output-location: column
+#| eval: false
+#| code-line-numbers: "3,6-9,15,18-21"
+#| 
+sd_question(
+  type  = "mc",
+  id    = "penguins",
+  label = "Which is your favorite type of penguin?",
+  option = c(
+    'Chinstrap'    = 'chinstrap',
+    'Chilly Willy' = "chilly",
+    'Downy WP'     = 'woody',
+    "Gentoo"       = 'gentoo'
+  )
+)
 
-data <- read.csv("Woody.csv")
+sd_question(
+  type  = 'mc_buttons',
+  id    = 'penguins2',
+  label = "Choose a SECOND penguin that is different from the previous",
+  option = c(
+#    'Chinstrap'    = 'chinstrap',        #<1>
+    'Chilly Willy' = "chilly",
+    'Downy WP'     = 'woody',
+    "Gentoo"       = 'gentoo'             #<1>
+  )
+)
 
-descr::freq(data$einstein)
+sd_question(
+  type  = 'mc_buttons',
+  id    = 'penguins3',
+  label = "Choose a SECOND penguin that is different from the previous",
+  option = c(
+    'Chinstrap'    = 'chinstrap',
+#    'Chilly Willy' = "chilly",
+    'Downy WP'     = 'woody',
+    "Gentoo"       = 'gentoo'
+  )
+)
 
+sd_question(
+  type  = 'mc_buttons',
+  id    = 'penguins4',
+  label = "Choose a SECOND penguin that is different from the previous",
+  option = c(
+    'Chinstrap'    = 'chinstrap',
+    'Chilly Willy' = "chilly",
+#    'Downy WP'     = 'woody',
+    "Gentoo"       = 'gentoo'
+  )
+)
 
+sd_question(
+  type  = 'mc_buttons',
+  id    = 'penguins5',
+  label = "Choose a SECOND penguin that is different from the previous",
+  option = c(
+    'Chinstrap'    = 'chinstrap',
+    'Chilly Willy' = "chilly",
+    'Downy WP'     = 'woody'
+#    "Gentoo"       = 'gentoo'
+  )
+)
 ```
-
+1. Only one of these next 4 questions will be displayed, dependent on the previous response given to `penguins` (the `penguins` response selection will not be displayed as an option when presenting `penguins2`) `r emo::ji("penguin")``r emo::ji("penguin")`
 
 ::::
 
@@ -153,17 +210,85 @@ descr::freq(data$einstein)
 
 ![](https://www.disneyclips.com/images/images/tinkerbell29.png){.absolute width="250" bottom="50" left="-150"}
 
+## [surveydown](https://surveydown.org/) Part VI -- [Tinkering]{.tinkerbell2} (Images):
+
+:::: {.columns}
+
+::: {.column width="85%"}
+:::: {.panel-tabset}
+
+## Output
+
+[![](img/surveypics.JPG)](https://jtkulas.shinyapps.io/pics/)
+
+## Script
+
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "2,5,7-11,13-15,17-20,22-24,31"
+
+# Define the option vector
+html_button_options <- c('chinstrap',"chilly",'woody','gentoo')     #<1>
+
+# Define option labels that include markdown and HTML code to embed images
+names(html_button_options) <- c(
+
+  "**Chinstrap**<br>
+   <img src='https://encrypted-tbn2.gstatic.com/
+images?q=tbn:ANd9GcQI2Eyelti4suqlwyxZK0_xRYDa8aCQ
+Ml0C4Ue00NlqFDEBLaRmtBQ1mhgr-XHtLUHyP0J63IlhJNdaY8
+axdrLr4A' width=100>",
+
+  "**C Willy**<br>
+   <img src='https://upload.wikimedia.org/wikipedia
+/en/9/97/Chilly_Willy_logo.png' width=100>",
+
+  "**Downy**<br>
+    <img src='https://encrypted-tbn0.gstatic.com/
+images?q=tbn:ANd9GcTmS9Ncf2m77FU-wTcUBoY0Aqk0X_lW7bwVEw&s'
+width=100>",
+
+  "**Gentoo**<br>
+<img src='https://cdn.download.ams.birds.cornell.edu/
+api/v2/asset/612764627/900' width=100>"
+)
+
+sd_question(
+  type  = 'mc_buttons',
+  id    = 'penguins',
+  label = "Choose a pretty pretty boyd",
+  option = html_button_options            #<2>
+)
+
+
+
+## Voila!
+```
+1. Believe these should be values stored as data, but have not verified.
+2. Previous `c()` options replaced with single "named" object. Theoretically should be able to build within same `label` command as standard. 
+
+::::
+:::
+
+::: {.column width="15%"}
+:::
+
+::::
+
+![](https://www.disneyclips.com/images/images/tinkerbell36.png){.absolute right="-150" top="150" height="300"}
+
 # Today...
 
-![](https://pngimg.com/d/santa_sleigh_PNG15.png){.nostretch fig-align="right" width="800px"}
+![](https://www.freeiconspng.com/thumbs/christmas-png/hat-ball-tree-leaf-candy-christmas-png-image-26.png){.absolute width="300" top="-140" left="30"}
 
-## [S]{.ballet}[eason's]{.ballet3} [G]{.ballet}[reetings]{.ballet3} (cards)
+## [S]{.ballet}[eason's]{.ballet3} [G]{.ballet}[reetings...]{.ballet3} ...cards
 
-![](https://cdn11.bigcommerce.com/s-gki9t8g2p/images/stencil/1280x1280/products/12540/28650/NLSVX001__90676.1730923959.jpg?c=2?imbypass=on){.absolute width="400" left="320" bottom="0"}
+![](https://m.media-amazon.com/images/I/91q2Y2IjZzL.jpg){.absolute height="550" left="300" bottom="5"}
 
-![](https://i.pinimg.com/736x/9a/5c/6f/9a5c6ff49fba2221653983ade79788b8.jpg){.absolute width="300" left="-70" bottom="100" .tilt}
+![](https://i.pinimg.com/736x/9a/5c/6f/9a5c6ff49fba2221653983ade79788b8.jpg){.absolute width="300" left="-45" bottom="60" .tilt}
 
-![](https://www.warnerpress.org/media/catalog/product/cache/52a1499fffa046429a9b5055fe9a2d86/g/9/g9394xd_web.jpg){.absolute width="300" right="-40" bottom="100" .tilt2}
+![](https://i.pinimg.com/564x/06/7b/01/067b0101d02664e38b8758735eca68e9.jpg){.absolute width="300" right="-80" top="90" .tilt2}
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 

@@ -13,7 +13,7 @@
 <link href="12_24_24_files/libs/quarto-contrib/grid-no-htext-1.0.0/grid_no_htext.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.47">
 
-  <meta name="author" content="OOH Session #57… …Season’s Greetings!! (cards)">
+  <meta name="author" content="OOH Session #57… …Season’s Greetings!! …cards">
   <title>R for  Authoring!!</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -393,20 +393,20 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="https://i.ytimg.com/vi/hOHW8uX1QwQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&amp;rs=AOn4CLB06XtSYdgxgtkIP0u0-iWPkFBntg" data-background-opacity=".4" class="quarto-title-block center">
+<section id="title-slide" data-background-image="https://i.ytimg.com/vi/hOHW8uX1QwQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&amp;rs=AOn4CLB06XtSYdgxgtkIP0u0-iWPkFBntg" data-background-opacity=".25" class="quarto-title-block center">
   <h1 class="title">R for <br>Authoring!!</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-OOH Session #57…<br><span class="ballet">…Season’s Greetings!!</span> (cards) 
+OOH Session #57…<br><span class="ballet">…Season’s Greetings!!</span> …cards 
 </div>
 </div>
 </div>
 
 </section>
-<section id="open-office-hours-december-18-2024" class="slide level2">
-<h2>Open Office Hours <br>(December 18, 2024)</h2>
+<section id="open-office-hours-december-19-2024" class="slide level2">
+<h2>Open Office Hours <br>(December 19, 2024)</h2>
 <div>
 
 </div>
@@ -417,7 +417,7 @@ OOH Session #57…<br><span class="ballet">…Season’s Greetings!!</span> (car
 <li>Recap session #56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↔︎️</li>
 <li>Focal issue(s):
 <ul>
-<li><span class="ballet">Season’s Greetings</span><br>(cards)</li>
+<li><span class="ballet thicker">Season’s Greetings…</span><br>…cards</li>
 </ul></li>
 <li>Shared problem-solving</li>
 </ul>
@@ -434,18 +434,21 @@ OOH Session #57…<br><span class="ballet">…Season’s Greetings!!</span> (car
 <h1>Recap of Session <br>#56:</h1>
 <p><img data-src="https://pngimg.com/d/sticky_note_PNG18964.png" class="absolute" style="top: 200px; right: 50px; "> <img data-src="https://www.pngall.com/wp-content/uploads/14/Tinkerbell-PNG.png" class="absolute mirror" style="top: 270px; right: 160px; width: 150px; "></p>
 </section>
-<section id="surveydown-part-vi-tinkering" class="slide level2">
-<h2><a href="https://surveydown.org/">surveydown</a> Part VI – <span class="tinkerbell2">Tinkering</span>:</h2>
+<section id="surveydown-part-vi-tinkering-logic" class="slide level2">
+<h2><a href="https://surveydown.org/">surveydown</a> Part VI – <span class="tinkerbell2">Tinkering</span> (Logic):</h2>
 <div class="columns">
 <div class="column" style="width:15%;">
 
 </div><div class="column" style="width:85%;">
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">app.R</a></li><li><a href="#tabset-1-2">Survey</a></li><li><a href="#tabset-1-3">Supabase</a></li><li><a href="#tabset-1-4">Data</a></li></ul>
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Survey</a></li><li><a href="#tabset-1-2">Skips (app)</a></li><li><a href="#tabset-1-3">Skips (.qmd)</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
+<p><a href="https://jtkulas.shinyapps.io/logic/"><img data-src="img/logic.JPG"></a></p>
+</div>
+<div id="tabset-1-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="annotated-cell-1" data-code-line-numbers="14-20"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-1-1"><a href="#annotated-cell-1-1"></a><span class="co"># remotes::install_github("surveydown-dev/surveydown", force = TRUE)</span></span>
+<div class="sourceCode cell-code" id="annotated-cell-1" data-code-line-numbers="31-36"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-1-1"><a href="#annotated-cell-1-1"></a><span class="co"># remotes::install_github("surveydown-dev/surveydown", force = TRUE)</span></span>
 <span id="annotated-cell-1-2"><a href="#annotated-cell-1-2"></a><span class="fu">library</span>(surveydown)</span>
 <span id="annotated-cell-1-3"><a href="#annotated-cell-1-3"></a></span>
 <span id="annotated-cell-1-4"><a href="#annotated-cell-1-4"></a><span class="co"># Database setup</span></span>
@@ -459,12 +462,12 @@ OOH Session #57…<br><span class="ballet">…Season’s Greetings!!</span> (car
 <span id="annotated-cell-1-12"><a href="#annotated-cell-1-12"></a><span class="co"># https://surveydown.org/store-data</span></span>
 <span id="annotated-cell-1-13"><a href="#annotated-cell-1-13"></a></span>
 <span id="annotated-cell-1-14"><a href="#annotated-cell-1-14"></a>db <span class="ot">&lt;-</span> <span class="fu">sd_database</span>(</span>
-<span id="annotated-cell-1-15"><a href="#annotated-cell-1-15"></a>  <span class="at">host   =</span> <span class="st">"aws-0-us-west-1.pooler.supabase.com"</span>,     </span>
+<span id="annotated-cell-1-15"><a href="#annotated-cell-1-15"></a>  <span class="at">host   =</span> <span class="st">"aws-0-us-west-1.pooler.supabase.com"</span>,</span>
 <span id="annotated-cell-1-16"><a href="#annotated-cell-1-16"></a>  <span class="at">dbname =</span> <span class="st">"postgres"</span>,</span>
 <span id="annotated-cell-1-17"><a href="#annotated-cell-1-17"></a>  <span class="at">port   =</span> <span class="st">"6543"</span>,</span>
-<span id="annotated-cell-1-18"><a href="#annotated-cell-1-18"></a>  <span class="at">user   =</span> <span class="st">"postgres.yppmohklyshsiwkpadqa"</span>,           </span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="1">1</button><span id="annotated-cell-1-19" class="code-annotation-target"><a href="#annotated-cell-1-19"></a>  <span class="at">table  =</span> <span class="st">"Woody"</span>,</span>
-<span id="annotated-cell-1-20"><a href="#annotated-cell-1-20"></a><span class="co">#  ignore = TRUE                                     </span></span>
+<span id="annotated-cell-1-18"><a href="#annotated-cell-1-18"></a>  <span class="at">user   =</span> <span class="st">"postgres.yppmohklyshsiwkpadqa"</span>,</span>
+<span id="annotated-cell-1-19"><a href="#annotated-cell-1-19"></a>  <span class="at">table  =</span> <span class="st">"Woody"</span>,</span>
+<span id="annotated-cell-1-20"><a href="#annotated-cell-1-20"></a>  <span class="at">ignore =</span> <span class="cn">TRUE</span></span>
 <span id="annotated-cell-1-21"><a href="#annotated-cell-1-21"></a>)</span>
 <span id="annotated-cell-1-22"><a href="#annotated-cell-1-22"></a></span>
 <span id="annotated-cell-1-23"><a href="#annotated-cell-1-23"></a></span>
@@ -475,84 +478,195 @@ OOH Session #57…<br><span class="ballet">…Season’s Greetings!!</span> (car
 <span id="annotated-cell-1-28"><a href="#annotated-cell-1-28"></a>  <span class="fu">sd_skip_if</span>()</span>
 <span id="annotated-cell-1-29"><a href="#annotated-cell-1-29"></a></span>
 <span id="annotated-cell-1-30"><a href="#annotated-cell-1-30"></a>  <span class="co"># Define any conditional display logic here (show a question if a condition is true)</span></span>
-<span id="annotated-cell-1-31"><a href="#annotated-cell-1-31"></a>  <span class="fu">sd_show_if</span>()</span>
-<span id="annotated-cell-1-32"><a href="#annotated-cell-1-32"></a></span>
-<span id="annotated-cell-1-33"><a href="#annotated-cell-1-33"></a>  <span class="co"># Database designation and other settings</span></span>
-<span id="annotated-cell-1-34"><a href="#annotated-cell-1-34"></a>  <span class="fu">sd_server</span>(</span>
-<span id="annotated-cell-1-35"><a href="#annotated-cell-1-35"></a>    <span class="at">db =</span> db</span>
+<span id="annotated-cell-1-31"><a href="#annotated-cell-1-31"></a>  <span class="fu">sd_show_if</span>(</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="1">1</button><span id="annotated-cell-1-32" class="code-annotation-target"><a href="#annotated-cell-1-32"></a>    input<span class="sc">$</span>penguins <span class="sc">==</span> <span class="st">"chinstrap"</span> <span class="sc">~</span> <span class="st">"penguins2"</span>,</span>
+<span id="annotated-cell-1-33"><a href="#annotated-cell-1-33"></a>    input<span class="sc">$</span>penguins <span class="sc">==</span> <span class="st">"chilly"</span> <span class="sc">~</span> <span class="st">"penguins3"</span>,</span>
+<span id="annotated-cell-1-34"><a href="#annotated-cell-1-34"></a>    input<span class="sc">$</span>penguins <span class="sc">==</span> <span class="st">"woody"</span> <span class="sc">~</span> <span class="st">"penguins4"</span>,</span>
+<span id="annotated-cell-1-35"><a href="#annotated-cell-1-35"></a>    input<span class="sc">$</span>penguins <span class="sc">==</span> <span class="st">"gentoo"</span> <span class="sc">~</span> <span class="st">"penguins5"</span></span>
 <span id="annotated-cell-1-36"><a href="#annotated-cell-1-36"></a>  )</span>
 <span id="annotated-cell-1-37"><a href="#annotated-cell-1-37"></a></span>
-<span id="annotated-cell-1-38"><a href="#annotated-cell-1-38"></a>}</span>
-<span id="annotated-cell-1-39"><a href="#annotated-cell-1-39"></a></span>
-<span id="annotated-cell-1-40"><a href="#annotated-cell-1-40"></a><span class="co"># shinyApp() initiates your app - don't change it</span></span>
-<span id="annotated-cell-1-41"><a href="#annotated-cell-1-41"></a>shiny<span class="sc">::</span><span class="fu">shinyApp</span>(<span class="at">ui =</span> <span class="fu">sd_ui</span>(), <span class="at">server =</span> server)</span>
+<span id="annotated-cell-1-38"><a href="#annotated-cell-1-38"></a>  <span class="co"># Database designation and other settings</span></span>
+<span id="annotated-cell-1-39"><a href="#annotated-cell-1-39"></a>  <span class="fu">sd_server</span>(</span>
+<span id="annotated-cell-1-40"><a href="#annotated-cell-1-40"></a>    <span class="at">db =</span> db</span>
+<span id="annotated-cell-1-41"><a href="#annotated-cell-1-41"></a>  )</span>
 <span id="annotated-cell-1-42"><a href="#annotated-cell-1-42"></a></span>
-<span id="annotated-cell-1-43"><a href="#annotated-cell-1-43"></a></span>
+<span id="annotated-cell-1-43"><a href="#annotated-cell-1-43"></a>}</span>
 <span id="annotated-cell-1-44"><a href="#annotated-cell-1-44"></a></span>
-<span id="annotated-cell-1-45"><a href="#annotated-cell-1-45"></a></span>
-<span id="annotated-cell-1-46"><a href="#annotated-cell-1-46"></a><span class="co"># viola</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="annotated-cell-1-45"><a href="#annotated-cell-1-45"></a><span class="co"># shinyApp() initiates your app - don't change it</span></span>
+<span id="annotated-cell-1-46"><a href="#annotated-cell-1-46"></a>shiny<span class="sc">::</span><span class="fu">shinyApp</span>(<span class="at">ui =</span> <span class="fu">sd_ui</span>(), <span class="at">server =</span> server)</span>
+<span id="annotated-cell-1-47"><a href="#annotated-cell-1-47"></a></span>
+<span id="annotated-cell-1-48"><a href="#annotated-cell-1-48"></a></span>
+<span id="annotated-cell-1-49"><a href="#annotated-cell-1-49"></a></span>
+<span id="annotated-cell-1-50"><a href="#annotated-cell-1-50"></a></span>
+<span id="annotated-cell-1-51"><a href="#annotated-cell-1-51"></a><span class="co"># viola</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-1" data-code-lines="19" data-code-annotation="1">The name you choose here will appear as a database table on the Supabase site – data itself is exportable as .csv or .sql.</span>
+<span data-code-cell="annotated-cell-1" data-code-lines="32,35" data-code-annotation="1">Format for “conditional on response option” is: <br><code>item</code> == <code>response</code> ~ <code>go-to-item</code></span>
 </dd>
 </dl>
 </div>
 </div>
 </div>
-<div id="tabset-1-2">
-<p><a href="https://jtkulas.shinyapps.io/Kulas/"><img data-src="img/survey1.JPG"></a></p>
-</div>
 <div id="tabset-1-3">
-<p><a href="https://surveydown.org/store-data#create-a-supabase-account"><img data-src="img/survey2.JPG"></a></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="annotated-cell-2" data-code-line-numbers="3,6-9,15,18-21"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-2-1"><a href="#annotated-cell-2-1"></a><span class="fu">sd_question</span>(</span>
+<span id="annotated-cell-2-2"><a href="#annotated-cell-2-2"></a>  <span class="at">type  =</span> <span class="st">"mc"</span>,</span>
+<span id="annotated-cell-2-3"><a href="#annotated-cell-2-3"></a>  <span class="at">id    =</span> <span class="st">"penguins"</span>,</span>
+<span id="annotated-cell-2-4"><a href="#annotated-cell-2-4"></a>  <span class="at">label =</span> <span class="st">"Which is your favorite type of penguin?"</span>,</span>
+<span id="annotated-cell-2-5"><a href="#annotated-cell-2-5"></a>  <span class="at">option =</span> <span class="fu">c</span>(</span>
+<span id="annotated-cell-2-6"><a href="#annotated-cell-2-6"></a>    <span class="st">'Chinstrap'</span>    <span class="ot">=</span> <span class="st">'chinstrap'</span>,</span>
+<span id="annotated-cell-2-7"><a href="#annotated-cell-2-7"></a>    <span class="st">'Chilly Willy'</span> <span class="ot">=</span> <span class="st">"chilly"</span>,</span>
+<span id="annotated-cell-2-8"><a href="#annotated-cell-2-8"></a>    <span class="st">'Downy WP'</span>     <span class="ot">=</span> <span class="st">'woody'</span>,</span>
+<span id="annotated-cell-2-9"><a href="#annotated-cell-2-9"></a>    <span class="st">"Gentoo"</span>       <span class="ot">=</span> <span class="st">'gentoo'</span></span>
+<span id="annotated-cell-2-10"><a href="#annotated-cell-2-10"></a>  )</span>
+<span id="annotated-cell-2-11"><a href="#annotated-cell-2-11"></a>)</span>
+<span id="annotated-cell-2-12"><a href="#annotated-cell-2-12"></a></span>
+<span id="annotated-cell-2-13"><a href="#annotated-cell-2-13"></a><span class="fu">sd_question</span>(</span>
+<span id="annotated-cell-2-14"><a href="#annotated-cell-2-14"></a>  <span class="at">type  =</span> <span class="st">'mc_buttons'</span>,</span>
+<span id="annotated-cell-2-15"><a href="#annotated-cell-2-15"></a>  <span class="at">id    =</span> <span class="st">'penguins2'</span>,</span>
+<span id="annotated-cell-2-16"><a href="#annotated-cell-2-16"></a>  <span class="at">label =</span> <span class="st">"Choose a SECOND penguin that is different from the previous"</span>,</span>
+<span id="annotated-cell-2-17"><a href="#annotated-cell-2-17"></a>  <span class="at">option =</span> <span class="fu">c</span>(</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="1">1</button><span id="annotated-cell-2-18" class="code-annotation-target"><a href="#annotated-cell-2-18"></a><span class="co">#    'Chinstrap'    = 'chinstrap',</span></span>
+<span id="annotated-cell-2-19"><a href="#annotated-cell-2-19"></a>    <span class="st">'Chilly Willy'</span> <span class="ot">=</span> <span class="st">"chilly"</span>,</span>
+<span id="annotated-cell-2-20"><a href="#annotated-cell-2-20"></a>    <span class="st">'Downy WP'</span>     <span class="ot">=</span> <span class="st">'woody'</span>,</span>
+<span id="annotated-cell-2-21"><a href="#annotated-cell-2-21"></a>    <span class="st">"Gentoo"</span>       <span class="ot">=</span> <span class="st">'gentoo'</span></span>
+<span id="annotated-cell-2-22"><a href="#annotated-cell-2-22"></a>  )</span>
+<span id="annotated-cell-2-23"><a href="#annotated-cell-2-23"></a>)</span>
+<span id="annotated-cell-2-24"><a href="#annotated-cell-2-24"></a></span>
+<span id="annotated-cell-2-25"><a href="#annotated-cell-2-25"></a><span class="fu">sd_question</span>(</span>
+<span id="annotated-cell-2-26"><a href="#annotated-cell-2-26"></a>  <span class="at">type  =</span> <span class="st">'mc_buttons'</span>,</span>
+<span id="annotated-cell-2-27"><a href="#annotated-cell-2-27"></a>  <span class="at">id    =</span> <span class="st">'penguins3'</span>,</span>
+<span id="annotated-cell-2-28"><a href="#annotated-cell-2-28"></a>  <span class="at">label =</span> <span class="st">"Choose a SECOND penguin that is different from the previous"</span>,</span>
+<span id="annotated-cell-2-29"><a href="#annotated-cell-2-29"></a>  <span class="at">option =</span> <span class="fu">c</span>(</span>
+<span id="annotated-cell-2-30"><a href="#annotated-cell-2-30"></a>    <span class="st">'Chinstrap'</span>    <span class="ot">=</span> <span class="st">'chinstrap'</span>,</span>
+<span id="annotated-cell-2-31"><a href="#annotated-cell-2-31"></a><span class="co">#    'Chilly Willy' = "chilly",</span></span>
+<span id="annotated-cell-2-32"><a href="#annotated-cell-2-32"></a>    <span class="st">'Downy WP'</span>     <span class="ot">=</span> <span class="st">'woody'</span>,</span>
+<span id="annotated-cell-2-33"><a href="#annotated-cell-2-33"></a>    <span class="st">"Gentoo"</span>       <span class="ot">=</span> <span class="st">'gentoo'</span></span>
+<span id="annotated-cell-2-34"><a href="#annotated-cell-2-34"></a>  )</span>
+<span id="annotated-cell-2-35"><a href="#annotated-cell-2-35"></a>)</span>
+<span id="annotated-cell-2-36"><a href="#annotated-cell-2-36"></a></span>
+<span id="annotated-cell-2-37"><a href="#annotated-cell-2-37"></a><span class="fu">sd_question</span>(</span>
+<span id="annotated-cell-2-38"><a href="#annotated-cell-2-38"></a>  <span class="at">type  =</span> <span class="st">'mc_buttons'</span>,</span>
+<span id="annotated-cell-2-39"><a href="#annotated-cell-2-39"></a>  <span class="at">id    =</span> <span class="st">'penguins4'</span>,</span>
+<span id="annotated-cell-2-40"><a href="#annotated-cell-2-40"></a>  <span class="at">label =</span> <span class="st">"Choose a SECOND penguin that is different from the previous"</span>,</span>
+<span id="annotated-cell-2-41"><a href="#annotated-cell-2-41"></a>  <span class="at">option =</span> <span class="fu">c</span>(</span>
+<span id="annotated-cell-2-42"><a href="#annotated-cell-2-42"></a>    <span class="st">'Chinstrap'</span>    <span class="ot">=</span> <span class="st">'chinstrap'</span>,</span>
+<span id="annotated-cell-2-43"><a href="#annotated-cell-2-43"></a>    <span class="st">'Chilly Willy'</span> <span class="ot">=</span> <span class="st">"chilly"</span>,</span>
+<span id="annotated-cell-2-44"><a href="#annotated-cell-2-44"></a><span class="co">#    'Downy WP'     = 'woody',</span></span>
+<span id="annotated-cell-2-45"><a href="#annotated-cell-2-45"></a>    <span class="st">"Gentoo"</span>       <span class="ot">=</span> <span class="st">'gentoo'</span></span>
+<span id="annotated-cell-2-46"><a href="#annotated-cell-2-46"></a>  )</span>
+<span id="annotated-cell-2-47"><a href="#annotated-cell-2-47"></a>)</span>
+<span id="annotated-cell-2-48"><a href="#annotated-cell-2-48"></a></span>
+<span id="annotated-cell-2-49"><a href="#annotated-cell-2-49"></a><span class="fu">sd_question</span>(</span>
+<span id="annotated-cell-2-50"><a href="#annotated-cell-2-50"></a>  <span class="at">type  =</span> <span class="st">'mc_buttons'</span>,</span>
+<span id="annotated-cell-2-51"><a href="#annotated-cell-2-51"></a>  <span class="at">id    =</span> <span class="st">'penguins5'</span>,</span>
+<span id="annotated-cell-2-52"><a href="#annotated-cell-2-52"></a>  <span class="at">label =</span> <span class="st">"Choose a SECOND penguin that is different from the previous"</span>,</span>
+<span id="annotated-cell-2-53"><a href="#annotated-cell-2-53"></a>  <span class="at">option =</span> <span class="fu">c</span>(</span>
+<span id="annotated-cell-2-54"><a href="#annotated-cell-2-54"></a>    <span class="st">'Chinstrap'</span>    <span class="ot">=</span> <span class="st">'chinstrap'</span>,</span>
+<span id="annotated-cell-2-55"><a href="#annotated-cell-2-55"></a>    <span class="st">'Chilly Willy'</span> <span class="ot">=</span> <span class="st">"chilly"</span>,</span>
+<span id="annotated-cell-2-56"><a href="#annotated-cell-2-56"></a>    <span class="st">'Downy WP'</span>     <span class="ot">=</span> <span class="st">'woody'</span></span>
+<span id="annotated-cell-2-57"><a href="#annotated-cell-2-57"></a><span class="co">#    "Gentoo"       = 'gentoo'</span></span>
+<span id="annotated-cell-2-58"><a href="#annotated-cell-2-58"></a>  )</span>
+<span id="annotated-cell-2-59"><a href="#annotated-cell-2-59"></a>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-2" data-code-lines="18,21" data-code-annotation="1">Only one of these next 4 questions will be displayed, dependent on the previous response given to <code>penguins</code> (the <code>penguins</code> response selection will not be displayed as an option when presenting <code>penguins2</code>) 🐧🐧</span>
+</dd>
+</dl>
 </div>
-<div id="tabset-1-4">
-<div class="cell columns column-output-location">
-<div class="column">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"Woody.csv"</span>)</span>
-<span id="cb1-2"><a href=""></a></span>
-<span id="cb1-3"><a href=""></a>descr<span class="sc">::</span><span class="fu">freq</span>(data<span class="sc">$</span>einstein)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column">
-<div class="cell-output-display">
-<div>
-<figure>
-<p><img data-src="12_24_24_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
-</figure>
 </div>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>data$einstein 
-              Frequency Percent
-                      7   53.85
-2                     2   15.38
-lemon_posicle         4   30.77
-Total                13  100.00</code></pre>
-</div>
-</div></div>
 </div>
 </div>
 </div>
 </div></div>
 <p><img data-src="https://www.disneyclips.com/images/images/tinkerbell29.png" class="absolute" style="left: -150px; bottom: 50px; width: 250px; "></p>
+</section>
+<section id="surveydown-part-vi-tinkering-images" class="slide level2">
+<h2><a href="https://surveydown.org/">surveydown</a> Part VI – <span class="tinkerbell2">Tinkering</span> (Images):</h2>
+<div class="columns">
+<div class="column" style="width:85%;">
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Output</a></li><li><a href="#tabset-2-2">Script</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<p><a href="https://jtkulas.shinyapps.io/pics/"><img data-src="img/surveypics.JPG"></a></p>
+</div>
+<div id="tabset-2-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="annotated-cell-3" data-code-line-numbers="2,5,7-11,13-15,17-20,22-24,31"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-3-1"><a href="#annotated-cell-3-1"></a><span class="co"># Define the option vector</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="1">1</button><span id="annotated-cell-3-2" class="code-annotation-target"><a href="#annotated-cell-3-2"></a>html_button_options <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'chinstrap'</span>,<span class="st">"chilly"</span>,<span class="st">'woody'</span>,<span class="st">'gentoo'</span>)</span>
+<span id="annotated-cell-3-3"><a href="#annotated-cell-3-3"></a></span>
+<span id="annotated-cell-3-4"><a href="#annotated-cell-3-4"></a><span class="co"># Define option labels that include markdown and HTML code to embed images</span></span>
+<span id="annotated-cell-3-5"><a href="#annotated-cell-3-5"></a><span class="fu">names</span>(html_button_options) <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="annotated-cell-3-6"><a href="#annotated-cell-3-6"></a></span>
+<span id="annotated-cell-3-7"><a href="#annotated-cell-3-7"></a>  <span class="st">"**Chinstrap**&lt;br&gt;</span></span>
+<span id="annotated-cell-3-8"><a href="#annotated-cell-3-8"></a><span class="st">   &lt;img src='https://encrypted-tbn2.gstatic.com/</span></span>
+<span id="annotated-cell-3-9"><a href="#annotated-cell-3-9"></a><span class="st">images?q=tbn:ANd9GcQI2Eyelti4suqlwyxZK0_xRYDa8aCQ</span></span>
+<span id="annotated-cell-3-10"><a href="#annotated-cell-3-10"></a><span class="st">Ml0C4Ue00NlqFDEBLaRmtBQ1mhgr-XHtLUHyP0J63IlhJNdaY8</span></span>
+<span id="annotated-cell-3-11"><a href="#annotated-cell-3-11"></a><span class="st">axdrLr4A' width=100&gt;"</span>,</span>
+<span id="annotated-cell-3-12"><a href="#annotated-cell-3-12"></a></span>
+<span id="annotated-cell-3-13"><a href="#annotated-cell-3-13"></a>  <span class="st">"**C Willy**&lt;br&gt;</span></span>
+<span id="annotated-cell-3-14"><a href="#annotated-cell-3-14"></a><span class="st">   &lt;img src='https://upload.wikimedia.org/wikipedia</span></span>
+<span id="annotated-cell-3-15"><a href="#annotated-cell-3-15"></a><span class="st">/en/9/97/Chilly_Willy_logo.png' width=100&gt;"</span>,</span>
+<span id="annotated-cell-3-16"><a href="#annotated-cell-3-16"></a></span>
+<span id="annotated-cell-3-17"><a href="#annotated-cell-3-17"></a>  <span class="st">"**Downy**&lt;br&gt;</span></span>
+<span id="annotated-cell-3-18"><a href="#annotated-cell-3-18"></a><span class="st">    &lt;img src='https://encrypted-tbn0.gstatic.com/</span></span>
+<span id="annotated-cell-3-19"><a href="#annotated-cell-3-19"></a><span class="st">images?q=tbn:ANd9GcTmS9Ncf2m77FU-wTcUBoY0Aqk0X_lW7bwVEw&amp;s'</span></span>
+<span id="annotated-cell-3-20"><a href="#annotated-cell-3-20"></a><span class="st">width=100&gt;"</span>,</span>
+<span id="annotated-cell-3-21"><a href="#annotated-cell-3-21"></a></span>
+<span id="annotated-cell-3-22"><a href="#annotated-cell-3-22"></a>  <span class="st">"**Gentoo**&lt;br&gt;</span></span>
+<span id="annotated-cell-3-23"><a href="#annotated-cell-3-23"></a><span class="st">&lt;img src='https://cdn.download.ams.birds.cornell.edu/</span></span>
+<span id="annotated-cell-3-24"><a href="#annotated-cell-3-24"></a><span class="st">api/v2/asset/612764627/900' width=100&gt;"</span></span>
+<span id="annotated-cell-3-25"><a href="#annotated-cell-3-25"></a>)</span>
+<span id="annotated-cell-3-26"><a href="#annotated-cell-3-26"></a></span>
+<span id="annotated-cell-3-27"><a href="#annotated-cell-3-27"></a><span class="fu">sd_question</span>(</span>
+<span id="annotated-cell-3-28"><a href="#annotated-cell-3-28"></a>  <span class="at">type  =</span> <span class="st">'mc_buttons'</span>,</span>
+<span id="annotated-cell-3-29"><a href="#annotated-cell-3-29"></a>  <span class="at">id    =</span> <span class="st">'penguins'</span>,</span>
+<span id="annotated-cell-3-30"><a href="#annotated-cell-3-30"></a>  <span class="at">label =</span> <span class="st">"Choose a pretty pretty boyd"</span>,</span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="2">2</button><span id="annotated-cell-3-31" class="code-annotation-target"><a href="#annotated-cell-3-31"></a>  <span class="at">option =</span> html_button_options</span>
+<span id="annotated-cell-3-32"><a href="#annotated-cell-3-32"></a>)</span>
+<span id="annotated-cell-3-33"><a href="#annotated-cell-3-33"></a></span>
+<span id="annotated-cell-3-34"><a href="#annotated-cell-3-34"></a></span>
+<span id="annotated-cell-3-35"><a href="#annotated-cell-3-35"></a></span>
+<span id="annotated-cell-3-36"><a href="#annotated-cell-3-36"></a><span class="do">## Voila!</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-3" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-3" data-code-lines="2" data-code-annotation="1">Believe these should be values stored as data, but have not verified.</span>
+</dd>
+<dt data-target-cell="annotated-cell-3" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-3" data-code-lines="31" data-code-annotation="2">Previous <code>c()</code> options replaced with single “named” object. Theoretically should be able to build within same <code>label</code> command as standard.</span>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:15%;">
+
+</div></div>
+<p><img data-src="https://www.disneyclips.com/images/images/tinkerbell36.png" class="absolute" style="top: 150px; right: -150px; height: 300px; "></p>
 </section></section>
 <section>
 <section id="today" class="title-slide slide level1 center">
 <h1>Today…</h1>
-<div class="quarto-figure quarto-figure-right">
-<figure>
-<p><img data-src="https://pngimg.com/d/santa_sleigh_PNG15.png" class="quarto-figure quarto-figure-right" width="800"></p>
-</figure>
-</div>
+<p><img data-src="https://www.freeiconspng.com/thumbs/christmas-png/hat-ball-tree-leaf-candy-christmas-png-image-26.png" class="absolute" style="top: -140px; left: 30px; width: 300px; "></p>
 </section>
 <section id="seasons-greetings-cards" class="slide level2">
-<h2><span class="ballet">S</span><span class="ballet3">eason’s</span> <span class="ballet">G</span><span class="ballet3">reetings</span> (cards)</h2>
-<p><img data-src="https://cdn11.bigcommerce.com/s-gki9t8g2p/images/stencil/1280x1280/products/12540/28650/NLSVX001__90676.1730923959.jpg?c=2?imbypass=on" class="absolute" style="left: 320px; bottom: 0px; width: 400px; "></p>
-<p><img data-src="https://i.pinimg.com/736x/9a/5c/6f/9a5c6ff49fba2221653983ade79788b8.jpg" class="absolute tilt" style="left: -70px; bottom: 100px; width: 300px; "></p>
-<p><img data-src="https://www.warnerpress.org/media/catalog/product/cache/52a1499fffa046429a9b5055fe9a2d86/g/9/g9394xd_web.jpg" class="absolute tilt2" style="bottom: 100px; right: -40px; width: 300px; "></p>
+<h2><span class="ballet">S</span><span class="ballet3">eason’s</span> <span class="ballet">G</span><span class="ballet3">reetings…</span> …cards</h2>
+<p><img data-src="https://m.media-amazon.com/images/I/91q2Y2IjZzL.jpg" class="absolute" style="left: 300px; bottom: 5px; height: 550px; "></p>
+<p><img data-src="https://i.pinimg.com/736x/9a/5c/6f/9a5c6ff49fba2221653983ade79788b8.jpg" class="absolute tilt" style="left: -45px; bottom: 60px; width: 300px; "></p>
+<p><img data-src="https://i.pinimg.com/564x/06/7b/01/067b0101d02664e38b8758735eca68e9.jpg" class="absolute tilt2" style="top: 90px; right: -80px; width: 300px; "></p>
 </section>
-<section id="session-info-december-18-2024-rendering" class="slide level2">
-<h2><svg aria-hidden="true" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4287f5;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg> Session Info (December 18, 2024) Rendering:</h2>
+<section id="session-info-december-19-2024-rendering" class="slide level2">
+<h2><svg aria-hidden="true" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4287f5;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg> Session Info (December 19, 2024) Rendering:</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.2.2 (2022-10-31 ucrt)
@@ -576,13 +690,12 @@ other attached packages:
 
 loaded via a namespace (and not attached):
  [1] lubridate_1.9.3   emo_0.0.0.9000    digest_0.6.31     crayon_1.5.2     
- [5] assertthat_0.2.1  xtable_1.8-4      lifecycle_1.0.4   jsonlite_1.8.9   
- [9] magrittr_2.0.3    evaluate_1.0.0    descr_1.1.7       stringi_1.7.12   
-[13] rlang_1.1.3       cli_3.6.0         rstudioapi_0.15.0 vctrs_0.6.5      
-[17] generics_0.1.3    rmarkdown_2.28    tools_4.2.2       stringr_1.5.1    
-[21] glue_1.6.2        purrr_1.0.1       xfun_0.42         yaml_2.3.10      
-[25] fastmap_1.1.1     compiler_4.2.2    timechange_0.3.0  htmltools_0.5.7  
-[29] knitr_1.45       </code></pre>
+ [5] assertthat_0.2.1  lifecycle_1.0.4   jsonlite_1.8.9    magrittr_2.0.3   
+ [9] evaluate_1.0.0    stringi_1.7.12    rlang_1.1.3       cli_3.6.0        
+[13] rstudioapi_0.15.0 vctrs_0.6.5       generics_0.1.3    rmarkdown_2.28   
+[17] tools_4.2.2       stringr_1.5.1     glue_1.6.2        purrr_1.0.1      
+[21] xfun_0.42         yaml_2.3.10       fastmap_1.1.1     compiler_4.2.2   
+[25] timechange_0.3.0  htmltools_0.5.7   knitr_1.45       </code></pre>
 </div>
 </div>
 <div class="quarto-auto-generated-content">
