@@ -290,6 +290,21 @@ sd_question(
 
 ![](https://i.pinimg.com/564x/06/7b/01/067b0101d02664e38b8758735eca68e9.jpg){.absolute width="300" right="-80" top="90" .tilt2}
 
+:::{.notes}
+
++ PDF [Business Document Formats](https://github.com/wearetechnative/texnative?tab=readme-ov-file)
++ PDF [title page extension](https://github.com/nmfs-opensci/quarto_titlepages)  
++ Beamer [full-slide image](https://github.com/pagiraud/fullframegraphics)
++ $\LaTeX$ [3-column pamphlet](https://simply2say.blogspot.com/2018/04/latex-brochure-template.html)
++ RevealJS [add confetti](https://github.com/ArthurData/quarto-confetti)
++ Christmas tree [with ggplot](https://t-redactyl.io/blog/2016/12/a-very-ggplot2-christmas.html)
+  + [Similar](https://datalabzone.com/posts/blogsforr/2022/11/30/christmastree.html)
+  + [Fancier](https://drmowinckels.io/blog/2018/christmas-tree-in-ggplot/)
++ [Falling snow](https://github.com/EmilHvitfeldt/quarto-snow)
++ Christmas [`package`](https://cran.r-universe.dev/christmas)
+
+:::
+
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 
 ```{r}
