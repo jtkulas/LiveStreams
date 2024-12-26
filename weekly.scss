@@ -4,16 +4,16 @@
 @import url('https://fonts.googleapis.com/css?family=Protest Guerrilla');
 @import url('https://fonts.googleapis.com/css?family=Lobster Two');
 @import url('https://fonts.googleapis.com/css?family=Indie Flower');
-@import url('https://fonts.googleapis.com/css?family=Londrina Solid');
+@import url('https://fonts.googleapis.com/css?family=Londrina Solid'); 
 @import url('https://fonts.googleapis.com/css?family=Lovers Quarrel');
-@import url('https://fonts.googleapis.com/css?family=Poetsen One');
-@import url('https://fonts.googleapis.com/css?family=Notable');
+@import url('https://fonts.googleapis.com/css?family=Poetsen One'); 
+@import url('https://fonts.googleapis.com/css?family=Notable');  
 @import url('https://fonts.googleapis.com/css?family=Spicy Rice');
 @import url('https://fonts.googleapis.com/css?family=Kalnia Glaze');
 @import url('https://fonts.googleapis.com/css?family=Permanent Marker');
 @import url('https://fonts.googleapis.com/css?family=Rock Salt');
 @import url('https://fonts.googleapis.com/css?family=Shojumaru');
-@import url('https://fonts.googleapis.com/css?family=Fascinate Inline');
+@import url('https://fonts.googleapis.com/css?family=Fascinate Inline'); 
 @import url('https://fonts.googleapis.com/css?family=Fleur De Leah');
 @import url('https://fonts.googleapis.com/css?family=Gloria Hallelujah');
 @import url('https://fonts.googleapis.com/css?family=Silkscreen');
@@ -367,7 +367,7 @@ width: 10px;
 .ballet {
   font-family: "ballet";
   color: #009E60;
-  font-size: .9em;
+  font-size: 1.2em;
   text-shadow: 
    2px 2px 1px #00ff00 !important;
 }
@@ -375,8 +375,8 @@ width: 10px;
 .ballet3 {
   font-family: "ballet";
   color: #009E60;
-  font-size: .9em;
   text-transform: lowercase !important; 
+  font-size: 1.2em;
   text-shadow: 
    2px 2px 1px #00ff00 !important;
 }
@@ -388,3 +388,11 @@ width: 10px;
 .thicker {
   font-weight: bold;
 }
+
+.spotlight {
+  font-family: "Notable";      /* Notable Fascinate Inline */
+  color: #89CFF0;
+  text-shadow: 
+   -5px 3px 2px #0047ab !important;
+}
+

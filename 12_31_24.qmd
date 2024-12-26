@@ -1,0 +1,212 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #58...<br>...[Spotlighting!!]{.spotlight}" 
+title-slide-attributes: 
+  data-background-image: https://www.repricerexpress.com/wp-content/uploads/2014/01/amazon-sponsored-products-ads.jpg
+  #https://media.istockphoto.com/id/153962266/vector/party-city.jpg?s=612x612&w=0&k=20&c=tcQPIegAcuSDYjuUaW9A-3cZChyBmyJOylYifrtbiks=
+  data-background-opacity: ".5"
+format:
+  revealjs:
+    mouse-wheel: true                ## yes enables mouse
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+#    controls-layout: bottom-right
+#    controls-tutorial: true
+#    slide-number: h.v
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [league, weekly.scss]       ## night & league
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #57&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    - [Spotlighting!!]{.spotlight}
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title57.JPG){.absolute top="170" right="-120" width="600" height="325"}
+
+# Recap of Session <br>#57: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://m.media-amazon.com/images/I/91q2Y2IjZzL.jpg){.absolute width="150" top="290" right="160" .mirror}
+
+## [S]{.ballet}[eason's]{.ballet3} [G]{.ballet}[reetings...]{.ballet3} ...cards
+
+:::: {.columns}
+::: {.column width="20%"}
+
++ [Confetti](https://github.com/ArthurData/quarto-confetti)
++ [Falling snow](https://github.com/EmilHvitfeldt/quarto-snow)
++ [Cards](https://cran.r-project.org/web/packages/christmas/christmas.pdf)
+
+:::
+
+::: {.column width="80%"}
+:::: {.panel-tabset}
+
+## Confetti
+
+```{yaml}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "9-18,36-37"
+
+---
+title: "[Merry Christmas!!]{.ballet}" 
+author: "Best wishes for a wonderful 2025!!!" 
+title-slide-attributes: 
+  data-background-image: https://i.ytimg.com/vi/hOHW8uX1QwQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB06XtSYdgxgtkIP0u0-iWPkFBntg 
+  data-background-opacity: ".5"
+format:
+  revealjs:
+    confetti:
+      particleCount: 150
+      angle: 90
+      spread: 360
+      startVelocity: 25
+      gravity: 0.65
+      drift: 0
+      ticks: 400
+      colors: ["#F5F5DC", "#EDEADE", "#FFFFF0"]
+      scalar: 0.7
+    mouse-wheel: true                ## yes enables mouse
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    mermaid:
+      theme: forest
+    code-overflow: wrap             
+    theme: [league, weekly.scss]       
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  
+    preview-links: false             
+    code-annotations: hover 
+engine: knitr                        
+bibliography: temp.bib
+filters: 
+  - reveal-header          
+  - snow
+revealjs-plugins:
+  - confetti
+---
+
+
+
+
+# viola
+```
+
+## Snow
+
+```{yaml}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "33,35"
+
+---
+title: "[Merry Christmas!!]{.ballet}" 
+author: "Best wishes for a wonderful 2025!!!" 
+title-slide-attributes: 
+  data-background-image: https://i.ytimg.com/vi/hOHW8uX1QwQ/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB06XtSYdgxgtkIP0u0-iWPkFBntg 
+  data-background-opacity: ".5"
+format:
+  revealjs:
+    confetti:
+      particleCount: 150
+      angle: 90
+      spread: 360
+      startVelocity: 25
+      gravity: 0.65
+      drift: 0
+      ticks: 400
+      colors: ["#F5F5DC", "#EDEADE", "#FFFFF0"]
+      scalar: 0.7
+    mouse-wheel: true                ## yes enables mouse
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    mermaid:
+      theme: forest
+    code-overflow: wrap             
+    theme: [league, weekly.scss]       
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  
+    preview-links: false             
+    code-annotations: hover 
+engine: knitr                        
+bibliography: temp.bib
+filters: 
+  - reveal-header          
+  - snow
+revealjs-plugins:
+  - confetti
+---
+
+
+
+
+# viola
+```
+
+## Card
+
+[![](img/snowing.JPG)](https://bookdown.org/jtkulas/confetti)
+
+::::
+
+:::
+::::
+
+# Today...
+
+![](https://static.vecteezy.com/system/resources/thumbnails/049/731/317/small/black-spotlight-with-transparent-background-a-vintage-look-for-modern-design-png.png){.absolute bottom="40" left="210"}
+
+## [[Spotlight!!]{.spotlight}](https://github.com/mcanouil/quarto-spotlight)
+
+![](https://media.giphy.com/media/TXsYvKybN15JollYZu/giphy.gif?cid=ecf05e478h7tkc4scrmvc0e5880ljya8ye26e17dw64fq82o&ep=v1_gifs_related&rid=giphy.gif&ct=g){.absolute height="400" left="250" top="180"}
+
+![](https://media.giphy.com/media/dZXFMaFBlReiA/giphy.gif?cid=ecf05e478h7tkc4scrmvc0e5880ljya8ye26e17dw64fq82o&ep=v1_gifs_related&rid=giphy.gif&ct=g){.absolute height="300" left="-120" top="150"}
+
+![](https://media.giphy.com/media/KFP075hQd90nI0xKlB/giphy.gif?cid=ecf05e478h7tkc4scrmvc0e5880ljya8ye26e17dw64fq82o&ep=v1_gifs_related&rid=giphy.gif&ct=g){.absolute height="300" right="-150" top="0"}
+
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmticWVscHFmcHdybnliNGkyNGQycTg4Mmx0bjV3bXE2bnhwN24xeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6Ztf3u9EM337CiWc/giphy.gif){.absolute height="300" bottom="40" right="-100"}
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
+
