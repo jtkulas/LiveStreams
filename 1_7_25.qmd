@@ -8,6 +8,7 @@ title-slide-attributes:
 format:
   revealjs:
     spotlight:
+      size: 120
       desablingUserSelect: false
     mouse-wheel: true                ## yes enables mouse
     slide-tone: false
@@ -99,7 +100,7 @@ revealjs-plugins:
 # viola
 ```
 
-## Laser Pointer`r emo::ji("pen")`
+## Pointer`r emo::ji("pen")`
 
 ```{yaml}
 #| eval: false
@@ -123,12 +124,12 @@ revealjs-plugins:
 # viola
 ```
 
-## Otros
+## Other Options
 
 ```{yaml}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "7-14"
+#| code-line-numbers: "5,7-14"
 
 ---
 format: 
@@ -136,14 +137,14 @@ format:
     theme: dark
     spotlight:
       size: 120
-      lockPointerInsideCanvas: false
+      lockPointerInsideCanvas: false       #<1>
       toggleSpotlightOnMouseDown: true
       spotlightOnKeyPressAndHold: false
       spotlightCursor: none
       presentingCursor: none
       initialPresentationMode: true
-      disablingUserSelect: true
-      fadeInaAndOut: 100                   #<1>
+      disablingUserSelect: true            #<1>
+      fadeInaAndOut: 100                   #<2>
       useAsPointer: true
       pointerColor: "#bada55"
 revealjs-plugins:
@@ -155,7 +156,9 @@ revealjs-plugins:
 
 # viola
 ```
-1. milliseconds - options and terminology have migrated from broader [Reveal.js Plugin](https://github.com/denniskniep/reveal.js-plugin-spotlight). 
+1. These options and terminology have migrated from a broader [Reveal.js Plugin](https://github.com/denniskniep/reveal.js-plugin-spotlight). 
+2. Milliseconds - default `100` seems to provide a nice transition rate
+
 ::::
 
 :::
@@ -165,7 +168,7 @@ revealjs-plugins:
 
 # Today...
 
-![](https://png.pngtree.com/png-vector/20220726/ourmid/pngtree-king-arthur-s-sword-excalibur-in-the-stone-png-image_6086236.png){.absolute bottom="140" left="00"}
+![](https://png.pngtree.com/png-vector/20220726/ourmid/pngtree-king-arthur-s-sword-excalibur-in-the-stone-png-image_6086236.png){.absolute bottom="20" left="350"}
 
 ## [[Excalidraw!!]{.talian2}](https://github.com/parmsam/quarto-excalidraw) `r emo::ji("artist_palette")``r emo::ji("artist_palette")`
 
