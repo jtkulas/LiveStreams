@@ -23,6 +23,7 @@
 @import url('https://fonts.googleapis.com/css?family=Agu Display');
 @import url('https://fonts.googleapis.com/css?family=Arizonia');
 @import url('https://fonts.googleapis.com/css?family=Ballet');
+@import url('https://fonts.googleapis.com/css?family=Italianno');
 
 /*-- scss:defaults --*/
 
@@ -394,5 +395,17 @@ width: 10px;
   color: #89CFF0;
   text-shadow: 
    -5px 3px 2px #0047ab !important;
+}
+
+.talian{
+  font-family: "Italianno";
+  font-size: 3em;
+  color: #c4a747;
+}
+
+.talian2{
+  font-family: "Italianno";
+  font-size: 1.5em;
+  color: #c4a747;
 }
 

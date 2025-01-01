@@ -99,7 +99,7 @@ format:
       gravity: 0.65
       drift: 0
       ticks: 400
-      colors: ["#F5F5DC", "#EDEADE", "#FFFFF0"]
+      colors: ["#F5F5DC", "#EDEADE", "#FFFFF0"]          #<1>
       scalar: 0.7
     mouse-wheel: true                ## yes enables mouse
     slide-tone: false
@@ -127,6 +127,7 @@ revealjs-plugins:
 
 # viola
 ```
+1. Only option we played with but descriptions available [here](https://github.com/catdad/canvas-confetti#options)
 
 ## Snow
 
