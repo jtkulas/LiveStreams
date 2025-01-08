@@ -1,0 +1,162 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #60...<br>[Excalidraw #2]{.talian} [...excalagain!!]{.talian2}" 
+title-slide-attributes: 
+  data-background-image: https://t3.ftcdn.net/jpg/08/22/75/90/360_F_822759066_VvsRmCLgfX2rVbK4yYScgEih823w6cCC.jpg 
+  data-background-opacity: ".5"
+format:
+  revealjs:
+    mouse-wheel: true                ## yes enables mouse
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+#    controls-layout: bottom-right
+#    controls-tutorial: true
+#    slide-number: h.v
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [league, weekly.scss]       ## night & league
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+revealjs-plugins:
+  - excalidraw
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #59&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    - [Excalagain!!]{.talian}
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title59.JPG){.absolute top="170" right="-120" width="600" height="325"}
+
+# Recap of Session <br>#59: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://pngimg.com/d/palette_PNG68344.png){.absolute width="200" top="270" right="140"}
+
+## [[Excalidraw!!]{.talian2}](https://quarto.org/docs/extensions/listing-revealjs.html) `r emo::ji("artist_palette")``r emo::ji("artist_palette")` 
+
+:::: {.columns}
+::: {.column width="20%"}
+
+:::
+
+::: {.column width="80%"}
+:::: {.panel-tabset}
+
+## Install
+
+[![](img/excalidraw.JPG)](https://github.com/parmsam/quarto-excalidraw?tab=readme-ov-file#installing)
+
+## YAML
+
+```{yaml}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "5-7"
+
+---
+format: 
+  revealjs:
+    theme: dark
+    spotlight:
+      useAsPointer: true
+      pointerColor: "#bada55"
+revealjs-plugins:
+  - spotlight
+---
+
+
+
+
+# viola
+```
+
+## Playground
+
+```{yaml}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "5,7-14"
+
+---
+format: 
+  revealjs:
+    theme: dark
+    spotlight:
+      size: 120
+      lockPointerInsideCanvas: false       #<1>
+      toggleSpotlightOnMouseDown: true
+      spotlightOnKeyPressAndHold: false
+      spotlightCursor: none
+      presentingCursor: none
+      initialPresentationMode: true
+      disablingUserSelect: true            #<1>
+      fadeInaAndOut: 100                   #<2>
+      useAsPointer: true
+      pointerColor: "#bada55"
+revealjs-plugins:
+  - spotlight
+---
+
+
+
+
+# viola
+```
+1. These options and terminology have migrated from a broader [Reveal.js Plugin](https://github.com/denniskniep/reveal.js-plugin-spotlight). 
+2. Milliseconds - default `100` seems to provide a nice transition rate
+
+::::
+
+:::
+::::
+
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2ozdWNoOGM0M283ZWw5dDNxbGRhajEzY2V1N3RrNjFlY21kcmtobiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5yLgoceMKx0i315By6Y/giphy.gif){.absolute height="300" left="-130" top="200"}
+
+# Today...
+
+![](https://www.seekpng.com/png/full/105-1056092_mermaid-silhouette-wall-sticker-mermaid-clipart-black-and.png){.absolute bottom="80" left="190"}
+
+![](https://www.pngall.com/wp-content/uploads/13/Paint-Palette-Design.png){.absolute bottom="-120" left="370" width="200"}
+
+## [[Excalagain!!]{.talian2}](https://github.com/parmsam/quarto-excalidraw) `r emo::ji("artist_palette")``r emo::ji("artist_palette")`
+
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWI2MXpjcmtjamZhM3JyeWN4ZzRpMDZhaDNxYXVzN285am0wbjF5aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lnySV5m8IHhrx5M0e0/giphy.gif)
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
+
