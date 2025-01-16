@@ -120,15 +120,42 @@ revealjs-plugins:
 ::: {.column width="33%"}
 Reproducibility  
 
-+ [Yaddup]{.fragment .fade-in-then-semi-out}
+::: {.fragment .fade-in-then-semi-out}
++ One-stop shop
+:::
+
+::: {.fragment .fade-in-then-semi-out}
++ Best practice
+:::
+
+Screenshots
+
 :::
 
 ::: {.column width="33%"}
 Efficiency
+
+::: {.fragment .fade-in-then-semi-out}
++ Auto updates
+:::
+
+::: {.fragment .fade-in-then-semi-out}
++ Salvageable
+:::
+
 :::
 
 ::: {.column width="33%"}
 Error
+
+::: {.fragment .fade-in-then-semi-out}
++ Reconstructable
+:::
+
+::: {.fragment .fade-in-then-semi-out}
++ Documented
+:::
+
 :::
 ::::
 
