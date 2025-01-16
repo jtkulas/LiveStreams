@@ -2,8 +2,8 @@
 title: "R for <br>Authoring!!" 
 author: "OOH Session #60...<br>[Excalidraw #2]{.talian} [...excalagain!!]{.talian2}" 
 title-slide-attributes: 
-  data-background-image: https://t3.ftcdn.net/jpg/08/22/75/90/360_F_822759066_VvsRmCLgfX2rVbK4yYScgEih823w6cCC.jpg 
-  data-background-opacity: ".5"
+  data-background-image: img/calculon.JPG  
+  data-background-opacity: ".4"
 format:
   revealjs:
     mouse-wheel: true                ## yes enables mouse
@@ -82,17 +82,14 @@ library(fontawesome)
 ```{yaml}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "5-7"
+#| code-line-numbers: "5-6"
 
 ---
+title: "Untitled"
 format: 
-  revealjs:
-    theme: dark
-    spotlight:
-      useAsPointer: true
-      pointerColor: "#bada55"
+  revealjs: default
 revealjs-plugins:
-  - spotlight
+  - excalidraw
 ---
 
 
@@ -101,40 +98,9 @@ revealjs-plugins:
 # viola
 ```
 
-## Playground
+## Play!`r emo::ji("artist_palette")`
 
-```{yaml}
-#| eval: false
-#| echo: true
-#| code-line-numbers: "5,7-14"
-
----
-format: 
-  revealjs:
-    theme: dark
-    spotlight:
-      size: 120
-      lockPointerInsideCanvas: false       #<1>
-      toggleSpotlightOnMouseDown: true
-      spotlightOnKeyPressAndHold: false
-      spotlightCursor: none
-      presentingCursor: none
-      initialPresentationMode: true
-      disablingUserSelect: true            #<1>
-      fadeInaAndOut: 100                   #<2>
-      useAsPointer: true
-      pointerColor: "#bada55"
-revealjs-plugins:
-  - spotlight
----
-
-
-
-
-# viola
-```
-1. These options and terminology have migrated from a broader [Reveal.js Plugin](https://github.com/denniskniep/reveal.js-plugin-spotlight). 
-2. Milliseconds - default `100` seems to provide a nice transition rate
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDM1YWx6bDd2NXEwaXkwamVuZ2Z0cXdiOGk2eXNlcWRuZmd1ZnBrcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PiQHnEFQzUyHHhgzWc/giphy.gif){.absolute width="700" left="205" bottom="-20"}
 
 ::::
 
@@ -151,7 +117,24 @@ revealjs-plugins:
 
 ## [[Excalagain!!]{.talian2}](https://github.com/parmsam/quarto-excalidraw) `r emo::ji("artist_palette")``r emo::ji("artist_palette")`
 
-![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWI2MXpjcmtjamZhM3JyeWN4ZzRpMDZhaDNxYXVzN285am0wbjF5aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lnySV5m8IHhrx5M0e0/giphy.gif)
+:::: {.columns}
+::: {.column width="50%"}
+
+[1. Mermaid Diagrams]{.kulas}
+
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2swbnZicHB0Z3VmNnZpdDBkNGVvYWE3aWp6cG5ya2VmNHMxeTl2ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pRv0P6b7FqWek/giphy.gif)
+:::
+
+::: {.column width="10%"}
+::: 
+
+::: {.column width="40%"}
+
+[2. Sharing]{.kulas2}
+
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXhnbzBnaTUwZG1tYzBhMW94NHhlaWE2Z3NzbXlydmpraWh6NDZqZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aQUGAeZ1fBWpy/giphy.gif)
+:::
+::::
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 

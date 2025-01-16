@@ -1,0 +1,177 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #61...<br>[...where to begin]{.shroom}" 
+title-slide-attributes: 
+  data-background-image: https://img.freepik.com/premium-photo/forest-path-forest-with-lantern_662214-63350.jpg #https://png.pngtree.com/thumb_back/fw800/background/20240528/pngtree-forest-path-through-deep-magic-image_15835879.jpg 
+  data-background-opacity: ".8"
+format:
+  revealjs:
+    mouse-wheel: true                ## yes enables mouse
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+#    controls-layout: bottom-right
+#    controls-tutorial: true
+#    slide-number: h.v
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [league, weekly.scss]       ## night & league
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #60&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    - [where to begin]{.shroom}
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title60.JPG){.absolute top="170" right="-120" width="600" height="325"}
+
+# Recap of Session <br>#60: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://www.freeiconspng.com/thumbs/sword-png/sword-png-18.png){.absolute width="170" top="275" right="150"}
+
+## `r emo::ji("artist_palette")`[[Excalagain!!]{.talian2}](https://quarto.org/docs/extensions/listing-revealjs.html) `r emo::ji("artist_palette")` 
+
+:::: {.columns}
+::: {.column width="20%"}
+
+:::
+
+::: {.column width="80%"}
+:::: {.panel-tabset}
+
+## Install
+
+[![](img/excalidraw.JPG)](https://github.com/parmsam/quarto-excalidraw?tab=readme-ov-file#installing)
+
+## YAML
+
+```{yaml}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "5-6"
+
+---
+title: "Untitled"
+format: 
+  revealjs: default
+revealjs-plugins:
+  - excalidraw
+---
+
+
+
+
+# viola
+```
+
+## Play!`r emo::ji("artist_palette")`
+
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDM1YWx6bDd2NXEwaXkwamVuZ2Z0cXdiOGk2eXNlcWRuZmd1ZnBrcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PiQHnEFQzUyHHhgzWc/giphy.gif){.absolute width="700" left="205" bottom="-20"}
+
+::::
+
+:::
+::::
+
+![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2ozdWNoOGM0M283ZWw5dDNxbGRhajEzY2V1N3RrNjFlY21kcmtobiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5yLgoceMKx0i315By6Y/giphy.gif){.absolute height="300" left="-130" top="200"}
+
+# Today...
+![](https://upload.wikimedia.org/wikipedia/commons/6/61/Compass_rose_transparent.png){.absolute left="280" top="-20"}
+
+## [...where to begin???]{.shroom}
+
+![](https://img.freepik.com/premium-photo/forest-path-forest-with-lantern_662214-63350.jpg){.absolute left="130" width="800"}
+
+## [Why do this?]{.shroom}
+
+:::: {.columns}
+::: {.column width="33%"}
+Reproducibility  
+
++ [Yaddup]{.fragment .fade-in-then-semi-out}
+:::
+
+::: {.column width="33%"}
+Efficiency
+:::
+
+::: {.column width="33%"}
+Error
+:::
+::::
+
+## [What can be done?]{.shroom}
+
+![](https://images.template.net/445642/Simple-Technical-Report-Template-edit-online.png){.absolute height="300" left="0" .fragment}
+![](https://images.klipfolio.com/website/public/141b88a0-7222-45fd-8349-cadd876a5b03/Business-Dashboard-example.jpg){.absolute height="300" right="0" .fragment}
+
+![](https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/blogs/2147484362/images/6dbcc3f-077b-5eec-57bf-e24fc1281be5_Step_1.PNG){.absolute height="300" bottom="0" left="200" .fragment}
+
+![](https://images.routledge.com/common/jackets/crclarge/978075070/9780750707442.jpg){.absolute height="300" top="120" left="300" .fragment}
+![](https://cdn.lucidmeetings.com/sites/default/files/hubfs/Knowledge%20Base%20Import/s3.amazonaws.comcdn.freshdesk.comdatahelpdeskattachmentsproduction16000361316originalreport-feedback-480-1.png){.absolute height="300" bottom="20" right="-150" .fragment}
+![](https://www.raghwendra.com/blog/wp-content/uploads/2023/01/website-development-company-in-delhi-india.png){.absolute height="300" bottom="40" left="-180" .fragment}
+![](https://fernandoarciniega.com/wp-content/uploads/image-369.png){.absolute height="200" left="150" top="240" .fragment}
+![](https://filestore.medicineslearningportal.org/images/Poster%20pic.jpg){.absolute height="300" right="300" top="200" .fragment}
+
+## [How?]{.shroom}
+
+Integration of `markdown` and code 
+
+:::: {.columns}
+::: {.column width="50%"}
+[![](https://media2.dev.to/dynamic/image/width=1080,height=1080,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F9pal74bdf0mdwi49kyme.png)](https://stackedit.io/)
+:::
+
+::: {.columns}
+:::
+::::
+
+## [Where do I start?]{.shroom}
+
+::: {.fragment}
+1. Current Project
+:::
+
+::: {.fragment}
+2. `RevealJS` Presentation
+:::
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
+

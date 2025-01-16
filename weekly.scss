@@ -8,7 +8,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lovers Quarrel');
 @import url('https://fonts.googleapis.com/css?family=Poetsen One'); 
 @import url('https://fonts.googleapis.com/css?family=Notable');  
-@import url('https://fonts.googleapis.com/css?family=Spicy Rice');
 @import url('https://fonts.googleapis.com/css?family=Kalnia Glaze');
 @import url('https://fonts.googleapis.com/css?family=Permanent Marker');
 @import url('https://fonts.googleapis.com/css?family=Rock Salt');
@@ -25,6 +24,10 @@
 @import url('https://fonts.googleapis.com/css?family=Ballet');
 @import url('https://fonts.googleapis.com/css?family=Italianno');
 @import url('https://fonts.googleapis.com/css?family=Rye');
+@import url('https://fonts.googleapis.com/css?family=Spicy Rice'); 
+@import url('https://fonts.googleapis.com/css?family=Berkshire Swash'); 
+@import url('https://fonts.googleapis.com/css?family=Aclonica'); 
+@import url('https://fonts.googleapis.com/css?family=Irish Grover'); 
 
 /*-- scss:defaults --*/
 
@@ -32,7 +35,7 @@ $body-bg: #191919;
 $body-color: #fff;
 $link-color: #42affa;
 $code-color: hotpink;
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 $presentation-title-slide-text-color: black;
 
 /*-- scss:rules --*/
@@ -410,3 +413,7 @@ width: 10px;
   color: #c4a747;
 }
 
+.shroom{
+  font-family: "Irish Grover";
+  color: #BF44E2;
+}
