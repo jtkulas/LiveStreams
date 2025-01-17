@@ -433,7 +433,7 @@ OOH Session #61…<br><span class="shroom">…where to begin</span>
 <section id="recap-of-session-60" class="title-slide slide level1 center">
 <h1>Recap of Session <br>#60:</h1>
 <p><img data-src="https://pngimg.com/d/sticky_note_PNG18964.png" class="absolute" style="top: 200px; right: 50px; "></p>
-<p><img data-src="https://www.freeiconspng.com/thumbs/sword-png/sword-png-18.png" class="absolute" style="top: 275px; right: 150px; width: 170px; "></p>
+<p><img data-src="https://www.freeiconspng.com/thumbs/sword-png/sword-png-18.png" class="absolute" style="top: 280px; right: 150px; width: 170px; "></p>
 </section>
 <section id="excalagain" class="slide level2">
 <h2>🎨<a href="https://quarto.org/docs/extensions/listing-revealjs.html"><span class="talian2">Excalagain!!</span></a> 🎨</h2>
@@ -483,7 +483,7 @@ OOH Session #61…<br><span class="shroom">…where to begin</span>
 <section id="why-do-this" class="slide level2">
 <h2><span class="shroom">Why do this?</span></h2>
 <div class="columns">
-<div class="column" style="width:33%;">
+<div class="column" style="width:35%;">
 <p>Reproducibility</p>
 <div class="fragment fade-in-then-semi-out" data-fragment-index="1">
 <ul>
@@ -496,26 +496,26 @@ OOH Session #61…<br><span class="shroom">…where to begin</span>
 </ul>
 </div>
 <div class="fragment" data-fragment-index="1">
-<p><img data-src="https://media.victorinox.com/transform/be27477a-5deb-4412-87dd-ba03f429520c/SAK_1_3713__S1-tif.png" class="absolute" style="left: -80px; bottom: 20px; height: 300px; "></p>
+<p><img data-src="https://media.victorinox.com/transform/be27477a-5deb-4412-87dd-ba03f429520c/SAK_1_3713__S1-tif.png" class="absolute" style="left: -120px; bottom: 20px; height: 300px; "></p>
 </div>
-</div><div class="column" style="width:33%;">
+</div><div class="column" style="width:35%;">
 <p>Efficiency</p>
 <div class="fragment fade-in-then-semi-out" data-fragment-index="3">
 <ul>
 <li>Auto updates</li>
 </ul>
 </div>
-<div class="fragment fade-in-then-semi-out">
+<div class="fragment fade-in-then-semi-out" data-fragment-index="4">
 <ul>
-<li>Salvageable</li>
+<li>Formatting</li>
 </ul>
 </div>
 <div class="fragment" data-fragment-index="3">
-<p><img data-src="img/nrow.JPG" class="absolute" style="left: 240px; bottom: 70px; "></p>
+<p><img data-src="img/nrow.JPG" class="absolute" style="left: 210px; bottom: 70px; "></p>
 </div>
-</div><div class="column" style="width:33%;">
+</div><div class="column" style="width:20%;">
 <p>Error</p>
-<div class="fragment fade-in-then-semi-out">
+<div class="fragment fade-in-then-semi-out" data-fragment-index="5">
 <ul>
 <li>Reconstructable</li>
 </ul>
@@ -524,6 +524,9 @@ OOH Session #61…<br><span class="shroom">…where to begin</span>
 <ul>
 <li>Documented</li>
 </ul>
+</div>
+<div class="fragment" data-fragment-index="5">
+<p><img data-src="https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/blogs/2147504085/images/f0d68bc-243-3653-b518-babdfe70b80_43B00CD8-57F7-44ED-8A91-7BCFDA981FDF_1_201_a.jpeg" class="absolute" style="bottom: 50px; right: -100px; height: 250px; "></p>
 </div>
 </div></div>
 </section>
@@ -535,26 +538,43 @@ OOH Session #61…<br><span class="shroom">…where to begin</span>
 </section>
 <section id="how" class="slide level2">
 <h2><span class="shroom">How?</span></h2>
-<p>Integration of <code>markdown</code> and code</p>
+<p>Integration of <code>markdown</code> (and/or <span class="math inline">\(\LaTeX\)</span>) and code:</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><a href="https://stackedit.io/"><img data-src="https://media2.dev.to/dynamic/image/width=1080,height=1080,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F9pal74bdf0mdwi49kyme.png"></a></p>
-</div><div class="columns">
-
+</div><div class="column" style="width:50%;">
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="do">## Grabbing data</span></span>
+<span id="cb2-2"><a href=""></a></span>
+<span id="cb2-3"><a href=""></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"survey.csv"</span>)</span>
+<span id="cb2-4"><a href=""></a></span>
+<span id="cb2-5"><a href=""></a><span class="do">## Checking item-totals</span></span>
+<span id="cb2-6"><a href=""></a></span>
+<span id="cb2-7"><a href=""></a>psych<span class="sc">::</span><span class="fu">alpha</span>(data)</span>
+<span id="cb2-8"><a href=""></a></span>
+<span id="cb2-9"><a href=""></a><span class="do">## Aggregate scale scores</span></span>
+<span id="cb2-10"><a href=""></a></span>
+<span id="cb2-11"><a href=""></a>data<span class="sc">$</span>scale1 <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(data[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>], </span>
+<span id="cb2-12"><a href=""></a>                <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
+<span id="cb2-13"><a href=""></a>data<span class="sc">$</span>scale2 <span class="ot">&lt;-</span> <span class="fu">rowMeans</span>(data[<span class="dv">11</span><span class="sc">:</span><span class="dv">20</span>], </span>
+<span id="cb2-14"><a href=""></a>                <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
+</div></div>
 </section>
 <section id="where-do-i-start" class="slide level2">
 <h2><span class="shroom">Where do I start?</span></h2>
-<div class="fragment">
+<div class="fragment" data-fragment-index="1">
 <ol type="1">
 <li>Current Project</li>
 </ol>
+<p><img data-src="https://image1.masterfile.com/getImage/ODQ2LTA1NjQ2MTcxZW4uMDAwMDAwMDA=AO3G0n/846-05646171en_Masterfile.jpg" class="absolute" style="top: 100px; right: -20px; "></p>
 </div>
-<div class="fragment">
+<div class="fragment" data-fragment-index="2">
 <ol start="2" type="1">
 <li><code>RevealJS</code> Presentation</li>
 </ol>
+<p><img data-src="https://media.newyorker.com/photos/59097cbaebe912338a37891b/master/pass/Altman-TheYearofHyggetheDanishWayofGettingCozy-4.jpg" class="absolute" style="left: 70px; bottom: 20px; height: 350px; "></p>
 </div>
 </section>
 <section id="session-info-january-16-2025-rendering" class="slide level2">

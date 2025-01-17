@@ -59,7 +59,7 @@ library(fontawesome)
 
 ![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
 
-![](https://www.freeiconspng.com/thumbs/sword-png/sword-png-18.png){.absolute width="170" top="275" right="150"}
+![](https://www.freeiconspng.com/thumbs/sword-png/sword-png-18.png){.absolute width="170" top="280" right="150"}
 
 ## `r emo::ji("artist_palette")`[[Excalagain!!]{.talian2}](https://quarto.org/docs/extensions/listing-revealjs.html) `r emo::ji("artist_palette")` 
 
@@ -117,7 +117,7 @@ revealjs-plugins:
 ## [Why do this?]{.shroom}
 
 :::: {.columns}
-::: {.column width="33%"}
+::: {.column width="35%"}
 Reproducibility  
 
 ::: {.fragment .fade-in-then-semi-out fragment-index=1}
@@ -129,36 +129,41 @@ Reproducibility
 :::
 
 ::: {.fragment fragment-index=1}
-![](https://media.victorinox.com/transform/be27477a-5deb-4412-87dd-ba03f429520c/SAK_1_3713__S1-tif){.absolute height="300" bottom="20" left="-80"}
+![](https://media.victorinox.com/transform/be27477a-5deb-4412-87dd-ba03f429520c/SAK_1_3713__S1-tif){.absolute height="300" bottom="20" left="-120"}
 :::
 
 :::
 
-::: {.column width="33%"}
+::: {.column width="35%"}
 Efficiency
 
 ::: {.fragment .fade-in-then-semi-out fragment-index=3}
 + Auto updates
 :::
 
-::: {.fragment .fade-in-then-semi-out}
-+ Salvageable
+::: {.fragment .fade-in-then-semi-out fragment-index=4}
++ Formatting
 :::
 
 ::: {.fragment fragment-index=3}
-![](img/nrow.JPG){.absolute bottom="70" left="240"}
+![](img/nrow.JPG){.absolute bottom="70" left="210"}
 :::
 :::
 
-::: {.column width="33%"}
+::: {.column width="20%"}
 Error
 
-::: {.fragment .fade-in-then-semi-out}
+::: {.fragment .fade-in-then-semi-out fragment-index=5}
 + Reconstructable
+
 :::
 
 ::: {.fragment .fade-in-then-semi-out}
 + Documented
+:::
+
+::: {.fragment fragment-index=5}
+![](https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/file-uploads/blogs/2147504085/images/f0d68bc-243-3653-b518-babdfe70b80_43B00CD8-57F7-44ED-8A91-7BCFDA981FDF_1_201_a.jpeg){.absolute bottom="50" right="-100" height="250"}
 :::
 
 :::
@@ -179,25 +184,51 @@ Error
 
 ## [How?]{.shroom}
 
-Integration of `markdown` and code 
+Integration of `markdown` (and/or $\LaTeX$) and code: 
 
 :::: {.columns}
 ::: {.column width="50%"}
 [![](https://media2.dev.to/dynamic/image/width=1080,height=1080,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F9pal74bdf0mdwi49kyme.png)](https://stackedit.io/)
 :::
 
-::: {.columns}
+::: {.column width="50%"}
+<br>
+```{r}
+#| eval: false
+#| echo: true
+
+## Grabbing data
+
+data <- read.csv("survey.csv")
+
+## Checking item-totals
+
+psych::alpha(data)
+
+## Aggregate scale scores
+
+data$scale1 <- rowMeans(data[1:10], 
+                na.rm=TRUE)
+data$scale2 <- rowMeans(data[11:20], 
+                na.rm=TRUE)
+
+```
+
 :::
 ::::
 
 ## [Where do I start?]{.shroom}
 
-::: {.fragment}
+::: {.fragment fragment-index=1}
 1. Current Project
+
+![](https://image1.masterfile.com/getImage/ODQ2LTA1NjQ2MTcxZW4uMDAwMDAwMDA=AO3G0n/846-05646171en_Masterfile.jpg){.absolute top="100" right="-20"}
 :::
 
-::: {.fragment}
+::: {.fragment fragment-index=2}
 2. `RevealJS` Presentation
+
+![](https://media.newyorker.com/photos/59097cbaebe912338a37891b/master/pass/Altman-TheYearofHyggetheDanishWayofGettingCozy-4.jpg){.absolute left="70" bottom="20" height="350"}
 :::
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
