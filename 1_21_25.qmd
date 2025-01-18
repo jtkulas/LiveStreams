@@ -64,48 +64,34 @@ library(fontawesome)
 ## `r emo::ji("artist_palette")`[[Excalagain!!]{.talian2}](https://quarto.org/docs/extensions/listing-revealjs.html) `r emo::ji("artist_palette")` 
 
 :::: {.columns}
-::: {.column width="20%"}
-
-:::
 
 ::: {.column width="80%"}
 :::: {.panel-tabset}
 
-## Install
+## Clean
 
-[![](img/excalidraw.JPG)](https://github.com/parmsam/quarto-excalidraw?tab=readme-ov-file#installing)
+![](img/clean.png)
 
-## YAML
+## Dark 
 
-```{yaml}
-#| eval: false
-#| echo: true
-#| code-line-numbers: "5-6"
+![](img/dark.png)
 
----
-title: "Untitled"
-format: 
-  revealjs: default
-revealjs-plugins:
-  - excalidraw
----
+## Fun!
 
-
-
-
-# viola
-```
-
-## Play!`r emo::ji("artist_palette")`
-
-![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDM1YWx6bDd2NXEwaXkwamVuZ2Z0cXdiOGk2eXNlcWRuZmd1ZnBrcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PiQHnEFQzUyHHhgzWc/giphy.gif){.absolute width="700" left="205" bottom="-20"}
+![](img/fun.png)
 
 ::::
 
 :::
+
+::: {.column width="20%"}
+:::
+
 ::::
 
-![](https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2ozdWNoOGM0M283ZWw5dDNxbGRhajEzY2V1N3RrNjFlY21kcmtobiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5yLgoceMKx0i315By6Y/giphy.gif){.absolute height="300" left="-130" top="200"}
+![](https://media.springernature.com/lw685/springer-static/image/art%3A10.1186%2Fs13612-015-0034-y/MediaObjects/13612_2015_34_Fig1_HTML.gif){.absolute bottom="-10" height="230"}
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZW01bGZ5N3l4bTU4c3o3YXo4b3EzN2lneTFjOW5vOHFndXR2eGh6aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZS6daj0icfnD166eTc/giphy.gif){.absolute height="300" right="-150" top="170"}
 
 # Today...
 ![](https://upload.wikimedia.org/wikipedia/commons/6/61/Compass_rose_transparent.png){.absolute left="280" top="-20"}
@@ -125,7 +111,7 @@ Reproducibility
 :::
 
 ::: {.fragment .fade-in-then-semi-out fragment-index=2}
-+ Best practice
++ Shareable
 :::
 
 ::: {.fragment fragment-index=1}
@@ -138,7 +124,7 @@ Reproducibility
 Efficiency
 
 ::: {.fragment .fade-in-then-semi-out fragment-index=3}
-+ Auto updates
++ Data-dynamic
 :::
 
 ::: {.fragment .fade-in-then-semi-out fragment-index=4}
