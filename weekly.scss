@@ -28,6 +28,7 @@
 @import url('https://fonts.googleapis.com/css?family=Berkshire Swash'); 
 @import url('https://fonts.googleapis.com/css?family=Aclonica'); 
 @import url('https://fonts.googleapis.com/css?family=Irish Grover'); 
+@import url('https://fonts.googleapis.com/css?family=Kaushan Script');
 
 /*-- scss:defaults --*/
 
@@ -35,7 +36,7 @@ $body-bg: #191919;
 $body-color: #fff;
 $link-color: #42affa;
 $code-color: hotpink;
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: left;
 $presentation-title-slide-text-color: black;
 
 /*-- scss:rules --*/
@@ -71,21 +72,32 @@ $presentation-title-slide-text-color: black;
   font-family: 'Poetsen One';
 }
 
+.oldenglish2 {
+  font-family: 'Poetsen One';
+  color: #00ff00;
+}
+
 .kulas {
-  font-size: 60px;
+  font-size: 80px;
   color: #03c6fc;
   font-family: 'Dancing Script';
 }
 
 .kulas3 {
-  font-size: 35px;
+  font-size: 80px;
+  color: #FFFFFF;
   font-weight: bold;
+  font-family: 'Dancing Script';
+}
+
+.kulas1 {
+  font-size: 80px;
   color: #ff99ff;
   font-family: 'Dancing Script';
 }
 
 .kulas2 {
-  font-size: 60px;
+  font-size: 80px;
   color: #34eba8;
   font-family: 'Dancing Script';
 }
@@ -416,4 +428,9 @@ width: 10px;
 .shroom{
   font-family: "Irish Grover";
   color: #BF44E2;
+}
+
+.spicy{
+  font-family: "Kaushan Script";
+  color: #D70040;
 }

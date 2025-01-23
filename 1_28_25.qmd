@@ -1,0 +1,144 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #62...<br>[...where to begin (Part II)...]{.shroom}<br>[...spice it up!!]{.spicy}" 
+title-slide-attributes: 
+  data-background-image: https://img.freepik.com/premium-photo/large-spice-herb-collection-bowls-spoons-indian-spices-black-wooden-background-top-view_187166-27537.jpg
+  data-background-opacity: ".4"
+format:
+  revealjs:
+    mouse-wheel: true                ## yes enables mouse
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+#    controls-layout: bottom-right
+#    controls-tutorial: true
+#    slide-number: h.v
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [league, weekly.scss]       ## night & league
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #61&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    - [spice it up!!]{.spicy}
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title61.JPG){.absolute top="170" right="-120" width="600" height="325"}
+
+# Recap of Session <br>#61: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://png.pngtree.com/png-vector/20220903/ourmid/pngtree-dashed-path-line-png-image_6136176.png){.absolute width="170" top="280" right="150"}
+
+## [...where to begin...]{.shroom} 
+
+:::: {.columns}
+
+::: {.column width="80%"}
+:::: {.panel-tabset}
+
+## Quarto 
+
+[![](https://posit.co/wp-content/uploads/2022/10/thumbnail-2.jpg)](https://quarto.org/docs/get-started/)
+
+## Markdown
+
+[![](img/markdown.JPG)](https://quarto.org/docs/authoring/markdown-basics.html)
+
+## RevealJS
+
+[![](img/revealjs.JPG)](https://quarto.org/docs/presentations/revealjs/)
+
+::::
+
+:::
+
+::: {.column width="20%"}
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+The `quarto` package is optional -- the [Quarto software](https://quarto.org/) is mandatory
+:::
+
+:::
+
+::::
+
+![](https://img.freepik.com/premium-photo/forest-path-forest-with-lantern_662214-63350.jpg){.absolute right="-120" width="400" top="0"}
+
+# Today...
+![](https://png.pngtree.com/png-clipart/20230428/ourmid/pngtree-free-vector-red-chili-pepper-realistic-single-object-on-blank-white-png-image_6741301.png){.absolute left="350" top="00"}
+
+## `r emo::ji("hot_pepper")``r emo::ji("hot_pepper")`[...spice it up!!!]{.spicy}`r emo::ji("hot_pepper")``r emo::ji("hot_pepper")`
+
+:::: {.columns}
+
+::: {.column width="33%"}
+
+[Fonts:]{.kulas2}
+
+::: {.bigger}
+[Tra la la]{.oldenglish2} [la la]{.diagram .fragment} [la la]{.pirate .fragment} [la la]{.kulascol2 .fragment} [la la]{.tinkerbell2 .fragment} [la la]{.launch .fragment} [la la]{.kulascol .fragment}
+:::
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2g3ZWZydXd5a2swdDgwZGY5ZzU4cXkyZ3podzI5Y3NucnR2ZTVqbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT0GqrJNbZkRcr2Jgc/giphy.gif){.absolute bottom="20" left="-20"}
+
+:::
+
+::: {.column width="33%" .fragment}
+[Images:]{.kulas3}
+
+![](https://images.fineartamerica.com/images/artworkimages/medium/3/snoopy-woodstock-john-a-rosa-transparent.png){.fragment}
+
+:::
+
+::: {.column width="33%" .fragment}
+[Layouts:]{.kulas}
+
+![](https://png.pngtree.com/png-vector/20230316/ourmid/pngtree-you-are-here-pointer-icon-vector-illustration-png-image_6641878.png){.absolute right="-100" top="200" width="300" .fragment}
+![](https://png.pngtree.com/png-vector/20230316/ourmid/pngtree-you-are-here-pointer-icon-vector-illustration-png-image_6641878.png){.absolute bottom="50" right="120" width="300" .fragment}
+
+:::
+
+::::
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
+
