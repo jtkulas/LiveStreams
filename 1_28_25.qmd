@@ -89,7 +89,7 @@ library(fontawesome)
 <br>
 <br>
 
-::: {.callout-note}
+::: {.callout-note appearance="minimal"}
 The `quarto` package is optional -- the [Quarto software](https://quarto.org/) is mandatory
 :::
 
@@ -102,7 +102,7 @@ The `quarto` package is optional -- the [Quarto software](https://quarto.org/) i
 # Today...
 ![](https://png.pngtree.com/png-clipart/20230428/ourmid/pngtree-free-vector-red-chili-pepper-realistic-single-object-on-blank-white-png-image_6741301.png){.absolute left="350" top="00"}
 
-## `r emo::ji("hot_pepper")``r emo::ji("hot_pepper")`[...spice it up!!!]{.spicy}`r emo::ji("hot_pepper")``r emo::ji("hot_pepper")`
+## `r fontawesome::fa("pepper-hot", fill="#FF5F1F")``r fontawesome::fa("pepper-hot", fill="#D70040")``r emo::ji("hot_face")`[...spice it up!!!]{.spicy}`r emo::ji("hot_face")``r fontawesome::fa("pepper-hot", fill="#D70040")``r fontawesome::fa("pepper-hot", fill="#FF5F1F")`
 
 :::: {.columns}
 
