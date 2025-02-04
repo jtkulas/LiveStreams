@@ -88,11 +88,11 @@ library(fontawesome)
 :::
 
 ::: {.column width="50%"}
-`[Dancing here ooh la la]{.dancing}`
-[Dancing here ooh la la]{.dancing}
+`[Dancing here Ooh La La]{.dancing}`
+[Dancing here Ooh La La]{.dancing}
 
-`[Hurting here no no no!!!]{.nosifer}`
-[Hurting here no no no!!!]{.nosifer}
+`[Hurting here Bwa Ha Ha!!!]{.nosifer}`
+[Hurting here Bwa Ha Ha!!!]{.nosifer}
 :::
 ::::
 
@@ -123,7 +123,7 @@ height="400"}
 # Today...
 ![](https://pngimg.com/d/share_PNG2.png){.absolute left="350" top="00"}
 
-## `r fontawesome::fa("download", fill="#2e5984")` `r fontawesome::fa("share-from-square", fill="#ffa500")`  `r fontawesome::fa("cloud-arrow-up", fill="#2e5984")` [[Sharing]{.lucky}](https://quarto.org/docs/publishing/) `r fontawesome::fa("cloud-arrow-up", fill="#2e5984")` `r fontawesome::fa("share-from-square", fill="#ffa500")` `r fontawesome::fa("download", fill="#2e5984")` 
+## `r fontawesome::fa("download", fill="#8f00ff")` `r fontawesome::fa("share-from-square", fill="#ffa500")`  `r fontawesome::fa("cloud-arrow-up", fill="#2e5984")` [[Sharing]{.lucky}](https://quarto.org/docs/publishing/) `r fontawesome::fa("cloud-arrow-up", fill="#2e5984")` `r fontawesome::fa("share-from-square", fill="#ffa500")` `r fontawesome::fa("download", fill="#8f00ff")` 
 
 ![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGM3aHVsamFxZTE5aGtqaHVmeGF6bDk3OHg1enhuOXppNnQ1bWlhaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1oFqxMYv5JQvuFtX8o/giphy.gif){.absolute right="150" height="550"}
 
