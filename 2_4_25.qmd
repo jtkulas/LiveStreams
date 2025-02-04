@@ -1,0 +1,136 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #63...<br>[...where to begin (Part III)...]{.shroom}<br>[...sharing!!]{.lucky}" 
+title-slide-attributes: 
+  data-background-image: https://wallpapercave.com/wp/wp12615829.jpg #https://i0.wp.com/rachelsreviews.net/wp-content/uploads/2014/11/greedy-scrooge-mickey.png?resize=764%2C429&ssl=1
+  data-background-opacity: "1"
+format:
+  revealjs:
+    mouse-wheel: true                ## yes enables mouse
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+#    controls-layout: bottom-right
+#    controls-tutorial: true
+#    slide-number: h.v
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [league, weekly.scss]       ## night & league
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #62&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    - [sharing!!]{.lucky}
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title62.JPG){.absolute top="170" right="-120" width="600" height="325"}
+
+# Recap of Session <br>#62: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://seeklogo.com/images/Y/yogi-bear-logo-F48B84E36E-seeklogo.com.png){.absolute width="150" top="280" right="150"}
+
+## `r fontawesome::fa("pepper-hot", fill="#FF5F1F")``r fontawesome::fa("pepper-hot", fill="#D70040")``r emo::ji("hot_face")`[...spice it up!!!]{.spicy}&nbsp;`r emo::ji("hot_face")``r fontawesome::fa("pepper-hot", fill="#D70040")``r fontawesome::fa("pepper-hot", fill="#FF5F1F")` 
+
+:::: {.panel-tabset}
+
+## fonts
+:::: {.columns}
+::: {.column width="50%"}
+```{css, echo=TRUE}
+
+@import url('https://fonts.googleapis.com/css?family=Dancing Script');
+@import url('https://fonts.googleapis.com/css?family=Nosifer');
+
+.dancing {
+  font-family: 'Dancing Script';
+  color: #bada55;
+  font-size: 1.5em;
+}
+
+.nosifer {
+  font-family: 'Nosifer'; 
+  color: #FF0000;
+  font-size: .7em;
+}
+```
+:::
+
+::: {.column width="50%"}
+`[Dancing here ooh la la]{.dancing}`
+[Dancing here ooh la la]{.dancing}
+
+`[Hurting here no no no!!!]{.nosifer}`
+[Hurting here no no no!!!]{.nosifer}
+:::
+::::
+
+## Images
+
+:::: {.columns}
+::: {.column width="40%"}
+![](https://seeklogo.com/images/Y/yogi-bear-logo-F48B84E36E-seeklogo.com.png){.absolute left="0" height="400"}
+:::
+
+::: {.column width="60%"}
+```{r}
+#| eval: false
+#| echo: true
+#| results: asis
+
+![](https://seeklogo.com/images
+/Y/yogi-bear-logo-F48B84E36E-
+seeklogo.com.png){.absolute left="0" 
+height="400"}
+```
+
+:::
+::::
+
+::::
+
+# Today...
+![](https://pngimg.com/d/share_PNG2.png){.absolute left="350" top="00"}
+
+## `r fontawesome::fa("download", fill="#2e5984")` `r fontawesome::fa("share-from-square", fill="#ffa500")`  `r fontawesome::fa("cloud-arrow-up", fill="#2e5984")` [[Sharing]{.lucky}](https://quarto.org/docs/publishing/) `r fontawesome::fa("cloud-arrow-up", fill="#2e5984")` `r fontawesome::fa("share-from-square", fill="#ffa500")` `r fontawesome::fa("download", fill="#2e5984")` 
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGM3aHVsamFxZTE5aGtqaHVmeGF6bDk3OHg1enhuOXppNnQ1bWlhaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1oFqxMYv5JQvuFtX8o/giphy.gif){.absolute right="150" height="550"}
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
+
