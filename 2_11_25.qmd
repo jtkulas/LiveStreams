@@ -1,9 +1,9 @@
 ---
 title: "R for <br>Authoring!!" 
-author: "OOH Session #63...<br>[...where to begin (Part III)...]{.shroom}<br>[...sharing!!]{.lucky}" 
+author: "OOH Session #64...<br>[...prettifying parallel analyses]{.barriecito}"
 title-slide-attributes: 
-  data-background-image: https://wallpapercave.com/wp/wp12615829.jpg #https://i0.wp.com/rachelsreviews.net/wp-content/uploads/2014/11/greedy-scrooge-mickey.png?resize=764%2C429&ssl=1
-  data-background-opacity: "1"
+  data-background-image: https://www.deke.com/assets/uploads/03-now-with-wifi.jpg #https://www.shutterstock.com/image-illustration/optical-illusion-straight-lines-appear-260nw-2419531709.jpg #http://nifty.stanford.edu/2023/liu-nifty-illusions/skye_cafe_illusion.jpg
+  data-background-opacity: ".4"
 format:
   revealjs:
     mouse-wheel: true                ## yes enables mouse
@@ -42,9 +42,9 @@ library(fontawesome)
 
 ::: {layout="[80,20]"}
 ::: first-column
--   Recap session #62&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Recap session #63&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
 -   Focal issue(s):
-    - [sharing!!]{.lucky}
+    - [prettifying parallel<br>analyses]{.barriecito}
 -   Shared problem-solving
 :::
 
@@ -53,9 +53,9 @@ library(fontawesome)
 
 :::
 
-![](img/title62.JPG){.absolute top="170" right="-120" width="600" height="325"}
+![](img/title63.JPG){.absolute top="170" right="-120" width="600" height="325"}
 
-# Recap of Session <br>#62: 
+# Recap of Session <br>#63: 
 
 ![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
 

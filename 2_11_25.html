@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="2_4_25_files/libs/clipboard/clipboard.min.js"></script>
-<script src="2_4_25_files/libs/quarto-html/tabby.min.js"></script>
-<script src="2_4_25_files/libs/quarto-html/popper.min.js"></script>
-<script src="2_4_25_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="2_4_25_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="2_4_25_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="2_4_25_files/libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="2_4_25_files/libs/quarto-contrib/reveal-header-1.0.0/add_header.js" defer="true"></script>
-<link href="2_4_25_files/libs/quarto-contrib/reveal-header-1.0.0/add_header.css" rel="stylesheet">
-<link href="2_4_25_files/libs/quarto-contrib/grid-no-htext-1.0.0/grid_no_htext.css" rel="stylesheet"><meta charset="utf-8">
+<script src="2_11_25_files/libs/clipboard/clipboard.min.js"></script>
+<script src="2_11_25_files/libs/quarto-html/tabby.min.js"></script>
+<script src="2_11_25_files/libs/quarto-html/popper.min.js"></script>
+<script src="2_11_25_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="2_11_25_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="2_11_25_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="2_11_25_files/libs/quarto-html/quarto-syntax-highlighting-dark-8ea72dc5fed832574809a9c94082fbbb.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="2_11_25_files/libs/quarto-contrib/reveal-header-1.0.0/add_header.js" defer="true"></script>
+<link href="2_11_25_files/libs/quarto-contrib/reveal-header-1.0.0/add_header.css" rel="stylesheet">
+<link href="2_11_25_files/libs/quarto-contrib/grid-no-htext-1.0.0/grid_no_htext.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.6.40">
 
-  <meta name="author" content="OOH Session #63… …where to begin (Part III)… …sharing!!">
+  <meta name="author" content="OOH Session #64… …prettifying parallel analyses">
   <title>R for  Authoring!!</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="2_4_25_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="2_4_25_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="2_11_25_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="2_11_25_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -97,11 +97,11 @@
     code span.vs { color: #abe338; } /* VerbatimString */
     code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="2_4_25_files/libs/revealjs/dist/theme/quarto-c6734e8d39f5d35962a2f4bf581b1cfb.css">
-  <link href="2_4_25_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="2_4_25_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="2_4_25_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="2_4_25_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="2_11_25_files/libs/revealjs/dist/theme/quarto-fc2c00dc6d573b7235dd130ba06a66b2.css">
+  <link href="2_11_25_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="2_11_25_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="2_11_25_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="2_11_25_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -194,20 +194,20 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="https://wallpapercave.com/wp/wp12615829.jpg" data-background-opacity="1" class="quarto-title-block center">
+<section id="title-slide" data-background-image="https://www.deke.com/assets/uploads/03-now-with-wifi.jpg" data-background-opacity=".4" class="quarto-title-block center">
   <h1 class="title">R for <br>Authoring!!</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-OOH Session #63…<br><span class="shroom">…where to begin (Part III)…</span><br><span class="lucky">…sharing!!</span> 
+OOH Session #64…<br><span class="barriecito">…prettifying parallel analyses</span> 
 </div>
 </div>
 </div>
 
 </section>
-<section id="open-office-hours-february-04-2025" class="slide level2">
-<h2>Open Office Hours <br>(February 04, 2025)</h2>
+<section id="open-office-hours-february-05-2025" class="slide level2">
+<h2>Open Office Hours <br>(February 05, 2025)</h2>
 <div>
 
 </div>
@@ -215,10 +215,10 @@ OOH Session #63…<br><span class="shroom">…where to begin (Part III)…</span
 <div class="quarto-layout-row">
 <div class="first-column quarto-layout-cell" style="flex-basis: 80.0%;justify-content: flex-start;">
 <ul>
-<li>Recap session #62&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↔︎️</li>
+<li>Recap session #63&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↔︎️</li>
 <li>Focal issue(s):
 <ul>
-<li><span class="lucky">sharing!!</span></li>
+<li><span class="barriecito">prettifying parallel<br>analyses</span></li>
 </ul></li>
 <li>Shared problem-solving</li>
 </ul>
@@ -228,11 +228,11 @@ OOH Session #63…<br><span class="shroom">…where to begin (Part III)…</span
 </div>
 </div>
 </div>
-<p><img data-src="img/title62.JPG" class="absolute" style="top: 170px; right: -120px; width: 600px; height: 325px; "></p>
+<p><img data-src="img/title63.JPG" class="absolute" style="top: 170px; right: -120px; width: 600px; height: 325px; "></p>
 </section>
 <section>
-<section id="recap-of-session-62" class="title-slide slide level1 center">
-<h1>Recap of Session <br>#62:</h1>
+<section id="recap-of-session-63" class="title-slide slide level1 center">
+<h1>Recap of Session <br>#63:</h1>
 <p><img data-src="https://pngimg.com/d/sticky_note_PNG18964.png" class="absolute" style="top: 200px; right: 50px; "></p>
 <p><img data-src="https://seeklogo.com/images/Y/yogi-bear-logo-F48B84E36E-seeklogo.com.png" class="absolute" style="top: 280px; right: 150px; width: 150px; "></p>
 </section>
@@ -306,8 +306,8 @@ OOH Session #63…<br><span class="shroom">…where to begin (Part III)…</span
 <h2><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#8f00ff;overflow:visible;position:relative;"><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg> <svg aria-hidden="true" role="img" viewbox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#ffa500;overflow:visible;position:relative;"><path d="M400 255.4V240 208c0-8.8-7.2-16-16-16H352 336 289.5c-50.9 0-93.9 33.5-108.3 79.6c-3.3-9.4-5.2-19.8-5.2-31.6c0-61.9 50.1-112 112-112h48 16 32c8.8 0 16-7.2 16-16V80 64.6L506 160 400 255.4zM336 240h16v48c0 17.7 14.3 32 32 32h3.7c7.9 0 15.5-2.9 21.4-8.2l139-125.1c7.6-6.8 11.9-16.5 11.9-26.7s-4.3-19.9-11.9-26.7L409.9 8.9C403.5 3.2 395.3 0 386.7 0C367.5 0 352 15.5 352 34.7V80H336 304 288c-88.4 0-160 71.6-160 160c0 60.4 34.6 99.1 63.9 120.9c5.9 4.4 11.5 8.1 16.7 11.2c4.4 2.7 8.5 4.9 11.9 6.6c3.4 1.7 6.2 3 8.2 3.9c2.2 1 4.6 1.4 7.1 1.4h2.5c9.8 0 17.8-8 17.8-17.8c0-7.8-5.3-14.7-11.6-19.5l0 0c-.4-.3-.7-.5-1.1-.8c-1.7-1.1-3.4-2.5-5-4.1c-.8-.8-1.7-1.6-2.5-2.6s-1.6-1.9-2.4-2.9c-1.8-2.5-3.5-5.3-5-8.5c-2.6-6-4.3-13.3-4.3-22.4c0-36.1 29.3-65.5 65.5-65.5H304h32zM72 32C32.2 32 0 64.2 0 104V440c0 39.8 32.2 72 72 72H408c39.8 0 72-32.2 72-72V376c0-13.3-10.7-24-24-24s-24 10.7-24 24v64c0 13.3-10.7 24-24 24H72c-13.3 0-24-10.7-24-24V104c0-13.3 10.7-24 24-24h64c13.3 0 24-10.7 24-24s-10.7-24-24-24H72z"></path></svg> <svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#2e5984;overflow:visible;position:relative;"><path d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z"></path></svg> <a href="https://quarto.org/docs/publishing/"><span class="lucky">Sharing</span></a> <svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#2e5984;overflow:visible;position:relative;"><path d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z"></path></svg> <svg aria-hidden="true" role="img" viewbox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#ffa500;overflow:visible;position:relative;"><path d="M400 255.4V240 208c0-8.8-7.2-16-16-16H352 336 289.5c-50.9 0-93.9 33.5-108.3 79.6c-3.3-9.4-5.2-19.8-5.2-31.6c0-61.9 50.1-112 112-112h48 16 32c8.8 0 16-7.2 16-16V80 64.6L506 160 400 255.4zM336 240h16v48c0 17.7 14.3 32 32 32h3.7c7.9 0 15.5-2.9 21.4-8.2l139-125.1c7.6-6.8 11.9-16.5 11.9-26.7s-4.3-19.9-11.9-26.7L409.9 8.9C403.5 3.2 395.3 0 386.7 0C367.5 0 352 15.5 352 34.7V80H336 304 288c-88.4 0-160 71.6-160 160c0 60.4 34.6 99.1 63.9 120.9c5.9 4.4 11.5 8.1 16.7 11.2c4.4 2.7 8.5 4.9 11.9 6.6c3.4 1.7 6.2 3 8.2 3.9c2.2 1 4.6 1.4 7.1 1.4h2.5c9.8 0 17.8-8 17.8-17.8c0-7.8-5.3-14.7-11.6-19.5l0 0c-.4-.3-.7-.5-1.1-.8c-1.7-1.1-3.4-2.5-5-4.1c-.8-.8-1.7-1.6-2.5-2.6s-1.6-1.9-2.4-2.9c-1.8-2.5-3.5-5.3-5-8.5c-2.6-6-4.3-13.3-4.3-22.4c0-36.1 29.3-65.5 65.5-65.5H304h32zM72 32C32.2 32 0 64.2 0 104V440c0 39.8 32.2 72 72 72H408c39.8 0 72-32.2 72-72V376c0-13.3-10.7-24-24-24s-24 10.7-24 24v64c0 13.3-10.7 24-24 24H72c-13.3 0-24-10.7-24-24V104c0-13.3 10.7-24 24-24h64c13.3 0 24-10.7 24-24s-10.7-24-24-24H72z"></path></svg> <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#8f00ff;overflow:visible;position:relative;"><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg></h2>
 <p><img data-src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGM3aHVsamFxZTE5aGtqaHVmeGF6bDk3OHg1enhuOXppNnQ1bWlhaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1oFqxMYv5JQvuFtX8o/giphy.gif" class="absolute" style="right: 150px; height: 550px; "></p>
 </section>
-<section id="session-info-february-04-2025-rendering" class="slide level2">
-<h2><svg aria-hidden="true" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4287f5;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg> Session Info (February 04, 2025) Rendering:</h2>
+<section id="session-info-february-05-2025-rendering" class="slide level2">
+<h2><svg aria-hidden="true" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4287f5;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg> Session Info (February 05, 2025) Rendering:</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.2.2 (2022-10-31 ucrt)
@@ -364,19 +364,19 @@ loaded via a namespace (and not attached):
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="2_4_25_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="2_11_25_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="2_4_25_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="2_4_25_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="2_4_25_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="2_4_25_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="2_4_25_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="2_11_25_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="2_11_25_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="2_11_25_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="2_11_25_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="2_11_25_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="2_4_25_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="2_4_25_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="2_4_25_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="2_4_25_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="2_11_25_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="2_11_25_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="2_11_25_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="2_11_25_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

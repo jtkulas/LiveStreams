@@ -30,6 +30,7 @@
 @import url('https://fonts.googleapis.com/css?family=Irish Grover'); 
 @import url('https://fonts.googleapis.com/css?family=Kaushan Script');
 @import url('https://fonts.googleapis.com/css?family=Lemon');
+@import url('https://fonts.googleapis.com/css?family=Barriecito');
 
 /*-- scss:defaults --*/
 
@@ -439,4 +440,9 @@ width: 10px;
 .lucky{
   font-family: "Lemon";
   color: #ffa500; 
+}
+
+.barriecito{
+  font-family: "Barriecito";
+  color: #0FFF50;
 }
