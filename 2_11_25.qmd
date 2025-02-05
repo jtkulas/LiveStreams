@@ -59,73 +59,43 @@ library(fontawesome)
 
 ![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
 
-![](https://seeklogo.com/images/Y/yogi-bear-logo-F48B84E36E-seeklogo.com.png){.absolute width="150" top="280" right="150"}
+![](https://pngimg.com/d/share_PNG2.png){.absolute width="180" top="340" right="150"}
 
-## `r fontawesome::fa("pepper-hot", fill="#FF5F1F")``r fontawesome::fa("pepper-hot", fill="#D70040")``r emo::ji("hot_face")`[...spice it up!!!]{.spicy}&nbsp;`r emo::ji("hot_face")``r fontawesome::fa("pepper-hot", fill="#D70040")``r fontawesome::fa("pepper-hot", fill="#FF5F1F")` 
+## `r fontawesome::fa("download", fill="#8f00ff")` `r fontawesome::fa("share-from-square", fill="#ffa500")`  `r fontawesome::fa("cloud-arrow-up", fill="#2e5984")` [[Sharing]{.lucky}](https://quarto.org/docs/publishing/) `r fontawesome::fa("cloud-arrow-up", fill="#2e5984")` `r fontawesome::fa("share-from-square", fill="#ffa500")` `r fontawesome::fa("download", fill="#8f00ff")`  
+
+:::: {.columns}
+::: {.column width="20%"}
+![](https://ivelasq.quarto.pub/building-a-blog-with-quarto/workflow/publish-blog/quartopub.png){.absolute height="180" left="-140" top="230"}
+
+![](https://pbs.twimg.com/media/Fgq0RkCWIAEInTS.png){.absolute left="-100" bottom="20" height="250"}
+:::
+
+::: {.column width="80%"}
 
 :::: {.panel-tabset}
 
-## fonts
-:::: {.columns}
-::: {.column width="50%"}
-```{css, echo=TRUE}
+## Quarto Pub
 
-@import url('https://fonts.googleapis.com/css?family=Dancing Script');
-@import url('https://fonts.googleapis.com/css?family=Nosifer');
+## Posit Connect
 
-.dancing {
-  font-family: 'Dancing Script';
-  color: #bada55;
-  font-size: 1.5em;
-}
 
-.nosifer {
-  font-family: 'Nosifer'; 
-  color: #FF0000;
-  font-size: 1.7em;
-}
-```
-:::
-
-::: {.column width="50%"}
-`[Dancing here Ooh La La]{.dancing}`
-[Dancing here Ooh La La]{.dancing}
-
-`[Hurting here Bwa Ha Ha!!!]{.nosifer}`
-[Hurting here Bwa Ha Ha!!!]{.nosifer}
-:::
-::::
-
-## Images
-
-:::: {.columns}
-::: {.column width="40%"}
-![](https://seeklogo.com/images/Y/yogi-bear-logo-F48B84E36E-seeklogo.com.png){.absolute left="0" height="400"}
-:::
-
-::: {.column width="60%"}
-```{r}
-#| eval: false
-#| echo: true
-#| results: asis
-
-![](https://seeklogo.com/images
-/Y/yogi-bear-logo-F48B84E36E-
-seeklogo.com.png){.absolute left="0" 
-height="400"}
-```
 
 :::
+
 ::::
 
 ::::
 
 # Today...
-![](https://pngimg.com/d/share_PNG2.png){.absolute left="350" top="00"}
+![](https://static.vecteezy.com/system/resources/previews/021/746/173/non_2x/young-boy-balancing-on-parallel-bars-young-professional-gymnast-teenager-in-sportswear-artistic-gymnastics-vector.jpg){.absolute left="350" top="00" height="140"}
 
-## `r fontawesome::fa("download", fill="#8f00ff")` `r fontawesome::fa("share-from-square", fill="#ffa500")`  `r fontawesome::fa("cloud-arrow-up", fill="#2e5984")` [[Sharing]{.lucky}](https://quarto.org/docs/publishing/) `r fontawesome::fa("cloud-arrow-up", fill="#2e5984")` `r fontawesome::fa("share-from-square", fill="#ffa500")` `r fontawesome::fa("download", fill="#8f00ff")` 
+## [prettifying parallel analyses]{.barriecito}  
 
-![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGM3aHVsamFxZTE5aGtqaHVmeGF6bDk3OHg1enhuOXppNnQ1bWlhaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1oFqxMYv5JQvuFtX8o/giphy.gif){.absolute right="150" height="550"}
+![](https://i2.wp.com/equastat.com/wp-content/uploads/2016/04/scree-plot2.png?w=584){.absolute right="-100" top="220" height="400" .tilt}
+
+![](https://ouzhang.me/blog/parallel-analysis-determining-the-dimensionality-of-data/featured.jpg){.absolute left="-100" top="220" height="400" .tilt2}
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnU4amwwZGxkd3ZrMjBpZHJmbXh3cm13dzk0cG03bjg1NzA2MnozcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/syVeLgziu57Qk/giphy.gif){.absolute left="280" top="180"}
+
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 

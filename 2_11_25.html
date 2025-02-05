@@ -31,71 +31,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-      }
-    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-    div.sourceCode
-      { color: #f8f8f2;  }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #f8f8f2; } /* Normal */
-    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
-    code span.an { color: #d4d0ab; } /* Annotation */
-    code span.at { color: #00e0e0; } /* Attribute */
-    code span.bn { color: #d4d0ab; } /* BaseN */
-    code span.bu { color: #abe338; } /* BuiltIn */
-    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #abe338; } /* Char */
-    code span.cn { color: #ffd700; } /* Constant */
-    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
-    code span.cv { color: #ffd700; } /* CommentVar */
-    code span.do { color: #f8f8f2; } /* Documentation */
-    code span.dt { color: #ffa07a; } /* DataType */
-    code span.dv { color: #d4d0ab; } /* DecVal */
-    code span.er { color: #f07178; text-decoration: underline; } /* Error */
-    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
-    code span.fl { color: #d4d0ab; } /* Float */
-    code span.fu { color: #ffa07a; } /* Function */
-    code span.im { color: #abe338; } /* Import */
-    code span.in { color: #d4d0ab; } /* Information */
-    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
-    code span.op { color: #ffa07a; } /* Operator */
-    code span.ot { color: #00e0e0; } /* Other */
-    code span.pp { color: #dcc6e0; } /* Preprocessor */
-    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
-    code span.sc { color: #abe338; } /* SpecialChar */
-    code span.ss { color: #abe338; } /* SpecialString */
-    code span.st { color: #abe338; } /* String */
-    code span.va { color: #00e0e0; } /* Variable */
-    code span.vs { color: #abe338; } /* VerbatimString */
-    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="2_11_25_files/libs/revealjs/dist/theme/quarto-fc2c00dc6d573b7235dd130ba06a66b2.css">
   <link href="2_11_25_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -234,77 +169,37 @@ OOH Session #64…<br><span class="barriecito">…prettifying parallel analyses<
 <section id="recap-of-session-63" class="title-slide slide level1 center">
 <h1>Recap of Session <br>#63:</h1>
 <p><img data-src="https://pngimg.com/d/sticky_note_PNG18964.png" class="absolute" style="top: 200px; right: 50px; "></p>
-<p><img data-src="https://seeklogo.com/images/Y/yogi-bear-logo-F48B84E36E-seeklogo.com.png" class="absolute" style="top: 280px; right: 150px; width: 150px; "></p>
+<p><img data-src="https://pngimg.com/d/share_PNG2.png" class="absolute" style="top: 340px; right: 150px; width: 180px; "></p>
 </section>
-<section id="spice-it-up" class="slide level2">
-<h2><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#FF5F1F;overflow:visible;position:relative;"><path d="M428.3 3c11.6-6.4 26.2-2.3 32.6 9.3l4.8 8.7c19.3 34.7 19.8 75.7 3.4 110C495.8 159.6 512 197.9 512 240c0 18.5-3.1 36.3-8.9 52.8c-6.1 17.3-28.5 16.3-36.8-.1l-11.7-23.4c-4.1-8.1-12.4-13.3-21.5-13.3H360c-13.3 0-24-10.7-24-24V152c0-13.3-10.7-24-24-24l-17.1 0c-21.3 0-30-23.9-10.8-32.9C304.7 85.4 327.7 80 352 80c28.3 0 54.8 7.3 77.8 20.2c5.5-18.2 3.7-38.4-6-55.8L419 35.7c-6.4-11.6-2.3-26.2 9.3-32.6zM171.2 345.5L264 160l40 0v80c0 26.5 21.5 48 48 48h76.2l23.9 47.8C372.3 443.9 244.3 512 103.2 512H44.4C19.9 512 0 492.1 0 467.6c0-20.8 14.5-38.8 34.8-43.3l49.8-11.1c37.6-8.4 69.5-33.2 86.7-67.7z"></path></svg><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#D70040;overflow:visible;position:relative;"><path d="M428.3 3c11.6-6.4 26.2-2.3 32.6 9.3l4.8 8.7c19.3 34.7 19.8 75.7 3.4 110C495.8 159.6 512 197.9 512 240c0 18.5-3.1 36.3-8.9 52.8c-6.1 17.3-28.5 16.3-36.8-.1l-11.7-23.4c-4.1-8.1-12.4-13.3-21.5-13.3H360c-13.3 0-24-10.7-24-24V152c0-13.3-10.7-24-24-24l-17.1 0c-21.3 0-30-23.9-10.8-32.9C304.7 85.4 327.7 80 352 80c28.3 0 54.8 7.3 77.8 20.2c5.5-18.2 3.7-38.4-6-55.8L419 35.7c-6.4-11.6-2.3-26.2 9.3-32.6zM171.2 345.5L264 160l40 0v80c0 26.5 21.5 48 48 48h76.2l23.9 47.8C372.3 443.9 244.3 512 103.2 512H44.4C19.9 512 0 492.1 0 467.6c0-20.8 14.5-38.8 34.8-43.3l49.8-11.1c37.6-8.4 69.5-33.2 86.7-67.7z"></path></svg>🥵<span class="spicy">…spice it up!!!</span>&nbsp;🥵<svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#D70040;overflow:visible;position:relative;"><path d="M428.3 3c11.6-6.4 26.2-2.3 32.6 9.3l4.8 8.7c19.3 34.7 19.8 75.7 3.4 110C495.8 159.6 512 197.9 512 240c0 18.5-3.1 36.3-8.9 52.8c-6.1 17.3-28.5 16.3-36.8-.1l-11.7-23.4c-4.1-8.1-12.4-13.3-21.5-13.3H360c-13.3 0-24-10.7-24-24V152c0-13.3-10.7-24-24-24l-17.1 0c-21.3 0-30-23.9-10.8-32.9C304.7 85.4 327.7 80 352 80c28.3 0 54.8 7.3 77.8 20.2c5.5-18.2 3.7-38.4-6-55.8L419 35.7c-6.4-11.6-2.3-26.2 9.3-32.6zM171.2 345.5L264 160l40 0v80c0 26.5 21.5 48 48 48h76.2l23.9 47.8C372.3 443.9 244.3 512 103.2 512H44.4C19.9 512 0 492.1 0 467.6c0-20.8 14.5-38.8 34.8-43.3l49.8-11.1c37.6-8.4 69.5-33.2 86.7-67.7z"></path></svg><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#FF5F1F;overflow:visible;position:relative;"><path d="M428.3 3c11.6-6.4 26.2-2.3 32.6 9.3l4.8 8.7c19.3 34.7 19.8 75.7 3.4 110C495.8 159.6 512 197.9 512 240c0 18.5-3.1 36.3-8.9 52.8c-6.1 17.3-28.5 16.3-36.8-.1l-11.7-23.4c-4.1-8.1-12.4-13.3-21.5-13.3H360c-13.3 0-24-10.7-24-24V152c0-13.3-10.7-24-24-24l-17.1 0c-21.3 0-30-23.9-10.8-32.9C304.7 85.4 327.7 80 352 80c28.3 0 54.8 7.3 77.8 20.2c5.5-18.2 3.7-38.4-6-55.8L419 35.7c-6.4-11.6-2.3-26.2 9.3-32.6zM171.2 345.5L264 160l40 0v80c0 26.5 21.5 48 48 48h76.2l23.9 47.8C372.3 443.9 244.3 512 103.2 512H44.4C19.9 512 0 492.1 0 467.6c0-20.8 14.5-38.8 34.8-43.3l49.8-11.1c37.6-8.4 69.5-33.2 86.7-67.7z"></path></svg></h2>
+<section id="sharing" class="slide level2">
+<h2><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#8f00ff;overflow:visible;position:relative;"><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg> <svg aria-hidden="true" role="img" viewbox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#ffa500;overflow:visible;position:relative;"><path d="M400 255.4V240 208c0-8.8-7.2-16-16-16H352 336 289.5c-50.9 0-93.9 33.5-108.3 79.6c-3.3-9.4-5.2-19.8-5.2-31.6c0-61.9 50.1-112 112-112h48 16 32c8.8 0 16-7.2 16-16V80 64.6L506 160 400 255.4zM336 240h16v48c0 17.7 14.3 32 32 32h3.7c7.9 0 15.5-2.9 21.4-8.2l139-125.1c7.6-6.8 11.9-16.5 11.9-26.7s-4.3-19.9-11.9-26.7L409.9 8.9C403.5 3.2 395.3 0 386.7 0C367.5 0 352 15.5 352 34.7V80H336 304 288c-88.4 0-160 71.6-160 160c0 60.4 34.6 99.1 63.9 120.9c5.9 4.4 11.5 8.1 16.7 11.2c4.4 2.7 8.5 4.9 11.9 6.6c3.4 1.7 6.2 3 8.2 3.9c2.2 1 4.6 1.4 7.1 1.4h2.5c9.8 0 17.8-8 17.8-17.8c0-7.8-5.3-14.7-11.6-19.5l0 0c-.4-.3-.7-.5-1.1-.8c-1.7-1.1-3.4-2.5-5-4.1c-.8-.8-1.7-1.6-2.5-2.6s-1.6-1.9-2.4-2.9c-1.8-2.5-3.5-5.3-5-8.5c-2.6-6-4.3-13.3-4.3-22.4c0-36.1 29.3-65.5 65.5-65.5H304h32zM72 32C32.2 32 0 64.2 0 104V440c0 39.8 32.2 72 72 72H408c39.8 0 72-32.2 72-72V376c0-13.3-10.7-24-24-24s-24 10.7-24 24v64c0 13.3-10.7 24-24 24H72c-13.3 0-24-10.7-24-24V104c0-13.3 10.7-24 24-24h64c13.3 0 24-10.7 24-24s-10.7-24-24-24H72z"></path></svg> <svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#2e5984;overflow:visible;position:relative;"><path d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z"></path></svg> <a href="https://quarto.org/docs/publishing/"><span class="lucky">Sharing</span></a> <svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#2e5984;overflow:visible;position:relative;"><path d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z"></path></svg> <svg aria-hidden="true" role="img" viewbox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#ffa500;overflow:visible;position:relative;"><path d="M400 255.4V240 208c0-8.8-7.2-16-16-16H352 336 289.5c-50.9 0-93.9 33.5-108.3 79.6c-3.3-9.4-5.2-19.8-5.2-31.6c0-61.9 50.1-112 112-112h48 16 32c8.8 0 16-7.2 16-16V80 64.6L506 160 400 255.4zM336 240h16v48c0 17.7 14.3 32 32 32h3.7c7.9 0 15.5-2.9 21.4-8.2l139-125.1c7.6-6.8 11.9-16.5 11.9-26.7s-4.3-19.9-11.9-26.7L409.9 8.9C403.5 3.2 395.3 0 386.7 0C367.5 0 352 15.5 352 34.7V80H336 304 288c-88.4 0-160 71.6-160 160c0 60.4 34.6 99.1 63.9 120.9c5.9 4.4 11.5 8.1 16.7 11.2c4.4 2.7 8.5 4.9 11.9 6.6c3.4 1.7 6.2 3 8.2 3.9c2.2 1 4.6 1.4 7.1 1.4h2.5c9.8 0 17.8-8 17.8-17.8c0-7.8-5.3-14.7-11.6-19.5l0 0c-.4-.3-.7-.5-1.1-.8c-1.7-1.1-3.4-2.5-5-4.1c-.8-.8-1.7-1.6-2.5-2.6s-1.6-1.9-2.4-2.9c-1.8-2.5-3.5-5.3-5-8.5c-2.6-6-4.3-13.3-4.3-22.4c0-36.1 29.3-65.5 65.5-65.5H304h32zM72 32C32.2 32 0 64.2 0 104V440c0 39.8 32.2 72 72 72H408c39.8 0 72-32.2 72-72V376c0-13.3-10.7-24-24-24s-24 10.7-24 24v64c0 13.3-10.7 24-24 24H72c-13.3 0-24-10.7-24-24V104c0-13.3 10.7-24 24-24h64c13.3 0 24-10.7 24-24s-10.7-24-24-24H72z"></path></svg> <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#8f00ff;overflow:visible;position:relative;"><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg></h2>
+<div class="columns">
+<div class="column" style="width:20%;">
+<p><img data-src="https://ivelasq.quarto.pub/building-a-blog-with-quarto/workflow/publish-blog/quartopub.png" class="absolute" style="top: 230px; left: -140px; height: 180px; "></p>
+<p><img data-src="https://pbs.twimg.com/media/Fgq0RkCWIAEInTS.png" class="absolute" style="left: -100px; bottom: 20px; height: 250px; "></p>
+</div><div class="column" style="width:80%;">
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">fonts</a></li><li><a href="#tabset-1-2">Images</a></li></ul>
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Quarto Pub</a></li><li><a href="#tabset-1-2">Posit Connect</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource css number-lines code-with-copy"><code class="sourceCode css"><span id="cb1-1"><a href=""></a></span>
-<span id="cb1-2"><a href=""></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css?family=Dancing Script'</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb1-3"><a href=""></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css?family=Nosifer'</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb1-4"><a href=""></a></span>
-<span id="cb1-5"><a href=""></a><span class="fu">.dancing</span> {</span>
-<span id="cb1-6"><a href=""></a>  <span class="kw">font-family</span><span class="ch">:</span> <span class="st">'Dancing Script'</span><span class="op">;</span></span>
-<span id="cb1-7"><a href=""></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">#bada55</span><span class="op">;</span></span>
-<span id="cb1-8"><a href=""></a>  <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">1.5</span><span class="dt">em</span><span class="op">;</span></span>
-<span id="cb1-9"><a href=""></a>}</span>
-<span id="cb1-10"><a href=""></a></span>
-<span id="cb1-11"><a href=""></a><span class="fu">.nosifer</span> {</span>
-<span id="cb1-12"><a href=""></a>  <span class="kw">font-family</span><span class="ch">:</span> <span class="st">'Nosifer'</span><span class="op">;</span> </span>
-<span id="cb1-13"><a href=""></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">#FF0000</span><span class="op">;</span></span>
-<span id="cb1-14"><a href=""></a>  <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">1.7</span><span class="dt">em</span><span class="op">;</span></span>
-<span id="cb1-15"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<style type="text/css">
 
-@import url('https://fonts.googleapis.com/css?family=Dancing Script');
-@import url('https://fonts.googleapis.com/css?family=Nosifer');
-
-.dancing {
-  font-family: 'Dancing Script';
-  color: #bada55;
-  font-size: 1.5em;
-}
-
-.nosifer {
-  font-family: 'Nosifer'; 
-  color: #FF0000;
-  font-size: 1.7em;
-}
-</style>
-</div>
-</div><div class="column" style="width:50%;">
-<p><code>[Dancing here Ooh La La]{.dancing}</code> <span class="dancing">Dancing here Ooh La La</span></p>
-<p><code>[Hurting here Bwa Ha Ha!!!]{.nosifer}</code> <span class="nosifer">Hurting here Bwa Ha Ha!!!</span></p>
-</div></div>
 </div>
 <div id="tabset-1-2">
-<div class="columns">
-<div class="column" style="width:40%;">
-<p><img data-src="https://seeklogo.com/images/Y/yogi-bear-logo-F48B84E36E-seeklogo.com.png" class="absolute" style="left: 0px; height: 400px; "></p>
-</div><div class="column" style="width:60%;">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="sc">!</span>[](https<span class="sc">:</span><span class="er">//</span>seeklogo.com<span class="sc">/</span>images</span>
-<span id="cb2-2"><a href=""></a><span class="sc">/</span>Y<span class="sc">/</span>yogi<span class="sc">-</span>bear<span class="sc">-</span>logo<span class="sc">-</span>F48B84E36E<span class="sc">-</span></span>
-<span id="cb2-3"><a href=""></a>seeklogo.com.png){.absolute left<span class="ot">=</span><span class="st">"0"</span> </span>
-<span id="cb2-4"><a href=""></a>height<span class="ot">=</span><span class="st">"400"</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+</div>
+</div>
 </div></div>
-</div>
-</div>
-</div>
 </section></section>
 <section>
 <section id="today" class="title-slide slide level1 center">
 <h1>Today…</h1>
-<p><img data-src="https://pngimg.com/d/share_PNG2.png" class="absolute" style="top: 0px; left: 350px; "></p>
+<p><img data-src="https://static.vecteezy.com/system/resources/previews/021/746/173/non_2x/young-boy-balancing-on-parallel-bars-young-professional-gymnast-teenager-in-sportswear-artistic-gymnastics-vector.jpg" class="absolute" style="top: 0px; left: 350px; height: 140px; "></p>
 </section>
-<section id="sharing" class="slide level2">
-<h2><svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#8f00ff;overflow:visible;position:relative;"><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg> <svg aria-hidden="true" role="img" viewbox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#ffa500;overflow:visible;position:relative;"><path d="M400 255.4V240 208c0-8.8-7.2-16-16-16H352 336 289.5c-50.9 0-93.9 33.5-108.3 79.6c-3.3-9.4-5.2-19.8-5.2-31.6c0-61.9 50.1-112 112-112h48 16 32c8.8 0 16-7.2 16-16V80 64.6L506 160 400 255.4zM336 240h16v48c0 17.7 14.3 32 32 32h3.7c7.9 0 15.5-2.9 21.4-8.2l139-125.1c7.6-6.8 11.9-16.5 11.9-26.7s-4.3-19.9-11.9-26.7L409.9 8.9C403.5 3.2 395.3 0 386.7 0C367.5 0 352 15.5 352 34.7V80H336 304 288c-88.4 0-160 71.6-160 160c0 60.4 34.6 99.1 63.9 120.9c5.9 4.4 11.5 8.1 16.7 11.2c4.4 2.7 8.5 4.9 11.9 6.6c3.4 1.7 6.2 3 8.2 3.9c2.2 1 4.6 1.4 7.1 1.4h2.5c9.8 0 17.8-8 17.8-17.8c0-7.8-5.3-14.7-11.6-19.5l0 0c-.4-.3-.7-.5-1.1-.8c-1.7-1.1-3.4-2.5-5-4.1c-.8-.8-1.7-1.6-2.5-2.6s-1.6-1.9-2.4-2.9c-1.8-2.5-3.5-5.3-5-8.5c-2.6-6-4.3-13.3-4.3-22.4c0-36.1 29.3-65.5 65.5-65.5H304h32zM72 32C32.2 32 0 64.2 0 104V440c0 39.8 32.2 72 72 72H408c39.8 0 72-32.2 72-72V376c0-13.3-10.7-24-24-24s-24 10.7-24 24v64c0 13.3-10.7 24-24 24H72c-13.3 0-24-10.7-24-24V104c0-13.3 10.7-24 24-24h64c13.3 0 24-10.7 24-24s-10.7-24-24-24H72z"></path></svg> <svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#2e5984;overflow:visible;position:relative;"><path d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z"></path></svg> <a href="https://quarto.org/docs/publishing/"><span class="lucky">Sharing</span></a> <svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#2e5984;overflow:visible;position:relative;"><path d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z"></path></svg> <svg aria-hidden="true" role="img" viewbox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#ffa500;overflow:visible;position:relative;"><path d="M400 255.4V240 208c0-8.8-7.2-16-16-16H352 336 289.5c-50.9 0-93.9 33.5-108.3 79.6c-3.3-9.4-5.2-19.8-5.2-31.6c0-61.9 50.1-112 112-112h48 16 32c8.8 0 16-7.2 16-16V80 64.6L506 160 400 255.4zM336 240h16v48c0 17.7 14.3 32 32 32h3.7c7.9 0 15.5-2.9 21.4-8.2l139-125.1c7.6-6.8 11.9-16.5 11.9-26.7s-4.3-19.9-11.9-26.7L409.9 8.9C403.5 3.2 395.3 0 386.7 0C367.5 0 352 15.5 352 34.7V80H336 304 288c-88.4 0-160 71.6-160 160c0 60.4 34.6 99.1 63.9 120.9c5.9 4.4 11.5 8.1 16.7 11.2c4.4 2.7 8.5 4.9 11.9 6.6c3.4 1.7 6.2 3 8.2 3.9c2.2 1 4.6 1.4 7.1 1.4h2.5c9.8 0 17.8-8 17.8-17.8c0-7.8-5.3-14.7-11.6-19.5l0 0c-.4-.3-.7-.5-1.1-.8c-1.7-1.1-3.4-2.5-5-4.1c-.8-.8-1.7-1.6-2.5-2.6s-1.6-1.9-2.4-2.9c-1.8-2.5-3.5-5.3-5-8.5c-2.6-6-4.3-13.3-4.3-22.4c0-36.1 29.3-65.5 65.5-65.5H304h32zM72 32C32.2 32 0 64.2 0 104V440c0 39.8 32.2 72 72 72H408c39.8 0 72-32.2 72-72V376c0-13.3-10.7-24-24-24s-24 10.7-24 24v64c0 13.3-10.7 24-24 24H72c-13.3 0-24-10.7-24-24V104c0-13.3 10.7-24 24-24h64c13.3 0 24-10.7 24-24s-10.7-24-24-24H72z"></path></svg> <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#8f00ff;overflow:visible;position:relative;"><path d="M288 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V274.7l-73.4-73.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0l128-128c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L288 274.7V32zM64 352c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V416c0-35.3-28.7-64-64-64H346.5l-45.3 45.3c-25 25-65.5 25-90.5 0L165.5 352H64zm368 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48z"></path></svg></h2>
-<p><img data-src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGM3aHVsamFxZTE5aGtqaHVmeGF6bDk3OHg1enhuOXppNnQ1bWlhaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1oFqxMYv5JQvuFtX8o/giphy.gif" class="absolute" style="right: 150px; height: 550px; "></p>
+<section id="prettifying-parallel-analyses" class="slide level2">
+<h2><span class="barriecito">prettifying parallel analyses</span></h2>
+<p><img data-src="https://i2.wp.com/equastat.com/wp-content/uploads/2016/04/scree-plot2.png?w=584" class="absolute tilt" style="top: 220px; right: -100px; height: 400px; "></p>
+<p><img data-src="https://ouzhang.me/blog/parallel-analysis-determining-the-dimensionality-of-data/featured.jpg" class="absolute tilt2" style="top: 220px; left: -100px; height: 400px; "> <img data-src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnU4amwwZGxkd3ZrMjBpZHJmbXh3cm13dzk0cG03bjg1NzA2MnozcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/syVeLgziu57Qk/giphy.gif" class="absolute" style="top: 180px; left: 280px; "></p>
 </section>
 <section id="session-info-february-05-2025-rendering" class="slide level2">
 <h2><svg aria-hidden="true" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4287f5;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg> Session Info (February 05, 2025) Rendering:</h2>
