@@ -64,21 +64,26 @@ library(fontawesome)
 ## `r fontawesome::fa("download", fill="#8f00ff")` `r fontawesome::fa("share-from-square", fill="#ffa500")`  `r fontawesome::fa("cloud-arrow-up", fill="#2e5984")` [[Sharing]{.lucky}](https://quarto.org/docs/publishing/) `r fontawesome::fa("cloud-arrow-up", fill="#2e5984")` `r fontawesome::fa("share-from-square", fill="#ffa500")` `r fontawesome::fa("download", fill="#8f00ff")`  
 
 :::: {.columns}
-::: {.column width="20%"}
+::: {.column width="25%"}
 ![](https://ivelasq.quarto.pub/building-a-blog-with-quarto/workflow/publish-blog/quartopub.png){.absolute height="180" left="-140" top="230"}
 
 ![](https://pbs.twimg.com/media/Fgq0RkCWIAEInTS.png){.absolute left="-100" bottom="20" height="250"}
 :::
 
-::: {.column width="80%"}
+::: {.column width="75%"}
 
 :::: {.panel-tabset}
 
 ## Quarto Pub
 
+...limited to `website`, `manuscript` or `book` project types (as of February 7, 2025)
+
+![](img/terminal.JPG)
+
 ## Posit Connect
 
-
+![](img/posconnect1.JPG){.absolute height="300" right="150" top="270"}
+![](img/posconnect.JPG){.absolute height="400" right="130" top="240" .fragment}
 
 :::
 
