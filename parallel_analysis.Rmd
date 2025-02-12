@@ -1,0 +1,46 @@
+---
+title: "Parallel Analysis"
+author: "Diego Figueiras"
+date: "2025-02-11"
+output: html_document
+---
+
+```{r echo=FALSE, message=FALSE, warning=FALSE, cache=TRUE}
+
+library(psych)
+library(tidyverse)
+
+df<- read.csv("merged_data.csv") %>% select(-1, -262)
+
+
+cor <- cor(df, use = "pairwise.complete.obs")
+
+#polychoric <- polychoric(df)$rho 
+
+par<- fa.parallel(cor, fm = "minres", fa = "fa", n.iter =100)
+
+nfactor <- par$nfact
+cor<- data.frame(cor)
+efa_model<- fa(cor, fm="minres", rotate="oblimin", nfactor=nfactor)
+summary(efa_model)
+loadings_matrix<- efa_model$loadings[]
+
+
+
+
+```
+
+
+
+```{r ega, cache= TRUE, echo=FALSE, message=FALSE, warning=FALSE}
+
+library(EGAnet)
+ega_model<- EGA(df)
+#summary(ega_model)
+
+
+```
+
+
+
+

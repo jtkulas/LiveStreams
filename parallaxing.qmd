@@ -1,0 +1,29 @@
+---
+title: "Parallaxing in middle earth"
+format:
+  revealjs:
+    parallax-background-image:   http://i.imgur.com/JCiXqGQ.jpg
+    parallax-background-size: "5500px 1500px"
+    parallax-background-horizontal: 500
+    parallax-background-vertical: 300
+    navigation-mode: linear
+editor: visual
+title-slide-attributes: 
+  #data-background-image:   https://13thdimension.com/wp-content/uploads/2022/02/Screen-Shot-2022-02-04-at-1.13.38-PM-copy.jpg
+  data-background-opacity: ".4"
+
+---
+
+## Shire to Misty Mountains
+
+# Misty Mountains to Moria
+
+## Moria to Lothlorien
+
+## Lothlorien to Emen Mule
+
+![](https://t4.ftcdn.net/jpg/05/73/09/87/360_F_573098796_ZQ2RPAwyJF6NH28Phf0ddF32IuKhYebH.png)
+
+# Emen Mule to Moria
+
+
