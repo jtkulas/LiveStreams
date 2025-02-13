@@ -79,6 +79,7 @@ library(fontawesome)
 ```{r}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "1,11-14"
 library(psych)
 library(tidyverse)
 
@@ -104,6 +105,8 @@ par <- fa.parallel(cor,
 ```{r}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "1,2,11-14,16-19"
+#| 
 library(ggplot2)
 library(reshape2)
 
