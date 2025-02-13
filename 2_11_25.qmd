@@ -82,9 +82,14 @@ library(fontawesome)
 
 ## Posit Connect
 
-![](img/posconnect1.JPG){.absolute height="300" right="150" top="270"}
-![](img/posconnect.JPG){.absolute height="400" right="130" top="240" .fragment}
+Full instructions [available here](https://docs.posit.co/connect/user/publishing-rstudio/)
 
+![](img/posconnect1.JPG){.absolute height="300" right="150" top="310" .fragment .fade-in-then-out}
+![](img/posconnect.JPG){.absolute height="400" right="130" top="310" .fragment .fade-in-then-out}
+![](img/posconnect2.JPG){.absolute height="400" right="130" top="310" .fragment .fade-in-then-out}
+![](img/posconnect3.JPG){.absolute height="400" right="130" top="310" .fragment .fade-in-then-out}
+![](img/posconnect4.JPG){.absolute height="400" right="130" top="310" .fragment .fade-in-then-out}
+![](img/posconnect5.JPG){.absolute height="400" right="130" top="310" .fragment}
 :::
 
 ::::

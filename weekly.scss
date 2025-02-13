@@ -31,6 +31,7 @@
 @import url('https://fonts.googleapis.com/css?family=Kaushan Script');
 @import url('https://fonts.googleapis.com/css?family=Lemon');
 @import url('https://fonts.googleapis.com/css?family=Barriecito');
+@import url('https://fonts.googleapis.com/css?family=Acme');
 
 /*-- scss:defaults --*/
 
@@ -38,7 +39,7 @@ $body-bg: #191919;
 $body-color: #fff;
 $link-color: #42affa;
 $code-color: hotpink;
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 $presentation-title-slide-text-color: black;
 
 /*-- scss:rules --*/
@@ -205,6 +206,10 @@ width: 10px;
 
 .tilt {
   rotate: 20deg;
+}
+
+.tilt15 {
+  rotate: 15deg;
 }
 
 .tilt2 {
@@ -445,4 +450,9 @@ width: 10px;
 .barriecito{
   font-family: "Barriecito";
   color: #0FFF50;
+}
+
+.quiz {
+  font-family: "Acme";
+  color: #89CFF0;
 }
