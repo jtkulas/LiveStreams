@@ -1,0 +1,148 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #66...<br>[...emojis & icons!!!]{.emoji}"
+title-slide-attributes: 
+  data-background-image: https://parade.com/.image/t_share/MTk0NDkyNDU0MjY1NjkzODcz/emoji-meaning.jpg
+  data-background-opacity: ".2"
+format:
+  revealjs:
+    mouse-wheel: true                ## yes enables mouse
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+#    controls-layout: bottom-right
+#    controls-tutorial: true
+#    slide-number: h.v
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [league, weekly.scss]       ## night & league
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #65&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    - [emojis & icons!!!]{.emoji}
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title65.JPG){.absolute top="170" right="-120" width="600" height="325"}
+
+# Recap of Session <br>#65: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://d2iz36aojbpca1.cloudfront.net/static/quizmaster-logo-86943346875ef1d27d56b54441c8ec4e.png){.absolute width="180" top="300" right="140"}
+
+## `r emo::ji("thinking_face")`[Quizzing your audience]{.quiz}`r emo::ji("face_with_raised_eyebrow")`
+
+:::: {.columns}
+::: {.column width="20%"}
+
+:::
+
+::: {.column width="80%"}
+
+:::: {.panel-tabset}
+
+## Extension
+
+[![](https://github.com/parmsam/quarto-quiz/blob/main/example.png?raw=true)](https://github.com/parmsam/quarto-quiz)
+
+## Quiz Slides
+
+```{yaml}
+#| eval: false
+#| echo: true
+
+## What is the capital of France? {.quiz-question}
+
+- Madrid
+- Berlin
+- London
+- [Paris]{.correct}
+
+```
+
+## YAML
+
+```{yaml}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "8,15"
+
+---
+title: "Multiple Choice Quiz Example"
+format:
+  revealjs:
+    quiz: 
+      checkKey: 'c'
+      resetKey: 'q'
+      shuffleKey: 't'
+      allowNumberKeys: true
+      disableOnCheck: false
+      disableReset: false
+      shuffleOptions: true
+      defaultCorrect: "Correct!"
+      defaultIncorrect: "Incorrect!"
+      includeScore: false
+revealjs-plugins:                                   #<1>
+  - quiz                                            #<1>
+---
+
+```
+1. Need to first install within project directory (will create an `_extensions` folder with necessary quiz files)
+
+:::
+
+::::
+
+::::
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3h6Zm5iejRkb2RyNGx4ZzVhcHI5Z29oNGN4amdyNm1iejAxeXBlMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UEiQLao6tg4uckpbvE/giphy.gif){.absolute left="-80" height="300" bottom="200"}
+
+# Today...
+![](https://cdn.shopify.com/s/files/1/1061/1924/files/Sunglasses_Emoji.png?2976903553660223024)
+
+## [emojis & icons!!!]{.emoji}
+
+[font](https://fonts.google.com/noto/specimen/Noto+Color+Emoji?query=emoji)
+
+[academicons](https://github.com/schochastics/academicons?tab=readme-ov-file)
+
+[emojis](https://unpkg.com/emojilib@3.0.7/dist/emoji-en-US.json)
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
+

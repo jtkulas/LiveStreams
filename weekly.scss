@@ -32,6 +32,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lemon');
 @import url('https://fonts.googleapis.com/css?family=Barriecito');
 @import url('https://fonts.googleapis.com/css?family=Acme');
+@import url('https://fonts.googleapis.com/css?family=Berkshire Swash');
 
 /*-- scss:defaults --*/
 
@@ -39,7 +40,7 @@ $body-bg: #191919;
 $body-color: #fff;
 $link-color: #42affa;
 $code-color: hotpink;
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: left;
 $presentation-title-slide-text-color: black;
 
 /*-- scss:rules --*/
@@ -455,4 +456,9 @@ width: 10px;
 .quiz {
   font-family: "Acme";
   color: #89CFF0;
+}
+
+.emoji {
+  font-family: "Berkshire Swash";
+  color: #DAA520;
 }
