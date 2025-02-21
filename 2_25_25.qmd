@@ -133,11 +133,21 @@ revealjs-plugins:                                   #<1>
 
 ## [emojis & icons!!!]{.emoji}
 
-[font](https://fonts.google.com/noto/specimen/Noto+Color+Emoji?query=emoji)
+::: {.absolute bottom="175" left="100" height="250"}
+[![](https://static.vecteezy.com/system/resources/thumbnails/047/269/681/small_2x/thumb-up-emoji-isolated-in-transparent-background-png.png)](https://unpkg.com/emojilib@3.0.7/dist/emoji-en-US.json)
+:::
 
-[academicons](https://github.com/schochastics/academicons?tab=readme-ov-file)
+::: {.absolute top="120" left="-50" width="300"}
+[![](https://www.pinclipart.com/picdir/big/211-2116571_website-website-logo-png-transparent-background-clipart.png)](https://fontawesome.com/search?)
+:::
 
-[emojis](https://unpkg.com/emojilib@3.0.7/dist/emoji-en-US.json)
+::: {.absolute top="150" right="250" width="300"}
+[![Font Specification???](https://static.vecteezy.com/system/resources/previews/011/754/782/non_2x/alphabet-graffiti-font-free-vector.jpg)](https://fonts.google.com/noto/specimen/Noto+Color+Emoji?query=emoji)
+:::
+
+::: {.absolute bottom="0" right="-50" width="250"}
+[![academicons???](https://www.mtsac.edu/academics-and-training/images/continuing_ed_icon.png)](https://github.com/schochastics/academicons?tab=readme-ov-file)
+:::
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 
