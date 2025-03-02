@@ -1,0 +1,221 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #67...<br>[...code annotation!!!]{.code}"
+title-slide-attributes: 
+  data-background-image: https://www.howlifeunfolds.com/sites/default/files/styles/article_hero/public/2019-06/HERO_illustrations_DoodleDecoder.webp?itok=I2ch_WqN
+  data-background-opacity: ".7"
+format:
+  revealjs:
+    mouse-wheel: false               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+#    controls-layout: bottom-right
+#    controls-tutorial: true
+#    slide-number: h.v
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [league, weekly.scss]       ## night & league
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover 
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #66&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Focal issue(s):
+    - [code annotation!!!]{.code}
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title66.JPG){.absolute top="170" right="-120" width="600" height="325"}
+
+# Recap of Session <br>#66: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://cdn.shopify.com/s/files/1/1061/1924/files/Sunglasses_Emoji.png?2976903553660223024){.absolute width="170" top="290" right="150" .tilt}
+
+## [`r emo::ji("face_with_monocle")`](https://www.plantersnutmobile.com/wp-content/uploads/timeline_mr-peanut.svg?1737748689)`r emo::ji("partying_face")` [[emojis](https://github.com/hadley/emo) & [icons](https://rstudio.github.io/fontawesome/)!!!]{.emoji} `r fontawesome::fa("r-project", fill="#4287f5")` [`r fontawesome::fa("github", fill="#edeade")`](https://github.com/jtkulas/LiveStreams)
+
+:::: {.panel-tabset}
+
+### `r fontawesome::fa("html5", fill="#eb6b34")` script
+
+```{yaml}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "21,23,26-32"
+
+---
+title: "Emojis and Icons"
+format: html
+---
+
+``{css}
+
+.bigger{
+  font-size: 5em; 
+}
+
+``
+
+
+# allo peeps `r emo::ji("airplane")`
+
+## Quantas `r emo::ji("airplane")`
+
+![](https://www.wwf.org.uk/sites/default/files/styles/max_650x650/public/2022-05/_WW236934.jpg?itok=JlG-1l9V)
+
+Here's a nice looking koala `r emo::ji("koala")`
+
+Is this one even bigger? [`r emo::ji("koala")`]{.bigger}
+
+
+::: {.bigger}
+`r fontawesome::fa("clapperboard", fill="#4287f5", fill_opacity = .3)`
+
+`r fontawesome::fa("route", fill="#e241e8")`
+
+`r fontawesome::fa("apple", fill="#e8a041")`
+:::
+```
+
+### `r fontawesome::fa("html5", fill="#eb6b34")` output
+
+<iframe style="border: 0; width:100%; height: 500px; overflow: auto;" src="casey.html"></iframe>
+
+### `r fontawesome::fa("file-pdf", fill="#eb2828")` script
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "4-8,21-27,38"
+#| 
+---
+title: "Emojis and Icons"
+format: 
+  pdf:
+    pdf-engine: lualatex
+    include-in-header: 
+      - text:
+          \usepackage{emoji}
+engine: knitr
+---
+
+``{r emoji}
+#| echo: false
+#| warning: false
+#| message: false
+
+## https://ctan.math.washington.edu/tex-archive/macros/luatex/latex/emoji/emoji-doc.pdf
+
+library(stringr)
+
+emoji <- function(x) {
+  if (knitr::is_latex_output()) {
+ stringr::str_c("\\emoji{", str_replace_all(x, "_", "-"), "}")
+  } else if (knitr::is_html_output()) {
+ stringr::str_c(":", x, ":")
+  } else x
+}
+``
+
+# allo peeps `r emoji("airplane")`
+
+## Quantas `r emoji("airplane")`
+
+![](https://www.wwf.org.uk/sites/default/files/styles/max_650x650/public/2022-05/_WW236934.jpg?itok=JlG-1l9V)
+
+Here's a nice looking koala `r emoji("koala")`
+
+Is this one even bigger? \Huge `r emoji("koala")`      #<1>
+
+
+`r fontawesome::fa("clapperboard", fill="#4287f5", fill_opacity = .3)`
+
+`r fontawesome::fa("route", fill="#e241e8")`
+
+`r fontawesome::fa("apple", fill="#e8a041")`
+
+```
+1. The `\Huge` specification is a LaTeX command with similar effect as the .css `.bigger`
+
+### `r fontawesome::fa("file-pdf", fill="#eb2828")` output
+
+<iframe style="border: 0; width:100%; height: 500px; overflow: auto;" src="casey.pdf"></iframe>
+
+::::
+
+
+# Today...
+![](https://wallpapers.com/images/hd/blue-feather-quill-pen-png-3e3ijgw3l2opeljs.jpg){.absolute bottom="60" left="320" height="250"}
+
+## [code annotation!!!]{.code}
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+<br>
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "1|3|5"
+
+yabba <- c(1,2,3)
+
+dabba <- c(4,5,6) 
+
+doo   <- c("A","B","C")              #<1> 
+
+wilma <- as.data.frame(
+        cbind(yabba,dabba,
+        doo))
+
+plot(wilma)
+
+```
+1. ...or dew not `r emo::ji("droplet")``r emo::ji("no_entry")`, that is the question `r emo::ji("face_with_raised_eyebrow")``r emo::ji("thinking_face")`
+
+:::
+
+:::
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZncyZDdiamptemJmeHJjczRxZDIzM3h0NDE1MGFoOW16djQ2ZmhhYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jNDxHrLApPfVkXIanv/giphy.gif){.absolute right="-70" height="550" bottom="50"}
+
+![](https://static.vecteezy.com/system/resources/thumbnails/008/481/510/small_2x/highlighter-pen-yellow-color-3d-illustration-icon-png.png){.absolute left="390" top="170" height="150"}
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
+

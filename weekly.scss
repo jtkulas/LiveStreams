@@ -33,6 +33,7 @@
 @import url('https://fonts.googleapis.com/css?family=Barriecito');
 @import url('https://fonts.googleapis.com/css?family=Acme');
 @import url('https://fonts.googleapis.com/css?family=Berkshire Swash');
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
 
 /*-- scss:defaults --*/
 
@@ -461,4 +462,14 @@ width: 10px;
 .emoji {
   font-family: "Berkshire Swash";
   color: #DAA520;
+}
+
+.code {
+  font-family: "Audiowide";
+  color: #42fafd;
+}
+
+.code2 {
+  font-family: "Audiowide";
+  color: #39ff14;
 }
