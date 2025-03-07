@@ -34,6 +34,7 @@
 @import url('https://fonts.googleapis.com/css?family=Acme');
 @import url('https://fonts.googleapis.com/css?family=Berkshire Swash');
 @import url('https://fonts.googleapis.com/css?family=Audiowide');
+@import url('https://fonts.googleapis.com/css?family=Kablammo');
 
 /*-- scss:defaults --*/
 
@@ -64,8 +65,18 @@ $presentation-title-slide-text-color: black;
   font-weight: bold;
   font-family: 'Dancing Script';
   text-shadow: 
+    2px 2px 2px white,
+    -3px -3px 3px white;
+}
+
+.tempanimal {
+  font-size: 65px;
+  color: 	white;
+  font-weight: bold;
+  font-family: 'Dancing Script';
+  text-shadow: 
     2px 2px 2px black,
-    -3px -3px 3px black
+    -3px -3px 3px black;
 }
 
 /*-- supposedly helps with content overflow --*/
@@ -472,4 +483,11 @@ width: 10px;
 .code2 {
   font-family: "Audiowide";
   color: #39ff14;
+}
+
+.animation {
+  font-family: "Kablammo";
+  color: black;
+  text-shadow: 
+   2px 2px 1px white !important;
 }

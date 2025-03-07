@@ -1,12 +1,12 @@
 ---
 title: "R for <br>Authoring!!" 
-author: "OOH Session #67...<br>[...code annotation!!!]{.code}"
+author: "[OOH Session #68...]{.tempanimal}<br>[...animation!!!]{.animation}"
 title-slide-attributes: 
-  data-background-image: https://www.howlifeunfolds.com/sites/default/files/styles/article_hero/public/2019-06/HERO_illustrations_DoodleDecoder.webp?itok=I2ch_WqN
-  data-background-opacity: ".7"
+  data-background-image: https://wildlifeartstore.b-cdn.net/wp-content/uploads/2021/10/drawing-and-sketching-whats-the-difference-header.jpg
+  data-background-opacity: ".5"
 format:
   revealjs:
-    mouse-wheel: false               ## code navigation messy
+    mouse-wheel: true               ## code navigation messy
     slide-tone: false
 #    navigation-mode: vertical
     transition: convex
@@ -42,9 +42,9 @@ library(fontawesome)
 
 ::: {layout="[80,20]"}
 ::: first-column
--   Recap session #66&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r emo::ji("left_right_arrow")`
+-   Recap session #67
 -   Focal issue(s):
-    - [code annotation!!!]{.code}
+    - [animation!!!]{.animation}
 -   Shared problem-solving
 :::
 
@@ -53,15 +53,17 @@ library(fontawesome)
 
 :::
 
-![](img/title66.JPG){.absolute top="170" right="-120" width="600" height="325"}
+![](img/title67.JPG){.absolute top="135" right="-120" width="600" height="325"}
 
-# Recap of Session <br>#66: 
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="155" left="360" width="200"}
+
+# Recap of Session <br>#67: 
 
 ![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
 
-![](https://cdn.shopify.com/s/files/1/1061/1924/files/Sunglasses_Emoji.png?2976903553660223024){.absolute width="170" top="290" right="150" .tilt}
+![](https://wallpapers.com/images/hd/blue-feather-quill-pen-png-3e3ijgw3l2opeljs.jpg){.absolute width="170" top="290" right="150"}
 
-## [`r emo::ji("face_with_monocle")`](https://www.plantersnutmobile.com/wp-content/uploads/timeline_mr-peanut.svg?1737748689)`r emo::ji("partying_face")` [[emojis](https://github.com/hadley/emo) & [icons](https://rstudio.github.io/fontawesome/)!!!]{.emoji} `r fontawesome::fa("r-project", fill="#4287f5")` [`r fontawesome::fa("github", fill="#edeade")`](https://github.com/jtkulas/LiveStreams)
+## [`r emo::ji("computer")` [code annotation!!!]{.code} `r emo::ji("crystal_ball")``r emo::ji("artist_palette")`](https://quarto.org/docs/authoring/code-annotation.html)
 
 :::: {.panel-tabset}
 
@@ -174,43 +176,17 @@ Is this one even bigger? \Huge `r emoji("koala")`      #<1>
 
 
 # Today...
-![](https://wallpapers.com/images/hd/blue-feather-quill-pen-png-3e3ijgw3l2opeljs.jpg){.absolute bottom="60" left="320" height="250"}
+![](https://www.pngall.com/wp-content/uploads/13/Black-Cat-Transparent.png){.absolute bottom="20" left="275" .mirror}
 
-## [code annotation!!!]{.code}
+![](https://pngimg.com/d/cat_PNG50504.png){.absolute bottom="100" left="-60"}
 
-::: {.columns}
+## [Animation!!!]{.animation} `r emo::ji("dashing_away")``r emo::ji("dashing_away")`
 
-::: {.column width="40%"}
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExanoydzVhdnMybW80ZGxmajdvcG5peHQ0anlzejZxOGZqdXgydHZyeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tze1mGedykiuk/giphy.gif){.absolute right="-70" height="450" bottom="50"}
 
-<br>
+![](https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png){.absolute top="25" right="-70" height="200" .mirror}
 
-```{r}
-#| eval: false
-#| echo: true
-#| code-line-numbers: "1|3|5"
-
-yabba <- c(1,2,3)
-
-dabba <- c(4,5,6) 
-
-doo   <- c("A","B","C")              #<1> 
-
-wilma <- as.data.frame(
-        cbind(yabba,dabba,
-        doo))
-
-plot(wilma)
-
-```
-1. ...or dew not `r emo::ji("droplet")``r emo::ji("no_entry")`, that is the question `r emo::ji("face_with_raised_eyebrow")``r emo::ji("thinking_face")`
-
-:::
-
-:::
-
-![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZncyZDdiamptemJmeHJjczRxZDIzM3h0NDE1MGFoOW16djQ2ZmhhYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jNDxHrLApPfVkXIanv/giphy.gif){.absolute right="-70" height="550" bottom="50"}
-
-![](https://static.vecteezy.com/system/resources/thumbnails/008/481/510/small_2x/highlighter-pen-yellow-color-3d-illustration-icon-png.png){.absolute left="390" top="170" height="150"}
+![](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ac7d183b-035e-4133-8302-bcc92a267aa7/dh4f3qk-9221099a-1007-45f0-aeaa-eadddab3d64a.png/v1/fill/w_1024,h_795/snoopy_and_woodstock_png_2_by_ppgfanantic2000_dh4f3qk-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Nzk1IiwicGF0aCI6IlwvZlwvYWM3ZDE4M2ItMDM1ZS00MTMzLTgzMDItYmNjOTJhMjY3YWE3XC9kaDRmM3FrLTkyMjEwOTlhLTEwMDctNDVmMC1hZWFhLWVhZGRkYWIzZDY0YS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.Y12StO6WPiWm4r1ViozZHjQkjCU7vAP6MUhCTOpk2Po){.absolute height="500" bottom="50" left="-70" .mirror}
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 
