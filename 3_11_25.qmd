@@ -180,7 +180,7 @@ Is this one even bigger? \Huge `r emoji("koala")`      #<1>
 
 ![](https://pngimg.com/d/cat_PNG50504.png){.absolute bottom="100" left="-60"}
 
-## [Animation!!!]{.animation} `r emo::ji("dashing_away")``r emo::ji("dashing_away")`
+## [[Animation!!!]{.animation} `r emo::ji("dashing_away")``r emo::ji("dashing_away")`](https://quarto.org/docs/presentations/revealjs/advanced.html#auto-animate)
 
 ![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExanoydzVhdnMybW80ZGxmajdvcG5peHQ0anlzejZxOGZqdXgydHZyeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tze1mGedykiuk/giphy.gif){.absolute right="-70" height="450" bottom="50"}
 
