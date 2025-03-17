@@ -35,6 +35,7 @@
 @import url('https://fonts.googleapis.com/css?family=Berkshire Swash');
 @import url('https://fonts.googleapis.com/css?family=Audiowide');
 @import url('https://fonts.googleapis.com/css?family=Kablammo');
+@import url('https://fonts.googleapis.com/css?family=Emblema One');
 
 /*-- scss:defaults --*/
 
@@ -65,8 +66,8 @@ $presentation-title-slide-text-color: black;
   font-weight: bold;
   font-family: 'Dancing Script';
   text-shadow: 
-    2px 2px 2px white,
-    -3px -3px 3px white;
+    2px 2px 2px black,
+    -3px -3px 3px black;
 }
 
 .tempanimal {
@@ -490,4 +491,12 @@ width: 10px;
   color: black;
   text-shadow: 
    2px 2px 1px white !important;
+}
+
+.emblem{
+  font-family: "Emblema One";
+  color: #5F9EA0;
+  text-shadow: 
+   2px 2px 1px #00FFFF,
+   -2px -2px 1px black !important;
 }

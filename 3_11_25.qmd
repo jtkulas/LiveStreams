@@ -57,6 +57,13 @@ library(fontawesome)
 
 ![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="155" left="360" width="200"}
 
+```{css}
+.reveal pre.sourceCode code {
+  height: 300px; 
+  max-height: 1000px;
+}
+```
+
 # Recap of Session <br>#67: 
 
 ![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
@@ -67,110 +74,90 @@ library(fontawesome)
 
 :::: {.panel-tabset}
 
-### `r fontawesome::fa("html5", fill="#eb6b34")` script
+### line highlighting
 
-```{yaml}
+::: {.columns}
+::: {.column width="50%"}
+
+```{}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "21,23,26-32"
+#| code-line-numbers: "1|7-8"
 
----
-title: "Emojis and Icons"
-format: html
----
+data(mtcars)
 
-``{css}
+#create boxplot of values for mpg
+boxplot(mtcars$mpg,
+        main='Distribution of mpg values',
+        ylab='mpg',
+        col='steelblue',
+        border='black')
 
-.bigger{
-  font-size: 5em; 
-}
-
-``
-
-
-# allo peeps `r emo::ji("airplane")`
-
-## Quantas `r emo::ji("airplane")`
-
-![](https://www.wwf.org.uk/sites/default/files/styles/max_650x650/public/2022-05/_WW236934.jpg?itok=JlG-1l9V)
-
-Here's a nice looking koala `r emo::ji("koala")`
-
-Is this one even bigger? [`r emo::ji("koala")`]{.bigger}
-
-
-::: {.bigger}
-`r fontawesome::fa("clapperboard", fill="#4287f5", fill_opacity = .3)`
-
-`r fontawesome::fa("route", fill="#e241e8")`
-
-`r fontawesome::fa("apple", fill="#e8a041")`
-:::
 ```
+:::
 
-### `r fontawesome::fa("html5", fill="#eb6b34")` output
-
-<iframe style="border: 0; width:100%; height: 500px; overflow: auto;" src="casey.html"></iframe>
-
-### `r fontawesome::fa("file-pdf", fill="#eb2828")` script
-
+::: {.column width="50%"}
 ```{r}
 #| eval: false
 #| echo: true
-#| code-line-numbers: "4-8,21-27,38"
-#| 
----
-title: "Emojis and Icons"
-format: 
-  pdf:
-    pdf-engine: lualatex
-    include-in-header: 
-      - text:
-          \usepackage{emoji}
-engine: knitr
----
+#| code-line-numbers: "1|7-8"
 
-``{r emoji}
-#| echo: false
-#| warning: false
-#| message: false
+data(mtcars)
 
-## https://ctan.math.washington.edu/tex-archive/macros/luatex/latex/emoji/emoji-doc.pdf
-
-library(stringr)
-
-emoji <- function(x) {
-  if (knitr::is_latex_output()) {
- stringr::str_c("\\emoji{", str_replace_all(x, "_", "-"), "}")
-  } else if (knitr::is_html_output()) {
- stringr::str_c(":", x, ":")
-  } else x
-}
-``
-
-# allo peeps `r emoji("airplane")`
-
-## Quantas `r emoji("airplane")`
-
-![](https://www.wwf.org.uk/sites/default/files/styles/max_650x650/public/2022-05/_WW236934.jpg?itok=JlG-1l9V)
-
-Here's a nice looking koala `r emoji("koala")`
-
-Is this one even bigger? \Huge `r emoji("koala")`      #<1>
-
-
-`r fontawesome::fa("clapperboard", fill="#4287f5", fill_opacity = .3)`
-
-`r fontawesome::fa("route", fill="#e241e8")`
-
-`r fontawesome::fa(("apple", fill="#e8a041"))`
+#create boxplot of values for mpg
+boxplot(mtcars$mpg,
+        main='Distribution of mpg values',
+        ylab='mpg',
+        col='steelblue',
+        border='black')
 
 ```
-1. The `\Huge` specification is a LaTeX command with similar effect as the .css `.bigger`
 
-### `r fontawesome::fa("file-pdf", fill="#eb2828")` output
+:::
+:::
 
-<iframe style="border: 0; width:100%; height: 500px; overflow: auto;" src="casey.pdf"></iframe>
+### annotations
+
+::: {.columns}
+::: {.column width="50%"}
+
+```{}
+#| eval: false
+#| echo: true
+
+data(mtcars)       `#<1>`
+
+#create boxplot of values for mpg
+boxplot(mtcars$mpg,
+        main='Distribution of mpg values',
+        ylab='mpg',
+        col='steelblue',
+        border='black')
+
+1. This is the `mtcars` data `r emo::ji("automobile")`
+
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| eval: false
+#| echo: true
+
+data(mtcars)       #<1>
+
+#create boxplot of values for mpg
+boxplot(mtcars$mpg,
+        main='Distribution of mpg values',
+        ylab='mpg',
+        col='steelblue',
+        border='black')
+
+```
+1. This is the `mtcars` data `r emo::ji("automobile")`
+
+:::
+:::
 
 ::::
 
