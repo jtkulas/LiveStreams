@@ -32,6 +32,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="3_18_25_files/libs/revealjs/dist/theme/quarto.css">
   <link href="3_18_25_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -340,8 +405,8 @@ OOH Session #69…<br><span class="emblem">…fullscreen code</span>
 </div>
 
 </section>
-<section id="open-office-hours-march-17-2025" class="slide level2">
-<h2>Open Office Hours <br>(March 17, 2025)</h2>
+<section id="open-office-hours-march-18-2025" class="slide level2">
+<h2>Open Office Hours <br>(March 18, 2025)</h2>
 <div>
 
 </div>
@@ -364,14 +429,6 @@ OOH Session #69…<br><span class="emblem">…fullscreen code</span>
 </div>
 <p><img data-src="img/title68.JPG" class="absolute" style="top: 135px; right: -120px; width: 600px; height: 325px; "></p>
 <p><img data-src="https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png" class="absolute" style="top: 155px; left: 360px; width: 200px; "></p>
-<div class="cell">
-<style type="text/css">
-.reveal pre.sourceCode code {
-  height: 300px; 
-  max-height: 1000px;
-}
-</style>
-</div>
 </section>
 <section>
 <section id="recap-of-session-68" class="title-slide slide level1 center">
@@ -389,6 +446,113 @@ OOH Session #69…<br><span class="emblem">…fullscreen code</span>
 <div style="font-size: 4em; color: blue;">
 <p>should I drink the tea?!?</p>
 </div>
+</section>
+<section id="animations-2" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"><span class="animation">animations!!!</span></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb1-1" class="hljs-ln-code"><a href=""></a><span class="fu">library</span>(grid)</span>
+<span id="cb1-2" class="hljs-ln-code"><a href=""></a>mm <span class="ot">&lt;-</span> <span class="fu">meme</span>(u, <span class="st">"code"</span>, <span class="st">"all the things!"</span>, <span class="at">size=</span>.<span class="dv">3</span>, <span class="at">color=</span><span class="st">'firebrick'</span>)</span>
+<span id="cb1-3" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb1-4" class="hljs-ln-code"><a href=""></a><span class="fu">grid.newpage</span>()</span>
+<span id="cb1-5" class="hljs-ln-code"><a href=""></a><span class="fu">pushViewport</span>(<span class="fu">viewport</span>(<span class="at">width=</span>.<span class="dv">9</span>, <span class="at">height=</span>.<span class="dv">9</span>))</span>
+<span id="cb1-6" class="hljs-ln-code"><a href=""></a><span class="fu">grid.rect</span>(<span class="at">gp =</span> <span class="fu">gpar</span>(<span class="at">lty=</span><span class="st">"dashed"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="animations-3" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title"><span class="animation">animations!!!</span></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb2-1" class="hljs-ln-code"><a href=""></a><span class="fu">library</span>(grid)</span>
+<span id="cb2-2" class="hljs-ln-code"><a href=""></a>mm <span class="ot">&lt;-</span> <span class="fu">meme</span>(u, <span class="st">"code"</span>, <span class="st">"all the things!"</span>, <span class="at">size=</span>.<span class="dv">3</span>, <span class="at">color=</span><span class="st">'firebrick'</span>)</span>
+<span id="cb2-3" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb2-4" class="hljs-ln-code"><a href=""></a><span class="fu">grid.newpage</span>()</span>
+<span id="cb2-5" class="hljs-ln-code"><a href=""></a><span class="fu">pushViewport</span>(<span class="fu">viewport</span>(<span class="at">width=</span>.<span class="dv">9</span>, <span class="at">height=</span>.<span class="dv">9</span>))</span>
+<span id="cb2-6" class="hljs-ln-code"><a href=""></a><span class="fu">grid.rect</span>(<span class="at">gp =</span> <span class="fu">gpar</span>(<span class="at">lty=</span><span class="st">"dashed"</span>))</span>
+<span id="cb2-7" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb2-8" class="hljs-ln-code"><a href=""></a>xx <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">2</span><span class="sc">*</span>pi , <span class="at">length.out=</span><span class="dv">10</span>)      </span>
+<span id="cb2-9" class="hljs-ln-code"><a href=""></a>yy <span class="ot">&lt;-</span> <span class="fu">sin</span>(xx)                           </span>
+<span id="cb2-10" class="hljs-ln-code"><a href=""></a></span>
+<span id="cb2-11" class="hljs-ln-code"><a href=""></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(xx)) {</span>
+<span id="cb2-12" class="hljs-ln-code"><a href=""></a>    vp <span class="ot">&lt;-</span> <span class="fu">viewport</span>(<span class="at">x =</span> xx[i]<span class="sc">/</span>(<span class="dv">2</span><span class="sc">*</span>pi), <span class="at">y =</span> (yy[i]<span class="sc">-</span><span class="fu">min</span>(yy))<span class="sc">/</span><span class="dv">2</span>, <span class="at">width=</span>.<span class="dv">05</span>, <span class="at">height=</span>.<span class="dv">05</span>)</span>
+<span id="cb2-13" class="hljs-ln-code"><a href=""></a>    <span class="fu">print</span>(mm, <span class="at">vp =</span> vp)</span>
+<span id="cb2-14" class="hljs-ln-code"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="animation-code" class="slide level2">
+<h2><span class="animation">animation</span> <span class="emblem">code</span></h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Page Content 🎬</a></li><li><a href="#tabset-1-2">Code Chunks 📟</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="annotated-cell-3" data-code-line-numbers="2,8,10-12"><pre class="sourceCode numberSource yaml code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode yaml"><span id="annotated-cell-3-1"><a href="#annotated-cell-3-1"></a></span>
+<span id="annotated-cell-3-2"><a href="#annotated-cell-3-2"></a><span class="co">## [animations!!!]{.animation}{auto-animate=true} </span></span>
+<span id="annotated-cell-3-3"><a href="#annotated-cell-3-3"></a></span>
+<span id="annotated-cell-3-4"><a href="#annotated-cell-3-4"></a><span class="at">should I drink the tea?!?</span></span>
+<span id="annotated-cell-3-5"><a href="#annotated-cell-3-5"></a></span>
+<span id="annotated-cell-3-6"><a href="#annotated-cell-3-6"></a><span class="at">![](https://clipart-library.com/images/rinraK87T.png)</span></span>
+<span id="annotated-cell-3-7"><a href="#annotated-cell-3-7"></a></span>
+<span id="annotated-cell-3-8"><a href="#annotated-cell-3-8"></a><span class="co">## [animations!!!]{.animation}{auto-animate=true}</span></span>
+<span id="annotated-cell-3-9"><a href="#annotated-cell-3-9"></a></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="1">1</button><span id="annotated-cell-3-10" class="code-annotation-target"><a href="#annotated-cell-3-10"></a><span class="at">:</span><span class="fu">:</span><span class="kw">:</span><span class="at"> </span><span class="kw">{</span><span class="fu">style="font-size</span><span class="kw">:</span><span class="at"> 4em; color: blue;"</span><span class="kw">}</span></span>
+<span id="annotated-cell-3-11"><a href="#annotated-cell-3-11"></a><span class="at">should I drink the tea?!?</span></span>
+<span id="annotated-cell-3-12"><a href="#annotated-cell-3-12"></a><span class="at">:</span><span class="fu">:</span><span class="kw">:</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-3" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-3" data-code-lines="10,12" data-code-annotation="1">styling specifications 🎨</span>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="annotated-cell-4" data-code-line-numbers="2,15,26-31"><pre class="sourceCode numberSource yaml code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode yaml"><span id="annotated-cell-4-1"><a href="#annotated-cell-4-1"></a></span>
+<span id="annotated-cell-4-2"><a href="#annotated-cell-4-2"></a><span class="co">## [animations!!!]{.animation} {auto-animate=true}</span></span>
+<span id="annotated-cell-4-3"><a href="#annotated-cell-4-3"></a></span>
+<span id="annotated-cell-4-4"><a href="#annotated-cell-4-4"></a><span class="at">``</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="1">1</button><span id="annotated-cell-4-5" class="code-annotation-target"><a href="#annotated-cell-4-5"></a><span class="at">library(grid)</span></span>
+<span id="annotated-cell-4-6"><a href="#annotated-cell-4-6"></a><span class="at">mm &lt;- meme(u, "code", "all the things!", size=.3, color='firebrick')</span></span>
+<span id="annotated-cell-4-7"><a href="#annotated-cell-4-7"></a></span>
+<span id="annotated-cell-4-8"><a href="#annotated-cell-4-8"></a><span class="at">grid.newpage()</span></span>
+<span id="annotated-cell-4-9"><a href="#annotated-cell-4-9"></a><span class="at">pushViewport(viewport(width=.9, height=.9))</span></span>
+<span id="annotated-cell-4-10"><a href="#annotated-cell-4-10"></a><span class="at">grid.rect(gp = gpar(lty="dashed"))</span></span>
+<span id="annotated-cell-4-11"><a href="#annotated-cell-4-11"></a></span>
+<span id="annotated-cell-4-12"><a href="#annotated-cell-4-12"></a></span>
+<span id="annotated-cell-4-13"><a href="#annotated-cell-4-13"></a><span class="at">``</span></span>
+<span id="annotated-cell-4-14"><a href="#annotated-cell-4-14"></a></span>
+<span id="annotated-cell-4-15"><a href="#annotated-cell-4-15"></a><span class="co">## [animations!!!]{.animation} {auto-animate=true}</span></span>
+<span id="annotated-cell-4-16"><a href="#annotated-cell-4-16"></a></span>
+<span id="annotated-cell-4-17"><a href="#annotated-cell-4-17"></a><span class="at">``{r}</span></span>
+<span id="annotated-cell-4-18"><a href="#annotated-cell-4-18"></a></span>
+<span id="annotated-cell-4-19"><a href="#annotated-cell-4-19"></a><span class="at">library(grid)</span></span>
+<span id="annotated-cell-4-20"><a href="#annotated-cell-4-20"></a><span class="at">mm &lt;- meme(u, "code", "all the things!", size=.3, color='firebrick')</span></span>
+<span id="annotated-cell-4-21"><a href="#annotated-cell-4-21"></a></span>
+<span id="annotated-cell-4-22"><a href="#annotated-cell-4-22"></a><span class="at">grid.newpage()</span></span>
+<span id="annotated-cell-4-23"><a href="#annotated-cell-4-23"></a><span class="at">pushViewport(viewport(width=.9, height=.9))</span></span>
+<span id="annotated-cell-4-24"><a href="#annotated-cell-4-24"></a><span class="at">grid.rect(gp = gpar(lty="dashed"))</span></span>
+<span id="annotated-cell-4-25"><a href="#annotated-cell-4-25"></a></span>
+<span id="annotated-cell-4-26"><a href="#annotated-cell-4-26"></a><span class="at">xx &lt;- seq(0, 2*pi , length.out=10)      </span></span>
+<span id="annotated-cell-4-27"><a href="#annotated-cell-4-27"></a><span class="at">yy &lt;- sin(xx)                           </span></span>
+<span id="annotated-cell-4-28"><a href="#annotated-cell-4-28"></a></span>
+<span id="annotated-cell-4-29"><a href="#annotated-cell-4-29"></a><span class="at">for (i in seq_along(xx)) {</span></span>
+<span id="annotated-cell-4-30"><a href="#annotated-cell-4-30"></a><span class="at">    vp &lt;- viewport(x = xx[i]/(2*pi), y = (yy[i]-min(yy))/2, width=.05, height=.05)</span></span>
+<span id="annotated-cell-4-31"><a href="#annotated-cell-4-31"></a><span class="at">    print(mm, vp = vp)</span></span>
+<span id="annotated-cell-4-32"><a href="#annotated-cell-4-32"></a><span class="at">}</span></span>
+<span id="annotated-cell-4-33"><a href="#annotated-cell-4-33"></a><span class="at">``</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-4" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-4" data-code-lines="5,10" data-code-annotation="1">mirrored below – append bits you wish to be animated within ensuing slide</span>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+</div>
 </section></section>
 <section>
 <section id="today" class="title-slide slide level1 center">
@@ -404,8 +568,8 @@ OOH Session #69…<br><span class="emblem">…fullscreen code</span>
 <h2><a href="https://github.com/shafayetShafee/code-fullscreen"><span class="emblem">fullscreen code</span></a></h2>
 
 <img data-src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmlidGVremhtbWJjeHR6eDZ1b2o5cXNkN29uaXhwdnRqZ2drMGU2eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Wq9OL6EwSeJCetv6Zi/giphy.gif" class="r-stretch"></section>
-<section id="session-info-march-17-2025-rendering" class="slide level2">
-<h2><svg aria-hidden="true" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4287f5;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg> Session Info (March 17, 2025) Rendering:</h2>
+<section id="session-info-march-18-2025-rendering" class="slide level2">
+<h2><svg aria-hidden="true" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#4287f5;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg> Session Info (March 18, 2025) Rendering:</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.2.2 (2022-10-31 ucrt)
@@ -428,10 +592,13 @@ other attached packages:
 [1] fontawesome_0.5.2
 
 loaded via a namespace (and not attached):
- [1] compiler_4.2.2    fastmap_1.1.1     cli_3.6.0         tools_4.2.2      
- [5] htmltools_0.5.7   rstudioapi_0.15.0 yaml_2.3.10       rmarkdown_2.28   
- [9] knitr_1.45        jsonlite_1.8.9    xfun_0.42         digest_0.6.31    
-[13] rlang_1.1.3       evaluate_1.0.0   </code></pre>
+ [1] lubridate_1.9.3   emo_0.0.0.9000    digest_0.6.31     crayon_1.5.2     
+ [5] assertthat_0.2.1  lifecycle_1.0.4   jsonlite_1.8.9    magrittr_2.0.3   
+ [9] evaluate_1.0.0    stringi_1.7.12    rlang_1.1.3       cli_3.6.0        
+[13] rstudioapi_0.15.0 vctrs_0.6.5       generics_0.1.3    rmarkdown_2.28   
+[17] tools_4.2.2       stringr_1.5.1     glue_1.6.2        purrr_1.0.1      
+[21] xfun_0.42         yaml_2.3.10       fastmap_1.1.1     compiler_4.2.2   
+[25] timechange_0.3.0  htmltools_0.5.7   knitr_1.45       </code></pre>
 </div>
 </div>
 <div class="quarto-auto-generated-content">
@@ -596,7 +763,7 @@ loaded via a namespace (and not attached):
         defaultTiming: null,
 
         // Enable slide navigation via mouse wheel
-        mouseWheel: true,
+        mouseWheel: false,
 
         // The display mode that will be used to show slides
         display: 'block',
@@ -1012,7 +1179,6 @@ loaded via a namespace (and not attached):
               duration: [200, 0],
               offset: [5, 10],
               arrow: true,
-              trigger: 'click',
               appendTo: function(el) {
                 return el.parentElement.parentElement.parentElement;
               },
@@ -1020,7 +1186,6 @@ loaded via a namespace (and not attached):
               interactiveBorder: 10,
               theme: 'light-border',
               placement: 'right',
-              positionFixed: true,
               popperOptions: {
                 modifiers: [
                 {

@@ -6,7 +6,7 @@ title-slide-attributes:
   data-background-opacity: ".3"
 format:
   revealjs:
-    mouse-wheel: true               ## code navigation messy
+    mouse-wheel: false               ## code navigation messy
     slide-tone: false
 #    navigation-mode: vertical
     transition: convex
@@ -22,7 +22,7 @@ format:
     logo: "erg2.png"
     footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
     preview-links: false             ## true brings up iframe window instead of "site"
-    code-annotations: select
+    code-annotations: hover          ## select
     html-math-method: 
       method: mathjax        ## LaTeX in code annotations
       url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
@@ -57,13 +57,6 @@ library(fontawesome)
 
 ![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="155" left="360" width="200"}
 
-```{css}
-.reveal pre.sourceCode code {
-  height: 300px; 
-  max-height: 1000px;
-}
-```
-
 # Recap of Session <br>#68: 
 
 ![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
@@ -80,6 +73,120 @@ should I drink the tea?!?
 
 ::: {style="font-size: 4em; color: blue;"}
 should I drink the tea?!?
+:::
+
+## [animations!!!]{.animation} {auto-animate=true}
+
+```{r}
+#| echo: true
+#| eval: false
+
+
+library(grid)
+mm <- meme(u, "code", "all the things!", size=.3, color='firebrick')
+
+grid.newpage()
+pushViewport(viewport(width=.9, height=.9))
+grid.rect(gp = gpar(lty="dashed"))
+
+
+```
+
+## [animations!!!]{.animation} {auto-animate=true}
+
+```{r}
+#| echo: true
+#| eval: false
+
+
+library(grid)
+mm <- meme(u, "code", "all the things!", size=.3, color='firebrick')
+
+grid.newpage()
+pushViewport(viewport(width=.9, height=.9))
+grid.rect(gp = gpar(lty="dashed"))
+
+xx <- seq(0, 2*pi , length.out=10)      
+yy <- sin(xx)                           
+
+for (i in seq_along(xx)) {
+    vp <- viewport(x = xx[i]/(2*pi), y = (yy[i]-min(yy))/2, width=.05, height=.05)
+    print(mm, vp = vp)
+}
+
+```
+
+## [animation]{.animation} [code]{.emblem}
+
+::: {.panel-tabset}
+
+### Page Content `r emo::ji("clapper_board")`
+
+```{yaml}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "2,8,10-12"
+
+
+## [animations!!!]{.animation}{auto-animate=true} 
+
+should I drink the tea?!?
+
+![](https://clipart-library.com/images/rinraK87T.png)
+
+## [animations!!!]{.animation}{auto-animate=true}
+
+::: {style="font-size: 4em; color: blue;"}        #<1>
+should I drink the tea?!?
+:::                                               #<1>
+
+```
+1. styling specifications `r emo::ji("artist_palette")`
+
+### Code Chunks `r emo::ji("pager")`
+
+```{yaml}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "2,15,26-31"
+
+
+## [animations!!!]{.animation} {auto-animate=true}
+
+``
+library(grid)                                                       #<1>
+mm <- meme(u, "code", "all the things!", size=.3, color='firebrick')
+
+grid.newpage()
+pushViewport(viewport(width=.9, height=.9))
+grid.rect(gp = gpar(lty="dashed"))                                  #<1>
+
+
+``
+
+## [animations!!!]{.animation} {auto-animate=true}
+
+``{r}
+
+library(grid)
+mm <- meme(u, "code", "all the things!", size=.3, color='firebrick')
+
+grid.newpage()
+pushViewport(viewport(width=.9, height=.9))
+grid.rect(gp = gpar(lty="dashed"))
+
+xx <- seq(0, 2*pi , length.out=10)      
+yy <- sin(xx)                           
+
+for (i in seq_along(xx)) {
+    vp <- viewport(x = xx[i]/(2*pi), y = (yy[i]-min(yy))/2, width=.05, height=.05)
+    print(mm, vp = vp)
+}
+``
+
+```
+1. mirrored below -- append bits you wish to be animated within ensuing slide 
+
 :::
 
 # Today...
