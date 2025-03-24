@@ -1,0 +1,176 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #70...<br>[...typst!!]{.honk}"
+title-slide-attributes: 
+  data-background-image: https://www.csaimages.com/pix/ARCH/MISC/T89964_WP.JPG
+  data-background-opacity: ".7"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+#    controls-layout: bottom-right
+#    controls-tutorial: true
+#    slide-number: h.v
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [league, weekly.scss]       ## night & league
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+  - code-fullscreen
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #69
+-   Focal issue(s):
+    - [typst!!]{.honk}
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title69.JPG){.absolute top="135" right="-120" width="600" height="325"}
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="155" left="360" width="200"}
+
+# Recap of Session <br>#69: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2h4NW52NXQ2N3lvMmJndmtqcmVrYmhsMDl3aTZnaGc0aHNmMDhycyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ko7twHhomhk8E/giphy.gif){.absolute width="180" top="320" right="145"}
+
+## [[fullscreen code]{.emblem}](https://github.com/shafayetShafee/code-fullscreen)
+
+```{r}
+#| echo: true
+#| eval: false
+
+filters:                                      #<1>
+  - code-fullscreen                           #<1>
+
+## bunch of long code:
+
+# source code of stats::lm
+function (formula, data, subset, weights, na.action, method = "qr", 
+    model = TRUE, x = FALSE, y = FALSE, qr = TRUE, singular.ok = TRUE, 
+    contrasts = NULL, offset, ...) 
+{
+    ret.x <- x
+    ret.y <- y
+    cl <- match.call()
+    mf <- match.call(expand.dots = FALSE)
+    m <- match(c("formula", "data", "subset", "weights", "na.action", 
+        "offset"), names(mf), 0L)
+    mf <- mf[c(1L, m)]
+    mf$drop.unused.levels <- TRUE
+    mf[[1L]] <- quote(stats::model.frame)
+    mf <- eval(mf, parent.frame())
+    if (method == "model.frame") 
+        return(mf)
+    else if (method != "qr") 
+        warning(gettextf("method = '%s' is not supported. Using 'qr'", 
+            method), domain = NA)
+    mt <- attr(mf, "terms")
+    y <- model.response(mf, "numeric")
+    w <- as.vector(model.weights(mf))
+    if (!is.null(w) && !is.numeric(w)) 
+        stop("'weights' must be a numeric vector")
+    offset <- model.offset(mf)
+    mlm <- is.matrix(y)
+    ny <- if (mlm) 
+        nrow(y)
+    else length(y)
+    if (!is.null(offset)) {
+        if (!mlm) 
+            offset <- as.vector(offset)
+        if (NROW(offset) != ny) 
+            stop(gettextf("number of offsets is %d, should equal %d (number of observations)", 
+                NROW(offset), ny), domain = NA)
+    }
+    if (is.empty.model(mt)) {
+        x <- NULL
+        z <- list(coefficients = if (mlm) matrix(NA_real_, 0, 
+            ncol(y)) else numeric(), residuals = y, fitted.values = 0 * 
+            y, weights = w, rank = 0L, df.residual = if (!is.null(w)) sum(w != 
+            0) else ny)
+        if (!is.null(offset)) {
+            z$fitted.values <- offset
+            z$residuals <- y - offset
+        }
+    }
+    else {
+        x <- model.matrix(mt, mf, contrasts)
+        z <- if (is.null(w)) 
+            lm.fit(x, y, offset = offset, singular.ok = singular.ok, 
+                ...)
+        else lm.wfit(x, y, w, offset = offset, singular.ok = singular.ok, 
+            ...)
+    }
+    class(z) <- c(if (mlm) "mlm", "lm")
+    z$na.action <- attr(mf, "na.action")
+    z$offset <- offset
+    z$contrasts <- attr(x, "contrasts")
+    z$xlevels <- .getXlevels(mt, mf)
+    z$call <- cl
+    z$terms <- mt
+    if (model) 
+        z$model <- mf
+    if (ret.x) 
+        z$x <- x
+    if (ret.y) 
+        z$y <- y
+    if (!qr) 
+        z$qr <- NULL
+    z
+}
+
+```
+1. add to the bottom of your YAML (any .html product type)
+
+# Today...
+
+![](https://pngimg.com/d/typewriter_PNG25.png){.absolute height="250" top="-35" left="320"}
+
+## [[typst!!]{.honk}](https://quarto.org/docs/output-formats/typst.html)
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3c3Mm8yd2prOWlhbzB3bjdydWt5bDJ5YjJrODh0dzhqYjFmeXMzayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dJD0xpWqYDkic/giphy.gif){.absolute height="500" left="200"}
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnYxOHVueW9kZ291dHZxcWlvZXBwendwb2JkZnR4MGI3dmptMXp3cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lJNoBCvQYp7nq/giphy.gif){.absolute height="200" left="-50" .tilt}
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExajcxbXJ0ZGdoeDBpMjl1aGgwdjdpajh4dmtwNjg2NG84ZGF5eDRsdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mCRJDo24UvJMA/giphy.gif){.absolute height="200" right="-80" top="20" .tilt2}
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDBsMnhlOHUyOHdhb3RubGk4aDFzenhubm0xYTV5Y3NtdXoxM2tyMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/48zjXYRwBg5IQ/giphy.gif){.absolute height="200" bottom="50" right="-120" .tilt}
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGFrbDZxejh2ZWo5cHMyODFwdjhuaGoxNG03aXJnMWd0eGN2NGFjZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11xBk5MoWjrYoE/giphy.gif){.absolute bottom="50" left="0" height="200" .tilt2}
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+

@@ -31,6 +31,7 @@ bibliography: temp.bib
 #lightbox: true
 filters: 
   - reveal-header          ## extension to add a hyperlink to slide logo
+  - code-fullscreen
 ---
 
 ```{r, warning=FALSE, message=FALSE}

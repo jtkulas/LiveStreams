@@ -36,6 +36,7 @@
 @import url('https://fonts.googleapis.com/css?family=Audiowide');
 @import url('https://fonts.googleapis.com/css?family=Kablammo');
 @import url('https://fonts.googleapis.com/css?family=Emblema One');
+@import url('https://fonts.googleapis.com/css?family=Love Ya Like A Sister');
 
 /*-- scss:defaults --*/
 
@@ -499,4 +500,10 @@ width: 10px;
   text-shadow: 
    2px 2px 1px #00FFFF,
    -2px -2px 1px black !important;
+}
+
+.honk{
+  font-family: "Love Ya Like A Sister";
+  color: #ffefdb;
+  font-size: 2em;
 }
