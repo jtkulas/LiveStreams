@@ -66,6 +66,15 @@ library(fontawesome)
 
 ## [[fullscreen code]{.emblem}](https://github.com/shafayetShafee/code-fullscreen)
 
+::: {.columns}
+::: {.column width="30%"}
+
+[![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3ZqOXU5anl4OGYxOGdvcnMwaHJ1aHUzMTRvaGgyaDRuNTRnbzYyMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aSpZ90yludk9G/giphy.gif)](https://quarto.org/docs/extensions/)
+
+:::
+
+::: {.column width="70%"}
+
 ```{r}
 #| echo: true
 #| eval: false
@@ -152,13 +161,18 @@ function (formula, data, subset, weights, na.action, method = "qr",
 ```
 1. add to the bottom of your YAML (any .html product type)
 
+:::
+:::
+
+![](img/fullscreen.JPG){.absolute left="-100" bottom="70" width="400"}
+
 # Today...
 
 ![](https://pngimg.com/d/typewriter_PNG25.png){.absolute height="250" top="-35" left="320"}
 
 ## [[typst!!]{.honk}](https://quarto.org/docs/output-formats/typst.html)
 
-![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3c3Mm8yd2prOWlhbzB3bjdydWt5bDJ5YjJrODh0dzhqYjFmeXMzayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dJD0xpWqYDkic/giphy.gif){.absolute height="500" left="200"}
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGFrbDZxejh2ZWo5cHMyODFwdjhuaGoxNG03aXJnMWd0eGN2NGFjZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11xBk5MoWjrYoE/giphy.gif){.absolute height="550" left="275" bottom="0"}
 
 ![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnYxOHVueW9kZ291dHZxcWlvZXBwendwb2JkZnR4MGI3dmptMXp3cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lJNoBCvQYp7nq/giphy.gif){.absolute height="200" left="-50" .tilt}
 
@@ -166,7 +180,7 @@ function (formula, data, subset, weights, na.action, method = "qr",
 
 ![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDBsMnhlOHUyOHdhb3RubGk4aDFzenhubm0xYTV5Y3NtdXoxM2tyMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/48zjXYRwBg5IQ/giphy.gif){.absolute height="200" bottom="50" right="-120" .tilt}
 
-![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGFrbDZxejh2ZWo5cHMyODFwdjhuaGoxNG03aXJnMWd0eGN2NGFjZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11xBk5MoWjrYoE/giphy.gif){.absolute bottom="50" left="0" height="200" .tilt2}
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3c3Mm8yd2prOWlhbzB3bjdydWt5bDJ5YjJrODh0dzhqYjFmeXMzayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dJD0xpWqYDkic/giphy.gif){.absolute bottom="50" left="0" height="200" .tilt2}
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 
