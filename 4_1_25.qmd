@@ -1,0 +1,167 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #71...<br>[...typst typst!!]{.honk}"
+title-slide-attributes: 
+  data-background-image: https://media.istockphoto.com/id/1073592290/photo/cute-cat-is-typing-on-a-typewriter-keyboard-isolated-on-white.jpg?s=612x612&w=0&k=20&c=DK3_m4jgwfNfTXRQ6ZSmv-_HIljez86ikAjIre7MVYQ= #https://falconembroidery.com/image/catalog/KZ-Digitizing/FE20784-Cat-With-Typewriter-large.jpg  
+  data-background-opacity: ".6"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+#    controls-layout: bottom-right
+#    controls-tutorial: true
+#    slide-number: h.v
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [league, weekly.scss]       ## night & league
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #70
+-   Focal issue(s):
+    - [typst typst!!]{.honk}
+-   Shared problem-solving
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title70.JPG){.absolute top="135" right="-120" width="600" height="325"}
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="155" left="360" width="200"}
+
+# Recap of Session <br>#70: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGFrbDZxejh2ZWo5cHMyODFwdjhuaGoxNG03aXJnMWd0eGN2NGFjZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11xBk5MoWjrYoE/giphy.gif){.absolute width="170" top="290" right="145" .tilt3}
+
+## [[typst!!]{.honk}](https://quarto.org/docs/output-formats/typst.html)
+
+::: {.columns}
+::: {.column width="30%"}
+
+[![](https://quarto.org/docs/output-formats/images/typst-format-dept-news.png)](https://github.com/quarto-ext/typst-templates/tree/main/dept-news)
+
+:::
+
+::: {.column width="70%"}
+
+```{yaml}
+#| eval: false
+#| echo: true
+
+---
+title: "Chemistry Department"
+edition: |
+   March 18th, 2023 \
+   Purview College
+hero-image: 
+  path: "newsletter-cover.jpg"
+  caption: "Award winning science"
+publication-info: |
+  The Dean of the Department of Chemistry. \
+  Purview College, 17 Earlmeyer D, Exampleville, TN 59341. \
+  <mailto:newsletter@chem.purview.edu>
+format:
+  dept-news-typst: 
+    default:
+      mainfont: "Impact"
+---
+
+# The Sixtus Award goes to Purview
+
+It's our pleasure to announce that our department has recently been awarded the highly-coveted Sixtus Award for Excellence in Chemical Research. This is a massive achievement for our department, and we couldn't be prouder.
+
+> Our Lab has synthesized the most elements of them all.\
+> --- Prof. Herzog
+
+The Sixtus Award is a prestigious recognition given to institutions that have demonstrated exceptional performance in chemical research. The award is named after the renowned chemist Sixtus Leung, who made significant contributions to the field of organic chemistry.
+
+This achievement is a testament to the hard work, dedication, and passion of our faculty, students, and staff. Our department has consistently produced groundbreaking research that has contributed to the advancement of the field of chemistry, and we're honored to receive this recognition.
+
+The award will be presented to our department in a formal ceremony that will take place on May 15th, 2023. We encourage all members of our department to join us in celebrating this achievement.
+
+::: {.article}
+## Guest lecture from Dr. Elizabeth Lee
+  
+Elizabeth Lee, a leading researcher in the field of biochemistry, spoke about her recent work on the development of new cancer treatments using small molecule inhibitors, and the lecture was very well-attended by both students and faculty.
+
+In case you missed it, there's a recording on [EDGARP](http://purview.edu/lts/2023-lee")
+:::
+
+::: {.article}
+## Safety first
+
+Next Tuesday, there will be a Lab Safety Training.
+
+These trainings are crucial for ensuring that all members of the department are equipped with the necessary knowledge and skills to work safely in the laboratory. *Attendance is mandatory.*
+:::
+
+## Another Success
+
+Aliquam sit amet lectus ut libero congue viverra. Morbi quis diam ullamcorper, iaculis ex non, fermentum mauris. Aliquam consectetur vitae purus vitae laoreet. Sed elementum ligula et mauris eleifend dignissim. 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultrices, dolor molestie viverra interdum, nibh urna dignissim nisi, et rhoncus libero nibh a nulla. Etiam ac augue vel leo vehicula finibus at non tortor. 
+
+```
+
+:::
+:::
+
+# Today...
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3Rtczg4aWc0cHBsc3FoMTk2ZTB4bjZicDFoa3AyOTV2eTZqOGY2MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ofSBuEvgzPm54Fhi8/giphy.gif)
+
+## [[typst typst!!]{.honk}](https://quarto.org/docs/output-formats/typst.html)
+
+::: {.columns}
+::: {.column width="70%"}
+
+[![](https://quarto.org/docs/output-formats/images/typst-format-poster.png)](https://github.com/quarto-ext/typst-templates/tree/main/poster)
+:::
+
+::: {.column width="30%"}
+
+<br>
+
+[![](https://quarto.org/docs/output-formats/images/typst-default-page.png)](https://quarto.org/docs/output-formats/typst.html#page-layout)
+:::
+
+:::
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDBsMnhlOHUyOHdhb3RubGk4aDFzenhubm0xYTV5Y3NtdXoxM2tyMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/48zjXYRwBg5IQ/giphy.gif){.absolute height="250" top="00" right="-120"}
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
