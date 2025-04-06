@@ -37,6 +37,7 @@
 @import url('https://fonts.googleapis.com/css?family=Kablammo');
 @import url('https://fonts.googleapis.com/css?family=Emblema One');
 @import url('https://fonts.googleapis.com/css?family=Love Ya Like A Sister');
+@import url('https://fonts.googleapis.com/css?family=Lavishly Yours');
 
 /*-- scss:defaults --*/
 
@@ -44,7 +45,7 @@ $body-bg: #191919;
 $body-color: #fff;
 $link-color: #42affa;
 $code-color: hotpink;
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: left;
 $presentation-title-slide-text-color: black;
 
 /*-- scss:rules --*/
@@ -84,6 +85,106 @@ $presentation-title-slide-text-color: black;
 /*-- supposedly helps with content overflow --*/
 .slides {
     overflow-y: auto;
+}
+
+.center h2 {
+  text-align: center;
+}
+
+.smaller {
+  font-size: 80%;
+}
+
+.my_class1 {       /* code chunk dimensions */
+height: 300px;
+width: 450px;
+}
+
+.my_class2 {       /* code chunk dimensions */
+height: 200px;
+width: 10px;
+}
+
+.mirror {
+  transform: rotateY(180deg);
+}
+
+.ninety {
+  transform: rotateY(90deg);
+}
+
+.tilt {
+  rotate: 20deg;
+}
+
+.tilt15 {
+  rotate: 15deg;
+}
+
+.tilt3 {
+  rotate: 3deg;
+}
+
+.tilt2 {
+  rotate: -20deg;
+}
+
+.bigger {
+  font-size: 1.5em;
+}
+
+.thicker {
+  font-weight: bold;
+}
+
+.lowercase {
+  text-transform: lowercase !important; 
+}
+
+.smaller {
+  font-size: 80%;
+}
+
+.my_class1 {       /* code chunk dimensions */
+height: 300px;
+width: 450px;
+}
+
+.my_class2 {       /* code chunk dimensions */
+height: 200px;
+width: 10px;
+}
+
+.mirror {
+  transform: rotateY(180deg);
+}
+
+.ninety {
+  transform: rotateY(90deg);
+}
+
+.tilt {
+  rotate: 20deg;
+}
+
+.tilt15 {
+  rotate: 15deg;
+}
+
+.tilt3 {
+  rotate: 3deg;
+}
+
+.tilt2 {
+  rotate: -20deg;
+}
+
+.bigger {
+  font-size: 1.5em;
+}
+
+.thicker {
+  font-weight: bold;
 }
 
 .oldenglish {
@@ -150,10 +251,6 @@ $presentation-title-slide-text-color: black;
   font-family: 'Protest Guerrilla';
 }
 
-.center h2 {
-  text-align: center;
-}
-
 .shiny {
   font-size: 80px;
   color: #FDFEFF;           /* #00c0a3 */
@@ -195,44 +292,6 @@ $presentation-title-slide-text-color: black;
   font-family: 'Kalnia Glaze';
   font-size: 150%;
   font-weight: bold;
-}
-
-.smaller {
-  font-size: 80%;
-}
-
-.my_class1 {       /* code chunk dimensions */
-height: 300px;
-width: 450px;
-}
-
-.my_class2 {       /* code chunk dimensions */
-height: 200px;
-width: 10px;
-}
-
-.mirror {
-  transform: rotateY(180deg);
-}
-
-.ninety {
-  transform: rotateY(90deg);
-}
-
-.tilt {
-  rotate: 20deg;
-}
-
-.tilt15 {
-  rotate: 15deg;
-}
-
-.tilt3 {
-  rotate: 3deg;
-}
-
-.tilt2 {
-  rotate: -20deg;
 }
 
 /* .reveal pre code {
@@ -424,14 +483,6 @@ width: 10px;
    2px 2px 1px #00ff00 !important;
 }
 
-.bigger {
-  font-size: 1.5em;
-}
-
-.thicker {
-  font-weight: bold;
-}
-
 .spotlight {
   font-family: "Notable";      /* Notable Fascinate Inline */
   color: #89CFF0;
@@ -510,4 +561,16 @@ width: 10px;
   font-family: "Love Ya Like A Sister";
   color: #ffefdb;
   font-size: 2em;
+}
+
+.styling{
+  font-family: "Lavishly Yours";
+  color: #fcba03;
+  font-size: 2em;
+}
+
+.styling2{
+  font-family: "Lavishly Yours";
+  color: #fcba03;
+  text-transform: lowercase !important; 
 }
