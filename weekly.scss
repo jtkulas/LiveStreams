@@ -38,6 +38,7 @@
 @import url('https://fonts.googleapis.com/css?family=Emblema One');
 @import url('https://fonts.googleapis.com/css?family=Love Ya Like A Sister');
 @import url('https://fonts.googleapis.com/css?family=Lavishly Yours');
+@import url('https://fonts.googleapis.com/css?family=Jolly Lodger');
 
 /*-- scss:defaults --*/
 
@@ -131,6 +132,10 @@ width: 10px;
 
 .bigger {
   font-size: 1.5em;
+}
+
+.Larger {
+  font-size: 2em;
 }
 
 .thicker {
@@ -563,6 +568,12 @@ width: 10px;
   font-size: 2em;
 }
 
+.honk2{
+  font-family: "Love Ya Like A Sister";
+  color: #ffefdb;
+  font-size: 1.5em;
+}
+
 .styling{
   font-family: "Lavishly Yours";
   color: #fcba03;
@@ -573,4 +584,9 @@ width: 10px;
   font-family: "Lavishly Yours";
   color: #fcba03;
   text-transform: lowercase !important; 
+}
+
+.syllabus{
+  font-family: "Jolly Lodger";
+  color: #89CFF0;
 }
