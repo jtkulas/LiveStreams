@@ -113,7 +113,7 @@ You can add options to [executable code]{.underline} like this
 ``
 
 ```
-1. fenced divs not as responsive as bracketed spans (line numbers 14 & 29 below). Note we're not operating on the most recent version of Quarto (currently using Version `r quarto::quarto_version()`)
+1. fenced divs not as responsive as bracketed spans (line numbers 14 & 29 below). Note [we're not operating on the most recent version of Quarto](https://quarto.org/docs/advanced/typst/typst-css.html#supported-elements-and-properties) (currently using Version `r quarto::quarto_version()`)
 2. customized CSS operated as expected (only tested `text-decoration` property and `underline` value)
 
 :::
