@@ -1,0 +1,104 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #75...<br>...[University Syllabus]{.syllabus .bigger} via [typst]{.honk2}<br> Part III: [Fomenting moar Formatting]{.henny}"
+title-slide-attributes: 
+  data-background-image: https://cdn.siasat.com/wp-content/uploads/2022/02/New-Project-39.jpg #https://images.stockcake.com/public/8/4/5/8458c8f0-7c28-44cf-9af0-8720db9fb075_large/golden-learning-moment-stockcake.jpg
+  data-background-opacity: ".6"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+#    controls-layout: bottom-right
+#    controls-tutorial: true
+#    slide-number: h.v
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [league, weekly.scss]       ## night & league
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[80,20]"}
+::: first-column
+-   Recap session #74
+-   Focal issue(s):
+    - [University Syllabus]{.syllabus .bigger}<br>via [typst...]{.honk2}<br>Part III: [Fomenting moar Formatting]{.henny}
+-   Shared problem-solving
+
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title74.JPG){.absolute top="135" right="-120" width="600" height="325"}
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="155" left="360" width="200"}
+
+# Recap of Session <br>#74: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://pngimg.com/d/table_PNG6983.png){.absolute width="180" top="310" right="140"}
+
+![](https://upload.wikimedia.org/wikipedia/commons/9/95/Zotero_icon.png){.absolute width="50" top="290" right="170" .tilt}
+
+
+
+## [[Syllabus]{.syllabus}]((https://bookdown.org/jtkulas/4_15_25/4_15_25.html#/a-university-syllabus-via-typst)) Tables & Citations via [typst]{.honk3 .lowercase} 
+
+::: {.columns}
+::: {.column width="50%"}
+
+:::
+
+::: {.column width="50%"}
+
+:::
+:::
+
+# Today...
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExc256czMxem0yeXBxc3hrdTBmdnJ3Y2g5MG96MW55dXE3aHByejF3MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/eNds87WCypxHqhaadW/giphy.gif)
+
+## To do list:
+
++ [citations](https://www.zotero.org/styles/apa-cv) `r emo::ji("check")`
++ tables `r emo::ji("eyes")`
+  + [`gt`](https://gt.rstudio.com/articles/gt.html) `r emo::ji("eyes")`
+  + [`papaja`](https://frederikaust.com/papaja_man/reporting.html#tables)  
++ emojis
++ callout blocks
++ margin content
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDgxazlzdjhwcGg0MjlibG5ocHF5aDl5eXJjeHIwbGgxcG9od2ltYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SwUpEicey6NNtGO4G2/giphy.gif){.absolute right="20" bottom="70" height="600"}
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
