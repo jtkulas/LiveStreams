@@ -32,6 +32,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; background-color: #2a0f15; font-weight: bold; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="4_29_25_files/libs/revealjs/dist/theme/quarto.css">
   <link href="4_29_25_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -373,13 +438,81 @@ OOH Session #75…<br>…<span class="syllabus bigger">University Syllabus</span
 <p><img data-src="https://upload.wikimedia.org/wikipedia/commons/9/95/Zotero_icon.png" class="absolute tilt" style="top: 290px; right: 170px; width: 50px; "></p>
 </section>
 <section id="syllabus-tables-citations-via-typst" class="slide level2">
-<h2><a href="(https://bookdown.org/jtkulas/4_15_25/4_15_25.html#/a-university-syllabus-via-typst)"><span class="syllabus">Syllabus</span></a> Tables &amp; Citations via <span class="honk3 lowercase">typst</span></h2>
+<h2><a href="(https://bookdown.org/jtkulas/4_15_25/4_15_25.html#/a-university-syllabus-via-typst)"><span class="syllabus">Syllabus</span></a> Tables &amp; Citations via <span class="honk2 lowercase">typst</span></h2>
 <div class="columns">
-<div class="column" style="width:50%;">
+<div class="column" style="width:40%;">
 
-</div><div class="column" style="width:50%;">
-
+</div><div class="column" style="width:60%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="annotated-cell-1" data-code-line-numbers="5-8,16,27-31,37"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-1-1"><a href="#annotated-cell-1-1"></a><span class="sc">---</span></span>
+<span id="annotated-cell-1-2"><a href="#annotated-cell-1-2"></a>title<span class="sc">:</span> <span class="st">"PSYC 313: Psychology of Testing and Assessment"</span></span>
+<span id="annotated-cell-1-3"><a href="#annotated-cell-1-3"></a>format<span class="sc">:</span> </span>
+<span id="annotated-cell-1-4"><a href="#annotated-cell-1-4"></a>  typst<span class="sc">:</span></span>
+<span id="annotated-cell-1-5"><a href="#annotated-cell-1-5"></a>    bibliography<span class="sc">:</span> classbib.bib            </span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="1">1</button><span id="annotated-cell-1-6" class="code-annotation-target"><a href="#annotated-cell-1-6"></a>    csl<span class="sc">:</span> apa<span class="sc">-</span><span class="fu">cv</span> (<span class="dv">1</span>).csl</span>
+<span id="annotated-cell-1-7"><a href="#annotated-cell-1-7"></a>    suppress<span class="sc">-</span>bibliography<span class="sc">:</span> true           </span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="2">2</button><span id="annotated-cell-1-8" class="code-annotation-target"><a href="#annotated-cell-1-8"></a>citeproc<span class="sc">:</span> true</span>
+<span id="annotated-cell-1-9"><a href="#annotated-cell-1-9"></a><span class="sc">---</span></span>
+<span id="annotated-cell-1-10"><a href="#annotated-cell-1-10"></a></span>
+<span id="annotated-cell-1-11"><a href="#annotated-cell-1-11"></a><span class="st">``</span>{r}</span>
+<span id="annotated-cell-1-12"><a href="#annotated-cell-1-12"></a><span class="co">#| echo: false</span></span>
+<span id="annotated-cell-1-13"><a href="#annotated-cell-1-13"></a><span class="co">#| warning: false</span></span>
+<span id="annotated-cell-1-14"><a href="#annotated-cell-1-14"></a><span class="co">#| message: false</span></span>
+<span id="annotated-cell-1-15"><a href="#annotated-cell-1-15"></a></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="3">3</button><span id="annotated-cell-1-16" class="code-annotation-target"><a href="#annotated-cell-1-16"></a><span class="fu">library</span>(gt)</span>
+<span id="annotated-cell-1-17"><a href="#annotated-cell-1-17"></a></span>
+<span id="annotated-cell-1-18"><a href="#annotated-cell-1-18"></a>col1 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Lectures:"</span>, <span class="st">"Labs:"</span>, <span class="st">"Rooms:"</span>, <span class="st">"Professor:"</span>, <span class="st">"Office Hours:"</span>)</span>
+<span id="annotated-cell-1-19"><a href="#annotated-cell-1-19"></a>col2 <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"3:25–4:45 Tuesdays &amp; Thursdays"</span>,</span>
+<span id="annotated-cell-1-20"><a href="#annotated-cell-1-20"></a> <span class="st">"5:15–6:30 Thursdays"</span>,</span>
+<span id="annotated-cell-1-21"><a href="#annotated-cell-1-21"></a> <span class="st">"JRC LL45"</span>,</span>
+<span id="annotated-cell-1-22"><a href="#annotated-cell-1-22"></a> <span class="st">"John Kulas (jtkulas@ergreports.com)"</span>,</span>
+<span id="annotated-cell-1-23"><a href="#annotated-cell-1-23"></a> <span class="st">"by Appointment"</span>)</span>
+<span id="annotated-cell-1-24"><a href="#annotated-cell-1-24"></a></span>
+<span id="annotated-cell-1-25"><a href="#annotated-cell-1-25"></a>class <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">cbind</span>(col1,col2))</span>
+<span id="annotated-cell-1-26"><a href="#annotated-cell-1-26"></a></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="4">4</button><span id="annotated-cell-1-27" class="code-annotation-target"><a href="#annotated-cell-1-27"></a><span class="fu">gt</span>(class) <span class="sc">|&gt;</span></span>
+<span id="annotated-cell-1-28"><a href="#annotated-cell-1-28"></a>  <span class="fu">tab_style</span>(</span>
+<span id="annotated-cell-1-29"><a href="#annotated-cell-1-29"></a>    <span class="at">style=</span><span class="fu">cell_borders</span>(<span class="at">weight=</span><span class="fu">px</span>(<span class="dv">0</span>)),</span>
+<span id="annotated-cell-1-30"><a href="#annotated-cell-1-30"></a>    <span class="at">locations=</span><span class="fu">cells_body</span>()</span>
+<span id="annotated-cell-1-31"><a href="#annotated-cell-1-31"></a>  )</span>
+<span id="annotated-cell-1-32"><a href="#annotated-cell-1-32"></a></span>
+<span id="annotated-cell-1-33"><a href="#annotated-cell-1-33"></a><span class="st">``</span></span>
+<span id="annotated-cell-1-34"><a href="#annotated-cell-1-34"></a></span>
+<span id="annotated-cell-1-35"><a href="#annotated-cell-1-35"></a><span class="do">## Required Text</span></span>
+<span id="annotated-cell-1-36"><a href="#annotated-cell-1-36"></a></span>
+<span id="annotated-cell-1-37"><a href="#annotated-cell-1-37"></a><span class="sc">@</span>kaplan2001psychological</span>
+<span id="annotated-cell-1-38"><a href="#annotated-cell-1-38"></a></span>
+<span id="annotated-cell-1-39"><a href="#annotated-cell-1-39"></a></span>
+<span id="annotated-cell-1-40"><a href="#annotated-cell-1-40"></a></span>
+<span id="annotated-cell-1-41"><a href="#annotated-cell-1-41"></a></span>
+<span id="annotated-cell-1-42"><a href="#annotated-cell-1-42"></a></span>
+<span id="annotated-cell-1-43"><a href="#annotated-cell-1-43"></a></span>
+<span id="annotated-cell-1-44"><a href="#annotated-cell-1-44"></a></span>
+<span id="annotated-cell-1-45"><a href="#annotated-cell-1-45"></a><span class="co">#</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="6" data-code-annotation="1">Zotero citation style that <a href="https://www.zotero.org/styles/apa-cv">renders full in-text APA citations</a></span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="8" data-code-annotation="2"><span class="honk2">typst</span> is unique across Quarto formats – default citation processing is <a href="https://quarto.org/docs/authoring/citations.html#typst">performed by <span class="honk2">typst</span></a>, so <code>citeproc: true</code> is required to both: 1) recognize .csl, and 2) suppress the end–of–document bibligraphy</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="16" data-code-annotation="3">highly customizable &amp; most commonly recommended option for table fiddling within <span class="honk2">typst</span> 🎻🎻🎻</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="4">4</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="27,28,29,30,31" data-code-annotation="4"><a href="https://www.rdocumentation.org/packages/gt/versions/0.8.0/topics/tab_style"><code>tab_style</code> options</a> seem most helpful for replicating desired border features (within <code>gt</code>)</span>
+</dd>
+</dl>
+</div>
+</div>
 </div></div>
+<p><img data-src="img/typst_table.JPG" class="absolute" style="left: -150px; bottom: 150px; height: 370px; "></p>
+<p><img data-src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjh2amVkemdhY2N0OHo0d2hvaGl5Yjh4OTE2NnU0czhpb2F5aXY4ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/w8gMxIqKe6uGrBd5fV/giphy.gif" class="absolute" style="top: -15px; right: -120px; height: 180px; "></p>
 </section></section>
 <section>
 <section id="today" class="title-slide slide level1 center">
@@ -395,6 +528,7 @@ OOH Session #75…<br>…<span class="syllabus bigger">University Syllabus</span
 <li><a href="https://gt.rstudio.com/articles/gt.html"><code>gt</code></a> 👀</li>
 <li><a href="https://frederikaust.com/papaja_man/reporting.html#tables"><code>papaja</code></a><br>
 </li>
+<li><a href="https://vincentarelbundock.github.io/tinytable/"><code>tinytable</code></a></li>
 </ul></li>
 <li>emojis</li>
 <li>callout blocks</li>
@@ -597,7 +731,7 @@ loaded via a namespace (and not attached):
         defaultTiming: null,
 
         // Enable slide navigation via mouse wheel
-        mouseWheel: true,
+        mouseWheel: false,
 
         // The display mode that will be used to show slides
         display: 'block',

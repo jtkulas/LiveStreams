@@ -6,7 +6,7 @@ title-slide-attributes:
   data-background-opacity: ".6"
 format:
   revealjs:
-    mouse-wheel: true               ## code navigation messy
+    mouse-wheel: false               ## code navigation messy
     slide-tone: false
 #    navigation-mode: vertical
     transition: convex
@@ -68,17 +68,78 @@ library(fontawesome)
 
 
 
-## [[Syllabus]{.syllabus}]((https://bookdown.org/jtkulas/4_15_25/4_15_25.html#/a-university-syllabus-via-typst)) Tables & Citations via [typst]{.honk3 .lowercase} 
+## [[Syllabus]{.syllabus}]((https://bookdown.org/jtkulas/4_15_25/4_15_25.html#/a-university-syllabus-via-typst)) Tables & Citations via [typst]{.honk2 .lowercase} 
 
 ::: {.columns}
-::: {.column width="50%"}
+
+::: {.column width="40%"}
 
 :::
 
-::: {.column width="50%"}
+::: {.column width="60%"}
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "5-8,16,27-31,37"
+---
+title: "PSYC 313: Psychology of Testing and Assessment"
+format: 
+  typst:
+    bibliography: classbib.bib            
+    csl: apa-cv (1).csl                      #<1>
+    suppress-bibliography: true           
+citeproc: true                               #<2>
+---
+
+``{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(gt)                      #<3>
+
+col1 <- c("Lectures:", "Labs:", "Rooms:", "Professor:", "Office Hours:")
+col2 <- c("3:25–4:45 Tuesdays & Thursdays",
+ "5:15–6:30 Thursdays",
+ "JRC LL45",
+ "John Kulas (jtkulas@ergreports.com)",
+ "by Appointment")
+
+class <- as.data.frame(cbind(col1,col2))
+
+gt(class) |>                                #<4> 
+  tab_style(                                #<4>
+    style=cell_borders(weight=px(0)),       #<4>
+    locations=cells_body()                  #<4>
+  )                                         #<4>
+
+``
+
+## Required Text
+
+@kaplan2001psychological
+
+
+
+
+
+
+
+#
+```
+1. Zotero citation style that [renders full in-text APA citations](https://www.zotero.org/styles/apa-cv)
+2. [typst]{.honk2} is unique across Quarto formats -- default citation processing is [performed by [typst]{.honk2}](https://quarto.org/docs/authoring/citations.html#typst), so `citeproc: true` is required to both: 1) recognize .csl, and 2) suppress the end--of--document bibligraphy
+3. highly customizable & most commonly recommended option for table fiddling within [typst]{.honk2} `r emo::ji("violin")``r emo::ji("violin")``r emo::ji("violin")`
+4. [`tab_style` options](https://www.rdocumentation.org/packages/gt/versions/0.8.0/topics/tab_style) seem most helpful for replicating desired border features (within `gt`)
 
 :::
+
 :::
+
+![](img/typst_table.JPG){.absolute left="-150" bottom="150" height="370"}
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjh2amVkemdhY2N0OHo0d2hvaGl5Yjh4OTE2NnU0czhpb2F5aXY4ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/w8gMxIqKe6uGrBd5fV/giphy.gif){.absolute right="-120" top="-15" height="180"}
 
 # Today...
 
@@ -90,6 +151,7 @@ library(fontawesome)
 + tables `r emo::ji("eyes")`
   + [`gt`](https://gt.rstudio.com/articles/gt.html) `r emo::ji("eyes")`
   + [`papaja`](https://frederikaust.com/papaja_man/reporting.html#tables)  
+  + [`tinytable`](https://vincentarelbundock.github.io/tinytable/)
 + emojis
 + callout blocks
 + margin content
