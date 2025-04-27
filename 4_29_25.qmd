@@ -151,7 +151,7 @@ gt(class) |>                                #<4>
 + tables `r emo::ji("eyes")`
   + [`gt`](https://gt.rstudio.com/articles/gt.html) `r emo::ji("eyes")`
   + [`papaja`](https://frederikaust.com/papaja_man/reporting.html#tables)  
-  + [`tinytable`](https://vincentarelbundock.github.io/tinytable/)
+  + [`tinytable`](https://vincentarelbundock.github.io/tinytable/) `r emo::ji("smiling_face_with_heart_eyes")`
 + emojis
 + callout blocks
 + margin content
