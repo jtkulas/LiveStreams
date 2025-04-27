@@ -68,7 +68,7 @@ library(fontawesome)
 
 
 
-## [[Syllabus]{.syllabus}]((https://bookdown.org/jtkulas/4_15_25/4_15_25.html#/a-university-syllabus-via-typst)) Tables & Citations via [typst]{.honk2 .lowercase} 
+## [[Syllabus]{.syllabus}](https://bookdown.org/jtkulas/4_15_25/4_15_25.html#/a-university-syllabus-via-typst) Tables & Citations via [typst]{.honk2 .lowercase} 
 
 ::: {.columns}
 
