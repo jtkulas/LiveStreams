@@ -1,0 +1,219 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #76...<br>...[University Syllabus]{.syllabus .bigger} via [typst]{.honk2}<br>Part IV: [Oozing toward the finish]{.slime}"
+title-slide-attributes: 
+  data-background-image: https://media.istockphoto.com/id/1256899687/vector/humor-caricature-picture-of-snails-speed-race-flat-vector-illustration.jpg?s=612x612&w=0&k=20&c=JMPEuegdVmmQNKhHHPtIZGgYzlbTiPBS5sUldGX9TEo= 
+  data-background-opacity: ".4"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+#    controls-layout: bottom-right
+#    controls-tutorial: true
+#    slide-number: h.v
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [league, weekly.scss]       ## night & league
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[90,10]"}
+::: first-column
+-   Recap session #75
+-   Focal issue(s):
+    - [University Syllabus]{.syllabus .bigger}<br>via [typst...]{.honk2}<br>Part IV: [Oozing toward the finish line]{.slime2}
+-   Shared problem-solving
+
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title75.JPG){.absolute top="135" right="-120" width="600" height="325"}
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="155" left="360" width="200"}
+
+# Recap of Session <br>#75: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjh2amVkemdhY2N0OHo0d2hvaGl5Yjh4OTE2NnU0czhpb2F5aXY4ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/w8gMxIqKe6uGrBd5fV/giphy.gif){.absolute width="160" top="295" right="155"}
+
+## [[Syllabus]{.syllabus}](https://bookdown.org/jtkulas/4_15_25/4_15_25.html#/a-university-syllabus-via-typst) Callouts & Tables via [[typst]{.honk2 .lowercase}](https://quarto.org/docs/output-formats/typst.html) 
+
+::: {.panel-tabset}
+
+### Callouts `r emo::ji("megaphone")`
+
+::: {.columns}
+::: {.column width="60%"}
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "15-19"
+---
+title: "PSYC 313: Psychology of Testing and Assessment"
+format: 
+  typst:
+    bibliography: classbib.bib            
+    csl: apa-cv (1).csl
+    suppress-bibliography: true           
+citeproc: true
+---
+
+## Required Text
+
+@kaplan2001psychological
+
+::: {.callout-important}
+
+If you have any disability or special language needs, either permanent or temporary, that may affect your ability to perform in this class, please inform either me or the [Disability Resources Office](https://www.stthomas.edu/student-life/resources/disability/) (651-962-6315) of your disability or need at the beginning of the semester. Adaptation of methods, materials, or testing may be made as required to provide for equitable participation.
+
+:::
+
+
+
+
+
+
+#
+```
+
+:::
+
+::: {.column width="40%"}
+
+:::
+:::
+
+![](img/callout.JPG){.absolute right="-100" bottom="100" height="350" .fragment}
+
+### Tables `r emo::ji("construction")`
+
+::: {.columns}
+::: {.column width="50%"}
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "11,22,23,38,40"
+---
+title: "PSYC 313: Psychology of Testing and Assessment"
+format: typst
+---
+
+``{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(tinytable)
+
+col1 <- c("Lectures:", "Labs:", "Rooms:", "Professor:", "Office Hours:")
+col2 <- c("3:25–4:45 Tuesdays & Thursdays",
+ "5:15–6:30 Thursdays",
+ "JRC LL45",
+ "John Kulas (`jtkulas@ergreports.com`)",  #<1>
+ "by Appointment")
+
+class <- as.data.frame(cbind(col1,col2))
+
+colnames(class) <- NULL
+tt(class, width=c(.25,.75))                #<2> 
+
+``
+
+
+``{r}
+#| echo: false
+#| warning: false
+#| message: false
+Grade <- c("A","B")
+Percent <- c("90 -- 100", "80 -- 89.99")
+Class.Points <- c("450 -- 500", "400 -- 449")
+
+grades <- as.data.frame(cbind(Grade,Percent,Class.Points))
+
+colnames(grades)[3] <- "Class Points"
+
+tt(grades)
+
+``
+
+
+
+
+#
+```
+1. oddity here with [typst]{.honk} picking up domain of e--mail address and failing to render
+2. a value of "1" spans the document content space (horizontal), making rendered table widths very friendly `r emo::ji("kiss_woman_man")`
+
+:::
+
+::: {.column width="50%"}
+
+:::
+:::
+
+![](img/table.JPG){.absolute right="-140" bottom="100" height="350" .fragment}
+
+:::
+
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaG9maHp1ZmEzaHBqb2cwaDU2czE5MDdpMHJyM2NsaDM0ODFxc3ljNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/12d26S5UN4lY4w/giphy.gif){.absolute right="-150" top="-20" height="240"}
+
+# Today...
+
+::: {.columns}
+::: {.column width="25%"}
+:::
+
+::: {.column width="75%"}
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOW14d3lnNXczdjBwczdndzEyanBpMWl0ajh4NzhycGtjOHhhZmdnNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CaiVJuZGvR8HK/giphy.gif)
+
+:::
+
+:::
+
+## To do list:
+
++ [citations](https://www.zotero.org/styles/apa-cv) `r emo::ji("check")`
++ tables^[`r emo::ji("1st_place_medal")` [`tinytable`](https://vincentarelbundock.github.io/tinytable/); `r emo::ji("2nd_place_medal")` [`papaja`](https://frederikaust.com/papaja_man/reporting.html#tables); `r emo::ji("3rd_place_medal")` [`gt`](https://gt.rstudio.com/articles/gt.html)] `r emo::ji("check")`
++ callout blocks `r emo::ji("check")`
++ emojis
++ margin content
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGVhOG95bWt2cXNzemx3cWNsOTVmMHJzNjMwcXZjOGlnNWI2bHF2OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/If0RcGvpfwf7UilprG/giphy.gif){.absolute right="0" bottom="100" height="550" .mirror}
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+

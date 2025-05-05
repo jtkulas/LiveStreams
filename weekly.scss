@@ -40,6 +40,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lavishly Yours');
 @import url('https://fonts.googleapis.com/css?family=Jolly Lodger');
 @import url('https://fonts.googleapis.com/css?family=Henny Penny');
+@import url('https://fonts.googleapis.com/css?family=Rubik Wet Paint');
 
 /*-- scss:defaults --*/
 
@@ -47,7 +48,7 @@ $body-bg: #191919;
 $body-color: #fff;
 $link-color: #42affa;
 $code-color: hotpink;
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: left;
 $presentation-title-slide-text-color: black;
 
 /*-- scss:rules --*/
@@ -535,4 +536,20 @@ width: 10px;
 .henny{
   font-family: "Henny Penny";
   color: #cc8c33;
+}
+
+.slime{
+  font-size: 60px !important;
+  color: 	#39ff14;
+  font-weight: normal !important;
+  font-family: "Rubik Wet Paint";
+  font-style: italic !important;
+  text-shadow: 
+    -6px 4px 2px #1dbc60 !important;
+}
+
+.slime2{
+  color: 	#39ff14;
+  font-family: "Rubik Wet Paint";
+  font-style: italic !important;
 }
