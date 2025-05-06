@@ -58,6 +58,12 @@ library(fontawesome)
 
 ![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="155" left="360" width="200"}
 
+## {background-image="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHR1NjNna2Rvemo0eGlsN3VsYTJmZGRlOTNrYWU1aDM1cW53b2ZwdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZVtRt9okcKpIh5yCGW/giphy.gif"}
+
+# Quarto [version 1.7!!](https://quarto.org/docs/blog/posts/2025-04-28-1.7-release/)
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjQ1ejdtNXBqNjQyNTMzMWplM252NnoxNTBybWhoYnRjMGUwbXBjNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TDMbOHni02MZM8fTgS/giphy.gif)
+
 # Recap of Session <br>#75: 
 
 ![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
