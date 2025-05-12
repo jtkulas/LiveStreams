@@ -41,6 +41,7 @@
 @import url('https://fonts.googleapis.com/css?family=Jolly Lodger');
 @import url('https://fonts.googleapis.com/css?family=Henny Penny');
 @import url('https://fonts.googleapis.com/css?family=Rubik Wet Paint');
+@import url('https://fonts.googleapis.com/css?family=Anton');
 
 /*-- scss:defaults --*/
 
@@ -552,4 +553,10 @@ width: 10px;
   color: 	#39ff14;
   font-family: "Rubik Wet Paint";
   font-style: italic !important;
+}
+
+
+.exhausted{
+  color: 	#e0115f;
+  font-family: "Anton";
 }

@@ -1,0 +1,150 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #77...<br>...[University Syllabus]{.syllabus .bigger} via [typst]{.honk2}<br>Part V: [...isn't it over yet?!?!?]{.exhausted}"
+title-slide-attributes: 
+  data-background-image: https://pa1.aminoapps.com/6369/b26e5df4a3738745a6808a2db83abc59839cac32_hq.gif
+  data-background-opacity: ".4"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+#    controls-layout: bottom-right
+#    controls-tutorial: true
+#    slide-number: h.v
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [league, weekly.scss]       ## night & league
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[90,10]"}
+::: first-column
+-   Recap session #76
+-   Focal issue(s):
+    - [University Syllabus]{.syllabus .bigger}<br>via [typst...]{.honk2}<br>Part V: [...isn't it over yet?!?!?]{.exhausted}
+-   Shared problem-solving
+
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title76.JPG){.absolute top="135" right="-120" width="600" height="325"}
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="155" left="360" width="200"}
+
+# Recap of Session <br>#76: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://images.vexels.com/media/users/3/134485/isolated/preview/bcde859a8ad3a45cb93aed78d8a63686-cool-emoji-emoticon.png){.absolute width="160" top="295" right="155"}
+
+## [[Syllabus]{.syllabus}](https://bookdown.org/jtkulas/4_15_25/4_15_25.html#/a-university-syllabus-via-typst) emojis (`r emo::ji("shushing_face")`) via [[typst]{.honk2 .lowercase}](https://quarto.org/docs/output-formats/typst.html) 
+
+
+
+
+
+::: {.columns}
+::: {.column width="55%"}
+
+### `emo` [package](https://github.com/hadley/emo): 
+
+```{yaml}
+#| echo: true
+#| eval: false
+
+Boy oh boy I would 
+`r emo::ji("smiling_face_with_heart_eyes")` 
+to see a microscope!!!
+
+`r emo::ji("microscope")`
+```
+
+
+Boy oh boy I would<br>
+`r emo::ji("smiling_face_with_heart_eyes")`<br>
+to see a microscope!!!
+
+`r emo::ji("microscope")`
+
+:::
+
+::: {.column width="45%"}
+
+### visual editor:
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+:::{.callout-note}
+
+Both solutions require the [most recent version of Quarto](https://quarto.org/docs/download/) (v1.7.30)
+
+:::
+
+:::
+:::
+
+![](img/visualeditor.png){.absolute height="230" right="-130" bottom="240"}
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHp2MjFkZWZ4NTJoZjJ3bmduM24wNzJxMmpoNmo5Z2liNW50bnYzcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oc15axztWRKuRpgvct/giphy.gif){.absolute right="-150" top="-20" height="240"}
+
+# Today...
+
+::: {.columns}
+::: {.column width="25%"}
+:::
+
+::: {.column width="75%"}
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXdxZWF6MDNoMXUxbDMxbmZlY2c0M2pwZ2YyZ3lheHR2emo3N3h2ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/39zbpCQocXLi0/giphy.gif)
+
+:::
+
+:::
+
+## To do list:
+
++ [citations](https://www.zotero.org/styles/apa-cv) `r emo::ji("check")`
++ tables^[`r emo::ji("1st_place_medal")` [`tinytable`](https://vincentarelbundock.github.io/tinytable/); `r emo::ji("2nd_place_medal")` [`papaja`](https://frederikaust.com/papaja_man/reporting.html#tables); `r emo::ji("3rd_place_medal")` [`gt`](https://gt.rstudio.com/articles/gt.html)] `r emo::ji("check")`
++ callout blocks `r emo::ji("check")`
++ emojis `r emo::ji("check")`
++ margin content [`r emo::ji("no_entry")`]{.fragment fragment-index=1}
++ [`r emo::ji("pushpin")``r emo::ji("pushpin")`ticky--tack<br>fiddling `r emo::ji("violin")``r emo::ji("violin")`]{.fragment fragment-index=1}
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDdqdGU4bzVnNDN2cWNrM3Z6ZDRpYXJrOWN1MmFvdjBvc3E5dWZ6YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tXL4FHPSnVJ0A/giphy.gif){.absolute right="-100" bottom="130" height="500" .mirror}
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+
