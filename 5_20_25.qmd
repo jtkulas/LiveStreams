@@ -376,7 +376,7 @@ You can make an appointment for in-person or online consulting.
 ![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWh0eDh0anlkNGVhcWdnZXFrNmVveTh0ZTN6Nmo0Z2l4bnl6N3JxaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/W5CB1eDoduCVOTyBtY/giphy.gif){.absolute left="-50" bottom="0" .tilt2}
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTZmMWY3anF2ZTlybnBjNDJ6dzF2Z2FhYjlpeXJxM2tra2V6bGxvNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/otnGTAMEPpuicdp9Nz/giphy.gif){.absolute right="20" bottom="0" .tilt}
 
-![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExczEybXRla2l1aGdyZGVxeHczd3hzNTRkOG1naG92bHQxenl2OTk5diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dWCNjE4AjkDyo/giphy.gif){.absolute left="300" bottom="120"}
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExczEybXRla2l1aGdyZGVxeHczd3hzNTRkOG1naG92bHQxenl2OTk5diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dWCNjE4AjkDyo/giphy.gif){.absolute left="300" bottom="140"}
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 
