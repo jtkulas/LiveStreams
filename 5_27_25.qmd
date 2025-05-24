@@ -1,0 +1,371 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #79...<br>[...]{.themingpink}[Custom]{.themingblue} [Themes]{.themingpink}"
+title-slide-attributes: 
+  data-background-image: https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjBpcDh5YWNqMnV5cWZtdXJldGU4OXI5bTFveGlsenJ3ejdzNG52NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/322W3VduHG5elXisAh/giphy.gif
+#  data-background-opacity: ".8"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+#    controls-layout: bottom-right
+#    controls-tutorial: true
+#    slide-number: h.v
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [league, weekly.scss]       ## night & league
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[90,10]"}
+::: first-column
+-   Recap session #78
+-   Focal issue(s):
+    - [[Custom]{.themingblue} [Themes]{.themingpink}](https://quarto.org/docs/presentations/revealjs/themes.html#creating-themes)
+-   Shared problem-solving
+
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title78.JPG){.absolute top="135" right="-120" width="600" height="325"}
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="155" left="360" width="200"}
+
+# Recap of Session <br>#78: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://upload.wikimedia.org/wikipedia/en/8/8d/Clarabelle_Cow_Duckipedia.png){.absolute width="150" top="280" right="150"}
+
+## [[Syllabus]{.syllabus .bigger}](https://bookdown.org/jtkulas/4_15_25/4_15_25.html#/a-university-syllabus-via-typst) via [[typst]{.honk2 .lowercase}](https://quarto.org/docs/output-formats/typst.html) 
+
+
+::: {.panel-tabset}
+
+### [typst]{.honk2} script `r emo::ji("scroll")`
+
+```{yaml}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "10-14,22,42,149-153,167-170"
+---
+title: "PSYC 313: Psychology of Testing and Assessment"
+author: "Syllabus Spring 2025"
+format: 
+  typst:
+    bibliography: classbib.bib            
+    csl: apa-cv (1).csl
+    suppress-bibliography: true
+    keep-typ: true       # debugging
+    include-in-header:                                  #<1>
+      - text: |
+          /* Color links */
+          #show link: set text(fill: rgb(0, 0, 255))    #<1>
+citeproc: true
+---
+
+``{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+library(tinytable)
+
+col1 <- c("Lectures:", "Labs:", "Rooms:", "Professor:", "Office Hours:")
+col2 <- c("3:25–4:45 Tuesdays & Thursdays",
+ "5:15–6:30 Thursdays",
+ "JRC LL45",
+ "John Kulas (`jtkulas@ergreports.com`)",         #<2>
+ "by Appointment")
+
+class <- as.data.frame(cbind(col1,col2))
+
+colnames(class) <- NULL
+tt(class, width=c(.25,.75)) 
+
+``
+
+## Required text:
+
+@kaplan2001psychological
+
+## Supplementary material: [![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/640px-PDF_file_icon.svg.png){width="20"}](https://www.testingstandards.net/open-access-files.html)
+
+@AERA2014
+
+::: callout-important
+If you have any disability or special language needs, either permanent or temporary, that may affect your ability to perform in this class, please inform either me or the [Disability Resources Office](https://www.stthomas.edu/student-life/resources/disability/) (651-962-6315) of your disability or need at the beginning of the semester. Adaptation of methods, materials, or testing may be made as required to provide for equitable participation.
+:::
+
+## Course objectives[^1]:
+
+[^1]: Muchas gracias to Dr. Bock, who’s PSYC 313 syllabus was pillaged assunder to provide most of the content and structure contained within this class `r emo::ji("pirate_flag")` `r emo::ji("pirate_flag")`
+
+This course provides an introduction to fundamental concepts in psychological and educational assessment. We will focus on underlying individual and group-administered tests within topical areas such as intelligence, aptitude, achievement, interests, personality, neuropsychology and education. We will also address the statistical underpinnings of measurement, although this is very intentionally **NOT** a statistics course -– think of your instructor as a statistical consultant (rather than you being expected to develop deep statistical skill). **Prerequisite: PSYC 212** This class “counts” toward fulfilling the Psychology major lab course requirement. 🔬
+
+You will be building two parallel skill and knowledge sets: 1) *knowledge of psychological and educational measurement*, and 2) *skill with tools to implement psychometric investigation and evaluation*. As an outcome of completing this course, students are expected to:
+
++ Gain a basic understanding of psychological testing (e.g., factual knowledge, methods, principles, theories)
++ Learn to apply course concepts to situations involving psychological and educational testing
++ Learn to analyze and critically evaluate ideas, arguments, and points of view related to psychological and educational testing
+
+## Instructional methods:  
+  
+Lecture, small-group discussion, small project completion and participation, cumulative project completion and presentation, class assignments, texts/e-resources. It is likely that you have learned some of the material before, but in different contexts (e.g., a statistics course, research methods course). Active participation in this class ***is essential***.
+
+## Evaluation Criteria
+
+### Exams (200 points)
+
+ In-class exams (3) will be non-cumulative, covering material from the text and lectures. These will consist of multiple-choice questions, short-answer, and maybe even a few true/false questions.
+ 
+::: {.callout-note}
+ All students are expected to complete assignments and exams at the scheduled time. There will be NO make-up exams given. Exceptions are illness with a doctor’s excuse, or a University-–approved campus absence.
+:::
+
+### Project (225 points)
+
+Each student is required to participate in one semester-long assessment project -– you will do these in teams of 3 or 4. The purpose of this project is to provide you with an opportunity to actively experience assessment and to apply what you learn in class. Project presentations are due the last week of class.
+
+### Class presentation on an existing assessment (50 points)
+
+You and your team members will research an *existing* psychological assessment. We will work collaboratively to find an assessment that is at least mildly interesting to your team members during early lab periods.
+Your team will present to the rest of our class a description and evaluation of your assigned, existing psychological test. Your team will research and present information on:  
+
++ the test developers
++ the history of the test’s development
++ the test’s use, theoretical foundation, and structure
++ the reliability and validity evidence of the most recent version of the test  
+
+Your team presentation should be about ***15 minutes*** long. Kulas can act as a consultant and guide for your team in planning your class presentation if you’d like.
+
+::: {.callout-note}
+The topic and content of the existing psychological test that your group is assigned is **completely independent** of the unique psychological assessment that you and your team members will construct and analyze for your psychological assessment project
+:::
+
+### Participation
+
+Attendance is expected. Significant learning occurs through student participation in class lecture-discussion, class activities, and group discussion. Failure to attend class regularly may result in the lowering of the course grade through my administration of “pop” quizzes. These quizzes count toward the final point total (if you’re going to be absent, let me know ahead of time -– pop quizzes will not bere-administered).
+ 
+### Peer-evaluation & exam items (25 points)
+
+As a meta-exercise, you will be developing a few assessment tools that you will also be *subjected* to:  
+
+1. The second in-class exam will be populated, at least in part, by items that you craft[^2].
+2. Collectively, the class will construct a peer-evaluation form that you will use to rate your fellow group members– the peer-ratings will be submitted to Kulas at the end of the semester (**25 points**)
+
+[^2]: if you respond *incorrectly* to an item that you authored, you may be subject to a playful modicum of ethically-questionable ridicule 😹
+
+::: {.callout-note}
+Reading between the lines on my attendance/test takingpolicy -— make sure to speak with me before you miss anything. I will attempt to be accommodating with advanced notice but stubborn and unsympathetic without advanced notice of an absence.
+:::
+
+## Grading: 
+
+Final grade will be based on the following scale with 500 points max:  
+
+``{r}
+#| echo: false
+#| warning: false
+#| message: false
+Grade <- c("A","B","C","D","F")
+Percent <- c("90 ↔️ 100%", "80 ↔️ 89.99%", "70 ↔️ 79.99%", "60 ↔️ 69.99%", "< 60%")            #<3>
+Class.Points <- c("450 ↔ 500", "400 ↔ 449", "350 ↔ 399", "300 ↔ 349", "🐒 ↔ 🙊")             #<3>
+
+grades <- as.data.frame(cbind(Grade,Percent,Class.Points))
+
+colnames(grades)[3] <- "Class Points"
+
+tt(grades) 
+
+``
+
+## Class Schedule (Lecture Topics): `r emo::ji("books")`
+
+``{r classsked}
+#| echo: false
+#| eval: true
+#| warning: false
+#| message: false
+
+library(tidyverse) ## native pipe bleeding into following chunk table
+
+sked <- read.csv("sched.csv")
+
+colnames(sked)[3] <- "K & S Readings"
+
+tt(sked, width=c(.20,.4,.2), 
+   notes="*Note*: Published Test presentations start April 4") %>% 
+   style_tt(i = 10, color = "#8cd3ff", background = "#ffcaec") %>%
+   group_tt(i = list(                       #<4>
+      "*Principles*" = 1,
+      "*Applications*" = 5,
+      "*Issues*" = 12))                     #<4>
+#https://vincentarelbundock.github.io/tinytable/vignettes/tinytable_tutorial.pdf
+
+``
+
+## Class Schedule (Lab): `r emo::ji("microscope")`
+
+``{r labsked}
+#| echo: false
+#| warning: false
+#| message: false
+
+labsked <- read.csv("labsched.csv")
+
+tt(labsked, width=c(.15,.30,.55)) |> 
+  style_tt(i = 8, color = "#8cd3ff", background = "#ffcaec") |>
+  style_tt(i = c(2,5,11,15), color="white",background="black") |>
+  style_tt(i = c(4,10), background="gray", color="black") ## odd mimic of above table
+
+``
+
+# Class Project
+
+This is a semester-long project that you will do in teams of three or four. Your team will develop and evaluate a psychological test or measure of a disciplinary-relevant construct. There will be four *formal* (e.g., graded) assignments related to this project, including a ***final presentation*** and ***APA-formatted paper***. The assignments are designed to lead you through the minimal steps of scale development. You may, however, incorporate additional methods and procedures learned in class into your project. 
+
+::: {.callout-important}
+[Collaborative Institutional Training Initiative (CITI) Training](https://www.stthomas.edu/academics/research/institutional-review-board/researcher/): All students need to complete the CITI program course, "Human Subjects Training: Social-Behavioral-Educational Research" here at St. Thomas (if you've completed it elsewhere, you'll have to retake the module here locally -- Kulas needs to do this too!!)
+:::
+
+## Project Assignments
+
+### Assignment #1:  Project Overview (**25 points**)               Due 2/13	   
+
+This is a somewhat informal assignment that can be finalized during the lab session itself (e.g., you don't need to *finish* this prior to lab); its purpose is to ensure that you are moving along in the planning stages of your measurement project:
+
+1. State and briefly describe the construct for which you are intending to develop a measure (what is the conceptual definition of the construct – is it multidimensional or unidimensional)?
+
+2. Provide a brief (one or two paragraph) rationale for why a measure is needed in this area and defining "what it is", citing relevant research where available (including what measures of the construct currently exist).
+
+3. Draw a "picture" of your construct using standard psychometric visualization practices, including content domain conceptual definition population 
+
+### Assignment #2:  Initial Item Review (**25 points**) 			Due 2/27	      
+
+This assignment will actually take place during the class period, but you will need to do a little preparation in advance.  I will be grouping you into a few small groups -– each team will be paired with members of other teams.  You will come to class with the following:
+
++ A summary of Hinkin (yes, actually outline and/or summarize – take notes and bring them to class)
+
+Each student will distribute information regarding their construct to the other people in their inter-construct group and explain any problems or issues they are encountering while attempting to define their construct. 
+
+The rest of the group will:  
+
+1. help refine construct definition (e.g., populate the content domain),
+2. help craft a few items [as well as suggest possible response scales], and
+3. provide feedback on the items’ conformity to Hinkin’s principles as well as the current construct definition 
+
+After this activity, you will bring this information (about the construct as well as the draft items) back to your project team. You project team will further generate and re-write initial items. By the next class period, you will turn in to me your further elaborated construct definition (written), a “picture” (visual representation of content domain with definitional elements specified), and current draft items (along with possible response scale[s]).
+
+### Assignment #3:  Item Analysis and Reliability (**35 points**) Due 4/17
+
+You will administer your scale, along with similar and dissimilar scales, to a convenience sample. Based on your pilot data collection with your original item pool, we will work collectively in the lab to do the following:
+
+1.  Look at the frequency distributions for your items.  Do any items seem to have a restricted range, and why do you think that might be?
+
+2.  Look at the mean, SD, and frequency distribution of your overall scale.  What do you conclude?
+
+3.  Look at the corrected item-total correlations. What do you conclude?
+
+4.  If you are creating subscales, look at the correlations between subscale totals.  What do you conclude?
+
+5.  Calculate coefficient alpha for your (a) overall scale, and (b) subscales if you have them.  What does this tell you?
+
+6.  Based on the information above, and any other information you have, which items do you choose to drop and why?
+
+You will submit a small report detailing these investigations, including visuals (e.g., figures, graphs, tables) and statistics -- Kulas will help develop these in lab sessions.
+
+The more reader-friendly summary of your investigation will go into the Methods and Results of your APA-formatted paper... 
+
+### Assignment #4:  Presentation (**70 points**) & APA-formatted paper (**70 points**)  Due 5/15
+
+Some suggestions for content of presentation: 
+
++ discuss the theoretical background and need 
++ correlate your edited scale with (a) demographics, (b) another measure of a similar construct, and/or (c) another measure that you theoretically propose should relate to your measure 
++ describe additional analyses that you would do in the future to further examine the validity and reliability of your scale
+
+You will additionally deliver an APA-formatted paper that documents much of what you've accomplished over the course of the semester. This paper must document the assessment creation process as well as initial psychometric evaluation. 
+
+The paper must have a:
+
++ Title page
++ Abstract
++ Introduction
++ Methods
++ Results
++ Discussion 
++ References
+
+The minimum number of references is **10** & the expectation is 7--10 total pages (title page through references [excluding any Appendices -- some may prefer to include non--APA--formatted information there]). 
+
+:::{.callout-warning}
+All course guidelines, including course schedule, topics, assignments, and grading criteria, are subject to change at the instructor's discretion
+:::
+
+## External Resources
+
+Peer consultants in the [Center for Writing](https://cas.stthomas.edu/departments/areas-of-study/english/center-for-writing/index.html) provide *free* individualized conferences at any stage of the writing process to share strategies for:  
+
++ getting started
++ understanding the assignment
++ revising and editing
++ focusing and organizing your ideas
++ incorporating and documenting evidence
++ gaining confidence
+
+You can make an appointment for in-person or online consulting. 
+```
+1. color cue on hyperlinked text
+2. domains (e.g., "ergreports.com") throwing an error so wrapped in ticks -- only with [typst]{.honk2} document type
+3. editor oddities when switching back--and--forth from `source` to `visual`, did not attempt to copy/paste from different emoji source (possible solution)
+4. did grouping offline, but straightforward specification within "group_tt" [`tinytables` function](https://vincentarelbundock.github.io/tinytable/vignettes/tinytable_tutorial.pdf)
+
+### [typst]{.honk2} output `r fontawesome::fa("file-pdf", fill="#ff0000")`
+
+{{< pdf file="5.13.25.pdf" height="500px" class="ratio ratio-16x9" full-screen-link="true">}}
+
+:::
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExODV0anc4MmV4b2wxemQyMnYyMjhjZTgxc3p5dmt2aHdsNHJ1N2xmYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NktFjqntkZQbe/giphy.gif){.absolute right="-150" top="-20" height="240"}
+
+# Today[.]{.gray1}[.]{.gray2}[.]{.gray3}
+
+![](https://www.freeiconspng.com/thumbs/spray-can-png/spray-can-png-2.png){.absolute height="400" left="300" top="50" .mirror}
+
+# [[Custom]{.themingblue} [Themes]{.themingpink}](https://quarto.org/docs/presentations/revealjs/themes.html#creating-themes) {background-image="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3o4bHNqaXFjOWg4dXJsZGU1bG44MDc1dGJoY2w2OHRjdjZiM3c5aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ohjV5Zq8awODwfoLm/giphy.gif"}
+
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+
+```{r}
+sessionInfo()
+```
+

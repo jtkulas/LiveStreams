@@ -42,6 +42,7 @@
 @import url('https://fonts.googleapis.com/css?family=Henny Penny');
 @import url('https://fonts.googleapis.com/css?family=Rubik Wet Paint');
 @import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Fontdiner Swanky');
 
 /*-- scss:defaults --*/
 
@@ -49,7 +50,7 @@ $body-bg: #191919;
 $body-color: #fff;
 $link-color: #42affa;
 $code-color: hotpink;
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 $presentation-title-slide-text-color: black;
 
 /*-- scss:rules --*/
@@ -566,3 +567,37 @@ width: 10px;
   font-family: "Permanent Marker";
 }
 
+.themingpink{
+  color: #db72b6;
+  font-family: "Fontdiner Swanky";
+  text-shadow: 
+    0px 0px 0px #2c528f,
+    -5px -5px 0px #2c528f !important;
+}
+
+.themingblue{
+  color: #2c528f;
+  font-family: "Fontdiner Swanky";
+  text-shadow: 
+    0px 0px 0px #db72b6,
+    -4px -4px 0px #db72b6 !important;
+}
+
+.gray1 {
+  color: #f9bbe6;
+  text-shadow: 
+    -2px 2px 5px #db72b6,
+    -2px -2px 5px #db72b6 !important;
+}
+.gray2 {
+  color: #ee73c4;
+  text-shadow: 
+    -5px 5px 7px #db72b6,
+    -5px -5px 7px #db72b6 !important;
+}
+.gray3 {
+  color: #f20b97;
+  text-shadow: 
+    -7px 7px 9px #db72b6,
+    -7px -7px 9px #db72b6 !important;
+}
