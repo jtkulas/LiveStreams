@@ -1,9 +1,9 @@
 ---
 title: "R for <br>Authoring!!" 
-author: "OOH Session #79...<br>[...]{.themingpink}[Custom]{.themingblue} [Themes]{.themingpink}"
+author: "OOH Session #80...<br>[...]{.themingpink}[Custom]{.themingblue} [Themes]{.themingpink} [(II)]{.themingblue}"
 title-slide-attributes: 
-  data-background-image: https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjBpcDh5YWNqMnV5cWZtdXJldGU4OXI5bTFveGlsenJ3ejdzNG52NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/322W3VduHG5elXisAh/giphy.gif
-#  data-background-opacity: ".8"
+  data-background-image: img/pinkpaint.JPG
+  data-background-opacity: ".6"
 format:
   revealjs:
     mouse-wheel: true               ## code navigation messy
@@ -42,9 +42,9 @@ library(fontawesome)
 
 ::: {layout="[90,10]"}
 ::: first-column
--   Recap session #78
+-   Recap session #79
 -   Focal issue(s):
-    - [[Custom]{.themingblue} [Themes]{.themingpink}](https://quarto.org/docs/presentations/revealjs/themes.html#creating-themes)
+    - [[Custom]{.themingblue} [Themes]{.themingpink} [(II)]{.themingblue}](https://quarto.org/docs/presentations/revealjs/themes.html#creating-themes)
 -   Shared problem-solving
 
 :::
@@ -54,17 +54,17 @@ library(fontawesome)
 
 :::
 
-![](img/title78.JPG){.absolute top="135" right="-120" width="600" height="325"}
+![](img/title79.JPG){.absolute top="135" right="-120" width="600" height="325"}
 
 ![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="155" left="360" width="200"}
 
-# Recap of Session <br>#78: 
+# Recap of Session <br>#79: 
 
 ![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
 
-![](https://upload.wikimedia.org/wikipedia/en/8/8d/Clarabelle_Cow_Duckipedia.png){.absolute width="150" top="280" right="150"}
+![](https://www.freeiconspng.com/thumbs/spray-can-png/spray-can-png-2.png){.absolute width="190" top="280" right="140" .mirror}
 
-## [[Branding!!!]{.branding}](https://quarto.org/docs/authoring/brand.html)
+## [[Custom]{.themingblue} [Themes]{.themingpink}]((https://quarto.org/docs/presentations/revealjs/themes.html#creating-themes))
 
 ::: {.panel-tabset}
 
@@ -201,12 +201,13 @@ When you click the **Render** button a presentation will be generated that inclu
 
 ![](https://media.giphy.com/media/l4FGG6vgVLKpZsjok/giphy.gif?cid=ecf05e47gaziq5qbpcw0se50xrx6kax74kxuphiur0q7ykz9&ep=v1_gifs_search&rid=giphy.gif&ct=g){.absolute right="-150" top="-20" height="240"}
 
-# Today[.]{.pink1}[.]{.pink2}[.]{.pink3}
+# Today...
 
-![](https://www.freeiconspng.com/thumbs/spray-can-png/spray-can-png-2.png){.absolute height="400" left="340" top="60" .mirror}
+![](https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png)
 
-# [[Custom]{.themingblue}](https://stackoverflow.com/questions/5654447/whats-the-difference-between-scss-and-sass/51423768#51423768) [[Themes]{.themingpink}](https://quarto.org/docs/presentations/revealjs/themes.html#creating-themes) {background-image="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3o4bHNqaXFjOWg4dXJsZGU1bG44MDc1dGJoY2w2OHRjdjZiM3c5aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ohjV5Zq8awODwfoLm/giphy.gif"}
+# [[Custom]{.themingblue}](https://stackoverflow.com/questions/5654447/whats-the-difference-between-scss-and-sass/51423768#51423768) [[Themes]{.themingpink}](https://quarto.org/docs/presentations/revealjs/themes.html#creating-themes) [[(II)]{.themingblue}](https://quarto.org/docs/presentations/revealjs/themes.html#sass-variables)  {background-color="black"} 
 
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTMyMnV3YmQ4enpwMm16dzV6aDRhY2k3YmNjbG0waTU1anJjMnhyMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ohs4A5Kv4d1w7UvgQ/giphy.gif){.absolute right="-140" top="-100"}
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
 
