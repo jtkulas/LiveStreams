@@ -68,94 +68,26 @@ library(fontawesome)
 
 ::: {.panel-tabset}
 
-### YAML spex `r emo::ji("glasses")`
+### Script `r emo::ji("scroll")`
 
 ```{yaml}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "6,11"
 
-color:
-#  palette:                                   #<1>
-#    dark-grey: "#222222"
-#    blue: "#ddeaf1"                          #<1>
-  background: "#ddeaf1"                       #<2>
-  foreground: "#222222"                       #<3>
-  primary: "#9900cc"                          #<4>
-
-logo: 
-  medium: logo.png                           
-
-typography:
-  fonts:                                      #<5>
-    - family: Moo Lah Lah
-      source: google
-  base: Moo Lah Lah
-  headings: Moo Lah Lah                       #<5>
-```
-1. ...if you'd like to store color [***labels***]{.underline} and later callout by name (instead of retyping [hex code](https://www.opusdesign.us/wordcount/what-are-hex-codes-for-colors))
-2. background color of slides, document, etc
-3. "main text" will display in this color
-4. accent color to be applied to hyperlinks, `revealjs` menu, etc
-5. [multiple possible spec variations](https://quarto.org/docs/authoring/brand.html#typography) -- google worked fine for 1^st^ run--through
-
-### Scripts`r emo::ji("scroll")`
-
-::: {.columns}
-
-::: {.column width="50%"}
-
-```{yaml}
-#| eval: false
-#| echo: true
-#| code-line-numbers: "4"
 ---
-title: "Untitled typst moosterpiece"
-author: "nother bunch o cows"
-format: typst
----
-
-## Quarto
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-
-``{r}
-1 + 1
-``
-
-You can add options to executable code like this 
-
-``{r}
-#| echo: false
-2 * 2
-``
-
-The `echo: false` option disables the printing of code (only output is displayed).
-
-```
-
-:::
-
-::: {.column width="50%"}
-
-```{yaml}
-#| eval: false
-#| echo: true
-#| code-line-numbers: "5"
----
-title: "presentation"
-author: "bunch o cows"
+title: "Best in the world!!"
 format: 
   revealjs:
     mouse-wheel: true
+    theme: themeplayground.scss                 #<1>
 ---
 
 ## Quarto
 
-Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+[hyperlink this!!!](www.google.com)
+
+![](https://www.marthastewart.com/thmb/pNHFsp2dFxUH5KBkO9zlDpBQy-0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/grow-care-for-lilac-varieties-common-lilac-getty-0623-c5dbb272ad06401ca36910b6a154d12d.jpg)
 
 ## Bullets
 
@@ -173,33 +105,51 @@ When you click the **Render** button a presentation will be generated that inclu
 ``
 
 ```
+1. again working within a project directory simplifies the specification of [where]{.underline} supplementary files such as this are located & makes entire project more easily sharable
 
+### SCSS `r fontawesome::fa("css3-alt")`
+
+```{scss}
+#| eval: false
+#| echo: true
+
+/*-- scss:defaults --*/
+
+// fonts
+$font-family-sans-serif: "Palatino Linotype", "Book Antiqua", Palatino,
+  FreeSerif, serif !default;
+
+// colors
+$body-bg: #fff;
+$body-color: #222;
+$link-color: #bada55;
+/* $selection-bg: #26351c; */
+
+// headings
+$presentation-heading-font: "Palatino Linotype", "Book Antiqua", Palatino,
+  FreeSerif, serif !default;
+$presentation-heading-color: #bad !default;
+
+/*-- scss:rules --*/
+
+.reveal a {
+  line-height: 3.3em;
+}
+
+
+
+/* */
+```
+
+### Reveal`r fontawesome::fa("square-js", fill="#F0DB4F")` Slides 
+
+{{< html file="theming.html" full-screen-link="true">}}
+
+![](https://www.marthastewart.com/thmb/pNHFsp2dFxUH5KBkO9zlDpBQy-0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/grow-care-for-lilac-varieties-common-lilac-getty-0623-c5dbb272ad06401ca36910b6a154d12d.jpg){.absolute right="0" bottom="0" height="400"}
 
 :::
 
-:::
-
-### `r fontawesome::fa("file-pdf", fill="#ff0000")`& `r fontawesome::fa("html5", fill="#ec6231")` Output
-
-::: {.columns}
-
-::: {.column width="50%"}
-
-{{< pdf file="moosterpiece.pdf" height="500px" class="ratio ratio-16x9" full-screen-link="false">}}
-
-:::
-
-::: {.column width="50%"}
-
-{{< html file="presentation.html" full-screen-link="true">}}
-
-:::
-
-:::
-
-:::
-
-![](https://media.giphy.com/media/l4FGG6vgVLKpZsjok/giphy.gif?cid=ecf05e47gaziq5qbpcw0se50xrx6kax74kxuphiur0q7ykz9&ep=v1_gifs_search&rid=giphy.gif&ct=g){.absolute right="-150" top="-20" height="240"}
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjl1bnM1ZjlzMW50Y2UxdzI2ZHRsbHBoMGtrbDMxcW9kbjJ1M2V6ZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rpRaXqiTyRHtS/giphy.gif){.absolute right="-150" top="-20" height="240"}
 
 # Today...
 
@@ -209,8 +159,7 @@ When you click the **Render** button a presentation will be generated that inclu
 
 ![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTMyMnV3YmQ4enpwMm16dzV6aDRhY2k3YmNjbG0waTU1anJjMnhyMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ohs4A5Kv4d1w7UvgQ/giphy.gif){.absolute right="-140" top="-100"}
 
-## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
-
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: {background-color="black"} 
 ```{r}
 sessionInfo()
 ```
