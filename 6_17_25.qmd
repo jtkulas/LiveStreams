@@ -1,0 +1,130 @@
+---
+title: "R for <br>Authoring!!" 
+author: "[OOH Session #82...<br> ...test piloting]{.titleauthor}<br>{{< iconify mdi:github style= 'color:#000080;'>}}[GitHub Copilot]{.copilot3} {{< iconify copilot-16 style= 'color:#000080;'>}} [(II)]{.copilot3}"
+title-slide-attributes: 
+  data-background-image: https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWt4N2Z0OGs5NG5qa3N2ZnNjaTRwejB3Y3E3eXVzZ2NmNXNpeTJzeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ArShgGTs7wQCXscDrb/giphy.gif 
+  data-background-opacity: ".9"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+#    controls-layout: bottom-right
+#    controls-tutorial: true
+#    slide-number: h.v
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: [league, weekly.scss]       ## night & league
+    logo: "erg2.png"
+    footer-logo-link: "https://ergreports.com/"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+iconify:
+  style: "color: #1e74ff;"
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[90,10]"}
+::: first-column
+-   Recap session #81
+-   Focal issue(s):
+    - [`r fontawesome::fa("github", fill="#1E90FF")` [GitHub]{.copilot2}<br>[Copilot]{.copilot2} {{< iconify copilot-24 >}} [(II)]{.copilot2}](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html)
+-   Shared problem-solving
+
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title81.JPG){.absolute top="135" right="-120" width="600" height="325"}
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="155" left="360" width="200"}
+
+# Recap of Session <br>#81: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://images.vexels.com/media/users/3/199616/isolated/preview/b9bb9b3fb923a3da25769f5210c13311-vintage-aviator-hat.png){.absolute width="190" top="280" right="140" .tilt}
+
+## [`r fontawesome::fa("github", fill="#1E90FF")` [GitHub]{.copilot2} [Copilot]{.copilot2} {{< iconify copilot-24 >}}](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html)
+
+::: {.panel-tabset}
+
+### `penguins`??? `r emo::ji("penguin")``r emo::ji("penguin")`
+
+[{`datasets`} package](https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html) within base `r fontawesome::fa("r-project", fill="#4287f5")`:
+
+```{r}
+#| echo: true
+#| output-location: column
+
+# Capture the output of library(help = "datasets")
+datasets_list <- data(package = "datasets")$results[, "Item"]
+# Display as a bullet list
+cat(paste0("- ", datasets_list, collapse = "\n"))
+
+```
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnN0cjBuNXU2aHk5NXU3eHVxd2N5dWhid2UzcnRkMTc5aDg4ZnIzbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bwLowbhUWm2lO/giphy.gif){.absolute left="65" bottom="-20"}
+
+### Copilot {{< iconify copilot-16 >}}
+
+::: {.columns}
+
+::: {.column width="75%"}
+
+1. Create a [`r fontawesome::fa("github", fill="#1E90FF")` account](https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home)
+2. [Request access](https://github.com/github-copilot/pro?ocid=AIDcmmb150vbv1_SEM__k_CjwKCAjwpMTCBhA-EiwA_-MsmQvAImlYgvfkz4-t-Agj4V1M2vrGZMHCyw5BdzDYx86RnRMl6egSuhoCcFgQAvD_BwE_k_) to {{< iconify copilot-16 >}}
+3. Enable Copilot [in your IDE](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html)
+4. Start coding with Copilot's suggestions
+5. Use Copilot's features like code completion, suggestions, and documentation generation
+
+:::
+
+::: {.column width="25%"}
+
+::: {.callout-note}
+
+Recommended steps were {{< iconify copilot-16 >}} suggestions (slightly edited by Kulas)
+
+:::
+
+:::
+
+:::
+
+:::
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjBhdTk2cHFpMDBoaXUxMnRob3kxZG1weW90bXY4cmZqenB4NGpsbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kVmzd3RxKqaT5Rm16e/giphy.gif){.absolute right="-150" top="-40" height="250"}
+
+# Today...
+
+![](https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/Poison_Help.svg/1200px-Poison_Help.svg.png){.absolute left="350" top="-20"}
+
+# Back into [the Matrix](https://github.com/features/copilot?ocid=AIDcmmb150vbv1_SEM__k_CjwKCAjwgb_CBhBMEiwA0p3oOCxQ8MWOBxTbCP6OQgEWszwaSJ0UzDfJGQi-F1yjkkOSMMaLI6zNchoCxooQAvD_BwE_k_)... {background-image="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExemVwYW81N2lzZXFvYjc3cnpkNWdyYjh5YTN5OHprd3lmMjdvczlmZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/AOSwwqVjNZlDO/giphy.gif"} 
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+sessionInfo()
+```
+

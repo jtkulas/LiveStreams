@@ -1,6 +1,6 @@
 ---
 title: "R for <br>Authoring!!" 
-author: "[OOH Session #81...<br> ...piloting]{.titleauthor} {{< iconify mdi:github >}}[GitHub]{.copilot2} [Copilot]{.copilot2} {{< iconify copilot-16 >}}"
+author: "[OOH Session #81...<br> ...test piloting]{.titleauthor}<br>{{< iconify mdi:github >}}[GitHub]{.copilot2} [Copilot]{.copilot2} {{< iconify copilot-16 >}}"
 title-slide-attributes: 
   data-background-image: https://st2.depositphotos.com/4323461/10944/v/450/depositphotos_109441098-stock-illustration-girl-retro-military-pilot.jpg #https://www.shutterstock.com/image-illustration/girl-retro-pilot-on-plane-260nw-425814637.jpg 
   data-background-opacity: ".3"
@@ -45,7 +45,7 @@ library(fontawesome)
 ::: first-column
 -   Recap session #80
 -   Focal issue(s):
-    - `r fontawesome::fa("github", fill="#1E90FF")` [GitHub]{.copilot2}<br>[Copilot]{.copilot2} {{< iconify copilot-24 >}}
+    - [`r fontawesome::fa("github", fill="#1E90FF")` [GitHub]{.copilot2}<br>[Copilot]{.copilot2} {{< iconify copilot-24 >}}](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html)
 -   Shared problem-solving
 
 :::
@@ -76,6 +76,7 @@ library(fontawesome)
 ```{scss}
 #| eval: false
 #| echo: true
+#| code-line-numbers: "3,16-21,35-38"
 
 /*-- scss:defaults --*/
 
@@ -86,10 +87,6 @@ $font-family-sans-serif: "Palatino Linotype", "Book Antiqua", Palatino,
   FreeSerif, serif !default;
 $presentation-line-height: 1.3;
 
-.reveal .slide-menu { /* or the actual CSS class of the menu */
-  font-family: "Fontdiner Swanky", sans-serif; 
-} 
-
 // colors
 $body-bg: #e9cee5; 
 $body-color: #a92777;
@@ -98,7 +95,7 @@ $link-color: #e17c9c;
 
 // headings
 $presentation-heading-font: "Fontdiner Swanky", "Book Antiqua", Palatino,
-  FreeSerif, serif !default;
+  FreeSerif, serif !default;          //<2>
 $presentation-heading-color: #a92777 !default;
 $presentation-h1-text-shadow: 7px 7px #222;
 $presentation-heading-text-shadow: 5px 5px #222;
@@ -116,28 +113,30 @@ $callout-border-scale: -20%;
 /*-- scss:mixins --*/
 
 // Background generator
-@mixin bodyBackground() {                          
+@mixin bodyBackground() {                          //<3>
   @include radial-gradient(#f2bbea, #faf5f9);
-}                                                  
+}                                                  //<3>
 
 /*-- scss:rules --*/
 
 ```
 1. grabbing from [GoogleFonts](https://fonts.google.com/) preferred to loading locally
+2. prioritized fonts aka `font stack` -- 1^st^ named (`"Fontdiner Swanky"`) is first priority, if that is unavailable, the next will be used. Double quotes are used if the font name contains special characters (for example, a `space` character)
+3. added between Session #80 and current -- stolen from [existing themes](https://github.com/quarto-dev/quarto-cli/tree/main/src/resources/formats/revealjs/themes)
 
 :::
 
 :::
 
-![](https://upload.wikimedia.org/wikipedia/en/thumb/9/96/Pink_Panther.png/250px-Pink_Panther.png){.absolute left="-180" bottom="60" height="500"}
+![](https://upload.wikimedia.org/wikipedia/en/thumb/9/96/Pink_Panther.png/250px-Pink_Panther.png){.absolute left="-180" bottom="80" height="500"}
 
-![](https://www.pngkey.com/png/full/10-108285_pink-panther-and-inspector-cluso-clip-art-cliparts.png){.absolute right="-80" bottom="120" height="300"}
+![](https://www.pngkey.com/png/full/10-108285_pink-panther-and-inspector-cluso-clip-art-cliparts.png){.absolute right="-80" bottom="180" height="300" class="foreground-image"}
 
 # Today...
 
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXo0OWx0eTA4dXh5M2xhZjRkMXMwYWQxZ3MyMXY5bmZyNWM3ZHF1eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ztinrC3Dyh4mA/giphy.gif)
 
-# [{{< iconify mdi:github >}}[GitHub<br>Copilot {{< iconify copilot-16 >}}!!]{.copilot2}](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html) {background-image="https://cdn.vectorstock.com/i/500p/42/92/retro-girl-pilot-preparing-to-fly-vector-8734292.jpg" background-opacity=".4"} 
+# [{{< iconify mdi:github >}}[GitHub]{.copilot2}](https://jtkulas.github.io/GitHub/#1)<br>[[Copilot {{< iconify copilot-16 >}}!!]{.copilot2}](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html) {background-image="https://cdn.vectorstock.com/i/500p/42/92/retro-girl-pilot-preparing-to-fly-vector-8734292.jpg" background-opacity=".4"} 
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}

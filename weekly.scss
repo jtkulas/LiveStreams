@@ -43,6 +43,7 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik Wet Paint');
 @import url('https://fonts.googleapis.com/css?family=Anton');
 @import url('https://fonts.googleapis.com/css?family=Fontdiner Swanky');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
 
 /*-- scss:defaults --*/
 
@@ -50,7 +51,7 @@ $body-bg: #191919;
 $body-color: #fff;
 $link-color: #42affa;
 $code-color: hotpink;
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 $presentation-title-slide-text-color: black;
 
 /*-- scss:rules --*/
@@ -62,7 +63,10 @@ $presentation-title-slide-text-color: black;
     -5px -5px 5px black !important;
 }
 
-.quarto-title-author-name {
+
+// Temp 6/17 - take out eventually
+
+.titleauthor {
   font-size: 65px;
   color: 	white;
   font-weight: bold;
@@ -70,6 +74,27 @@ $presentation-title-slide-text-color: black;
   text-shadow: 
     2px 2px 2px black,
     -3px -3px 3px black;
+}
+
+/*.quarto-title-author-name {
+  font-size: 65px;
+  color: 	white;
+  font-weight: bold;
+  font-family: 'Dancing Script';
+  text-shadow: 
+    2px 2px 2px black,
+    -3px -3px 3px black;
+}*/
+
+.quarto-title-author-name {
+  font-family: "Mona Sans";
+  font-size: 65px;
+  font-weight: bold;
+  color: transparent; /* Make the text color transparent to show the gradient */
+  background: linear-gradient(to bottom, #1E90FF 30%, #673147 100%); /* Gradient from purple to blue */
+  -webkit-background-clip: text; /* Clip the gradient to the text */
+  background-clip: text; /* Standard property for broader support */
+  --fade-start: 50%; /* Kept for consistency, though not used here */
 }
 
 .reveal .slide blockquote {
@@ -132,7 +157,8 @@ width: 10px;
 .reveal .custom5050 div.column:not(:first-child) {
   width: 50%;
 }
-                   /* https://stackoverflow.com/questions/73460033/how-to-change-code-block-height-and-width-in-quarto-presentation */
+
+/* https://stackoverflow.com/questions/73460033/how-to-change-code-block-height-and-width-in-quarto-presentation */
                    
 /**//**//**//**//**//**/
 /**//**//**//**//**//**/
@@ -603,4 +629,19 @@ width: 10px;
   text-shadow: 
     -7px 7px 9px #f20b97,
     -7px -7px 9px #f20b97 !important;
+}
+
+.copilot2 {
+  font-family: "Oswald";
+  color: transparent; /* Make the text color transparent to show the gradient */
+  background: linear-gradient(to bottom, #1E90FF 50%, #9146bd 100%); /* Gradient from purple to blue */
+  -webkit-background-clip: text; /* Clip the gradient to the text */
+  background-clip: text; /* Standard property for broader support */
+  --fade-start: 50%; /* Kept for consistency, though not used here */
+  font-weight: bold;
+}
+
+.copilot3 {
+  font-family: "Oswald";
+  color: #000080;
 }

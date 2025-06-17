@@ -27,11 +27,11 @@ $presentation-line-height: 1.3;
 $body-bg: #e9cee5; 
 $body-color: #a92777;
 $link-color: #e17c9c;
-/* $selection-bg: #26351c; */
+$selection-bg: #e9cee5; 
 
 // headings
 $presentation-heading-font: "Fontdiner Swanky", "Book Antiqua", Palatino,
-  FreeSerif, serif !default;
+  FreeSerif, serif !default;             
 $presentation-heading-color: #a92777 !default;
 $presentation-h1-text-shadow: 7px 7px #222;
 $presentation-heading-text-shadow: 5px 5px #222;
@@ -93,4 +93,8 @@ $code-block-border-color: #a92777;
 
 .mirror {
   transform: rotateY(180deg);
+}
+
+.foreground-image {
+  z-index: 1000 !important;
 }
