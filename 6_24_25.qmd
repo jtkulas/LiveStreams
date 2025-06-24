@@ -18,8 +18,9 @@ format:
       theme: forest
 #    output-location: slide           ## column-fragment; inserts blank 2nd slide
     code-overflow: wrap              ## instead of horizontal scroll
-    theme: themeplayground.scss       ## night & league
+    theme: themeplayground.scss       
     logo: https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
     preview-links: false             ## true brings up iframe window instead of "site"
     code-annotations: hover          ## select
     html-math-method: 
@@ -73,6 +74,10 @@ library(fontawesome)
 
 ::: {.column width="83%"}
 
+::: {.panel-tabset}
+
+### `r emo::ji("scroll")` Interface
+
 ```{yaml}
 #| eval: false
 #| echo: true
@@ -102,6 +107,15 @@ More context about Gilligan's Island here is warranted to provide a comprehensiv
 
 ```
 
+
+![](https://www.pngkey.com/png/full/10-108285_pink-panther-and-inspector-cluso-clip-art-cliparts.png){.absolute right="-80" bottom="115" height="300" class="foreground-image"}
+
+### {{< iconify mdi:github >}} Interface
+
+[![](img/copilot.JPG)](https://github.com/copilot)
+
+:::
+
 :::
 
 :::
@@ -109,8 +123,6 @@ More context about Gilligan's Island here is warranted to provide a comprehensiv
 ![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXprbmVxMzRwM3hpeWtrbGdjaXYyeWFiMnIzYWd3N3ViOWM1M3htbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Q0Rt4HVGW0Y80/giphy.gif){.absolute left="-155" bottom="220" height="240" .mirror}
 
 ![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2NpYWJhb2d1NmdpYTR3cHZ5M3BqZmg1b3VkMmM2YXdjc3czOGtuNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lVBtp4SRW6rvDHf1b6/giphy.gif){.absolute height="170" top="-45" right="-100"}
-
-![](https://www.pngkey.com/png/full/10-108285_pink-panther-and-inspector-cluso-clip-art-cliparts.png){.absolute right="-80" bottom="180" height="300" class="foreground-image"}
 
 # Today...
 
