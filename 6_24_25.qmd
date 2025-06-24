@@ -1,0 +1,135 @@
+---
+title: "R for <br>Authoring!!" 
+author: "[OOH Session #83...<br> ...test piloting]{.titleauthor}<br>{{< iconify mdi:github >}}[GitHub]{.copilot2} [Copilot]{.copilot2} {{< iconify copilot-16 >}} [(III) --]{.copilot2} [chattr!!!]{.chatter}"
+title-slide-attributes: 
+  data-background-image: https://st.depositphotos.com/1003536/2145/v/450/depositphotos_21453669-stock-illustration-with-speech-bubbles.jpg #https://img.freepik.com/premium-vector/creative-freehand-drawn-thought-bubble-textured-cartoon-illustration_1120554-55457.jpg  
+  data-background-opacity: ".6"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+#    controls-layout: bottom-right
+#    controls-tutorial: true
+#    slide-number: h.v
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: themeplayground.scss       ## night & league
+    logo: https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+iconify:
+  style: "color: #1e74ff;"
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[90,10]"}
+::: first-column
+-   Recap session #82
+-   Focal issue(s):
+    - [`r fontawesome::fa("github", fill="#1E90FF")` [GitHub]{.copilot2}<br>[Copilot]{.copilot2} {{< iconify copilot-24 >}}](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html) [(III) --]{.copilot2} [[chattr]{.chatter}](https://mlverse.github.io/chattr/)
+    -   Shared problem-solving
+
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title82.JPG){.absolute top="135" right="-120" width="600" height="325"}
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="155" left="360" width="200"}
+
+# Recap of Session <br>#82: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://www.pngmart.com/files/1/Tools.png){.absolute width="120" top="260" right="110"}
+
+## [`r fontawesome::fa("github", fill="#1E90FF")` [GitHub]{.copilot3} [Copilot II]{.copilot3} {{< iconify copilot-24 >}}](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html)
+
+::: {.columns}
+::: {.column width="17%"}
+:::
+
+::: {.column width="83%"}
+
+```{yaml}
+#| eval: false
+#| echo: true
+#| code-line-numbers: "1"
+
+---
+# we would like to create a research report documenting the analysis of a small dataset. The report should be available in pdf format and should include a bibliography that includes references in BibTex format.
+title: "Untitled"
+format: pdf 
+execute:
+  echo: false
+  warning: false
+  error: false
+  message: false
+---
+
+`chattr` is a package that provides a set of functions for working with character attributes in R. It allows you to easily manipulate and analyze character data, making it a useful tool for data analysis tasks.
+
+The `chattr` package reference is available at [CRAN](https://cran.r-project.org/web/packages/chattr/index.html).
+
+## Quarto
+
+More context about Gilligan's Island here is warranted to provide a comprehensive understanding of the dataset and its relevance to the analysis. This could include information about the show's cultural impact, its historical significance, and any notable themes or characters that are relevant to the analysis.
+
+
+
+
+```
+
+:::
+
+:::
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXprbmVxMzRwM3hpeWtrbGdjaXYyeWFiMnIzYWd3N3ViOWM1M3htbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Q0Rt4HVGW0Y80/giphy.gif){.absolute left="-155" bottom="220" height="240" .mirror}
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2NpYWJhb2d1NmdpYTR3cHZ5M3BqZmg1b3VkMmM2YXdjc3czOGtuNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lVBtp4SRW6rvDHf1b6/giphy.gif){.absolute height="170" top="-45" right="-100"}
+
+![](https://www.pngkey.com/png/full/10-108285_pink-panther-and-inspector-cluso-clip-art-cliparts.png){.absolute right="-80" bottom="180" height="300" class="foreground-image"}
+
+# Today...
+
+![](https://static.vecteezy.com/system/resources/previews/001/195/458/non_2x/speech-bubble-png.png){.absolute height="300" top="-50" left="400"}
+
+## [{{< iconify mdi:github >}}[GitHub]{.copilot3} [Copilot]{.copilot3} {{< iconify copilot-16 >}} [(III) --]{.copilot3}](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html) [[chattr!!!]{.chatter}](https://mlverse.github.io/chattr/)  
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3I5NTE4dnprY21odnE1bDA0emZ5ZW5ucHByamkyM3E5NmlvMWJveSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SEkGmscHPfrzP7tneI/giphy.gif){.absolute left="250" bottom="80"}
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjNhMnFmczBhNnRjOTdwbms4OGx0YTkxanp5a2xrMTdoM3ZweHBhbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3E6BG56dhjuawAX6/giphy.gif){.absolute height="250" right="-30" bottom="0"}
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWMxMjBhcnZnenE1N3hjNjg0Z2lhZnIyZm9menp1bG5kcmF3YzR5YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sJFJMtc02OUSaReO0M/giphy.gif){.absolute height="250" right="0" top="150" .tilt}
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHFmbjZnbDk1bzFuaXNoNXV6eHYzdjV5cWFiazc2amk2ZDZqZnFueSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9SbuG4bfs2zd4sRRQl/giphy.gif){.absolute height="250" left="-50" top="150" .tilt2}
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbG9pdGN6Mjd2MTFraHJlZmVqNXVienh4eXN1ajVpZGVreTE0MnoyYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/srb6bXZHbgDsc/giphy.gif){.absolute height="250" left="-100" bottom="0"}
+
+## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+sessionInfo()
+```
+

@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css?family=Fontdiner Swanky');
 @import url('https://fonts.googleapis.com/css?family=Mona Sans');
 @import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Joti One');
 
 $presentation-title-slide-text-align: left;
 
@@ -65,6 +66,22 @@ $code-block-border-color: #a92777;
     -3px -3px 3px black;
 }
 
+// tilts, mirrors, etc 
+
+.mirror {
+  transform: rotateY(180deg);
+}
+
+.tilt {
+  rotate: 20deg;
+}
+
+.tilt2 {
+  rotate: -20deg;
+}
+
+// fonts
+
 .copilot2 {
   font-family: "Oswald";
   color: transparent; /* Make the text color transparent to show the gradient */
@@ -73,6 +90,17 @@ $code-block-border-color: #a92777;
   background-clip: text; /* Standard property for broader support */
   --fade-start: 50%; /* Kept for consistency, though not used here */
   font-weight: bold;
+}
+
+.copilot3 {
+  font-family: "Oswald";
+  color: transparent; /* Make the text color transparent to show the gradient */
+  background: linear-gradient(to bottom, #1E90FF 50%, #9146bd 100%); /* Gradient from purple to blue */
+  -webkit-background-clip: text; /* Clip the gradient to the text */
+  background-clip: text; /* Standard property for broader support */
+  --fade-start: 50%; /* Kept for consistency, though not used here */
+  font-weight: bold;
+  text-shadow: 0px 0px !important;
 }
 
 .themingpink{
@@ -91,10 +119,14 @@ $code-block-border-color: #a92777;
     -4px -4px 0px #db72b6 !important;
 }
 
-.mirror {
-  transform: rotateY(180deg);
-}
-
 .foreground-image {
   z-index: 1000 !important;
+}
+
+.chatter {
+  color: white;
+  font-family: "Joti One";
+  text-shadow: 
+    4px 4px 0px black,
+    -2px -2px 2px black !important;
 }
