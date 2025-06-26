@@ -1,8 +1,8 @@
 ---
 title: "R for <br>Authoring!!" 
-author: "[OOH Session #84...<br> ...test piloting]{.titleauthor}<br>{{< iconify mdi:github >}}[GitHub]{.copilot2} [Copilot]{.copilot2} {{< iconify copilot-16 >}} [(IV) --]{.copilot2} [Positron]{.chatter}"
+author: "[OOH Session #84...<br> ...test piloting]{.titleauthor}<br>{{< iconify mdi:github >}}[GitHub]{.copilot2} [Copilot]{.copilot2} {{< iconify copilot-16 >}} [(IV):]{.copilot2} <br>{{< iconify simple-icons:posit size=2x style= 'color:black;' >}} [positron]{.positron} {{< iconify simple-icons:posit size=2x style= 'color:black;' >}}"
 title-slide-attributes: 
-  data-background-image: https://media.istockphoto.com/id/98003938/vector/fifties-holiday-wrap.jpg?s=612x612&w=0&k=20&c=728QGYOwJrvitrAZhM2Iaa5bsEdRuynTN2CkA6GBZVM=
+  data-background-image: https://media.istockphoto.com/id/98003938/vector/fifties-holiday-wrap.jpg?s=612x612&w=0&k=20&c=728QGYOwJrvitrAZhM2Iaa5bsEdRuynTN2CkA6GBZVM= #https://media.istockphoto.com/id/98003938/vector/fifties-holiday-wrap.jpg?s=612x612&w=0&k=20&c=728QGYOwJrvitrAZhM2Iaa5bsEdRuynTN2CkA6GBZVM=
   data-background-opacity: ".4"
 format:
   revealjs:
@@ -46,7 +46,7 @@ library(fontawesome)
 ::: first-column
 -   Recap session #83
 -   Focal issue(s):
-    - [`r fontawesome::fa("github", fill="#1e74ff")` [GitHub]{.copilot2}<br>[Copilot]{.copilot2} {{< iconify copilot-24 >}}](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html) [(III) --]{.copilot2} [[chattr]{.chatter}](https://mlverse.github.io/chattr/)
+    - [`r fontawesome::fa("github", fill="#1e74ff")` [GitHub]{.copilot2} [Copilot]{.copilot2} {{< iconify copilot-24 >}}](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html) [(IV):]{.copilot2} <br>[{{< iconify simple-icons:posit style= 'color:black;' >}} [positron]{.positron} {{< iconify simple-icons:posit style= 'color:black;' >}}](https://positron.posit.co/download.html)
     -   Shared problem-solving
 
 :::
@@ -66,7 +66,7 @@ library(fontawesome)
 
 ![](https://png.pngtree.com/png-vector/20230225/ourmid/pngtree-smart-chatbot-cartoon-clipart-png-image_6620453.png){.absolute width="120" top="260" right="110"}
 
-## [`r fontawesome::fa("github", fill="#1e74ff")` [GitHub]{.copilot3} [Copilot (III)]{.copilot3} {{< iconify copilot-24 >}}](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html) [chattr!!!]{.chatter}
+## [`r fontawesome::fa("github", fill="#1e74ff")` [GitHub]{.copilot3} [Copilot (III)]{.copilot3} {{< iconify copilot-24 >}}](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html) [[chattr!!!]{.chatter}](https://blogs.rstudio.com/ai/posts/2024-04-04-chat-with-llms-using-chattr/)
 
 ::: {.panel-tabset}
 
@@ -106,7 +106,7 @@ $presentation-line-height: 1.3;
 // colors
 $body-bg: #e9cee5; 
 $body-color: #a92777;
-$link-color: #e17c9c;
+$link-color: #a92777;;
 $selection-bg: #2a1625;              /* <1> */
 
 // headings
@@ -211,13 +211,35 @@ $code-block-border-color: #a92777;
 }
 
 ```
-1. seems to be best option given existing palette `r emo::ji("artist_palette")`
+1. seems to be best option given existing palette `r emo::ji("artist_palette")` -- note also changed hyperlink color (affects multiple elements)
 
 ![](https://www.pngkey.com/png/full/10-108285_pink-panther-and-inspector-cluso-clip-art-cliparts.png){.absolute right="-80" bottom="115" height="300" class="foreground-image"}
 
-### Chat Interface^[Posit recommends [utilizing keyboard shortcuts](https://mlverse.github.io/chattr/#keyboard-shortcut) to access the app]
+### Chat Interface
 
-[![](img/copilot.JPG)](https://github.com/copilot)
+::: {.columns}
+::: {.column width="75%"}
+
+:::{.smaller}
+1. install [`chattr` package](https://cran.r-project.org/web/packages/chattr/index.html) from CRAN `r emo::ji("package")`
+2. `chattr::options(.chattr_chat = ellmer::chat_github())` connects to {{< iconify copilot-24 >}}
+3. `chattr::chattr_app()` initiates the chat window (also see Note)
+4. `chattr::chattr_test()` will give feedback on your connection
+:::
+
+:::
+
+::: {.column width="25%"}
+
+::: {.callout-note}
+
+{{< iconify simple-icons:posit style= 'color:black;' >}} Posit {{< iconify simple-icons:posit style= 'color:black;' >}} recommends [utilizing keyboard shortcuts](https://mlverse.github.io/chattr/#keyboard-shortcut) to access the app
+
+:::
+
+:::
+
+:::
 
 :::
 
@@ -226,38 +248,15 @@ $code-block-border-color: #a92777;
 
 # Today...
 
-![](https://static.vecteezy.com/system/resources/previews/001/195/458/non_2x/speech-bubble-png.png){.absolute height="400" top="-50" left="400"}
+![](https://png.pngtree.com/png-vector/20220730/ourmid/pngtree-atom-icon-png-image_6092415.png)
 
-## [{{< iconify mdi:github >}}[GitHub]{.copilot3} [Copilot]{.copilot3} {{< iconify copilot-16 >}} [(III) --]{.copilot3}](https://docs.github.com/en/copilot/using-github-copilot/ai-models/supported-ai-models-in-copilot) [[chattr!!!]{.chatter}](https://mlverse.github.io/chattr/)  
+## [[{{< iconify mdi:github >}}[GitHub]{.copilot3} [Copilot]{.copilot3} {{< iconify copilot-16 >}} [(IV):]{.copilot3}](https://docs.github.com/en/copilot/using-github-copilot/ai-models/supported-ai-models-in-copilot) [{{< iconify simple-icons:posit style= 'color:black;' >}} [positron]{.positron} {{< iconify simple-icons:posit style= 'color:black;' >}}](https://positron.posit.co/download.html)]{.smaller} 
 
-![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3I5NTE4dnprY21odnE1bDA0emZ5ZW5ucHByamkyM3E5NmlvMWJveSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SEkGmscHPfrzP7tneI/giphy.gif){.absolute left="250" bottom="80"}
+![](https://media.istockphoto.com/id/1424997955/vector/funny-retro-illustration-of-a-cartoon-atom.jpg?s=612x612&w=0&k=20&c=st8CQkUsjCOY9DgYQbbMnc5bo1E7knqprcm5_GvBe1I=){.absolute height="500" left="250" bottom="80"}
 
-![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjNhMnFmczBhNnRjOTdwbms4OGx0YTkxanp5a2xrMTdoM3ZweHBhbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l3E6BG56dhjuawAX6/giphy.gif){.absolute height="250" right="-30" bottom="0"}
+![](https://t4.ftcdn.net/jpg/05/59/01/31/360_F_559013100_n0TBKB4TaTwLlfRt5i9RMi1BnoEaCqZR.jpg){.absolute height="250" right="0" top="280" .tilt}
 
-![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWMxMjBhcnZnenE1N3hjNjg0Z2lhZnIyZm9menp1bG5kcmF3YzR5YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/sJFJMtc02OUSaReO0M/giphy.gif){.absolute height="250" right="0" top="150" .tilt}
-
-![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHFmbjZnbDk1bzFuaXNoNXV6eHYzdjV5cWFiazc2amk2ZDZqZnFueSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9SbuG4bfs2zd4sRRQl/giphy.gif){.absolute height="250" left="-50" top="150" .tilt2}
-
-![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbG9pdGN6Mjd2MTFraHJlZmVqNXVienh4eXN1ajVpZGVreTE0MnoyYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/srb6bXZHbgDsc/giphy.gif){.absolute height="250" left="-100" bottom="0"}
-
-## `r fontawesome::fa("github", fill="#1e74ff")` [GitHub]{.copilot3} [Copilot]{.copilot3} {{< iconify copilot-16 >}} [(III) --]{.copilot3} [[chattr!!!]{.chatter}](https://mlverse.github.io/chattr/)
-
-```{r}
-# Load necessary libraries
-library(ggplot2)
-library(palmerpenguins)
-
-# Create a histogram of penguin body mass
-ggplot(data = penguins, aes(x = body_mass_g)) +
-  geom_histogram(binwidth = 200, fill = "skyblue", color = "black") +
-  labs(
-    title = "Histogram of Penguin Body Mass",
-    x = "Body Mass (g)",
-    y = "Count"
-  ) +
-  theme_minimal()
-```
-
+![](https://t3.ftcdn.net/jpg/05/59/01/30/360_F_559013001_B6pZQvMqlhOp948LrRy8LOm4xC1D6R5F.jpg){.absolute height="250" left="-50" top="280" .tilt2}
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}

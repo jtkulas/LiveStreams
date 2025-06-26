@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css?family=Mona Sans');
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 @import url('https://fonts.googleapis.com/css?family=Joti One');
+@import url('https://fonts.googleapis.com/css?family=Michroma');
 
 $presentation-title-slide-text-align: right;
 
@@ -27,7 +28,7 @@ $presentation-line-height: 1.3;
 // colors
 $body-bg: #e9cee5; 
 $body-color: #a92777;
-$link-color: #e17c9c;
+$link-color: #c94f8e;
 $selection-bg: #2a1625;              
 
 // headings
@@ -54,6 +55,10 @@ $code-block-border-color: #a92777;
   @include radial-gradient(#f2bbea, #faf5f9);
 }
 
+// underlining hyperlinks to make them stand out a bit more
+
+.reveal a { text-decoration: underline; }
+
 /*-- scss:rules --*/
 
 .titleauthor {
@@ -78,6 +83,10 @@ $code-block-border-color: #a92777;
 
 .tilt2 {
   rotate: -20deg;
+}
+
+.smaller {
+  font-size: .9em;
 }
 
 // fonts
@@ -129,4 +138,12 @@ $code-block-border-color: #a92777;
   text-shadow: 
     4px 4px 0px black,
     -2px -2px 2px black !important;
+}
+
+.positron {
+  color: #ffecf2; //#ffecf2
+  font-family: "Michroma";
+  text-shadow: 
+    1px 1px 0px black,
+    -1px -1px 0px black !important;
 }
