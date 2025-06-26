@@ -128,7 +128,7 @@ More context about Gilligan's Island here is warranted to provide a comprehensiv
 
 ![](https://static.vecteezy.com/system/resources/previews/001/195/458/non_2x/speech-bubble-png.png){.absolute height="300" top="-50" left="400"}
 
-## [{{< iconify mdi:github >}}[GitHub]{.copilot3} [Copilot]{.copilot3} {{< iconify copilot-16 >}} [(III) --]{.copilot3}](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html) [[chattr!!!]{.chatter}](https://mlverse.github.io/chattr/)  
+## [{{< iconify mdi:github >}}[GitHub]{.copilot3} [Copilot]{.copilot3} {{< iconify copilot-16 >}} [(III) --]{.copilot3}](https://docs.github.com/en/copilot/using-github-copilot/ai-models/supported-ai-models-in-copilot) [[chattr!!!]{.chatter}](https://mlverse.github.io/chattr/)  
 
 ![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3I5NTE4dnprY21odnE1bDA0emZ5ZW5ucHByamkyM3E5NmlvMWJveSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SEkGmscHPfrzP7tneI/giphy.gif){.absolute left="250" bottom="80"}
 
@@ -139,6 +139,25 @@ More context about Gilligan's Island here is warranted to provide a comprehensiv
 ![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHFmbjZnbDk1bzFuaXNoNXV6eHYzdjV5cWFiazc2amk2ZDZqZnFueSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9SbuG4bfs2zd4sRRQl/giphy.gif){.absolute height="250" left="-50" top="150" .tilt2}
 
 ![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbG9pdGN6Mjd2MTFraHJlZmVqNXVienh4eXN1ajVpZGVreTE0MnoyYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/srb6bXZHbgDsc/giphy.gif){.absolute height="250" left="-100" bottom="0"}
+
+## `r fontawesome::fa("github", fill="#1E90FF")` [GitHub]{.copilot3} [Copilot]{.copilot3} {{< iconify copilot-16 >}} [(III) --]{.copilot3} [[chattr!!!]{.chatter}](https://mlverse.github.io/chattr/)
+
+```{r}
+# Load necessary libraries
+library(ggplot2)
+library(palmerpenguins)
+
+# Create a histogram of penguin body mass
+ggplot(data = penguins, aes(x = body_mass_g)) +
+  geom_histogram(binwidth = 200, fill = "skyblue", color = "black") +
+  labs(
+    title = "Histogram of Penguin Body Mass",
+    x = "Body Mass (g)",
+    y = "Count"
+  ) +
+  theme_minimal()
+```
+
 
 ## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
