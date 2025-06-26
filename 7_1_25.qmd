@@ -2,8 +2,8 @@
 title: "R for <br>Authoring!!" 
 author: "[OOH Session #84...<br> ...test piloting]{.titleauthor}<br>{{< iconify mdi:github >}}[GitHub]{.copilot2} [Copilot]{.copilot2} {{< iconify copilot-16 >}} [(IV) --]{.copilot2} [Positron]{.chatter}"
 title-slide-attributes: 
-  data-background-image: https://www.azoquantum.com/images/Article_Images/ImageForArticle_307_16479577622879928.jpg
-  data-background-opacity: ".8"
+  data-background-image: https://media.istockphoto.com/id/98003938/vector/fifties-holiday-wrap.jpg?s=612x612&w=0&k=20&c=728QGYOwJrvitrAZhM2Iaa5bsEdRuynTN2CkA6GBZVM=
+  data-background-opacity: ".4"
 format:
   revealjs:
     mouse-wheel: true               ## code navigation messy
