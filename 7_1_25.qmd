@@ -70,7 +70,7 @@ library(fontawesome)
 
 ::: {.panel-tabset}
 
-### Theme highlighting `r emo::ji("black_nib")`
+### Theme highlighting {{< iconify  streamline-cyber-color:highlighter style= "color:#cfff04;" >}}
 
 ```{css}
 #| eval: false
@@ -215,7 +215,7 @@ $code-block-border-color: #a92777;
 
 ![](https://www.pngkey.com/png/full/10-108285_pink-panther-and-inspector-cluso-clip-art-cliparts.png){.absolute right="-80" bottom="115" height="300" class="foreground-image"}
 
-### Chat Interface
+### Chat Interface {{< iconify streamline-flex-color:help-chat-1-flat >}}
 
 ::: {.columns}
 ::: {.column width="75%"}
@@ -250,11 +250,11 @@ $code-block-border-color: #a92777;
 
 ![](https://png.pngtree.com/png-vector/20220730/ourmid/pngtree-atom-icon-png-image_6092415.png)
 
-## [[{{< iconify mdi:github >}}[GitHub]{.copilot3} [Copilot]{.copilot3} {{< iconify copilot-16 >}} [(IV):]{.copilot3}](https://docs.github.com/en/copilot/using-github-copilot/ai-models/supported-ai-models-in-copilot) [{{< iconify simple-icons:posit style= 'color:black;' >}} [positron]{.positron} {{< iconify simple-icons:posit style= 'color:black;' >}}](https://positron.posit.co/download.html)]{.smaller} 
+## [[{{< iconify mdi:github >}}[GitHub]{.copilot3} [Copilot]{.copilot3} {{< iconify copilot-16 >}} [(IV):]{.copilot3}](https://docs.github.com/en/copilot/using-github-copilot/ai-models/supported-ai-models-in-copilot) [{{< iconify simple-icons:posit style= 'color:black;' >}} [positron]{.positron} {{< iconify simple-icons:posit style= 'color:black;' >}}](https://positron.posit.co/assistant.html#completions)]{.smaller} 
 
 ![](https://media.istockphoto.com/id/1424997955/vector/funny-retro-illustration-of-a-cartoon-atom.jpg?s=612x612&w=0&k=20&c=st8CQkUsjCOY9DgYQbbMnc5bo1E7knqprcm5_GvBe1I=){.absolute height="500" left="250" bottom="80"}
 
-![](https://t4.ftcdn.net/jpg/05/59/01/31/360_F_559013100_n0TBKB4TaTwLlfRt5i9RMi1BnoEaCqZR.jpg){.absolute height="250" right="0" top="280" .tilt}
+![](https://t4.ftcdn.net/jpg/05/59/01/31/360_F_559013100_n0TBKB4TaTwLlfRt5i9RMi1BnoEaCqZR.jpg){.absolute height="250" right="0" top="270" .tilt}
 
 ![](https://t3.ftcdn.net/jpg/05/59/01/30/360_F_559013001_B6pZQvMqlhOp948LrRy8LOm4xC1D6R5F.jpg){.absolute height="250" left="-50" top="280" .tilt2}
 
