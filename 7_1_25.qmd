@@ -258,7 +258,7 @@ $code-block-border-color: #a92777;
 
 ![](https://t3.ftcdn.net/jpg/05/59/01/30/360_F_559013001_B6pZQvMqlhOp948LrRy8LOm4xC1D6R5F.jpg){.absolute height="250" left="-50" top="280" .tilt2}
 
-## `r fontawesome::fa("r-project", fill="#4287f5")` Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+## {{< iconify vscode-icons:file-type-r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
 sessionInfo()
 ```
