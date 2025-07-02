@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 @import url('https://fonts.googleapis.com/css?family=Joti One');
 @import url('https://fonts.googleapis.com/css?family=Michroma');
+@import url('https://fonts.googleapis.com/css?family=Bangers');
 
 $presentation-title-slide-text-align: right;
 
@@ -69,6 +70,14 @@ $code-block-border-color: #a92777;
   text-shadow: 
     2px 2px 2px black,
     -3px -3px 3px black;
+}
+
+.titlestyle {
+  color: 	#a92777;
+  font-weight: bold;
+  font-family: 'Fontdiner Swanky';
+  text-shadow: 
+    5px 5px 0px #222;
 }
 
 // tilts, mirrors, etc 
@@ -146,4 +155,12 @@ $code-block-border-color: #a92777;
   text-shadow: 
     1px 1px 0px black,
     -1px -1px 0px black !important;
+}
+
+.supergirl {
+  color: #f11712; 
+  font-family: "Bangers";
+  text-shadow: 
+    2px 2px 2px #34f9fe,
+    -2px -2px 2px #34f9fe !important;
 }

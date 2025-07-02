@@ -1,9 +1,10 @@
 ---
 title: "R for <br>Authoring!!" 
-author: "[OOH Session #84...<br> ...test piloting]{.titleauthor}<br>{{< iconify mdi:github >}}[GitHub]{.copilot2} [Copilot]{.copilot2} {{< iconify copilot-16 >}} [(IV):]{.copilot2} <br>{{< iconify simple-icons:posit size=2x style= 'color:black;' >}} [positron]{.positron} {{< iconify simple-icons:posit size=2x style= 'color:black;' >}}"
+author: "[OOH Session #85...<br> ...test piloting]{.titleauthor}<br>{{< iconify mdi:github >}}[GitHub]{.copilot2} [Copilot]{.copilot2} {{< iconify copilot-16 >}} [(V):]{.copilot2} <br>{{< iconify simple-icons:posit size=2x style= 'color:black;' >}} [positron]{.positron} {{< iconify simple-icons:posit size=2x style= 'color:black;' >}} [vs.]{.titlestyle} [supermaven]{.supergirl}"
 title-slide-attributes: 
-  data-background-image: https://media.istockphoto.com/id/98003938/vector/fifties-holiday-wrap.jpg?s=612x612&w=0&k=20&c=728QGYOwJrvitrAZhM2Iaa5bsEdRuynTN2CkA6GBZVM= #https://media.istockphoto.com/id/98003938/vector/fifties-holiday-wrap.jpg?s=612x612&w=0&k=20&c=728QGYOwJrvitrAZhM2Iaa5bsEdRuynTN2CkA6GBZVM=
-  data-background-opacity: ".4"
+  data-background-image: https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/03/Supergirl.jpg #https://supermanstuff.com/cdn/shop/collections/supergirl_classic__1___movie_comic_wp__by_jmarvelhero_dbyg3h8-fullview_1200x1200.jpg?v=1615885525
+  #img/supergirl.JPG
+  data-background-opacity: ".2"
 format:
   revealjs:
     mouse-wheel: true               ## code navigation messy
@@ -44,9 +45,9 @@ library(fontawesome)
 
 ::: {layout="[90,10]"}
 ::: first-column
--   Recap session #83
+-   Recap session #84
 -   Focal issue(s):
-    - [`r fontawesome::fa("github", fill="#1e74ff")` [GitHub]{.copilot2} [Copilot]{.copilot2} {{< iconify copilot-24 >}}](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html) [(IV):]{.copilot2} <br>[{{< iconify simple-icons:posit style= 'color:black;' >}} [positron]{.positron} {{< iconify simple-icons:posit style= 'color:black;' >}}](https://positron.posit.co/download.html)
+    - [`r fontawesome::fa("github", fill="#1e74ff")` [GitHub]{.copilot2} [Copilot]{.copilot2} {{< iconify copilot-24 >}}](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html) [(V):]{.copilot2} <br>{{< iconify simple-icons:posit style= 'color:black;' >}} [positron]{.positron} {{< iconify simple-icons:posit style= 'color:black;' >}}<br> vs. [supermaven]{.supergirl}
     -   Shared problem-solving
 
 :::
@@ -56,15 +57,15 @@ library(fontawesome)
 
 :::
 
-![](img/title83.JPG){.absolute top="135" right="-120" width="600" height="325"}
+![](img/title84.JPG){.absolute top="135" right="-120" width="600" height="325"}
 
 ![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="155" left="360" width="200"}
 
-# Recap of Session <br>#83: 
+# Recap of Session <br>#84: 
 
 ![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
 
-![](https://png.pngtree.com/png-vector/20230225/ourmid/pngtree-smart-chatbot-cartoon-clipart-png-image_6620453.png){.absolute width="120" top="260" right="110"}
+![](https://png.pngtree.com/png-vector/20220730/ourmid/pngtree-atom-icon-png-image_6092415.png){.absolute width="160" top="245" right="95"}
 
 ## [`r fontawesome::fa("github", fill="#1e74ff")` [GitHub]{.copilot3} [Copilot (III)]{.copilot3} {{< iconify copilot-24 >}}](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html) [[chattr!!!]{.chatter}](https://blogs.rstudio.com/ai/posts/2024-04-04-chat-with-llms-using-chattr/)
 
@@ -248,15 +249,15 @@ $code-block-border-color: #a92777;
 
 # Today...
 
-![](https://png.pngtree.com/png-vector/20220730/ourmid/pngtree-atom-icon-png-image_6092415.png)
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHpnMWxhYXl4bDl6YTZhOTc0YTgxa2R3ZGZ4ejVtcjQydDk3anJ6aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1hYIXcDMxEGw8/giphy.gif)
 
-## [[{{< iconify mdi:github >}}[GitHub]{.copilot3} [Copilot]{.copilot3} {{< iconify copilot-16 >}} [(IV):]{.copilot3}](https://docs.github.com/en/copilot/using-github-copilot/ai-models/supported-ai-models-in-copilot) [{{< iconify simple-icons:posit style= 'color:black;' >}} [positron]{.positron} {{< iconify simple-icons:posit style= 'color:black;' >}}](https://positron.posit.co/assistant.html#completions)^[full integration/support currently (seemingly) a [work in progress](https://github.com/posit-dev/positron/issues/476)]]{.smaller} 
+## [{{< iconify mdi:github >}}[GitHub]{.copilot3} [Copilot]{.copilot3} {{< iconify copilot-16 >}} [(IV):]{.copilot3}](https://docs.github.com/en/copilot/using-github-copilot/ai-models/supported-ai-models-in-copilot)<br>[{{< iconify simple-icons:posit style= 'color:black;' >}} [positron]{.positron} {{< iconify simple-icons:posit style= 'color:black;' >}}](https://positron.posit.co/assistant.html#completions) vs. [supermaven]{.supergirl} 
 
-![](https://media.istockphoto.com/id/1424997955/vector/funny-retro-illustration-of-a-cartoon-atom.jpg?s=612x612&w=0&k=20&c=st8CQkUsjCOY9DgYQbbMnc5bo1E7knqprcm5_GvBe1I=){.absolute height="500" left="250" bottom="80"}
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2V2MzZwa2VxbmU2aWJxbWd1amN0aG9lZHp6bWNhZ3UxdGJ3eWgybyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xThtah5iMtxupl8DyU/giphy.gif){.absolute height="400" left="-120"}
 
-![](https://t4.ftcdn.net/jpg/05/59/01/31/360_F_559013100_n0TBKB4TaTwLlfRt5i9RMi1BnoEaCqZR.jpg){.absolute height="250" right="0" top="270" .tilt}
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExODdvMzY1and1NWRrOW1nZDR5amNpdXhub2l4OTZ6MDVheXZlb3F0byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iH1DHUQcc17yubngP4/giphy.gif){.absolute right="-50"}
 
-![](https://t3.ftcdn.net/jpg/05/59/01/30/360_F_559013001_B6pZQvMqlhOp948LrRy8LOm4xC1D6R5F.jpg){.absolute height="250" left="-50" top="280" .tilt2}
+![](https://png.pngtree.com/png-vector/20220708/ourmid/pngtree-kaboom-comic-word-book-motion-creative-vector-png-image_24995624.png){.absolute height="300" right="-165" top="-65"}
 
 ## {{< iconify vscode-icons:file-type-r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
