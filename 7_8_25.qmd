@@ -46,7 +46,7 @@ library(fontawesome)
 ::: first-column
 + Recap session #84
 + Focal issue(s):
-    + [`r fontawesome::fa("github", fill="#1e74ff")` [GitHub]{.copilot2} [Copilot]{.copilot2} {{< iconify copilot-24 >}}](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html) [(V):]{.copilot2} <br>[{{< iconify simple-icons:posit style= 'color:black;' >}} [positron]{.positron} {{< iconify simple-icons:posit style= 'color:black;' >}}](https://positron.posit.co/assistant.html#completions)<br> vs. [[supermaven]{.supergirl}](https://supermaven.com/)
+    + [`r fontawesome::fa("github", fill="#1e74ff")` [GitHub]{.copilot2} [Copilot]{.copilot2} {{< iconify copilot-24 >}}](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html) [(V):]{.copilot2} <br>[{{< iconify simple-icons:posit style= 'color:black;' >}} [positron]{.positron} {{< iconify simple-icons:posit style= 'color:black;' >}}](https://github.com/posit-dev/positron/discussions/7931)<br> vs. [[supermaven]{.supergirl}](https://supermaven.com/)
 + Shared problem-solving
 
 :::
@@ -102,7 +102,7 @@ library(fontawesome)
 
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHpnMWxhYXl4bDl6YTZhOTc0YTgxa2R3ZGZ4ejVtcjQydDk3anJ6aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1hYIXcDMxEGw8/giphy.gif)
 
-## [{{< iconify mdi:github >}}[GitHub]{.copilot3} [Copilot]{.copilot3} {{< iconify copilot-16 >}} [(V):]{.copilot3}](https://docs.github.com/en/copilot/using-github-copilot/ai-models/supported-ai-models-in-copilot)<br>[{{< iconify simple-icons:posit style= 'color:black;' >}} [positron]{.positron} {{< iconify simple-icons:posit style= 'color:black;' >}}](https://github.com/posit-dev/positron/discussions/7931) vs. [[supermaven]{.supergirl}](https://codeparrot.ai/blogs/supermaven-for-beginners) 
+## [{{< iconify mdi:github >}}[GitHub]{.copilot3} [Copilot]{.copilot3} {{< iconify copilot-16 >}} [(V):]{.copilot3}](https://docs.github.com/en/copilot/using-github-copilot/ai-models/supported-ai-models-in-copilot)<br>[{{< iconify simple-icons:posit style= 'color:black;' >}} [positron]{.positron} {{< iconify simple-icons:posit style= 'color:black;' >}}](https://positron.posit.co/assistant.html#completions) vs. [[supermaven]{.supergirl}](https://codeparrot.ai/blogs/supermaven-for-beginners) 
 
 ![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2V2MzZwa2VxbmU2aWJxbWd1amN0aG9lZHp6bWNhZ3UxdGJ3eWgybyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xThtah5iMtxupl8DyU/giphy.gif){.absolute height="400" left="-120"}
 
