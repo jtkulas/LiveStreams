@@ -1,0 +1,126 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #86...<br> [...iconify!!!]{.tangerine}"
+title-slide-attributes: 
+  data-background-image: https://i.pinimg.com/564x/ff/92/59/ff925958ba001b0061f007e55fd2ba6b.jpg
+  data-background-opacity: ".6"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+#    controls-layout: bottom-right
+#    controls-tutorial: true
+#    slide-number: h.v
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: themeplayground.scss       
+    logo: https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+iconify:
+  style: "color: #1e74ff;"
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[90,10]"}
+::: first-column
++ Recap session #85
++ Focal issue(s):
+    + [iconify!!!]{.tangerine .smaller}
++ Shared problem-solving
+
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title85.JPG){.absolute top="135" right="-120" width="600" height="325"}
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="155" left="360" width="200"}
+
+# Recap of Session <br>#85: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://www.pngarts.com/files/3/Action-Supergirl-Transparent-Image.png){.absolute width="190" top="275" right="95" .tilt}
+
+## [{{< iconify mdi:github >}}[GitHub]{.copilot3} [Copilot]{.copilot3} {{< iconify copilot-16 >}} [(V):]{.copilot3}](https://docs.github.com/en/copilot/using-github-copilot/ai-models/supported-ai-models-in-copilot)<br>[{{< iconify simple-icons:posit style= 'color:black;' >}} [positron]{.positron} {{< iconify simple-icons:posit style= 'color:black;' >}}](https://positron.posit.co/assistant.html#completions) vs. [[supermaven]{.supergirl}](https://codeparrot.ai/blogs/supermaven-for-beginners) 
+
+::: {.panel-tabset}
+
+### {{< iconify simple-icons:posit style= 'color:black;' >}} [positron]{.positron} {{< iconify simple-icons:posit style= 'color:black;' >}}
+
+[![](https://positron.posit.co/images/astropy.png)](https://positron.posit.co/download.html)
+
+### [Supermaven]{.supergirl}
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+{{< video https://www.youtube.com/watch?v=h7kaUe_NvdA height="400" width="500">}}
+
+:::
+
+::: {.column width="50%"}
+
+{{< video https://www.youtube.com/watch?v=cLoMExBGooc height="400" width="500">}}
+
+:::
+
+:::
+
+:::
+
+![](https://png.pngtree.com/png-vector/20220708/ourmid/pngtree-kaboom-comic-word-book-motion-creative-vector-png-image_24995624.png){.absolute height="300" right="-165" top="-65"}
+
+# Today...
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjIzYjI2aHZvd2NsNGozYWZtbW10NDR0MG80OTBrMjZ0N3JwdXVvcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OoOlmRkRtiYwM/giphy.gif)
+
+## [[...iconify!!!]{.tangerine}](https://github.com/mcanouil/quarto-iconify)
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+[{{< iconify svg-spinners:wind-toy size=10x >}}](https://icon-sets.iconify.design/svg-spinners/)
+:::
+
+::: {.column width="50%"}
+
+[{{< iconify streamline-ultimate-color:business-lucky-cat size=10x >}}](https://icon-sets.iconify.design/streamline-ultimate-color/)
+
+:::
+
+:::
+
+![](https://www.pngmart.com/files/22/The-Pink-Panther-PNG-Transparent.png){.absolute right="-130" top="0" height="400" .mirror}
+
+## {{< iconify vscode-icons:file-type-r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+sessionInfo()
+```
+
