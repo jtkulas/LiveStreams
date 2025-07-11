@@ -46,7 +46,7 @@ library(fontawesome)
 ::: first-column
 + Recap session #85
 + Focal issue(s):
-    + [iconify!!!]{.tangerine .smaller}
+    + [[iconify!!!]{.tangerine .smaller}](https://icon-sets.iconify.design/)
 + Shared problem-solving
 
 :::
@@ -68,27 +68,18 @@ library(fontawesome)
 
 ## [{{< iconify mdi:github >}}[GitHub]{.copilot3} [Copilot]{.copilot3} {{< iconify copilot-16 >}} [(V):]{.copilot3}](https://docs.github.com/en/copilot/using-github-copilot/ai-models/supported-ai-models-in-copilot)<br>[{{< iconify simple-icons:posit style= 'color:black;' >}} [positron]{.positron} {{< iconify simple-icons:posit style= 'color:black;' >}}](https://positron.posit.co/assistant.html#completions) vs. [[supermaven]{.supergirl}](https://codeparrot.ai/blogs/supermaven-for-beginners) 
 
-::: {.panel-tabset}
-
-### {{< iconify simple-icons:posit style= 'color:black;' >}} [positron]{.positron} {{< iconify simple-icons:posit style= 'color:black;' >}}
-
-[![](https://positron.posit.co/images/astropy.png)](https://positron.posit.co/download.html)
-
-### [Supermaven]{.supergirl}
-
 ::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="55%"}
 
-{{< video https://www.youtube.com/watch?v=h7kaUe_NvdA height="400" width="500">}}
++ access via [posit's direct link](positron://settings/positron.assistant.enable)
 
-:::
-
-::: {.column width="50%"}
-
-{{< video https://www.youtube.com/watch?v=cLoMExBGooc height="400" width="500">}}
 
 :::
+
+::: {.column width="45%"}
+
++ load extension from within [{{< iconify eos-icons:atom-electron >}}](https://positron.posit.co/)
 
 :::
 
@@ -96,17 +87,47 @@ library(fontawesome)
 
 ![](https://png.pngtree.com/png-vector/20220708/ourmid/pngtree-kaboom-comic-word-book-motion-creative-vector-png-image_24995624.png){.absolute height="300" right="-165" top="-65"}
 
+## [Multi-Session Recap with<br>{{< iconify mdi:github >}}[GitHub]{.copilot3} [Copilot]{.copilot3} {{< iconify copilot-16 >}}]{.smaller}
+
+...morphed into a more general exploration of AI--integration within IDEs ([{{< iconify devicon:rstudio >}}](https://posit.co/download/rstudio-desktop/) and [{{< iconify eos-icons:atom-electron >}}](https://positron.posit.co/))
+
+
+::: {.columns .Smaller}
+::: {.column width="50%"}
+
+1. [enable {{< iconify copilot-16 >}}](https://github.com/features/copilot)  ([{{< iconify logos:youtube >}}](https://www.youtube.com/watch?v=79YhQK5lP_I&t=2835s))  
+  + free for educators (& trial) 
+  + code completions out--of--the--box
+    + chat facilitated via [`chattr`](https://mlverse.github.io/chattr/)<br>  ([{{< iconify logos:youtube >}}](https://www.youtube.com/watch?v=0QRc4w2ecOA&t=2064s))
+
+:::
+
+::: {.column width="50%"}
+
+2. {{< iconify copilot-16 >}} can power [{{< iconify eos-icons:atom-electron >}} assistant](https://github.com/posit-dev/positron/discussions/7931) [***for code completions***]{.underline}  ([{{< iconify logos:youtube >}}](https://www.youtube.com/watch?v=pl_N6St_Kbw))  
+  + [{{< iconify logos:claude-icon >}} currently needed for chat](https://www.anthropic.com/claude)^[...as of `r format(Sys.Date(),"%B %d, %Y")`]
+3. [[supermaven]{.supergirl} extension](https://supermaven.com/) has both code completions as well as chat assistance
+
+:::
+
+:::
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExajU1cXNoZzlwb2x0aWtzaDN5Y3p0dnphdjVqbXByNmNsaXlqamVmbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mIZ9rPeMKefm0/giphy.gif){.absolute right="-120" top="0" height="300"}
+
 # Today...
 
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjIzYjI2aHZvd2NsNGozYWZtbW10NDR0MG80OTBrMjZ0N3JwdXVvcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OoOlmRkRtiYwM/giphy.gif)
 
-## [[...iconify!!!]{.tangerine}](https://github.com/mcanouil/quarto-iconify)
+## [[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...iconify!!!]{.tangerine}](https://github.com/mcanouil/quarto-iconify)
 
 ::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="40%"}
 
 [{{< iconify svg-spinners:wind-toy size=10x >}}](https://icon-sets.iconify.design/svg-spinners/)
+:::
+
+::: {.column width="5%"}
 :::
 
 ::: {.column width="50%"}
@@ -117,7 +138,9 @@ library(fontawesome)
 
 :::
 
-![](https://www.pngmart.com/files/22/The-Pink-Panther-PNG-Transparent.png){.absolute right="-130" top="0" height="400" .mirror}
+![](https://www.pngmart.com/files/22/The-Pink-Panther-PNG-Transparent.png){.absolute right="-130" top="50" height="400" .mirror}
+
+![](https://cdn.pixabay.com/photo/2019/11/14/03/22/arrogant-4625238_1280.png){.absolute left="-100" top="0" .mirror height="200"}
 
 ## {{< iconify vscode-icons:file-type-r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}

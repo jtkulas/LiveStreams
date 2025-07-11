@@ -82,6 +82,10 @@ $code-block-border-color: #a92777;
 
 // tilts, mirrors, etc 
 
+.underline {
+  text-decoration: underline;
+}
+
 .mirror {
   transform: rotateY(180deg);
 }
@@ -99,7 +103,7 @@ $code-block-border-color: #a92777;
 }
 
 .Smaller {
-  font-size: .7em;
+  font-size: .8em;
 }
 
 .bigger {
@@ -182,4 +186,6 @@ $code-block-border-color: #a92777;
     2px 2px 2px white,
     -2px -2px 2px #a92777 !important;
 }
+
+
 
