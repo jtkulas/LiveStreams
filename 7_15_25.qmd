@@ -72,7 +72,7 @@ library(fontawesome)
 
 ::: {.column width="55%"}
 
-+ access via [posit's direct link](positron://settings/positron.assistant.enable)
++ access via posit's <br>[direct link](positron://settings/positron.assistant.enable)
 
 
 :::
@@ -86,6 +86,7 @@ library(fontawesome)
 :::
 
 ![](https://png.pngtree.com/png-vector/20220708/ourmid/pngtree-kaboom-comic-word-book-motion-creative-vector-png-image_24995624.png){.absolute height="300" right="-165" top="-65"}
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExamI0dXVscTZ1MXFuaTAzMzRrYWduZmJmN3ZvdHQzandrYjdvdnN2ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/12eljpyuTK0fSM/giphy.gif){.absolute bottom="0" height="350" left="140"}
 
 ## [Multi-Session Recap with<br>{{< iconify mdi:github >}}[GitHub]{.copilot3} [Copilot]{.copilot3} {{< iconify copilot-16 >}}]{.smaller}
 
