@@ -1,0 +1,100 @@
+---
+title: "R for <br>Authoring!!" 
+author: "OOH Session #87...<br> [iconify!!!]{.tangerine} [(again)]{.tangerine2}"
+title-slide-attributes: 
+  data-background-image: img/electricity.png
+  data-background-opacity: ".7"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+#    controls-layout: bottom-right
+#    controls-tutorial: true
+#    slide-number: h.v
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: themeplayground.scss       
+    logo: https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+iconify:
+  style: "color: #1e74ff;"
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[90,10]"}
+::: first-column
++ Recap session #86
++ Focal issue(s):
+    + [[iconify!!!]{.tangerine .smaller}](https://icon-sets.iconify.design/) [(again)]{.tangerine2}
++ Shared problem-solving
+
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title86.JPG){.absolute top="135" right="-120" width="600" height="325"}
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="155" left="360" width="200"}
+
+# Recap of Session <br>#86: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://images.vexels.com/media/users/3/263682/isolated/preview/1a5967526b8f58f3b1f1173613aa73f6-storm-cloud-and-lightining.png){.absolute width="130" top="255" right="105"}
+
+## {background-image="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWtsc3R4YzRhZGc5b2NyaGV4a2RtcWxwbWw4OTJqd3p4czlubXV0NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26uf5HjasTtxtNCqQ/giphy.gif"}
+
+# Today...
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHptd2prY21kamF1YnB6cmhpeDE5M3Z2cnpjeTI1ZWd3NWlmb3p0MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41Yl9PrK3hmW5Dgc/giphy.gif)
+
+## [[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...iconify!!!]{.tangerine}](https://github.com/mcanouil/quarto-iconify)
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+[{{< iconify svg-spinners:bouncing-ball size=10x >}}](https://icon-sets.iconify.design/svg-spinners/)
+:::
+
+::: {.column width="50%"}
+
+[{{< iconify streamline-kameleon-color:captain-shield size=10x >}}](https://icon-sets.iconify.design/streamline-kameleon-color/)
+
+:::
+
+:::
+
+![](https://www.vectorkhazana.com/assets/images/products/marilyn_monroe_3.png){.absolute right="-130" top="50" height="400"}
+
+![](https://www.muraldecal.com/en/img/as052mb-png/folder/products-detalle-png/stickers-marilyn-monroe.png){.absolute left="-100" top="0" .mirror height="200"}
+
+## {{< iconify vscode-icons:file-type-r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+sessionInfo()
+```
+
