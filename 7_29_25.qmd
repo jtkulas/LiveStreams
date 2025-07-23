@@ -1,9 +1,9 @@
 ---
 title: "R for <br>Authoring!!" 
-author: "OOH Session #87...<br> [iconify!!!]{.tangerine} {{< iconify codicon:copilot-snooze >}}"
+author: "OOH Session #88...<br> [...battle of the ICONS!!!]{.titans}"
 title-slide-attributes: 
-  data-background-image: img/electricity.png
-  data-background-opacity: ".7"
+  data-background-image: https://media.craiyon.com/2025-04-05/fBV3AinmT0WoK48-K-hIjQ.webp #https://media.craiyon.com/2025-04-19/6SOKpdtoRuevUgTEwUwhBQ.webp 
+  data-background-opacity: ".9"
 format:
   revealjs:
     mouse-wheel: true               ## code navigation messy
@@ -44,9 +44,9 @@ library(fontawesome)
 
 ::: {layout="[90,10]"}
 ::: first-column
-+ Recap session #86
++ Recap session #87
 + Focal issue(s):
-    + [[iconify!!!]{.tangerine .smaller}](https://icon-sets.iconify.design/) [(again)]{.tangerine2}
+    + [...battle of the ICONS!!!]{.titans2}
 + Shared problem-solving
 
 :::
@@ -56,23 +56,23 @@ library(fontawesome)
 
 :::
 
-![](img/title86.JPG){.absolute top="135" right="-120" width="600" height="325"}
+![](img/title87.JPG){.absolute top="135" right="-120" width="600" height="325"}
 
 ![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="155" left="360" width="200"}
 
-# Recap of Session <br>#86: 
+# Recap of Session <br>#87: 
 
 ![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
 
-![](https://images.vexels.com/media/users/3/263682/isolated/preview/1a5967526b8f58f3b1f1173613aa73f6-storm-cloud-and-lightining.png){.absolute width="130" top="255" right="105"}
+![](https://community-openhab-org.s3.dualstack.eu-central-1.amazonaws.com/original/3X/4/4/4486dfe2681b7b51b0615dab850a1f8cdaa95ac6.png){.absolute width="130" top="255" right="110"}
 
 ## {background-image="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWtsc3R4YzRhZGc5b2NyaGV4a2RtcWxwbWw4OTJqd3p4czlubXV0NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26uf5HjasTtxtNCqQ/giphy.gif"}
 
 # Today...
 
-![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHptd2prY21kamF1YnB6cmhpeDE5M3Z2cnpjeTI1ZWd3NWlmb3p0MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41Yl9PrK3hmW5Dgc/giphy.gif)
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjJpczJyZGdzbGFuY2FhNzRqcXpnNWs4aGZnNTRudWdqYWd4bzdoYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Fw2PnsOvTu67m/giphy.gif)
 
-## [[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...iconify!!!]{.tangerine}](https://github.com/mcanouil/quarto-iconify)
+## [...battle of the ICONS!!!]{.titans2}
 
 ::: {.columns}
 

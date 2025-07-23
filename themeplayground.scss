@@ -8,6 +8,7 @@
 @import url('https://fonts.googleapis.com/css?family=Michroma');
 @import url('https://fonts.googleapis.com/css?family=Bangers');
 @import url('https://fonts.googleapis.com/css?family=Tangerine');
+@import url('https://fonts.googleapis.com/css?family=Grechen Fuemen');
 
 $presentation-title-slide-text-align: right;
 
@@ -196,3 +197,18 @@ $code-block-border-color: #a92777;
     -1px -1px 1px #a92777 !important;
 }
 
+.titans {
+  color: white; 
+  font-family: Grechen Fuemen;
+  text-shadow: 
+    3px 3px 5px #00f0ff,
+    -3px -3px 5px #00f0ff !important;
+}
+
+.titans2 {
+  color: white; 
+  font-family: Grechen Fuemen;
+  text-shadow: 
+    2px 2px 4px #04d9ff,
+    -2px -2px 4px #04d9ff !important;
+}
