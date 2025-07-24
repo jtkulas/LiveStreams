@@ -66,32 +66,47 @@ library(fontawesome)
 
 ![](https://community-openhab-org.s3.dualstack.eu-central-1.amazonaws.com/original/3X/4/4/4486dfe2681b7b51b0615dab850a1f8cdaa95ac6.png){.absolute width="130" top="255" right="110"}
 
-## {background-image="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWtsc3R4YzRhZGc5b2NyaGV4a2RtcWxwbWw4OTJqd3p4czlubXV0NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26uf5HjasTtxtNCqQ/giphy.gif"}
+## [[iconify!!!]{.tangerine}](https://github.com/mcanouil/quarto-iconify)
+
+![](https://www.vectorkhazana.com/assets/images/products/marilyn_monroe_3.png){.absolute right="-130" top="0" height="300"}
 
 # Today...
 
-![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjJpczJyZGdzbGFuY2FhNzRqcXpnNWs4aGZnNTRudWdqYWd4bzdoYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Fw2PnsOvTu67m/giphy.gif)
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGZvamRkOXptZHZwb3JvaThybGgxdm1weDA4ZzNmbnBwMGxwZjRnYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Pyv6fShlz8XHq/giphy.gif)
 
 ## [...battle of the ICONS!!!]{.titans2}
 
+<br>
+
 ::: {.columns}
+::: {.column width="30%"}
+### [iconify](https://github.com/mcanouil/quarto-iconify):
 
-::: {.column width="40%"}
-
-[{{< iconify svg-spinners:bouncing-ball size=10x >}}](https://icon-sets.iconify.design/svg-spinners/)
++ {{< iconify svg-spinners:pulse-rings-3 size=2x >}}
++ {{< iconify logos:youtube >}}
++ {{< iconify emojione:face-blowing-a-kiss size=2x >}}
 :::
 
-::: {.column width="50%"}
+::: {.column width="42%"}
+### [fontawesome](https://rstudio.github.io/fontawesome/):
 
-[{{< iconify streamline-kameleon-color:captain-shield size=10x >}}](https://icon-sets.iconify.design/streamline-kameleon-color/)
++ `r fontawesome::fa("circle-dot", fill="#6f9cde", title="circle-dot")`^[[animation add--ons exist](https://github.com/mcanouil/quarto-animate) if someone really wanted to wrap/stack functions]
++ [`r fontawesome::fa("youtube", fill="#FF0000", height="2em", title="youtube")`](https://cran.r-project.org/web/packages/fontawesome/fontawesome.pdf) 
++ `r fontawesome::fa("face-kiss-wink-heart", fill="#f4c81a", height="2em", title="face-kiss-wink-heart")`
+
+:::
+
+::: {.column width="28%"} 
+### [icon(s)](https://pkg.mitchelloharawild.com/icons/):^[requires [local installation](https://pkg.mitchelloharawild.com/icons/news/index.html) but provides access to unique sets (e.g., [bioicons](https://bioicons.com/))]
+
++ <ion-icon name="disc-outline"></ion-icon>
++ `r emo::ji("blue_circle")`
 
 :::
 
 :::
 
-![](https://www.vectorkhazana.com/assets/images/products/marilyn_monroe_3.png){.absolute right="-130" top="50" height="400"}
-
-![](https://www.muraldecal.com/en/img/as052mb-png/folder/products-detalle-png/stickers-marilyn-monroe.png){.absolute left="-100" top="0" .mirror height="200"}
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzJzeHBrd2owZTZpZ3VsZmY3NTl3cjcweno0c3BmYzE1dm1xZ3EyciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2OVL0dLCB5nck/giphy.gif){.absolute right="-120" top="-20" height="200"}
 
 ## {{< iconify vscode-icons:file-type-r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
