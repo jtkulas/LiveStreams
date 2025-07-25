@@ -74,7 +74,7 @@ library(fontawesome)
 
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGZvamRkOXptZHZwb3JvaThybGgxdm1weDA4ZzNmbnBwMGxwZjRnYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Pyv6fShlz8XHq/giphy.gif)
 
-## [...battle of the ICONS!!!]{.titans2}
+## [...battle of the ICONS!!!]{.titans2} 
 
 <br>
 
@@ -82,25 +82,26 @@ library(fontawesome)
 ::: {.column width="30%"}
 ### [iconify](https://github.com/mcanouil/quarto-iconify):
 
-+ {{< iconify svg-spinners:pulse-rings-3 size=2x >}}
-+ {{< iconify logos:youtube >}}
-+ {{< iconify emojione:face-blowing-a-kiss size=2x >}}
+ {{< iconify svg-spinners:pulse-rings-3 size=2x >}} <br>
+ {{< iconify logos:youtube >}} <br>
+ {{< iconify emojione:face-blowing-a-kiss size=2x >}}
 :::
 
 ::: {.column width="42%"}
 ### [fontawesome](https://rstudio.github.io/fontawesome/):
 
-+ `r fontawesome::fa("circle-dot", fill="#6f9cde", title="circle-dot")`^[[animation add--ons exist](https://github.com/mcanouil/quarto-animate) if someone really wanted to wrap/stack functions]
-+ [`r fontawesome::fa("youtube", fill="#FF0000", height="2em", title="youtube")`](https://cran.r-project.org/web/packages/fontawesome/fontawesome.pdf) 
-+ `r fontawesome::fa("face-kiss-wink-heart", fill="#f4c81a", height="2em", title="face-kiss-wink-heart")`
+ `r fontawesome::fa("circle-dot", fill="#6f9cde", title="circle-dot")`^[[animation add--ons exist](https://github.com/mcanouil/quarto-animate) if someone really wanted to wrap/stack functions or use [`anicon`](https://anicon.netlify.app/#4)] <br>
+ [`r fontawesome::fa("youtube", fill="#FF0000", height="2em", title="youtube")`](https://cran.r-project.org/web/packages/fontawesome/fontawesome.pdf) <br>
+ `r fontawesome::fa("face-kiss-wink-heart", fill="#f4c81a", height="2em", title="face-kiss-wink-heart")`
 
 :::
 
 ::: {.column width="28%"} 
-### [icon(s)](https://pkg.mitchelloharawild.com/icons/):^[requires [local installation](https://pkg.mitchelloharawild.com/icons/news/index.html) but provides access to unique sets (e.g., [bioicons](https://bioicons.com/))]
+### [icon(s)](https://pkg.mitchelloharawild.com/icons/):^[requires [local installation](https://pkg.mitchelloharawild.com/icons/news/index.html) but provides access to unique sets (e.g., [bioicons](https://bioicons.com/)); animation enabled only in the depreciated package, [`icon`](https://ropensci.org/blog/2018/05/15/icon/)]
 
-+ <ion-icon name="disc-outline"></ion-icon>
-+ `r emo::ji("blue_circle")`
+`r icon::fa_eye(animate = "spin", color="blue")`  <br>
+`r icon::fa_youtube(color="red")` <br>
+`r icon::fa("circle")`
 
 :::
 
