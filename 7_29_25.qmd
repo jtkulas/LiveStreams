@@ -82,32 +82,43 @@ library(fontawesome)
 ::: {.column width="27%"}
 ### [[iconify](https://github.com/mcanouil/quarto-iconify)]{.smaller}:
 
- {{< iconify svg-spinners:pulse-rings-3 size=2x >}} <br>
  {{< iconify logos:youtube >}} <br>
- {{< iconify emojione:face-blowing-a-kiss size=2x >}}
+ {{< iconify emojione:face-blowing-a-kiss size=2x >}} <br>
+ {{< iconify svg-spinners:pulse-rings-3 size=2x >}}
+
 :::
 
 ::: {.column width="38%"}
 ### [[fontawesome](https://rstudio.github.io/fontawesome/)]{.smaller}:
 
- `r fontawesome::fa("circle-dot", fill="#6f9cde", title="circle-dot")`^[animation [add--ons exist](https://github.com/mcanouil/quarto-animate) if someone really wanted to wrap/stack functions; [`anicon`](https://anicon.netlify.app/#4) does not play well with Quarto]  <br>
- [`r fontawesome::fa("youtube", fill="#FF0000", height="2em", title="youtube")`](https://cran.r-project.org/web/packages/fontawesome/fontawesome.pdf) <br>
- `r fontawesome::fa("face-kiss-wink-heart", fill="#f4c81a", height="2em", title="face-kiss-wink-heart")`
+[`r fontawesome::fa("youtube", fill="#FF0000", height="2em", title="youtube")`](https://cran.r-project.org/web/packages/fontawesome/fontawesome.pdf) <br>
+`r fontawesome::fa("face-kiss-wink-heart", fill="#f4c81a", height="2em", title="face-kiss-wink-heart")` <br>
+  <br>
+ `r fontawesome::fa("circle-dot", fill="#6f9cde", title="circle-dot")`^[animation [add--ons exist](https://github.com/mcanouil/quarto-animate) if someone really wanted to wrap/stack functions; [`anicon`](https://anicon.netlify.app/#4) does not play well with Quarto]  
 
 :::
 
 ::: {.column width="33%"} 
 ### [[icon(s)](https://pkg.mitchelloharawild.com/icons/)/[emo](https://github.com/hadley/emo)]{.smaller}:^[`icon` requires [local installation](https://pkg.mitchelloharawild.com/icons/news/index.html) but provides access to unique sets (e.g., [bioicons](https://bioicons.com/)); animation depreciated when evolved from [`icon`](https://ropensci.org/blog/2018/05/15/icon/) $\rightarrow$ [`icons`](https://github.com/mitchelloharawild/icons/)]
 
-`r icon::fa_eye(animate = "spin", color="blue")` <br>
-`r icons::fontawesome("youtube")` <br>
-`r emo::ji("face_blowing_a_kiss")`
+`r icons::icon_style(icons::fontawesome("youtube"), scale = 2, fill = "red")` <br>
+`r emo::ji("face_blowing_a_kiss")` <br>
+`r icon::fa_eye(animate = "spin", color="blue")` 
+
 :::
 
 :::
 
 
 ![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzJzeHBrd2owZTZpZ3VsZmY3NTl3cjcweno0c3BmYzE1dm1xZ3EyciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2OVL0dLCB5nck/giphy.gif){.absolute right="-120" top="-20" height="200"}
+
+##
+
+```{r}
+library(icons)
+icon_style(fontawesome("youtube"), scale = 2, fill = "red")
+```
+
 
 ## {{< iconify vscode-icons:file-type-r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
