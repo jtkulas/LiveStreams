@@ -31,8 +31,6 @@ bibliography: temp.bib
 #lightbox: true
 filters: 
   - reveal-header          ## extension to add a hyperlink to slide logo
-iconify:
-  style: "color: #1e74ff;"
 ---
 
 ```{r, warning=FALSE, message=FALSE}
@@ -66,9 +64,31 @@ library(fontawesome)
 
 ![](https://community-openhab-org.s3.dualstack.eu-central-1.amazonaws.com/original/3X/4/4/4486dfe2681b7b51b0615dab850a1f8cdaa95ac6.png){.absolute width="130" top="255" right="110"}
 
-## [[iconify!!!]{.tangerine}](https://github.com/mcanouil/quarto-iconify)
+## &nbsp;&nbsp;&nbsp;[[iconify!!!]{.tangerine}](https://icon-sets.iconify.design/)
 
-![](https://www.vectorkhazana.com/assets/images/products/marilyn_monroe_3.png){.absolute right="-130" top="0" height="300"}
+::: {.columns}
+::: {.column width="60%"}
+:::
+
+::: {.column width="40%"}
+
+```{r}
+#| eval: false
+#| echo: true
+#| code-overflow: wrap
+
+{{< iconify vscode-icons:file-type-r width=2x flip="horizontal" >}}
+
+```
+
+[{{< iconify vscode-icons:file-type-r width=2x flip="horizontal" >}}](https://m.canouil.dev/quarto-iconify/)
+:::
+:::
+
+
+![](https://www.vectorkhazana.com/assets/images/products/marilyn_monroe_3.png){.absolute left="-190" top="0" height="300" .mirror}
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2F1NHA3bmowZ3Vnb2c4dmpwendpdGdyZGEzaXFtcHA0dmxwMzEzOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1k5k3J5K3BywQOrpNA/giphy.gif){.absolute left="70" bottom="75"}
 
 # Today...
 
@@ -91,8 +111,8 @@ library(fontawesome)
 ::: {.column width="38%"}
 ### [[fontawesome](https://rstudio.github.io/fontawesome/)]{.smaller}:
 
-[`r fontawesome::fa("youtube", fill="#FF0000", height="2em", title="youtube")`](https://cran.r-project.org/web/packages/fontawesome/fontawesome.pdf) <br>
-`r fontawesome::fa("face-kiss-wink-heart", fill="#f4c81a", height="2em", title="face-kiss-wink-heart")` <br>
+[`r fontawesome::fa("youtube", fill="#FF0000", title="youtube")`](https://cran.r-project.org/web/packages/fontawesome/fontawesome.pdf) <br>
+`r fontawesome::fa("face-kiss-wink-heart", fill="#f4c81a", width="2em", title="face-kiss-wink-heart")` <br>
   <br>
  `r fontawesome::fa("circle-dot", fill="#6f9cde", title="circle-dot")`^[animation [add--ons exist](https://github.com/mcanouil/quarto-animate) if someone really wanted to wrap/stack functions; [`anicon`](https://anicon.netlify.app/#4) does not play well with Quarto]  
 
@@ -101,8 +121,8 @@ library(fontawesome)
 ::: {.column width="33%"} 
 ### [[icon(s)](https://pkg.mitchelloharawild.com/icons/)/[emo](https://github.com/hadley/emo)]{.smaller}:^[`icon` requires [local installation](https://pkg.mitchelloharawild.com/icons/news/index.html) but provides access to unique sets (e.g., [bioicons](https://bioicons.com/)); animation depreciated when evolved from [`icon`](https://ropensci.org/blog/2018/05/15/icon/) $\rightarrow$ [`icons`](https://github.com/mitchelloharawild/icons/)]
 
-`r icons::icon_style(icons::fontawesome("youtube"), scale = 2, fill = "red")` <br>
-`r emo::ji("face_blowing_a_kiss")` <br>
+`r icons::icon_style(icons::fontawesome("youtube"), fill = "red")` <br>
+[`r emo::ji("face_blowing_a_kiss")`]{.bigger} <br>
 `r icon::fa_eye(animate = "spin", color="blue")` 
 
 :::
@@ -111,14 +131,6 @@ library(fontawesome)
 
 
 ![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzJzeHBrd2owZTZpZ3VsZmY3NTl3cjcweno0c3BmYzE1dm1xZ3EyciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2OVL0dLCB5nck/giphy.gif){.absolute right="-120" top="-20" height="200"}
-
-##
-
-```{r}
-library(icons)
-icon_style(fontawesome("youtube"), scale = 2, fill = "red")
-```
-
 
 ## {{< iconify vscode-icons:file-type-r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
