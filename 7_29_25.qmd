@@ -105,7 +105,7 @@ library(fontawesome)
 
  {{< iconify logos:youtube >}} <br>
  {{< iconify emojione:face-blowing-a-kiss size=2x >}} <br>
- {{< iconify svg-spinners:pulse-rings-3 size=2x >}}
+ {{< iconify svg-spinners:pulse-rings-3 size=2x style="color: #1e74ff;" >}}
 
 :::
 
