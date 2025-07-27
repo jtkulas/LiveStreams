@@ -89,6 +89,7 @@ library(fontawesome)
 ![](https://www.vectorkhazana.com/assets/images/products/marilyn_monroe_3.png){.absolute left="-190" top="0" height="300" .mirror}
 
 ![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2F1NHA3bmowZ3Vnb2c4dmpwendpdGdyZGEzaXFtcHA0dmxwMzEzOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1k5k3J5K3BywQOrpNA/giphy.gif){.absolute left="70" bottom="75"}
+![](https://www.drupal.org/files/styles/grid-3-2x/public/project-images/iconify_icons_module_0.png?itok=pXWkkl5T){.absolute height="300" top="-50" right="-20"}
 
 # Today...
 
