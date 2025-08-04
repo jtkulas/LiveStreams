@@ -1,0 +1,131 @@
+---
+title: "R is for <br>Authoring!!" 
+author: "OOH Session #89...<br> [...Auto Appendices!!!]{.automobile .bigger}"
+title-slide-attributes: 
+  data-background-image: https://cdn.dribbble.com/userupload/13803754/file/original-0a7ddce659290f3b53a065b32a5089ae.png?resize=2048x1536&vertical=center
+  data-background-opacity: ".8"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+#    controls-layout: bottom-right
+#    controls-tutorial: true
+#    slide-number: h.v
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: themeplayground.scss       
+    logo: https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[90,10]"}
+::: first-column
++ Recap session #88
++ Focal issue(s):
+    + [[...Auto Appendices!!!]{.auto2}](https://github.com/cl-roberts/code-appendix)^[[check out](https://dribbble.com/shots/23903892-Corvette-Tiger) Gregory Grigoriou's other great work!!]
++ Shared problem-solving
+
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title88.JPG){.absolute top="135" right="-120" width="550"}
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="155" left="360" width="200"}
+
+# Recap of Session <br>#88: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://pics.clipartpng.com/Boxing_Gloves_PNG_Clip_Art-3163.png){.absolute width="90" top="255" right="128"}
+
+## [[Battle of the Icons!!!]{.titans style="font-size: 1.2em;"}](https://www.youtube.com/watch?v=Uw0gUA9MMfA&t=2388s)
+
+::: {.columns}
+::: {.column width="60%"}
+:::
+
+::: {.column width="40%"}
+
+<br>
+
++ [`iconify`](https://github.com/mcanouil/quarto-iconify): {{< iconify devicon:r size=3x >}} {{< iconify openmoji:sports-medal size=2x >}} 
++ [`fontawesome`](https://cran.r-project.org/web/packages/fontawesome/fontawesome.pdf): `r fontawesome::fa("r-project", fill="#005b96", height="2em")`
++ [`icon(s)`](https://github.com/mitchelloharawild/icons): `r icons::icon_style(icons::fontawesome("r-project"), fill="#bbbbbb", scale=2)`
++ [`emo`](https://github.com/hadley/emo): [`r emo::ji("registered")`]{.Bigger}  {{< iconify openmoji:sports-medal size=2x >}}
+
+
+:::
+:::
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExazdtZXo4aDFzdHd4bGl6M3dwMzBrMDZwZXVlMnEyNzd0dGhlM3IwaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/A4XAO37VtluWQ/giphy.gif){.absolute left="0" bottom="75"}
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjQ5cm5tZzF6cjVjMTk4bWF5YWM3ZTZqaTk5aHNlbm90NjIwY2duMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LmpHsHFG1ZoRy/giphy.gif){.absolute top="-40" right="-150"}
+
+# Today... 
+
+::: {.columns}
+::: {.column width="53%"}
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnB5eXNhd2pmbGRkd2ZhaDBlaHQ5NHBhcmc5Z3VsZml2cmo5c2d6YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fxIk8gAC4fHir5s8Su/giphy.gif)
+:::
+
+::: {.column width="47%"}
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGhwOXd0eHFmaTV4YXpkZXRrM2hoZ2ZvZzVvdmJkbTRmbmllaGNvbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hmMDC1ESBFPLa/giphy.gif)
+:::
+
+:::
+
+## [[...Auto Appendices!!!]{.automobile}](https://github.com/cl-roberts/code-appendix) 
+
+::: {.panel-tabset}
+
+### Technical Reports {{< iconify icon-park:table-report >}}
+
+![](https://marketplace.canva.com/EAGM0U_qmZQ/2/0/1131w/canva-black-and-grey-minimalist-modern-porject-brief-report-h4huwZDtRdE.jpg){.absolute height="400" left="0"}
+
+![](https://www.k-state.edu/oeie/images/rde-sp/RDE_Technical_Appendices.png.jpg){.absolute height="400" left="290"}
+
+![](https://img.yumpu.com/38088040/1/500x640/appendix-a-sample-technical-report-singhose.jpg){.absolute height="400" right="135"}
+
+### Homework Assignments {{< iconify emojione:school >}}
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXFxdjRlZzVtaTE5M3dwNm43MjFsbmYyeHE4MHduYmd1MDl5MWcwdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gAXtUkBVd8OCbFjauC/giphy.gif)
+
+![](https://ecdn.teacherspayteachers.com/thumbitem/Weekly-Homework-Assignment-Sheet-2715562-1552483776/original-2715562-1.jpg){.absolute height="450" right="170" bottom="10"}
+
+::: 
+
+![](https://png.pngtree.com/png-clipart/20230616/ourmid/pngtree-vintage-maroon-automobile-car-png-image_7152026.png){.absolute right="-120" top="-70" height="300"}
+
+![](https://st.depositphotos.com/1724125/1324/v/450/depositphotos_13241412-stock-illustration-man-with-stomachache.jpg){.absolute right="-160" bottom="110" height="400"}
+
+## {{< iconify vscode-icons:file-type-r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+sessionInfo()
+```
+

@@ -81,7 +81,7 @@ library(fontawesome)
 
 ```
 
-[{{< iconify vscode-icons:file-type-r width=2x flip="horizontal" >}}](https://m.canouil.dev/quarto-iconify/)
+[{{< iconify vscode-icons:file-type-r width=2x" >}}](https://m.canouil.dev/quarto-iconify/)
 :::
 :::
 

@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="7_29_25_files/libs/clipboard/clipboard.min.js"></script>
-<script src="7_29_25_files/libs/quarto-html/tabby.min.js"></script>
-<script src="7_29_25_files/libs/quarto-html/popper.min.js"></script>
-<script src="7_29_25_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="7_29_25_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="7_29_25_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="7_29_25_files/libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="7_29_25_files/libs/quarto-contrib/reveal-header-1.0.0/add_header.js" defer="true"></script>
-<link href="7_29_25_files/libs/quarto-contrib/reveal-header-1.0.0/add_header.css" rel="stylesheet">
-<link href="7_29_25_files/libs/quarto-contrib/grid-no-htext-1.0.0/grid_no_htext.css" rel="stylesheet">
-<script src="7_29_25_files/libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script><meta charset="utf-8">
+<script src="8_5_25_files/libs/clipboard/clipboard.min.js"></script>
+<script src="8_5_25_files/libs/quarto-html/tabby.min.js"></script>
+<script src="8_5_25_files/libs/quarto-html/popper.min.js"></script>
+<script src="8_5_25_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="8_5_25_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="8_5_25_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="8_5_25_files/libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="8_5_25_files/libs/quarto-contrib/reveal-header-1.0.0/add_header.js" defer="true"></script>
+<link href="8_5_25_files/libs/quarto-contrib/reveal-header-1.0.0/add_header.css" rel="stylesheet">
+<link href="8_5_25_files/libs/quarto-contrib/grid-no-htext-1.0.0/grid_no_htext.css" rel="stylesheet">
+<script src="8_5_25_files/libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script><meta charset="utf-8">
   <meta name="generator" content="quarto-1.7.30">
 
-  <meta name="author" content="OOH Session #88…  …battle of the ICONS!!!">
-  <title>R for  Authoring!!</title>
+  <meta name="author" content="OOH Session #89…  …Auto Appendices!!!">
+  <title>R is for  Authoring!!</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="7_29_25_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="7_29_25_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="8_5_25_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="8_5_25_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -32,78 +32,12 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="7_29_25_files/libs/revealjs/dist/theme/quarto-e52efda1b3040a3690f642b695c01c51.css">
-  <link href="7_29_25_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="7_29_25_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="7_29_25_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="7_29_25_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="8_5_25_files/libs/revealjs/dist/theme/quarto-01e382cb0041210b67c2fff21ffd47d7.css">
+  <link href="8_5_25_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="8_5_25_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="8_5_25_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="8_5_25_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
@@ -191,35 +125,33 @@
       margin-right: 0; 
     }
   </style>
-  <link href="7_29_25_files/libs/font-awesome-5.0.12/css/fontawesome-all.min.css" rel="stylesheet">
-
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="https://media.craiyon.com/2025-04-05/fBV3AinmT0WoK48-K-hIjQ.webp" data-background-opacity=".9" class="quarto-title-block center">
-  <h1 class="title">R for <br>Authoring!!</h1>
+<section id="title-slide" data-background-image="https://cdn.dribbble.com/userupload/13803754/file/original-0a7ddce659290f3b53a065b32a5089ae.png?resize=2048x1536&amp;vertical=center" data-background-opacity=".8" class="quarto-title-block center">
+  <h1 class="title">R is for <br>Authoring!!</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-OOH Session #88…<br> <span class="titans">…battle of the ICONS!!!</span> 
+OOH Session #89…<br> <span class="automobile bigger">…Auto Appendices!!!</span> 
 </div>
 </div>
 </div>
 
 </section>
-<section id="open-office-hours-july-29-2025" class="slide level2">
-<h2>Open Office Hours <br>(July 29, 2025)</h2>
+<section id="open-office-hours-august-04-2025" class="slide level2">
+<h2>Open Office Hours <br>(August 04, 2025)</h2>
 <div class="quarto-layout-panel" data-layout="[90,10]">
 <div class="quarto-layout-row">
 <div class="first-column quarto-layout-cell" style="flex-basis: 90.0%;justify-content: flex-start;">
 <ul>
-<li>Recap session #87</li>
+<li>Recap session #88</li>
 <li>Focal issue(s):
 <ul>
-<li><span class="titans2">…battle of the ICONS!!!</span></li>
+<li><a href="https://github.com/cl-roberts/code-appendix"><span class="auto2">…Auto Appendices!!!</span></a><sup>1</sup></li>
 </ul></li>
 <li>Shared problem-solving</li>
 </ul>
@@ -229,56 +161,62 @@ OOH Session #88…<br> <span class="titans">…battle of the ICONS!!!</span>
 </div>
 </div>
 </div>
-<p><img data-src="img/title87.JPG" class="absolute" style="top: 135px; right: -120px; width: 600px; height: 325px; "></p>
+<p><img data-src="img/title88.JPG" class="absolute" style="top: 135px; right: -120px; width: 550px; "></p>
 <p><img data-src="https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png" class="absolute" style="top: 155px; left: 360px; width: 200px; "></p>
-</section>
+<aside><ol class="aside-footnotes"><li id="fn1"><p><a href="https://dribbble.com/shots/23903892-Corvette-Tiger">check out</a> Gregory Grigoriou’s other great work!!</p></li></ol></aside></section>
 <section>
-<section id="recap-of-session-87" class="title-slide slide level1 center">
-<h1>Recap of Session <br>#87:</h1>
+<section id="recap-of-session-88" class="title-slide slide level1 center">
+<h1>Recap of Session <br>#88:</h1>
 <p><img data-src="https://pngimg.com/d/sticky_note_PNG18964.png" class="absolute" style="top: 200px; right: 50px; "></p>
-<p><img data-src="https://community-openhab-org.s3.dualstack.eu-central-1.amazonaws.com/original/3X/4/4/4486dfe2681b7b51b0615dab850a1f8cdaa95ac6.png" class="absolute" style="top: 255px; right: 110px; width: 130px; "></p>
+<p><img data-src="https://pics.clipartpng.com/Boxing_Gloves_PNG_Clip_Art-3163.png" class="absolute" style="top: 255px; right: 128px; width: 90px; "></p>
 </section>
-<section id="iconify" class="slide level2">
-<h2>&nbsp;&nbsp;&nbsp;<a href="https://icon-sets.iconify.design/"><span class="tangerine">iconify!!!</span></a></h2>
+<section id="battle-of-the-icons" class="slide level2">
+<h2><a href="https://www.youtube.com/watch?v=Uw0gUA9MMfA&amp;t=2388s"><span class="titans" style="font-size: 1.2em;">Battle of the Icons!!!</span></a></h2>
 <div class="columns">
 <div class="column" style="width:60%;">
 
 </div><div class="column" style="width:40%;">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r code-overflow-wrap number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a>{{<span class="sc">&lt;</span> iconify vscode<span class="sc">-</span>icons<span class="sc">:</span>file<span class="sc">-</span>type<span class="sc">-</span>r width<span class="ot">=</span><span class="dv">2</span>x flip<span class="ot">=</span><span class="st">"horizontal"</span> <span class="sc">&gt;</span>}}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><a href="https://m.canouil.dev/quarto-iconify/"><iconify-icon role="img" inline="" icon="vscode-icons:file-type-r" aria-label="Icon file-type-r from vscode-icons Iconify.design set." title="Icon file-type-r from vscode-icons Iconify.design set."></iconify-icon></a></p>
+<p><br></p>
+<ul>
+<li><a href="https://github.com/mcanouil/quarto-iconify"><code>iconify</code></a>: <iconify-icon role="img" inline="" icon="devicon:r" style="font-size: 3em;" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> <iconify-icon role="img" inline="" icon="openmoji:sports-medal" style="font-size: 2em;" aria-label="Icon sports-medal from openmoji Iconify.design set." title="Icon sports-medal from openmoji Iconify.design set."></iconify-icon></li>
+<li><a href="https://cran.r-project.org/web/packages/fontawesome/fontawesome.pdf"><code>fontawesome</code></a>: <svg aria-hidden="true" role="img" viewbox="0 0 581 512" style="height:2em;width:2.27em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#005b96;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg></li>
+<li><a href="https://github.com/mitchelloharawild/icons"><code>icon(s)</code></a>: <svg viewbox="0 0 581 512" style="position:relative;display:inline-block;top:.1em;fill:#bbbbbb;height:2em;" xmlns="http://www.w3.org/2000/svg"> <path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg></li>
+<li><a href="https://github.com/hadley/emo"><code>emo</code></a>: <span class="Bigger">®️</span> <iconify-icon role="img" inline="" icon="openmoji:sports-medal" style="font-size: 2em;" aria-label="Icon sports-medal from openmoji Iconify.design set." title="Icon sports-medal from openmoji Iconify.design set."></iconify-icon></li>
+</ul>
 </div></div>
-<p><img data-src="https://www.vectorkhazana.com/assets/images/products/marilyn_monroe_3.png" class="absolute mirror" style="top: 0px; left: -190px; height: 300px; "></p>
-<p><img data-src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2F1NHA3bmowZ3Vnb2c4dmpwendpdGdyZGEzaXFtcHA0dmxwMzEzOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1k5k3J5K3BywQOrpNA/giphy.gif" class="absolute" style="left: 70px; bottom: 75px; "> <img data-src="https://www.drupal.org/files/styles/grid-3-2x/public/project-images/iconify_icons_module_0.png?itok=pXWkkl5T" class="absolute" style="top: -50px; right: -20px; height: 300px; "></p>
+<p><img data-src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExazdtZXo4aDFzdHd4bGl6M3dwMzBrMDZwZXVlMnEyNzd0dGhlM3IwaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/A4XAO37VtluWQ/giphy.gif" class="absolute" style="left: 0px; bottom: 75px; "> <img data-src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjQ5cm5tZzF6cjVjMTk4bWF5YWM3ZTZqaTk5aHNlbm90NjIwY2duMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LmpHsHFG1ZoRy/giphy.gif" class="absolute" style="top: -40px; right: -150px; "></p>
 </section></section>
 <section>
 <section id="today" class="title-slide slide level1 center">
 <h1>Today…</h1>
-
-<img data-src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGZvamRkOXptZHZwb3JvaThybGgxdm1weDA4ZzNmbnBwMGxwZjRnYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Pyv6fShlz8XHq/giphy.gif" class="r-stretch"></section>
-<section id="battle-of-the-icons" class="slide level2">
-<h2><span class="titans2">…battle of the ICONS!!!</span></h2>
-<p><br></p>
 <div class="columns">
-<div class="column" style="width:27%;">
-<h3 id="iconify-1"><span class="smaller"><a href="https://github.com/mcanouil/quarto-iconify">iconify</a></span>:</h3>
-<p><iconify-icon role="img" inline="" icon="logos:youtube" aria-label="Icon youtube from logos Iconify.design set." title="Icon youtube from logos Iconify.design set."></iconify-icon> <br> <iconify-icon role="img" inline="" icon="emojione:face-blowing-a-kiss" style="font-size: 2em;" aria-label="Icon face-blowing-a-kiss from emojione Iconify.design set." title="Icon face-blowing-a-kiss from emojione Iconify.design set."></iconify-icon> <br> <iconify-icon role="img" inline="" icon="svg-spinners:pulse-rings-3" style="color: #1e74ff;;font-size: 2em;" aria-label="Icon pulse-rings-3 from svg-spinners Iconify.design set." title="Icon pulse-rings-3 from svg-spinners Iconify.design set."></iconify-icon></p>
-</div><div class="column" style="width:38%;">
-<h3 id="fontawesome"><span class="smaller"><a href="https://rstudio.github.io/fontawesome/">fontawesome</a></span>:</h3>
-<p><a href="https://cran.r-project.org/web/packages/fontawesome/fontawesome.pdf"><svg aria-hidden="true" role="img" viewbox="0 0 576 512" style="height:1em;width:1.12em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#FF0000;overflow:visible;position:relative;"><title>youtube</title><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg></a> <br> <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:2em;width:2em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#f4c81a;overflow:visible;position:relative;"><title>face-kiss-wink-heart</title><path d="M338.9 446.8c-25.4 11-53.4 17.2-82.9 17.2C141.1 464 48 370.9 48 256S141.1 48 256 48s208 93.1 208 208c0 22.4-3.5 43.9-10.1 64.1c3.1 4.5 5.7 9.4 7.8 14.6c12.7-1.6 25.1 .4 36.2 5c9.1-26.2 14-54.4 14-83.7C512 114.6 397.4 0 256 0S0 114.6 0 256S114.6 512 256 512c35.4 0 69.1-7.2 99.7-20.2c-4.8-5.5-8.5-12.2-10.4-19.7l-6.5-25.3zM296 316c0-6.9-3.1-13.2-7.3-18.3c-4.3-5.2-10.1-9.7-16.7-13.4C258.7 276.9 241.4 272 224 272c-3.6 0-6.8 2.5-7.7 6s.6 7.2 3.8 9l0 0 0 0 0 0 .2 .1c.2 .1 .5 .3 .9 .5c.8 .5 2 1.2 3.4 2.1c2.8 1.9 6.5 4.5 10.2 7.6c3.7 3.1 7.2 6.6 9.6 10.1c2.5 3.5 3.5 6.4 3.5 8.6s-1 5-3.5 8.6c-2.5 3.5-5.9 6.9-9.6 10.1c-3.7 3.1-7.4 5.7-10.2 7.6c-1.4 .9-2.6 1.6-3.4 2.1c-.4 .2-.7 .4-.9 .5l-.2 .1 0 0 0 0 0 0 0 0 0 0c-2.5 1.4-4.1 4.1-4.1 7s1.6 5.6 4.1 7l0 0 0 0 0 0 .2 .1c.2 .1 .5 .3 .9 .5c.8 .5 2 1.2 3.4 2.1c2.8 1.9 6.5 4.5 10.2 7.6c3.7 3.1 7.2 6.6 9.6 10.1c2.5 3.5 3.5 6.4 3.5 8.6s-1 5-3.5 8.6c-2.5 3.5-5.9 6.9-9.6 10.1c-3.7 3.1-7.4 5.7-10.2 7.6c-1.4 .9-2.6 1.6-3.4 2.1c-.4 .2-.7 .4-.9 .5l-.2 .1 0 0 0 0 0 0 0 0c-3.2 1.8-4.7 5.5-3.8 9s4.1 6 7.7 6c17.4 0 34.7-4.9 47.9-12.3c6.6-3.7 12.5-8.2 16.7-13.4c4.3-5.1 7.3-11.4 7.3-18.3s-3.1-13.2-7.3-18.3c-4.3-5.2-10.1-9.7-16.7-13.4c-2.7-1.5-5.7-3-8.7-4.3c3.1-1.3 6-2.7 8.7-4.3c6.6-3.7 12.5-8.2 16.7-13.4c4.3-5.1 7.3-11.4 7.3-18.3zM176.4 240a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm159.3-20c10.6 0 19.9 3.8 25.4 9.7c7.6 8.1 20.2 8.5 28.3 .9s8.5-20.2 .9-28.3C375.7 186.8 355 180 335.6 180s-40.1 6.8-54.6 22.3c-7.6 8.1-7.1 20.7 .9 28.3s20.7 7.1 28.3-.9c5.5-5.8 14.8-9.7 25.4-9.7zM434 352.3c-6-23.2-28.8-37-51.1-30.8s-35.4 30.1-29.5 53.4l22.9 89.3c2.2 8.7 11.2 13.9 19.8 11.4l84.9-23.8c22.2-6.2 35.4-30.1 29.5-53.4s-28.8-37-51.1-30.8l-20.2 5.6-5.4-21z"></path></svg> <br> <br> <svg aria-hidden="true" role="img" viewbox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#6f9cde;overflow:visible;position:relative;"><title>circle-dot</title><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256-96a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"></path></svg><sup>1</sup></p>
-</div><div class="column" style="width:33%;">
-<h3 id="iconsemo"><span class="smaller"><a href="https://pkg.mitchelloharawild.com/icons/">icon(s)</a>/<a href="https://github.com/hadley/emo">emo</a></span>:<sup>2</sup></h3>
-<svg viewbox="0 0 576 512" style="height:1em;position:relative;display:inline-block;top:.1em;fill:red;" xmlns="http://www.w3.org/2000/svg">
-<path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
-</svg>
-<p><br> <span class="bigger">😘</span> <br></p>
-<i class="fas  fa-eye fa-spin " style="color:blue;"></i>
+<div class="column" style="width:53%;">
+<p><img data-src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnB5eXNhd2pmbGRkd2ZhaDBlaHQ5NHBhcmc5Z3VsZml2cmo5c2d6YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fxIk8gAC4fHir5s8Su/giphy.gif"></p>
+</div><div class="column" style="width:47%;">
+<p><img data-src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGhwOXd0eHFmaTV4YXpkZXRrM2hoZ2ZvZzVvdmJkbTRmbmllaGNvbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hmMDC1ESBFPLa/giphy.gif"></p>
 </div></div>
-<p><img data-src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbzJzeHBrd2owZTZpZ3VsZmY3NTl3cjcweno0c3BmYzE1dm1xZ3EyciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2OVL0dLCB5nck/giphy.gif" class="absolute" style="top: -20px; right: -120px; height: 200px; "></p>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>animation <a href="https://github.com/mcanouil/quarto-animate">add–ons exist</a> if someone really wanted to wrap/stack functions; <a href="https://anicon.netlify.app/#4"><code>anicon</code></a> does not play well with Quarto</p></li><li id="fn2"><p><code>icon</code> requires <a href="https://pkg.mitchelloharawild.com/icons/news/index.html">local installation</a> but provides access to unique sets (e.g., <a href="https://bioicons.com/">bioicons</a>); animation depreciated when evolved from <a href="https://ropensci.org/blog/2018/05/15/icon/"><code>icon</code></a> <span class="math inline">\(\rightarrow\)</span> <a href="https://github.com/mitchelloharawild/icons/"><code>icons</code></a></p></li></ol></aside></section>
-<section id="session-info-july-29-2025-rendering" class="slide level2">
-<h2><iconify-icon role="img" inline="" icon="vscode-icons:file-type-r" style="font-size: 2em;" aria-label="Icon file-type-r from vscode-icons Iconify.design set." title="Icon file-type-r from vscode-icons Iconify.design set."></iconify-icon> Session Info (July 29, 2025) Rendering:</h2>
+</section>
+<section id="auto-appendices" class="slide level2">
+<h2><a href="https://github.com/cl-roberts/code-appendix"><span class="automobile">…Auto Appendices!!!</span></a></h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Technical Reports <iconify-icon role="img" inline="" icon="icon-park:table-report" aria-label="Icon table-report from icon-park Iconify.design set." title="Icon table-report from icon-park Iconify.design set."></iconify-icon></a></li><li><a href="#tabset-1-2">Homework Assignments <iconify-icon role="img" inline="" icon="emojione:school" aria-label="Icon school from emojione Iconify.design set." title="Icon school from emojione Iconify.design set."></iconify-icon></a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<p><img data-src="https://marketplace.canva.com/EAGM0U_qmZQ/2/0/1131w/canva-black-and-grey-minimalist-modern-porject-brief-report-h4huwZDtRdE.jpg" class="absolute" style="left: 0px; height: 400px; "></p>
+<p><img data-src="https://www.k-state.edu/oeie/images/rde-sp/RDE_Technical_Appendices.png.jpg" class="absolute" style="left: 290px; height: 400px; "></p>
+<p><img data-src="https://img.yumpu.com/38088040/1/500x640/appendix-a-sample-technical-report-singhose.jpg" class="absolute" style="right: 135px; height: 400px; "></p>
+</div>
+<div id="tabset-1-2">
+<p><img data-src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXFxdjRlZzVtaTE5M3dwNm43MjFsbmYyeHE4MHduYmd1MDl5MWcwdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gAXtUkBVd8OCbFjauC/giphy.gif"></p>
+<p><img data-src="https://ecdn.teacherspayteachers.com/thumbitem/Weekly-Homework-Assignment-Sheet-2715562-1552483776/original-2715562-1.jpg" class="absolute" style="bottom: 10px; right: 170px; height: 450px; "></p>
+</div>
+</div>
+</div>
+<p><img data-src="https://png.pngtree.com/png-clipart/20230616/ourmid/pngtree-vintage-maroon-automobile-car-png-image_7152026.png" class="absolute" style="top: -70px; right: -120px; height: 300px; "></p>
+<p><img data-src="https://st.depositphotos.com/1724125/1324/v/450/depositphotos_13241412-stock-illustration-man-with-stomachache.jpg" class="absolute" style="bottom: 110px; right: -160px; height: 400px; "></p>
+</section>
+<section id="session-info-august-04-2025-rendering" class="slide level2">
+<h2><iconify-icon role="img" inline="" icon="vscode-icons:file-type-r" style="font-size: 2em;" aria-label="Icon file-type-r from vscode-icons Iconify.design set." title="Icon file-type-r from vscode-icons Iconify.design set."></iconify-icon> Session Info (August 04, 2025) Rendering:</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.5.0 (2025-04-11 ucrt)
@@ -306,13 +244,13 @@ other attached packages:
 
 loaded via a namespace (and not attached):
  [1] crayon_1.5.3      vctrs_0.6.5       cli_3.6.5         knitr_1.50       
- [5] rlang_1.1.6       xfun_0.52         stringi_1.8.7     icon_0.1.0       
- [9] purrr_1.0.4       generics_0.1.3    assertthat_0.2.1  jsonlite_2.0.0   
-[13] glue_1.8.0        htmltools_0.5.8.1 rmarkdown_2.29    rappdirs_0.3.3   
-[17] emo_0.0.0.9000    evaluate_1.0.4    fastmap_1.2.0     yaml_2.3.10      
-[21] lifecycle_1.0.4   icons_0.2.0       stringr_1.5.1     compiler_4.5.0   
-[25] timechange_0.3.0  rstudioapi_0.17.1 digest_0.6.37     magrittr_2.0.3   
-[29] tools_4.5.0       lubridate_1.9.4   xml2_1.3.8       </code></pre>
+ [5] rlang_1.1.6       xfun_0.52         stringi_1.8.7     purrr_1.0.4      
+ [9] generics_0.1.3    assertthat_0.2.1  jsonlite_2.0.0    glue_1.8.0       
+[13] htmltools_0.5.8.1 rmarkdown_2.29    rappdirs_0.3.3    emo_0.0.0.9000   
+[17] evaluate_1.0.4    fastmap_1.2.0     yaml_2.3.10       lifecycle_1.0.4  
+[21] icons_0.2.0       stringr_1.5.1     compiler_4.5.0    timechange_0.3.0 
+[25] rstudioapi_0.17.1 digest_0.6.37     magrittr_2.0.3    tools_4.5.0      
+[29] lubridate_1.9.4   xml2_1.3.8       </code></pre>
 </div>
 </div>
 
@@ -341,19 +279,19 @@ loaded via a namespace (and not attached):
 </div></div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="7_29_25_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="8_5_25_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="7_29_25_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="7_29_25_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="7_29_25_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="7_29_25_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="7_29_25_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="8_5_25_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="8_5_25_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="8_5_25_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="8_5_25_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="8_5_25_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="7_29_25_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="7_29_25_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="7_29_25_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="7_29_25_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="8_5_25_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="8_5_25_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="8_5_25_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="8_5_25_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

@@ -9,8 +9,9 @@
 @import url('https://fonts.googleapis.com/css?family=Bangers');
 @import url('https://fonts.googleapis.com/css?family=Tangerine');
 @import url('https://fonts.googleapis.com/css?family=Grechen Fuemen');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
 
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: left;
 
 // fonts
 $font-family-sans-serif: "Palatino Linotype", "Book Antiqua", Palatino,
@@ -109,6 +110,10 @@ $code-block-border-color: #a92777;
 
 .bigger {
   font-size: 1.4em;
+}
+
+.Bigger {
+  font-size: 2em;
 }
 
 // fonts
@@ -211,4 +216,21 @@ $code-block-border-color: #a92777;
   text-shadow: 
     2px 2px 4px #04d9ff,
     -2px -2px 4px #04d9ff !important;
+}
+
+.automobile {
+  color: #f5276c; 
+  font-family: Lobster;
+  font-weight: normal !important;
+  text-shadow: 
+    -3px -3px 0px white,
+    3px 3px 0px black !important;
+}
+
+.auto2 {
+  color: #f5276c; 
+  font-family: Lobster;
+  font-weight: normal !important;
+  text-shadow: 
+    2px 2px 0px black !important;
 }
