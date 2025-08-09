@@ -1,0 +1,126 @@
+---
+title: "R is for <br>Authoring!!" 
+author: "OOH Session #90...<br> [...Speech Recognition!!&nbsp;&nbsp;]{.speech style='font-size:1.05em;'}"
+title-slide-attributes: 
+  data-background-image: https://img.freepik.com/premium-vector/megaphone-speech-bubble-colorful-background-with-radial-lines-retro-pop-art-style_129460-3434.jpg
+#  data-background-opacity: ".8"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+#    controls-layout: bottom-right
+#    controls-tutorial: true
+#    slide-number: h.v
+    mermaid:
+      theme: forest
+#    output-location: slide           ## column-fragment; inserts blank 2nd slide
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: themeplayground.scss       
+    logo: https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+    html-math-method: 
+      method: mathjax        ## LaTeX in code annotations
+      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
+engine: knitr                        ## not picking up inline codes
+bibliography: temp.bib
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+```{r, warning=FALSE, message=FALSE}
+#devtools::install_github("hadley/emo")        ## if anyone else wants to render
+library(fontawesome)
+```
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[90,10]"}
+::: first-column
++ Recap session #89
++ Focal issue(s):
+    + [[...Speech Recognition!!!]{.speech}](https://github.com/parmsam/quarto-speech)
++ Shared problem-solving
+
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title89.JPG){.absolute top="135" right="-120" width="550"}
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="155" left="360" width="200"}
+
+# Recap of Session <br>#89: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://png.pngtree.com/png-vector/20230318/ourmid/pngtree-book-clipart-vector-png-image_6653535.png){.absolute width="115" top="270" right="120"}
+
+## [[...Auto Appendices!!!]{.automobile .bigger}](https://github.com/cl-roberts/code-appendix) 
+
+:::: {.columns}
+
+::: {.column width="67%"}
+
+<br>
+<br>
+
+```{yaml, echo=TRUE, eval=FALSE}
+#| code-line-numbers: "7-10"
+---
+title: "Tech Report"
+author: "Wonderful YouTube People"
+format: 
+  pdf:
+    toc: true
+filters:
+    - code-appendix
+code-appendix-title: "Penguin Appendix (Code be here Yaar)"
+code-appendix-file: penguins.R    #<1> 
+---
+
+```
+1. places all of your code chunk content within a script file within your project folder (note we only tried {{< iconify devicon:r >}} chunks)
+:::
+
+::: {.column width="33%" .smaller}
+<br>
+<br>
+<br>
+
++ Use commments (`##`) for chunk identification
++ Use `\newpage` within {{< iconify vscode-icons:file-type-pdf2 >}} documents
+
+:::
+
+::::
+
+
+![](https://static.vecteezy.com/system/resources/previews/033/826/138/non_2x/beautiful-car-clipart-ai-generative-free-png.png){.absolute top="30" left="-160" height="350"}
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExM20yNW9uenM5YzZzbXdlbWk2NmR2MzZnazVzNWR6bHNpOHVwdG9wbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jfTDrYfZvlZja/giphy.gif){.absolute top="0" right="-100" height="300"}
+
+# Today... 
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3ZqNm16bHJmNHZvYXhkNjBhb2E5OTU5NHAyYnBva2kwM2oyZDRqMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l9Tllo1thElT5gvVOU/giphy.gif)
+
+## [[...Speech Recognition!!!]{.speech .Bigger}](https://github.com/parmsam/quarto-speech) 
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWFnbjVydnlmeDdjZjdxbHV5aTJiaTFzMGpyZDAybGxmeGloOGFpOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ZXwdJuk172dQwAqMGv/giphy.gif){.absolute top="220" right="0" height="280"}
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTJ6aGp2aHd1cWJ6b2w4eDNleWJ4dmtmOTNidmU0a2NwNHJ2OGU1YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GeHibbQfr5SCpAO7YE/giphy.gif){.mirror .tilt2 .absolute top="230" left="0" height="400"}
+
+![](https://revealjs.com/images/logo/reveal-black-text-sticker.png){.absolute right="-40" bottom="30" height="150"}
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+sessionInfo()
+```
+

@@ -10,8 +10,9 @@
 @import url('https://fonts.googleapis.com/css?family=Tangerine');
 @import url('https://fonts.googleapis.com/css?family=Grechen Fuemen');
 @import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Shadows Into Light');
 
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 
 // fonts
 $font-family-sans-serif: "Palatino Linotype", "Book Antiqua", Palatino,
@@ -233,4 +234,12 @@ $code-block-border-color: #a92777;
   font-weight: normal !important;
   text-shadow: 
     2px 2px 0px black !important;
+}
+
+.speech {
+  color: #db72b6; 
+  font-weight: normal !important;
+  font-family: Shadows Into Light;
+  text-shadow: 
+    1px 1px 0px #a92777 !important;
 }
