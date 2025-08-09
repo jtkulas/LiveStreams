@@ -88,7 +88,7 @@ code-appendix-file: penguins.R    #<1>
 ---
 
 ```
-1. places all of your code chunk content within a script file within your project folder (note we only tried {{< iconify devicon:r >}} chunks)
+1. places all of your code chunk content within a script file within your project folder (note we only tried {{< iconify devicon:r >}} chunks). By default content also appended (can by toggled with values of "true" or "false" to `code-appendix-write:`)
 :::
 
 ::: {.column width="33%" .smaller}
@@ -97,7 +97,7 @@ code-appendix-file: penguins.R    #<1>
 <br>
 
 + Use commments (`##`) for chunk identification
-+ Use `\newpage` within {{< iconify vscode-icons:file-type-pdf2 >}} documents
++ Use [`\newpage`](https://www.overleaf.com/learn/latex/Line_breaks_and_blank_spaces) within {{< iconify vscode-icons:file-type-pdf2 >}} documents
 
 :::
 
