@@ -11,32 +11,17 @@ format:
 #    navigation-mode: vertical
     transition: convex
     transition-speed: slow
-#    controls-layout: bottom-right
-#    controls-tutorial: true
-#    slide-number: h.v
-    mermaid:
-      theme: forest
-#    output-location: slide           ## column-fragment; inserts blank 2nd slide
     code-overflow: wrap              ## instead of horizontal scroll
     theme: themeplayground.scss       
     logo: https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
     footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
     preview-links: false             ## true brings up iframe window instead of "site"
     code-annotations: hover          ## select
-    html-math-method: 
-      method: mathjax        ## LaTeX in code annotations
-      url: "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML"
 engine: knitr                        ## not picking up inline codes
-bibliography: temp.bib
 #lightbox: true
 filters: 
   - reveal-header          ## extension to add a hyperlink to slide logo
 ---
-
-```{r, warning=FALSE, message=FALSE}
-#devtools::install_github("hadley/emo")        ## if anyone else wants to render
-library(fontawesome)
-```
 
 ## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
 
