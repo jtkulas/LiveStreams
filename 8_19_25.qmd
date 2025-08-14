@@ -1,0 +1,143 @@
+---
+title: "R is for <br>Authoring!!" 
+author: "OOH Session #91...<br> [...back to the {{< iconify twemoji:letter-a style='rotate: 20deg;' >}} {{< iconify twemoji:letter-b style='rotate: -10deg;' >}} {{< iconify twemoji:letter-c style='rotate: 10deg;'>}}'s]{.gochi}"
+title-slide-attributes: 
+  data-background-image: https://st5.depositphotos.com/1163454/65620/v/450/depositphotos_656200058-stock-illustration-anime-manga-style-illustration-schoolgirl.jpg #https://media.istockphoto.com/id/490667408/photo/back-to-school.jpg?s=612x612&w=0&k=20&c=_8LrZQdBUjPA06cEPV_SBJ_1KdU76Q2JvGuqjXmSJPM= 
+#  data-background-opacity: ".5"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: themeplayground.scss       
+    logo: https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+engine: knitr                        ## not picking up inline codes
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[90,10]"}
+::: first-column
++ Recap session #90
++ Focal issue(s):
+    + [...back to the {{< iconify twemoji:letter-a style='rotate: 20deg;' >}} {{< iconify twemoji:letter-b style='rotate: -10deg;' >}} {{< iconify twemoji:letter-c style='rotate: 10deg;'>}}'s]{.gochi}
++ Shared problem-solving
+
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title90.JPG){.absolute top="135" right="-120" width="550"}
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="155" left="360" width="200"}
+
+# Recap of Session <br>#90: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://png.pngtree.com/png-vector/20230808/ourmid/pngtree-dog-barking-vector-png-image_6873186.png){.absolute width="140" top="250" right="105"}
+
+## [[...Speech<br>Recognition!!!]{.speech}](https://github.com/parmsam/quarto-speech)  
+
+:::: {.columns}
+
+::: {.column width="55%"}
+
+```{yaml, echo=TRUE, eval=FALSE}
+#| code-line-numbers: "6,8-10,13-14"
+---
+title: "speeching"
+author: "Kulas & Ian"
+format: 
+  revealjs:
+    mouse-wheel: true        #<1>
+    speech:
+      nextKeyword: "banana"
+      prevKeyword: "oops"
+      lastKeyword: "vikings"
+      firstKeyword: "gotofirst"
+      numberKeyword: "gotoslidenumber"
+revealjs-plugins:           #<2>
+  - speech                  #<2>
+---
+```
+1. an alternative (built--in) option for slide navigation {{< iconify openmoji:mouse >}} {{< iconify svg-spinners:90-ring-with-bg >}}
+2. only mandatory addition for extension functionality
+:::
+
+::: {.column width="7%"}
+:::
+
+::: {.column width="38%"}
+<br>
+
++ Not all browsers will support -- currently [Chrome {{< iconify logos:chrome >}}](https://www.google.com/chrome/dr/download/?brand=OZZY&ds_kid=43700080456228412&gclsrc=aw.ds&gad_source=1&gad_campaignid=21457145903&gbraid=0AAAAAoY3CA5j1jSiuSVzXBP9GqCadre0E&gclid=CjwKCAjw7_DEBhAeEiwAWKiCC7g1p5Cc8A9ZeMzuCC5NOnc0Fl3Nx7_tDLKBK66CJzKmI3icgLzEshoCWx4QAvD_BwE) and [Safari {{< iconify devicon:safari >}}](https://www.apple.com/safari/) explicitly acknowledged
+
+:::
+
+::::
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTJ6aGp2aHd1cWJ6b2w4eDNleWJ4dmtmOTNidmU0a2NwNHJ2OGU1YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GeHibbQfr5SCpAO7YE/giphy.gif){.absolute top="-30" right="-140" height="250"}
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbG5rcWdlOGg0aGtrbmkwYzlnMmt1ZGh4MGpmc3F0c3pqYmRzMWlybiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ohze1E8A3HmQD1HyM/giphy.gif){.absolute top="-30" right="250" height="250"}
+
+# Today... 
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2lpZTN2OTFqcjZwZXFubWxwdWwxY24xNmg5YmY2bDBxbDVncHN4YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LweK4Ma6Chp8k/giphy.gif)
+
+## [...back to the {{< iconify twemoji:letter-a style='rotate: 20deg;' >}} {{< iconify twemoji:letter-b style='rotate: -10deg;' >}} {{< iconify twemoji:letter-c style='rotate: 10deg;'>}}'s]{.gochi}
+
+::: {.columns}
+
+::: {.column width="33%"}
+
+### A is for {{< iconify noto:red-apple >}}
+
++ [assortment](https://quarto.org/docs/gallery/)
++ [adornment](https://quarto.org/docs/authoring/markdown-basics.html#links-images)
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdngxdHBzcGtmbTB3aXJwcmZtbnBqcjZzMjR4ejZ0bXF5dDVkaHBqeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1gWitAIjMgeYKT0LfD/giphy.gif)
+
+:::
+
+::: {.column width="33%"}
+
+### B is for {{< iconify fxemoji:banana >}}
+
++ [beautification](https://www.w3schools.com/css/)
++ [bibliography](https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html)
+
+![](https://www.iresearchnet.com/wp-content/uploads/2018/04/How-to-Write-a-Bibliography-for-a-Research-Paper.png)
+
+:::
+
+::: {.column width="33%"}
+
+### C is for {{< iconify twemoji:coconut >}}
+
++ [chunks](https://quarto.org/docs/computations/execution-options.html)
++ [cross--references](https://quarto.org/docs/authoring/cross-references.html)
+
+![](https://www.skippypeanutbutter.fr/wp-content/uploads/2019/03/SKIPPY_Product_PB_Spread_Super_Chunk_Peanut_Butter_40oz.png)
+
+:::
+
+:::
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+sessionInfo()
+```
+
