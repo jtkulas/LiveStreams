@@ -103,34 +103,35 @@ revealjs-plugins:           #<2>
 
 ::: {.column width="33%"}
 
-### A is for {{< iconify noto:red-apple >}}
+### A is for 
+
+{{< iconify noto:red-apple size=7x >}}
 
 + [assortment](https://quarto.org/docs/gallery/)
 + [adornment](https://quarto.org/docs/authoring/markdown-basics.html#links-images)
 
-![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdngxdHBzcGtmbTB3aXJwcmZtbnBqcjZzMjR4ejZ0bXF5dDVkaHBqeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1gWitAIjMgeYKT0LfD/giphy.gif)
-
 :::
 
 ::: {.column width="33%"}
 
-### B is for {{< iconify fxemoji:banana >}}
+### B is for 
 
 + [beautification](https://www.w3schools.com/css/)
 + [bibliography](https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html)
 
-![](https://www.iresearchnet.com/wp-content/uploads/2018/04/How-to-Write-a-Bibliography-for-a-Research-Paper.png)
+
+{{< iconify fxemoji:banana size=7x >}}
 
 :::
 
 ::: {.column width="33%"}
 
-### C is for {{< iconify twemoji:coconut >}}
+### C is for 
+
+{{< iconify twemoji:coconut size=7x >}}
 
 + [chunks](https://quarto.org/docs/computations/execution-options.html)
 + [cross--references](https://quarto.org/docs/authoring/cross-references.html)
-
-![](https://www.skippypeanutbutter.fr/wp-content/uploads/2019/03/SKIPPY_Product_PB_Spread_Super_Chunk_Peanut_Butter_40oz.png)
 
 :::
 
