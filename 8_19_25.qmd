@@ -103,7 +103,7 @@ revealjs-plugins:           #<2>
 
 ::: {.column width="33%"}
 
-### A is for 
+### A is for... 
 
 {{< iconify noto:red-apple size=7x >}}
 
@@ -114,7 +114,7 @@ revealjs-plugins:           #<2>
 
 ::: {.column width="33%"}
 
-### B is for 
+### B is for... 
 
 + [beautification](https://www.w3schools.com/css/)
 + [bibliography](https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html)
@@ -126,7 +126,7 @@ revealjs-plugins:           #<2>
 
 ::: {.column width="33%"}
 
-### C is for 
+### C is for... 
 
 {{< iconify twemoji:coconut size=7x >}}
 

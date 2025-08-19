@@ -76,101 +76,59 @@
 
 // quarto-scss-analysis-annotation { "origin": "Defaults from user-defined SCSS" }
 
+
 @import url('https://fonts.googleapis.com/css?family=Dancing Script');
-@import url('https://fonts.googleapis.com/css?family=Pirata One');
-@import url('https://fonts.googleapis.com/css?family=Protest Riot');
-@import url('https://fonts.googleapis.com/css?family=Protest Guerrilla');
-@import url('https://fonts.googleapis.com/css?family=Lobster Two');
-@import url('https://fonts.googleapis.com/css?family=Indie Flower');
-@import url('https://fonts.googleapis.com/css?family=Londrina Solid'); 
-@import url('https://fonts.googleapis.com/css?family=Lovers Quarrel');
-@import url('https://fonts.googleapis.com/css?family=Poetsen One'); 
-@import url('https://fonts.googleapis.com/css?family=Notable');  
-@import url('https://fonts.googleapis.com/css?family=Kalnia Glaze');
-@import url('https://fonts.googleapis.com/css?family=Permanent Marker');
-@import url('https://fonts.googleapis.com/css?family=Rock Salt');
-@import url('https://fonts.googleapis.com/css?family=Shojumaru');
-@import url('https://fonts.googleapis.com/css?family=Fascinate Inline'); 
-@import url('https://fonts.googleapis.com/css?family=Fleur De Leah');
-@import url('https://fonts.googleapis.com/css?family=Gloria Hallelujah');
-@import url('https://fonts.googleapis.com/css?family=Silkscreen');
-@import url('https://fonts.googleapis.com/css?family=Creepster');
-@import url('https://fonts.googleapis.com/css?family=Nosifer');
-@import url('https://fonts.googleapis.com/css?family=Nabla');
-@import url('https://fonts.googleapis.com/css?family=Agu Display');
-@import url('https://fonts.googleapis.com/css?family=Arizonia');
-@import url('https://fonts.googleapis.com/css?family=Ballet');
-@import url('https://fonts.googleapis.com/css?family=Italianno');
-@import url('https://fonts.googleapis.com/css?family=Rye');
-@import url('https://fonts.googleapis.com/css?family=Spicy Rice'); 
-@import url('https://fonts.googleapis.com/css?family=Berkshire Swash'); 
-@import url('https://fonts.googleapis.com/css?family=Aclonica'); 
-@import url('https://fonts.googleapis.com/css?family=Irish Grover'); 
-@import url('https://fonts.googleapis.com/css?family=Kaushan Script');
-@import url('https://fonts.googleapis.com/css?family=Lemon');
-@import url('https://fonts.googleapis.com/css?family=Barriecito');
-@import url('https://fonts.googleapis.com/css?family=Acme');
-@import url('https://fonts.googleapis.com/css?family=Berkshire Swash');
-@import url('https://fonts.googleapis.com/css?family=Audiowide');
-@import url('https://fonts.googleapis.com/css?family=Kablammo');
-@import url('https://fonts.googleapis.com/css?family=Emblema One');
-@import url('https://fonts.googleapis.com/css?family=Love Ya Like A Sister');
-@import url('https://fonts.googleapis.com/css?family=Lavishly Yours');
-@import url('https://fonts.googleapis.com/css?family=Jolly Lodger');
-@import url('https://fonts.googleapis.com/css?family=Henny Penny');
-@import url('https://fonts.googleapis.com/css?family=Rubik Wet Paint');
-@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Fontdiner Swanky');
+@import url('https://fonts.googleapis.com/css?family=Mona Sans');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Joti One');
+@import url('https://fonts.googleapis.com/css?family=Michroma');
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+@import url('https://fonts.googleapis.com/css?family=Grechen Fuemen');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Shadows Into Light');
+@import url('https://fonts.googleapis.com/css?family=Gochi Hand');
 
-
-$body-bg: #191919;
-$body-color: #fff;
-$link-color: #42affa;
-$code-color: hotpink;
-$presentation-title-slide-text-align: left;
-$presentation-title-slide-text-color: black;
-
-/**
- * League theme for reveal.js.
- *
- * This was the default theme pre-3.0.0.
- *
- * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
- *
- * Adapted for Quarto by Posit, PBC
- * Copyright (C) 2024 Posit, PBC
- */
-
-
-// Include theme-specific fonts
-@import url(./fonts/league-gothic/league-gothic.css);
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+$presentation-title-slide-text-align: right;
 
 // fonts
-$font-family-sans-serif: Lato, sans-serif !default;
-$presentation-heading-font: "League Gothic", sans-serif !default;
+$font-family-sans-serif: "Palatino Linotype", "Book Antiqua", Palatino,
+  FreeSerif, serif !default;
+$presentation-line-height: 1.4;
 
-$body-bg: #2b2b2b !default; // from settings.scss
-$body-color: #eee !default; // from settings.scss
-$link-color: #13daec !default; // from settings.scss
-$selection-bg: #ff5e99 !default; // from settings.scss
+.quarto-title-author-name {
+  font-size: 65px;
+  color: 	white;
+  font-weight: bold;
+  font-family: 'Dancing Script';
+  text-shadow: 
+    4px 4px 0px black,
+//    -3px -3px 3px black;
+}
 
-$presentation-heading-text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2) !default;
-$presentation-h1-text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb,
-  0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1),
-  0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3),
-  0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25),
-  0 20px 20px rgba(0, 0, 0, 0.15) !default;
-$presentation-h1-font-size: 3.77em !default;
-$presentation-heading-text-transform: uppercase !default;
+// colors
+$body-bg: #e9cee5; 
+$body-color: #a92777;
+$link-color: #c94f8e;
+$selection-bg: #2a1625;              
 
-// Change text colors against light slide backgrounds
-$light-bg-text-color: #222 !default;
+// headings
+$presentation-heading-font: "Fontdiner Swanky", "Book Antiqua", Palatino,
+  FreeSerif, serif !default;             
+$presentation-heading-color: #a92777 !default;
+$presentation-h1-text-shadow: 7px 7px #222;
+$presentation-heading-text-shadow: 5px 5px #222;
 
-// input panel
-$input-panel-bg: rgba(233, 236, 239, 0.2) !default;
+// callouts
 
-// code blocks
-$code-block-bg: transparent !default;
+$callout-color-note: #a92777;
+$callout-border-scale: -20%;
+
+// code blocks 
+
+/*$code-block-bg: #241f23;*/
+$code-block-border-color: #a92777;
 
 
 // quarto-scss-analysis-annotation { "origin": "Defaults from Quarto's SCSS" }
@@ -497,8 +455,12 @@ $btn-code-copy-color-active: if(
 
 // Background generator
 @mixin bodyBackground() {
-  @include radial-gradient(rgba(28, 30, 32, 1), rgba(85, 90, 95, 1));
+  @include radial-gradient(#f2bbea, #faf5f9);
 }
+
+// underlining hyperlinks to make them stand out a bit more
+
+.reveal a { text-decoration: underline; }
 
 
 // quarto-scss-analysis-annotation { "origin": "'rules' section from format" }
@@ -2660,14 +2622,7 @@ $presentation-author-block-padding-right: if(
 }
 
 
-.title {
-  color: 	#ffefdb !important;
-    text-shadow: 
-    5px 5px 5px black,
-    -5px -5px 5px black !important;
-}
-
-.quarto-title-author-name {
+.titleauthor {
   font-size: 65px;
   color: 	white;
   font-weight: bold;
@@ -2677,79 +2632,22 @@ $presentation-author-block-padding-right: if(
     -3px -3px 3px black;
 }
 
-.reveal .slide blockquote {
-  border-left: 3px solid $text-muted;
-  padding-left: 0.5em;
+.titlestyle {
+  color: 	#a92777;
+  font-weight: bold;
+  font-family: 'Fontdiner Swanky';
+  text-shadow: 
+    5px 5px 0px #222;
 }
 
-.slides {
-    overflow-y: auto;  /*-- supposedly helps with content overflow --*/
-}
+// tilts, mirrors, etc 
 
-.center h2 {
-  text-align: center;
+.underline {
+  text-decoration: underline;
 }
-
-.my_class1 {       /* code chunk dimensions */
-height: 300px;
-width: 450px;
-}
-
-.my_class2 {       /* code chunk dimensions */
-height: 200px;
-width: 10px;
-}
-
-.my_class1 {       /* code chunk dimensions */
-height: 300px;
-width: 450px;
-}
-
-.my_class2 {       /* code chunk dimensions */
-height: 200px;
-width: 10px;
-}
-
-.reveal .custom7030 > div.column:first-child {
-  width: 70%;
-}
-.reveal .custom7030 div.column:not(:first-child) {
-  width: 30%;
-}
-
-.reveal .custom6040 > div.column:first-child {
-  width: 60%;
-}
-.reveal .custom6040 div.column:not(:first-child) {
-  width: 40%;
-}
-
-.reveal .custom4060 > div.column:first-child {
-  width: 40%;
-}
-.reveal .custom4060 div.column:not(:first-child) {
-  width: 60%;
-}
-
-.reveal .custom5050 > div.column:first-child {
-  width: 50%;
-}
-.reveal .custom5050 div.column:not(:first-child) {
-  width: 50%;
-}
-                   /* https://stackoverflow.com/questions/73460033/how-to-change-code-block-height-and-width-in-quarto-presentation */
-                   
-/**//**//**//**//**//**/
-/**//**//**//**//**//**/
-/**//**//**//**//**//**/
-/*-- transformations --*/
 
 .mirror {
   transform: rotateY(180deg);
-}
-
-.ninety {
-  transform: rotateY(90deg);
 }
 
 .tilt {
@@ -2760,416 +2658,154 @@ width: 10px;
   rotate: -20deg;
 }
 
-.tilt15 {
-  rotate: 15deg;
-}
-
-.tilt3 {
-  rotate: 3deg;
-}
-
 .smaller {
+  font-size: .9em;
+}
+
+.Smaller {
   font-size: .8em;
 }
 
 .bigger {
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 
-.Larger {
+.Bigger {
   font-size: 2em;
 }
 
-.thicker {
+// fonts
+
+.copilot2 {
+  font-family: "Oswald";
+  color: transparent; /* Make the text color transparent to show the gradient */
+  background: linear-gradient(to bottom, #1E90FF 50%, #9146bd 100%); /* Gradient from purple to blue */
+  -webkit-background-clip: text; /* Clip the gradient to the text */
+  background-clip: text; /* Standard property for broader support */
+  --fade-start: 50%; /* Kept for consistency, though not used here */
   font-weight: bold;
 }
 
-.lowercase {
-  text-transform: lowercase !important; 
-}
-
-/**//**//**//**//**//**//**//**/
-/**//**//**//**//**//**//**//**/
-/**//**//**//**//**//**//**//**/
-/*-- weekly specialized fonts --*/
-
-.kulas {
-  font-size: 80px;
-  color: #03c6fc;
-  font-family: 'Dancing Script';
-}
-
-.kulas1 {
-  font-size: 80px;
-  color: #ff99ff;
-  font-family: 'Dancing Script';
-}
-
-.kulas2 {
-  font-size: 80px;
-  color: #34eba8;
-  font-family: 'Dancing Script';
-}
-
-.kulas3 {
-  font-size: 80px;
-  color: #FFFFFF;
+.copilot3 {
+  font-family: "Oswald";
+  color: transparent; /* Make the text color transparent to show the gradient */
+  background: linear-gradient(to bottom, #1E90FF 50%, #9146bd 100%); /* Gradient from purple to blue */
+  -webkit-background-clip: text; /* Clip the gradient to the text */
+  background-clip: text; /* Standard property for broader support */
+  --fade-start: 50%; /* Kept for consistency, though not used here */
   font-weight: bold;
-  font-family: 'Dancing Script';
+  text-shadow: 0px 0px !important;
 }
 
-.kulascol {
+.themingpink{
+  color: #db72b6;
+  font-family: "Fontdiner Swanky";
+  text-shadow: 
+    0px 0px 0px #2c528f,
+    -5px -5px 0px #2c528f !important;
+}
+
+.themingblue{
+  color: #2c528f;
+  font-family: "Fontdiner Swanky";
+  text-shadow: 
+    0px 0px 0px #db72b6,
+    -4px -4px 0px #db72b6 !important;
+}
+
+.foreground-image {
+  z-index: 1000 !important;
+}
+
+.chatter {
   color: white;
-  font-family: 'Lovers Quarrel';
-}
-
-.kulascol2 {
-  color: #34eba8;
-  font-family: 'Londrina Solid';
-}
-
-.kulascol3 {
-  color: white;
-  font-family: 'Londrina Solid';
-  text-shadow: 10px 12px 4px #36454f !important;
-}
-
-.tempanimal {
-  font-size: 65px;
-  color: 	white;
-  font-weight: bold;
-  font-family: 'Dancing Script';
+  font-family: "Joti One";
   text-shadow: 
-    2px 2px 2px black,
-    -3px -3px 3px black;
+    4px 4px 0px black,
+    -2px -2px 2px black !important;
 }
 
-.oldenglish {
-  font-family: 'Poetsen One';
-}
-
-.oldenglish2 {
-  font-family: 'Poetsen One';
-  color: #00ff00;
-}
-
-.crossstyle {
-  font-size: 80px;
-  text-decoration: underline;
-  color: #34eba8;
-  font-family: 'Protest Riot';
-}
-
-.crossmethod {
-  font-size: 80px;
-  text-decoration: underline;
-  color: #3d7ba2;
-  font-family: 'Protest Guerrilla';
-}
-
-.shiny {
-  font-size: 80px;
-  color: #FDFEFF;           /* #00c0a3 */
-  font-family: 'Dancing Script';
+.positron {
+  color: #ffecf2; //#ffecf2
+  font-family: "Michroma";
   text-shadow: 
-    2px 2px 3px #ffdd4d,
-    -2px -2px 3px #ffdd4d !important;
+    1px 1px 0px black,
+    -1px -1px 0px black !important;
 }
 
-.shiny2 {
-  color: #FDFEFF;           /* #00c0a3 */
-  font-family: 'Dancing Script';
+.supergirl {
+  color: #f11712; 
+  font-family: "Bangers";
   text-shadow: 
-    2px 2px 3px #ffdd4d,
-    -2px -2px 3px #ffdd4d !important;
+    2px 2px 2px #34f9fe,
+    -2px -2px 2px #34f9fe !important;
 }
 
-.shiny3 {
-  color: #FDFEFF;           /* #00c0a3 */
-  font-family: 'Dancing Script';
-  font-size: 80px;
-  text-transform: lowercase;
-  text-shadow: 
-    2px 2px 3px #ffdd4d,
-    -2px -2px 3px #ffdd4d !important;
-}
-
-.apa {
-  color: #184978;     /* #0B809F; */        
-  font-family: 'Rye';
-}
-
-.diagram {
-  color: #9FF6E3;
-  font-family: 'Notable';
-}
-
-.mermaid {
-  font-family: 'Kalnia Glaze';
-  font-size: 150%;
-  font-weight: bold;
-}
-
-.protestriot {
-  font-family: 'Protest Riot';
-}
-
-.pirate {
-  color: #c2b236;
-  font-family: 'Pirata One';
-  font-style: italic;
-}
-
-.lbox {
-  font-size: 60px;
-  color: #FDFEFF;           /* #00c0a3 */
-  font-family: 'Poetsen One';
-  text-shadow: 
-    3px 3px 3px #8ffcff,
-    -3px -3px 3px #8ffcff !important;
-}
-
-.pmarker {
-  color: #b6d0e2;
-  font-family: 'Permanent Marker';
-}
-
-.electric {
-  font-family: 'Shojumaru';
-  font-style: italic;
-  color: #FDFEFF;           /* #00c0a3 */
-  text-shadow: 
-    3px 3px 3px #B026FF,
-    -3px -3px 3px #8ffcff !important;
-}
-
-.leaflet {
-  font-family: 'Fleur De Leah';
-  font-size: 1.5em;
-  color: #0f4d0f;
-}
-
-.leaflet2 {
-  font-family: 'Fleur De Leah';
-  color: #adebb3;
-}
-
-.leaflet_lower {
-  font-family: 'Fleur De Leah';
-  text-transform: lowercase !important; 
-  color: #adebb3;
-}  
-
-.threejs {
-  font-family: 'Gloria Hallelujah';
-  font-size: 140px;
-  color: #6495ED;
-}  
-
-.dygraphs {
-  font-family: 'Silkscreen';
-  color: #e0115f;
-}  
-
-.widgets {
-  font-family: 'Fascinate Inline';
-  color: #d4bf85;
-}  
-
-.creepy {
-  font-family: 'Creepster';
-  color: #ffde21;
-} 
-
-.creepyBig {
-  font-family: 'Creepster';
-  font-size: 1.7em;
-  color: #ffde21;
-}  
-
-.navigation {
-  font-family: 'Pirata One';
-  color: #ffefdb;
-} 
-
-.bloody {
-  font-family: 'Nosifer';
-  color: #568203;
-  text-shadow: 
-    6px 6px 1px black;
-} 
-
-.election {
-  font-family: 'Londrina Solid';
-  font-size: 1.7em;
-  color: #77b1d4;
-} 
-
-.launch {
-  font-family: 'Nabla';
-}
-
-.tinkerbell {
-  font-family: "Arizonia";
-  color: #f9e79b;
-  font-size: 1.5em;
-}
-
-.tinkerbell2 {
-  font-family: "Arizonia";
-  color: #f9e79b;
-}
-
-.ballet {
-  font-family: "ballet";
-  color: #009E60;
-  font-size: 1.2em;
-  text-shadow: 
-   2px 2px 1px #00ff00 !important;
-}
-
-.ballet3 {
-  font-family: "ballet";
-  color: #009E60;
-  text-transform: lowercase !important; 
-  font-size: 1.2em;
-  text-shadow: 
-   2px 2px 1px #00ff00 !important;
-}
-
-.spotlight {
-  font-family: "Notable";      /* Notable Fascinate Inline */
-  color: #89CFF0;
-  text-shadow: 
-   -5px 3px 2px #0047ab !important;
-}
-
-.talian{
-  font-family: "Italianno";
-  font-size: 2.3em;
-  color: #c4a747;
-}
-
-.talian2{
-  font-family: "Italianno";
-  font-size: 1.5em;
-  color: #c4a747;
-}
-
-.shroom{
-  font-family: "Irish Grover";
-  color: #BF44E2;
-}
-
-.spicy{
-  font-family: "Kaushan Script";
-  color: #D70040;
-}
-
-.lucky{
-  font-family: "Lemon";
-  color: #ffa500; 
-}
-
-.barriecito{
-  font-family: "Barriecito";
-  color: #0FFF50;
-}
-
-.quiz {
-  font-family: "Acme";
-  color: #89CFF0;
-}
-
-.emoji {
-  font-family: "Berkshire Swash";
-  color: #DAA520;
-}
-
-.code {
-  font-family: "Audiowide";
-  color: #42fafd;
-}
-
-.code2 {
-  font-family: "Audiowide";
-  color: #39ff14;
-}
-
-.animation {
-  font-family: "Kablammo";
-  color: black;
-  text-shadow: 
-   2px 2px 1px white !important;
-}
-
-.emblem{
-  font-family: "Emblema One";
-  color: #5F9EA0;
-  text-shadow: 
-   2px 2px 1px #00FFFF,
-   -2px -2px 1px black !important;
-}
-
-.honk{
-  font-family: "Love Ya Like A Sister";
-  color: #ffefdb;
-  font-size: 2em;
-}
-
-.honk2{
-  font-family: "Love Ya Like A Sister";
-  color: #ffefdb;
-  font-size: 1.5em;
-}
-
-.styling{
-  font-family: "Lavishly Yours";
-  color: #fcba03;
-  font-size: 2em;
-}
-
-.styling2{
-  font-family: "Lavishly Yours";
-  color: #fcba03;
-  text-transform: lowercase !important; 
-}
-
-.syllabus{
-  font-family: "Jolly Lodger";
-  color: #89CFF0;
-}
-
-.henny{
-  font-family: "Henny Penny";
-  color: #cc8c33;
-}
-
-.slime{
-  font-size: 60px !important;
-  color: 	#39ff14;
+.tangerine {
+  color: #000; 
+  font-family: "Tangerine";
+  font-size: 3em;  
   font-weight: normal !important;
-  font-family: "Rubik Wet Paint";
-  font-style: italic !important;
   text-shadow: 
-    -6px 4px 2px #1dbc60 !important;
+    2px 2px 2px white,
+    -2px -2px 2px #a92777 !important;
 }
 
-.slime2{
-  color: 	#39ff14;
-  font-family: "Rubik Wet Paint";
-  font-style: italic !important;
+.tangerine2 {
+  color: #000; 
+  font-family: "Tangerine";
+  font-weight: normal !important;
+  text-shadow: 
+    1px 1px 1px white,
+    -1px -1px 1px #a92777 !important;
 }
 
-
-.exhausted{
-  color: 	#e0115f;
-  font-family: "Anton";
+.titans {
+  color: #FAFDFF; 
+  font-family: Grechen Fuemen;
+  text-shadow: 
+    3px 3px 5px #00f0ff,
+    -3px -3px 5px #00f0ff !important;
 }
 
-.branding{
-  color: ##FDCB18;
-  font-family: "Permanent Marker";
+.titans2 {
+  color: #FAFDFF; 
+  font-family: Grechen Fuemen;
+  text-shadow: 
+    2px 2px 4px #04d9ff,
+    -2px -2px 4px #04d9ff !important;
+}
+
+.automobile {
+  color: #f5276c; 
+  font-family: Lobster;
+  font-weight: normal !important;
+  text-shadow: 
+    -3px -3px 0px white,
+    3px 3px 0px black !important;
+}
+
+.auto2 {
+  color: #f5276c; 
+  font-family: Lobster;
+  font-weight: normal !important;
+  text-shadow: 
+    2px 2px 0px black !important;
+}
+
+.speech {
+  color: #db72b6; 
+  font-weight: normal !important;
+  font-family: Shadows Into Light;
+  text-shadow: 
+    1px 1px 0px #a92777 !important;
+}
+
+.gochi {
+  color: #f4bc1c; 
+  font-family: Gochi Hand;
+//  text-shadow: 
+//    1px 1px 0px black;
 }
 
 // quarto-scss-analysis-annotation { "origin": null }
