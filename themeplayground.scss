@@ -12,8 +12,9 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster');
 @import url('https://fonts.googleapis.com/css?family=Shadows Into Light');
 @import url('https://fonts.googleapis.com/css?family=Gochi Hand');
+@import url('https://fonts.googleapis.com/css?family=Great Vibes');
 
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: left;
 
 // fonts
 $font-family-sans-serif: "Palatino Linotype", "Book Antiqua", Palatino,
@@ -250,4 +251,12 @@ $code-block-border-color: #a92777;
   font-family: Gochi Hand;
 //  text-shadow: 
 //    1px 1px 0px black;
+}
+
+.fencing {
+  color: #7d7d7d; 
+  font-family: Great Vibes;
+//  font-weight: normal !important;
+//  text-shadow: 
+//    1px 1px 0px black !important;
 }

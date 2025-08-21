@@ -1,0 +1,228 @@
+---
+title: "R is for <br>Authoring!!" 
+author: 'OOH Session #92...<br> [..."Fencing"]{.fencing .bigger}'
+title-slide-attributes: 
+  data-background-image: https://static.vecteezy.com/system/resources/thumbnails/026/990/988/small_2x/one-continuous-line-drawing-of-young-man-fencing-athlete-practice-fighting-on-professional-sport-arena-fencing-costume-and-holding-sword-concept-dynamic-single-line-draw-design-illustration-png.png #https://t3.ftcdn.net/jpg/13/15/56/26/360_F_1315562643_jenhxXZGhl9o9BF4d6YDtD6C9N8KYYJc.jpg 
+#  data-background-opacity: ".8"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: themeplayground.scss       
+    logo: https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+engine: knitr                        ## not picking up inline codes
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[90,10]"}
+::: first-column
++ Recap session #91
++ Focal issue(s):
+    + [..."Fencing"]{.fencing .Bigger}
++ Shared problem-solving
+
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title91.JPG){.absolute top="135" right="-120" width="550"}
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="155" left="360" width="200"}
+
+# Recap of Session <br>#91: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://image.similarpng.com/file/similarpng/original-picture/2020/08/ABC-building-blocks-isolated-on-transparent-background-PNG.png){.absolute width="140" top="260" right="105"}
+
+## [...back to the {{< iconify twemoji:letter-a style='rotate: 20deg;' >}} {{< iconify twemoji:letter-b style='rotate: -10deg;' >}} {{< iconify twemoji:letter-c style='rotate: 10deg;'>}}'s]{.gochi} 
+
+:::: {.columns}
+
+::: {.column width="55%"}
+
+```{yaml, echo=TRUE, eval=FALSE}
+#| code-line-numbers: "6,8-10,13-14"
+---
+title: "speeching"
+author: "Kulas & Ian"
+format: 
+  revealjs:
+    mouse-wheel: true        #<1>
+    speech:
+      nextKeyword: "banana"
+      prevKeyword: "oops"
+      lastKeyword: "vikings"
+      firstKeyword: "gotofirst"
+      numberKeyword: "gotoslidenumber"
+revealjs-plugins:           #<2>
+  - speech                  #<2>
+---
+```
+1. an alternative (built--in) option for slide navigation {{< iconify openmoji:mouse >}} {{< iconify svg-spinners:90-ring-with-bg >}}
+2. only mandatory addition for extension functionality
+:::
+
+::: {.column width="7%"}
+:::
+
+::: {.column width="38%"}
+<br>
+
++ Not all browsers will support -- currently [Chrome {{< iconify logos:chrome >}}](https://www.google.com/chrome/dr/download/?brand=OZZY&ds_kid=43700080456228412&gclsrc=aw.ds&gad_source=1&gad_campaignid=21457145903&gbraid=0AAAAAoY3CA5j1jSiuSVzXBP9GqCadre0E&gclid=CjwKCAjw7_DEBhAeEiwAWKiCC7g1p5Cc8A9ZeMzuCC5NOnc0Fl3Nx7_tDLKBK66CJzKmI3icgLzEshoCWx4QAvD_BwE) and [Safari {{< iconify devicon:safari >}}](https://www.apple.com/safari/) explicitly acknowledged
+
+:::
+
+::::
+
+# Today... 
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWVvMXJvaDRzMTYwZGNiemRwNnRhMWp3c2dwanZvbjVpODNhMWNvZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26gsvcgO9EaGWFXqM/giphy.gif)
+
+## [[..."Fencing"!!!]{.fencing .bigger}](https://quarto.org/docs/authoring/markdown-basics.html#divs)
+
+![](https://png.pngtree.com/png-vector/20220805/ourmid/pngtree-picket-fence-ancient-architecture-arrowhead-png-image_5750495.png){.absolute left="-160" top="140" style='z-index: -1;'}
+
+![](https://png.pngtree.com/png-vector/20220805/ourmid/pngtree-picket-fence-ancient-architecture-arrowhead-png-image_5750495.png){.absolute right="-160" top="140" style='z-index: -1;'}
+
+![](https://png.pngtree.com/png-vector/20220712/ourmid/pngtree-chain-link-fence-realistic-metal-png-image_5885200.png){.absolute top="-50" right="-200" height="300"}
+
+![](https://png.pngtree.com/png-vector/20220712/ourmid/pngtree-chain-link-fence-realistic-metal-png-image_5885200.png){.absolute top="-50" right="100" height="300"}
+
+![](https://pngimg.com/d/fence_PNG62.png){.absolute bottom="-100" left="-180"  style='z-index: 20;'}
+![](https://pngimg.com/d/fence_PNG62.png){.absolute bottom="-100" left="620" style='z-index: 20;'}
+
+![](https://png.pngtree.com/png-vector/20231223/ourmid/pngtree-keep-off-the-grasswooden-sign-keep-off-the-grass-png-image_11198893.png){.absolute height="300" left="-105" bottom="160" style='z-index: 10;'}
+
+![](https://images.vexels.com/media/users/3/140013/isolated/preview/19f0d4c660564b60d96c5269b02d9903-cow-silhouette.png){.absolute right="-90" top="20" height="200" style='z-index: -1;'}
+
+![](https://png.pngtree.com/png-vector/20250616/ourmid/pngtree-goat-isolated-on-a-transparent-background-png-image_16541912.png){.absolute right="150" bottom="0" style='z-index: 0;' height="500"}
+
+## Grok suggestions:
+
+In Quarto, "fences" refer to the syntax used to delimit code blocks, divs, and other special content, typically using triple backticks (```) or triple colons (:::). For learning about fences in Quarto, the official Quarto documentation is the most authoritative and comprehensive resource. Here are some key references and details to get you started:
+
+1. **Quarto Documentation: Markdown Basics**  
+   - **Link**: [quarto.org/docs/authoring/markdown-basics.html](https://quarto.org/docs/authoring/markdown-basics.html)  
+   - **Description**: This section explains the core syntax for fenced code blocks and divs, which are fundamental to Quarto's use of fences. It covers how to create code blocks with triple backticks (```) and specify languages (e.g., ```python) for syntax highlighting. It also details fenced divs (:::), which are used for creating styled content like callouts, sidebars, or tabsets. For example:
+     - Fenced code block:  
+       ```
+       ```python
+       print("Hello, Quarto!")
+       ```
+       ```
+     - Fenced div:  
+       ```
+       ::: {.warning}
+       This is a warning callout.
+       :::
+       ```
+   - **Why it’s useful**: This guide provides clear examples of how fences are used to structure content and includes details on attributes and nesting.[](https://quarto.org/docs/authoring/markdown-basics.html)
+
+2. **Quarto Documentation: Fenced Echo**  
+   - **Link**: [quarto.org/docs/computations/execution-options.html#fenced-echo](https://quarto.org/docs/computations/execution-options.html#fenced-echo)  
+   - **Description**: This section focuses on the `echo: fenced` option for code chunks, which displays the code block with its fences (e.g., ```{r}) in the output, making it ideal for tutorials or documentation. For example:
+     ```
+     ```{r}
+     #| echo: fenced
+     1 + 1
+     ```
+     ```
+     This renders the code block with its fences visible, useful for teaching Quarto syntax.  
+   - **Why it’s useful**: It’s a practical guide for using fences in executable code blocks, especially for educational purposes.[](https://quarto.org/docs/computations/execution-options.html)[](https://quarto.org/docs/get-started/computations/rstudio.html)
+
+3. **Quarto Documentation: HTML Code Blocks**  
+   - **Link**: [quarto.org/docs/output-formats/html-code.html](https://quarto.org/docs/output-formats/html-code.html)  
+   - **Description**: This page explains how to use fenced code blocks for syntax-highlighted, non-executable code, including how to mark them with a language name (e.g., ```python) or use `default` for unsupported languages. It also covers advanced features like adding filenames or custom styling to code blocks. For example:
+     ```
+     ```{.python filename="example.py"}
+     import matplotlib.pyplot as plt
+     plt.plot([1, 2, 3])
+     ```
+     ```
+   - **Why it’s useful**: It provides insights into styling and presenting fenced code blocks, including non-executable ones, which is helpful for documentation.[](https://quarto.org/docs/output-formats/html-code.html)
+
+4. **Quarto: The Definitive Guide**  
+   - **Link**: [quarto-tdg.org](https://quarto-tdg.org/)  
+   - **Description**: This online book dives deeper into Quarto’s internals, including how fenced divs and code blocks are processed into HTML or other formats. Chapter 7, "Looking under the hood," explains how fenced divs (:::) are converted to HTML `<div>` elements and code blocks to `<pre>` elements.  
+   - **Why it’s useful**: It’s a great resource for understanding the technical underpinnings of fences and how they’re rendered across formats.[](https://quarto-tdg.org/look-under-hood)
+
+5. **Additional Resource: Quarto Tips and Tricks**  
+   - **Link**: [www.productive-r-workflow.com](https://www.productive-r-workflow.com)  
+   - **Description**: This guide offers practical tips for enhancing Quarto documents, including using fenced divs for layout features like tabsets or collapsible code. For example, it shows how to create tabsets with:
+     ```
+     ::: {.panel-tabset}
+     ## Tab 1
+     Content for first tab.
+     ## Tab 2
+     Content for second tab.
+     :::
+     ```
+   - **Why it’s useful**: It provides creative, real-world applications of fenced divs for interactive and visually appealing documents.[](https://www.productive-r-workflow.com/quarto-tricks)
+
+### Recommendations
+- **Start with**: The **Markdown Basics** and **Fenced Echo** sections on quarto.org for a quick, practical introduction to fences for code blocks and divs.
+- **Dive deeper with**: **Quarto: The Definitive Guide** for a technical understanding of how fences are processed.
+- **Explore practical examples**: The **Quarto Tips and Tricks** guide for creative ways to use fenced divs in layouts.
+
+These resources collectively cover the syntax, use cases, and advanced applications of fences in Quarto, ensuring you have both beginner-friendly and in-depth material to learn from. If you’d like specific examples or have a particular use case (e.g., code blocks, layouts, or cross-referencing), let me know, and I can provide tailored guidance!
+
+##
+
+::: {.columns}
+
+::: {.column width="33%"}
+
+### A is for... 
+
+{{< iconify noto:red-apple size=7x >}}
+
++ [assortment](https://quarto.org/docs/gallery/)
++ [adornment](https://quarto.org/docs/authoring/markdown-basics.html#links-images)
+
+:::
+
+::: {.column width="33%"}
+
+### B is for... 
+
++ [beautification](https://www.w3schools.com/css/)
++ [bibliography](https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html)
+
+
+{{< iconify fxemoji:banana size=7x >}}
+
+:::
+
+::: {.column width="33%"}
+
+### C is for... 
+
+{{< iconify twemoji:coconut size=7x >}}
+
++ [chunks](https://quarto.org/docs/computations/execution-options.html)
++ [cross--references](https://quarto.org/docs/authoring/cross-references.html)
+
+:::
+
+:::
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+sessionInfo()
+```
+
