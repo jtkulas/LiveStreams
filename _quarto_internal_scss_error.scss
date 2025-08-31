@@ -90,6 +90,7 @@
 @import url('https://fonts.googleapis.com/css?family=Shadows Into Light');
 @import url('https://fonts.googleapis.com/css?family=Gochi Hand');
 @import url('https://fonts.googleapis.com/css?family=Great Vibes');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
 
 $presentation-title-slide-text-align: left;
 
@@ -2815,6 +2816,13 @@ $presentation-author-block-padding-right: if(
 //  font-weight: normal !important;
 //  text-shadow: 
 //    1px 1px 0px black !important;
+}
+
+.orbitron {
+  color: #FDDA0D; 
+  font-family: Orbitron;
+  text-shadow: 
+    3px 3px 0px #938200;
 }
 
 // quarto-scss-analysis-annotation { "origin": null }

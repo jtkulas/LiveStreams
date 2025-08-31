@@ -1,0 +1,139 @@
+---
+title: "R is for <br>Authoring!!" 
+author: 'OOH Session #93...<br> [...D2 Diagrams]{.orbitron}'
+title-slide-attributes: 
+  data-background-image: https://www.lucasfilm.com/app/uploads/star-wars-droids-12.jpg
+  data-background-opacity: ".7"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: themeplayground.scss       
+    logo: https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+engine: knitr                        ## not picking up inline codes
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[90,10]"}
+::: first-column
++ Recap session #92
++ Focal issue(s):
+    + [[...D2 Diagrams]{.orbitron}](https://d2lang.com/)
++ Shared problem-solving
+
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title92.JPG){.absolute top="135" right="-120" width="550"}
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="155" left="360" width="200"}
+
+# Recap of Session <br>#92: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://png.pngtree.com/png-vector/20220712/ourmid/pngtree-chain-link-fence-realistic-metal-png-image_5885200.png){.absolute width="140" top="260" right="105"}
+
+## [[..."Fencing"!!!]{.fencing .bigger}](https://quarto.org/docs/authoring/markdown-basics.html#divs)
+
+:::: {.panel-tabset}
+
+### Code ({{< iconify devicon:r >}}) 
+
+```{r}  
+#| echo: fenced
+#| output-location: column #<1>
+#| code-line-numbers: "1,13"
+
+library(leaflet)
+
+leaflet() %>% addTiles() %>% 
+    setView(-92.95, 44.88, 
+            zoom = 12) %>% 
+    addPopups(-93.0280098, 44.8803616, 
+    '<a href="https://midwestfence.com/
+    ">Midwest Fence</a>')
+
+```
+1. `echo: fenced` reveals entire code--chunk (other than [the `echo: fenced` command itself](https://quarto.org/docs/computations/execution-options.html#fenced-echo))
+
+### Markdown ({{< iconify file-icons:rmarkdown style="color:#3b3b3b;" >}})
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+````
+::: {.callout-note .bigger}
+
+Heya meester that's a mighty fine looking fence you have there!! 
+
+:::
+
+````
+<br>
+```{css}
+#| echo: fenced
+
+.bigger {
+  font-size: 1.4em;
+}
+```
+
+
+
+:::
+
+::: {.column width="50%"}
+
+<br>
+
+::: {.callout-note .bigger}
+
+Heya meester that's a mighty fine looking fence you have there!! 
+
+:::
+
+![](https://www.freeiconspng.com/uploads/curved-arrow-black-png-0.png){.absolute left="370" top="380" height="150"}
+
+:::
+
+
+:::
+
+::::
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXltNnV3cDVnNWg3NG85MG94NTV3eXgweDU1aGNoOGs1cjhhMGtwaCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lH2yMHLmwnBYs/giphy.gif){.absolute right="-130" top="-40" height="270"}
+
+# Today... 
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjQ4eDJycjh2MmlrcTA4MjR6d3NlcXI0NXhkYWM3YXNvdnhwamxsbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xTka034bGJ8H7wH1io/giphy.gif)
+
+## [[...D2 Diagrams:]{.orbitron}](https://github.com/data-intuitive/quarto-d2)
+
+![](https://preview.redd.it/holy-crap-d2-diagrams-are-impressive-v0-ksaadh4wxoyd1.png?auto=webp&s=0c7fdcdd529a49dcd73c8e1de3b19f3089d8f1f6){.absolute height="600" right="-120" top="0"}
+
+![](https://kjrstory.netlify.app/en/post/d2anddiagrams/example3_2.png){.absolute left="-130" bottom="70" height="450"}
+
+![](https://www.pngmart.com/files/12/R2-D2-PNG-Clipart.png){.absolute left="-160" top="90" height="280"}
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+sessionInfo()
+```
+
