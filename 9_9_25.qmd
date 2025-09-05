@@ -57,11 +57,17 @@ filters:
 
 ## [[...D2 Diagrams]{.orbitron}](https://github.com/terrastruct/d2/releases) [via {{< iconify material-icon-theme:quarto >}}](https://github.com/data-intuitive/quarto-d2) [[^[(version2)]{.underline}^]{.orbitron}](https://elipousson.github.io/d2r/)
 
-![](https://kjrstory.netlify.app/en/post/d2anddiagrams/example3_2.png){.absolute left="110" bottom="90" height="450"}
+![](https://elipousson.github.io/d2r/reference/figures/README-connected_diagram.png){.absolute height="400" left="100"}
+
+![](https://www.freeiconspng.com/uploads/number-2-icon-11.png){.absolute left="260" bottom="350" height="80" .tilt2}
 
 ![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnk5eXk5YzlqNmhmb2lucDhqb3JlbzI3ZHI1c2l3anVjNjh1emU2aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nopqz91prOyvS/giphy.gif){.absolute right="-120" top="120" height="200"}
 
-![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZng5ZTRsdGZiZHJ5dGl2ZXc3bXMybWdnaGhqdHAzazVneHNxNzdqdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XQ1FwjRKun4nS/giphy.gif){.absolute left="-100" bottom="80"}
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZng5ZTRsdGZiZHJ5dGl2ZXc3bXMybWdnaGhqdHAzazVneHNxNzdqdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XQ1FwjRKun4nS/giphy.gif){.absolute left="-90" bottom="40"}
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeDF4NzlhNjFqcGpnbnR3ajVxbHF3cnd5aTg4cjdwYWhjbHI5ejk5ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0O2Q22fPpxR0zhba/giphy.gif){.absolute right="-100" bottom="30"}
+
+![](img/r2logo.png){.absolute left="-80" top="120" height="200" .mirror}
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
