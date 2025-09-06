@@ -462,9 +462,7 @@ $btn-code-copy-color-active: if(
 
 // underlining hyperlinks to make them stand out a bit more (neither work 9/6/25)
 
-.reveal a { text-decoration: underline; }
-
-.a { 
+a:link { 
   text-decoration: underline; 
 }
 
