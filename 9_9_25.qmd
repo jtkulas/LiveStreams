@@ -29,7 +29,7 @@ filters:
 ::: first-column
 + Recap session #93
 + Focal issue(s):
-    + [[...D2 Diagrams ^[version2]{.underline}^]{.orbitron}](https://d2lang.com/)
+    + [[...D2 Diagrams ^[version2]{.underline}^]{.orbitron}](https://d2lang.com/blog/)
 + Shared problem-solving
 
 :::
@@ -55,7 +55,7 @@ filters:
 
 ![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHFla2luMzQ0aG5iOHZ6Y2NiYjY5NWhoYTZuMTFqMHdmeHU2cnZudCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8OJdqYqN1Nii3UTD6l/giphy.gif)
 
-## [[...D2 Diagrams]{.orbitron}](https://github.com/terrastruct/d2/releases) [via {{< iconify material-icon-theme:quarto >}}](https://github.com/data-intuitive/quarto-d2) [[^[(version2)]{.underline}^]{.orbitron}](https://elipousson.github.io/d2r/)
+## [[...D2 Diagrams]{.orbitron}](https://d2lang.com/tour/shapes/) [via {{< iconify material-icon-theme:quarto >}}](https://github.com/data-intuitive/quarto-d2) [[^[(version2)]{.underline}^]{.orbitron}](https://elipousson.github.io/d2r/)
 
 ![](https://elipousson.github.io/d2r/reference/figures/README-connected_diagram.png){.absolute height="400" left="100"}
 
