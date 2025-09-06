@@ -69,7 +69,7 @@ filters:
 
 ![](img/r2logo.png){.absolute left="-80" top="120" height="200" .mirror}
 
-## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+## {{< iconify devicon:r size=2x >}}^(2)^ Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
 sessionInfo()
 ```

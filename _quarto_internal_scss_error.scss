@@ -77,19 +77,6 @@
 // quarto-scss-analysis-annotation { "origin": "Defaults from user-defined SCSS" }
 
 
-@keyframes shake {
-  10% { transform: rotate(36deg);}
-  20% { transform: rotate(72deg);}
-  30% { transform: rotate(108deg);} 
-  40% { transform: rotate(144deg);} 
-  50% { transform: rotate(180deg);}
-  60% { transform: rotate(216deg);}
-  70% { transform: rotate(252deg);}
-  80% { transform: rotate(288deg);}
-  90% { transform: rotate(324deg);}
-  100% { transform: rotate(360deg); } 
-}
-
 @import url('https://fonts.googleapis.com/css?family=Dancing Script');
 @import url('https://fonts.googleapis.com/css?family=Fontdiner Swanky');
 @import url('https://fonts.googleapis.com/css?family=Mona Sans');
@@ -476,13 +463,6 @@ $btn-code-copy-color-active: if(
 // underlining hyperlinks to make them stand out a bit more
 
 .reveal a { text-decoration: underline; }
-
-.shake {
-  animation-name: shake;
-  animation-duration: 4s; /* Total cycle: 2s shake + 2s pause */
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out; /* Smooths the shake motion */
-}
 
 
 // quarto-scss-analysis-annotation { "origin": "'rules' section from format" }
