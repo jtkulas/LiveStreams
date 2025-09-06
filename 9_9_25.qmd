@@ -69,6 +69,60 @@ filters:
 
 ![](img/r2logo.png){.absolute left="-80" top="120" height="200" .mirror}
 
+## Laptop breakthrough 
+
+::: {.columns}
+
+::: {.column width="50%"}
+::: {.Smaller}
+
+1. Download & "run" [`*.msi` option](https://github.com/terrastruct/d2/releases)^[should be Windows compatible {{< iconify icon-park-twotone:windows >}}]
+2. Find Application
+3. Create project folder (within {{< iconify devicon:rstudio >}})
+4. Cut Application & locate within project folder
+4. Use [example script with YAML specs](https://github.com/data-intuitive/quarto-d2?tab=readme-ov-file#global-options)
+
+::: {.columns}
+::: {.column width="70%"}
+
+::: {.callout-note}
+Also [see Playground {{< iconify openmoji:playground-slide >}}](https://play.d2lang.com/?script=qlDQtVOoBBFRXIAAAAD__w%3D%3D&) 
+:::
+
+:::
+:::
+
+:::
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: fenced
+#| eval: false
+
+---
+title: "D2 Example"
+filters:
+  - d2
+d2:
+  layout: elk
+  theme: "GrapeSoda"
+---
+
+``{.d2 width="40%" echo=true}
+x -> y -> z
+``
+```
+
+:::
+
+:::
+
+![](https://www.freeiconspng.com/uploads/curved-arrow-black-png-0.png){.absolute left="370" top="450" height="150"}
+
+![](https://www.pngkey.com/png/full/341-3414219_star-wars-3d-wall-nightlight-r2d2-white.png){.absolute right="-120" top="170" height="350" .tilt}
+
 ## {{< iconify devicon:r size=2x >}}^(2)^ Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
 sessionInfo()

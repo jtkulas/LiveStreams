@@ -62,9 +62,13 @@ $code-block-border-color: #a92777;
   @include radial-gradient(#f2bbea, #faf5f9);
 }
 
-// underlining hyperlinks to make them stand out a bit more
+// underlining hyperlinks to make them stand out a bit more (neither work 9/6/25)
 
 .reveal a { text-decoration: underline; }
+
+.a { 
+  text-decoration: underline; 
+}
 
 /*-- scss:rules --*/
 

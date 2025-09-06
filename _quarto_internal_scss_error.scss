@@ -1,4 +1,4 @@
-// quarto-scss-analysis-annotation { "quarto-version": "1.7.30" }
+// quarto-scss-analysis-annotation { "quarto-version": "1.7.32" }
 
 // quarto-scss-analysis-annotation { "origin": "'use' section from format" }
 
@@ -460,9 +460,13 @@ $btn-code-copy-color-active: if(
   @include radial-gradient(#f2bbea, #faf5f9);
 }
 
-// underlining hyperlinks to make them stand out a bit more
+// underlining hyperlinks to make them stand out a bit more (neither work 9/6/25)
 
 .reveal a { text-decoration: underline; }
+
+.a { 
+  text-decoration: underline; 
+}
 
 
 // quarto-scss-analysis-annotation { "origin": "'rules' section from format" }
