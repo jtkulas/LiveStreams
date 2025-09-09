@@ -69,7 +69,7 @@ filters:
 
 ![](img/r2logo.png){.absolute left="-80" top="120" height="200" .mirror}
 
-## Laptop breakthrough 
+## Laptop "breakthrough": 
 
 ::: {.columns}
 
@@ -98,7 +98,7 @@ Also [see Playground {{< iconify openmoji:playground-slide >}}](https://play.d2l
 ::: {.column width="50%"}
 
 ```{r}
-#| echo: fenced
+#| echo: true
 #| eval: false
 
 ---
@@ -109,6 +109,8 @@ d2:
   layout: elk
   theme: "GrapeSoda"
 ---
+
+Check out the neat diagram:
 
 ``{.d2 width="40%" echo=true}
 x -> y -> z
