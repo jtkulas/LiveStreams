@@ -98,6 +98,7 @@ Also [see Playground {{< iconify openmoji:playground-slide >}}](https://play.d2l
 ::: {.column width="50%"}
 
 ```{r}
+#| label: gonnaembed
 #| echo: true
 #| eval: false
 

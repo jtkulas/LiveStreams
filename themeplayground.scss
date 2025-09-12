@@ -14,6 +14,7 @@
 @import url('https://fonts.googleapis.com/css?family=Gochi Hand');
 @import url('https://fonts.googleapis.com/css?family=Great Vibes');
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url('https://fonts.googleapis.com/css?family=Kaushan Script');
 
 $presentation-title-slide-text-align: right;
 
@@ -270,4 +271,12 @@ a:link {
   text-shadow: 
     -2px -2px 6px black,
     3px 3px 0px #938200 !important;
+}
+
+
+.embedding {
+  color: #90d5ff; 
+  font-family: Kaushan Script;
+  text-shadow: 
+    2px 2px 0px black;
 }

@@ -1,0 +1,151 @@
+---
+title: "R is for <br>Authoring!!" 
+author: 'OOH Session #95...<br> [...embeddings]{.embedding .bigger}'
+title-slide-attributes: 
+  data-background-image: https://image.cdn2.seaart.me/2024-02-03/cmusumde878c739ihpl0/ac7e7687886c7f48b18764ff87f126b3603bea3c_high.webp #img/sleep.png #https://img.freepik.com/premium-photo/anime-girl-sleeping-bed-with-cat-stars-sky-generative-ai_902639-99686.jpg 
+  data-background-opacity: ".8"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: themeplayground.scss       
+    logo: https://clipart-library.com/img1/1022184.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+engine: knitr                        ## not picking up inline codes
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[90,10]"}
+::: first-column
++ Recap session #94
++ Focal issue(s):
+    + [[...embeddings]{.embedding}](https://quarto.org/docs/authoring/notebook-embed.html)
++ Shared problem-solving
+
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title94.JPG){.absolute top="185" right="-120" width="550"}
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="160" left="370" width="200"}
+
+# Recap of Session <br>#94: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://cdn-icons-png.freepik.com/512/6478/6478094.png){.absolute width="110" top="265" right="115"}
+
+## [[...D2 Diagrams]{.orbitron}](https://d2lang.com/tour/shapes/) [via {{< iconify material-icon-theme:quarto >}}](https://play.d2lang.com/) [[^[(version2)]{.underline}^]{.orbitron}](https://elipousson.github.io/d2r/)
+
+::: {.columns}
+
+::: {.column width="50%"}
+::: {.Smaller}
+
+1. Download & "run" [`*.msi` option](https://github.com/terrastruct/d2/releases)
+2. Find Application
+3. Create project folder (within {{< iconify devicon:rstudio >}})
+4. Cut Application & locate within project folder
+5. Use [example script with YAML specs](https://github.com/data-intuitive/quarto-d2?tab=readme-ov-file#global-options)^[Interactivity actually works we just needed to [read the documentation](https://github.com/data-intuitive/quarto-d2?tab=readme-ov-file#interactive-diagrams) {{< iconify noto-v1:glasses >}}]
+:::
+:::
+
+::: {.column width="7%"}
+:::
+
+::: {.column width="43%"}
+
+<br>
+<br>
+<br>
+
+```{r}
+#| echo: true
+#| eval: false
+direction: right
+x: I'm a Mac
+y: And I'm a PC
+x -> y: gazoontite
+
+```
+
+
+:::
+
+:::
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWM0ZHQzcjJqemdxaGlwc3I5aXFsempnMTZoMm51Z3Bnb24waGw5dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o84svPyVceu6Oiudi/giphy.gif){.absolute right="-120" top="100" height="200"}
+
+![](img/r2logo.png){.absolute left="-150" bottom="40" height="200"}
+
+![](img/d2.JPG){.absolute right="80" bottom="55"}
+
+# Today... 
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXJ1ZjI0eTExZWF0ZXRlYTB4cGJudTJyMWtleWM0eDMxaXE5NmYwdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l2QZXwGah3PZa9x28/giphy.gif)
+
+## [...embeddings:]{.embedding .bigger}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### [Quarto:](https://quarto.org/docs/authoring/notebook-embed.html)
+
+```{r}
+#| eval: false
+#| echo: true
+
+{{< embed example.qmd#numbers >}}
+```
+<br>
+{{< embed example.qmd#numbers >}}
+
+::: {.callout-note}
+
+This appears to be a recent extension envelopment with Quarto -- was previously accomplished via [the Coatless Professor's `embedio` extension](https://github.com/coatless-quarto/embedio)
+
+:::
+
+:::
+
+::: {.column width="50%"}
+### [iframe:](https://www.w3schools.com/tags/tag_iframe.asp)
+
+```{r}
+#| eval: false
+#| echo: true
+
+<iframe src="mermaid.pdf#zoom=50" 
+width="100%" 
+height="300px" 
+frameborder="0"></iframe>
+```
+
+<iframe src="mermaid.pdf#zoom=50" width="100%" height="300px" frameborder="0"></iframe>
+:::
+
+::::
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDF5bzIxeHFuaWhkZHlsazg4cHAwY3BwNnl6OWdueDQ1bnc5M2lqbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uhSJkHvNaulI3VoZY3/giphy.gif){.absolute right="-120" top="0" height="200"}
+
+![](https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3cW0wYm55ZWM0cm1paG1hYzE5d2R2MmdrMm9pMjg0b2Y5Y2NkYmQ2NyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/hrR8puuIFJK2Wbfew7/giphy.gif){.absolute left="-150" bottom="60" height="150"}
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+sessionInfo()
+```
+
