@@ -32,6 +32,12 @@ filters:
     + [[...embeddings]{.embedding}](https://quarto.org/docs/authoring/notebook-embed.html)
 + Shared problem-solving
 
+::: {.callout-important}
+
+## Heads--up {{< iconify line-md:bell-alert-twotone-loop >}}
+***Next week***'s session will go live 1 hour ahead--of--normal (6:00 Eastern)
+:::
+
 :::
 
 ::: second-column

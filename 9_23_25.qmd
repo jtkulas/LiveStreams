@@ -1,0 +1,93 @@
+---
+title: "R is for <br>Authoring!!" 
+author: 'OOH Session #96...<br> [...funky formats]{.funkymats .bigger}'
+title-slide-attributes: 
+  data-background-image: img/formats.png 
+#  data-background-opacity: ".8"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: themeplayground.scss       
+    logo: https://png.pngtree.com/png-vector/20231014/ourmid/pngtree-welcome-mat-on-white-white-background-png-image_10180985.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+engine: knitr                        ## not picking up inline codes
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[90,10]"}
+::: first-column
++ Recap session #95
++ Focal issue(s):
+    + [[...funky formats]{.funkymats .bigger}](https://quarto.org/docs/output-formats/all-formats.html)
++ Shared problem-solving
+
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title95.JPG){.absolute top="185" right="-120" width="550"}
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="160" left="370" width="200"}
+
+# Recap of Session <br>#95: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://clipart-library.com/img1/1022184.png){.absolute width="130" top="290" right="110"}
+
+## [[...embeddings:]{.embedding .bigger}](https://bookdown.org/jtkulas/9_16_25/9_16_25.html#/embeddings)
+
+:::: {.columns}
+
+::: {.column width="50%"}
+### [Quarto:](https://quarto.org/docs/authoring/notebook-embed.html)
+
++ Use to isolate **selected elements** from within larger child project  
++ Also creates `.html` version of entire source child
+
+```{r}
+#| eval: false
+#| echo: true
+
+{{< embed example.qmd#numbers >}}
+```
+
+:::
+
+::: {.column width="50%"}
+### [iframe:](https://www.w3schools.com/tags/tag_iframe.asp)
+
++ Use to include entire child document: 
+
+<iframe src="https://bookdown.org/jtkulas/9_16_25" width="100%" height="300px" frameborder="0"></iframe>
+:::
+
+::::
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmh1NXl5NWNvbHl6YWhpcGRxNmYyZHpnM3AybTlqaW55cWdyOGFqeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wsUuw16j6oyxLLRnnK/giphy.gif){.absolute right="-120" top="-20" height="250"}
+
+# Today... 
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmpnNHl4dGxxenJxaXJ0eHp1MW4wY3pkbzBqdTYydjByaHZpb3QyNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tWya5wudrV2OnRk0Nn/giphy.gif)
+
+## [[...funky formats]{.funkymats .bigger}](https://quarto.org/docs/output-formats/all-formats.html) {background-image="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTJiaHF0NzJqNGNuZm1xaWwzNWJoZG00eHp2enp5aGJieTB1YWxhdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/W8krmZSDxPIfm/giphy.gif"}
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+sessionInfo()
+```
+

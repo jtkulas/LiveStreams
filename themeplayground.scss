@@ -15,8 +15,9 @@
 @import url('https://fonts.googleapis.com/css?family=Great Vibes');
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
 @import url('https://fonts.googleapis.com/css?family=Kaushan Script');
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
 
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: center;
 
 // fonts
 $font-family-sans-serif: "Palatino Linotype", "Book Antiqua", Palatino,
@@ -25,7 +26,7 @@ $presentation-line-height: 1.4;
 
 .quarto-title-author-name {
   font-size: 65px;
-  color: 	white;
+  color: 	#E0CD95;     /*-- white --*/
   font-weight: bold;
   font-family: 'Dancing Script';
   text-shadow: 
@@ -73,7 +74,7 @@ a:link {
 
 .titleauthor {
   font-size: 65px;
-  color: 	white;
+  color: white;
   font-weight: bold;
   font-family: 'Dancing Script';
   text-shadow: 
@@ -279,4 +280,13 @@ a:link {
   font-family: Kaushan Script;
   text-shadow: 
     2px 2px 0px black;
+}
+
+.funkymats {
+  color: #98fbcb; 
+  font-family: Satisfy;
+  font-weight: normal !important;
+  text-shadow: 
+    2px 2px 0px black,
+    -1px -1px 0px #5200ff;
 }
