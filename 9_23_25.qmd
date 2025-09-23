@@ -1,6 +1,6 @@
 ---
 title: "R is for <br>Authoring!!" 
-author: 'OOH Session #96...<br> [...funky formats]{.funkymats .bigger}'
+author: 'OOH Session #96...<br> [...funky 4--mats]{.funkymats .bigger}'
 title-slide-attributes: 
   data-background-image: img/formats.png 
 #  data-background-opacity: ".8"
