@@ -16,8 +16,9 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
 @import url('https://fonts.googleapis.com/css?family=Kaushan Script');
 @import url('https://fonts.googleapis.com/css?family=Satisfy');
+@import url('https://fonts.googleapis.com/css?family=Alan Sans');
 
-$presentation-title-slide-text-align: center;
+$presentation-title-slide-text-align: left;
 
 // fonts
 $font-family-sans-serif: "Palatino Linotype", "Book Antiqua", Palatino,
@@ -26,7 +27,7 @@ $presentation-line-height: 1.4;
 
 .quarto-title-author-name {
   font-size: 65px;
-  color: 	#E0CD95;     /*-- white --*/
+  color: 	#ccaadd;     /*-- white --*/
   font-weight: bold;
   font-family: 'Dancing Script';
   text-shadow: 
@@ -289,4 +290,12 @@ a:link {
   text-shadow: 
     2px 2px 0px black,
     -1px -1px 0px #5200ff;
+}
+
+.nofunnybusiness {
+  font-family: Alan Sans;
+  color: black;
+  text-shadow:
+    0 0 0,
+    0 0 0 !important;
 }

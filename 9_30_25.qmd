@@ -1,0 +1,124 @@
+---
+title: "R is for <br>Authoring!!" 
+author: 'OOH Session #97...<br> [...]{.nofunnybusiness}{{< iconify logos:github >}} {{< iconify devicon:github >}}'
+title-slide-attributes: 
+  data-background-image: img/github.png 
+#  data-background-opacity: ".6"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: themeplayground.scss
+    logo: https://blog.jakelee.co.uk/assets/images/2024/octocats/class-act.png #https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png  #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+engine: knitr                        ## not picking up inline codes
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[90,10]"}
+::: first-column
++ Recap session #96
++ Focal issue(s):
+    + [{{< iconify logos:github >}} {{< iconify devicon:github >}}](https://blog.jakelee.co.uk/what-on-earth-are-octocats/)
++ Shared problem-solving
+
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title96.JPG){.absolute top="185" right="-120" width="550"}
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="160" left="370" width="200"}
+
+# Recap of Session <br>#96: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://png.pngtree.com/png-vector/20231014/ourmid/pngtree-welcome-mat-on-white-white-background-png-image_10180985.png){.absolute width="160" top="260" right="95"}
+
+## [[...funky 4--mats]{.funkymats .bigger}](https://quarto.org/docs/output-formats/all-formats.html#overview)
+
+::: {.smaller}
+...(mostly) not intended to be final<br>rendered products but rather ["input"<br> fodder for further  processing](https://quarto.org/docs/output-formats/gfm.html#preview-mode):
+
+:::: {.columns}
+
+::: {.column width="33%"}
+### [Markdown](https://quarto.org/docs/output-formats/all-formats.html#markdown)
+
++ different {{< iconify devicon:markdown >}} dialects that are intended to be converted into web or print {{< iconify streamline-plump:convert-pdf-1-remix >}}
+
+:::
+
+::: {.column width="34%"}
+### [Wikis](https://quarto.org/docs/output-formats/all-formats.html#wikis)
+
++ [wiki--styled markup](https://en.wikipedia.org/wiki/Wiki) (again intended to be converted into other formats {{< iconify garden:markup-fill-16 >}})
+
+:::
+
+::: {.column width="33%"}
+### ["Other" Formats](https://quarto.org/docs/output-formats/all-formats.html#more-formats)
+
+:::
+
+::::
+
+:::
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExazVnY2Rsam9ueXA3MzR3ZGV1aGE5N2g4eHAwajA1ajV4ODNqMDA5NCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oEjHWPTo7c0ajPwty/giphy.gif){.absolute right="-150" top="20" height="250"}
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHE2c3UwYnphOXZnNWxnbDh3NW92bGM1NG1za2JiMm15eWswNmd6ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GIPDErJpkO7NoHUdNP/giphy.gif){.absolute right="-110" bottom="20" height="250"}
+
+# Today... 
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2NtdTFnYzU0dGF2ajdycGIwNWU0OHRrcjMyMXhteWRoOXh2NGkwNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/quY4EZorhIYpuNLub3/giphy.gif)
+
+## {{< iconify logos:github >}} {{< iconify devicon:github >}}
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+### [Xaringan slides](https://jtkulas.github.io/GitHub/#1):
+
+<iframe src="https://jtkulas.github.io/GitHub/#1" width="100%" height="375px" frameborder="0"></iframe>
+
+:::
+
+::: {.column width="50%"}
+
+### [{{< iconify devicon:github >}} Skills](https://skills.github.com/):
+
+[![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjd1dXhvajh5dGZtaWY4NzllMnN5c3ZxNzdzamZ1OHUwZTExeDc2cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Wyu7uPO3A8vKwEBXDE/giphy.gif)](https://docs.github.com/en/get-started/start-your-journey/hello-world)
+
+:::
+
+:::
+
+![](https://user-images.githubusercontent.com/163582/45438104-ea200600-b67b-11e8-80fa-d9f2a99a03b0.png){.absolute height="200" left="-120" bottom="30"}
+
+![](https://myoctocat.com/assets/images/octocat-outfit.png){.absolute height="300" right="-190" top="40" .mirror}
+
+::: {.notes}
+"Hello, World!" is a [minimal example procedure/learning ritual](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) that demonstrates syntax & output within a programming language. It's become a "rite of passage" for programmers learning something new (typically a language)
+:::
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+sessionInfo()
+```
+
