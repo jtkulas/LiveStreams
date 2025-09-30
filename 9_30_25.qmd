@@ -47,7 +47,7 @@ filters:
 
 ![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
 
-![](https://png.pngtree.com/png-vector/20231014/ourmid/pngtree-welcome-mat-on-white-white-background-png-image_10180985.png){.absolute width="160" top="260" right="95"}
+![](https://png.pngtree.com/png-vector/20231014/ourmid/pngtree-welcome-mat-on-white-white-background-png-image_10180985.png){.absolute width="160" top="260" right="95" .mirror}
 
 ## [[...funky 4--mats]{.funkymats .bigger}](https://quarto.org/docs/output-formats/all-formats.html#overview)
 
@@ -87,7 +87,17 @@ filters:
 
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2NtdTFnYzU0dGF2ajdycGIwNWU0OHRrcjMyMXhteWRoOXh2NGkwNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/quY4EZorhIYpuNLub3/giphy.gif)
 
-## {{< iconify logos:github >}} {{< iconify devicon:github >}}
+## [{{< iconify logos:github >}} {{< iconify devicon:github >}}](https://www.geeksforgeeks.org/git/what-is-github-and-how-to-use-it/)
+
+...is your procedural ally in<br>single--platform project execution...
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOTlzZG94MHkwcTgxMjB5N20xaGY5Znlvd2cwdWJrdmZlejIxY3BrciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11LK0CKzYtkaic/giphy.gif){.absolute left="0" bottom="50" height="400"}
+
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXI1dWhpeHlyY2s0NmlwbGEzb2Z3c2FhMnJyajBrMGl2dWNiM2llaCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/w7G63mhZ4bzo4mKCsA/giphy.gif){.absolute right="-10" height="600" bottom="50"}
+
+![](https://pluspng.com/img-png/github-octocat-logo-vector-png-octodex-api-octodex-json-at-master-cocoaheads-miami-octodex-896.png){.absolute top="-50" height="250" left="470"}
+
+## Using {{< iconify logos:github >}} {{< iconify devicon:github >}}
 
 ::: {.columns}
 
