@@ -463,12 +463,6 @@ $btn-code-copy-color-active: if(
   @include radial-gradient(#f2bbea, #faf5f9);
 }
 
-// underlining hyperlinks to make them stand out a bit more (neither work 9/6/25)
-
-a:link { 
-  text-decoration: underline; 
-}
-
 
 // quarto-scss-analysis-annotation { "origin": "'rules' section from format" }
 

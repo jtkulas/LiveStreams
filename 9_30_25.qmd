@@ -29,7 +29,7 @@ filters:
 ::: first-column
 + Recap session #96
 + Focal issue(s):
-    + [{{< iconify logos:github >}} {{< iconify devicon:github >}}](https://blog.jakelee.co.uk/what-on-earth-are-octocats/)
+    + [{{< iconify logos:github >}} {{< iconify devicon:github >}}](https://blog.jakelee.co.uk/what-on-earth-are-octocats/){.styled-link}
 + Shared problem-solving
 
 :::
