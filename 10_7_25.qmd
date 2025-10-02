@@ -70,7 +70,7 @@ filters:
 
 ![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTRhcTFqNnU0ZWo2MDZoOXhxaDF0em03ZGtzYXJhbXh3MDk4ZTBrNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1kTKVjEf5wHZCwMw4D/giphy.gif)
 
-## [[...Hyper[links]{.underline}]{.flowery .bigger}](https://quarto.org/docs/authoring/cross-references.html)
+## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[Hyper[links]{.underline}]{.flowery .bigger}](https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks)
 
 :::: {.columns}
 
@@ -78,24 +78,24 @@ filters:
 
 ::: {.callout-tip}
 
-### [Internal](https://quarto.org/docs/authoring/cross-references.html) 
+### Internal 
 
-{{< iconify noto:crossed-swords size=2x >}} aka cross--references {{< iconify noto:crossed-swords size=2x >}}
+{{< iconify noto:crossed-swords size=2x >}} aka [cross--references](https://quarto.org/docs/authoring/cross-references.html) {{< iconify noto:crossed-swords size=2x >}}
 :::
 
 ::: {.callout-tip}
 
 ### External 
 
-{{< iconify noto:otter size=2x >}} "other" resources {{< iconify noto:otter size=2x flip=horizontal >}}
+{{< iconify noto:otter size=2x >}} ["other" resources](https://quarto.org/docs/output-formats/html-basics.html#code-links-and-other-links) {{< iconify noto:otter size=2x flip=horizontal >}}
 
 :::
 
 ::: {.callout-tip}
 
-### [Epidermal](https://www.bangbangforever.com/#spaces) 
+### Epidermal 
 
-{{< iconify streamline-stickies-color:dangerous-chemical-lab-duo size=2x >}}{{< iconify game-icons:poison-gas style="color:#000;" >}} Careful Now!! {{< iconify game-icons:poison-bottle style="color:#000;" >}}{{< iconify noto-v1:radioactive size=2x >}}
+{{< iconify streamline-stickies-color:dangerous-chemical-lab-duo size=2x >}}{{< iconify game-icons:poison-gas style="color:#000;" >}} [Careful Now!!](https://www.bangbangforever.com/#spaces) {{< iconify game-icons:poison-bottle style="color:#000;" >}}{{< iconify noto-v1:radioactive size=2x >}}
 
 :::
 
@@ -103,10 +103,9 @@ filters:
 
 ::::
 
+![](https://www.pngmart.com/files/2/Zelda-Link-Transparent-Background.png){.absolute right="280" top="-20" height="250"}
 
-![](https://freepngimg.com/thumb/the_legend_of_zelda/21249-6-zelda-link-hd-thumb.png){.absolute left="-200" top="-20" height="300"}
-
-![](https://freepngimg.com/thumb/the_legend_of_zelda/20983-8-zelda-link-photo.png){.absolute top="-140" height="400" right="280" .mirror}
+![](https://freepngimg.com/thumb/the_legend_of_zelda/20983-8-zelda-link-photo.png){.absolute top="-120" height="400" left="-240"}
 
 ![](https://freepngimg.com/save/115882-of-the-link-legend-zelda/700x514){.absolute right="-20" bottom="30"}
 
