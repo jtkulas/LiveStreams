@@ -1,0 +1,117 @@
+---
+title: "R is for <br>Authoring!!" 
+author: 'OOH Session #98...<br> [...Hyper[links]{.underline}]{.flowery .Bigger}'
+title-slide-attributes: 
+  data-background-image: img/link.png  #https://wp.theringer.com/wp-content/uploads/2021/02/the_ringer_link_final.jpg  
+  data-background-opacity: ".8"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: themeplayground.scss
+    logo: https://www.pngkey.com/png/full/72-725447_the-legend-of-zelda-the-adventure-of-link.png   #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+engine: knitr                        ## not picking up inline codes
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[90,10]"}
+::: first-column
++ Recap session #97
++ Focal issue(s):
+    + [[...Hyper[links]{.underline}]{.flowery .Bigger}](https://quarto.org/docs/authoring/markdown-basics.html#links-images)
++ Shared problem-solving
+
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title97.JPG){.absolute top="185" right="-120" width="550"}
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="160" left="370" width="200"}
+
+# Recap of Session <br>#97: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://pluspng.com/img-png/github-octocat-logo-vector-png-octodex-api-octodex-json-at-master-cocoaheads-miami-octodex-896.png){.absolute width="140" top="250" right="95"}
+
+## [{{< iconify logos:github >}} {{< iconify devicon:github >}}](https://www.geeksforgeeks.org/git/what-is-github-and-how-to-use-it/)
+
+...[integrates well with {{< iconify devicon:rstudio >}}](https://jtkulas.github.io/GitHub/#1), facilitates collaboration, & manages [version control]{.underline} -- aka the ***best known cure*** for:
+
+::: {.centered}
+
+{{< iconify streamline-color:bacteria-virus-cells-biology-flat >}}{{< iconify healthicons:virus-alt-24px >}}`paper_latest_(10_1_25).docx(3)`{{< iconify ph:virus-duotone >}}{{< iconify streamline-color:bacteria-virus-cells-biology >}}
+
+:::
+
+[![](https://github.com/wurli/r-best-practice/raw/main/cheatsheet.jpg)](https://github.com/wurli/r-best-practice/blob/main/cheatsheet.pdf)
+
+![](https://myoctocat.com/assets/images/octocat-outfit.png){.absolute height="370" right="-220" top="120" .mirror}
+![](https://octodex.github.com/images/securitocat.png){.absolute height="175" top="-40" left="360"}
+
+![](https://myoctocat.com/assets/images/base-octocat.svg){.absolute left="-150" bottom="80" height="270"}
+
+# Today... 
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTRhcTFqNnU0ZWo2MDZoOXhxaDF0em03ZGtzYXJhbXh3MDk4ZTBrNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1kTKVjEf5wHZCwMw4D/giphy.gif)
+
+## [[...Hyper[links]{.underline}]{.flowery .bigger}](https://quarto.org/docs/authoring/cross-references.html)
+
+:::: {.columns}
+
+::: {.column width="45%"}
+
+::: {.callout-tip}
+
+### [Internal](https://quarto.org/docs/authoring/cross-references.html) 
+
+{{< iconify noto:crossed-swords size=2x >}} aka cross--references {{< iconify noto:crossed-swords size=2x >}}
+:::
+
+::: {.callout-tip}
+
+### External 
+
+{{< iconify noto:otter size=2x >}} "other" resources {{< iconify noto:otter size=2x flip=horizontal >}}
+
+:::
+
+::: {.callout-tip}
+
+### [Epidermal](https://www.bangbangforever.com/#spaces) 
+
+{{< iconify streamline-stickies-color:dangerous-chemical-lab-duo size=2x >}}{{< iconify game-icons:poison-gas style="color:#000;" >}} Careful Now!! {{< iconify game-icons:poison-bottle style="color:#000;" >}}{{< iconify noto-v1:radioactive size=2x >}}
+
+:::
+
+:::
+
+::::
+
+
+![](https://freepngimg.com/thumb/the_legend_of_zelda/21249-6-zelda-link-hd-thumb.png){.absolute left="-200" top="-20" height="300"}
+
+![](https://freepngimg.com/thumb/the_legend_of_zelda/20983-8-zelda-link-photo.png){.absolute top="-140" height="400" right="280" .mirror}
+
+![](https://freepngimg.com/save/115882-of-the-link-legend-zelda/700x514){.absolute right="-20" bottom="30"}
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+sessionInfo()
+```
+

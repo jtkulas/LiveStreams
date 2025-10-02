@@ -17,8 +17,9 @@
 @import url('https://fonts.googleapis.com/css?family=Kaushan Script');
 @import url('https://fonts.googleapis.com/css?family=Satisfy');
 @import url('https://fonts.googleapis.com/css?family=Alan Sans');
+@import url('https://fonts.googleapis.com/css?family=Fleur De Leah');
 
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 
 // fonts
 $font-family-sans-serif: "Palatino Linotype", "Book Antiqua", Palatino,
@@ -27,12 +28,23 @@ $presentation-line-height: 1.4;
 
 .quarto-title-author-name {
   font-size: 65px;
-  color: 	#ccaadd;     /*-- white --*/
+  color: #bcf5bc;     /*-- #ccaadd white --*/
   font-weight: bold;
   font-family: 'Dancing Script';
   text-shadow: 
     4px 4px 0px black,
-//    -3px -3px 3px black;
+    -1px -1px 0px black;
+}
+
+.reveal .slide-logo {       /*-- use for small image renderings --*/
+  max-height: unset !important;
+  height: 100px !important;
+}
+
+.centered {
+  text-align: center; /*-- justify --*/
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 // colors
@@ -292,4 +304,13 @@ $code-block-border-color: #a92777;
   text-shadow:
     0 0 0,
     0 0 0 !important;
+}
+
+.flowery {
+  font-family: Fleur De Leah;
+  color: #4CBB17;
+  font-weight: normal !important;
+  text-shadow:
+   -1px -1px 0px #40826D,
+    2px 2px 0px black !important;
 }
