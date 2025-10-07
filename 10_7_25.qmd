@@ -85,7 +85,7 @@ filters:
 
 ::: {.callout-tip}
 
-### External 
+### [External](https://quarto.org/docs/output-formats/html-basics.html#external-links) 
 
 {{< iconify noto:otter size=2x >}} ["other" resources](https://quarto.org/docs/output-formats/html-basics.html#code-links-and-other-links) {{< iconify noto:otter size=2x flip=horizontal >}}
 
