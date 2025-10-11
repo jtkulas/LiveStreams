@@ -18,6 +18,7 @@
 @import url('https://fonts.googleapis.com/css?family=Satisfy');
 @import url('https://fonts.googleapis.com/css?family=Alan Sans');
 @import url('https://fonts.googleapis.com/css?family=Fleur De Leah');
+@import url('https://fonts.googleapis.com/css?family=Kavoon');
 
 $presentation-title-slide-text-align: right;
 
@@ -28,7 +29,7 @@ $presentation-line-height: 1.4;
 
 .quarto-title-author-name {
   font-size: 65px;
-  color: #bcf5bc;     /*-- #ccaadd white --*/
+  color: white;     /*-- #ccaadd white --*/
   font-weight: bold;
   font-family: 'Dancing Script';
   text-shadow: 
@@ -38,7 +39,7 @@ $presentation-line-height: 1.4;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
-  height: 100px !important;
+  height: 70px !important;
 }
 
 .centered {
@@ -313,4 +314,13 @@ $code-block-border-color: #a92777;
   text-shadow:
    -1px -1px 0px #40826D,
     2px 2px 0px black !important;
+}
+
+.frame {
+  font-family: Kavoon;
+  color: #ad5cad;
+  font-weight: normal !important;
+  text-shadow:
+   -1px -1px 0px white,
+   4px 4px 0px black !important;
 }

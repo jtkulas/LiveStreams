@@ -1,0 +1,96 @@
+---
+title: "R is for <br>Authoring!!" 
+author: 'OOH Session #99...<br> [...iframes]{.frame .bigger}'
+title-slide-attributes: 
+  data-background-image: https://www.shutterstock.com/image-vector/beautiful-surprised-woman-lowered-her-600nw-2603173211.jpg  
+#  data-background-opacity: ".8"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: themeplayground.scss
+    logo: https://static.vecteezy.com/system/resources/previews/045/962/618/non_2x/pink-sunglasses-with-sunshaped-frames-isolated-on-transparent-background-free-png.png  #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+engine: knitr                        ## not picking up inline codes
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[90,10]"}
+::: first-column
++ Recap session #98
++ Focal issue(s):
+    + [{{< iconify noto-v1:glasses size=2x flip=horizontal >}} [iframes]{.frame .bigger} {{< iconify noto-v1:glasses size=2x >}}](https://www.w3schools.com/tags/tag_iframe.ASP)
++ Shared problem-solving
+
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title98.JPG){.absolute top="185" right="-120" width="550"}
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="160" left="370" width="200"}
+
+# Recap of Session <br>#98: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://freepngimg.com/thumb/the_legend_of_zelda/20983-8-zelda-link-photo.png){.absolute width="220" top="190" right="70"}
+
+## [[Hyper[links]{.underline}]{.flowery .Bigger}](https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks)
+
+:::{.panel-tabset}
+### External {{< iconify streamline-sharp-color:link-share-2-flat >}}
+
+### Cross--references {{< iconify noto-v1:back-arrow >}}
+
+### PDFs {{< iconify material-icon-theme:pdf >}}
+
+External window opening up instead of "within current tab"
+
+:::
+
+![](https://www.pngkey.com/png/full/72-725447_the-legend-of-zelda-the-adventure-of-link.png){.absolute top="-20" right="20" height="200"}
+
+# Today... 
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExejZhNjh3bTZlYnRhbHVwamI0NGY0emdpdHplcWg2ZzdodmY5eHlsdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ExHDG9gQUaeXUXXtWh/giphy.gif)
+
+## [{{< iconify noto-v1:glasses size=2x flip=horizontal >}} {{< iconify fluent-emoji-flat:eyes >}}[frames]{.frame .bigger} {{< iconify noto-v1:glasses size=2x >}}](https://github.com/EmilHvitfeldt/quarto-iframe-examples) 
+
+::: {.absolute style="bottom: 40px; right: -100px;"}
+<a href="https://quarto.org/docs/presentations/revealjs/#iframe-backgrounds">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWVlZzV4ZDh6aGNuZW80Y3QybTU1YzU4YTBxYnV2anRteXBkZTRjNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/m9jaxJYmWN0L2UoGnQ/giphy.gif" height="250">
+</a>
+:::
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3ZsaW96c2pmNHM4Znd4NTNwejVyZTZjZmo0YWRpMHQ1aTFtaDNrMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z4alZl8V1cmHK/giphy.gif){.absolute bottom="120" left="315" height="300"}
+
+::: {.absolute style="left: -100px;" .tilt}
+<a href="https://www.reflectiz.com/blog/iframe-security/">
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGs2anUzbTY0ZWs2bnozOGIxemZubndka2xzbWRpZHF2OWU4OTdmbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VbnUQpnihPSIgIXuZv/giphy.gif">
+</a>
+:::
+
+::: {.absolute style="top: 70px; right: -100px;" .tilt2}
+<a href="https://www.geeksforgeeks.org/html/html-iframes/">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExazd1aWFrZjl0enl0bmE3ZWcxcTZkbW12bXp4ZjdxZHZnaTlkYjlkMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IKG6UNjFhXvWxmokkF/giphy.gif">
+</a>
+:::
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+sessionInfo()
+```
