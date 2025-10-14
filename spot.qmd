@@ -1,0 +1,17 @@
+---
+format: 
+  html:
+    link-external-icon: true       #<1>
+    link-external-newwindow: true  #<1>
+    other-links:                    #<2>
+      - text: Extra Special Stuff!!
+        icon: alarm
+        href: https://quarto.org/   #<2>
+---
+  
+<https://quarto.org/> 
+      
+{{< iconify noto:fight-cloud size=3x >}}
+
+[Quarto](https://quarto.org/)
+

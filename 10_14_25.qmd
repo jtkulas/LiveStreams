@@ -21,6 +21,8 @@ engine: knitr                        ## not picking up inline codes
 #lightbox: true
 filters: 
   - reveal-header          ## extension to add a hyperlink to slide logo
+execute:                   ## temp global for `echo: fenced` chunks
+  eval: false
 ---
 
 ## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
@@ -54,11 +56,118 @@ filters:
 :::{.panel-tabset}
 ### External {{< iconify streamline-sharp-color:link-share-2-flat >}}
 
+::: {.columns}
+
+::: {.column width="55%"}
+```{r}
+#| eval: false
+#| echo: true
+
+---
+format: 
+  html:
+    link-external-icon: true       #<1>
+    link-external-newwindow: true  #<1>
+    other-links:                    #<2>
+      - text: Extra Special Stuff!!
+        icon: alarm
+        href: https://quarto.org/   #<2>
+---
+  
+<https://quarto.org/> 
+      
+{{< iconify noto:fight-cloud size=3x >}}
+
+[Quarto](https://quarto.org/)
+        
+        
+        
+#
+  
+```
+1. both of these [can also be applied only to targeted links](https://quarto.org/docs/output-formats/html-basics.html#external-links): `[example](https://example.com){.external target="_blank"}`
+2. `code-links` and/or `other-links` [creates a right--hand margin](https://quarto.org/docs/output-formats/html-basics.html#code-links-and-other-links) isolation for important resources. Icons available at <https://icons.getbootstrap.com/>.
+
+:::
+
+::: {.column width="10%"}
+
+:::
+
+::: {.column width="35%"}
+
+![](img/otherlinks.png){.lightbox}
+
+:::
+
+:::
+
+![](https://www.clker.com/cliparts/V/X/O/e/8/1/transparent-arrow.svg.hi.png){.absolute height="150" left="530" bottom="120" .tilt2 .foreground-image}
+
 ### Cross--references {{< iconify noto-v1:back-arrow >}}
+
+::: {.Smaller}
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+{{< iconify icon-park:one-key >}} identify object via [element id (`#`) or code cell `label`](https://quarto.org/docs/authoring/figures.html#cross-references):
+
+`![Lookie Here](figure.png){#fig-pretty}`, or
+
+```{r}
+#| echo: fenced
+#| label: fig-pretty
+#| fig-cap: "Lookie Here"
+
+ggplot(penguins, aes(x = bill_depth_mm, 
+  y = bill_length_mm , color = species)) +
+  geom_point()
+
+```
+:::
+
+::: {.column width="50%"}
+
+{{< iconify icon-park:two-key >}} reference object within document using `@`:
+
+```{r}
+#| echo: true
+
+Please see @fig-pretty
+
+```
+
+Please see @fig-pretty2
+:::
+
+:::
+
+:::
+
+![](https://pngimg.com/d/chain_PNG103425.png){.absolute right="30" bottom="0" height="200"}
 
 ### PDFs {{< iconify material-icon-theme:pdf >}}
 
-External window opening up instead of "within current tab"
+::: {.columns}
+
+::: {.column width="46%"}
+
+External window opening up instead of "within current tab" not supported natively because {{< iconify fa6-regular:file-pdf >}}s don't utilize tabs. 
+
+:::
+
+::: {.column width="8%"}
+:::
+
+::: {.column width="46%"}
+
+Functionality needs to be controlled via viewer settings on your handler (or by [creating a customized {{< iconify devicon:lua >}} filter](https://quarto.org/docs/extensions/filters.html)).  
+
+:::
+
+:::
 
 :::
 
@@ -92,5 +201,21 @@ External window opening up instead of "within current tab"
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
+#| eval: true
 sessionInfo()
 ```
+
+## {{< iconify emojione:sparkles >}}{{< iconify emojione-v1:sparkles >}}Pretty Graph{{< iconify emojione-v1:sparkles flip="horizontal" >}}{{< iconify emojione:sparkles flip="horizontal" >}}
+
+```{r}
+#| eval: true
+#| label: fig-pretty2
+#| fig-cap: "Lookie Here"
+
+
+library(ggplot2)
+library(palmerpenguins)
+ggplot(penguins, aes(x = bill_depth_mm  , y = bill_length_mm , color = species))+
+  geom_point()
+```
+

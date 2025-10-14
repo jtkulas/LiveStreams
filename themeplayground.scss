@@ -100,6 +100,10 @@ $code-block-border-color: #a92777;
 
 // tilts, mirrors, etc 
 
+.foreground-image {
+  z-index: 1000 !important;
+}
+
 .underline {
   text-decoration: underline;
 }
@@ -169,10 +173,6 @@ $code-block-border-color: #a92777;
   text-shadow: 
     0px 0px 0px #db72b6,
     -4px -4px 0px #db72b6 !important;
-}
-
-.foreground-image {
-  z-index: 1000 !important;
 }
 
 .chatter {
