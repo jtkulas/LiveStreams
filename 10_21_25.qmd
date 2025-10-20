@@ -1,0 +1,141 @@
+---
+title: "R is for <br>Authoring!!" 
+author: 'OOH Session #100...<br>[{{< iconify logos:julia >}}]{style="font-size: 3em;"}[{{< iconify streamline-ultimate-color:business-deal-handshake-1 >}}]{style="font-size: 2em;"}[{{< iconify devicon-plain:jupyter-wordmark >}}]{style="font-size: 3em; color: #000000;"}'
+title-slide-attributes: 
+  data-background-image: https://cdn.displate.com/artwork/640x460/2024-07-03/9f44054ee22c7630fbcb4db33947fe4a_553039b3a2df13348522c532a3bec45c.jpg #https://media.istockphoto.com/id/2178158568/vector/vector-retro-bust-shot-female-astronaut-with-gun-on-a-planet-with-outer-space-background.jpg?s=612x612&w=0&k=20&c=P9SWRWcPu9osWwwwlI7Egp39UCcnzsSjZzGxsfN_N4o= #img/jupyter.png
+  data-background-opacity: ".8"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: themeplayground.scss
+    logo: https://freepngimg.com/save/29214-jupiter-clipart/706x720  #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+engine: knitr                        ## not picking up inline codes
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[90,10]"}
+::: first-column
++ Recap session #99
++ Focal issue(s):
+    + [[{{< iconify logos:julia >}}]{style="font-size: 2em;"}[{{< iconify streamline-ultimate-color:business-deal-handshake-1 >}}]{style="font-size: 2em;"}[{{< iconify devicon-plain:jupyter-wordmark >}}]{style="font-size: 2em; color: #000000;"}](https://quarto.org/docs/computations/julia.html) 
++ Shared problem-solving
+
+:::
+
+::: second-column
+:::
+
+:::
+
+![](img/title99.JPG){.absolute top="185" right="-120" width="550"}
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="160" left="370" width="200"}
+
+# Recap of Session <br>#99: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://static.vecteezy.com/system/resources/previews/045/962/618/non_2x/pink-sunglasses-with-sunshaped-frames-isolated-on-transparent-background-free-png.png){.absolute width="155" top="240" right="95" .tilt2}
+
+## [{{< iconify noto-v1:glasses size=2x flip=horizontal >}} {{< iconify fluent-emoji-flat:eyes >}}[frames]{.frame .bigger} {{< iconify noto-v1:glasses size=2x >}}](https://www.w3schools.com/tags/tag_iframe.ASP) {background-iframe=meatballs/index.html} 
+
+:::{.panel-tabset}
+### {{< iconify noto:smiling-face-with-hearts >}} Typical {{< iconify noto:smiling-face-with-hearts >}}
+
+::: {.columns}
+
+::: {.column width="30%"}
+
+[`<iframe src="https://
+bookdown.org/
+jtkulas/
+10_14_25" 
+width="100%" 
+height="380">
+</iframe>`]{.Smaller}
+
+:::
+
+::: {.column width="70%"}
+
+<iframe src="https://bookdown.org/jtkulas/10_14_25" width="100%" height="380">
+</iframe>
+
+:::
+
+:::
+
+### {{< iconify noto:heart-on-fire >}}Background{{< iconify noto:heart-on-fire >}}
+
+::: {.columns}
+
+::: {.column width="50%"}
+
++ [Quarto function](https://quarto.org/docs/presentations/revealjs/#iframe-backgrounds)  
+  + interactivity toggle
++ Use .gif [as "image"](https://quarto.org/docs/presentations/revealjs/#image-backgrounds)
+  + `background-image` treats same as static image
+
+:::
+
+::: {.column width="50%"}
+
++ [Repository](https://emilhvitfeldt.github.io/quarto-iframe-examples/#/why-should-i-use-iframes)  
+  + finite examples -- can also create your own
+  + JS files editable 
+  + requires local installation
+
+
+:::
+
+:::
+
+
+:::
+
+![](https://images.vexels.com/media/users/3/257023/isolated/preview/87dcee0039855dea3643aed293c80c0a-retro-3d-glasses-color-stroke.png){.absolute top="-40" right="-20" height="300" .tilt}
+
+# Today...{background-image="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmg0YXV1MXI2eXdpdzNkZjM3YTE2Z2tiaWx5NTloZHQzaGdsZTdncyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/s2uampOAMWksU/giphy.gif"} 
+
+![](https://i.pinimg.com/originals/a0/ea/d9/a0ead9e5edb2d524d50d167fe1740a5d.png)
+
+## [[{{< iconify logos:julia >}}]{style="font-size: 2em;"}[{{< iconify streamline-ultimate-color:business-deal-handshake-1 >}}]{style="font-size: 2em;"}[{{< iconify devicon-plain:jupyter-wordmark >}}]{style="font-size: 2em; color: #000000;"}](https://quarto.org/docs/computations/julia.html) 
+
+> You can use R Studio to work with Julia and Quarto, but [Jupyter](https://docs.jupyter.org/en/latest/what_is_jupyter.html) is more seamless (Grok, October 16, 2025)
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+### [{{< iconify devicon:julia-wordmark size=2x >}}](https://jjallaire.github.io/quarto-juliacon-2022/)
+
+{{< iconify devicon:julia-wordmark >}} is like {{< iconify devicon:r >}} -- an open--source programming language
+
+:::
+
+::: {.column width="50%"}
+
+### [{{< iconify devicon:jupyter-wordmark size=2x >}}](https://docs.jupyter.org/en/latest/) [(]{.nofunnybusiness}{{< iconify devicon:julia >}}{{< iconify devicon:python >}}{{< iconify devicon:r >}}[)]{.nofunnybusiness}
+
+[{{< iconify devicon:jupyter-wordmark >}}Lab](https://quarto.org/docs/get-started/hello/jupyter.html) is like {{< iconify devicon:rstudio >}} or [{{< iconify simple-icons:posit >}}]{style="color: #000000;"}tron -- an IDE optimized for data science applications  
+
+:::
+
+:::
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+sessionInfo()
+```
