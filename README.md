@@ -1,4 +1,4 @@
-While we're not technically (mostly) authoring with "R", but rather plain text supported by markdown and/or LaTeX within processors purportedly intended to process (primarily) quantitative data, it's important to acknowledge an inspirational source: 
+The weekly sessions are titled, "R for Authoring" (or, sometimes, "R is for Authoring"). While we're not technically (mostly) authoring with "R", but rather plain text supported by markdown and/or LaTeX within processors purportedly intended to process (primarily) quantitative data, it's important to acknowledge an inspirational source for that decision: 
 
 > "Another noteworthy characteristic of this manual is that it doesn't always tell the truth... ...the author feels that this technique of deliberate lying will actually make it easier for you to learn the ideas" (Knuth, pp. vi-vii)
 
