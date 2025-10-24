@@ -94,9 +94,26 @@ Other options:
 
 [pleb install](https://julialang.org/downloads/) (.exe wizard):
 
-![](img/juliasave.JPG){.absolute bottom="20" left="150" height="300"}
+::: {.columns}
 
-![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZG9wNmR1cHRrcnRldmJobjN0b3dvOTRuYWRiaThhbTRmd3k0cm0wayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7MCHN0i1ZO61SCFLKQ/giphy.gif){.absolute right="0" bottom="50"}
+::: {.column width="35%"}
+
+:::
+
+::: {.column width="26%"}
+
+::: {.callout-important}
+
+[`Add XXX to PATH`]{.underline} also important {{< iconify el:check style="color:#525252;" >}} for {{< iconify devicon:python-wordmark >}} (or any {{< iconify fluent-emoji-flat:man-mage-medium-light >}} install)
+
+:::
+
+:::
+:::
+
+![](img/juliasave.JPG){.absolute bottom="20" left="0" height="300"}
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZG9wNmR1cHRrcnRldmJobjN0b3dvOTRuYWRiaThhbTRmd3k0cm0wayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7MCHN0i1ZO61SCFLKQ/giphy.gif){.absolute right="-100" bottom="50"}
 
 :::
 
@@ -110,27 +127,17 @@ Other options:
 
 ## [[{{< iconify devicon:julia-wordmark >}}]{style="font-size: 2em;"} [{{< iconify streamline-ultimate-color:business-deal-handshake-1 >}}]{style="font-size: 1em;"}[{{< iconify material-icon-theme:quarto >}}]{style="font-size: 2em;"}[{{< iconify streamline-ultimate-color:business-deal-handshake-1 >}}]{style="font-size: 1em;"}[{{< iconify devicon:jupyter-wordmark >}}]{style="font-size: 2em;"} ](https://quarto.org/docs/computations/julia.html) 
 
-> You can use R Studio to work with Julia and Quarto, but [Jupyter](https://docs.jupyter.org/en/latest/what_is_jupyter.html) is more seamless (Grok, October 16, 2025)
+<br>
+<br>
+<br>
+<br>
+<br>
 
-::: {.columns}
+> You can use [{{< iconify devicon:rstudio >}}](https://posit.co/download/rstudio-desktop/) to work with [{{< iconify material-icon-theme:julia >}}](https://julialang.org/) and [{{< iconify material-icon-theme:quarto >}}](https://quarto.org/), but [{{< iconify devicon:jupyter >}}](https://docs.jupyter.org/en/latest/what_is_jupyter.html) is more seamless (Grok, October 16, 2025)
 
-::: {.column width="50%"}
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHp6NTY0aDFvZXlmNHBrMjQweG9vYmc1b21tYmJoZHd2M3QzcjB1OCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ClUoBdGu7i6IGRGVuW/giphy.gif){.absolute left="80" bottom="220" height="330" .mirror}
 
-### [{{< iconify devicon:julia-wordmark size=2x >}}](https://jjallaire.github.io/quarto-juliacon-2022/)
-
-{{< iconify devicon:julia-wordmark >}} is like {{< iconify devicon:r >}} -- an open--source programming language
-
-:::
-
-::: {.column width="50%"}
-
-### [{{< iconify devicon:jupyter-wordmark size=2x >}}](https://docs.jupyter.org/en/latest/) [(]{.nofunnybusiness}{{< iconify devicon:julia >}}{{< iconify devicon:python >}}{{< iconify devicon:r >}}[)]{.nofunnybusiness}
-
-[{{< iconify devicon:jupyter-wordmark >}}Lab](https://quarto.org/docs/get-started/hello/jupyter.html) is like {{< iconify devicon:rstudio >}} or [{{< iconify simple-icons:posit >}}]{style="color: #000000;"}tron -- an IDE optimized for data science applications  
-
-:::
-
-:::
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTMzMDBhaGlsNHJrODN4ZWttandqN29lZWs1N250Y2dzbTRlMW9uMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PZXSk0O0mbswwLpYhm/giphy.gif){.absolute right="-50" top="15"}
 
 ## Additional Resources:
 <br>
@@ -140,7 +147,7 @@ Other options:
 
 [{{< iconify streamline-ultimate-color:paper-write size=2x >}}](https://www.geeksforgeeks.org/julia/how-to-work-with-julia-on-jupyter-notebook/) --- Connecting {{< iconify material-icon-theme:julia size=2x >}} to {{< iconify devicon:jupyter-wordmark size=2x >}}[lab]{.juplab} 
 
-[{{< iconify streamline-ultimate-color:paper-write size=2x >}}](https://docs.ncsa.illinois.edu/systems/delta/en/latest/user_guide/ood/custom-r.html) --- Connecting {{< iconify devicon:r size=2x >}} to {{< iconify devicon:jupyter-wordmark size=2x >}}[lab]{.juplab} 
+[{{< iconify streamline-ultimate-color:paper-write size=2x >}}](https://simply-python.com/2019/06/24/running-r-on-jupyter-notebook-with-r-kernel-no-anaconda/) --- Connecting {{< iconify devicon:r size=2x >}} to {{< iconify devicon:jupyter-wordmark size=2x >}}[lab]{.juplab} 
 
 
 

@@ -64,8 +64,36 @@ $presentation-heading-text-shadow: 5px 5px #222;
 
 // callouts
 
-$callout-color-note: #a92777;
-$callout-border-scale: -20%;
+/* ------------------------------------------------------------------
+   1. Base colour for the note call-out
+   ------------------------------------------------------------------ */
+$callout-color-note: #a92777 !default;          // your pink
+
+/* ------------------------------------------------------------------
+   2. Title-background opacity (global) – 0 = transparent, 1 = solid
+   ------------------------------------------------------------------ */
+$callout-title-bg-opacity: 0.35 !default;
+
+/* ------------------------------------------------------------------
+   3. OPTIONAL: solid background for the note title (overrides opacity)
+   ------------------------------------------------------------------ */
+$callout-title-bg-note: rgba($callout-color-note, 0.35) !default;
+
+/* ------------------------------------------------------------------
+   4. Left accent bar
+   ------------------------------------------------------------------ */
+$callout-border-left-width-note: 6px !default;
+
+/* ------------------------------------------------------------------
+   5. Padding & icon (you already have these)
+   ------------------------------------------------------------------ */
+$callout-padding: 1.2em !default;
+$callout-icon-note: "book-fill" !default;
+
+/* ------------------------------------------------------------------
+   6. (Optional) Make sure the title text is readable on the pink bg
+   ------------------------------------------------------------------ */
+$callout-title-color-note: #fff !default;      // white text
 
 // code blocks 
 
@@ -80,6 +108,11 @@ $code-block-border-color: #a92777;
 }
 
 /*-- scss:rules --*/
+
+.callout-note .callout-title {
+  background: $callout-title-bg-note !important;   /* solid or semi-transparent */
+  color: $callout-title-color-note !important;
+}
 
 .titleauthor {
   font-size: 65px;
