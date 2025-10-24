@@ -19,6 +19,7 @@
 @import url('https://fonts.googleapis.com/css?family=Alan Sans');
 @import url('https://fonts.googleapis.com/css?family=Fleur De Leah');
 @import url('https://fonts.googleapis.com/css?family=Kavoon');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 $presentation-title-slide-text-align: right;
 
@@ -39,7 +40,7 @@ $presentation-line-height: 1.4;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
-  height: 70px !important;
+  height: 110px !important;
 }
 
 .centered {
@@ -325,3 +326,7 @@ $code-block-border-color: #a92777;
    4px 4px 0px black !important;
 }
 
+.juplab {
+  font-family: Roboto;
+  color: #f37821;
+}

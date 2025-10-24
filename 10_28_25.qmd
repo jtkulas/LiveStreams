@@ -1,0 +1,154 @@
+---
+title: "R is for <br>Authoring!!" 
+author: 'OOH Session #101...<br>[{{< iconify devicon:julia-wordmark >}}]{style="font-size: 2em;"} [{{< iconify streamline-ultimate-color:business-deal-handshake-1 >}}]{style="font-size: 1em;"}[{{< iconify material-icon-theme:quarto >}}]{style="font-size: 2em; color: #000000;"}[{{< iconify streamline-ultimate-color:business-deal-handshake-1 >}}]{style="font-size: 1em;"}[{{< iconify devicon-plain:jupyter-wordmark >}}]{style="font-size: 2em;"}'
+title-slide-attributes: 
+  data-background-image: img/catchplanet.png #https://media.istockphoto.com/id/2181016836/vector/vector-retro-bust-shot-female-astronaut-with-gun-on-a-planet-with-outer-space-background.jpg?s=612x612&w=0&k=20&c=kUa-Nl9WQHoxn3F2bzBcvQ8AHHMbCsKB1MRP1yv6hbc= #https://t4.ftcdn.net/jpg/02/09/84/21/360_F_209842141_5tu32R465zuFywEYUQhStY9M6Zvml0Wg.jpg
+#  data-background-opacity: ".9"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: themeplayground.scss
+    logo: https://png.pngtree.com/png-vector/20240309/ourmid/pngtree-cartoon-female-astronaut-with-thought-bubble-png-image_11909816.png  #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+engine: knitr                        ## not picking up inline codes
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)^[Alien astronaut by [Claudette Barjoud!!](https://www.missfluff.com/)]
+
+::: {layout="[90,10]"}
+::: first-column
++ Recap session #100
++ Focal issue(s):
+    + [[{{< iconify devicon:julia-wordmark >}}]{style="font-size: 2em;"} [{{< iconify streamline-ultimate-color:business-deal-handshake-1 >}}]{style="font-size: 1em;"}[{{< iconify material-icon-theme:quarto >}}]{style="font-size: 2em;"}[{{< iconify streamline-ultimate-color:business-deal-handshake-1 >}}]{style="font-size: 1em;"} [{{< iconify devicon:jupyter-wordmark >}}]{style="font-size: 2em; color: #000000;"} ](https://quarto.org/docs/computations/julia.html)
++ Shared problem-solving
+
+:::
+
+::: second-column
+:::
+
+:::
+
+::: {.absolute style="top: 185px; right: -120px; width:550px;"}
+<a href="https://bookdown.org/jtkulas/10_21_25">
+  <img src="img/title100.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#100: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://elc.github.io/blog/images/jupyter-publishing/ipynb-format.png){.absolute width="90" top="260" right="130"}
+
+## [[{{< iconify logos:julia >}}]{style="font-size: 2em;"}[{{< iconify streamline-ultimate-color:business-deal-handshake-1 >}}]{style="font-size: 2em;"}[{{< iconify devicon:jupyter-wordmark >}}]{style="font-size:2em;"}](https://www.geeksforgeeks.org/julia/how-to-work-with-julia-on-jupyter-notebook/)  
+
+:::{.panel-tabset}
+### {{< iconify devicon:jupyter-wordmark >}}[lab]{.juplab} installation
+
+::: {.smaller}
+
+::: {.columns}
+
+::: {.column width="47%"}
+
+1. [install {{< iconify devicon:python-wordmark >}}](https://www.python.org/downloads/)
+2. [access command prompt:{{< iconify flat-color-icons:command-line >}}](https://en.wikiversity.org/wiki/Command_Prompt/Open)
+3. type `pip install jupyterlab`
+4. [navigate](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cd) to project folder
+5. type `jupyter lab`
+
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="48%"}
+
+Other options:  
+
++ [anaconda](https://www.anaconda.com/download)/[miniconda](https://www.anaconda.com/docs/getting-started/miniconda/main)  
++ [{{< iconify devicon:jupyter-wordmark >}}[lab]{.juplab} desktop](https://github.com/jupyterlab/jupyterlab-desktop)  
++ [{{< iconify devicon:github-wordmark >}} codespaces](https://docs.github.com/en/codespaces/quickstart)
+  + {{< iconify devicon:vscode >}} vs {{< iconify devicon:jupyter-wordmark >}}[lab]{.juplab} interface ([{{< iconify logos:youtube-icon  >}}](https://youtu.be/mKbXIDhdeL0?t=105))
+
+:::
+
+:::
+
+:::
+
+### {{< iconify logos:julia >}} installation
+
+[pleb install](https://julialang.org/downloads/) (.exe wizard):
+
+![](img/juliasave.JPG){.absolute bottom="20" left="150" height="300"}
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZG9wNmR1cHRrcnRldmJobjN0b3dvOTRuYWRiaThhbTRmd3k0cm0wayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7MCHN0i1ZO61SCFLKQ/giphy.gif){.absolute right="0" bottom="50"}
+
+:::
+
+![](https://freepngimg.com/save/29214-jupiter-clipart/706x720){.absolute top="-40" right="-120" height="300"}
+
+![](https://images.vexels.com/media/users/3/306506/isolated/preview/6df4ddb92b00e961ee03f67a7fde1355-astronaut-pin-up-girl.png){.absolute top="-30" right="180" height="250"}
+
+# Today...
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2Z6OXc5enFqbWZyZXQ5Nm53azBhaDBuczZ5dG81aHFudjh1dGlpdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11ikeVaUfcXLWM/giphy.gif)
+
+## [[{{< iconify devicon:julia-wordmark >}}]{style="font-size: 2em;"} [{{< iconify streamline-ultimate-color:business-deal-handshake-1 >}}]{style="font-size: 1em;"}[{{< iconify material-icon-theme:quarto >}}]{style="font-size: 2em;"}[{{< iconify streamline-ultimate-color:business-deal-handshake-1 >}}]{style="font-size: 1em;"}[{{< iconify devicon:jupyter-wordmark >}}]{style="font-size: 2em;"} ](https://quarto.org/docs/computations/julia.html) 
+
+> You can use R Studio to work with Julia and Quarto, but [Jupyter](https://docs.jupyter.org/en/latest/what_is_jupyter.html) is more seamless (Grok, October 16, 2025)
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+### [{{< iconify devicon:julia-wordmark size=2x >}}](https://jjallaire.github.io/quarto-juliacon-2022/)
+
+{{< iconify devicon:julia-wordmark >}} is like {{< iconify devicon:r >}} -- an open--source programming language
+
+:::
+
+::: {.column width="50%"}
+
+### [{{< iconify devicon:jupyter-wordmark size=2x >}}](https://docs.jupyter.org/en/latest/) [(]{.nofunnybusiness}{{< iconify devicon:julia >}}{{< iconify devicon:python >}}{{< iconify devicon:r >}}[)]{.nofunnybusiness}
+
+[{{< iconify devicon:jupyter-wordmark >}}Lab](https://quarto.org/docs/get-started/hello/jupyter.html) is like {{< iconify devicon:rstudio >}} or [{{< iconify simple-icons:posit >}}]{style="color: #000000;"}tron -- an IDE optimized for data science applications  
+
+:::
+
+:::
+
+## Additional Resources:
+<br>
+[{{< iconify logos:youtube-icon size=2x >}}](https://www.youtube.com/watch?v=BtYXPY-A9_M) --- {{< iconify devicon:jupyter-wordmark size=2x >}}[lab]{.juplab} installation and navigation 
+
+[{{< iconify logos:youtube-icon size=2x >}}](https://youtu.be/A5YyoCKxEOU?t=106) --- {{< iconify devicon:jupyter-wordmark size=2x >}}[lab]{.juplab} overview & keyboard<br>&emsp;&emsp;&emsp;&emsp;&emsp;shortcuts
+
+[{{< iconify streamline-ultimate-color:paper-write size=2x >}}](https://www.geeksforgeeks.org/julia/how-to-work-with-julia-on-jupyter-notebook/) --- Connecting {{< iconify material-icon-theme:julia size=2x >}} to {{< iconify devicon:jupyter-wordmark size=2x >}}[lab]{.juplab} 
+
+[{{< iconify streamline-ultimate-color:paper-write size=2x >}}](https://docs.ncsa.illinois.edu/systems/delta/en/latest/user_guide/ood/custom-r.html) --- Connecting {{< iconify devicon:r size=2x >}} to {{< iconify devicon:jupyter-wordmark size=2x >}}[lab]{.juplab} 
+
+
+
+![](https://img.pikbest.com/origin/09/09/06/007pIkbEsTYFR.png!sw800){.absolute right="-300" bottom="-150"}
+
+![](https://static.vecteezy.com/system/resources/previews/046/346/878/non_2x/cartoon-female-astronaut-floating-free-png.png){.absolute top="30" right="-30" height="350"}
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+sessionInfo()
+```
