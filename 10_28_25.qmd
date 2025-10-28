@@ -28,7 +28,7 @@ filters:
 ::: {layout="[90,10]"}
 ::: first-column
 + Recap session #100
-+ Focal issue(s):
++ Today's topic(s):
     + [[{{< iconify devicon:julia-wordmark >}}]{style="font-size: 2em;"} [{{< iconify streamline-ultimate-color:business-deal-handshake-1 >}}]{style="font-size: 1em;"}[{{< iconify material-icon-theme:quarto >}}]{style="font-size: 2em;"}[{{< iconify streamline-ultimate-color:business-deal-handshake-1 >}}]{style="font-size: 1em;"} [{{< iconify devicon:jupyter-wordmark >}}]{style="font-size: 2em; color: #000000;"} ](https://quarto.org/docs/computations/julia.html)
 + Shared problem-solving
 
@@ -96,22 +96,22 @@ Other options:
 
 ::: {.columns}
 
-::: {.column width="35%"}
+::: {.column width="25%"}
 
 :::
 
-::: {.column width="26%"}
+::: {.column width="38%"}
 
 ::: {.callout-important}
 
-[`Add XXX to PATH`]{.underline} also important {{< iconify el:check style="color:#525252;" >}} for {{< iconify devicon:python-wordmark >}} (or any {{< iconify fluent-emoji-flat:man-mage-medium-light >}} install)
+[`Add XXX to PATH`]{.underline} also important {{< iconify el:check style="color:#525252;" >}} for {{< iconify devicon:python-wordmark >}} (or any {{< iconify fluent-emoji-flat:man-mage-medium-light >}} install -- tells your computer where to look from any {{< iconify flat-color-icons:command-line >}} location)
 
 :::
 
 :::
 :::
 
-![](img/juliasave.JPG){.absolute bottom="20" left="0" height="300"}
+![](img/juliasave.JPG){.absolute bottom="20" left="-80" height="300"}
 
 ![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZG9wNmR1cHRrcnRldmJobjN0b3dvOTRuYWRiaThhbTRmd3k0cm0wayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7MCHN0i1ZO61SCFLKQ/giphy.gif){.absolute right="-100" bottom="50"}
 
@@ -119,7 +119,7 @@ Other options:
 
 ![](https://freepngimg.com/save/29214-jupiter-clipart/706x720){.absolute top="-40" right="-120" height="300"}
 
-![](https://images.vexels.com/media/users/3/306506/isolated/preview/6df4ddb92b00e961ee03f67a7fde1355-astronaut-pin-up-girl.png){.absolute top="-30" right="180" height="250"}
+![](https://images.vexels.com/media/users/3/306506/isolated/preview/6df4ddb92b00e961ee03f67a7fde1355-astronaut-pin-up-girl.png){.absolute top="-10" right="135" height="250" .tilt2}
 
 # Today...
 
@@ -127,15 +127,23 @@ Other options:
 
 ## [[{{< iconify devicon:julia-wordmark >}}]{style="font-size: 2em;"} [{{< iconify streamline-ultimate-color:business-deal-handshake-1 >}}]{style="font-size: 1em;"}[{{< iconify material-icon-theme:quarto >}}]{style="font-size: 2em;"}[{{< iconify streamline-ultimate-color:business-deal-handshake-1 >}}]{style="font-size: 1em;"}[{{< iconify devicon:jupyter-wordmark >}}]{style="font-size: 2em;"} ](https://quarto.org/docs/computations/julia.html) 
 
-<br>
-<br>
-<br>
-<br>
-<br>
+::: {.columns}
 
-> You can use [{{< iconify devicon:rstudio >}}](https://posit.co/download/rstudio-desktop/) to work with [{{< iconify material-icon-theme:julia >}}](https://julialang.org/) and [{{< iconify material-icon-theme:quarto >}}](https://quarto.org/), but [{{< iconify devicon:jupyter >}}](https://docs.jupyter.org/en/latest/what_is_jupyter.html) is more seamless (Grok, October 16, 2025)
+::: {.column width="57%"}
 
-![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHp6NTY0aDFvZXlmNHBrMjQweG9vYmc1b21tYmJoZHd2M3QzcjB1OCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ClUoBdGu7i6IGRGVuW/giphy.gif){.absolute left="80" bottom="220" height="330" .mirror}
+::: {.callout-note}
+
+Quarto works out--of--the--box (renders from terminal) but there is also a `jupyterlab-quarto` extension that [adds toolbar buttons and helps document previews](https://quarto.org/docs/tools/jupyter-lab-extension.html) 
+
+:::
+:::
+
+:::
+
+::: {.bigger}
+> You can use [{{< iconify devicon:rstudio >}}](https://posit.co/download/rstudio-desktop/) to work with [{{< iconify material-icon-theme:julia >}}](https://julialang.org/) and [{{< iconify material-icon-theme:quarto >}}](https://quarto.org/), but [{{< iconify devicon:jupyter >}}](https://docs.jupyter.org/en/latest/what_is_jupyter.html) is more seamless (Grok, 10.16.25)
+
+:::
 
 ![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTMzMDBhaGlsNHJrODN4ZWttandqN29lZWs1N250Y2dzbTRlMW9uMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PZXSk0O0mbswwLpYhm/giphy.gif){.absolute right="-50" top="15"}
 
