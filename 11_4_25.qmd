@@ -1,0 +1,137 @@
+---
+title: "R is for <br>Authoring!!" 
+author: 'OOH Session #102...<br>[{{< iconify devicon-plain:jupyter-wordmark >}}]{style="font-size: 2em; color: #f37821;"}[lab]{.juplab} [quarto]{.quarto} [extension]{.juplab}'
+title-slide-attributes: 
+  data-background-image: img/astro2.png 
+#  data-background-opacity: ".9"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: themeplayground.scss
+    logo: https://png.pngtree.com/png-vector/20230325/ourmid/pngtree-extension-cord-flat-icon-vector-png-image_6666990.png  #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+engine: knitr                        ## not picking up inline codes
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[90,10]"}
+::: first-column
++ Recap session #101
++ Today's topic(s):
+    + [[{{< iconify devicon-plain:jupyter-wordmark >}}]{style="font-size: 2em; color: #f37821;"}[lab]{.juplab} [quarto]{.quarto} [extension]{.juplab}](https://quarto.org/docs/tools/jupyter-lab-extension.html)  
++ Shared problem-solving
+
+:::
+
+::: second-column
+:::
+
+:::
+
+::: {.absolute style="top: 185px; right: -120px; width:550px;"}
+<a href="https://bookdown.org/jtkulas/10_28_25">
+  <img src="img/title101.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#101: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://www.pinclipart.com/picdir/big/82-826785_clipart-writing-independent-writing-writing-clipart-png-download.png){.absolute width="100" top="255" right="110" .tilt}
+
+## [[{{< iconify devicon:julia-wordmark >}}]{style="font-size: 2em;"} [{{< iconify streamline-ultimate-color:business-deal-handshake-1 >}}]{style="font-size: 1em;"}[{{< iconify material-icon-theme:quarto >}}]{style="font-size: 2em;"}[{{< iconify streamline-ultimate-color:business-deal-handshake-1 >}}]{style="font-size: 1em;"} [{{< iconify devicon:jupyter-wordmark >}}]{style="font-size: 2em; color: #000000;"} ](https://quarto.org/docs/computations/julia.html)  
+
+:::{.panel-tabset}
+### connecting {{< iconify logos:julia >}}
+
+::: {.columns}
+
+::: {.column width="47%"}
+
+1. [install {{< iconify logos:julia >}}](https://bookdown.org/jtkulas/10_28_25/10_28_25.html#/section)
+2. [at {{< iconify logos:julia >}} prompt line, type](https://www.geeksforgeeks.org/julia/how-to-work-with-julia-on-jupyter-notebook/):
+```{r}
+#| eval: false
+#| echo: true
+using Pkg
+Pkg.add("IJulia")
+```
+3. open {{< iconify devicon:jupyter-wordmark >}}[lab]{.juplab} & choose {{< iconify logos:julia >}} kernel
+
+:::
+
+:::
+
+![](img/juliajupyter.png){.absolute right="-10" bottom="10" height="400"}
+
+![](https://png.pngtree.com/png-vector/20250220/ourmid/pngtree-3d-orange-curved-arrow-design-with-transparent-background-png-image_15542261.png){.absolute bottom="50" left="510" height="300" .tilt}
+
+### {{< iconify material-icon-theme:quarto >}} rendering
+
+
+:::
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmd2NTJjeXVnbDB3cWNuZGY2czVjcWc1b2gxdHprYndneTlnc2tqcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/48zjXYRwBg5IQ/giphy.gif){.absolute top="-40" right="-140" height="300"}
+
+# Today...
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDJidTI5OHNhbmlnd3owbnRlMzNxNmt4ZDlyY2NxeDhkdjVxNmZuZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zdQrXeTmVeCEoO66aS/giphy.gif)
+
+## [[{{< iconify devicon-plain:jupyter-wordmark >}}]{style="font-size: 2em; color: #f37821;"}[lab]{.juplab} [quarto]{.quarto} [extension]{.juplab}](https://quarto.org/docs/tools/jupyter-lab-extension.html)  
+
+::: {.bigger}
+> You can use [{{< iconify devicon:rstudio >}}](https://posit.co/download/rstudio-desktop/) to work with [{{< iconify material-icon-theme:julia >}}](https://julialang.org/) and [{{< iconify material-icon-theme:quarto >}}](https://quarto.org/), but [{{< iconify devicon:jupyter >}}](https://docs.jupyter.org/en/latest/what_is_jupyter.html) is more seamless (Grok, 10.16.25)
+
+:::
+
+::: {.columns}
+
+::: {.column width="57%"}
+
+::: {.callout-note}
+
+Quarto works out--of--the--box (renders from terminal) but there is also a `jupyterlab-quarto` extension that [perhaps provides a better alternative](https://quarto.org/docs/tools/jupyter-lab-extension.html) 
+
+:::
+:::
+
+:::
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYW9ncnBlYXY4emF3Zmd3OG1kZTd6Mmw1N3FybGJ5bWxrOTk3dGJ5NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6iVW5bGtzDrpK/giphy.gif){.absolute right="-80" bottom="30"}
+
+![](https://cdn-icons-png.flaticon.com/512/5770/5770277.png){.absolute right="-90" top="-50" height="300"}
+
+## Additional Resources:
+<br>
+[{{< iconify logos:youtube-icon size=2x >}}](https://www.youtube.com/watch?v=BtYXPY-A9_M) --- {{< iconify devicon:jupyter-wordmark size=2x >}}[lab]{.juplab} installation and navigation 
+
+[{{< iconify logos:youtube-icon size=2x >}}](https://youtu.be/A5YyoCKxEOU?t=106) --- {{< iconify devicon:jupyter-wordmark size=2x >}}[lab]{.juplab} overview & keyboard<br>&emsp;&emsp;&emsp;&emsp;&emsp;shortcuts
+
+[{{< iconify streamline-ultimate-color:paper-write size=2x >}}](https://www.geeksforgeeks.org/julia/how-to-work-with-julia-on-jupyter-notebook/) --- Connecting {{< iconify material-icon-theme:julia size=2x >}} to {{< iconify devicon:jupyter-wordmark size=2x >}}[lab]{.juplab} 
+
+[{{< iconify streamline-ultimate-color:paper-write size=2x >}}](https://simply-python.com/2019/06/24/running-r-on-jupyter-notebook-with-r-kernel-no-anaconda/) --- Connecting {{< iconify devicon:r size=2x >}} to {{< iconify devicon:jupyter-wordmark size=2x >}}[lab]{.juplab} 
+
+
+
+![](https://img.pikbest.com/origin/09/09/06/007pIkbEsTYFR.png!sw800){.absolute right="-300" bottom="-150"}
+
+![](https://static.vecteezy.com/system/resources/previews/046/346/878/non_2x/cartoon-female-astronaut-floating-free-png.png){.absolute top="30" right="-30" height="350"}
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+sessionInfo()
+```
