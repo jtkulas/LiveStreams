@@ -82,6 +82,36 @@ Pkg.add("IJulia")
 
 ### {{< iconify material-icon-theme:quarto >}} rendering
 
+::: {.columns}
+
+::: {.column width="63%"}
+
+1. open terminal {{< iconify flat-color-icons:command-line >}}
+2. `render` or `preview` via:
+```{r}
+#| eval: false
+#| echo: true
+quarto render document_name.ipynb
+```
+3. link to doc in console (`preview`) or in project folder (`render`)
+
+:::
+
+::: {.column width="4%"}
+
+:::
+
+::: {.column width="33%"}
+
+::: {.callout-note}
+
+You should ***disconnect*** your {{< iconify devicon:jupyter-wordmark >}}[lab]{.juplab} session by using `ctrl + c` within the command terminal that started the session (after you close {{< iconify devicon:jupyter-wordmark >}}[lab]{.juplab})
+
+:::
+
+:::
+
+::: 
 
 :::
 
@@ -104,7 +134,7 @@ Pkg.add("IJulia")
 
 ::: {.callout-note}
 
-Quarto works out--of--the--box (renders from terminal) but there is also a `jupyterlab-quarto` extension that [perhaps provides a better alternative](https://quarto.org/docs/tools/jupyter-lab-extension.html) 
+Quarto works out--of--the--box (renders from terminal) but there is also a `jupyterlab-quarto` extension that [perhaps provides a more efficient & effective alternative](https://quarto.org/docs/tools/jupyter-lab-extension.html) 
 
 :::
 :::
@@ -117,19 +147,21 @@ Quarto works out--of--the--box (renders from terminal) but there is also a `jupy
 
 ## Additional Resources:
 <br>
-[{{< iconify logos:youtube-icon size=2x >}}](https://www.youtube.com/watch?v=BtYXPY-A9_M) --- {{< iconify devicon:jupyter-wordmark size=2x >}}[lab]{.juplab} installation and navigation 
+[{{< iconify logos:youtube-icon size=2x >}}](https://www.youtube.com/watch?v=FZoDIwe1_YM) --- {{< iconify devicon:jupyter-wordmark size=2x >}}[lab]{.juplab} via {{< iconify devicon:python size=2x >}}<br>&emsp;&emsp;&emsp;&emsp;&emsp;package installer [({{< iconify vscode-icons:file-type-pip >}})](https://pypi.org/project/pip/)
 
-[{{< iconify logos:youtube-icon size=2x >}}](https://youtu.be/A5YyoCKxEOU?t=106) --- {{< iconify devicon:jupyter-wordmark size=2x >}}[lab]{.juplab} overview & keyboard<br>&emsp;&emsp;&emsp;&emsp;&emsp;shortcuts
+[{{< iconify logos:youtube-icon size=2x >}}](https://youtu.be/A5YyoCKxEOU?t=106) --- {{< iconify devicon:jupyter-wordmark size=2x >}}[lab]{.juplab} overview & <br>&emsp;&emsp;&emsp;&emsp;&emsp;keyboard shortcuts
 
-[{{< iconify streamline-ultimate-color:paper-write size=2x >}}](https://www.geeksforgeeks.org/julia/how-to-work-with-julia-on-jupyter-notebook/) --- Connecting {{< iconify material-icon-theme:julia size=2x >}} to {{< iconify devicon:jupyter-wordmark size=2x >}}[lab]{.juplab} 
+[[{{< iconify streamline-ultimate-color:paper-write size=2x >}}](https://www.geeksforgeeks.org/julia/how-to-work-with-julia-on-jupyter-notebook/) --- Connecting {{< iconify material-icon-theme:julia size=2x >}} to {{< iconify devicon:jupyter-wordmark size=2x >}}[lab]{.juplab}]{.fragment fragment-index=1} 
 
-[{{< iconify streamline-ultimate-color:paper-write size=2x >}}](https://simply-python.com/2019/06/24/running-r-on-jupyter-notebook-with-r-kernel-no-anaconda/) --- Connecting {{< iconify devicon:r size=2x >}} to {{< iconify devicon:jupyter-wordmark size=2x >}}[lab]{.juplab} 
+[[{{< iconify streamline-ultimate-color:paper-write size=2x >}}](https://simply-python.com/2019/06/24/running-r-on-jupyter-notebook-with-r-kernel-no-anaconda/) --- Connecting {{< iconify devicon:r size=2x >}} to {{< iconify devicon:jupyter-wordmark size=2x >}}[lab]{.juplab}]{.fragment fragment-index=2} 
 
+![](https://img.pikbest.com/origin/09/09/06/007pIkbEsTYFR.png!sw800){.absolute right="-250" bottom="-40"}
 
+![](https://static.vecteezy.com/system/resources/previews/046/346/878/non_2x/cartoon-female-astronaut-floating-free-png.png){.absolute top="110" right="165" height="350" .fragment fragment-index=1}
 
-![](https://img.pikbest.com/origin/09/09/06/007pIkbEsTYFR.png!sw800){.absolute right="-300" bottom="-150"}
+![](https://static.vecteezy.com/system/resources/previews/019/045/813/non_2x/snake-graphic-clipart-design-free-png.png){.absolute right="0" top="-20" height="250"}
 
-![](https://static.vecteezy.com/system/resources/previews/046/346/878/non_2x/cartoon-female-astronaut-floating-free-png.png){.absolute top="30" right="-30" height="350"}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Piratey_transparent_background.svg/1578px-Piratey_transparent_background.svg.png){.absolute right="-100" bottom="80" height="400" .mirror .fragment fragment-index=2}
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
