@@ -93,7 +93,7 @@ Pkg.add("IJulia")
 #| echo: true
 quarto render document_name.ipynb
 ```
-3. link to doc in console (`preview`) or in project folder (`render`)
+3. [link to doc]{.underline} in console (`preview`) or [doc itself]{.underline} in project folder (`render`)
 
 :::
 
@@ -134,7 +134,7 @@ You should ***disconnect*** your {{< iconify devicon:jupyter-wordmark >}}[lab]{.
 
 ::: {.callout-note}
 
-Quarto works out--of--the--box (renders from terminal) but there is also a `jupyterlab-quarto` extension that [perhaps provides a more efficient & effective alternative](https://quarto.org/docs/tools/jupyter-lab-extension.html) 
+Quarto works out--of--the--box (renders from terminal) but there is also a `jupyterlab-quarto` extension that [perhaps provides a more efficient or enjoyable alternative](https://quarto.org/docs/tools/jupyter-lab-extension.html) 
 
 :::
 :::
@@ -161,7 +161,7 @@ Quarto works out--of--the--box (renders from terminal) but there is also a `jupy
 
 ![](https://static.vecteezy.com/system/resources/previews/019/045/813/non_2x/snake-graphic-clipart-design-free-png.png){.absolute right="0" top="-20" height="250"}
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Piratey_transparent_background.svg/1578px-Piratey_transparent_background.svg.png){.absolute right="-100" bottom="80" height="400" .mirror .fragment fragment-index=2}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Piratey_transparent_background.svg/1578px-Piratey_transparent_background.svg.png){.absolute right="-115" bottom="80" height="400" .mirror .fragment fragment-index=2}
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
