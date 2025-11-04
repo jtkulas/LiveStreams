@@ -134,7 +134,7 @@ You should ***disconnect*** your {{< iconify devicon:jupyter-wordmark >}}[lab]{.
 
 ::: {.callout-note}
 
-Quarto works out--of--the--box (renders from terminal) but there is also a `jupyterlab-quarto` extension that [perhaps provides a more efficient or enjoyable alternative](https://quarto.org/docs/manuscripts/authoring/jupyterlab.html) 
+Quarto works out--of--the--box (renders from terminal) but there is also a [[{{< iconify devicon-plain:jupyter-wordmark >}}]{style="color: #f37821;"}[lab]{.juplab} [quarto]{.quarto} [extension]{.juplab}](https://quarto.org/docs/tools/jupyter-lab-extension.html) that might provide a more [efficient, effective, or enjoyable alternative](https://quarto.org/docs/manuscripts/authoring/jupyterlab.html) 
 
 :::
 :::

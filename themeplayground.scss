@@ -100,6 +100,16 @@ $callout-title-color-note: #fff !default;      // white text
 /*$code-block-bg: #241f23;*/
 $code-block-border-color: #a92777;
 
+/* adding background to inline code elements */
+:not(pre) > code {
+  background-color: #dddddd !important; /* Light gray shade, adjustable */
+  padding: 0.1em 0.2em;
+  border-radius: 4px;
+  font-size: 0.6em;
+  font-family: ui-monospace, Menlo, Monaco, "Courier New", monospace;
+  border: 1px dashed rgba(128, 128, 128, 0.25);
+}
+
 /*-- scss:mixins --*/
 
 // Background generator
