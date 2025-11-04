@@ -51,7 +51,7 @@ filters:
 
 ![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
 
-![](https://www.pinclipart.com/picdir/big/82-826785_clipart-writing-independent-writing-writing-clipart-png-download.png){.absolute width="100" top="255" right="110" .tilt}
+![](https://static.vecteezy.com/system/resources/previews/046/346/861/non_2x/young-girl-astronaut-floating-cartoon-illustration-free-png.png){.absolute width="160" top="240" right="90" .tilt}
 
 ## [[{{< iconify devicon:julia-wordmark >}}]{style="font-size: 2em;"} [{{< iconify streamline-ultimate-color:business-deal-handshake-1 >}}]{style="font-size: 1em;"}[{{< iconify material-icon-theme:quarto >}}]{style="font-size: 2em;"}[{{< iconify streamline-ultimate-color:business-deal-handshake-1 >}}]{style="font-size: 1em;"} [{{< iconify devicon:jupyter-wordmark >}}]{style="font-size: 2em; color: #000000;"} ](https://quarto.org/docs/computations/julia.html)  
 
@@ -86,7 +86,7 @@ Pkg.add("IJulia")
 
 ::: {.column width="63%"}
 
-1. open terminal {{< iconify flat-color-icons:command-line >}}
+1. [open terminal {{< iconify flat-color-icons:command-line >}}](https://en.wikiversity.org/wiki/Command_Prompt/Open)
 2. `render` or `preview` via:
 ```{r}
 #| eval: false
@@ -134,7 +134,7 @@ You should ***disconnect*** your {{< iconify devicon:jupyter-wordmark >}}[lab]{.
 
 ::: {.callout-note}
 
-Quarto works out--of--the--box (renders from terminal) but there is also a `jupyterlab-quarto` extension that [perhaps provides a more efficient or enjoyable alternative](https://quarto.org/docs/tools/jupyter-lab-extension.html) 
+Quarto works out--of--the--box (renders from terminal) but there is also a `jupyterlab-quarto` extension that [perhaps provides a more efficient or enjoyable alternative](https://quarto.org/docs/manuscripts/authoring/jupyterlab.html) 
 
 :::
 :::
