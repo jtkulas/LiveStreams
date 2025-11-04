@@ -102,12 +102,12 @@ $code-block-border-color: #a92777;
 
 /* adding background to inline code elements */
 :not(pre) > code {
-  background-color: #dddddd !important; /* Light gray shade, adjustable */
+  background-color:  #e9cee5 !important; /* Light gray shade, adjustable */
   padding: 0.1em 0.2em;
   border-radius: 4px;
   font-size: 0.6em;
   font-family: ui-monospace, Menlo, Monaco, "Courier New", monospace;
-  border: 1px dashed rgba(128, 128, 128, 0.25);
+  border: 1px solid #a92777;
 }
 
 /*-- scss:mixins --*/
