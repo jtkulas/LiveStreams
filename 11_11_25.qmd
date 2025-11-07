@@ -1,0 +1,164 @@
+---
+title: "R is for <br>Authoring!!" 
+author: 'OOH Session #103...<br>[Knitting Kables]{.knitting .bigger}'
+title-slide-attributes: 
+  data-background-image: img/knitting.png
+#  data-background-opacity: ".8"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: themeplayground.scss
+    logo: https://cdn.pixabay.com/photo/2024/06/03/23/42/cat-8807473_640.png #https://png.pngtree.com/png-clipart/20230917/original/pngtree-knitting-yarn-and-needles-with-transparent-background-png-image_12278465.png  #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+engine: knitr                        ## not picking up inline codes
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[90,10]"}
+::: first-column
++ Recap session #102
++ Today's topic(s):
+    + [[Knitting Kables]{.knitting .bigger}](https://bookdown.org/yihui/rmarkdown-cookbook/kable.html)  
++ Shared problem-solving
+
+:::
+
+::: second-column
+:::
+
+:::
+
+::: {.absolute style="top: 185px; right: -120px; width:550px;"}
+<a href="https://bookdown.org/jtkulas/11_4_25">
+  <img src="img/title102.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#102: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://png.pngtree.com/png-vector/20230325/ourmid/pngtree-extension-cord-flat-icon-vector-png-image_6666990.png){.absolute width="150" top="250" right="100" .tilt}
+
+## [{{< iconify devicon:jupyter-wordmark size=2x >}}[lab]{.juplab} [quarto]{.quarto} [extension]{.juplab}](https://quarto.org/docs/tools/jupyter-lab-extension.html)  
+
+:::{.panel-tabset}
+
+### {{< iconify devicon:r >}}{{< iconify fluent:arrow-swap-16-filled style="color:#276dc2;" >}}{{< iconify devicon:jupyter-wordmark >}}[lab]{.juplab}
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.callout-warning}
+
+We ran into a scenario where {{< iconify devicon:jupyter-wordmark >}}[lab]{.juplab} "sees" {{< iconify devicon:r >}} but {{< iconify material-icon-theme:quarto >}} [**DOES NOT**]{.underline}. Many possible solutions identified by {{< iconify logos:github-copilot >}} & {{< iconify hugeicons:grok-02 style="color:#000000;" >}}, all aimed at making the {{< iconify devicon:r >}} kernel more easily findable -- the installation location matters (to {{< iconify material-icon-theme:quarto >}}, not {{< iconify devicon:jupyter-wordmark >}}[lab]{.juplab}). 
+:::
+
+:::
+
+::: {.column width="3%"}
+:::
+
+::: {.column width="47%"}
+1. open {{< iconify devicon:r >}} (not IDE)
+2. install packages
+3. run `installspec`
+
+```{r}
+#| echo: true
+#| eval: false
+
+install.packages(c("repr", "IRdisplay", "evaluate", "crayon", "pbdZMQ", "devtools", "uuid", "digest", "IRkernel"))
+
+IRkernel::installspec(user = FALSE) #<1>
+```
+1. we [**DID NOT**]{.underline} specify `user = FALSE` -- additional recommendation is to access {{< iconify devicon:r >}} as admin (right--click before entering). This is *more likely* to place the {{< iconify devicon:r >}} kernel in an accessible location (to all programs).
+
+:::
+
+:::
+
+### {{< iconify material-icon-theme:quarto >}} extension
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+::: {.callout-note}
+
+...your Notebook will show rendered previews of elements like Callouts, Divs, Mermaid charts, as well as other Quarto elements...
+
+:::
+
+LET'S CHECK IT OUT!!! {{< iconify fluent-emoji-flat:eyes flip=horizontal >}}
+
+:::
+
+:::
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmxrM2h0enJ0dTdjcWd3MDV4M243aWZlYmc3enVmNjA1aTJzZGVtbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/b5XRfyjS2xva0/giphy.gif){.absolute right="0" bottom="60" height="350"}
+
+:::
+
+![](https://cdn-icons-png.flaticon.com/512/5770/5770277.png){.absolute right="-90" top="-50" height="300"}
+
+# Today...
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExODdmNGc1ODJ4aGlnaWUzajI5bmpzNWZhcnl1dXllOWd4ZHR6ZHA5ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0pi8oWVuZ3WFQ4bXH9/giphy.gif)
+
+## [[Knitting Kables]{.knitting .bigger}](https://bookdown.org/yihui/rmarkdown-cookbook/kable.html)  
+
+::: {.columns}
+
+::: {.column width="50%"}
+
++ `knitr::kable`^[`kableExtra::kbl` essentially equivalent (enhanced format detection & intent for `kableExtra` goopification {{< iconify streamline-stickies-color:dangerous-chemical-lab-duo >}}{{< iconify streamline-stickies-color:dangerous-chemical-lab-duo >}}{{< iconify streamline-stickies-color:dangerous-chemical-lab-duo >}})] (circa 2012--ish) minimalist option for quick tables across output formats (see @tbl-iris)  
++ [`kableExtra` (circa 2016--ish)](https://bookdown.org/yihui/rmarkdown-cookbook/kableextra.html) "on top" if desire fanciness ([pipe a kable](https://github.com/haozhu233/kableExtra)) 
+
+:::
+
+::: {.column width="50%"}
+
+:::
+
+:::
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZW4zeWRqb2tydndoMHZ3YnZjbDQ5bzZwemt0cHpyazJ3ZGJmN3pzdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IHnROpQICe4kE/giphy.gif){.absolute right="20" bottom="150" height="350"}
+
+![](https://www.pngkey.com/png/full/77-775269_png-knitting-images-pluspng-knitting-png.png){.absolute right="250" top="-40" height="250" .mirror}
+
+## [Basic kable](https://www.geeksforgeeks.org/r-language/kable-method-in-r/)
+
+```{r}
+#| label: tbl-iris
+#| tbl-cap: flowers <br> {{< iconify streamline-plump-color:potted-flower >}}
+#| echo: fenced
+#| output-location: column
+
+knitr::kable(head(iris[1:3, ]), #<1>
+      col.names=(c("sl", "sw", 
+      "pl","pw","spec")))
+```
+1. object needs to be "square" {{< iconify line-md:confirm-square >}}
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDdnaTVrMHU3azU2dmpjbHF3enIxNnQ1bDk5Z2ttOWw0MXU4bDg5YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/A7XO2QsduJGrw6hKsU/giphy.gif){.absolute bottom="0" left="20"}
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+sessionInfo()
+```
+

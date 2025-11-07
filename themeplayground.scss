@@ -20,6 +20,7 @@
 @import url('https://fonts.googleapis.com/css?family=Fleur De Leah');
 @import url('https://fonts.googleapis.com/css?family=Kavoon');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Pangolin');
 
 $presentation-title-slide-text-align: right;
 
@@ -377,4 +378,10 @@ $code-block-border-color: #a92777;
 .quarto {
   font-family: michroma;   // close but not perfect
   color: #42729b;
+}
+
+.knitting {
+  font-family: Pangolin; // Pangolin;
+  font-weight: normal !important;
+  color: #4e91c9;
 }
