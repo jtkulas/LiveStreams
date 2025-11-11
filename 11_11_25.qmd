@@ -29,7 +29,7 @@ filters:
 ::: first-column
 + Recap session #102
 + Today's topic(s):
-    + [[Knitting Kables]{.knitting .bigger}](https://bookdown.org/yihui/rmarkdown-cookbook/kable.html)  
+    + [[Knitting Kables]{.knitting .bigger}](https://kbroman.org/knitr_knutshell/)  
 + Shared problem-solving
 
 :::
@@ -98,9 +98,9 @@ IRkernel::installspec(user = FALSE) #<1>
 
 ::: {.column width="50%"}
 
-::: {.callout-note}
+::: {.callout-important}
 
-...your Notebook will show rendered previews of elements like Callouts, Divs, Mermaid charts, as well as other Quarto elements...
+...your [**NOTEBOOK**]{.underline} will show rendered previews of elements like Callouts, Divs, Mermaid charts, as well as other Quarto elements...
 
 :::
 
