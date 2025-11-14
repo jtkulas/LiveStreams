@@ -21,6 +21,7 @@
 @import url('https://fonts.googleapis.com/css?family=Kavoon');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Pangolin');
+@import url('https://fonts.googleapis.com/css?family=Exo');
 
 $presentation-title-slide-text-align: right;
 
@@ -144,6 +145,12 @@ $code-block-border-color: #a92777;
 }
 
 // tilts, mirrors, etc 
+
+.shadow {
+  text-shadow: 
+    2px 2px 3px #222,
+    -2px -2px 3px #222 !important;
+}
 
 .foreground-image {
   z-index: 1000 !important;
@@ -381,7 +388,13 @@ $code-block-border-color: #a92777;
 }
 
 .knitting {
-  font-family: Pangolin; // Pangolin;
+  font-family: Pangolin; 
   font-weight: normal !important;
   color: #4e91c9;
+}
+
+.layout {
+  font-family: Exo; 
+  font-weight: normal !important;
+  color: #fae1ab;
 }

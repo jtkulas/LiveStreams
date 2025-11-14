@@ -1,0 +1,114 @@
+---
+title: "R is for <br>Authoring!!" 
+author: 'OOH Session #104...<br>[Layouts]{.layout .Bigger}'
+title-slide-attributes: 
+  data-background-image: https://static.vecteezy.com/system/resources/previews/046/465/193/non_2x/summer-illustration-tourism-woman-on-vacation-girl-sunbathing-on-the-beach-swimming-in-the-sea-ocean-postcard-banner-template-for-social-media-website-free-vector.jpg
+#  data-background-opacity: ".8"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: themeplayground.scss
+    logo: https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-tanning-clipart-summer-woman-relaxing-in-a-sun-lounger-under-palm-png-image_6816263.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+engine: knitr                        ## not picking up inline codes
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[90,10]"}
+::: first-column
++ Recap session #103
++ Today's topic(s):
+    + [[Layouts]{.layout .shadow .Bigger}](https://quarto.org/docs/output-formats/page-layout.html)  
++ Shared problem-solving
+
+:::
+
+::: second-column
+:::
+
+:::
+
+::: {.absolute style="top: 185px; right: -120px; width:550px;"}
+<a href="https://bookdown.org/jtkulas/11_11_25">
+  <img src="img/title103.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#103: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://www.clipartmax.com/png/full/27-276851_table-coffee-furniture-vector-graphic-on-pixabay-transparent-coffee-table-clipart.png){.absolute width="140" top="280" right="105"}
+
+## [[Knitting](https://kbroman.org/knitr_knutshell/) [Kables](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html#Overview)]{.knitting .bigger}  
+
+:::{.panel-tabset}
+
+### `knitr::kable`
+
+```{r}
+#| label: tbl-mtcars
+#| tbl-cap: mtcars vars (trunc)
+#| echo: fenced
+#| output-location: column
+
+knitr::kable(
+  mtcars[1:3, 1:2],
+    col.names=c("MPG",   #<1>
+                "CYL",
+                "DISP")  #<1>
+  )
+```
+1. Duplicate of actual object names (only changed capitalization) just to highlight useful `col.names` parameter
+
+### `kableExtra::kbl`
+
+
+```{r}
+#| label: tbl-teeth
+#| tbl-cap: ToothGrowth vars (trunc)
+#| echo: fenced
+#| output-location: column
+
+library(kableExtra)
+
+kbl(                  #<1>
+  ToothGrowth[29:31, ]) %>%
+  kable_classic() %>%
+  row_spec(2, background="#bada55") %>%
+  add_header_above(c(" "=1,
+                     "Three Vars:"=3))
+  
+```
+1. Souped up `knitr::kable` intended to better fit with `kableExtra`'s piping
+
+:::
+
+![](https://www.pngkey.com/png/full/77-775269_png-knitting-images-pluspng-knitting-png.png){.absolute right="150" top="-40" height="250"}
+
+# Today...
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWJtOWpseGhzeTV5dzZ0eXpnd240NDY2OTY2aXFlaGx3YWQ5cDR6dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oqMR74FnbVNwH8rrVu/giphy.gif)
+
+## [[Layouts]{.layout .Bigger}](https://quarto.org/docs/output-formats/page-layout.html)  
+
+![](https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png){.absolute height="500" .mirror}
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+sessionInfo()
+```
+
