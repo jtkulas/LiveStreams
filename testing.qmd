@@ -1,17 +1,17 @@
 ---
 title: "R for Authoring!!" 
-format: typst
+format: pdf
 ---
 
-:::{.columns}<br>
+::: {layout="[[70,30], [100]]"}
 
-::: {.column width="50%"}<br>
-Left content<br>
-:::<br>
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlGaDWdSRgomniGczPiX2-jQZ1ijfX4efZvQ&s)
+<br>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum
 
-::: {.column width="50%"}<br>
-Right content<br>
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf8uM14YX7a2JTmfAzusAjr-tASJzRz42g3Q&s)
+
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpOoBGovQbiHqqiMR3jaBoFtQewnkfibg5lw&s)
+
 :::
 
-
-
+blah blah blah

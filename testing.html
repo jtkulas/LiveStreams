@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -26,14 +26,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="testing_files/libs/clipboard/clipboard.min.js"></script>
 <script src="testing_files/libs/quarto-html/quarto.js" type="module"></script>
 <script src="testing_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="testing_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="testing_files/libs/quarto-html/popper.min.js"></script>
 <script src="testing_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="testing_files/libs/quarto-html/anchor.min.js"></script>
 <link href="testing_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="testing_files/libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="testing_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="testing_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="testing_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="testing_files/libs/bootstrap/bootstrap-bb462d781dde1847d9e3ccf7736099dd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="testing_files/libs/bootstrap/bootstrap-9e3ffae467580fdb927a41352e75a2e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -63,13 +64,22 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
-</div><div class="column" style="width:50%;">
-<p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.</p>
+<div class="quarto-layout-panel" data-layout="[[70,30], [100]]">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 70.0%;justify-content: flex-start;">
+<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlGaDWdSRgomniGczPiX2-jQZ1ijfX4efZvQ&amp;s.png" class="img-fluid"> <br>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 30.0%;justify-content: center;">
+<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf8uM14YX7a2JTmfAzusAjr-tASJzRz42g3Q&amp;s.png" class="img-fluid"></p>
 </div>
 </div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<p><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/02/Tweety.svg/668px-Tweety.svg.png" class="img-fluid"> Yo whazzup</p>
+</div>
+</div>
+</div>
+<p>blah blah blah</p>
 
 </main>
 <!-- /main column -->
@@ -124,13 +134,14 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
