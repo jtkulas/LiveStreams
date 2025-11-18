@@ -47,6 +47,8 @@ filters:
 
 ![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
 
+## [Neat Quarto Resource!!](https://qmd4sci.njtierney.com/) {background-image="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmttbnN5NmNkNnR6emx3NHB5cmZrZmhoYjJtcHNuMnlqN3dlN2I1YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YkToY4Kw2NEDfuHxND/giphy.gif"}
+
 # Recap of Session <br>#103: 
 
 ![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
@@ -105,7 +107,13 @@ kbl(                  #<1>
 
 ## [[Layouts]{.layout .Bigger}](https://quarto.org/docs/output-formats/page-layout.html)  
 
-![](https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png){.absolute height="500" .mirror}
++ [Definitions](https://quarto.org/docs/authoring/article-layout.html)  
++ [Margins](https://quarto.org/docs/blog/posts/2022-02-17-advanced-layout/)  
++ [Orientation](https://quarto.org/docs/authoring/article-layout.html#landscape-mode)  
++ ["grid"](https://quarto.org/docs/output-formats/page-layout.html#grid-customization)
++ [`layout-ncol`](https://stackoverflow.com/questions/74162212/two-columns-layout-in-quarto)^[...also, more generally, [`layout`](https://quarto.org/docs/authoring/figures.html#complex-layouts) -- see [{{< iconify skill-icons:github-dark >}}](https://github.com/orgs/quarto-dev/discussions/2750) for discussion]
+
+![](https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png){.absolute height="500" right="-120" bottom="130" .mirror}
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}

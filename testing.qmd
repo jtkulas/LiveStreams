@@ -1,8 +1,17 @@
 ---
 title: "R for Authoring!!" 
-format: pdf
+format: typst
 ---
 
-```{r}
-knitr::kable(head(mtcars[1:4, 1:4]), col.names=(c("eep", "op", "ork", "ahah")))
-```
+:::{.columns}<br>
+
+::: {.column width="50%"}<br>
+Left content<br>
+:::<br>
+
+::: {.column width="50%"}<br>
+Right content<br>
+:::
+
+
+
