@@ -1,0 +1,283 @@
+---
+title: "R is for <br>Authoring!!" 
+author: 'OOH Session #105...<br>[Markdown]{.marker .Bigger} [{{< iconify skill-icons:markdown-dark >}}]{.Bigger}'
+title-slide-attributes: 
+  data-background-image: img/marker.png
+#  data-background-opacity: ".8"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: themeplayground.scss
+    logo: https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/2560px-Markdown-mark.svg.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+engine: knitr                        ## not picking up inline codes
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`)
+
+::: {layout="[[10,10],]"}
+::: first-column
++ Recap session #104
++ Today's topic(s):
+    + [[Markdown]{.marker} {{< iconify skill-icons:markdown-dark >}}](https://quarto.org/docs/authoring/markdown-basics.html)
++ Shared problem-solving
+
+::: {.callout-note}
+## Reminder
+ [Nice Quarto Resource!! {{< iconify material-icon-theme:quarto >}}](https://qmd4sci.njtierney.com/)
+:::
+
+:::
+
+::: second-column
+:::
+
+:::
+
+::: {.absolute style="top: 185px; right: -120px; width:550px;"}
+<a href="https://bookdown.org/jtkulas/11_18_25">
+  <img src="img/title104.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#104: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-tanning-clipart-summer-woman-relaxing-in-a-sun-lounger-under-palm-png-image_6816263.png){.absolute width="140" top="255" right="105"}
+
+## [[Layouts]{.layout .Bigger}](https://quarto.org/docs/output-formats/page-layout.html) 
+
+:::{.panel-tabset}
+
+### [Overview]{.Smallest}
+
+::: {.columns}
+
+::: {.column width="80%" .Smaller}
+
+```{r}
+#|echo: false
+
+try <- data.frame(method = c("`{.columns}`", "`{.grid}`", "`{layout=}`",  "`{lay-ncol}`"),
+                  html = c("{{< iconify streamline-ultimate-color:check >}}", "{{< iconify streamline-ultimate-color:check >}}", "{{< iconify streamline-ultimate-color:check >}}", "{{< iconify streamline-ultimate-color:check >}}"),
+                  typst = c("{{< iconify streamline-ultimate-color:delete-2 >}}", "{{< iconify streamline-ultimate-color:delete-2 >}}", "{{< iconify streamline-ultimate-color:check >}}",  "{{< iconify streamline-ultimate-color:check >}}"),
+                  pdf = c("{{< iconify streamline-ultimate-color:delete-2 >}}", "{{< iconify streamline-ultimate-color:delete-2 >}}", "{{< iconify streamline-ultimate-color:check >}}*", "{{< iconify streamline-ultimate-color:check >}}*"))
+
+library(kableExtra)
+
+knitr::kable(try, escape=FALSE,    
+    col.names=c("",   
+                "html",
+                "typst",
+                "pdf"))
+```
+
+:::
+
+::: {.column width="20%"}
+
+<br>
+
+::: {.callout-important}
+
+Currently running Quarto version 1.8.26    
+
+:::
+
+:::
+
+:::
+
+### [`{.columns}`]{.Smallest}
+
+```{r}
+#| echo: true
+#| eval: false
+---
+title: "Untitled"
+format: html
+---
+
+::: {.columns}                #<1>
+::: {.column width="50%"}     #<2>
+Quarto enables you to weave together content and executable code into a finished document. To a learn more about Quarto see <https://quarto.org>.
+:::
+
+::: {.column width="50%"}
+Whatever else you'd like here
+:::                       #<2>
+:::                       #<3>
+
+  
+  
+#  
+```
+1. opening fence {{< iconify maki:fence >}} [creating column container](https://quarto.org/docs/presentations/revealjs/#multiple-columns) 
+2. column specifications using `width` attributes
+3. closing fence {{< iconify maki:fence >}} for `.columns` container
+
+### [`{.grid}`]{.Smallest}
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: true
+#| eval: false
+
+::: {.grid}                 #<1>
+::: {.g-col-6}
+## First column 
+I would like to have text here
+:::
+  
+::: {.g-col-6}
+## Second column 
+and here
+More text
+:::
+:::                        #<2>
+```
+1. open the fence {{< iconify maki:fence >}} -- same scripting structure as `{.columns}` 
+2. close the fence {{< iconify maki:fence >}} -- again same scripting structure as `{.columns}` 
+
+:::
+
+::: {.column width = "50%"}
+
+::: {.callout-note}
+
+### uh... about that... {{< iconify noto:disguised-face size=2x >}}
+
+[Kinda works](https://quarto.org/docs/output-formats/page-layout.html#css-grid) (html only) but seemingly not intended to be a "go to" solution for isolated document bits -- more useful for page dimensions (sidebar, margin, etc) & [specified within YAML](https://quarto.org/docs/output-formats/page-layout.html#grid-customization)
+
+:::
+
+:::
+
+:::
+
+### [`{layout=}`]{.Smallest}
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+````{r}
+#| echo: true
+#| eval: false
+
+::: {layout="[50,50]"}      #<1>
+
+## Running Code
+
+When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+
+```{r}         
+1 + 1          
+```
+
+:::
+````
+1. currently "works" up to at least 5 columns (some online resources claim 2 or 3 column limitation)
+
+:::
+
+::: {.column width = "40%"}
+
+::: {.callout-note}
+
+### Yeahbut *
+
+1. no gutter in {{< iconify vscode-icons:file-type-pdf2 >}} rendering  
+2. ignores `echo`ed content [across all 3 document types]{.underline}
+3. can do both [rows and columns](https://quarto.org/docs/authoring/figures.html#complex-layouts) -- ***vertical spacing is meaningful!!!***
+
+:::
+
+:::
+
+:::
+
+### [`{layout-ncol}`]{.Smallest}
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+```{r}
+#| echo: true
+#| eval: false
+::: {layout-ncol=3}           #<1>
+- Apples
+- Oranges
+- Bananas
+- Grapes
+- Kiwis
+- Mangoes
+
+A normal paragraph that will take up one entire column.
+
+code or other info here
+:::                       #<2>
+```
+1. open zee fence she too hot!! {{< iconify emojione-v1:hot-pepper >}}
+2. close zee fence she too cold!! {{< iconify noto:cold-face >}}
+
+:::
+
+::: {.column width="40%"}
+
+::: {.callout-note}
+
+### Also *
+
+1. operates same as `{layout=}` (vertical spaces determine column breaks)  
+2. columns will be equal width 
+3. see also [`{layout-nrow}`](https://quarto.org/docs/authoring/figures.html#multiple-rows)
+
+:::
+
+:::
+
+:::
+
+:::
+
+![](https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png){.absolute right="-100" top="-20" height="240" .mirror}
+
+# Today...
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWd5eHkxenR0MWg2dWxyYjBidnY4bTl4MHJzdGhnZ2YwOTFnM3V1YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aYVmoo4EestOJQoMDg/giphy.gif)
+
+## [[Markdown]{.marker .bigger} {{< iconify skill-icons:markdown-dark size=2x >}}](https://daringfireball.net/projects/markdown/) 
+
++ [Playground](https://markdownlivepreview.com/)  
++ [Editors](https://www.markdownguide.org/tools/)  
+  + [{{< iconify devicon:jupyter-wordmark size=2x >}}[lab]{.juplab}](https://jupyter.org/)
+  + [{{< iconify devicon:rstudio size=2x >}}](https://posit.co/download/rstudio-desktop/)
+  + [{{< iconify eos-icons:atom-electron size=2x style="color:black" >}}](https://positron.posit.co/)
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3lncWs4Z2N0OWMxOWJla3V5Y2htMXZqM3B6ZzVtMW9ldm1pMnRuZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/k0ijJhqrUP4T2EvmJ1/giphy.gif){.absolute bottom="40" right="80" height="500"}
+
+![](https://static.vecteezy.com/system/resources/thumbnails/049/546/017/small/pink-highlighter-marker-pen-clipart-cartoon-png.png){.absolute right="-100" top="-30" height="250"}
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+sessionInfo()
+```

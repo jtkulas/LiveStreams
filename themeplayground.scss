@@ -22,6 +22,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url('https://fonts.googleapis.com/css?family=Pangolin');
 @import url('https://fonts.googleapis.com/css?family=Exo');
+@import url('https://fonts.googleapis.com/css?family=Permanent Marker');
 
 $presentation-title-slide-text-align: right;
 
@@ -40,10 +41,10 @@ $presentation-line-height: 1.4;
     -1px -1px 0px black;
 }
 
-.reveal .slide-logo {       /*-- use for small image renderings --*/
-  max-height: unset !important;
-  height: 110px !important;
-}
+//.reveal .slide-logo {       /*-- use for small image renderings --*/
+//  max-height: unset !important;
+//  height: 110px !important;
+//}
 
 .centered {
   text-align: center; /*-- justify --*/
@@ -178,6 +179,10 @@ $code-block-border-color: #a92777;
 
 .Smaller {
   font-size: .8em;
+}
+
+.Smallest {
+  font-size: .6em;
 }
 
 .bigger {
@@ -397,4 +402,13 @@ $code-block-border-color: #a92777;
   font-family: Exo; 
   font-weight: normal !important;
   color: #fae1ab;
+}
+
+.marker {
+  font-family: Permanent Marker; 
+  font-weight: normal !important;
+  color: #242938;
+  text-shadow:
+   -0px -0px 0px white,
+   0px 0px 0px black !important;
 }
