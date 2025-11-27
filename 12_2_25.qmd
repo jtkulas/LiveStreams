@@ -1,0 +1,189 @@
+---
+title: "R is for <br>Authoring!!" 
+author: 'OOH Session #106...<br>[¡Noël y<br>Navidad!]{.noeltit .bigger}'
+title-slide-attributes: 
+  data-background-image: img/snoopsnow.jpg #https://cdn.wallpapersafari.com/13/15/1MkxOV.jpg #https://cdn.pixabay.com/photo/2022/12/14/17/04/christmas-7655857_640.jpg
+#  data-background-opacity: ".8"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: christmas.scss
+    logo: https://freedesignfile.com/image/thumb/30859/christmas-tree-clipart.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+engine: knitr                        ## not picking up inline codes
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+  - snow
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) {background-image="https://static.vecteezy.com/system/resources/previews/013/113/444/non_2x/winter-christmas-background-free-vector.jpg" background-opacity=.5}
+
+::: {layout="[[10,10],]"}
+::: first-column
++ Recap session #105
++ Today's topic(s):
+    + [¡Noël y Navidad!]{.noel .bigger}
++ Shared problem-solving
+
+::: {.callout-note}
+## Reminder {{< iconify twemoji:christmas-tree >}}{{< iconify fluent-emoji-flat:snowman >}}
+Fantastic [{{< iconify simple-icons:quarto >}} resource!! ](https://qmd4sci.njtierney.com/)
+:::
+
+:::
+
+::: second-column
+:::
+
+:::
+
+::: {.absolute style="top: 185px; right: -120px; width:550px;"}
+<a href="https://bookdown.org/jtkulas/11_25_25">
+  <img src="img/title105.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#105: {background-image="https://static.vecteezy.com/system/resources/previews/013/113/444/non_2x/winter-christmas-background-free-vector.jpg" background-opacity=.5}
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://japaclip.com/en/files/marker-black.png){.absolute width="140" top="255" right="105"}
+
+## [[Markdown]{.marker .bigger} {{< iconify skill-icons:markdown-dark size=2x >}}](https://quarto.org/docs/authoring/markdown-basics.html) {background-image="https://static.vecteezy.com/system/resources/previews/013/113/444/non_2x/winter-christmas-background-free-vector.jpg" background-opacity=.5}
+
+:::{.panel-tabset}
+
+### Playground(s)
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+Learn how {{< iconify logos:markdown >}} works in real--time:  
+
++ iframe [site](https://markdownlivepreview.com/) {{< iconify fontisto:arrow-swap >}}
++ Gruber's [dingus {{< iconify openmoji:dog >}}](https://daringfireball.net/projects/markdown/dingus) 
+
+:::
+
+:::
+
+::: {.absolute style="bottom: 20px; right: -70px;"}
+<iframe src="https://markdownlivepreview.com/" width=700px height=350px>
+</iframe>
+:::
+
+### AI Response Interpreters {{< iconify fluent-emoji-flat:robot >}}
+
+::: {.columns}
+
+::: {.column width="16%"}
+
+### 
+<br>
+Preview:  
+User X:  
+Clipboard: 
+<br>
+<br>
+
+Overall:*
+
+:::
+
+::: {.column width="8%"}
+:::
+
+::: {.column width="19%"}
+
+### {{< iconify devicon:jupyter-wordmark >}}[lab]{.juplab}
+
+{{< iconify streamline-ultimate-color:check >}}  
+{{< iconify streamline-ultimate-color:check >}}  
+{{< iconify streamline-ultimate-color:delete-2 >}}
+<br>
+<br>
+
+{{< iconify emojione-v1:santa-claus >}}{{< iconify emojione-v1:santa-claus >}}
+
+:::
+
+::: {.column width="19%"}
+
+### {{< iconify devicon:rstudio >}}
+
+{{< iconify streamline-ultimate-color:check >}}  
+{{< iconify streamline-ultimate-color:check >}}  
+{{< iconify streamline-ultimate-color:delete-2 >}}
+<br>
+<br>
+
+{{< iconify emojione-v1:santa-claus >}}{{< iconify emojione-v1:santa-claus >}}
+
+:::
+
+::: {.column width="19%"}
+
+### {{< iconify eos-icons:atom-electron style="color:black" >}}
+
+{{< iconify streamline-ultimate-color:check >}}  
+{{< iconify streamline-ultimate-color:delete-2 >}}  
+{{< iconify streamline-ultimate-color:delete-2 >}}
+<br>
+<br>
+
+{{< iconify emojione-v1:santa-claus >}}
+
+:::
+
+::: {.column width="19%"}
+
+### {{< iconify simple-icons:quarto style="color: #2c78da" >}}^{{< iconify simple-icons:asterisk flip=horizontal style="color: black" size=2xs >}}^
+
+{{< iconify streamline-ultimate-color:check >}}  
+{{< iconify streamline-ultimate-color:check >}}  
+{{< iconify streamline-ultimate-color:check >}}
+<br>
+<br>
+
+{{< iconify emojione-v1:santa-claus >}}{{< iconify emojione-v1:santa-claus >}}{{< iconify emojione-v1:santa-claus >}}{{< iconify emojione-v1:santa-claus >}}
+:::
+
+:::
+
+:::
+
+# Today... {background-image="https://static.vecteezy.com/system/resources/previews/013/113/444/non_2x/winter-christmas-background-free-vector.jpg" background-opacity=.5}
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzFxemZ0YTYzdXV0c2w2bnBhNm1jMGE5M3c3aGFyM2FoaXE5cmlmYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dv9RKxAm81QFa/giphy.gif)
+
+## [¡Noël y Navidad!]{.noel .bigger} {background-image="https://static.vecteezy.com/system/resources/previews/013/113/444/non_2x/winter-christmas-background-free-vector.jpg" background-opacity=.5}
+
+::: {.absolute style="bottom: 170px; right: 220px; width: 600px;"}
+<a href="https://bookdown.org/jtkulas/confetti/confetti.html#/title-slide">
+  <img src="img/snowing.JPG">
+</a>
+:::
+
+::: {.absolute style="bottom: 20px; right: -80px; width: 300px;" .tilt}
+<a href="https://realworlddatascience.net/applied-insights/tutorials/posts/2023/12/12/xmas-cards.html">
+  <img src="https://realworlddatascience.net/applied-insights/tutorials/posts/2023/12/12/images/s9.png">
+</a>
+:::
+
+
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: {background-image="https://static.vecteezy.com/system/resources/previews/013/113/444/non_2x/winter-christmas-background-free-vector.jpg" background-opacity=.5}
+```{r}
+sessionInfo()
+```

@@ -103,31 +103,39 @@ Currently running Quarto version 1.8.26
 
 ### [`{.columns}`]{.Smallest}
 
+::: {.columns}
+
+::: {.column width="50%"}
+
 ```{r}
 #| echo: true
 #| eval: false
----
-title: "Untitled"
-format: html
----
 
 ::: {.columns}                #<1>
 ::: {.column width="50%"}     #<2>
-Quarto enables you to weave together content and executable code into a finished document. To a learn more about Quarto see <https://quarto.org>.
+## First column 
+I would like to have some text here
 :::
 
 ::: {.column width="50%"}
-Whatever else you'd like here
+## Second column 
+...and even more content here
 :::                       #<2>
 :::                       #<3>
 
-  
-  
-#  
 ```
 1. opening fence {{< iconify maki:fence >}} [creating column container](https://quarto.org/docs/presentations/revealjs/#multiple-columns) 
 2. column specifications using `width` attributes
 3. closing fence {{< iconify maki:fence >}} for `.columns` container
+
+:::
+
+::: {.column width="50%"}
+:::
+
+:::
+
+![](img/layouts.JPG){.absolute right="-130" bottom="130" height="280"}
 
 ### [`{.grid}`]{.Smallest}
 
@@ -142,13 +150,12 @@ Whatever else you'd like here
 ::: {.grid}                 #<1>
 ::: {.g-col-6}
 ## First column 
-I would like to have text here
+I would like to have some text here
 :::
   
 ::: {.g-col-6}
 ## Second column 
-and here
-More text
+...and even more content here
 :::
 :::                        #<2>
 ```
@@ -183,14 +190,11 @@ More text
 
 ::: {layout="[50,50]"}      #<1>
 
-## Running Code
+## First column 
+I would like to have some text here
 
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-
-
-```{r}         
-1 + 1          
-```
+## Second column 
+...and even more content here
 
 :::
 ````
@@ -223,17 +227,14 @@ When you click the **Render** button a document will be generated that includes 
 ```{r}
 #| echo: true
 #| eval: false
-::: {layout-ncol=3}           #<1>
-- Apples
-- Oranges
-- Bananas
-- Grapes
-- Kiwis
-- Mangoes
+::: {layout-ncol=2}           #<1>
 
-A normal paragraph that will take up one entire column.
+## First column 
+I would like to have some text here
 
-code or other info here
+## Second column 
+...and even more content here
+
 :::                       #<2>
 ```
 1. open zee fence she too hot!! {{< iconify emojione-v1:hot-pepper >}}

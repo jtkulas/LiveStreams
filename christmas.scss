@@ -1,0 +1,158 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css?family=Dancing Script');
+@import url('https://fonts.googleapis.com/css?family=Fontdiner Swanky');
+@import url('https://fonts.googleapis.com/css?family=Permanent Marker');
+@import url('https://fonts.googleapis.com/css?family=Berkshire Swash');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/* Target ONLY the auto-generated title slide via its unique ID */
+#title-slide h1.title,
+#title-slide h2.subtitle {
+  color: #a92777 !important;
+  font-weight: bold !important;
+  font-family: 'Fontdiner Swanky', cursive !important;
+  text-shadow: 5px 5px 0px #222 !important;
+}
+
+#title-slide .quarto-title-author-name,
+#title-slide .quarto-title-affiliation,
+#title-slide .quarto-title-date {
+  color: white !important;
+  font-family: 'Dancing Script', cursive !important;
+  text-shadow: 3px 3px 0px #222 !important;  /* Lighter shadow for smaller text */
+}
+
+$presentation-title-slide-text-align: right;
+
+// fonts
+$font-family-sans-serif: "Palatino Linotype", "Book Antiqua", Palatino,
+  FreeSerif, serif !default;
+$presentation-line-height: 1.4;
+
+.quarto-title-author-name {
+  font-size: 65px;
+  color: white;     /*-- #ccaadd white --*/
+  font-weight: bold;
+  font-family: 'Dancing Script';
+  text-shadow: 
+    4px 4px 0px black,
+    -1px -1px 0px black;
+}
+
+.reveal .slide-logo {       /*-- use for small image renderings --*/
+  max-height: unset !important;
+  height: 80px !important;
+}
+
+.centered {
+  text-align: center; /*-- justify --*/
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+// headings
+$presentation-heading-font: "Berkshire Swash", "Book Antiqua", Palatino,
+  FreeSerif, serif !default;             
+$presentation-heading-color: #40826D !default;
+$presentation-h1-text-shadow: 5px 5px #4CBB17;
+$presentation-heading-text-shadow: 3px 3px #4CBB17;
+
+/*-- scss:rules --*/
+
+.titleauthor {
+  font-size: 65px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Dancing Script';
+  text-shadow: 
+    2px 2px 2px black,
+    -3px -3px 3px black;
+}
+
+.titlestyle {
+  color: 	#a92777 !important;
+  font-weight: bold !important;
+  font-family: 'Fontdiner Swanky' !important;
+  text-shadow: 
+    5px 5px 0px #222 !important;
+}
+
+// tilts, mirrors, etc 
+
+.foreground-image {
+  z-index: 1000 !important;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.mirror {
+  transform: rotateY(180deg);
+}
+
+.tilt {
+  rotate: 20deg;
+}
+
+.tilt2 {
+  rotate: -20deg;
+}
+
+.smaller {
+  font-size: .9em;
+}
+
+.Smaller {
+  font-size: .8em;
+}
+
+.Smallest {
+  font-size: .6em;
+}
+
+.bigger {
+  font-size: 1.4em;
+}
+
+.Bigger {
+  font-size: 2em;
+}
+
+// fonts
+
+.juplab {
+  font-family: Roboto;
+  color: #f37821;
+  text-shadow:
+   -0px -0px 0px white,
+   0px 0px 0px black !important;
+}
+
+.marker {
+  font-family: Permanent Marker; 
+  font-weight: normal !important;
+  color: #242938;
+  text-shadow:
+   -0px -0px 0px white,
+   0px 0px 0px black !important;
+}
+
+.noeltit {
+  font-family: Berkshire Swash;  
+  color: #4CBB17;
+  font-weight: normal !important;
+  text-shadow:
+   -2px -2px 4px #66ff00,
+    4px 4px 0px black !important;
+}
+
+.noel {
+  font-family: Berkshire Swash;  
+  color: #4CBB17;
+  font-weight: normal !important;
+  text-shadow:
+   -1px -1px 0px #66ff00,
+    2px 2px 0px black !important;
+}
