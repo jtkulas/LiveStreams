@@ -30,7 +30,7 @@ filters:
 ::: first-column
 + Recap session #105
 + Today's topic(s):
-    + [¡Noël y Navidad!]{.noel .bigger}
+    + [[¡Noël y Navidad!]{.noel .bigger}](https://bookdown.org/jtkulas/confetti/confetti.html#/title-slide)
 + Shared problem-solving
 
 ::: {.callout-note}
@@ -59,7 +59,7 @@ Fantastic [{{< iconify simple-icons:quarto >}} resource!! ](https://qmd4sci.njti
 
 ![](https://japaclip.com/en/files/marker-black.png){.absolute width="140" top="255" right="105"}
 
-## [[Markdown]{.marker .bigger} {{< iconify skill-icons:markdown-dark size=2x >}}](https://quarto.org/docs/authoring/markdown-basics.html) {background-image="https://static.vecteezy.com/system/resources/previews/013/113/444/non_2x/winter-christmas-background-free-vector.jpg" background-opacity=.5}
+## [[Markdown]{.marker .bigger} {{< iconify skill-icons:markdown-dark size=2x >}}](https://quarto.org/docs/authoring/markdown-basics.html) {background-image="https://static.vecteezy.com/system/resources/previews/013/113/444/non_2x/winter-christmas-background-free-vector.jpg" background-opacity=.4}
 
 :::{.panel-tabset}
 
@@ -71,7 +71,7 @@ Fantastic [{{< iconify simple-icons:quarto >}} resource!! ](https://qmd4sci.njti
 
 Learn how {{< iconify logos:markdown >}} works in real--time:  
 
-+ iframe [site](https://markdownlivepreview.com/) {{< iconify fontisto:arrow-swap >}}
++ iframe [full site](https://markdownlivepreview.com/) &nbsp;&nbsp;{{< iconify fontisto:arrow-swap >}}
 + Gruber's [dingus {{< iconify openmoji:dog >}}](https://daringfireball.net/projects/markdown/dingus) 
 
 :::
@@ -83,7 +83,7 @@ Learn how {{< iconify logos:markdown >}} works in real--time:
 </iframe>
 :::
 
-### AI Response Interpreters {{< iconify fluent-emoji-flat:robot >}}
+### AI Response Interpreters (`.md`)
 
 ::: {.columns}
 
@@ -109,12 +109,12 @@ Overall:*
 ### {{< iconify devicon:jupyter-wordmark >}}[lab]{.juplab}
 
 {{< iconify streamline-ultimate-color:check >}}  
-{{< iconify streamline-ultimate-color:check >}}  
+{{< iconify streamline-ultimate-color:check >}}{{< iconify streamline-emojis:rocket >}}  
 {{< iconify streamline-ultimate-color:delete-2 >}}
 <br>
 <br>
 
-{{< iconify emojione-v1:santa-claus >}}{{< iconify emojione-v1:santa-claus >}}
+{{< iconify emojione-v1:santa-claus >}}{{< iconify emojione-v1:santa-claus >}}{{< iconify emojione-v1:santa-claus >}}
 
 :::
 
@@ -169,15 +169,33 @@ Overall:*
 
 ## [¡Noël y Navidad!]{.noel .bigger} {background-image="https://static.vecteezy.com/system/resources/previews/013/113/444/non_2x/winter-christmas-background-free-vector.jpg" background-opacity=.5}
 
-::: {.absolute style="bottom: 170px; right: 220px; width: 600px;"}
+::: {.absolute style="bottom: 170px; right: 200px; width: 650px;"}
 <a href="https://bookdown.org/jtkulas/confetti/confetti.html#/title-slide">
   <img src="img/snowing.JPG">
 </a>
 :::
 
 ::: {.absolute style="bottom: 20px; right: -80px; width: 300px;" .tilt}
+<a href="https://github.com/R-CoderDotCom/christmas-tree">
+  <img src="https://user-images.githubusercontent.com/67192157/103097081-61d48d80-4606-11eb-8f97-49657bf3b361.png">
+</a>
+:::
+
+::: {.absolute style="bottom: 0px; left: -70px; width: 300px;" .tilt2}
 <a href="https://realworlddatascience.net/applied-insights/tutorials/posts/2023/12/12/xmas-cards.html">
   <img src="https://realworlddatascience.net/applied-insights/tutorials/posts/2023/12/12/images/s9.png">
+</a>
+:::
+
+::: {.absolute style="top: 0px; right: -60px; width: 350px;"}
+<a href="https://cran.r-project.org/web/packages/christmas/christmas.pdf">
+  <img src="img/pigeon.JPG">
+</a>
+:::
+
+::: {.absolute style="top: 140px; left: -160px; width: 350px;"}
+<a href="https://jnolis.com/blog/introducing_ggirl/">
+  <img src="https://img.freepik.com/premium-vector/christmas-mail-postcard-hand-drawn-illustration_514781-2740.jpg?semt=ais_hybrid&w=740&q=80">
 </a>
 :::
 
