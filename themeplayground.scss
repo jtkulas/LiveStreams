@@ -24,8 +24,9 @@
 @import url('https://fonts.googleapis.com/css?family=Exo');
 @import url('https://fonts.googleapis.com/css?family=Permanent Marker');
 @import url('https://fonts.googleapis.com/css?family=Berkshire Swash');
+@import url('https://fonts.googleapis.com/css?family=Google Sans Flex');
 
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 
 // fonts
 $font-family-sans-serif: "Palatino Linotype", "Book Antiqua", Palatino,
@@ -44,7 +45,7 @@ $presentation-line-height: 1.4;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
-  height: 80px !important;
+  height: 60px !important;
 }
 
 .centered {
@@ -421,4 +422,19 @@ $code-block-border-color: #a92777;
   text-shadow:
    -1px -1px 0px #40826D,
     2px 2px 0px black !important;
+}
+
+.observable {
+  font-family: "Google Sans Flex";  
+  color: #000000;
+  font-weight: normal !important;
+  text-shadow:
+   -2px -2px 4px #f7e018,
+    2px 2px 4px #f7e018 !important;
+}
+
+.observable2 {
+  font-family: "Google Sans Flex";  
+  color: #000000;
+  font-weight: normal !important;
 }

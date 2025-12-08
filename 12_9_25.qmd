@@ -1,0 +1,246 @@
+---
+title: "R is for <br>Authoring!!" 
+author: 'OOH Session #107...<br>[Observable]{.observable .bigger} [{{< iconify vscode-icons:file-type-js-official >}}]{.bigger}'
+title-slide-attributes: 
+  data-background-image: https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2JxODN3YmJ3Mm5vZms2ZjBqMHV2MWl6MG56N2FjbW01Zjd1Z2dkOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26n6WywJyh39n1pBu/giphy.gif 
+#  data-background-opacity: ".8"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: themeplayground.scss
+    logo: https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1024px-Unofficial_JavaScript_logo_2.svg.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+engine: knitr                        ## not picking up inline codes
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+execute: 
+  eval: true              ## only 12/2 for fenced code (add after creating)
+  freeze: false
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {layout="[[10,10],]"}
+::: first-column
++ Recap session #106
++ Today's topic(s):
+    + [[Observable]{.observable2 .bigger} [{{< iconify vscode-icons:file-type-js-official >}}]{.bigger}](https://quarto.org/docs/interactive/ojs/)
++ Shared problem-solving
+
+::: {.callout-note}
+## Reminder 
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/)
+:::
+
+:::
+
+::: second-column
+:::
+
+:::
+
+::: {.absolute style="top: 185px; right: -120px; width:550px;"}
+<a href="https://bookdown.org/jtkulas/12_2_25">
+  <img src="img/title106.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#106: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://i.etsystatic.com/18931344/r/il/605e20/2917334829/il_1080xN.2917334829_cprk.jpg){.absolute width="90" top="265" right="130"}
+
+## [¡Noël y Navidad!]{.noel .bigger} 
+
+:::{.panel-tabset}
+
+### Traditional approaches
+
+[1. [`christmas` package:](https://cran.r-project.org/web/packages/christmas/christmas.pdf)]{.fragment .semi-fade-out fragment-index=0}  
+[2. [base {{< iconify devicon:r >}} tree:](https://github.com/R-CoderDotCom/christmas-tree)]{.fragment .fade-in-then-semi-out fragment-index=1}  
+[3. [`ggplot` layering:](https://realworlddatascience.net/applied-insights/tutorials/posts/2023/12/12/xmas-cards.html)]{.fragment .fade-in-then-semi-out fragment-index=2}  
+[4. mailing [via postcard:](https://jnolis.com/blog/introducing_ggirl/)]{.fragment .fade-in-then-semi-out fragment-index=3}
+
+[![](img/pigeon.JPG){.absolute right="0" bottom="30" height="400"}]{.fragment .fade-out fragment-index=1}
+[![](https://user-images.githubusercontent.com/67192157/103097081-61d48d80-4606-11eb-8f97-49657bf3b361.png){.absolute right="120" bottom="30" height="400"}]{.fragment .fade-in-then-out fragment-index=1}
+[![](https://realworlddatascience.net/applied-insights/tutorials/posts/2023/12/12/images/s9.png){.absolute right="120" bottom="30" height="400"}]{.fragment .fade-in-then-out fragment-index=2}
+[![](https://img.freepik.com/premium-vector/christmas-mail-postcard-hand-drawn-illustration_514781-2740.jpg?semt=ais_hybrid&w=740&q=80){.absolute right="-50" bottom="30" height="400"}]{.fragment .fade-in-then-out fragment-index=3}
+
+![](https://cdn.inspireuplift.com/uploads/images/seller_products/1680877929_2.png){.absolute left="80" bottom="-50" height="300"}
+
+### {{< iconify material-icon-theme:quarto >}} card
+
+:::{.columns}
+
+:::{.column width="50%"}
+### Final Code:
+
+````{r}
+#| echo: true
+#| eval: false
+---
+title: "[Merry Christmas!!]{.swash}"
+author: "[...and best wishes for a wonderful 2026!!!]{.dance}"
+title-slide-attributes: 
+  data-background-image: https://i.imgur.com/vk1ejPi.jpg
+  data-background-opacity: ".8"
+format: 
+  revealjs:
+    mouse-wheel: true
+engine: knitr
+filters:
+  - snow
+---
+
+## {background-image="https://static.vecteezy.com/system/resources/previews/013/113/444/non_2x/winter-christmas-background-free-vector.jpg" background-opacity=.5}
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzFxemZ0YTYzdXV0c2w2bnBhNm1jMGE5M3c3aGFyM2FoaXE5cmlmYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dv9RKxAm81QFa/giphy.gif){style="float: right; margin-left: 1em; height: 280px;"}
+
+::: {.dm}
+
+I spent a lot of discretionary time this year [leveling--up my {{< iconify material-icon-theme:quarto >}}](https://www.youtube.com/live/ImQIftE57Iw?si=rT9bUMmC_enok85m&t=2013) game, however, I did set aside enough time to slay many mööses. There were antlers everywhere. It was utter mööseageddon!! 
+
+While sifting thröugh the carnage, I had time to reflect that I'm grateful for friends and family & surprisingly disappointed that 3i Atlas is apparently more interested in Jupyter than Earth... 
+
+I sincerely hope the new year brings you and your family preposterously overflowing levels of health and happiness!!
+
+[-- John-o]{style="float: right; margin-left: 1em;"}
+
+:::
+
+```{scss}                 
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css?family=Berkshire Swash');
+@import url('https://fonts.googleapis.com/css?family=Dancing Script');
+@import url('https://fonts.googleapis.com/css?family=Caveat Brush');
+
+#title-slide {
+  text-align: left;  // center, left, right
+}
+
+.swash{
+  font-family: "Berkshire Swash";
+  color: #0DAC50;
+  text-shadow: 
+    2px 2px 0px #355E3B,
+    -2px -2px 0px #355E3B;
+}
+
+.dance{
+  font-family: "Dancing Script";
+  color: black;
+  font-size: 1.5em;
+}
+
+.dm{
+  font-family: Caveat Brush;
+  font-size: 1.1em;
+}
+
+```               
+````
+
+:::
+
+:::{.column width="50%"}
+### [Published Card:](http://bookdown.org/jtkulas/christmas2025/)
+:::
+
+:::
+
+::: {.absolute style="bottom: -15px; right: -40px; width:550px;"}
+<iframe src="http://bookdown.org/jtkulas/christmas2025/" width=700px height=350px>
+</iframe>
+:::
+
+:::
+
+![](https://cdn.inspireuplift.com/uploads/images/seller_products/30041/1702434974_27.png){.absolute right="-200" top="-160" height="500"}
+
+# Today... 
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXZtYjVkZGZncnpqb3R6MzU5ZTdsaGowOGFla2psZnVyeW02cnY0aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26FfiGiCXx4Op4GI0/giphy.gif)
+
+```{ojs}
+ // This cell forces the runtime to load before anything else
+ {}
+```
+
+## [[Observable]{.observable2 .bigger} [{{< iconify vscode-icons:file-type-js-official >}}]{.bigger}](https://quarto.org/docs/interactive/ojs/) 
+
+![](https://images.vexels.com/media/users/3/206934/isolated/preview/df0470329fc3a21d8b527309586a27e8-binoculars-colorful-icon-stroke.png){.absolute top="-100" right="-120"}
+
+```{ojs}
+viewof freq = Inputs.range([0.5, 15], {value: 5, step: 0.05, label: "Frequency"})
+
+{
+  const width = 900;
+  const height = 460;
+
+  const canvas = html`<canvas width=${width} height=${height}
+    style="width:100%; max-width:960px; height:auto; background:#0f172a; border-radius:12px; box-shadow:0 20px 40px rgba(0,0,0,0.4); display:block; margin:2rem auto;"></canvas>`;
+  const ctx = canvas.getContext("2d");
+
+  let t = 0;
+  function animate() {
+    ctx.fillStyle = "rgba(15, 23, 42, 0.15)";
+    ctx.fillRect(0, 0, width, height);
+
+    // Main wave
+    ctx.strokeStyle = "#c084fc";
+    ctx.lineWidth = 5;
+    ctx.beginPath();
+    for (let i = 0; i <= 600; i++) {
+      const x = (i / 600) * width;
+      const y = height / 2
+        + Math.sin(x / 100 * freq + t) * 90
+        + Math.sin(x / 60 * freq * 1.7 - t * 0.8) * 50;
+      i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+
+    // Glowing tracer dots
+    for (let i = 0; i < 15; i++) {
+      const x = width * (i / 14);
+      const y = height / 2
+        + Math.sin(x / 100 * freq + t) * 90
+        + Math.sin(x / 60 * freq * 1.7 - t * 0.8) * 50;
+
+      ctx.fillStyle = "#fde047";
+      ctx.beginPath();
+      ctx.arc(x, y, 10, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    t += 0.04;
+    requestAnimationFrame(animate);
+  }
+  animate();
+
+  // Title that updates live
+  html`<div style="text-align:center; margin:1.5rem 0 0.5rem; font-size:2.5rem; color:#e9d5ff; font-weight:600;">
+    Frequency = ${freq.toFixed(2)}
+  </div>`;
+
+  return canvas;
+}
+```
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+#| eval: true
+sessionInfo()
+```
+

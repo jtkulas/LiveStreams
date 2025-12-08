@@ -1,0 +1,62 @@
+---
+title: "[Merry Christmas!!]{.swash}"
+author: "[...and best wishes for a wonderful 2026!!!]{.dance}"
+title-slide-attributes: 
+  data-background-image: https://i.imgur.com/vk1ejPi.jpg
+  data-background-opacity: ".8"
+format: 
+  revealjs:
+    mouse-wheel: true
+engine: knitr
+filters:
+  - snow
+---
+
+## {background-image="https://static.vecteezy.com/system/resources/previews/013/113/444/non_2x/winter-christmas-background-free-vector.jpg" background-opacity=.5}
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzFxemZ0YTYzdXV0c2w2bnBhNm1jMGE5M3c3aGFyM2FoaXE5cmlmYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dv9RKxAm81QFa/giphy.gif){style="float: right; margin-left: 1em; height: 280px;"}
+
+::: {.dm}
+
+I spent a lot of discretionary time this year [leveling--up my {{< iconify material-icon-theme:quarto >}}](https://www.youtube.com/live/ImQIftE57Iw?si=9jRZOJTwEJCffMxP&t=2513) game, however, I did set aside enough time to slay many mööses. There were antlers everywhere. It was utter mööseageddon!! 
+
+While sifting thröugh the carnage, I had time to reflect that I'm grateful for friends and family & surprisingly disappointed that 3i Atlas is apparently more interested in Jupyter than Earth... 
+
+I sincerely hope the new year brings you and your family preposterously overflowing levels of health and happiness!!
+
+[-- John-o]{style="float: right; margin-left: 1em;"}
+
+:::
+
+```{scss}
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css?family=Berkshire Swash');
+@import url('https://fonts.googleapis.com/css?family=Dancing Script');
+@import url('https://fonts.googleapis.com/css?family=Caveat Brush');
+
+#title-slide {
+  text-align: left;  // center, left, right
+}
+
+.swash{
+  font-family: "Berkshire Swash";
+  color: #0DAC50;
+  text-shadow: 
+    2px 2px 0px #355E3B,
+    -2px -2px 0px #355E3B;
+}
+
+.dance{
+  font-family: "Dancing Script";
+  color: black;
+  font-size: 1.5em;
+}
+
+.dm{
+  font-family: Caveat Brush;
+  font-size: 1.1em;
+}
+
+```
+
