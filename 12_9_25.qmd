@@ -99,8 +99,8 @@ format:
   revealjs:
     mouse-wheel: true
 engine: knitr
-filters:
-  - snow
+#filters:       
+#  - snow       
 ---
 
 ## {background-image="https://static.vecteezy.com/system/resources/previews/013/113/444/non_2x/winter-christmas-background-free-vector.jpg" background-opacity=.5}
@@ -156,13 +156,12 @@ I sincerely hope the new year brings you and your family preposterously overflow
 
 :::{.column width="50%"}
 ### [Published Card:](http://bookdown.org/jtkulas/christmas2025/)
-:::
 
-:::
-
-::: {.absolute style="bottom: -15px; right: -40px; width:550px;"}
-<iframe src="http://bookdown.org/jtkulas/christmas2025/" width=700px height=350px>
+<iframe src="https://bookdown.org/jtkulas/christmas2025" width=700px height=350px>
 </iframe>
+
+:::
+
 :::
 
 :::
@@ -172,11 +171,6 @@ I sincerely hope the new year brings you and your family preposterously overflow
 # Today... 
 
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXZtYjVkZGZncnpqb3R6MzU5ZTdsaGowOGFla2psZnVyeW02cnY0aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26FfiGiCXx4Op4GI0/giphy.gif)
-
-```{ojs}
- // This cell forces the runtime to load before anything else
- {}
-```
 
 ## [[Observable]{.observable2 .bigger} [{{< iconify vscode-icons:file-type-js-official >}}]{.bigger}](https://quarto.org/docs/interactive/ojs/) 
 
