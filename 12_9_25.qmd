@@ -172,9 +172,15 @@ I sincerely hope the new year brings you and your family preposterously overflow
 
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXZtYjVkZGZncnpqb3R6MzU5ZTdsaGowOGFla2psZnVyeW02cnY0aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26FfiGiCXx4Op4GI0/giphy.gif)
 
-## [[Observable]{.observable2 .bigger} [{{< iconify vscode-icons:file-type-js-official >}}]{.bigger}](https://quarto.org/docs/interactive/ojs/) 
+## [[Observable]{.observable2 .bigger} [{{< iconify vscode-icons:file-type-js-official >}}]{.bigger}](https://observablehq.com/@observablehq/learn-javascript-introduction) 
 
-![](https://images.vexels.com/media/users/3/206934/isolated/preview/df0470329fc3a21d8b527309586a27e8-binoculars-colorful-icon-stroke.png){.absolute top="-100" right="-120"}
+::: {.absolute style="top: -100px; right: -180px;" .tilt}
+<a href="https://pudding.cool/process/responsive-scrollytelling/">
+  <img src="https://images.vexels.com/media/users/3/206934/isolated/preview/df0470329fc3a21d8b527309586a27e8-binoculars-colorful-icon-stroke.png">
+</a>
+:::
+
+![](){.absolute top="-100" right="-120"}
 
 ```{ojs}
 viewof freq = Inputs.range([0.5, 15], {value: 5, step: 0.05, label: "Frequency"})

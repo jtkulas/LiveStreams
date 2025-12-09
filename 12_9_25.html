@@ -349,62 +349,65 @@ OOH Session #107…<br><span class="observable bigger">Observable</span> <span c
 
 <img data-src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXZtYjVkZGZncnpqb3R6MzU5ZTdsaGowOGFla2psZnVyeW02cnY0aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26FfiGiCXx4Op4GI0/giphy.gif" class="r-stretch"></section>
 <section id="observable" class="slide level2">
-<h2><a href="https://quarto.org/docs/interactive/ojs/"><span class="observable2 bigger">Observable</span> <span class="bigger"><iconify-icon role="img" inline="" icon="vscode-icons:file-type-js-official" aria-label="Icon file-type-js-official from vscode-icons Iconify.design set." title="Icon file-type-js-official from vscode-icons Iconify.design set."></iconify-icon></span></a></h2>
-<p><img data-src="https://images.vexels.com/media/users/3/206934/isolated/preview/df0470329fc3a21d8b527309586a27e8-binoculars-colorful-icon-stroke.png" class="absolute" style="top: -100px; right: -120px; "></p>
+<h2><a href="https://observablehq.com/@observablehq/learn-javascript-introduction"><span class="observable2 bigger">Observable</span> <span class="bigger"><iconify-icon role="img" inline="" icon="vscode-icons:file-type-js-official" aria-label="Icon file-type-js-official from vscode-icons Iconify.design set." title="Icon file-type-js-official from vscode-icons Iconify.design set."></iconify-icon></span></a></h2>
+<div class="absolute tilt" style="top: -100px; right: -180px;">
+<p><a href="https://pudding.cool/process/responsive-scrollytelling/"> <img src="https://images.vexels.com/media/users/3/206934/isolated/preview/df0470329fc3a21d8b527309586a27e8-binoculars-colorful-icon-stroke.png"> </a></p>
+</div>
+<p><img data-src=".png" class="absolute" style="top: -100px; right: -120px; "></p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="180" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 179;"><span id="cb2-180"><a href=""></a>viewof freq <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="fl">0.5</span><span class="op">,</span> <span class="dv">15</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.05</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Frequency"</span>})</span>
-<span id="cb2-181"><a href=""></a></span>
-<span id="cb2-182"><a href=""></a>{</span>
-<span id="cb2-183"><a href=""></a>  <span class="kw">const</span> width <span class="op">=</span> <span class="dv">900</span><span class="op">;</span></span>
-<span id="cb2-184"><a href=""></a>  <span class="kw">const</span> height <span class="op">=</span> <span class="dv">460</span><span class="op">;</span></span>
-<span id="cb2-185"><a href=""></a></span>
-<span id="cb2-186"><a href=""></a>  <span class="kw">const</span> canvas <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;canvas width=</span><span class="sc">${</span>width<span class="sc">}</span><span class="vs"> height=</span><span class="sc">${</span>height<span class="sc">}</span></span>
-<span id="cb2-187"><a href=""></a><span class="vs">    style="width:100%; max-width:960px; height:auto; background:#0f172a; border-radius:12px; box-shadow:0 20px 40px rgba(0,0,0,0.4); display:block; margin:2rem auto;"&gt;&lt;/canvas&gt;`</span><span class="op">;</span></span>
-<span id="cb2-188"><a href=""></a>  <span class="kw">const</span> ctx <span class="op">=</span> canvas<span class="op">.</span><span class="fu">getContext</span>(<span class="st">"2d"</span>)<span class="op">;</span></span>
-<span id="cb2-189"><a href=""></a></span>
-<span id="cb2-190"><a href=""></a>  <span class="kw">let</span> t <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb2-191"><a href=""></a>  <span class="kw">function</span> <span class="fu">animate</span>() {</span>
-<span id="cb2-192"><a href=""></a>    ctx<span class="op">.</span><span class="at">fillStyle</span> <span class="op">=</span> <span class="st">"rgba(15, 23, 42, 0.15)"</span><span class="op">;</span></span>
-<span id="cb2-193"><a href=""></a>    ctx<span class="op">.</span><span class="fu">fillRect</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> width<span class="op">,</span> height)<span class="op">;</span></span>
-<span id="cb2-194"><a href=""></a></span>
-<span id="cb2-195"><a href=""></a>    <span class="co">// Main wave</span></span>
-<span id="cb2-196"><a href=""></a>    ctx<span class="op">.</span><span class="at">strokeStyle</span> <span class="op">=</span> <span class="st">"#c084fc"</span><span class="op">;</span></span>
-<span id="cb2-197"><a href=""></a>    ctx<span class="op">.</span><span class="at">lineWidth</span> <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span>
-<span id="cb2-198"><a href=""></a>    ctx<span class="op">.</span><span class="fu">beginPath</span>()<span class="op">;</span></span>
-<span id="cb2-199"><a href=""></a>    <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;=</span> <span class="dv">600</span><span class="op">;</span> i<span class="op">++</span>) {</span>
-<span id="cb2-200"><a href=""></a>      <span class="kw">const</span> x <span class="op">=</span> (i <span class="op">/</span> <span class="dv">600</span>) <span class="op">*</span> width<span class="op">;</span></span>
-<span id="cb2-201"><a href=""></a>      <span class="kw">const</span> y <span class="op">=</span> height <span class="op">/</span> <span class="dv">2</span></span>
-<span id="cb2-202"><a href=""></a>        <span class="op">+</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sin</span>(x <span class="op">/</span> <span class="dv">100</span> <span class="op">*</span> freq <span class="op">+</span> t) <span class="op">*</span> <span class="dv">90</span></span>
-<span id="cb2-203"><a href=""></a>        <span class="op">+</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sin</span>(x <span class="op">/</span> <span class="dv">60</span> <span class="op">*</span> freq <span class="op">*</span> <span class="fl">1.7</span> <span class="op">-</span> t <span class="op">*</span> <span class="fl">0.8</span>) <span class="op">*</span> <span class="dv">50</span><span class="op">;</span></span>
-<span id="cb2-204"><a href=""></a>      i <span class="op">===</span> <span class="dv">0</span> <span class="op">?</span> ctx<span class="op">.</span><span class="fu">moveTo</span>(x<span class="op">,</span> y) <span class="op">:</span> ctx<span class="op">.</span><span class="fu">lineTo</span>(x<span class="op">,</span> y)<span class="op">;</span></span>
-<span id="cb2-205"><a href=""></a>    }</span>
-<span id="cb2-206"><a href=""></a>    ctx<span class="op">.</span><span class="fu">stroke</span>()<span class="op">;</span></span>
-<span id="cb2-207"><a href=""></a></span>
-<span id="cb2-208"><a href=""></a>    <span class="co">// Glowing tracer dots</span></span>
-<span id="cb2-209"><a href=""></a>    <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="dv">15</span><span class="op">;</span> i<span class="op">++</span>) {</span>
-<span id="cb2-210"><a href=""></a>      <span class="kw">const</span> x <span class="op">=</span> width <span class="op">*</span> (i <span class="op">/</span> <span class="dv">14</span>)<span class="op">;</span></span>
-<span id="cb2-211"><a href=""></a>      <span class="kw">const</span> y <span class="op">=</span> height <span class="op">/</span> <span class="dv">2</span></span>
-<span id="cb2-212"><a href=""></a>        <span class="op">+</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sin</span>(x <span class="op">/</span> <span class="dv">100</span> <span class="op">*</span> freq <span class="op">+</span> t) <span class="op">*</span> <span class="dv">90</span></span>
-<span id="cb2-213"><a href=""></a>        <span class="op">+</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sin</span>(x <span class="op">/</span> <span class="dv">60</span> <span class="op">*</span> freq <span class="op">*</span> <span class="fl">1.7</span> <span class="op">-</span> t <span class="op">*</span> <span class="fl">0.8</span>) <span class="op">*</span> <span class="dv">50</span><span class="op">;</span></span>
-<span id="cb2-214"><a href=""></a></span>
-<span id="cb2-215"><a href=""></a>      ctx<span class="op">.</span><span class="at">fillStyle</span> <span class="op">=</span> <span class="st">"#fde047"</span><span class="op">;</span></span>
-<span id="cb2-216"><a href=""></a>      ctx<span class="op">.</span><span class="fu">beginPath</span>()<span class="op">;</span></span>
-<span id="cb2-217"><a href=""></a>      ctx<span class="op">.</span><span class="fu">arc</span>(x<span class="op">,</span> y<span class="op">,</span> <span class="dv">10</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="bu">Math</span><span class="op">.</span><span class="cn">PI</span> <span class="op">*</span> <span class="dv">2</span>)<span class="op">;</span></span>
-<span id="cb2-218"><a href=""></a>      ctx<span class="op">.</span><span class="fu">fill</span>()<span class="op">;</span></span>
-<span id="cb2-219"><a href=""></a>    }</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="186" data-source-offset="-0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 185;"><span id="cb2-186"><a href=""></a>viewof freq <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">range</span>([<span class="fl">0.5</span><span class="op">,</span> <span class="dv">15</span>]<span class="op">,</span> {<span class="dt">value</span><span class="op">:</span> <span class="dv">5</span><span class="op">,</span> <span class="dt">step</span><span class="op">:</span> <span class="fl">0.05</span><span class="op">,</span> <span class="dt">label</span><span class="op">:</span> <span class="st">"Frequency"</span>})</span>
+<span id="cb2-187"><a href=""></a></span>
+<span id="cb2-188"><a href=""></a>{</span>
+<span id="cb2-189"><a href=""></a>  <span class="kw">const</span> width <span class="op">=</span> <span class="dv">900</span><span class="op">;</span></span>
+<span id="cb2-190"><a href=""></a>  <span class="kw">const</span> height <span class="op">=</span> <span class="dv">460</span><span class="op">;</span></span>
+<span id="cb2-191"><a href=""></a></span>
+<span id="cb2-192"><a href=""></a>  <span class="kw">const</span> canvas <span class="op">=</span> <span class="fu">html</span><span class="vs">`&lt;canvas width=</span><span class="sc">${</span>width<span class="sc">}</span><span class="vs"> height=</span><span class="sc">${</span>height<span class="sc">}</span></span>
+<span id="cb2-193"><a href=""></a><span class="vs">    style="width:100%; max-width:960px; height:auto; background:#0f172a; border-radius:12px; box-shadow:0 20px 40px rgba(0,0,0,0.4); display:block; margin:2rem auto;"&gt;&lt;/canvas&gt;`</span><span class="op">;</span></span>
+<span id="cb2-194"><a href=""></a>  <span class="kw">const</span> ctx <span class="op">=</span> canvas<span class="op">.</span><span class="fu">getContext</span>(<span class="st">"2d"</span>)<span class="op">;</span></span>
+<span id="cb2-195"><a href=""></a></span>
+<span id="cb2-196"><a href=""></a>  <span class="kw">let</span> t <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb2-197"><a href=""></a>  <span class="kw">function</span> <span class="fu">animate</span>() {</span>
+<span id="cb2-198"><a href=""></a>    ctx<span class="op">.</span><span class="at">fillStyle</span> <span class="op">=</span> <span class="st">"rgba(15, 23, 42, 0.15)"</span><span class="op">;</span></span>
+<span id="cb2-199"><a href=""></a>    ctx<span class="op">.</span><span class="fu">fillRect</span>(<span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> width<span class="op">,</span> height)<span class="op">;</span></span>
+<span id="cb2-200"><a href=""></a></span>
+<span id="cb2-201"><a href=""></a>    <span class="co">// Main wave</span></span>
+<span id="cb2-202"><a href=""></a>    ctx<span class="op">.</span><span class="at">strokeStyle</span> <span class="op">=</span> <span class="st">"#c084fc"</span><span class="op">;</span></span>
+<span id="cb2-203"><a href=""></a>    ctx<span class="op">.</span><span class="at">lineWidth</span> <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span>
+<span id="cb2-204"><a href=""></a>    ctx<span class="op">.</span><span class="fu">beginPath</span>()<span class="op">;</span></span>
+<span id="cb2-205"><a href=""></a>    <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;=</span> <span class="dv">600</span><span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb2-206"><a href=""></a>      <span class="kw">const</span> x <span class="op">=</span> (i <span class="op">/</span> <span class="dv">600</span>) <span class="op">*</span> width<span class="op">;</span></span>
+<span id="cb2-207"><a href=""></a>      <span class="kw">const</span> y <span class="op">=</span> height <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb2-208"><a href=""></a>        <span class="op">+</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sin</span>(x <span class="op">/</span> <span class="dv">100</span> <span class="op">*</span> freq <span class="op">+</span> t) <span class="op">*</span> <span class="dv">90</span></span>
+<span id="cb2-209"><a href=""></a>        <span class="op">+</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sin</span>(x <span class="op">/</span> <span class="dv">60</span> <span class="op">*</span> freq <span class="op">*</span> <span class="fl">1.7</span> <span class="op">-</span> t <span class="op">*</span> <span class="fl">0.8</span>) <span class="op">*</span> <span class="dv">50</span><span class="op">;</span></span>
+<span id="cb2-210"><a href=""></a>      i <span class="op">===</span> <span class="dv">0</span> <span class="op">?</span> ctx<span class="op">.</span><span class="fu">moveTo</span>(x<span class="op">,</span> y) <span class="op">:</span> ctx<span class="op">.</span><span class="fu">lineTo</span>(x<span class="op">,</span> y)<span class="op">;</span></span>
+<span id="cb2-211"><a href=""></a>    }</span>
+<span id="cb2-212"><a href=""></a>    ctx<span class="op">.</span><span class="fu">stroke</span>()<span class="op">;</span></span>
+<span id="cb2-213"><a href=""></a></span>
+<span id="cb2-214"><a href=""></a>    <span class="co">// Glowing tracer dots</span></span>
+<span id="cb2-215"><a href=""></a>    <span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="dv">15</span><span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb2-216"><a href=""></a>      <span class="kw">const</span> x <span class="op">=</span> width <span class="op">*</span> (i <span class="op">/</span> <span class="dv">14</span>)<span class="op">;</span></span>
+<span id="cb2-217"><a href=""></a>      <span class="kw">const</span> y <span class="op">=</span> height <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb2-218"><a href=""></a>        <span class="op">+</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sin</span>(x <span class="op">/</span> <span class="dv">100</span> <span class="op">*</span> freq <span class="op">+</span> t) <span class="op">*</span> <span class="dv">90</span></span>
+<span id="cb2-219"><a href=""></a>        <span class="op">+</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sin</span>(x <span class="op">/</span> <span class="dv">60</span> <span class="op">*</span> freq <span class="op">*</span> <span class="fl">1.7</span> <span class="op">-</span> t <span class="op">*</span> <span class="fl">0.8</span>) <span class="op">*</span> <span class="dv">50</span><span class="op">;</span></span>
 <span id="cb2-220"><a href=""></a></span>
-<span id="cb2-221"><a href=""></a>    t <span class="op">+=</span> <span class="fl">0.04</span><span class="op">;</span></span>
-<span id="cb2-222"><a href=""></a>    <span class="fu">requestAnimationFrame</span>(animate)<span class="op">;</span></span>
-<span id="cb2-223"><a href=""></a>  }</span>
-<span id="cb2-224"><a href=""></a>  <span class="fu">animate</span>()<span class="op">;</span></span>
-<span id="cb2-225"><a href=""></a></span>
-<span id="cb2-226"><a href=""></a>  <span class="co">// Title that updates live</span></span>
-<span id="cb2-227"><a href=""></a>  <span class="fu">html</span><span class="vs">`&lt;div style="text-align:center; margin:1.5rem 0 0.5rem; font-size:2.5rem; color:#e9d5ff; font-weight:600;"&gt;</span></span>
-<span id="cb2-228"><a href=""></a><span class="vs">    Frequency = </span><span class="sc">${</span>freq<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="sc">}</span></span>
-<span id="cb2-229"><a href=""></a><span class="vs">  &lt;/div&gt;`</span><span class="op">;</span></span>
-<span id="cb2-230"><a href=""></a></span>
-<span id="cb2-231"><a href=""></a>  <span class="cf">return</span> canvas<span class="op">;</span></span>
-<span id="cb2-232"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-221"><a href=""></a>      ctx<span class="op">.</span><span class="at">fillStyle</span> <span class="op">=</span> <span class="st">"#fde047"</span><span class="op">;</span></span>
+<span id="cb2-222"><a href=""></a>      ctx<span class="op">.</span><span class="fu">beginPath</span>()<span class="op">;</span></span>
+<span id="cb2-223"><a href=""></a>      ctx<span class="op">.</span><span class="fu">arc</span>(x<span class="op">,</span> y<span class="op">,</span> <span class="dv">10</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="bu">Math</span><span class="op">.</span><span class="cn">PI</span> <span class="op">*</span> <span class="dv">2</span>)<span class="op">;</span></span>
+<span id="cb2-224"><a href=""></a>      ctx<span class="op">.</span><span class="fu">fill</span>()<span class="op">;</span></span>
+<span id="cb2-225"><a href=""></a>    }</span>
+<span id="cb2-226"><a href=""></a></span>
+<span id="cb2-227"><a href=""></a>    t <span class="op">+=</span> <span class="fl">0.04</span><span class="op">;</span></span>
+<span id="cb2-228"><a href=""></a>    <span class="fu">requestAnimationFrame</span>(animate)<span class="op">;</span></span>
+<span id="cb2-229"><a href=""></a>  }</span>
+<span id="cb2-230"><a href=""></a>  <span class="fu">animate</span>()<span class="op">;</span></span>
+<span id="cb2-231"><a href=""></a></span>
+<span id="cb2-232"><a href=""></a>  <span class="co">// Title that updates live</span></span>
+<span id="cb2-233"><a href=""></a>  <span class="fu">html</span><span class="vs">`&lt;div style="text-align:center; margin:1.5rem 0 0.5rem; font-size:2.5rem; color:#e9d5ff; font-weight:600;"&gt;</span></span>
+<span id="cb2-234"><a href=""></a><span class="vs">    Frequency = </span><span class="sc">${</span>freq<span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="sc">}</span></span>
+<span id="cb2-235"><a href=""></a><span class="vs">  &lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb2-236"><a href=""></a></span>
+<span id="cb2-237"><a href=""></a>  <span class="cf">return</span> canvas<span class="op">;</span></span>
+<span id="cb2-238"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
