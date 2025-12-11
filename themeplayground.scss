@@ -25,8 +25,9 @@
 @import url('https://fonts.googleapis.com/css?family=Permanent Marker');
 @import url('https://fonts.googleapis.com/css?family=Berkshire Swash');
 @import url('https://fonts.googleapis.com/css?family=Google Sans Flex');
+@import url('https://fonts.googleapis.com/css?family=Tilt Prism');
 
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: left;
 
 // fonts
 $font-family-sans-serif: "Palatino Linotype", "Book Antiqua", Palatino,
@@ -155,6 +156,12 @@ $code-block-border-color: #a92777;
     -2px -2px 3px #222 !important;
 }
 
+.noshadow {
+  text-shadow: 
+    0px 0px 0px #222,
+    -0px -0px 0px #222 !important;
+}
+
 .foreground-image {
   z-index: 1000 !important;
 }
@@ -193,6 +200,25 @@ $code-block-border-color: #a92777;
 
 .Bigger {
   font-size: 2em;
+}
+
+.red{
+  color: #ff000F;
+}
+.orange{
+  color: #ff5c00;
+}
+.yellow{
+  color: #ffff00;
+}
+.green{
+  color: #00ff00;
+}
+.blue{
+  color: #0000ff;
+}
+.indigo{
+  color: #4b0082;
 }
 
 // fonts
@@ -437,4 +463,14 @@ $code-block-border-color: #a92777;
   font-family: "Google Sans Flex";  
   color: #000000;
   font-weight: normal !important;
+}
+
+.prism {
+  font-family: "Tilt Prism";  
+  color: white;
+}
+
+.prism2 {
+  font-family: "Tilt Prism";  
+  color: black;
 }
