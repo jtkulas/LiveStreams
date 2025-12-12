@@ -1,6 +1,6 @@
 ---
 title: "R is for <br>Authoring!!" 
-author: 'OOH Session #108...<br>[[[P]{.red}[R]{.orange}[I]{.yellow}[S]{.green}[M]{.blue}[A]{.indigo} diagrams]{.prism} {{< iconify icon-park:tree-diagram >}}]{.bigger}'
+author: 'OOH Session #108...<br>[[[P]{.red}[R]{.orange}[I]{.yellow}[S]{.green}[M]{.blue}[A]{.indigo}<br>flow diagrams]{.prism} {{< iconify icon-park:tree-diagram >}}]{.bigger}'
 title-slide-attributes: 
   data-background-image: https://lynnmazzoleni.com/cdn/shop/articles/unraveling-the-mysteries-of-white-light-newtons-prism-experiment-and-beyond-410726.png?v=1734528518 #https://www.science-sparks.com/wp-content/uploads/2019/06/shutterstock_1194072568-1024x606.jpg #https://assets.science.nasa.gov/dynamicimage/assets/science/cds/general/images/2023/04/w/waveBehaviors_thumb.png?w=1024   
   data-background-opacity: ".8"
@@ -33,7 +33,7 @@ execute:
 ::: first-column
 + Recap session #107
 + Today's topic(s):
-    + [[[P]{.red}[R]{.orange}[I]{.yellow}[S]{.green}[M]{.blue}[A]{.indigo} diagrams]{.prism2}{{< iconify icon-park:tree-diagram >}}](https://www.prisma-statement.org/)
+    + [[[P]{.red}[R]{.orange}[I]{.yellow}[S]{.green}[M]{.blue}[A]{.indigo} flow diagrams]{.prism2}{{< iconify icon-park:tree-diagram >}}](https://www.prisma-statement.org/)
 + Shared problem-solving
 
 ::: {.callout-note}
@@ -92,18 +92,20 @@ You can [include `{ojs}` code chunks](https://quarto.org/docs/interactive/ojs/) 
 :::
 
 ### [GitHub]{.copilot2} {{< iconify copilot-16 style="color:#1E90FF;"  >}} {{< iconify emojione:digit-one >}}
+<!-- --- Insert this container immediately BEFORE the first ojs block --->
+<div id="ojs-counter-1"></div>
 
 ```{ojs}
 (function () {
-  // Create a unique id so multiple blocks can coexist
-  const uid = 'ojs-counter-' + Math.random().toString(36).slice(2, 9);
+  // Fixed unique id so we can target an explicit container (works in RevealJS)
+  const uid = 'ojs-counter-1';
 
-  // The host is the element that contains this script; insert the widget after it
-  const host = document.currentScript && document.currentScript.parentNode ? document.currentScript.parentNode : document.body;
+  // Use the explicit container instead of document.currentScript
+  const host = document.getElementById(uid) || document.body;
 
   // Build the widget HTML
   const container = document.createElement('div');
-  container.id = uid;
+  container.id = uid + '-root';
   container.style.maxWidth = '720px';
   container.style.margin = '24px auto';
   container.innerHTML = `
@@ -145,7 +147,7 @@ You can [include `{ojs}` code chunks](https://quarto.org/docs/interactive/ojs/) 
     updateUI();
   });
 
-  // Ensure keyboard activation is handled (button already does this by default)
+  // Ensure keyboard activation is handled
   btn.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
@@ -160,6 +162,8 @@ You can [include `{ojs}` code chunks](https://quarto.org/docs/interactive/ojs/) 
 ```
 
 ### [GitHub]{.copilot2} {{< iconify copilot-16 style="color:#1E90FF;" >}} {{< iconify emojione:digit-two >}}
+
+<!-- --- Insert this container immediately BEFORE the second ojs block ---> <div id="ojs-counter-2"></div>
 
 ```{ojs}
 (function () {
@@ -229,6 +233,7 @@ You can [include `{ojs}` code chunks](https://quarto.org/docs/interactive/ojs/) 
 
 ### [GitHub]{.copilot2} {{< iconify copilot-16 style="color:#1E90FF;" >}} {{< iconify emojione:digit-three >}}
 
+<!-- --- Insert this container immediately BEFORE the scatter ojs block ---> <div id="ojs-scatter-1"></div>
 ```{ojs}
 (function () {
   // Unique id for multiple independent blocks
@@ -602,23 +607,43 @@ You can [include `{ojs}` code chunks](https://quarto.org/docs/interactive/ojs/) 
 
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTB3eHNuMm9pejdwdWwzc2N0MDdzYno4dzB6NDI0YnAxcDY5eXo1NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NPSBznfytOtCo/giphy.gif)
 
-## [[[[P]{.red}[R]{.orange}[I]{.yellow}[S]{.green}[M]{.blue}[A]{.indigo} diagrams]{.prism2}{{< iconify icon-park:tree-diagram >}}]{.noshadow}](https://www.eshackathon.org/software/PRISMA2020.html) 
+## [[[[P]{.red}[R]{.orange}[I]{.yellow}[S]{.green}[M]{.blue}[A]{.indigo} ]{.prism2}]{.noshadow .Bigger}](https://www.prisma-statement.org/) 
 
 ::: {.columns}
 
-::: {.column width="60%"}
+::: {.column width="45%"}
 
-[P]{.red}referred
+[P]{.red}referred  
 [R]{.orange}eporting  
 [I]{.yellow}tems for  
 [S]{.green}ystematic Reviews and  
-[M]{.blue}eta--[A]{.indigo}nalyses [@page2021prisma; @page2021prismab]
+[M]{.blue}eta--  
+[A]{.indigo}nalyses [@page2021prisma; @page2021prismab]
+
+:::
+
+::: {.column width="55%"}
+
+### Suggests: 
+
++ 27--item checklist
++ "flow" diagrams {{< iconify icon-park:tree-diagram >}}
 
 :::
 
 :::
 
-## [[[P]{.red}[R]{.orange}[I]{.yellow}[S]{.green}[M]{.blue}[A]{.indigo}]{.prism2}]{.noshadow} References 
+## [[[[[P]{.red}[R]{.orange}[I]{.yellow}[S]{.green}[M]{.blue}[A]{.indigo}]{.bigger} flow diagrams]{.prism2}{{< iconify icon-park:tree-diagram >}}]{.noshadow}](https://www.prisma-statement.org/prisma-2020-flow-diagram) 
+
+::: {.absolute style="top: 140px; right: -160px; width: 350px;"}
+<a href="https://www.eshackathon.org/software/PRISMA2020.html">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Shiny_hex_logo.svg/960px-Shiny_hex_logo.svg.png">
+</a>
+:::
+
+![](https://i.ytimg.com/vi/dN7CteDet6o/maxresdefault.jpg){.absolute left="0" top="150" height="400"}
+
+## [[[[P]{.red}[R]{.orange}[I]{.yellow}[S]{.green}[M]{.blue}[A]{.indigo}]{.prism2}]{.noshadow}]{.bigger} References: 
 
 ::: {#refs}
 :::
