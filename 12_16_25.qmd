@@ -12,13 +12,14 @@ format:
     transition: convex
     transition-speed: slow
     code-overflow: wrap              ## instead of horizontal scroll
-    theme: themeplayground.scss
+    theme: themeplayground26.scss
     logo: https://cdn-icons-png.flaticon.com/512/3197/3197970.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
     footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
     preview-links: false             ## true brings up iframe window instead of "site"
     code-annotations: hover          ## select
 engine: knitr                        ## not picking up inline codes
 bibliography: bib.bib
+csl: apa7.csl
 #lightbox: true
 filters: 
   - reveal-header          ## extension to add a hyperlink to slide logo
@@ -64,7 +65,8 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ## [[Observable]{.observable2 .bigger}](https://quarto.org/docs/interactive/ojs/) [[{{< iconify vscode-icons:file-type-js-official >}}]{.bigger}](https://observablehq.com/@observablehq/learn-javascript-introduction)  
 
-:::{.panel-tabset .smaller}
+:::{.smaller}
+:::{.panel-tabset}
 
 ### Whatdat?
 
@@ -97,13 +99,9 @@ You can [include `{ojs}` code chunks](https://quarto.org/docs/interactive/ojs/) 
 
 ```{ojs}
 (function () {
-  // Fixed unique id so we can target an explicit container (works in RevealJS)
   const uid = 'ojs-counter-1';
-
-  // Use the explicit container instead of document.currentScript
   const host = document.getElementById(uid) || document.body;
 
-  // Build the widget HTML
   const container = document.createElement('div');
   container.id = uid + '-root';
   container.style.maxWidth = '720px';
@@ -117,37 +115,28 @@ You can [include `{ojs}` code chunks](https://quarto.org/docs/interactive/ojs/) 
       <div id="${uid}-display" style="margin-top:22px;">
         <h2 style="margin:0; font-weight:600;">Count: <strong id="${uid}-value" style="color:#e15759;">0</strong></h2>
         <p id="${uid}-sub" style="color:#666; margin-top:10px;">You've clicked <strong id="${uid}-plural">0</strong> times!</p>
-        <small style="color:#999;">(Click the button above to update)</small>
       </div>
     </div>
   `;
 
   host.appendChild(container);
 
-  // Mutable state
   let count = 0;
-
-  // Elements
   const btn = document.getElementById(`${uid}-btn`);
   const valueEl = document.getElementById(`${uid}-value`);
   const pluralEl = document.getElementById(`${uid}-plural`);
-  const subEl = document.getElementById(`${uid}-sub`);
 
-  // Update UI
   function updateUI() {
     valueEl.textContent = String(count);
     pluralEl.textContent = String(count);
-    subEl.innerHTML = `You've clicked <strong>${count}</strong> time${count === 1 ? '' : 's'}!`;
     btn.setAttribute('aria-label', `Click to increment. Current count ${count}`);
   }
 
-  // Click handler
   btn.addEventListener('click', () => {
     count += 1;
     updateUI();
   });
 
-  // Ensure keyboard activation is handled
   btn.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
@@ -156,458 +145,234 @@ You can [include `{ojs}` code chunks](https://quarto.org/docs/interactive/ojs/) 
     }
   });
 
-  // Initial render
   updateUI();
 })();
 ```
+
+![](https://cdn.freebiesupply.com/logos/large/2x/roadrunner-logo-png-transparent.png){.absolute bottom="0" right="-150" height="500"}
 
 ### [GitHub]{.copilot2} {{< iconify copilot-16 style="color:#1E90FF;" >}} {{< iconify emojione:digit-two >}}
 
-<!-- --- Insert this container immediately BEFORE the second ojs block ---> <div id="ojs-counter-2"></div>
+<!-- --- Insert this container immediately BEFORE the second ojs block --->
+<div id="ojs-color-panel-1"></div>
 
 ```{ojs}
 (function () {
-  // Create a unique id so multiple blocks can coexist
-  const uid = 'ojs-counter-' + Math.random().toString(36).slice(2, 9);
+  // A different visual (not a repeat): color-cycle panel with three controls
+  const uid = 'ojs-color-panel-1';
+  const host = document.getElementById(uid) || document.body;
 
-  // The host is the element that contains this script; insert the widget after it
-  const host = document.currentScript && document.currentScript.parentNode ? document.currentScript.parentNode : document.body;
+  const colors = ['#ff6b6b', '#ffd93d', '#6be3ff', '#9d8bff', '#7be495'];
+  let idx = 0;
 
-  // Build the widget HTML
-  const container = document.createElement('div');
-  container.id = uid;
-  container.style.maxWidth = '720px';
-  container.style.margin = '24px auto';
-  container.innerHTML = `
-    <div style="text-align:center; padding:28px; font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;">
-      <button id="${uid}-btn" aria-live="polite" style="font-size:18px; padding:10px 20px; cursor:pointer; border-radius:6px; border:1px solid #ccc; background:#fff;">
-        Click to +1!
-      </button>
-
-      <div id="${uid}-display" style="margin-top:22px;">
-        <h2 style="margin:0; font-weight:600;">Count: <strong id="${uid}-value" style="color:#e15759;">0</strong></h2>
-        <p id="${uid}-sub" style="color:#666; margin-top:10px;">You've clicked <strong id="${uid}-plural">0</strong> times!</p>
-        <small style="color:#999;">(Click the button above to update)</small>
+  const root = document.createElement('div');
+  root.id = uid + '-root';
+  root.style.maxWidth = '520px';
+  root.style.margin = '18px auto';
+  root.style.display = 'flex';
+  root.style.gap = '12px';
+  root.style.alignItems = 'center';
+  root.innerHTML = `
+    <div id="${uid}-panel" style="width:220px; height:120px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.12);"></div>
+    <div style="flex:1 1 auto;">
+      <div style="margin-bottom:8px;"><strong>Color Cycle</strong></div>
+      <div style="display:flex; gap:8px; align-items:center;">
+        <button id="${uid}-prev" style="padding:6px 10px;">Prev</button>
+        <button id="${uid}-next" style="padding:6px 10px;">Next</button>
+        <button id="${uid}-rand" style="padding:6px 10px;">Random</button>
       </div>
+      <div style="margin-top:10px; color:#666; font-size:13px;">Index: <span id="${uid}-idx">0</span></div>
     </div>
   `;
 
-  host.appendChild(container);
+  host.appendChild(root);
 
-  // Mutable state
-  let count = 0;
+  const panel = document.getElementById(`${uid}-panel`);
+  const prev = document.getElementById(`${uid}-prev`);
+  const next = document.getElementById(`${uid}-next`);
+  const rand = document.getElementById(`${uid}-rand`);
+  const idxLabel = document.getElementById(`${uid}-idx`);
 
-  // Elements
-  const btn = document.getElementById(`${uid}-btn`);
-  const valueEl = document.getElementById(`${uid}-value`);
-  const pluralEl = document.getElementById(`${uid}-plural`);
-  const subEl = document.getElementById(`${uid}-sub`);
-
-  // Update UI
-  function updateUI() {
-    valueEl.textContent = String(count);
-    pluralEl.textContent = String(count);
-    subEl.innerHTML = `You've clicked <strong>${count}</strong> time${count === 1 ? '' : 's'}!`;
-    btn.setAttribute('aria-label', `Click to increment. Current count ${count}`);
+  function render() {
+    panel.style.background = colors[idx % colors.length];
+    idxLabel.textContent = String(idx);
   }
 
-  // Click handler
-  btn.addEventListener('click', () => {
-    count += 1;
-    updateUI();
+  prev.addEventListener('click', () => { idx = (idx - 1 + colors.length) % colors.length; render(); });
+  next.addEventListener('click', () => { idx = (idx + 1) % colors.length; render(); });
+  rand.addEventListener('click', () => { idx = Math.floor(Math.random() * colors.length); render(); });
+
+  // keyboard accessibility on panel
+  panel.tabIndex = 0;
+  panel.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') prev.click();
+    if (e.key === 'ArrowRight') next.click();
   });
 
-  // Ensure keyboard activation is handled (button already does this by default)
-  btn.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      count += 1;
-      updateUI();
-    }
-  });
-
-  // Initial render
-  updateUI();
+  render();
 })();
 ```
+
+![](https://clipart-library.com/images/6cp5jA6ri.png){.absolute bottom="20" right="400"}
 
 ### [GitHub]{.copilot2} {{< iconify copilot-16 style="color:#1E90FF;" >}} {{< iconify emojione:digit-three >}}
 
-<!-- --- Insert this container immediately BEFORE the scatter ojs block ---> <div id="ojs-scatter-1"></div>
+<!-- container: put this immediately before the {ojs} chunk -->
+<div id="ojs-scatter-1"></div>
+
 ```{ojs}
-(function () {
-  // Unique id for multiple independent blocks
-  const uid = 'ojs-scatter-' + Math.random().toString(36).slice(2, 9);
+(function(){
+  const uid = 'ojs-scatter-1';
+  const host = document.getElementById(uid) || document.body;
 
-  // Host (insert after the script tag that runs in the ojs block)
-  const host = document.currentScript && document.currentScript.parentNode ? document.currentScript.parentNode : document.body;
-
-  // Build UI skeleton
-  const wrapper = document.createElement('div');
-  wrapper.id = uid;
-  wrapper.style.maxWidth = '960px';
-  wrapper.style.margin = '18px auto';
-  wrapper.style.fontFamily = "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial";
-  wrapper.innerHTML = `
-    <div style="display:flex; gap:18px; align-items:flex-start; flex-wrap:wrap;">
-      <div style="flex:1 1 360px; min-width:300px;">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
-          <strong>Interactive scatter</strong>
-          <small style="color:#666;">Drag sliders or hover points</small>
-        </div>
-        <div id="${uid}-controls" style="background:#fafafa; border:1px solid #eee; padding:12px; border-radius:8px;">
-          <label style="display:block; margin-bottom:8px;">
-            Points: <span id="${uid}-n-label">200</span>
-            <input id="${uid}-n" type="range" min="20" max="2000" step="10" value="200" style="width:100%;">
-          </label>
-
-          <label style="display:block; margin-bottom:8px;">
-            Min Y filter: <span id="${uid}-ymin-label">-3.0</span>
-            <input id="${uid}-ymin" type="range" min="-5" max="5" step="0.1" value="-3" style="width:100%;">
-          </label>
-
-          <label style="display:block; margin-bottom:8px;">
-            Color mode:
-            <select id="${uid}-color" style="margin-left:8px;">
-              <option value="single">Single color</option>
-              <option value="byCategory">Categorical</option>
-              <option value="byX">Color by x (gradient)</option>
-            </select>
-          </label>
-
-          <label style="display:flex; gap:8px; align-items:center;">
-            <input id="${uid}-reg" type="checkbox" />
-            <span>Show regression line</span>
-          </label>
-        </div>
+  // small markup
+  const html = `
+    <div style="display:flex;gap:12px;align-items:flex-start;">
+      <div style="width:220px;font-family:system-ui, -apple-system, 'Segoe UI', Roboto, Arial;">
+        <div style="margin-bottom:8px;"><strong>Controls</strong></div>
+        <div>Points: <span id="${uid}-n-label">200</span></div>
+        <input id="${uid}-n" type="range" min="20" max="1000" value="200" style="width:100%;margin-bottom:8px;"/>
+        <div>Min Y: <span id="${uid}-ymin-label">-3.0</span></div>
+        <input id="${uid}-ymin" type="range" min="-5" max="5" step="0.1" value="-3" style="width:100%;"/>
       </div>
-
-      <div style="flex:1 1 520px; min-width:320px;">
-        <div id="${uid}-svg-wrap" style="background:#fff; border:1px solid #eee; border-radius:8px; padding:12px;">
-          <svg id="${uid}-svg" width="100%" height="420" viewBox="0 0 900 420" preserveAspectRatio="xMidYMid meet" style="display:block;"></svg>
-        </div>
-      </div>
+      <svg id="${uid}-svg" width="520" height="300" viewBox="0 0 520 300" style="border:1px solid #eee;border-radius:6px;background:#fff;"></svg>
     </div>
-
-    <div id="${uid}-tooltip" role="status" aria-live="polite" style="position:absolute; display:none; pointer-events:none; background:rgba(0,0,0,0.8); color:white; padding:8px 10px; border-radius:6px; font-size:13px;"></div>
+    <div id="${uid}-tooltip" style="position:absolute;display:none;pointer-events:none;background:rgba(0,0,0,0.75);color:#fff;padding:6px 8px;border-radius:6px;font-size:12px;"></div>
   `;
+  const container = document.createElement('div');
+  container.id = uid + '-root';
+  container.style.margin = '6px 0 18px';
+  container.innerHTML = html;
+  host.appendChild(container);
 
-  host.appendChild(wrapper);
+  // small init in RAF so elements exist
+  requestAnimationFrame(() => {
+    const svg = document.getElementById(`${uid}-svg`);
+    const nInput = document.getElementById(`${uid}-n`);
+    const nLabel = document.getElementById(`${uid}-n-label`);
+    const yminInput = document.getElementById(`${uid}-ymin`);
+    const yminLabel = document.getElementById(`${uid}-ymin-label`);
+    const tooltip = document.getElementById(`${uid}-tooltip`);
 
-  // DOM references
-  const svg = document.getElementById(`${uid}-svg`);
-  const nInput = document.getElementById(`${uid}-n`);
-  const nLabel = document.getElementById(`${uid}-n-label`);
-  const yminInput = document.getElementById(`${uid}-ymin`);
-  const yminLabel = document.getElementById(`${uid}-ymin-label`);
-  const colorMode = document.getElementById(`${uid}-color`);
-  const regToggle = document.getElementById(`${uid}-reg`);
-  const tooltip = document.getElementById(`${uid}-tooltip`);
-
-  // Basic state
-  let state = {
-    n: +nInput.value,
-    ymin: +yminInput.value,
-    colorMode: colorMode.value,
-    showReg: regToggle.checked,
-    data: []
-  };
-
-  // Utility: generate data
-  function generateData(n) {
-    const out = [];
-    for (let i = 0; i < n; i++) {
-      const x = Math.random() * 10; // 0..10
-      // create a curved relationship with categories and noise
-      const base = Math.sin(x) * 2 + x * 0.3;
-      const noise = (Math.random() - 0.5) * 2;
-      const y = base + noise;
-      // bucket category by x
-      const cat = Math.floor(x / (10 / 4)); // 0..3
-      out.push({id: i, x, y, cat});
+    if (!svg || !nInput || !nLabel || !yminInput || !yminLabel || !tooltip) {
+      console.error('ojs scatter: missing element(s)', {svg:!!svg, nInput:!!nInput, yminInput:!!yminInput, tooltip:!!tooltip});
+      return;
     }
-    return out;
-  }
 
-  // Scales (simple linear mapping)
-  function linearScale(domain0, domain1, range0, range1) {
-    const d0 = domain0;
-    const d1 = domain1;
-    const r0 = range0;
-    const r1 = range1;
-    const m = (r1 - r0) / (d1 - d0 || 1);
-    return v => r0 + (v - d0) * m;
-  }
+    // state and helpers
+    let state = { n: +nInput.value, ymin: +yminInput.value, data: [] };
 
-  // Color helpers
-  const categoryColors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728'];
-  function colorFor(d) {
-    if (state.colorMode === 'single') return '#4e79a7';
-    if (state.colorMode === 'byCategory') return categoryColors[d.cat % categoryColors.length];
-    if (state.colorMode === 'byX') {
-      // simple gradient blue->purple
-      const t = d.x / 10;
-      const r = Math.round(70 + t * 150);
-      const g = Math.round(90 + t * 40);
-      const b = Math.round(150 + t * 80);
-      return `rgb(${r},${g},${b})`;
-    }
-    return '#333';
-  }
-
-  // Regression line (least-squares)
-  function linearRegression(points) {
-    const n = points.length;
-    if (n === 0) return null;
-    let sumX = 0, sumY = 0, sumXY = 0, sumXX = 0;
-    for (const p of points) {
-      sumX += p.x; sumY += p.y; sumXY += p.x * p.y; sumXX += p.x * p.x;
-    }
-    const slope = (n * sumXY - sumX * sumY) / (n * sumXX - sumX * sumX || 1);
-    const intercept = (sumY - slope * sumX) / n;
-    return {slope, intercept};
-  }
-
-  // Draw function (entire plot)
-  function draw() {
-    // Clear svg
-    while (svg.firstChild) svg.removeChild(svg.firstChild);
-
-    // Determine drawing size from viewBox
-    const VBOX_W = 900, VBOX_H = 420;
-    const margin = {top: 20, right: 18, bottom: 46, left: 56};
-    const width = VBOX_W - margin.left - margin.right;
-    const height = VBOX_H - margin.top - margin.bottom;
-
-    const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-    g.setAttribute('transform', `translate(${margin.left},${margin.top})`);
-    svg.appendChild(g);
-
-    // Data filtering
-    const filtered = state.data.filter(d => d.y >= state.ymin);
-
-    // Domains
-    const xMin = 0, xMax = 10;
-    const yAll = state.data.map(d => d.y);
-    const yMinGlobal = Math.min(...yAll, -5);
-    const yMaxGlobal = Math.max(...yAll, 10);
-    // Give a little padding
-    const yPad = (yMaxGlobal - yMinGlobal) * 0.06;
-    const yMin = Math.min(yMinGlobal, state.ymin) - yPad;
-    const yMax = yMaxGlobal + yPad;
-
-    const xScale = linearScale(xMin, xMax, 0, width);
-    const yScale = v => height - linearScale(yMin, yMax, 0, height)(v);
-
-    // Axes: simple ticks
-    function drawAxes() {
-      const axis = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-      axis.setAttribute('class', 'axes');
-
-      // x axis line
-      const xAxis = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-      xAxis.setAttribute('x1', 0); xAxis.setAttribute('x2', width);
-      xAxis.setAttribute('y1', height); xAxis.setAttribute('y2', height);
-      xAxis.setAttribute('stroke', '#ddd');
-      axis.appendChild(xAxis);
-
-      // y axis line
-      const yAxis = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-      yAxis.setAttribute('x1', 0); yAxis.setAttribute('x2', 0);
-      yAxis.setAttribute('y1', 0); yAxis.setAttribute('y2', height);
-      yAxis.setAttribute('stroke', '#ddd');
-      axis.appendChild(yAxis);
-
-      // x ticks
-      for (let i = 0; i <= 10; i += 2) {
-        const tx = xScale(i);
-        const t = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-        t.setAttribute('x1', tx); t.setAttribute('x2', tx);
-        t.setAttribute('y1', height); t.setAttribute('y2', height + 6);
-        t.setAttribute('stroke', '#ccc');
-        axis.appendChild(t);
-
-        const lab = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        lab.setAttribute('x', tx); lab.setAttribute('y', height + 22);
-        lab.setAttribute('text-anchor', 'middle');
-        lab.setAttribute('font-size', '12');
-        lab.setAttribute('fill', '#444');
-        lab.textContent = String(i);
-        axis.appendChild(lab);
+    function genData(n){
+      const out = [];
+      for (let i=0;i<n;i++){
+        const x = Math.random()*10;
+        const base = Math.sin(x)*1.6 + x*0.25;
+        const y = base + (Math.random()-0.5)*2;
+        out.push({x,y});
       }
-
-      // y ticks
-      const yTicks = 5;
-      for (let i = 0; i <= yTicks; i++) {
-        const vy = yMin + (i / yTicks) * (yMax - yMin);
-        const ty = yScale(vy);
-        const t = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-        t.setAttribute('x1', -6); t.setAttribute('x2', 0);
-        t.setAttribute('y1', ty); t.setAttribute('y2', ty);
-        t.setAttribute('stroke', '#ccc');
-        axis.appendChild(t);
-
-        const lab = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        lab.setAttribute('x', -10); lab.setAttribute('y', ty + 4);
-        lab.setAttribute('text-anchor', 'end');
-        lab.setAttribute('font-size', '12');
-        lab.setAttribute('fill', '#444');
-        lab.textContent = vy.toFixed(1);
-        axis.appendChild(lab);
-      }
-
-      g.appendChild(axis);
+      return out;
     }
 
-    drawAxes();
+    function clearSVG(){
+      while (svg.firstChild) svg.removeChild(svg.firstChild);
+    }
 
-    // Points group
-    const pointsG = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-    pointsG.setAttribute('class', 'points');
-    g.appendChild(pointsG);
+    function xScale(x){ return 40 + (x/10) * (520 - 80); } // left/right padding
+    function yScale(y){
+      // map y roughly to 0..300 with simple clamp
+      const ymin = Math.min(...state.data.map(d=>d.y), -5);
+      const ymax = Math.max(...state.data.map(d=>d.y), 10);
+      const pad = (ymax - ymin) * 0.06;
+      const low = ymin - pad;
+      const high = ymax + pad;
+      const t = (y - low) / (high - low || 1);
+      return 260 - t * 220; // top/bottom padding
+    }
 
-    // Draw points
-    filtered.forEach(d => {
-      const cx = xScale(d.x);
-      const cy = yScale(d.y);
-      const c = colorFor(d);
+    function draw(){
+      clearSVG();
 
-      const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-      circle.setAttribute('cx', cx);
-      circle.setAttribute('cy', cy);
-      circle.setAttribute('r', 4.5);
-      circle.setAttribute('fill', c);
-      circle.setAttribute('stroke', '#fff');
-      circle.setAttribute('stroke-width', '0.8');
-      circle.style.cursor = 'pointer';
+      // axes (simple)
+      const axisX = document.createElementNS('http://www.w3.org/2000/svg','line');
+      axisX.setAttribute('x1','40'); axisX.setAttribute('y1','270');
+      axisX.setAttribute('x2','480'); axisX.setAttribute('y2','270');
+      axisX.setAttribute('stroke','#ddd');
+      svg.appendChild(axisX);
 
-      // attach data for event handlers
-      circle.__data = d;
+      // filter
+      const pts = state.data.filter(d => d.y >= state.ymin);
 
-      // Hover interactions
-      circle.addEventListener('mouseenter', (ev) => {
-        const data = ev.target.__data;
-        tooltip.style.display = 'block';
-        tooltip.innerHTML = `<strong>x:</strong> ${data.x.toFixed(2)} <br/><strong>y:</strong> ${data.y.toFixed(2)} <br/><strong>cat:</strong> ${data.cat}`;
+      // draw points
+      pts.forEach(d => {
+        const c = document.createElementNS('http://www.w3.org/2000/svg','circle');
+        c.setAttribute('cx', String(xScale(d.x)));
+        c.setAttribute('cy', String(yScale(d.y)));
+        c.setAttribute('r','4.5');
+        c.setAttribute('fill','#4e79a7');
+        c.setAttribute('stroke','#fff');
+        c.setAttribute('stroke-width','0.8');
+        c.style.cursor = 'pointer';
+        c.__data = d;
+        c.addEventListener('mouseenter', (ev) => {
+          const dd = ev.target.__data;
+          tooltip.style.display = 'block';
+          tooltip.innerHTML = `x: ${dd.x.toFixed(2)}<br/>y: ${dd.y.toFixed(2)}`;
+        });
+        c.addEventListener('mousemove', (ev) => {
+          tooltip.style.left = (ev.pageX + 10) + 'px';
+          tooltip.style.top = (ev.pageY - 30) + 'px';
+        });
+        c.addEventListener('mouseleave', () => {
+          tooltip.style.display = 'none';
+        });
+        svg.appendChild(c);
       });
-      circle.addEventListener('mousemove', (ev) => {
-        tooltip.style.left = (ev.pageX + 12) + 'px';
-        tooltip.style.top = (ev.pageY - 28) + 'px';
-      });
-      circle.addEventListener('mouseleave', () => {
-        tooltip.style.display = 'none';
-      });
 
-      pointsG.appendChild(circle);
+      // small label
+      const lbl = document.createElementNS('http://www.w3.org/2000/svg','text');
+      lbl.setAttribute('x','260'); lbl.setAttribute('y','16');
+      lbl.setAttribute('text-anchor','middle'); lbl.setAttribute('font-size','12'); lbl.setAttribute('fill','#444');
+      lbl.textContent = `Showing ${pts.length} of ${state.data.length} points (Min Y = ${state.ymin.toFixed(1)})`;
+      svg.appendChild(lbl);
+    }
+
+    // debounce
+    let t;
+    function redrawDebounced(){ clearTimeout(t); t = setTimeout(draw, 40); }
+
+    // events
+    nInput.addEventListener('input', (e) => {
+      state.n = +e.target.value;
+      nLabel.textContent = String(state.n);
+      state.data = genData(state.n);
+      redrawDebounced();
     });
 
-    // Regression line if requested and there are points
-    if (state.showReg && filtered.length >= 2) {
-      const {slope, intercept} = linearRegression(filtered);
-      // x at domain start and end
-      const x0 = xMin;
-      const x1 = xMax;
-      const y0 = slope * x0 + intercept;
-      const y1 = slope * x1 + intercept;
-      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-      line.setAttribute('x1', xScale(x0)); line.setAttribute('y1', yScale(y0));
-      line.setAttribute('x2', xScale(x1)); line.setAttribute('y2', yScale(y1));
-      line.setAttribute('stroke', '#b550e6');
-      line.setAttribute('stroke-width', '2');
-      line.setAttribute('stroke-linecap', 'round');
-      line.setAttribute('opacity', '0.9');
-      g.appendChild(line);
-    }
+    yminInput.addEventListener('input', (e) => {
+      state.ymin = +e.target.value;
+      yminLabel.textContent = state.ymin.toFixed(1);
+      redrawDebounced();
+    });
 
-    // Draw a small legend for categories when in categorical mode
-    if (state.colorMode === 'byCategory') {
-      const legend = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-      legend.setAttribute('transform', `translate(${width - 60}, 6)`);
-      for (let i = 0; i < categoryColors.length; i++) {
-        const y = i * 18;
-        const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-        rect.setAttribute('x', 0); rect.setAttribute('y', y); rect.setAttribute('width', 12); rect.setAttribute('height', 12);
-        rect.setAttribute('fill', categoryColors[i]);
-        legend.appendChild(rect);
-
-        const lab = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        lab.setAttribute('x', 18); lab.setAttribute('y', y + 10);
-        lab.setAttribute('font-size', '12'); lab.setAttribute('fill', '#333');
-        lab.textContent = `cat ${i}`;
-        legend.appendChild(lab);
-      }
-      g.appendChild(legend);
-    }
-  }
-
-  // Debounce helper
-  function debounce(fn, wait = 120) {
-    let t;
-    return (...args) => {
-      clearTimeout(t);
-      t = setTimeout(() => fn(...args), wait);
-    };
-  }
-
-  // Update state and redraw
-  const redraw = debounce(() => {
-    // update labels
-    nLabel.textContent = String(state.n);
-    yminLabel.textContent = String(state.ymin.toFixed(1));
-    // regenerate data if n changed
-    if (state.data.length !== state.n) {
-      state.data = generateData(state.n);
-    }
+    // initial render
+    state.data = genData(state.n);
     draw();
-  }, 50);
-
-  // Event listeners
-  nInput.addEventListener('input', (e) => {
-    state.n = +e.target.value;
-    nLabel.textContent = String(state.n);
-    // regenerate and draw (debounced)
-    state.data = generateData(state.n);
-    redraw();
   });
-
-  yminInput.addEventListener('input', (e) => {
-    state.ymin = +e.target.value;
-    yminLabel.textContent = String(state.ymin.toFixed(1));
-    redraw();
-  });
-
-  colorMode.addEventListener('change', (e) => {
-    state.colorMode = e.target.value;
-    redraw();
-  });
-
-  regToggle.addEventListener('change', (e) => {
-    state.showReg = e.target.checked;
-    redraw();
-  });
-
-  // Responsive: redraw when the svg element resizes (simple approach)
-  const resizeObserver = new ResizeObserver(() => {
-    // Keep viewBox constant, but redrawing keeps pixel-perfect axis ticks and positions
-    redraw();
-  });
-  resizeObserver.observe(svg);
-
-  // Initial data and render
-  state.data = generateData(state.n);
-  redraw();
 })();
 ```
 
+![](https://i.pinimg.com/474x/e5/37/72/e537728b3ded97186b8fcbdf6540ac19.jpg){.absolute right="-140" bottom="100"}
+
+:::
 :::
 
-![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2JxODN3YmJ3Mm5vZms2ZjBqMHV2MWl6MG56N2FjbW01Zjd1Z2dkOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26n6WywJyh39n1pBu/giphy.gif){.absolute right="-140" top="-40" height="220"}
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2JxODN3YmJ3Mm5vZms2ZjBqMHV2MWl6MG56N2FjbW01Zjd1Z2dkOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26n6WywJyh39n1pBu/giphy.gif){.absolute right="-150" top="-50" height="210"}
 
-# Today... 
+# Today... {background-image="https://ericroth.org/wp-content/uploads/2025/05/White-Light-Sum-of-all-Colors-1024x614.jpg" background-opacity=1}
 
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTB3eHNuMm9pejdwdWwzc2N0MDdzYno4dzB6NDI0YnAxcDY5eXo1NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NPSBznfytOtCo/giphy.gif)
 
-## [[[[P]{.red}[R]{.orange}[I]{.yellow}[S]{.green}[M]{.blue}[A]{.indigo} ]{.prism2}]{.noshadow .Bigger}](https://www.prisma-statement.org/) 
+## [[[[P]{.red}[R]{.orange}[I]{.yellow}[S]{.green}[M]{.blue}[A]{.indigo} ]{.prism2}]{.noshadow .Bigger}](https://www.prisma-statement.org/) {background-image="https://static.vecteezy.com/system/resources/previews/039/613/271/non_2x/prism-light-overlay-crystal-light-flares-rainbow-vector.jpg" background-opacity=.3}
 
 ::: {.columns}
 
@@ -626,26 +391,49 @@ You can [include `{ojs}` code chunks](https://quarto.org/docs/interactive/ojs/) 
 
 ### Suggests: 
 
++ Reporting standards for [systematic reviews](https://hslguides.osu.edu/systematic_reviews/intro)
 + 27--item checklist
-+ "flow" diagrams {{< iconify icon-park:tree-diagram >}}
++ "flow" diagrams 
 
 :::
 
 :::
 
-## [[[[[P]{.red}[R]{.orange}[I]{.yellow}[S]{.green}[M]{.blue}[A]{.indigo}]{.bigger} flow diagrams]{.prism2}{{< iconify icon-park:tree-diagram >}}]{.noshadow}](https://www.prisma-statement.org/prisma-2020-flow-diagram) 
+![](https://png.pngtree.com/png-vector/20220725/ourmid/pngtree-transparent-prism-spectrum-rainbow-flat-png-image_6072811.png){.absolute right="-100" top="-30" height="300"}
 
-::: {.absolute style="top: 140px; right: -160px; width: 350px;"}
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExanJxbjhyN3lvYWswY3VycW14MGZyN3RpczJoN3JyajkwMGR1enh0YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JktYMtRC9hzTq/giphy.gif){.absolute right="-150" bottom="50" height="250"}
+
+## [[[[[P]{.red}[R]{.orange}[I]{.yellow}[S]{.green}[M]{.blue}[A]{.indigo}]{.bigger} flow diagrams]{.prism2}{{< iconify icon-park:tree-diagram >}}]{.noshadow}](https://www.prisma-statement.org/prisma-2020-flow-diagram) {background-image="https://t3.ftcdn.net/jpg/02/65/59/32/360_F_265593297_9GZmFF8jMcpRs8y8nUXtwsS6O2Jhu5Mu.jpg" background-opacity=.5}
+
+::: {.absolute style="top: 30px; right: -140px; width: 300px;"}
 <a href="https://www.eshackathon.org/software/PRISMA2020.html">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Shiny_hex_logo.svg/960px-Shiny_hex_logo.svg.png">
 </a>
 :::
 
-![](https://i.ytimg.com/vi/dN7CteDet6o/maxresdefault.jpg){.absolute left="0" top="150" height="400"}
+::: {.absolute style="top: 150px; left: 0px; width: 700px;"}
+<a href="https://guides.lib.unc.edu/prisma">
+  <img src="https://i.ytimg.com/vi/dN7CteDet6o/maxresdefault.jpg">
+</a>
+:::
 
-## [[[[P]{.red}[R]{.orange}[I]{.yellow}[S]{.green}[M]{.blue}[A]{.indigo}]{.prism2}]{.noshadow}]{.bigger} References: 
+::: {.absolute style="bottom: 0px; right: 0px; width: 300px;"}
+<a href="https://github.com/prisma-flowdiagram/PRISMA2020">
+  <img src="https://raw.githubusercontent.com/prisma-flowdiagram/PRISMA2020/master/PRISMA2020-hex.png">
+</a>
+:::
 
-::: {#refs}
+::: {.absolute style="bottom: 0px; right: 400px; width: 200px;"}
+<a href="https://onlinelibrary.wiley.com/doi/10.1002/cl2.1230">
+  <img src="https://www.nicepng.com/png/detail/357-3576824_this-free-icons-png-design-of-readme-document.png">
+</a>
+:::
+
+![]()
+
+## [[[[P]{.red}[R]{.orange}[I]{.yellow}[S]{.green}[M]{.blue}[A]{.indigo}]{.prism2}]{.noshadow}]{.bigger} References: {background-image="https://media.istockphoto.com/id/1437915530/vector/crystal-rainbow-lights-effect-bright-ray-or-beam-glowing-light-flare-reflection-from-prism.jpg?s=612x612&w=0&k=20&c=FHAbz39lCrWOqcLBQcm7F3lj01DSMd38sQ0uIb2mx6k=" background-opacity=.6}
+
+::: {#refs .embedding}
 :::
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
@@ -653,4 +441,3 @@ You can [include `{ojs}` code chunks](https://quarto.org/docs/interactive/ojs/) 
 #| eval: true
 sessionInfo()
 ```
-

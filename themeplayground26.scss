@@ -7,8 +7,9 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
 @import url('https://fonts.googleapis.com/css?family=Berkshire Swash');
 @import url('https://fonts.googleapis.com/css?family=Google Sans Flex');
+@import url('https://fonts.googleapis.com/css?family=Tilt Prism');
 
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: left;
 
 
 /* adding background to inline code elements */
@@ -111,6 +112,26 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-size: 2em;
 }
 
+
+.red{
+  color: #ff000F;
+}
+.orange{
+  color: #ff5c00;
+}
+.yellow{
+  color: #ffff00;
+}
+.green{
+  color: #00ff00;
+}
+.blue{
+  color: #0000ff;
+}
+.indigo{
+  color: #4b0082;
+}
+
 // fonts
 
 .juplab {
@@ -145,4 +166,14 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-family: "Google Sans Flex";  
   color: #000000;
   font-weight: normal !important;
+}
+
+.prism {
+  font-family: "Tilt Prism";  
+  color: white;
+}
+
+.prism2 {
+  font-family: "Tilt Prism";  
+  color: black;
 }
