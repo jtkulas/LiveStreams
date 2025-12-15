@@ -45,6 +45,7 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 :::
 
 ::: second-column
+
 :::
 
 :::
@@ -383,7 +384,7 @@ You can [include `{ojs}` code chunks](https://quarto.org/docs/interactive/ojs/) 
 [I]{.yellow}tems for  
 [S]{.green}ystematic Reviews and  
 [M]{.blue}eta--  
-[A]{.indigo}nalyses [@page2021prisma; @page2021prismab]
+[A]{.indigo}nalyses [@page2021prisma; @page2021prismab; @moher2009preferred]
 
 :::
 

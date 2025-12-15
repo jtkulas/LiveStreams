@@ -230,8 +230,8 @@ OOH Session #108…<br><span class="bigger"><span class="prism"><span class="red
 </div>
 
 </section>
-<section id="open-office-hours-december-14-2025" class="slide level2">
-<h2>Open Office Hours <br>(December 14, 2025)</h2>
+<section id="open-office-hours-december-15-2025" class="slide level2">
+<h2>Open Office Hours <br>(December 15, 2025)</h2>
 <div class="quarto-layout-panel" data-layout="[[10,10],]">
 <div class="quarto-layout-row">
 <div class="first-column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -297,55 +297,55 @@ OOH Session #108…<br><span class="bigger"><span class="prism"><span class="red
 
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="100" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 99;"><span id="cb1-100"><a href=""></a>(<span class="kw">function</span> () {</span>
-<span id="cb1-101"><a href=""></a>  <span class="kw">const</span> uid <span class="op">=</span> <span class="st">'ojs-counter-1'</span><span class="op">;</span></span>
-<span id="cb1-102"><a href=""></a>  <span class="kw">const</span> host <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(uid) <span class="op">||</span> <span class="bu">document</span><span class="op">.</span><span class="at">body</span><span class="op">;</span></span>
-<span id="cb1-103"><a href=""></a></span>
-<span id="cb1-104"><a href=""></a>  <span class="kw">const</span> container <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">'div'</span>)<span class="op">;</span></span>
-<span id="cb1-105"><a href=""></a>  container<span class="op">.</span><span class="at">id</span> <span class="op">=</span> uid <span class="op">+</span> <span class="st">'-root'</span><span class="op">;</span></span>
-<span id="cb1-106"><a href=""></a>  container<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">maxWidth</span> <span class="op">=</span> <span class="st">'720px'</span><span class="op">;</span></span>
-<span id="cb1-107"><a href=""></a>  container<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">margin</span> <span class="op">=</span> <span class="st">'24px auto'</span><span class="op">;</span></span>
-<span id="cb1-108"><a href=""></a>  container<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`</span></span>
-<span id="cb1-109"><a href=""></a><span class="vs">    &lt;div style="text-align:center; padding:28px; font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;"&gt;</span></span>
-<span id="cb1-110"><a href=""></a><span class="vs">      &lt;button id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-btn" aria-live="polite" style="font-size:18px; padding:10px 20px; cursor:pointer; border-radius:6px; border:1px solid #ccc; background:#fff;"&gt;</span></span>
-<span id="cb1-111"><a href=""></a><span class="vs">        Click to +1!</span></span>
-<span id="cb1-112"><a href=""></a><span class="vs">      &lt;/button&gt;</span></span>
-<span id="cb1-113"><a href=""></a></span>
-<span id="cb1-114"><a href=""></a><span class="vs">      &lt;div id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-display" style="margin-top:22px;"&gt;</span></span>
-<span id="cb1-115"><a href=""></a><span class="vs">        &lt;h2 style="margin:0; font-weight:600;"&gt;Count: &lt;strong id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-value" style="color:#e15759;"&gt;0&lt;/strong&gt;&lt;/h2&gt;</span></span>
-<span id="cb1-116"><a href=""></a><span class="vs">        &lt;p id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-sub" style="color:#666; margin-top:10px;"&gt;You've clicked &lt;strong id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-plural"&gt;0&lt;/strong&gt; times!&lt;/p&gt;</span></span>
-<span id="cb1-117"><a href=""></a><span class="vs">      &lt;/div&gt;</span></span>
-<span id="cb1-118"><a href=""></a><span class="vs">    &lt;/div&gt;</span></span>
-<span id="cb1-119"><a href=""></a><span class="vs">  `</span><span class="op">;</span></span>
-<span id="cb1-120"><a href=""></a></span>
-<span id="cb1-121"><a href=""></a>  host<span class="op">.</span><span class="fu">appendChild</span>(container)<span class="op">;</span></span>
-<span id="cb1-122"><a href=""></a></span>
-<span id="cb1-123"><a href=""></a>  <span class="kw">let</span> count <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb1-124"><a href=""></a>  <span class="kw">const</span> btn <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-btn`</span>)<span class="op">;</span></span>
-<span id="cb1-125"><a href=""></a>  <span class="kw">const</span> valueEl <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-value`</span>)<span class="op">;</span></span>
-<span id="cb1-126"><a href=""></a>  <span class="kw">const</span> pluralEl <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-plural`</span>)<span class="op">;</span></span>
-<span id="cb1-127"><a href=""></a></span>
-<span id="cb1-128"><a href=""></a>  <span class="kw">function</span> <span class="fu">updateUI</span>() {</span>
-<span id="cb1-129"><a href=""></a>    valueEl<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="bu">String</span>(count)<span class="op">;</span></span>
-<span id="cb1-130"><a href=""></a>    pluralEl<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="bu">String</span>(count)<span class="op">;</span></span>
-<span id="cb1-131"><a href=""></a>    btn<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'aria-label'</span><span class="op">,</span> <span class="vs">`Click to increment. Current count </span><span class="sc">${</span>count<span class="sc">}</span><span class="vs">`</span>)<span class="op">;</span></span>
-<span id="cb1-132"><a href=""></a>  }</span>
-<span id="cb1-133"><a href=""></a></span>
-<span id="cb1-134"><a href=""></a>  btn<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'click'</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
-<span id="cb1-135"><a href=""></a>    count <span class="op">+=</span> <span class="dv">1</span><span class="op">;</span></span>
-<span id="cb1-136"><a href=""></a>    <span class="fu">updateUI</span>()<span class="op">;</span></span>
-<span id="cb1-137"><a href=""></a>  })<span class="op">;</span></span>
-<span id="cb1-138"><a href=""></a></span>
-<span id="cb1-139"><a href=""></a>  btn<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'keydown'</span><span class="op">,</span> (e) <span class="kw">=&gt;</span> {</span>
-<span id="cb1-140"><a href=""></a>    <span class="cf">if</span> (e<span class="op">.</span><span class="at">key</span> <span class="op">===</span> <span class="st">'Enter'</span> <span class="op">||</span> e<span class="op">.</span><span class="at">key</span> <span class="op">===</span> <span class="st">' '</span>) {</span>
-<span id="cb1-141"><a href=""></a>      e<span class="op">.</span><span class="fu">preventDefault</span>()<span class="op">;</span></span>
-<span id="cb1-142"><a href=""></a>      count <span class="op">+=</span> <span class="dv">1</span><span class="op">;</span></span>
-<span id="cb1-143"><a href=""></a>      <span class="fu">updateUI</span>()<span class="op">;</span></span>
-<span id="cb1-144"><a href=""></a>    }</span>
-<span id="cb1-145"><a href=""></a>  })<span class="op">;</span></span>
-<span id="cb1-146"><a href=""></a></span>
-<span id="cb1-147"><a href=""></a>  <span class="fu">updateUI</span>()<span class="op">;</span></span>
-<span id="cb1-148"><a href=""></a>})()<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb1" data-startfrom="101" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 100;"><span id="cb1-101"><a href=""></a>(<span class="kw">function</span> () {</span>
+<span id="cb1-102"><a href=""></a>  <span class="kw">const</span> uid <span class="op">=</span> <span class="st">'ojs-counter-1'</span><span class="op">;</span></span>
+<span id="cb1-103"><a href=""></a>  <span class="kw">const</span> host <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(uid) <span class="op">||</span> <span class="bu">document</span><span class="op">.</span><span class="at">body</span><span class="op">;</span></span>
+<span id="cb1-104"><a href=""></a></span>
+<span id="cb1-105"><a href=""></a>  <span class="kw">const</span> container <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">'div'</span>)<span class="op">;</span></span>
+<span id="cb1-106"><a href=""></a>  container<span class="op">.</span><span class="at">id</span> <span class="op">=</span> uid <span class="op">+</span> <span class="st">'-root'</span><span class="op">;</span></span>
+<span id="cb1-107"><a href=""></a>  container<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">maxWidth</span> <span class="op">=</span> <span class="st">'720px'</span><span class="op">;</span></span>
+<span id="cb1-108"><a href=""></a>  container<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">margin</span> <span class="op">=</span> <span class="st">'24px auto'</span><span class="op">;</span></span>
+<span id="cb1-109"><a href=""></a>  container<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`</span></span>
+<span id="cb1-110"><a href=""></a><span class="vs">    &lt;div style="text-align:center; padding:28px; font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;"&gt;</span></span>
+<span id="cb1-111"><a href=""></a><span class="vs">      &lt;button id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-btn" aria-live="polite" style="font-size:18px; padding:10px 20px; cursor:pointer; border-radius:6px; border:1px solid #ccc; background:#fff;"&gt;</span></span>
+<span id="cb1-112"><a href=""></a><span class="vs">        Click to +1!</span></span>
+<span id="cb1-113"><a href=""></a><span class="vs">      &lt;/button&gt;</span></span>
+<span id="cb1-114"><a href=""></a></span>
+<span id="cb1-115"><a href=""></a><span class="vs">      &lt;div id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-display" style="margin-top:22px;"&gt;</span></span>
+<span id="cb1-116"><a href=""></a><span class="vs">        &lt;h2 style="margin:0; font-weight:600;"&gt;Count: &lt;strong id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-value" style="color:#e15759;"&gt;0&lt;/strong&gt;&lt;/h2&gt;</span></span>
+<span id="cb1-117"><a href=""></a><span class="vs">        &lt;p id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-sub" style="color:#666; margin-top:10px;"&gt;You've clicked &lt;strong id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-plural"&gt;0&lt;/strong&gt; times!&lt;/p&gt;</span></span>
+<span id="cb1-118"><a href=""></a><span class="vs">      &lt;/div&gt;</span></span>
+<span id="cb1-119"><a href=""></a><span class="vs">    &lt;/div&gt;</span></span>
+<span id="cb1-120"><a href=""></a><span class="vs">  `</span><span class="op">;</span></span>
+<span id="cb1-121"><a href=""></a></span>
+<span id="cb1-122"><a href=""></a>  host<span class="op">.</span><span class="fu">appendChild</span>(container)<span class="op">;</span></span>
+<span id="cb1-123"><a href=""></a></span>
+<span id="cb1-124"><a href=""></a>  <span class="kw">let</span> count <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-125"><a href=""></a>  <span class="kw">const</span> btn <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-btn`</span>)<span class="op">;</span></span>
+<span id="cb1-126"><a href=""></a>  <span class="kw">const</span> valueEl <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-value`</span>)<span class="op">;</span></span>
+<span id="cb1-127"><a href=""></a>  <span class="kw">const</span> pluralEl <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-plural`</span>)<span class="op">;</span></span>
+<span id="cb1-128"><a href=""></a></span>
+<span id="cb1-129"><a href=""></a>  <span class="kw">function</span> <span class="fu">updateUI</span>() {</span>
+<span id="cb1-130"><a href=""></a>    valueEl<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="bu">String</span>(count)<span class="op">;</span></span>
+<span id="cb1-131"><a href=""></a>    pluralEl<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="bu">String</span>(count)<span class="op">;</span></span>
+<span id="cb1-132"><a href=""></a>    btn<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'aria-label'</span><span class="op">,</span> <span class="vs">`Click to increment. Current count </span><span class="sc">${</span>count<span class="sc">}</span><span class="vs">`</span>)<span class="op">;</span></span>
+<span id="cb1-133"><a href=""></a>  }</span>
+<span id="cb1-134"><a href=""></a></span>
+<span id="cb1-135"><a href=""></a>  btn<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'click'</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb1-136"><a href=""></a>    count <span class="op">+=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb1-137"><a href=""></a>    <span class="fu">updateUI</span>()<span class="op">;</span></span>
+<span id="cb1-138"><a href=""></a>  })<span class="op">;</span></span>
+<span id="cb1-139"><a href=""></a></span>
+<span id="cb1-140"><a href=""></a>  btn<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'keydown'</span><span class="op">,</span> (e) <span class="kw">=&gt;</span> {</span>
+<span id="cb1-141"><a href=""></a>    <span class="cf">if</span> (e<span class="op">.</span><span class="at">key</span> <span class="op">===</span> <span class="st">'Enter'</span> <span class="op">||</span> e<span class="op">.</span><span class="at">key</span> <span class="op">===</span> <span class="st">' '</span>) {</span>
+<span id="cb1-142"><a href=""></a>      e<span class="op">.</span><span class="fu">preventDefault</span>()<span class="op">;</span></span>
+<span id="cb1-143"><a href=""></a>      count <span class="op">+=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb1-144"><a href=""></a>      <span class="fu">updateUI</span>()<span class="op">;</span></span>
+<span id="cb1-145"><a href=""></a>    }</span>
+<span id="cb1-146"><a href=""></a>  })<span class="op">;</span></span>
+<span id="cb1-147"><a href=""></a></span>
+<span id="cb1-148"><a href=""></a>  <span class="fu">updateUI</span>()<span class="op">;</span></span>
+<span id="cb1-149"><a href=""></a>})()<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-1" data-nodetype="expression">
 
@@ -360,60 +360,60 @@ OOH Session #108…<br><span class="bigger"><span class="prism"><span class="red
 
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="159" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 158;"><span id="cb2-159"><a href=""></a>(<span class="kw">function</span> () {</span>
-<span id="cb2-160"><a href=""></a>  <span class="co">// A different visual (not a repeat): color-cycle panel with three controls</span></span>
-<span id="cb2-161"><a href=""></a>  <span class="kw">const</span> uid <span class="op">=</span> <span class="st">'ojs-color-panel-1'</span><span class="op">;</span></span>
-<span id="cb2-162"><a href=""></a>  <span class="kw">const</span> host <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(uid) <span class="op">||</span> <span class="bu">document</span><span class="op">.</span><span class="at">body</span><span class="op">;</span></span>
-<span id="cb2-163"><a href=""></a></span>
-<span id="cb2-164"><a href=""></a>  <span class="kw">const</span> colors <span class="op">=</span> [<span class="st">'#ff6b6b'</span><span class="op">,</span> <span class="st">'#ffd93d'</span><span class="op">,</span> <span class="st">'#6be3ff'</span><span class="op">,</span> <span class="st">'#9d8bff'</span><span class="op">,</span> <span class="st">'#7be495'</span>]<span class="op">;</span></span>
-<span id="cb2-165"><a href=""></a>  <span class="kw">let</span> idx <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb2-166"><a href=""></a></span>
-<span id="cb2-167"><a href=""></a>  <span class="kw">const</span> <span class="bu">root</span> <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">'div'</span>)<span class="op">;</span></span>
-<span id="cb2-168"><a href=""></a>  <span class="bu">root</span><span class="op">.</span><span class="at">id</span> <span class="op">=</span> uid <span class="op">+</span> <span class="st">'-root'</span><span class="op">;</span></span>
-<span id="cb2-169"><a href=""></a>  <span class="bu">root</span><span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">maxWidth</span> <span class="op">=</span> <span class="st">'520px'</span><span class="op">;</span></span>
-<span id="cb2-170"><a href=""></a>  <span class="bu">root</span><span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">margin</span> <span class="op">=</span> <span class="st">'18px auto'</span><span class="op">;</span></span>
-<span id="cb2-171"><a href=""></a>  <span class="bu">root</span><span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">display</span> <span class="op">=</span> <span class="st">'flex'</span><span class="op">;</span></span>
-<span id="cb2-172"><a href=""></a>  <span class="bu">root</span><span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">gap</span> <span class="op">=</span> <span class="st">'12px'</span><span class="op">;</span></span>
-<span id="cb2-173"><a href=""></a>  <span class="bu">root</span><span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">alignItems</span> <span class="op">=</span> <span class="st">'center'</span><span class="op">;</span></span>
-<span id="cb2-174"><a href=""></a>  <span class="bu">root</span><span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`</span></span>
-<span id="cb2-175"><a href=""></a><span class="vs">    &lt;div id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-panel" style="width:220px; height:120px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.12);"&gt;&lt;/div&gt;</span></span>
-<span id="cb2-176"><a href=""></a><span class="vs">    &lt;div style="flex:1 1 auto;"&gt;</span></span>
-<span id="cb2-177"><a href=""></a><span class="vs">      &lt;div style="margin-bottom:8px;"&gt;&lt;strong&gt;Color Cycle&lt;/strong&gt;&lt;/div&gt;</span></span>
-<span id="cb2-178"><a href=""></a><span class="vs">      &lt;div style="display:flex; gap:8px; align-items:center;"&gt;</span></span>
-<span id="cb2-179"><a href=""></a><span class="vs">        &lt;button id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-prev" style="padding:6px 10px;"&gt;Prev&lt;/button&gt;</span></span>
-<span id="cb2-180"><a href=""></a><span class="vs">        &lt;button id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-next" style="padding:6px 10px;"&gt;Next&lt;/button&gt;</span></span>
-<span id="cb2-181"><a href=""></a><span class="vs">        &lt;button id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-rand" style="padding:6px 10px;"&gt;Random&lt;/button&gt;</span></span>
-<span id="cb2-182"><a href=""></a><span class="vs">      &lt;/div&gt;</span></span>
-<span id="cb2-183"><a href=""></a><span class="vs">      &lt;div style="margin-top:10px; color:#666; font-size:13px;"&gt;Index: &lt;span id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-idx"&gt;0&lt;/span&gt;&lt;/div&gt;</span></span>
-<span id="cb2-184"><a href=""></a><span class="vs">    &lt;/div&gt;</span></span>
-<span id="cb2-185"><a href=""></a><span class="vs">  `</span><span class="op">;</span></span>
-<span id="cb2-186"><a href=""></a></span>
-<span id="cb2-187"><a href=""></a>  host<span class="op">.</span><span class="fu">appendChild</span>(<span class="bu">root</span>)<span class="op">;</span></span>
-<span id="cb2-188"><a href=""></a></span>
-<span id="cb2-189"><a href=""></a>  <span class="kw">const</span> panel <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-panel`</span>)<span class="op">;</span></span>
-<span id="cb2-190"><a href=""></a>  <span class="kw">const</span> prev <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-prev`</span>)<span class="op">;</span></span>
-<span id="cb2-191"><a href=""></a>  <span class="kw">const</span> next <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-next`</span>)<span class="op">;</span></span>
-<span id="cb2-192"><a href=""></a>  <span class="kw">const</span> rand <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-rand`</span>)<span class="op">;</span></span>
-<span id="cb2-193"><a href=""></a>  <span class="kw">const</span> idxLabel <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-idx`</span>)<span class="op">;</span></span>
-<span id="cb2-194"><a href=""></a></span>
-<span id="cb2-195"><a href=""></a>  <span class="kw">function</span> <span class="fu">render</span>() {</span>
-<span id="cb2-196"><a href=""></a>    panel<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> colors[idx <span class="op">%</span> colors<span class="op">.</span><span class="at">length</span>]<span class="op">;</span></span>
-<span id="cb2-197"><a href=""></a>    idxLabel<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="bu">String</span>(idx)<span class="op">;</span></span>
-<span id="cb2-198"><a href=""></a>  }</span>
-<span id="cb2-199"><a href=""></a></span>
-<span id="cb2-200"><a href=""></a>  prev<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'click'</span><span class="op">,</span> () <span class="kw">=&gt;</span> { idx <span class="op">=</span> (idx <span class="op">-</span> <span class="dv">1</span> <span class="op">+</span> colors<span class="op">.</span><span class="at">length</span>) <span class="op">%</span> colors<span class="op">.</span><span class="at">length</span><span class="op">;</span> <span class="fu">render</span>()<span class="op">;</span> })<span class="op">;</span></span>
-<span id="cb2-201"><a href=""></a>  next<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'click'</span><span class="op">,</span> () <span class="kw">=&gt;</span> { idx <span class="op">=</span> (idx <span class="op">+</span> <span class="dv">1</span>) <span class="op">%</span> colors<span class="op">.</span><span class="at">length</span><span class="op">;</span> <span class="fu">render</span>()<span class="op">;</span> })<span class="op">;</span></span>
-<span id="cb2-202"><a href=""></a>  rand<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'click'</span><span class="op">,</span> () <span class="kw">=&gt;</span> { idx <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">random</span>() <span class="op">*</span> colors<span class="op">.</span><span class="at">length</span>)<span class="op">;</span> <span class="fu">render</span>()<span class="op">;</span> })<span class="op">;</span></span>
-<span id="cb2-203"><a href=""></a></span>
-<span id="cb2-204"><a href=""></a>  <span class="co">// keyboard accessibility on panel</span></span>
-<span id="cb2-205"><a href=""></a>  panel<span class="op">.</span><span class="at">tabIndex</span> <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb2-206"><a href=""></a>  panel<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'keydown'</span><span class="op">,</span> (e) <span class="kw">=&gt;</span> {</span>
-<span id="cb2-207"><a href=""></a>    <span class="cf">if</span> (e<span class="op">.</span><span class="at">key</span> <span class="op">===</span> <span class="st">'ArrowLeft'</span>) prev<span class="op">.</span><span class="fu">click</span>()<span class="op">;</span></span>
-<span id="cb2-208"><a href=""></a>    <span class="cf">if</span> (e<span class="op">.</span><span class="at">key</span> <span class="op">===</span> <span class="st">'ArrowRight'</span>) next<span class="op">.</span><span class="fu">click</span>()<span class="op">;</span></span>
-<span id="cb2-209"><a href=""></a>  })<span class="op">;</span></span>
-<span id="cb2-210"><a href=""></a></span>
-<span id="cb2-211"><a href=""></a>  <span class="fu">render</span>()<span class="op">;</span></span>
-<span id="cb2-212"><a href=""></a>})()<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb2" data-startfrom="160" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 159;"><span id="cb2-160"><a href=""></a>(<span class="kw">function</span> () {</span>
+<span id="cb2-161"><a href=""></a>  <span class="co">// A different visual (not a repeat): color-cycle panel with three controls</span></span>
+<span id="cb2-162"><a href=""></a>  <span class="kw">const</span> uid <span class="op">=</span> <span class="st">'ojs-color-panel-1'</span><span class="op">;</span></span>
+<span id="cb2-163"><a href=""></a>  <span class="kw">const</span> host <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(uid) <span class="op">||</span> <span class="bu">document</span><span class="op">.</span><span class="at">body</span><span class="op">;</span></span>
+<span id="cb2-164"><a href=""></a></span>
+<span id="cb2-165"><a href=""></a>  <span class="kw">const</span> colors <span class="op">=</span> [<span class="st">'#ff6b6b'</span><span class="op">,</span> <span class="st">'#ffd93d'</span><span class="op">,</span> <span class="st">'#6be3ff'</span><span class="op">,</span> <span class="st">'#9d8bff'</span><span class="op">,</span> <span class="st">'#7be495'</span>]<span class="op">;</span></span>
+<span id="cb2-166"><a href=""></a>  <span class="kw">let</span> idx <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb2-167"><a href=""></a></span>
+<span id="cb2-168"><a href=""></a>  <span class="kw">const</span> <span class="bu">root</span> <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">'div'</span>)<span class="op">;</span></span>
+<span id="cb2-169"><a href=""></a>  <span class="bu">root</span><span class="op">.</span><span class="at">id</span> <span class="op">=</span> uid <span class="op">+</span> <span class="st">'-root'</span><span class="op">;</span></span>
+<span id="cb2-170"><a href=""></a>  <span class="bu">root</span><span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">maxWidth</span> <span class="op">=</span> <span class="st">'520px'</span><span class="op">;</span></span>
+<span id="cb2-171"><a href=""></a>  <span class="bu">root</span><span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">margin</span> <span class="op">=</span> <span class="st">'18px auto'</span><span class="op">;</span></span>
+<span id="cb2-172"><a href=""></a>  <span class="bu">root</span><span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">display</span> <span class="op">=</span> <span class="st">'flex'</span><span class="op">;</span></span>
+<span id="cb2-173"><a href=""></a>  <span class="bu">root</span><span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">gap</span> <span class="op">=</span> <span class="st">'12px'</span><span class="op">;</span></span>
+<span id="cb2-174"><a href=""></a>  <span class="bu">root</span><span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">alignItems</span> <span class="op">=</span> <span class="st">'center'</span><span class="op">;</span></span>
+<span id="cb2-175"><a href=""></a>  <span class="bu">root</span><span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`</span></span>
+<span id="cb2-176"><a href=""></a><span class="vs">    &lt;div id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-panel" style="width:220px; height:120px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.12);"&gt;&lt;/div&gt;</span></span>
+<span id="cb2-177"><a href=""></a><span class="vs">    &lt;div style="flex:1 1 auto;"&gt;</span></span>
+<span id="cb2-178"><a href=""></a><span class="vs">      &lt;div style="margin-bottom:8px;"&gt;&lt;strong&gt;Color Cycle&lt;/strong&gt;&lt;/div&gt;</span></span>
+<span id="cb2-179"><a href=""></a><span class="vs">      &lt;div style="display:flex; gap:8px; align-items:center;"&gt;</span></span>
+<span id="cb2-180"><a href=""></a><span class="vs">        &lt;button id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-prev" style="padding:6px 10px;"&gt;Prev&lt;/button&gt;</span></span>
+<span id="cb2-181"><a href=""></a><span class="vs">        &lt;button id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-next" style="padding:6px 10px;"&gt;Next&lt;/button&gt;</span></span>
+<span id="cb2-182"><a href=""></a><span class="vs">        &lt;button id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-rand" style="padding:6px 10px;"&gt;Random&lt;/button&gt;</span></span>
+<span id="cb2-183"><a href=""></a><span class="vs">      &lt;/div&gt;</span></span>
+<span id="cb2-184"><a href=""></a><span class="vs">      &lt;div style="margin-top:10px; color:#666; font-size:13px;"&gt;Index: &lt;span id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-idx"&gt;0&lt;/span&gt;&lt;/div&gt;</span></span>
+<span id="cb2-185"><a href=""></a><span class="vs">    &lt;/div&gt;</span></span>
+<span id="cb2-186"><a href=""></a><span class="vs">  `</span><span class="op">;</span></span>
+<span id="cb2-187"><a href=""></a></span>
+<span id="cb2-188"><a href=""></a>  host<span class="op">.</span><span class="fu">appendChild</span>(<span class="bu">root</span>)<span class="op">;</span></span>
+<span id="cb2-189"><a href=""></a></span>
+<span id="cb2-190"><a href=""></a>  <span class="kw">const</span> panel <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-panel`</span>)<span class="op">;</span></span>
+<span id="cb2-191"><a href=""></a>  <span class="kw">const</span> prev <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-prev`</span>)<span class="op">;</span></span>
+<span id="cb2-192"><a href=""></a>  <span class="kw">const</span> next <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-next`</span>)<span class="op">;</span></span>
+<span id="cb2-193"><a href=""></a>  <span class="kw">const</span> rand <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-rand`</span>)<span class="op">;</span></span>
+<span id="cb2-194"><a href=""></a>  <span class="kw">const</span> idxLabel <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-idx`</span>)<span class="op">;</span></span>
+<span id="cb2-195"><a href=""></a></span>
+<span id="cb2-196"><a href=""></a>  <span class="kw">function</span> <span class="fu">render</span>() {</span>
+<span id="cb2-197"><a href=""></a>    panel<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">background</span> <span class="op">=</span> colors[idx <span class="op">%</span> colors<span class="op">.</span><span class="at">length</span>]<span class="op">;</span></span>
+<span id="cb2-198"><a href=""></a>    idxLabel<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="bu">String</span>(idx)<span class="op">;</span></span>
+<span id="cb2-199"><a href=""></a>  }</span>
+<span id="cb2-200"><a href=""></a></span>
+<span id="cb2-201"><a href=""></a>  prev<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'click'</span><span class="op">,</span> () <span class="kw">=&gt;</span> { idx <span class="op">=</span> (idx <span class="op">-</span> <span class="dv">1</span> <span class="op">+</span> colors<span class="op">.</span><span class="at">length</span>) <span class="op">%</span> colors<span class="op">.</span><span class="at">length</span><span class="op">;</span> <span class="fu">render</span>()<span class="op">;</span> })<span class="op">;</span></span>
+<span id="cb2-202"><a href=""></a>  next<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'click'</span><span class="op">,</span> () <span class="kw">=&gt;</span> { idx <span class="op">=</span> (idx <span class="op">+</span> <span class="dv">1</span>) <span class="op">%</span> colors<span class="op">.</span><span class="at">length</span><span class="op">;</span> <span class="fu">render</span>()<span class="op">;</span> })<span class="op">;</span></span>
+<span id="cb2-203"><a href=""></a>  rand<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'click'</span><span class="op">,</span> () <span class="kw">=&gt;</span> { idx <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">random</span>() <span class="op">*</span> colors<span class="op">.</span><span class="at">length</span>)<span class="op">;</span> <span class="fu">render</span>()<span class="op">;</span> })<span class="op">;</span></span>
+<span id="cb2-204"><a href=""></a></span>
+<span id="cb2-205"><a href=""></a>  <span class="co">// keyboard accessibility on panel</span></span>
+<span id="cb2-206"><a href=""></a>  panel<span class="op">.</span><span class="at">tabIndex</span> <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb2-207"><a href=""></a>  panel<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'keydown'</span><span class="op">,</span> (e) <span class="kw">=&gt;</span> {</span>
+<span id="cb2-208"><a href=""></a>    <span class="cf">if</span> (e<span class="op">.</span><span class="at">key</span> <span class="op">===</span> <span class="st">'ArrowLeft'</span>) prev<span class="op">.</span><span class="fu">click</span>()<span class="op">;</span></span>
+<span id="cb2-209"><a href=""></a>    <span class="cf">if</span> (e<span class="op">.</span><span class="at">key</span> <span class="op">===</span> <span class="st">'ArrowRight'</span>) next<span class="op">.</span><span class="fu">click</span>()<span class="op">;</span></span>
+<span id="cb2-210"><a href=""></a>  })<span class="op">;</span></span>
+<span id="cb2-211"><a href=""></a></span>
+<span id="cb2-212"><a href=""></a>  <span class="fu">render</span>()<span class="op">;</span></span>
+<span id="cb2-213"><a href=""></a>})()<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-2" data-nodetype="expression">
 
@@ -428,144 +428,144 @@ OOH Session #108…<br><span class="bigger"><span class="prism"><span class="red
 
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="223" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 222;"><span id="cb3-223"><a href=""></a>(<span class="kw">function</span>(){</span>
-<span id="cb3-224"><a href=""></a>  <span class="kw">const</span> uid <span class="op">=</span> <span class="st">'ojs-scatter-1'</span><span class="op">;</span></span>
-<span id="cb3-225"><a href=""></a>  <span class="kw">const</span> host <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(uid) <span class="op">||</span> <span class="bu">document</span><span class="op">.</span><span class="at">body</span><span class="op">;</span></span>
-<span id="cb3-226"><a href=""></a></span>
-<span id="cb3-227"><a href=""></a>  <span class="co">// small markup</span></span>
-<span id="cb3-228"><a href=""></a>  <span class="kw">const</span> html <span class="op">=</span> <span class="vs">`</span></span>
-<span id="cb3-229"><a href=""></a><span class="vs">    &lt;div style="display:flex;gap:12px;align-items:flex-start;"&gt;</span></span>
-<span id="cb3-230"><a href=""></a><span class="vs">      &lt;div style="width:220px;font-family:system-ui, -apple-system, 'Segoe UI', Roboto, Arial;"&gt;</span></span>
-<span id="cb3-231"><a href=""></a><span class="vs">        &lt;div style="margin-bottom:8px;"&gt;&lt;strong&gt;Controls&lt;/strong&gt;&lt;/div&gt;</span></span>
-<span id="cb3-232"><a href=""></a><span class="vs">        &lt;div&gt;Points: &lt;span id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-n-label"&gt;200&lt;/span&gt;&lt;/div&gt;</span></span>
-<span id="cb3-233"><a href=""></a><span class="vs">        &lt;input id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-n" type="range" min="20" max="1000" value="200" style="width:100%;margin-bottom:8px;"/&gt;</span></span>
-<span id="cb3-234"><a href=""></a><span class="vs">        &lt;div&gt;Min Y: &lt;span id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-ymin-label"&gt;-3.0&lt;/span&gt;&lt;/div&gt;</span></span>
-<span id="cb3-235"><a href=""></a><span class="vs">        &lt;input id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-ymin" type="range" min="-5" max="5" step="0.1" value="-3" style="width:100%;"/&gt;</span></span>
-<span id="cb3-236"><a href=""></a><span class="vs">      &lt;/div&gt;</span></span>
-<span id="cb3-237"><a href=""></a><span class="vs">      &lt;svg id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-svg" width="520" height="300" viewBox="0 0 520 300" style="border:1px solid #eee;border-radius:6px;background:#fff;"&gt;&lt;/svg&gt;</span></span>
-<span id="cb3-238"><a href=""></a><span class="vs">    &lt;/div&gt;</span></span>
-<span id="cb3-239"><a href=""></a><span class="vs">    &lt;div id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-tooltip" style="position:absolute;display:none;pointer-events:none;background:rgba(0,0,0,0.75);color:#fff;padding:6px 8px;border-radius:6px;font-size:12px;"&gt;&lt;/div&gt;</span></span>
-<span id="cb3-240"><a href=""></a><span class="vs">  `</span><span class="op">;</span></span>
-<span id="cb3-241"><a href=""></a>  <span class="kw">const</span> container <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">'div'</span>)<span class="op">;</span></span>
-<span id="cb3-242"><a href=""></a>  container<span class="op">.</span><span class="at">id</span> <span class="op">=</span> uid <span class="op">+</span> <span class="st">'-root'</span><span class="op">;</span></span>
-<span id="cb3-243"><a href=""></a>  container<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">margin</span> <span class="op">=</span> <span class="st">'6px 0 18px'</span><span class="op">;</span></span>
-<span id="cb3-244"><a href=""></a>  container<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> html<span class="op">;</span></span>
-<span id="cb3-245"><a href=""></a>  host<span class="op">.</span><span class="fu">appendChild</span>(container)<span class="op">;</span></span>
-<span id="cb3-246"><a href=""></a></span>
-<span id="cb3-247"><a href=""></a>  <span class="co">// small init in RAF so elements exist</span></span>
-<span id="cb3-248"><a href=""></a>  <span class="fu">requestAnimationFrame</span>(() <span class="kw">=&gt;</span> {</span>
-<span id="cb3-249"><a href=""></a>    <span class="kw">const</span> svg <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-svg`</span>)<span class="op">;</span></span>
-<span id="cb3-250"><a href=""></a>    <span class="kw">const</span> nInput <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-n`</span>)<span class="op">;</span></span>
-<span id="cb3-251"><a href=""></a>    <span class="kw">const</span> nLabel <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-n-label`</span>)<span class="op">;</span></span>
-<span id="cb3-252"><a href=""></a>    <span class="kw">const</span> yminInput <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-ymin`</span>)<span class="op">;</span></span>
-<span id="cb3-253"><a href=""></a>    <span class="kw">const</span> yminLabel <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-ymin-label`</span>)<span class="op">;</span></span>
-<span id="cb3-254"><a href=""></a>    <span class="kw">const</span> tooltip <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-tooltip`</span>)<span class="op">;</span></span>
-<span id="cb3-255"><a href=""></a></span>
-<span id="cb3-256"><a href=""></a>    <span class="cf">if</span> (<span class="op">!</span>svg <span class="op">||</span> <span class="op">!</span>nInput <span class="op">||</span> <span class="op">!</span>nLabel <span class="op">||</span> <span class="op">!</span>yminInput <span class="op">||</span> <span class="op">!</span>yminLabel <span class="op">||</span> <span class="op">!</span>tooltip) {</span>
-<span id="cb3-257"><a href=""></a>      <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(<span class="st">'ojs scatter: missing element(s)'</span><span class="op">,</span> {<span class="dt">svg</span><span class="op">:!!</span>svg<span class="op">,</span> <span class="dt">nInput</span><span class="op">:!!</span>nInput<span class="op">,</span> <span class="dt">yminInput</span><span class="op">:!!</span>yminInput<span class="op">,</span> <span class="dt">tooltip</span><span class="op">:!!</span>tooltip})<span class="op">;</span></span>
-<span id="cb3-258"><a href=""></a>      <span class="cf">return</span><span class="op">;</span></span>
-<span id="cb3-259"><a href=""></a>    }</span>
-<span id="cb3-260"><a href=""></a></span>
-<span id="cb3-261"><a href=""></a>    <span class="co">// state and helpers</span></span>
-<span id="cb3-262"><a href=""></a>    <span class="kw">let</span> state <span class="op">=</span> { <span class="dt">n</span><span class="op">:</span> <span class="op">+</span>nInput<span class="op">.</span><span class="at">value</span><span class="op">,</span> <span class="dt">ymin</span><span class="op">:</span> <span class="op">+</span>yminInput<span class="op">.</span><span class="at">value</span><span class="op">,</span> <span class="dt">data</span><span class="op">:</span> [] }<span class="op">;</span></span>
-<span id="cb3-263"><a href=""></a></span>
-<span id="cb3-264"><a href=""></a>    <span class="kw">function</span> <span class="fu">genData</span>(n){</span>
-<span id="cb3-265"><a href=""></a>      <span class="kw">const</span> out <span class="op">=</span> []<span class="op">;</span></span>
-<span id="cb3-266"><a href=""></a>      <span class="cf">for</span> (<span class="kw">let</span> i<span class="op">=</span><span class="dv">0</span><span class="op">;</span>i<span class="op">&lt;</span>n<span class="op">;</span>i<span class="op">++</span>){</span>
-<span id="cb3-267"><a href=""></a>        <span class="kw">const</span> x <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">random</span>()<span class="op">*</span><span class="dv">10</span><span class="op">;</span></span>
-<span id="cb3-268"><a href=""></a>        <span class="kw">const</span> base <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sin</span>(x)<span class="op">*</span><span class="fl">1.6</span> <span class="op">+</span> x<span class="op">*</span><span class="fl">0.25</span><span class="op">;</span></span>
-<span id="cb3-269"><a href=""></a>        <span class="kw">const</span> y <span class="op">=</span> base <span class="op">+</span> (<span class="bu">Math</span><span class="op">.</span><span class="fu">random</span>()<span class="op">-</span><span class="fl">0.5</span>)<span class="op">*</span><span class="dv">2</span><span class="op">;</span></span>
-<span id="cb3-270"><a href=""></a>        out<span class="op">.</span><span class="fu">push</span>({x<span class="op">,</span>y})<span class="op">;</span></span>
-<span id="cb3-271"><a href=""></a>      }</span>
-<span id="cb3-272"><a href=""></a>      <span class="cf">return</span> out<span class="op">;</span></span>
-<span id="cb3-273"><a href=""></a>    }</span>
-<span id="cb3-274"><a href=""></a></span>
-<span id="cb3-275"><a href=""></a>    <span class="kw">function</span> <span class="fu">clearSVG</span>(){</span>
-<span id="cb3-276"><a href=""></a>      <span class="cf">while</span> (svg<span class="op">.</span><span class="at">firstChild</span>) svg<span class="op">.</span><span class="fu">removeChild</span>(svg<span class="op">.</span><span class="at">firstChild</span>)<span class="op">;</span></span>
-<span id="cb3-277"><a href=""></a>    }</span>
-<span id="cb3-278"><a href=""></a></span>
-<span id="cb3-279"><a href=""></a>    <span class="kw">function</span> <span class="fu">xScale</span>(x){ <span class="cf">return</span> <span class="dv">40</span> <span class="op">+</span> (x<span class="op">/</span><span class="dv">10</span>) <span class="op">*</span> (<span class="dv">520</span> <span class="op">-</span> <span class="dv">80</span>)<span class="op">;</span> } <span class="co">// left/right padding</span></span>
-<span id="cb3-280"><a href=""></a>    <span class="kw">function</span> <span class="fu">yScale</span>(y){</span>
-<span id="cb3-281"><a href=""></a>      <span class="co">// map y roughly to 0..300 with simple clamp</span></span>
-<span id="cb3-282"><a href=""></a>      <span class="kw">const</span> ymin <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(<span class="op">...</span>state<span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="fu">map</span>(d<span class="kw">=&gt;</span>d<span class="op">.</span><span class="at">y</span>)<span class="op">,</span> <span class="op">-</span><span class="dv">5</span>)<span class="op">;</span></span>
-<span id="cb3-283"><a href=""></a>      <span class="kw">const</span> ymax <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="op">...</span>state<span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="fu">map</span>(d<span class="kw">=&gt;</span>d<span class="op">.</span><span class="at">y</span>)<span class="op">,</span> <span class="dv">10</span>)<span class="op">;</span></span>
-<span id="cb3-284"><a href=""></a>      <span class="kw">const</span> pad <span class="op">=</span> (ymax <span class="op">-</span> ymin) <span class="op">*</span> <span class="fl">0.06</span><span class="op">;</span></span>
-<span id="cb3-285"><a href=""></a>      <span class="kw">const</span> low <span class="op">=</span> ymin <span class="op">-</span> pad<span class="op">;</span></span>
-<span id="cb3-286"><a href=""></a>      <span class="kw">const</span> high <span class="op">=</span> ymax <span class="op">+</span> pad<span class="op">;</span></span>
-<span id="cb3-287"><a href=""></a>      <span class="kw">const</span> t <span class="op">=</span> (y <span class="op">-</span> low) <span class="op">/</span> (high <span class="op">-</span> low <span class="op">||</span> <span class="dv">1</span>)<span class="op">;</span></span>
-<span id="cb3-288"><a href=""></a>      <span class="cf">return</span> <span class="dv">260</span> <span class="op">-</span> t <span class="op">*</span> <span class="dv">220</span><span class="op">;</span> <span class="co">// top/bottom padding</span></span>
-<span id="cb3-289"><a href=""></a>    }</span>
-<span id="cb3-290"><a href=""></a></span>
-<span id="cb3-291"><a href=""></a>    <span class="kw">function</span> <span class="fu">draw</span>(){</span>
-<span id="cb3-292"><a href=""></a>      <span class="fu">clearSVG</span>()<span class="op">;</span></span>
-<span id="cb3-293"><a href=""></a></span>
-<span id="cb3-294"><a href=""></a>      <span class="co">// axes (simple)</span></span>
-<span id="cb3-295"><a href=""></a>      <span class="kw">const</span> axisX <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElementNS</span>(<span class="st">'http://www.w3.org/2000/svg'</span><span class="op">,</span><span class="st">'line'</span>)<span class="op">;</span></span>
-<span id="cb3-296"><a href=""></a>      axisX<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'x1'</span><span class="op">,</span><span class="st">'40'</span>)<span class="op">;</span> axisX<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'y1'</span><span class="op">,</span><span class="st">'270'</span>)<span class="op">;</span></span>
-<span id="cb3-297"><a href=""></a>      axisX<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'x2'</span><span class="op">,</span><span class="st">'480'</span>)<span class="op">;</span> axisX<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'y2'</span><span class="op">,</span><span class="st">'270'</span>)<span class="op">;</span></span>
-<span id="cb3-298"><a href=""></a>      axisX<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'stroke'</span><span class="op">,</span><span class="st">'#ddd'</span>)<span class="op">;</span></span>
-<span id="cb3-299"><a href=""></a>      svg<span class="op">.</span><span class="fu">appendChild</span>(axisX)<span class="op">;</span></span>
-<span id="cb3-300"><a href=""></a></span>
-<span id="cb3-301"><a href=""></a>      <span class="co">// filter</span></span>
-<span id="cb3-302"><a href=""></a>      <span class="kw">const</span> pts <span class="op">=</span> state<span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">y</span> <span class="op">&gt;=</span> state<span class="op">.</span><span class="at">ymin</span>)<span class="op">;</span></span>
-<span id="cb3-303"><a href=""></a></span>
-<span id="cb3-304"><a href=""></a>      <span class="co">// draw points</span></span>
-<span id="cb3-305"><a href=""></a>      pts<span class="op">.</span><span class="fu">forEach</span>(d <span class="kw">=&gt;</span> {</span>
-<span id="cb3-306"><a href=""></a>        <span class="kw">const</span> c <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElementNS</span>(<span class="st">'http://www.w3.org/2000/svg'</span><span class="op">,</span><span class="st">'circle'</span>)<span class="op">;</span></span>
-<span id="cb3-307"><a href=""></a>        c<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'cx'</span><span class="op">,</span> <span class="bu">String</span>(<span class="fu">xScale</span>(d<span class="op">.</span><span class="at">x</span>)))<span class="op">;</span></span>
-<span id="cb3-308"><a href=""></a>        c<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'cy'</span><span class="op">,</span> <span class="bu">String</span>(<span class="fu">yScale</span>(d<span class="op">.</span><span class="at">y</span>)))<span class="op">;</span></span>
-<span id="cb3-309"><a href=""></a>        c<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'r'</span><span class="op">,</span><span class="st">'4.5'</span>)<span class="op">;</span></span>
-<span id="cb3-310"><a href=""></a>        c<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'fill'</span><span class="op">,</span><span class="st">'#4e79a7'</span>)<span class="op">;</span></span>
-<span id="cb3-311"><a href=""></a>        c<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'stroke'</span><span class="op">,</span><span class="st">'#fff'</span>)<span class="op">;</span></span>
-<span id="cb3-312"><a href=""></a>        c<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'stroke-width'</span><span class="op">,</span><span class="st">'0.8'</span>)<span class="op">;</span></span>
-<span id="cb3-313"><a href=""></a>        c<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">cursor</span> <span class="op">=</span> <span class="st">'pointer'</span><span class="op">;</span></span>
-<span id="cb3-314"><a href=""></a>        c<span class="op">.</span><span class="at">__data</span> <span class="op">=</span> d<span class="op">;</span></span>
-<span id="cb3-315"><a href=""></a>        c<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'mouseenter'</span><span class="op">,</span> (ev) <span class="kw">=&gt;</span> {</span>
-<span id="cb3-316"><a href=""></a>          <span class="kw">const</span> dd <span class="op">=</span> ev<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">__data</span><span class="op">;</span></span>
-<span id="cb3-317"><a href=""></a>          tooltip<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">display</span> <span class="op">=</span> <span class="st">'block'</span><span class="op">;</span></span>
-<span id="cb3-318"><a href=""></a>          tooltip<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`x: </span><span class="sc">${</span>dd<span class="op">.</span><span class="at">x</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="vs">&lt;br/&gt;y: </span><span class="sc">${</span>dd<span class="op">.</span><span class="at">y</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="vs">`</span><span class="op">;</span></span>
-<span id="cb3-319"><a href=""></a>        })<span class="op">;</span></span>
-<span id="cb3-320"><a href=""></a>        c<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'mousemove'</span><span class="op">,</span> (ev) <span class="kw">=&gt;</span> {</span>
-<span id="cb3-321"><a href=""></a>          tooltip<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">left</span> <span class="op">=</span> (ev<span class="op">.</span><span class="at">pageX</span> <span class="op">+</span> <span class="dv">10</span>) <span class="op">+</span> <span class="st">'px'</span><span class="op">;</span></span>
-<span id="cb3-322"><a href=""></a>          tooltip<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">top</span> <span class="op">=</span> (ev<span class="op">.</span><span class="at">pageY</span> <span class="op">-</span> <span class="dv">30</span>) <span class="op">+</span> <span class="st">'px'</span><span class="op">;</span></span>
-<span id="cb3-323"><a href=""></a>        })<span class="op">;</span></span>
-<span id="cb3-324"><a href=""></a>        c<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'mouseleave'</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
-<span id="cb3-325"><a href=""></a>          tooltip<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">display</span> <span class="op">=</span> <span class="st">'none'</span><span class="op">;</span></span>
-<span id="cb3-326"><a href=""></a>        })<span class="op">;</span></span>
-<span id="cb3-327"><a href=""></a>        svg<span class="op">.</span><span class="fu">appendChild</span>(c)<span class="op">;</span></span>
-<span id="cb3-328"><a href=""></a>      })<span class="op">;</span></span>
-<span id="cb3-329"><a href=""></a></span>
-<span id="cb3-330"><a href=""></a>      <span class="co">// small label</span></span>
-<span id="cb3-331"><a href=""></a>      <span class="kw">const</span> lbl <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElementNS</span>(<span class="st">'http://www.w3.org/2000/svg'</span><span class="op">,</span><span class="st">'text'</span>)<span class="op">;</span></span>
-<span id="cb3-332"><a href=""></a>      lbl<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'x'</span><span class="op">,</span><span class="st">'260'</span>)<span class="op">;</span> lbl<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'y'</span><span class="op">,</span><span class="st">'16'</span>)<span class="op">;</span></span>
-<span id="cb3-333"><a href=""></a>      lbl<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'text-anchor'</span><span class="op">,</span><span class="st">'middle'</span>)<span class="op">;</span> lbl<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'font-size'</span><span class="op">,</span><span class="st">'12'</span>)<span class="op">;</span> lbl<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'fill'</span><span class="op">,</span><span class="st">'#444'</span>)<span class="op">;</span></span>
-<span id="cb3-334"><a href=""></a>      lbl<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="vs">`Showing </span><span class="sc">${</span>pts<span class="op">.</span><span class="at">length</span><span class="sc">}</span><span class="vs"> of </span><span class="sc">${</span>state<span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="at">length</span><span class="sc">}</span><span class="vs"> points (Min Y = </span><span class="sc">${</span>state<span class="op">.</span><span class="at">ymin</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">1</span>)<span class="sc">}</span><span class="vs">)`</span><span class="op">;</span></span>
-<span id="cb3-335"><a href=""></a>      svg<span class="op">.</span><span class="fu">appendChild</span>(lbl)<span class="op">;</span></span>
-<span id="cb3-336"><a href=""></a>    }</span>
-<span id="cb3-337"><a href=""></a></span>
-<span id="cb3-338"><a href=""></a>    <span class="co">// debounce</span></span>
-<span id="cb3-339"><a href=""></a>    <span class="kw">let</span> t<span class="op">;</span></span>
-<span id="cb3-340"><a href=""></a>    <span class="kw">function</span> <span class="fu">redrawDebounced</span>(){ <span class="pp">clearTimeout</span>(t)<span class="op">;</span> t <span class="op">=</span> <span class="pp">setTimeout</span>(draw<span class="op">,</span> <span class="dv">40</span>)<span class="op">;</span> }</span>
-<span id="cb3-341"><a href=""></a></span>
-<span id="cb3-342"><a href=""></a>    <span class="co">// events</span></span>
-<span id="cb3-343"><a href=""></a>    nInput<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'input'</span><span class="op">,</span> (e) <span class="kw">=&gt;</span> {</span>
-<span id="cb3-344"><a href=""></a>      state<span class="op">.</span><span class="at">n</span> <span class="op">=</span> <span class="op">+</span>e<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">value</span><span class="op">;</span></span>
-<span id="cb3-345"><a href=""></a>      nLabel<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="bu">String</span>(state<span class="op">.</span><span class="at">n</span>)<span class="op">;</span></span>
-<span id="cb3-346"><a href=""></a>      state<span class="op">.</span><span class="at">data</span> <span class="op">=</span> <span class="fu">genData</span>(state<span class="op">.</span><span class="at">n</span>)<span class="op">;</span></span>
-<span id="cb3-347"><a href=""></a>      <span class="fu">redrawDebounced</span>()<span class="op">;</span></span>
-<span id="cb3-348"><a href=""></a>    })<span class="op">;</span></span>
-<span id="cb3-349"><a href=""></a></span>
-<span id="cb3-350"><a href=""></a>    yminInput<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'input'</span><span class="op">,</span> (e) <span class="kw">=&gt;</span> {</span>
-<span id="cb3-351"><a href=""></a>      state<span class="op">.</span><span class="at">ymin</span> <span class="op">=</span> <span class="op">+</span>e<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">value</span><span class="op">;</span></span>
-<span id="cb3-352"><a href=""></a>      yminLabel<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> state<span class="op">.</span><span class="at">ymin</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">1</span>)<span class="op">;</span></span>
-<span id="cb3-353"><a href=""></a>      <span class="fu">redrawDebounced</span>()<span class="op">;</span></span>
-<span id="cb3-354"><a href=""></a>    })<span class="op">;</span></span>
-<span id="cb3-355"><a href=""></a></span>
-<span id="cb3-356"><a href=""></a>    <span class="co">// initial render</span></span>
-<span id="cb3-357"><a href=""></a>    state<span class="op">.</span><span class="at">data</span> <span class="op">=</span> <span class="fu">genData</span>(state<span class="op">.</span><span class="at">n</span>)<span class="op">;</span></span>
-<span id="cb3-358"><a href=""></a>    <span class="fu">draw</span>()<span class="op">;</span></span>
-<span id="cb3-359"><a href=""></a>  })<span class="op">;</span></span>
-<span id="cb3-360"><a href=""></a>})()<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code hidden" id="cb3" data-startfrom="224" data-source-offset="0"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 223;"><span id="cb3-224"><a href=""></a>(<span class="kw">function</span>(){</span>
+<span id="cb3-225"><a href=""></a>  <span class="kw">const</span> uid <span class="op">=</span> <span class="st">'ojs-scatter-1'</span><span class="op">;</span></span>
+<span id="cb3-226"><a href=""></a>  <span class="kw">const</span> host <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(uid) <span class="op">||</span> <span class="bu">document</span><span class="op">.</span><span class="at">body</span><span class="op">;</span></span>
+<span id="cb3-227"><a href=""></a></span>
+<span id="cb3-228"><a href=""></a>  <span class="co">// small markup</span></span>
+<span id="cb3-229"><a href=""></a>  <span class="kw">const</span> html <span class="op">=</span> <span class="vs">`</span></span>
+<span id="cb3-230"><a href=""></a><span class="vs">    &lt;div style="display:flex;gap:12px;align-items:flex-start;"&gt;</span></span>
+<span id="cb3-231"><a href=""></a><span class="vs">      &lt;div style="width:220px;font-family:system-ui, -apple-system, 'Segoe UI', Roboto, Arial;"&gt;</span></span>
+<span id="cb3-232"><a href=""></a><span class="vs">        &lt;div style="margin-bottom:8px;"&gt;&lt;strong&gt;Controls&lt;/strong&gt;&lt;/div&gt;</span></span>
+<span id="cb3-233"><a href=""></a><span class="vs">        &lt;div&gt;Points: &lt;span id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-n-label"&gt;200&lt;/span&gt;&lt;/div&gt;</span></span>
+<span id="cb3-234"><a href=""></a><span class="vs">        &lt;input id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-n" type="range" min="20" max="1000" value="200" style="width:100%;margin-bottom:8px;"/&gt;</span></span>
+<span id="cb3-235"><a href=""></a><span class="vs">        &lt;div&gt;Min Y: &lt;span id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-ymin-label"&gt;-3.0&lt;/span&gt;&lt;/div&gt;</span></span>
+<span id="cb3-236"><a href=""></a><span class="vs">        &lt;input id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-ymin" type="range" min="-5" max="5" step="0.1" value="-3" style="width:100%;"/&gt;</span></span>
+<span id="cb3-237"><a href=""></a><span class="vs">      &lt;/div&gt;</span></span>
+<span id="cb3-238"><a href=""></a><span class="vs">      &lt;svg id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-svg" width="520" height="300" viewBox="0 0 520 300" style="border:1px solid #eee;border-radius:6px;background:#fff;"&gt;&lt;/svg&gt;</span></span>
+<span id="cb3-239"><a href=""></a><span class="vs">    &lt;/div&gt;</span></span>
+<span id="cb3-240"><a href=""></a><span class="vs">    &lt;div id="</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-tooltip" style="position:absolute;display:none;pointer-events:none;background:rgba(0,0,0,0.75);color:#fff;padding:6px 8px;border-radius:6px;font-size:12px;"&gt;&lt;/div&gt;</span></span>
+<span id="cb3-241"><a href=""></a><span class="vs">  `</span><span class="op">;</span></span>
+<span id="cb3-242"><a href=""></a>  <span class="kw">const</span> container <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElement</span>(<span class="st">'div'</span>)<span class="op">;</span></span>
+<span id="cb3-243"><a href=""></a>  container<span class="op">.</span><span class="at">id</span> <span class="op">=</span> uid <span class="op">+</span> <span class="st">'-root'</span><span class="op">;</span></span>
+<span id="cb3-244"><a href=""></a>  container<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">margin</span> <span class="op">=</span> <span class="st">'6px 0 18px'</span><span class="op">;</span></span>
+<span id="cb3-245"><a href=""></a>  container<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> html<span class="op">;</span></span>
+<span id="cb3-246"><a href=""></a>  host<span class="op">.</span><span class="fu">appendChild</span>(container)<span class="op">;</span></span>
+<span id="cb3-247"><a href=""></a></span>
+<span id="cb3-248"><a href=""></a>  <span class="co">// small init in RAF so elements exist</span></span>
+<span id="cb3-249"><a href=""></a>  <span class="fu">requestAnimationFrame</span>(() <span class="kw">=&gt;</span> {</span>
+<span id="cb3-250"><a href=""></a>    <span class="kw">const</span> svg <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-svg`</span>)<span class="op">;</span></span>
+<span id="cb3-251"><a href=""></a>    <span class="kw">const</span> nInput <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-n`</span>)<span class="op">;</span></span>
+<span id="cb3-252"><a href=""></a>    <span class="kw">const</span> nLabel <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-n-label`</span>)<span class="op">;</span></span>
+<span id="cb3-253"><a href=""></a>    <span class="kw">const</span> yminInput <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-ymin`</span>)<span class="op">;</span></span>
+<span id="cb3-254"><a href=""></a>    <span class="kw">const</span> yminLabel <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-ymin-label`</span>)<span class="op">;</span></span>
+<span id="cb3-255"><a href=""></a>    <span class="kw">const</span> tooltip <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="vs">`</span><span class="sc">${</span>uid<span class="sc">}</span><span class="vs">-tooltip`</span>)<span class="op">;</span></span>
+<span id="cb3-256"><a href=""></a></span>
+<span id="cb3-257"><a href=""></a>    <span class="cf">if</span> (<span class="op">!</span>svg <span class="op">||</span> <span class="op">!</span>nInput <span class="op">||</span> <span class="op">!</span>nLabel <span class="op">||</span> <span class="op">!</span>yminInput <span class="op">||</span> <span class="op">!</span>yminLabel <span class="op">||</span> <span class="op">!</span>tooltip) {</span>
+<span id="cb3-258"><a href=""></a>      <span class="bu">console</span><span class="op">.</span><span class="fu">error</span>(<span class="st">'ojs scatter: missing element(s)'</span><span class="op">,</span> {<span class="dt">svg</span><span class="op">:!!</span>svg<span class="op">,</span> <span class="dt">nInput</span><span class="op">:!!</span>nInput<span class="op">,</span> <span class="dt">yminInput</span><span class="op">:!!</span>yminInput<span class="op">,</span> <span class="dt">tooltip</span><span class="op">:!!</span>tooltip})<span class="op">;</span></span>
+<span id="cb3-259"><a href=""></a>      <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb3-260"><a href=""></a>    }</span>
+<span id="cb3-261"><a href=""></a></span>
+<span id="cb3-262"><a href=""></a>    <span class="co">// state and helpers</span></span>
+<span id="cb3-263"><a href=""></a>    <span class="kw">let</span> state <span class="op">=</span> { <span class="dt">n</span><span class="op">:</span> <span class="op">+</span>nInput<span class="op">.</span><span class="at">value</span><span class="op">,</span> <span class="dt">ymin</span><span class="op">:</span> <span class="op">+</span>yminInput<span class="op">.</span><span class="at">value</span><span class="op">,</span> <span class="dt">data</span><span class="op">:</span> [] }<span class="op">;</span></span>
+<span id="cb3-264"><a href=""></a></span>
+<span id="cb3-265"><a href=""></a>    <span class="kw">function</span> <span class="fu">genData</span>(n){</span>
+<span id="cb3-266"><a href=""></a>      <span class="kw">const</span> out <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb3-267"><a href=""></a>      <span class="cf">for</span> (<span class="kw">let</span> i<span class="op">=</span><span class="dv">0</span><span class="op">;</span>i<span class="op">&lt;</span>n<span class="op">;</span>i<span class="op">++</span>){</span>
+<span id="cb3-268"><a href=""></a>        <span class="kw">const</span> x <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">random</span>()<span class="op">*</span><span class="dv">10</span><span class="op">;</span></span>
+<span id="cb3-269"><a href=""></a>        <span class="kw">const</span> base <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">sin</span>(x)<span class="op">*</span><span class="fl">1.6</span> <span class="op">+</span> x<span class="op">*</span><span class="fl">0.25</span><span class="op">;</span></span>
+<span id="cb3-270"><a href=""></a>        <span class="kw">const</span> y <span class="op">=</span> base <span class="op">+</span> (<span class="bu">Math</span><span class="op">.</span><span class="fu">random</span>()<span class="op">-</span><span class="fl">0.5</span>)<span class="op">*</span><span class="dv">2</span><span class="op">;</span></span>
+<span id="cb3-271"><a href=""></a>        out<span class="op">.</span><span class="fu">push</span>({x<span class="op">,</span>y})<span class="op">;</span></span>
+<span id="cb3-272"><a href=""></a>      }</span>
+<span id="cb3-273"><a href=""></a>      <span class="cf">return</span> out<span class="op">;</span></span>
+<span id="cb3-274"><a href=""></a>    }</span>
+<span id="cb3-275"><a href=""></a></span>
+<span id="cb3-276"><a href=""></a>    <span class="kw">function</span> <span class="fu">clearSVG</span>(){</span>
+<span id="cb3-277"><a href=""></a>      <span class="cf">while</span> (svg<span class="op">.</span><span class="at">firstChild</span>) svg<span class="op">.</span><span class="fu">removeChild</span>(svg<span class="op">.</span><span class="at">firstChild</span>)<span class="op">;</span></span>
+<span id="cb3-278"><a href=""></a>    }</span>
+<span id="cb3-279"><a href=""></a></span>
+<span id="cb3-280"><a href=""></a>    <span class="kw">function</span> <span class="fu">xScale</span>(x){ <span class="cf">return</span> <span class="dv">40</span> <span class="op">+</span> (x<span class="op">/</span><span class="dv">10</span>) <span class="op">*</span> (<span class="dv">520</span> <span class="op">-</span> <span class="dv">80</span>)<span class="op">;</span> } <span class="co">// left/right padding</span></span>
+<span id="cb3-281"><a href=""></a>    <span class="kw">function</span> <span class="fu">yScale</span>(y){</span>
+<span id="cb3-282"><a href=""></a>      <span class="co">// map y roughly to 0..300 with simple clamp</span></span>
+<span id="cb3-283"><a href=""></a>      <span class="kw">const</span> ymin <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">min</span>(<span class="op">...</span>state<span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="fu">map</span>(d<span class="kw">=&gt;</span>d<span class="op">.</span><span class="at">y</span>)<span class="op">,</span> <span class="op">-</span><span class="dv">5</span>)<span class="op">;</span></span>
+<span id="cb3-284"><a href=""></a>      <span class="kw">const</span> ymax <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">max</span>(<span class="op">...</span>state<span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="fu">map</span>(d<span class="kw">=&gt;</span>d<span class="op">.</span><span class="at">y</span>)<span class="op">,</span> <span class="dv">10</span>)<span class="op">;</span></span>
+<span id="cb3-285"><a href=""></a>      <span class="kw">const</span> pad <span class="op">=</span> (ymax <span class="op">-</span> ymin) <span class="op">*</span> <span class="fl">0.06</span><span class="op">;</span></span>
+<span id="cb3-286"><a href=""></a>      <span class="kw">const</span> low <span class="op">=</span> ymin <span class="op">-</span> pad<span class="op">;</span></span>
+<span id="cb3-287"><a href=""></a>      <span class="kw">const</span> high <span class="op">=</span> ymax <span class="op">+</span> pad<span class="op">;</span></span>
+<span id="cb3-288"><a href=""></a>      <span class="kw">const</span> t <span class="op">=</span> (y <span class="op">-</span> low) <span class="op">/</span> (high <span class="op">-</span> low <span class="op">||</span> <span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb3-289"><a href=""></a>      <span class="cf">return</span> <span class="dv">260</span> <span class="op">-</span> t <span class="op">*</span> <span class="dv">220</span><span class="op">;</span> <span class="co">// top/bottom padding</span></span>
+<span id="cb3-290"><a href=""></a>    }</span>
+<span id="cb3-291"><a href=""></a></span>
+<span id="cb3-292"><a href=""></a>    <span class="kw">function</span> <span class="fu">draw</span>(){</span>
+<span id="cb3-293"><a href=""></a>      <span class="fu">clearSVG</span>()<span class="op">;</span></span>
+<span id="cb3-294"><a href=""></a></span>
+<span id="cb3-295"><a href=""></a>      <span class="co">// axes (simple)</span></span>
+<span id="cb3-296"><a href=""></a>      <span class="kw">const</span> axisX <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElementNS</span>(<span class="st">'http://www.w3.org/2000/svg'</span><span class="op">,</span><span class="st">'line'</span>)<span class="op">;</span></span>
+<span id="cb3-297"><a href=""></a>      axisX<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'x1'</span><span class="op">,</span><span class="st">'40'</span>)<span class="op">;</span> axisX<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'y1'</span><span class="op">,</span><span class="st">'270'</span>)<span class="op">;</span></span>
+<span id="cb3-298"><a href=""></a>      axisX<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'x2'</span><span class="op">,</span><span class="st">'480'</span>)<span class="op">;</span> axisX<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'y2'</span><span class="op">,</span><span class="st">'270'</span>)<span class="op">;</span></span>
+<span id="cb3-299"><a href=""></a>      axisX<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'stroke'</span><span class="op">,</span><span class="st">'#ddd'</span>)<span class="op">;</span></span>
+<span id="cb3-300"><a href=""></a>      svg<span class="op">.</span><span class="fu">appendChild</span>(axisX)<span class="op">;</span></span>
+<span id="cb3-301"><a href=""></a></span>
+<span id="cb3-302"><a href=""></a>      <span class="co">// filter</span></span>
+<span id="cb3-303"><a href=""></a>      <span class="kw">const</span> pts <span class="op">=</span> state<span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="fu">filter</span>(d <span class="kw">=&gt;</span> d<span class="op">.</span><span class="at">y</span> <span class="op">&gt;=</span> state<span class="op">.</span><span class="at">ymin</span>)<span class="op">;</span></span>
+<span id="cb3-304"><a href=""></a></span>
+<span id="cb3-305"><a href=""></a>      <span class="co">// draw points</span></span>
+<span id="cb3-306"><a href=""></a>      pts<span class="op">.</span><span class="fu">forEach</span>(d <span class="kw">=&gt;</span> {</span>
+<span id="cb3-307"><a href=""></a>        <span class="kw">const</span> c <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElementNS</span>(<span class="st">'http://www.w3.org/2000/svg'</span><span class="op">,</span><span class="st">'circle'</span>)<span class="op">;</span></span>
+<span id="cb3-308"><a href=""></a>        c<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'cx'</span><span class="op">,</span> <span class="bu">String</span>(<span class="fu">xScale</span>(d<span class="op">.</span><span class="at">x</span>)))<span class="op">;</span></span>
+<span id="cb3-309"><a href=""></a>        c<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'cy'</span><span class="op">,</span> <span class="bu">String</span>(<span class="fu">yScale</span>(d<span class="op">.</span><span class="at">y</span>)))<span class="op">;</span></span>
+<span id="cb3-310"><a href=""></a>        c<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'r'</span><span class="op">,</span><span class="st">'4.5'</span>)<span class="op">;</span></span>
+<span id="cb3-311"><a href=""></a>        c<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'fill'</span><span class="op">,</span><span class="st">'#4e79a7'</span>)<span class="op">;</span></span>
+<span id="cb3-312"><a href=""></a>        c<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'stroke'</span><span class="op">,</span><span class="st">'#fff'</span>)<span class="op">;</span></span>
+<span id="cb3-313"><a href=""></a>        c<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'stroke-width'</span><span class="op">,</span><span class="st">'0.8'</span>)<span class="op">;</span></span>
+<span id="cb3-314"><a href=""></a>        c<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">cursor</span> <span class="op">=</span> <span class="st">'pointer'</span><span class="op">;</span></span>
+<span id="cb3-315"><a href=""></a>        c<span class="op">.</span><span class="at">__data</span> <span class="op">=</span> d<span class="op">;</span></span>
+<span id="cb3-316"><a href=""></a>        c<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'mouseenter'</span><span class="op">,</span> (ev) <span class="kw">=&gt;</span> {</span>
+<span id="cb3-317"><a href=""></a>          <span class="kw">const</span> dd <span class="op">=</span> ev<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">__data</span><span class="op">;</span></span>
+<span id="cb3-318"><a href=""></a>          tooltip<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">display</span> <span class="op">=</span> <span class="st">'block'</span><span class="op">;</span></span>
+<span id="cb3-319"><a href=""></a>          tooltip<span class="op">.</span><span class="at">innerHTML</span> <span class="op">=</span> <span class="vs">`x: </span><span class="sc">${</span>dd<span class="op">.</span><span class="at">x</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="vs">&lt;br/&gt;y: </span><span class="sc">${</span>dd<span class="op">.</span><span class="at">y</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">2</span>)<span class="sc">}</span><span class="vs">`</span><span class="op">;</span></span>
+<span id="cb3-320"><a href=""></a>        })<span class="op">;</span></span>
+<span id="cb3-321"><a href=""></a>        c<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'mousemove'</span><span class="op">,</span> (ev) <span class="kw">=&gt;</span> {</span>
+<span id="cb3-322"><a href=""></a>          tooltip<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">left</span> <span class="op">=</span> (ev<span class="op">.</span><span class="at">pageX</span> <span class="op">+</span> <span class="dv">10</span>) <span class="op">+</span> <span class="st">'px'</span><span class="op">;</span></span>
+<span id="cb3-323"><a href=""></a>          tooltip<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">top</span> <span class="op">=</span> (ev<span class="op">.</span><span class="at">pageY</span> <span class="op">-</span> <span class="dv">30</span>) <span class="op">+</span> <span class="st">'px'</span><span class="op">;</span></span>
+<span id="cb3-324"><a href=""></a>        })<span class="op">;</span></span>
+<span id="cb3-325"><a href=""></a>        c<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'mouseleave'</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb3-326"><a href=""></a>          tooltip<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">display</span> <span class="op">=</span> <span class="st">'none'</span><span class="op">;</span></span>
+<span id="cb3-327"><a href=""></a>        })<span class="op">;</span></span>
+<span id="cb3-328"><a href=""></a>        svg<span class="op">.</span><span class="fu">appendChild</span>(c)<span class="op">;</span></span>
+<span id="cb3-329"><a href=""></a>      })<span class="op">;</span></span>
+<span id="cb3-330"><a href=""></a></span>
+<span id="cb3-331"><a href=""></a>      <span class="co">// small label</span></span>
+<span id="cb3-332"><a href=""></a>      <span class="kw">const</span> lbl <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">createElementNS</span>(<span class="st">'http://www.w3.org/2000/svg'</span><span class="op">,</span><span class="st">'text'</span>)<span class="op">;</span></span>
+<span id="cb3-333"><a href=""></a>      lbl<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'x'</span><span class="op">,</span><span class="st">'260'</span>)<span class="op">;</span> lbl<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'y'</span><span class="op">,</span><span class="st">'16'</span>)<span class="op">;</span></span>
+<span id="cb3-334"><a href=""></a>      lbl<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'text-anchor'</span><span class="op">,</span><span class="st">'middle'</span>)<span class="op">;</span> lbl<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'font-size'</span><span class="op">,</span><span class="st">'12'</span>)<span class="op">;</span> lbl<span class="op">.</span><span class="fu">setAttribute</span>(<span class="st">'fill'</span><span class="op">,</span><span class="st">'#444'</span>)<span class="op">;</span></span>
+<span id="cb3-335"><a href=""></a>      lbl<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="vs">`Showing </span><span class="sc">${</span>pts<span class="op">.</span><span class="at">length</span><span class="sc">}</span><span class="vs"> of </span><span class="sc">${</span>state<span class="op">.</span><span class="at">data</span><span class="op">.</span><span class="at">length</span><span class="sc">}</span><span class="vs"> points (Min Y = </span><span class="sc">${</span>state<span class="op">.</span><span class="at">ymin</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">1</span>)<span class="sc">}</span><span class="vs">)`</span><span class="op">;</span></span>
+<span id="cb3-336"><a href=""></a>      svg<span class="op">.</span><span class="fu">appendChild</span>(lbl)<span class="op">;</span></span>
+<span id="cb3-337"><a href=""></a>    }</span>
+<span id="cb3-338"><a href=""></a></span>
+<span id="cb3-339"><a href=""></a>    <span class="co">// debounce</span></span>
+<span id="cb3-340"><a href=""></a>    <span class="kw">let</span> t<span class="op">;</span></span>
+<span id="cb3-341"><a href=""></a>    <span class="kw">function</span> <span class="fu">redrawDebounced</span>(){ <span class="pp">clearTimeout</span>(t)<span class="op">;</span> t <span class="op">=</span> <span class="pp">setTimeout</span>(draw<span class="op">,</span> <span class="dv">40</span>)<span class="op">;</span> }</span>
+<span id="cb3-342"><a href=""></a></span>
+<span id="cb3-343"><a href=""></a>    <span class="co">// events</span></span>
+<span id="cb3-344"><a href=""></a>    nInput<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'input'</span><span class="op">,</span> (e) <span class="kw">=&gt;</span> {</span>
+<span id="cb3-345"><a href=""></a>      state<span class="op">.</span><span class="at">n</span> <span class="op">=</span> <span class="op">+</span>e<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">value</span><span class="op">;</span></span>
+<span id="cb3-346"><a href=""></a>      nLabel<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="bu">String</span>(state<span class="op">.</span><span class="at">n</span>)<span class="op">;</span></span>
+<span id="cb3-347"><a href=""></a>      state<span class="op">.</span><span class="at">data</span> <span class="op">=</span> <span class="fu">genData</span>(state<span class="op">.</span><span class="at">n</span>)<span class="op">;</span></span>
+<span id="cb3-348"><a href=""></a>      <span class="fu">redrawDebounced</span>()<span class="op">;</span></span>
+<span id="cb3-349"><a href=""></a>    })<span class="op">;</span></span>
+<span id="cb3-350"><a href=""></a></span>
+<span id="cb3-351"><a href=""></a>    yminInput<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">'input'</span><span class="op">,</span> (e) <span class="kw">=&gt;</span> {</span>
+<span id="cb3-352"><a href=""></a>      state<span class="op">.</span><span class="at">ymin</span> <span class="op">=</span> <span class="op">+</span>e<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">value</span><span class="op">;</span></span>
+<span id="cb3-353"><a href=""></a>      yminLabel<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> state<span class="op">.</span><span class="at">ymin</span><span class="op">.</span><span class="fu">toFixed</span>(<span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb3-354"><a href=""></a>      <span class="fu">redrawDebounced</span>()<span class="op">;</span></span>
+<span id="cb3-355"><a href=""></a>    })<span class="op">;</span></span>
+<span id="cb3-356"><a href=""></a></span>
+<span id="cb3-357"><a href=""></a>    <span class="co">// initial render</span></span>
+<span id="cb3-358"><a href=""></a>    state<span class="op">.</span><span class="at">data</span> <span class="op">=</span> <span class="fu">genData</span>(state<span class="op">.</span><span class="at">n</span>)<span class="op">;</span></span>
+<span id="cb3-359"><a href=""></a>    <span class="fu">draw</span>()<span class="op">;</span></span>
+<span id="cb3-360"><a href=""></a>  })<span class="op">;</span></span>
+<span id="cb3-361"><a href=""></a>})()<span class="op">;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-3" data-nodetype="expression">
 
@@ -593,7 +593,7 @@ OOH Session #108…<br><span class="bigger"><span class="prism"><span class="red
 <span class="yellow">I</span>tems for<br>
 <span class="green">S</span>ystematic Reviews and<br>
 <span class="blue">M</span>eta–<br>
-<span class="indigo">A</span>nalyses <span class="citation" data-cites="page2021prisma page2021prismab">(<a href="#/prisma-references" role="doc-biblioref" onclick="">Page, McKenzie, et al., 2021</a>; <a href="#/prisma-references" role="doc-biblioref" onclick="">Page, Moher, et al., 2021</a>)</span></p>
+<span class="indigo">A</span>nalyses <span class="citation" data-cites="page2021prisma page2021prismab moher2009preferred">(<a href="#/prisma-references" role="doc-biblioref" onclick="">Moher et al., 2009</a>; <a href="#/prisma-references" role="doc-biblioref" onclick="">Page, McKenzie, et al., 2021</a>; <a href="#/prisma-references" role="doc-biblioref" onclick="">Page, Moher, et al., 2021</a>)</span></p>
 </div><div class="column" style="width:55%;">
 <h3 id="suggests">Suggests:</h3>
 <ul>
@@ -624,6 +624,9 @@ OOH Session #108…<br><span class="bigger"><span class="prism"><span class="red
 <section id="prisma-references" class="slide level2 smaller scrollable" data-background-image="https://media.istockphoto.com/id/1437915530/vector/crystal-rainbow-lights-effect-bright-ray-or-beam-glowing-light-flare-reflection-from-prism.jpg?s=612x612&amp;w=0&amp;k=20&amp;c=FHAbz39lCrWOqcLBQcm7F3lj01DSMd38sQ0uIb2mx6k=" data-background-opacity=".6">
 <h2><span class="bigger"><span class="noshadow"><span class="prism2"><span class="red">P</span><span class="orange">R</span><span class="yellow">I</span><span class="green">S</span><span class="blue">M</span><span class="indigo">A</span></span></span></span> References:</h2>
 <div id="refs" class="embedding references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-moher2009preferred" class="csl-entry" role="listitem">
+Moher, D., Liberati, A., Tetzlaff, J., &amp; Altman, D. G. (2009). Preferred reporting items for systematic reviews and meta-analyses: The PRISMA statement. <em>Bmj</em>, <em>339</em>.
+</div>
 <div id="ref-page2021prisma" class="csl-entry" role="listitem">
 Page, M. J., McKenzie, J. E., Bossuyt, P. M., Boutron, I., Hoffmann, T. C., Mulrow, C. D., Shamseer, L., Tetzlaff, J. M., Akl, E. A., Brennan, S. E., et al. (2021). The PRISMA 2020 statement: An updated guideline for reporting systematic reviews. <em>Bmj</em>, <em>372</em>, 1–9. <a href="https://www.bmj.com/content/372/bmj.n71">https://www.bmj.com/content/372/bmj.n71</a>
 </div>
@@ -632,8 +635,8 @@ Page, M. J., Moher, D., Bossuyt, P. M., Boutron, I., Hoffmann, T. C., Mulrow, C.
 </div>
 </div>
 </section>
-<section id="session-info-december-14-2025-rendering" class="slide level2">
-<h2><iconify-icon role="img" inline="" icon="devicon:r" style="font-size: 2em;" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> Session Info (December 14, 2025) Rendering:</h2>
+<section id="session-info-december-15-2025-rendering" class="slide level2">
+<h2><iconify-icon role="img" inline="" icon="devicon:r" style="font-size: 2em;" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> Session Info (December 15, 2025) Rendering:</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.5.0 (2025-04-11 ucrt)
