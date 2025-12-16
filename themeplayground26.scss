@@ -8,6 +8,8 @@
 @import url('https://fonts.googleapis.com/css?family=Berkshire Swash');
 @import url('https://fonts.googleapis.com/css?family=Google Sans Flex');
 @import url('https://fonts.googleapis.com/css?family=Tilt Prism');
+@import url('https://fonts.googleapis.com/css?family=Condiment');
+@import url('https://fonts.googleapis.com/css?family=Kaushan Script');
 
 $presentation-title-slide-text-align: left;
 
@@ -74,6 +76,12 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   text-shadow: 
     2px 2px 3px #222,
     -2px -2px 3px #222 !important;
+}
+
+.shadowsharp {
+  text-shadow: 
+    6px 6px 0px #222,
+    0px 0px 0px #222 !important;
 }
 
 .foreground-image {
@@ -176,4 +184,20 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
 .prism2 {
   font-family: "Tilt Prism";  
   color: black;
+}
+
+.embedding {
+  color: #90d5ff; 
+  font-family: Kaushan Script;
+  text-shadow: 
+    2px 2px 0px black;
+}
+
+.positron {
+  font-family: "Condiment";  
+  color: #82b1ff;
+  font-weight: normal !important;
+  text-shadow:
+   -1px -1px 0px white,
+    1px 1px 0px black !important;
 }

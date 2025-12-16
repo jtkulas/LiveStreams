@@ -1,8 +1,8 @@
 ---
-title: "R is for <br>Authoring!!" 
-author: 'OOH Session #108...<br>[[[P]{.red}[R]{.orange}[I]{.yellow}[S]{.green}[M]{.blue}[A]{.indigo}<br>flow diagrams]{.prism} {{< iconify icon-park:tree-diagram >}}]{.bigger}'
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: 'OOH Session #109...<br>[Positron]{.positron .Bigger} {{< iconify eos-icons:atom-electron >}}'
 title-slide-attributes: 
-  data-background-image: https://lynnmazzoleni.com/cdn/shop/articles/unraveling-the-mysteries-of-white-light-newtons-prism-experiment-and-beyond-410726.png?v=1734528518 #https://www.science-sparks.com/wp-content/uploads/2019/06/shutterstock_1194072568-1024x606.jpg #https://assets.science.nasa.gov/dynamicimage/assets/science/cds/general/images/2023/04/w/waveBehaviors_thumb.png?w=1024   
+  data-background-image: img/positron.png #https://m.media-amazon.com/images/S/pv-target-images/5836cd1d9e93e57215f835dea330f34db72b119cdb76d3895433aa12ec7eac01._SX1080_FMpng_.png
   data-background-opacity: ".8"
 format:
   revealjs:
@@ -13,7 +13,7 @@ format:
     transition-speed: slow
     code-overflow: wrap              ## instead of horizontal scroll
     theme: themeplayground26.scss
-    logo: https://cdn-icons-png.flaticon.com/512/3197/3197970.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    logo: https://pngimg.com/uploads/smiley/smiley_PNG158.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
     footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
     preview-links: false             ## true brings up iframe window instead of "site"
     code-annotations: hover          ## select
@@ -34,7 +34,7 @@ execute:
 ::: first-column
 + Recap session #107
 + Today's topic(s):
-    + [[[P]{.red}[R]{.orange}[I]{.yellow}[S]{.green}[M]{.blue}[A]{.indigo} flow diagrams]{.prism2}{{< iconify icon-park:tree-diagram >}}](https://www.prisma-statement.org/)
+    + [Positron]{.positron .bigger} {{< iconify eos-icons:atom-electron >}}
 + Shared problem-solving
 
 ::: {.callout-note}
@@ -434,7 +434,7 @@ You can [include `{ojs}` code chunks](https://quarto.org/docs/interactive/ojs/) 
 
 ## [[[[P]{.red}[R]{.orange}[I]{.yellow}[S]{.green}[M]{.blue}[A]{.indigo}]{.prism2}]{.noshadow}]{.bigger} References: {background-image="https://media.istockphoto.com/id/1437915530/vector/crystal-rainbow-lights-effect-bright-ray-or-beam-glowing-light-flare-reflection-from-prism.jpg?s=612x612&w=0&k=20&c=FHAbz39lCrWOqcLBQcm7F3lj01DSMd38sQ0uIb2mx6k=" background-opacity=.6}
 
-::: {#refs}
+::: {#refs .embedding}
 :::
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
