@@ -3,7 +3,7 @@ title: "[R is for <br>Authoring!!]{.shadowsharp}"
 author: 'OOH Session #109...<br>[Positron]{.positron .Bigger} {{< iconify eos-icons:atom-electron >}}'
 title-slide-attributes: 
   data-background-image: img/positron.png #https://m.media-amazon.com/images/S/pv-target-images/5836cd1d9e93e57215f835dea330f34db72b119cdb76d3895433aa12ec7eac01._SX1080_FMpng_.png
-  data-background-opacity: ".8"
+#  data-background-opacity: ".8"
 format:
   revealjs:
     mouse-wheel: true               ## code navigation messy
@@ -24,7 +24,7 @@ csl: apa7.csl
 filters: 
   - reveal-header          ## extension to add a hyperlink to slide logo
 execute: 
-  eval: true              ## only 12/2 for fenced code (add after creating)
+  eval: false              ## only 12/2 for fenced code (add after creating)
   freeze: false
 ---
 
@@ -32,9 +32,9 @@ execute:
 
 ::: {layout="[[10,10],]"}
 ::: first-column
-+ Recap session #107
++ Recap session #108
 + Today's topic(s):
-    + [Positron]{.positron .bigger} {{< iconify eos-icons:atom-electron >}}
+    + [[Positron]{.positron .bigger} {{< iconify eos-icons:atom-electron >}}](https://positron.posit.co/)
 + Shared problem-solving
 
 ::: {.callout-note}
@@ -51,394 +51,217 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 :::
 
 ::: {.absolute style="top: 185px; right: -120px; width:550px;"}
-<a href="https://bookdown.org/jtkulas/12_9_25">
-  <img src="img/title107.JPG">
+<a href="https://bookdown.org/jtkulas/12_16_25">
+  <img src="img/title108.JPG">
 </a>
 :::
 
 ![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
 
-# Recap of Session <br>#107: 
+# Recap of Session <br>#108: 
 
 ![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
 
-![](https://images.vexels.com/media/users/3/206934/isolated/preview/df0470329fc3a21d8b527309586a27e8-binoculars-colorful-icon-stroke.png){.absolute width="140" top="245" right="105" .tilt2}
+![](https://png.pngtree.com/png-vector/20230412/ourmid/pngtree-flow-chart-flat-icon-vector-png-image_6701343.png){.absolute width="150" top="240" right="100"}
 
-## [[Observable]{.observable2 .bigger}](https://quarto.org/docs/interactive/ojs/) [[{{< iconify vscode-icons:file-type-js-official >}}]{.bigger}](https://observablehq.com/@observablehq/learn-javascript-introduction)  
+## [[[[[P]{.red}[R]{.orange}[I]{.yellow}[S]{.green}[M]{.blue}[A]{.indigo}]{.bigger} flow diagrams]{.prism2}{{< iconify icon-park:tree-diagram >}}]{.noshadow}](https://onlinelibrary.wiley.com/doi/full/10.1002/cl2.1230)  
 
 :::{.smaller}
 :::{.panel-tabset}
 
 ### Whatdat?
 
+::: {.absolute style="bottom: 40px; left: 0px; width: 700px;"}
+<a href="https://guides.lib.unc.edu/prisma">
+  <img src="https://i.ytimg.com/vi/dN7CteDet6o/maxresdefault.jpg">
+</a>
+:::
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmEzcTJ2MDhjcWVla2dkZHZ2MGQ3YXhtdHI4djRidHo0NGM1Y2lhdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26BRMwn7YTid6KxWw/giphy.gif){.absolute right="-40" bottom="50" height="400"}
+
+### {{< iconify devicon:html5-wordmark >}}
+
+```{r}
+#| echo: fenced
+#| label: fig-prisma                            #<1>
+#| fig-cap: "Look at the pretty pretty PRISMA"  #<1>
+
+library(PRISMA2020)
+
+csvFile <- system.file("extdata", "PRISMA.csv", package = "PRISMA2020")                 #<2>
+
+data <- read.csv(csvFile)     #<2>
+
+##################################################################################
+## Identification: (new studies via databases and registers)    #<3>
+
+data[5,8] <- 1  ## databases (NA to exclude field)
+data[7,8] <- 2  ## registers (NA to exclude field)
+data[13,8] <- 3 ## duplicates (NA to exclude field)
+data[14,8] <- 4 ## ineligible by automation (NA to exclude field)
+data[15,8] <- 5 ## removed for other reasons (NA to exclude field)
+
+## Optional:
+data[6,8] <- "PsychInfo, 100; GoogleScholar, 200"   ## set `detail_databases=TRUE` 
+data[8,8] <- "PsychInfo, 300; GoogleScholar, 400"   ## set `detail_registers=TRUE` 
+
+##################################################################################
+####### Screening:
+
+data[16,8] <- 6  ## records screened 
+data[17,8] <- 7  ## records excluded 
+data[18,8] <- 8  ## reports sought for retrieval 
+data[19,8] <- 9  ## reports not retrieved
+data[22,8] <- 10  ## reports assessed for eligibility
+
+## Specification:
+data[23,8] <- "stoopid, 500; boring, 600"  ## reports excluded
+
+##################################################################################
+####### Included:
+
+data[26,8] <- 11  ## New studies included 
+data[27,8] <- 12  ## Reports of new included studies
+
+##################################################################################
+##################################################################################
+##################################################################################
+
+prismadata <- PRISMA_data(data)
+
+PRISMA_flowdiagram(prismadata, 
+                           previous=FALSE,             ## TRUE for left-side column
+                           other=FALSE,                ## TRUE for right-hand column
+                           fontsize=14,
+                           detail_databases=FALSE,     ## TRUE if want to specify databases
+                           detail_registers=FALSE)     ## TRUE if want to specify registers
+
+
+
+```
+1. Only intended for `.html` output -- otherwise specify caption and tag within markdown specification (e.g., `![Look at the pretty pretty PRISMA](image){#fig-prisma}`)
+2. Self--contained data grab from within package -- no need to access template from other (external) locations
+3. These specifications will complete the primary PRISMA info -- you will need to expand if you wish to include "previous" or "other" diagram arms
+
+
+### {{< iconify vscode-icons:file-type-pdf2 >}} {{< iconify streamline-plump-color:ampersand-flat >}}{{< iconify catppuccin:typst >}}
+
+::: {.columns}
+
+::: {.column width="65%"}
+
+```{r}
+#| echo: fenced
+
+library(PRISMA2020)
+
+csvFile <- system.file("extdata", "PRISMA.csv", package = "PRISMA2020")
+
+data <- read.csv(csvFile)
+
+##################################################################################
+## Identification: (new studies via databases and registers)
+
+data[5,8] <- 1  ## databases (NA to exclude field)
+data[7,8] <- 2  ## registers (NA to exclude field)
+data[13,8] <- 3 ## duplicates (NA to exclude field)
+data[14,8] <- 4 ## ineligible by automation (NA to exclude field)
+data[15,8] <- 5 ## removed for other reasons (NA to exclude field)
+
+## Optional:
+data[6,8] <- "PsychInfo, 100; GoogleScholar, 200"   ## set `detail_databases=TRUE` 
+data[8,8] <- "PsychInfo, 300; GoogleScholar, 400"   ## set `detail_registers=TRUE` 
+
+##################################################################################
+####### Screening:
+
+data[16,8] <- 6  ## records screened 
+data[17,8] <- 7  ## records excluded 
+data[18,8] <- 8  ## reports sought for retrieval 
+data[19,8] <- 9  ## reports not retrieved
+data[22,8] <- 10  ## reports assessed for eligibility
+
+## Specification:
+data[23,8] <- "stoopid, 500; boring, 600"  ## reports excluded
+
+##################################################################################
+####### Included:
+
+data[26,8] <- 11  ## New studies included 
+data[27,8] <- 12  ## Reports of new included studies
+
+##################################################################################
+##################################################################################
+##################################################################################
+
+prismadata <- PRISMA_data(data)
+
+plot <- PRISMA_flowdiagram(prismadata, 
+                           previous=FALSE,             ## TRUE for left-side column
+                           other=FALSE,                ## TRUE for right-hand column
+                           fontsize=14,
+                           detail_databases=FALSE,     ## TRUE if want to specify databases
+                           detail_registers=FALSE)     ## TRUE if want to specify registers
+
+PRISMA_save(plot, filename = "prisma.svg", overwrite=TRUE)  #<1>
+
+## You will call out the plot OUTSIDE of the code chunk
+
+
+```
+1. `overwrite` argument seems finicky -- may have to keep an eye on output messages {{< iconify fluent-emoji-flat:eyes >}}
+
+:::
+
+:::{.column width="35%"}
+
++ Also works with {{< iconify devicon:html5-wordmark >}}
+```
+![caption](image){#fig-label}
+```
+
+![](img/prisma.svg){.lightbox}
+
+:::
+
+:::
+
+:::
+:::
+
+# Today...
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2c2ZjZyMzloM3Z0czRiMzl3M3JnNmhwczk0M2NteXI3enVvanYxcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4aWiLikxaIkDu/giphy.gif)
+
+## [[[Positron]{.positron .bigger} {{< iconify eos-icons:atom-electron >}}](https://positron.posit.co/)]{.Bigger}
+
 ::: {.columns}
 
 ::: {.column width="50%"}
 
-### [Language](https://observablehq.com/@observablehq/learn-javascript-introduction)
+### [{{< iconify logos:youtube-icon >}} Tutorial](https://www.youtube.com/watch?v=4Ir_HX4riHw)
 
-Enables interactivity that updates instantly with user input (e.g., it's reactive)
-
-You can [include `{ojs}` code chunks](https://quarto.org/docs/interactive/ojs/) within html Quarto products (websites, dashboards, etc)
+{{< video https://www.youtube.com/watch?v=4Ir_HX4riHw width="100%" height="350px" >}}
 
 :::
 
 ::: {.column width="50%"}
 
-### [Scrollytelling:](https://www.wix.com/studio/design/inspiration/space)
+### ["White" paper](Positron-Whitepaper-2025.pdf)
 
-<iframe src="https://www.wix.com/studio/design/inspiration/space" width=700px height=350px>
+<iframe src="Positron-Whitepaper-2025.pdf#page=1&zoom=40" width=700px height=350px>
 </iframe>
 
 :::
 
 :::
 
-### [GitHub]{.copilot2} {{< iconify copilot-16 style="color:#1E90FF;"  >}} {{< iconify emojione:digit-one >}}
-<!-- --- Insert this container immediately BEFORE the first ojs block --->
-<div id="ojs-counter-1"></div>
-
-```{ojs}
-(function () {
-  const uid = 'ojs-counter-1';
-  const host = document.getElementById(uid) || document.body;
-
-  const container = document.createElement('div');
-  container.id = uid + '-root';
-  container.style.maxWidth = '720px';
-  container.style.margin = '24px auto';
-  container.innerHTML = `
-    <div style="text-align:center; padding:28px; font-family:system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;">
-      <button id="${uid}-btn" aria-live="polite" style="font-size:18px; padding:10px 20px; cursor:pointer; border-radius:6px; border:1px solid #ccc; background:#fff;">
-        Click to +1!
-      </button>
-
-      <div id="${uid}-display" style="margin-top:22px;">
-        <h2 style="margin:0; font-weight:600;">Count: <strong id="${uid}-value" style="color:#e15759;">0</strong></h2>
-        <p id="${uid}-sub" style="color:#666; margin-top:10px;">You've clicked <strong id="${uid}-plural">0</strong> times!</p>
-      </div>
-    </div>
-  `;
-
-  host.appendChild(container);
-
-  let count = 0;
-  const btn = document.getElementById(`${uid}-btn`);
-  const valueEl = document.getElementById(`${uid}-value`);
-  const pluralEl = document.getElementById(`${uid}-plural`);
-
-  function updateUI() {
-    valueEl.textContent = String(count);
-    pluralEl.textContent = String(count);
-    btn.setAttribute('aria-label', `Click to increment. Current count ${count}`);
-  }
-
-  btn.addEventListener('click', () => {
-    count += 1;
-    updateUI();
-  });
-
-  btn.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      count += 1;
-      updateUI();
-    }
-  });
-
-  updateUI();
-})();
-```
-
-![](https://cdn.freebiesupply.com/logos/large/2x/roadrunner-logo-png-transparent.png){.absolute bottom="0" right="-150" height="500"}
-
-### [GitHub]{.copilot2} {{< iconify copilot-16 style="color:#1E90FF;" >}} {{< iconify emojione:digit-two >}}
-
-<!-- --- Insert this container immediately BEFORE the second ojs block --->
-<div id="ojs-color-panel-1"></div>
-
-```{ojs}
-(function () {
-  // A different visual (not a repeat): color-cycle panel with three controls
-  const uid = 'ojs-color-panel-1';
-  const host = document.getElementById(uid) || document.body;
-
-  const colors = ['#ff6b6b', '#ffd93d', '#6be3ff', '#9d8bff', '#7be495'];
-  let idx = 0;
-
-  const root = document.createElement('div');
-  root.id = uid + '-root';
-  root.style.maxWidth = '520px';
-  root.style.margin = '18px auto';
-  root.style.display = 'flex';
-  root.style.gap = '12px';
-  root.style.alignItems = 'center';
-  root.innerHTML = `
-    <div id="${uid}-panel" style="width:220px; height:120px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.12);"></div>
-    <div style="flex:1 1 auto;">
-      <div style="margin-bottom:8px;"><strong>Color Cycle</strong></div>
-      <div style="display:flex; gap:8px; align-items:center;">
-        <button id="${uid}-prev" style="padding:6px 10px;">Prev</button>
-        <button id="${uid}-next" style="padding:6px 10px;">Next</button>
-        <button id="${uid}-rand" style="padding:6px 10px;">Random</button>
-      </div>
-      <div style="margin-top:10px; color:#666; font-size:13px;">Index: <span id="${uid}-idx">0</span></div>
-    </div>
-  `;
-
-  host.appendChild(root);
-
-  const panel = document.getElementById(`${uid}-panel`);
-  const prev = document.getElementById(`${uid}-prev`);
-  const next = document.getElementById(`${uid}-next`);
-  const rand = document.getElementById(`${uid}-rand`);
-  const idxLabel = document.getElementById(`${uid}-idx`);
-
-  function render() {
-    panel.style.background = colors[idx % colors.length];
-    idxLabel.textContent = String(idx);
-  }
-
-  prev.addEventListener('click', () => { idx = (idx - 1 + colors.length) % colors.length; render(); });
-  next.addEventListener('click', () => { idx = (idx + 1) % colors.length; render(); });
-  rand.addEventListener('click', () => { idx = Math.floor(Math.random() * colors.length); render(); });
-
-  // keyboard accessibility on panel
-  panel.tabIndex = 0;
-  panel.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') prev.click();
-    if (e.key === 'ArrowRight') next.click();
-  });
-
-  render();
-})();
-```
-
-![](https://clipart-library.com/images/6cp5jA6ri.png){.absolute bottom="20" right="400"}
-
-### [GitHub]{.copilot2} {{< iconify copilot-16 style="color:#1E90FF;" >}} {{< iconify emojione:digit-three >}}
-
-<!-- container: put this immediately before the {ojs} chunk -->
-<div id="ojs-scatter-1"></div>
-
-```{ojs}
-(function(){
-  const uid = 'ojs-scatter-1';
-  const host = document.getElementById(uid) || document.body;
-
-  // small markup
-  const html = `
-    <div style="display:flex;gap:12px;align-items:flex-start;">
-      <div style="width:220px;font-family:system-ui, -apple-system, 'Segoe UI', Roboto, Arial;">
-        <div style="margin-bottom:8px;"><strong>Controls</strong></div>
-        <div>Points: <span id="${uid}-n-label">200</span></div>
-        <input id="${uid}-n" type="range" min="20" max="1000" value="200" style="width:100%;margin-bottom:8px;"/>
-        <div>Min Y: <span id="${uid}-ymin-label">-3.0</span></div>
-        <input id="${uid}-ymin" type="range" min="-5" max="5" step="0.1" value="-3" style="width:100%;"/>
-      </div>
-      <svg id="${uid}-svg" width="520" height="300" viewBox="0 0 520 300" style="border:1px solid #eee;border-radius:6px;background:#fff;"></svg>
-    </div>
-    <div id="${uid}-tooltip" style="position:absolute;display:none;pointer-events:none;background:rgba(0,0,0,0.75);color:#fff;padding:6px 8px;border-radius:6px;font-size:12px;"></div>
-  `;
-  const container = document.createElement('div');
-  container.id = uid + '-root';
-  container.style.margin = '6px 0 18px';
-  container.innerHTML = html;
-  host.appendChild(container);
-
-  // small init in RAF so elements exist
-  requestAnimationFrame(() => {
-    const svg = document.getElementById(`${uid}-svg`);
-    const nInput = document.getElementById(`${uid}-n`);
-    const nLabel = document.getElementById(`${uid}-n-label`);
-    const yminInput = document.getElementById(`${uid}-ymin`);
-    const yminLabel = document.getElementById(`${uid}-ymin-label`);
-    const tooltip = document.getElementById(`${uid}-tooltip`);
-
-    if (!svg || !nInput || !nLabel || !yminInput || !yminLabel || !tooltip) {
-      console.error('ojs scatter: missing element(s)', {svg:!!svg, nInput:!!nInput, yminInput:!!yminInput, tooltip:!!tooltip});
-      return;
-    }
-
-    // state and helpers
-    let state = { n: +nInput.value, ymin: +yminInput.value, data: [] };
-
-    function genData(n){
-      const out = [];
-      for (let i=0;i<n;i++){
-        const x = Math.random()*10;
-        const base = Math.sin(x)*1.6 + x*0.25;
-        const y = base + (Math.random()-0.5)*2;
-        out.push({x,y});
-      }
-      return out;
-    }
-
-    function clearSVG(){
-      while (svg.firstChild) svg.removeChild(svg.firstChild);
-    }
-
-    function xScale(x){ return 40 + (x/10) * (520 - 80); } // left/right padding
-    function yScale(y){
-      // map y roughly to 0..300 with simple clamp
-      const ymin = Math.min(...state.data.map(d=>d.y), -5);
-      const ymax = Math.max(...state.data.map(d=>d.y), 10);
-      const pad = (ymax - ymin) * 0.06;
-      const low = ymin - pad;
-      const high = ymax + pad;
-      const t = (y - low) / (high - low || 1);
-      return 260 - t * 220; // top/bottom padding
-    }
-
-    function draw(){
-      clearSVG();
-
-      // axes (simple)
-      const axisX = document.createElementNS('http://www.w3.org/2000/svg','line');
-      axisX.setAttribute('x1','40'); axisX.setAttribute('y1','270');
-      axisX.setAttribute('x2','480'); axisX.setAttribute('y2','270');
-      axisX.setAttribute('stroke','#ddd');
-      svg.appendChild(axisX);
-
-      // filter
-      const pts = state.data.filter(d => d.y >= state.ymin);
-
-      // draw points
-      pts.forEach(d => {
-        const c = document.createElementNS('http://www.w3.org/2000/svg','circle');
-        c.setAttribute('cx', String(xScale(d.x)));
-        c.setAttribute('cy', String(yScale(d.y)));
-        c.setAttribute('r','4.5');
-        c.setAttribute('fill','#4e79a7');
-        c.setAttribute('stroke','#fff');
-        c.setAttribute('stroke-width','0.8');
-        c.style.cursor = 'pointer';
-        c.__data = d;
-        c.addEventListener('mouseenter', (ev) => {
-          const dd = ev.target.__data;
-          tooltip.style.display = 'block';
-          tooltip.innerHTML = `x: ${dd.x.toFixed(2)}<br/>y: ${dd.y.toFixed(2)}`;
-        });
-        c.addEventListener('mousemove', (ev) => {
-          tooltip.style.left = (ev.pageX + 10) + 'px';
-          tooltip.style.top = (ev.pageY - 30) + 'px';
-        });
-        c.addEventListener('mouseleave', () => {
-          tooltip.style.display = 'none';
-        });
-        svg.appendChild(c);
-      });
-
-      // small label
-      const lbl = document.createElementNS('http://www.w3.org/2000/svg','text');
-      lbl.setAttribute('x','260'); lbl.setAttribute('y','16');
-      lbl.setAttribute('text-anchor','middle'); lbl.setAttribute('font-size','12'); lbl.setAttribute('fill','#444');
-      lbl.textContent = `Showing ${pts.length} of ${state.data.length} points (Min Y = ${state.ymin.toFixed(1)})`;
-      svg.appendChild(lbl);
-    }
-
-    // debounce
-    let t;
-    function redrawDebounced(){ clearTimeout(t); t = setTimeout(draw, 40); }
-
-    // events
-    nInput.addEventListener('input', (e) => {
-      state.n = +e.target.value;
-      nLabel.textContent = String(state.n);
-      state.data = genData(state.n);
-      redrawDebounced();
-    });
-
-    yminInput.addEventListener('input', (e) => {
-      state.ymin = +e.target.value;
-      yminLabel.textContent = state.ymin.toFixed(1);
-      redrawDebounced();
-    });
-
-    // initial render
-    state.data = genData(state.n);
-    draw();
-  });
-})();
-```
-
-![](https://i.pinimg.com/474x/e5/37/72/e537728b3ded97186b8fcbdf6540ac19.jpg){.absolute right="-140" bottom="100"}
-
-:::
-:::
-
-![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2JxODN3YmJ3Mm5vZms2ZjBqMHV2MWl6MG56N2FjbW01Zjd1Z2dkOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26n6WywJyh39n1pBu/giphy.gif){.absolute right="-150" top="-50" height="210"}
-
-# Today... {background-image="https://ericroth.org/wp-content/uploads/2025/05/White-Light-Sum-of-all-Colors-1024x614.jpg" background-opacity=1}
-
-![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTB3eHNuMm9pejdwdWwzc2N0MDdzYno4dzB6NDI0YnAxcDY5eXo1NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NPSBznfytOtCo/giphy.gif)
-
-## [[[[P]{.red}[R]{.orange}[I]{.yellow}[S]{.green}[M]{.blue}[A]{.indigo} ]{.prism2}]{.noshadow .Bigger}](https://www.prisma-statement.org/) {background-image="https://static.vecteezy.com/system/resources/previews/039/613/271/non_2x/prism-light-overlay-crystal-light-flares-rainbow-vector.jpg" background-opacity=.3}
-
-::: {.columns}
-
-::: {.column width="45%"}
-
-[P]{.red}referred  
-[R]{.orange}eporting  
-[I]{.yellow}tems for  
-[S]{.green}ystematic Reviews and  
-[M]{.blue}eta--  
-[A]{.indigo}nalyses [@page2021prisma; @page2021prismab; @moher2009preferred]
-
-:::
-
-::: {.column width="55%"}
-
-### Suggests: 
-
-+ Reporting standards for [systematic reviews](https://hslguides.osu.edu/systematic_reviews/intro)
-+ 27--item checklist
-+ "flow" diagrams 
-
-:::
-
-:::
-
-![](https://png.pngtree.com/png-vector/20220725/ourmid/pngtree-transparent-prism-spectrum-rainbow-flat-png-image_6072811.png){.absolute right="-100" top="-30" height="300"}
-
-![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExanJxbjhyN3lvYWswY3VycW14MGZyN3RpczJoN3JyajkwMGR1enh0YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/JktYMtRC9hzTq/giphy.gif){.absolute right="-150" bottom="50" height="250"}
-
-## [[[[[P]{.red}[R]{.orange}[I]{.yellow}[S]{.green}[M]{.blue}[A]{.indigo}]{.bigger} flow diagrams]{.prism2}{{< iconify icon-park:tree-diagram >}}]{.noshadow}](https://www.prisma-statement.org/prisma-2020-flow-diagram) {background-image="https://t3.ftcdn.net/jpg/02/65/59/32/360_F_265593297_9GZmFF8jMcpRs8y8nUXtwsS6O2Jhu5Mu.jpg" background-opacity=.5}
-
-::: {.absolute style="top: 30px; right: -140px; width: 300px;"}
-<a href="https://www.eshackathon.org/software/PRISMA2020.html">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Shiny_hex_logo.svg/960px-Shiny_hex_logo.svg.png">
-</a>
-:::
-
-::: {.absolute style="top: 150px; left: 0px; width: 700px;"}
-<a href="https://guides.lib.unc.edu/prisma">
-  <img src="https://i.ytimg.com/vi/dN7CteDet6o/maxresdefault.jpg">
-</a>
-:::
-
-::: {.absolute style="bottom: 0px; right: 0px; width: 300px;"}
-<a href="https://github.com/prisma-flowdiagram/PRISMA2020">
-  <img src="https://raw.githubusercontent.com/prisma-flowdiagram/PRISMA2020/master/PRISMA2020-hex.png">
-</a>
-:::
-
-::: {.absolute style="bottom: 0px; right: 400px; width: 200px;"}
-<a href="https://onlinelibrary.wiley.com/doi/10.1002/cl2.1230">
-  <img src="https://www.nicepng.com/png/detail/357-3576824_this-free-icons-png-design-of-readme-document.png">
-</a>
-:::
-
-![]()
-
-## [[[[P]{.red}[R]{.orange}[I]{.yellow}[S]{.green}[M]{.blue}[A]{.indigo}]{.prism2}]{.noshadow}]{.bigger} References: {background-image="https://media.istockphoto.com/id/1437915530/vector/crystal-rainbow-lights-effect-bright-ray-or-beam-glowing-light-flare-reflection-from-prism.jpg?s=612x612&w=0&k=20&c=FHAbz39lCrWOqcLBQcm7F3lj01DSMd38sQ0uIb2mx6k=" background-opacity=.6}
-
-::: {#refs .embedding}
-:::
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTA5N2lvZHFvYjM3bXA4bHkwcGFzZ3pkZmNnaWxuNG5hMXlyNG85OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l46CxxgubL1RarATS/giphy.gif){.absolute right="-120" top="-40" height="270"}
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
 #| eval: true
 sessionInfo()
 ```
+
+
