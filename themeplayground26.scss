@@ -7,6 +7,7 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron');
 @import url('https://fonts.googleapis.com/css?family=Berkshire Swash');
 @import url('https://fonts.googleapis.com/css?family=Google Sans Flex');
+@import url('https://fonts.googleapis.com/css?family=Google Sans Code');
 @import url('https://fonts.googleapis.com/css?family=Tilt Prism');
 @import url('https://fonts.googleapis.com/css?family=Condiment');
 @import url('https://fonts.googleapis.com/css?family=Kaushan Script');
@@ -20,8 +21,8 @@ $presentation-title-slide-text-align: left;
   padding: 0.1em 0.2em;
   border-radius: 4px;
   font-size: 0.6em;
-  font-family: Orbitron !important;
-  color: white !important;
+  font-family: Google Sans Code !important;
+  color: #324c7c !important;
   border: 1px solid #022866;
 }
 
