@@ -324,7 +324,7 @@ The `.svg` image file type requires additional support to be rendered within a Q
 
 ::: {.column width="50%"}
 
-### [{{< iconify logos:youtube-icon >}} Tutorial](https://www.youtube.com/watch?v=QU0N--y-skA)^[also many additional {{< iconify simple-icons:posit style="color: #82b1ff;">}}--authored vids available --- see, for example, [{{< iconify logos:youtube-icon >}}](https://www.youtube.com/watch?v=aKSrptGegeo) or [{{< iconify logos:youtube-icon >}}](https://www.youtube.com/watch?v=mru9z50IOhI)]
+### [{{< iconify logos:youtube-icon >}} Tutorial](https://youtu.be/SBPVcKbFbAk?si=foiLg7GI7XnY_vum)^[also many  {{< iconify simple-icons:posit style="color: #82b1ff;">}}--authored vids available --- see, for example, [{{< iconify logos:youtube-icon >}}](https://www.youtube.com/watch?v=aKSrptGegeo), [{{< iconify logos:youtube-icon >}}](https://www.youtube.com/watch?v=QU0N--y-skA), or [{{< iconify logos:youtube-icon >}}](https://www.youtube.com/watch?v=mru9z50IOhI)]
 
 {{< video https://www.youtube.com/watch?v=jLgyx-up9g0 width="100%" height="350px" >}}
 
