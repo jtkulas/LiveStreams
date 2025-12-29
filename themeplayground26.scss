@@ -11,9 +11,14 @@
 @import url('https://fonts.googleapis.com/css?family=Tilt Prism');
 @import url('https://fonts.googleapis.com/css?family=Condiment');
 @import url('https://fonts.googleapis.com/css?family=Kaushan Script');
+@import url('https://fonts.googleapis.com/css?family=Mouse Memoirs');
 
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 
+.reveal .slide-logo {       /*-- use for small image renderings --*/
+  max-height: unset !important;
+  height: 100px !important;
+}
 
 /* adding background to inline code elements */
 :not(pre) > code {
@@ -89,6 +94,10 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   z-index: 1000 !important;
 }
 
+.behind-image {
+  z-index: -1 !important;
+}
+
 .underline {
   text-decoration: underline;
 }
@@ -121,6 +130,9 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-size: 2em;
 }
 
+.huge {
+  font-size: 3em;
+}
 
 .red{
   color: #ff000F;
@@ -201,4 +213,12 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   text-shadow:
    -1px -1px 0px white,
     3px 3px 0px black !important;
+}
+
+.pluto2 {
+  font-family: 'Waltograph', "Mouse Memoirs";  //local installation
+  color: #FFDE21;
+  font-weight: normal !important;
+  text-shadow:
+    4px 4px 0px black !important;  
 }
