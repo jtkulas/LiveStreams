@@ -107,13 +107,33 @@ Definitely check--out [this awesome ~15--minute {{< iconify logos:youtube-icon >
 
 ## [[Pluto!!]{.pluto2 .Bigger}](https://featured.plutojl.org/)
 
+::: {.columns}
+
+::: {.column width="28%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+```
+julia> using Pkg
+julia> Pkg.add("Pluto")
+julia> using Pluto
+julia> Pluto.run()
+```
+:::
+
+:::
+
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3Y4MmpkMnBxNWdwd2hnODdtN29pZWI0ZnJlZGt2eng4dDhiMDVtdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xUNd9IWY6A1hTNeOMo/giphy.gif){.absolute right="-70" bottom="40" height="600"}
 
-![](https://upload.wikimedia.org/wikipedia/commons/f/fd/Julia_Programming_Language_Logo.png){.absolute height="180" left="0" top="170"}
+![](https://upload.wikimedia.org/wikipedia/commons/f/fd/Julia_Programming_Language_Logo.png){.absolute height="150" left="-95" top="170"}
 
-![](https://upload.wikimedia.org/wikipedia/commons/f/fd/Julia_Programming_Language_Logo.png){.absolute height="180" left="0" top="335"}
+![](https://upload.wikimedia.org/wikipedia/commons/f/fd/Julia_Programming_Language_Logo.png){.absolute height="150" left="-20" top="280"}
 
-![](https://upload.wikimedia.org/wikipedia/commons/f/fd/Julia_Programming_Language_Logo.png){.absolute height="180" left="0" top="500"}
+![](https://upload.wikimedia.org/wikipedia/commons/f/fd/Julia_Programming_Language_Logo.png){.absolute height="150" left="55" bottom="175"}
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
