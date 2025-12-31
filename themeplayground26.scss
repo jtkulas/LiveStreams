@@ -12,6 +12,7 @@
 @import url('https://fonts.googleapis.com/css?family=Condiment');
 @import url('https://fonts.googleapis.com/css?family=Kaushan Script');
 @import url('https://fonts.googleapis.com/css?family=Mouse Memoirs');
+@import url('https://fonts.googleapis.com/css?family=michroma');
 
 $presentation-title-slide-text-align: right;
 
@@ -221,4 +222,9 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-weight: normal !important;
   text-shadow:
     4px 4px 0px black !important;  
+}
+
+.quarto {
+  font-family: michroma;   // close but not perfect
+  color: #82b1ff;
 }

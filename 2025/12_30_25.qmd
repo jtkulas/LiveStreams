@@ -105,7 +105,7 @@ Definitely check--out [this awesome ~15--minute {{< iconify logos:youtube-icon >
 
 ![](https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3Z2dndHBya3E1NzcwYXdkeTFrNzFma2dsZm85c2JnaDd0cWI2eTFzbSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/YrFZX3ELkl2bm/giphy.gif)
 
-## [[Pluto!!]{.pluto2 .Bigger}](https://featured.plutojl.org/)
+## [[Pluto!!]{.pluto2 .Bigger}](https://juliaclimate.github.io/Notebooks/)
 
 ::: {.columns}
 
@@ -134,6 +134,8 @@ julia> Pluto.run()
 ![](https://upload.wikimedia.org/wikipedia/commons/f/fd/Julia_Programming_Language_Logo.png){.absolute height="150" left="-20" top="280"}
 
 ![](https://upload.wikimedia.org/wikipedia/commons/f/fd/Julia_Programming_Language_Logo.png){.absolute height="150" left="55" bottom="175"}
+
+![](https://upload.wikimedia.org/wikipedia/commons/f/fd/Julia_Programming_Language_Logo.png){.absolute height="80" left="685" bottom="50"}
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
