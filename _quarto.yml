@@ -1,0 +1,4 @@
+project:
+  output-dir: docs                  # ← relative to root, inside project → safe & reliable
+  render:
+    - "slides/**/*.qmd" 
