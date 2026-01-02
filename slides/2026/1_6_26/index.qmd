@@ -67,6 +67,8 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ## [[Pluto!!]{.pluto2 .Bigger}](https://juliaclimate.github.io/Notebooks/) 
 
+lorem ipsum lorem ipsum
+
 ![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzBqbjVjbDI4a3k2cWdmeDJtMmJ5YXU0OTF1dzQ2MDE1dmwyNTl6biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ohzdZdf1j0LwIuOQg/giphy.gif){.absolute right="-140" top="-30" height="300"}
 
 ![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmRtanA2cXh3NWFmYnh1amY4bGpkdzlibmIyMGQ4bTdyMTE2b2p6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2Qs2hKWMvEzdu/giphy.gif){.absolute left="00" bottom="100" height="350" .behind-image .fragment .fade-out fragment-index=2}

@@ -2,4 +2,4 @@ project:
   type: website    ## helps with root-relative paths (finding /css etc)
   output-dir: docs                  # ← relative to root, inside project → safe & reliable
   render:
-    - "slides/**/*.qmd" 
+    - "slides/**/**/*.qmd" 
