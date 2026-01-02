@@ -1,0 +1,233 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css?family=Dancing Script');
+@import url('https://fonts.googleapis.com/css?family=Fontdiner Swanky');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Crete Round');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url('https://fonts.googleapis.com/css?family=Berkshire Swash');
+@import url('https://fonts.googleapis.com/css?family=Google Sans Flex');
+@import url('https://fonts.googleapis.com/css?family=Google Sans Code');
+@import url('https://fonts.googleapis.com/css?family=Tilt Prism');
+@import url('https://fonts.googleapis.com/css?family=Condiment');
+@import url('https://fonts.googleapis.com/css?family=Kaushan Script');
+@import url('https://fonts.googleapis.com/css?family=Mouse Memoirs');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+$presentation-title-slide-text-align: right;
+
+.reveal .slide-logo {       /*-- use for small image renderings --*/
+  max-height: unset !important;
+  height: 100px !important;
+}
+
+/* adding background to inline code elements */
+:not(pre) > code {
+  background-color:  #95b7ed !important; /* Light gray shade, adjustable */
+  padding: 0.1em 0.2em;
+  border-radius: 4px;
+  font-size: 0.6em;
+  font-family: Google Sans Code !important;
+  color: #324c7c !important;
+  border: 1px solid #022866;
+}
+
+// fonts
+$font-family-sans-serif: "Palatino Linotype", "Book Antiqua", Palatino,
+  FreeSerif, serif !default;
+$presentation-line-height: 1.4;
+
+.quarto-title-author-name {
+  font-size: 65px;
+  color: white;     /*-- #ccaadd white --*/
+  font-weight: bold;
+  font-family: 'Dancing Script';
+  text-shadow: 
+    4px 4px 0px black,
+    -1px -1px 0px black;
+}
+
+.centered {
+  text-align: center; /*-- justify --*/
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+// colors
+$body-bg: #035096; 
+$body-color: #e9cee5;  // main font
+$link-color: #c94f8e;
+$selection-bg: #2a1625;              
+
+// headings
+$presentation-heading-font: "Fontdiner Swanky", "Book Antiqua", Palatino,
+  FreeSerif, serif !default;             
+$presentation-heading-color: #a92777 !default;
+$presentation-h1-text-shadow: 2px 2px white;  //#e9cee5
+$presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
+
+// code blocks 
+
+/*-- scss:mixins --*/
+
+// Background generator
+@mixin bodyBackground() {
+  @include radial-gradient(#000000, #035096);
+}
+
+/*-- scss:rules --*/
+
+// tilts, mirrors, etc 
+
+.shadow {
+  text-shadow: 
+    2px 2px 3px #222,
+    -2px -2px 3px #222 !important;
+}
+
+.shadowsharp {
+  text-shadow: 
+    6px 6px 0px #222,
+    0px 0px 0px #222 !important;
+}
+
+.foreground-image {
+  z-index: 1000 !important;
+}
+
+.behind-image {
+  z-index: -1 !important;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.mirror {
+  transform: rotateY(180deg);
+}
+
+.tilt {
+  rotate: 20deg;
+}
+
+.tilt2 {
+  rotate: -20deg;
+}
+
+.smaller {
+  font-size: .9em;
+}
+
+.Smaller {
+  font-size: .8em;
+}
+
+.bigger {
+  font-size: 1.2em;
+}
+
+.Bigger {
+  font-size: 2em;
+}
+
+.huge {
+  font-size: 3em;
+}
+
+.red{
+  color: #ff000F;
+}
+.orange{
+  color: #ff5c00;
+}
+.yellow{
+  color: #ffff00;
+}
+.green{
+  color: #00ff00;
+}
+.blue{
+  color: #0000ff;
+}
+.indigo{
+  color: #4b0082;
+}
+
+// fonts
+
+.juplab {
+  font-family: Roboto;
+  color: #f37821;
+}
+
+.crete {
+  font-family: Crete Round;
+  color: white;
+}
+
+.noel {
+  font-family: Berkshire Swash;  
+  color: #4CBB17;
+  font-weight: normal !important;
+  text-shadow:
+   -1px -1px 0px #40826D,
+    2px 2px 0px black !important;
+}
+
+.observable {
+  font-family: "Google Sans Flex";  
+  color: #000000;
+  font-weight: normal !important;
+  text-shadow:
+   -2px -2px 4px #f7e018,
+    2px 2px 4px #f7e018 !important;
+}
+
+.observable2 {
+  font-family: "Google Sans Flex";  
+  color: #000000;
+  font-weight: normal !important;
+}
+
+.prism {
+  font-family: "Tilt Prism";  
+  color: white;
+}
+
+.prism2 {
+  font-family: "Tilt Prism";  
+  color: black;
+}
+
+.embedding {
+  color: #90d5ff; 
+  font-family: Kaushan Script;
+  text-shadow: 
+    2px 2px 0px black;
+}
+
+.positron {
+  font-family: "Condiment";  
+  color: #82b1ff;
+  font-weight: normal !important;
+  text-shadow:
+   -1px -1px 0px white,
+    3px 3px 0px black !important;
+}
+
+.pluto2 {
+  font-family: 'Waltograph', "Mouse Memoirs";  //local installation
+  color: #FFDE21;
+  font-weight: normal !important;
+  text-shadow:
+    4px 4px 0px black !important;  
+}
+
+.quarto {
+  font-family: Poppins;   // close but not perfect
+  color: #82b1ff;  
+  font-weight: normal !important;
+  text-shadow:
+    0px 0px 0px black !important; 
+}
