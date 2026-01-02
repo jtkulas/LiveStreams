@@ -2,17 +2,18 @@
 title: "R is for <br>Authoring!!" 
 author: 'OOH Session #111...<br>[{{< iconify material-icon-theme:quarto >}}]{.huge}[quarto®!!]{.quarto .Bigger}'
 title-slide-attributes: 
-  data-background-image: suzi2.png  #img/suzi2.png
+  data-background-image: /img/suzi2.png  #img/suzi2.png
 #  data-background-opacity: ".7"
 format:
   revealjs:
+#    embed-resources: true           
     mouse-wheel: true               ## code navigation messy
     slide-tone: false
 #    navigation-mode: vertical
     transition: convex
     transition-speed: slow
     code-overflow: wrap              ## instead of horizontal scroll
-    theme: themeplayground26.scss
+    theme: ../../css/theming2026.scss ## themeplayground26.scss
     logo: https://png.pngtree.com/png-vector/20230814/ourmid/pngtree-an-illustration-of-a-bass-guitar-clipart-vector-png-image_6899720.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
     footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
     preview-links: false             ## true brings up iframe window instead of "site"
@@ -52,7 +53,7 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ::: {.absolute style="top: 185px; right: -120px; width:550px;"}
 <a href="https://bookdown.org/jtkulas/12_30_25">
-  <img src="title110.JPG">
+  <img src="/img/title110.JPG">
 </a>
 :::
 
