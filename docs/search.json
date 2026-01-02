@@ -1,28 +1,28 @@
 [
   {
-    "objectID": "slides/1_6_26/index.html#open-office-hours-january-02-2026",
-    "href": "slides/1_6_26/index.html#open-office-hours-january-02-2026",
+    "objectID": "slides/2026/1_6_26/index.html#open-office-hours-january-02-2026",
+    "href": "slides/2026/1_6_26/index.html#open-office-hours-january-02-2026",
     "title": "R is for Authoring!!",
     "section": "Open Office Hours (January 02, 2026)",
     "text": "Open Office Hours (January 02, 2026)\n\n\n\n\nRecap session #110\nToday’s topic(s):\n\nquarto®!!\n\nShared problem-solving\n\n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
   },
   {
-    "objectID": "slides/1_6_26/index.html#pluto",
-    "href": "slides/1_6_26/index.html#pluto",
+    "objectID": "slides/2026/1_6_26/index.html#pluto",
+    "href": "slides/2026/1_6_26/index.html#pluto",
     "title": "R is for Authoring!!",
     "section": "Pluto!!",
     "text": "Pluto!!"
   },
   {
-    "objectID": "slides/1_6_26/index.html#quarto",
-    "href": "slides/1_6_26/index.html#quarto",
+    "objectID": "slides/2026/1_6_26/index.html#quarto",
+    "href": "slides/2026/1_6_26/index.html#quarto",
     "title": "R is for Authoring!!",
     "section": "quarto®!!",
     "text": "quarto®!!"
   },
   {
-    "objectID": "slides/1_6_26/index.html#session-info-january-02-2026-rendering",
-    "href": "slides/1_6_26/index.html#session-info-january-02-2026-rendering",
+    "objectID": "slides/2026/1_6_26/index.html#session-info-january-02-2026-rendering",
+    "href": "slides/2026/1_6_26/index.html#session-info-january-02-2026-rendering",
     "title": "R is for Authoring!!",
     "section": " Session Info (January 02, 2026) Rendering:",
     "text": "Session Info (January 02, 2026) Rendering:\n\n\nR version 4.3.1 (2023-06-16 ucrt)\nPlatform: x86_64-w64-mingw32/x64 (64-bit)\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.3.1    fastmap_1.1.1     cli_3.6.1         tools_4.3.1      \n [5] htmltools_0.5.7   rstudioapi_0.15.0 yaml_2.3.7        rmarkdown_2.25   \n [9] knitr_1.45        jsonlite_2.0.0    xfun_0.49         digest_0.6.37    \n[13] rlang_1.1.1       evaluate_1.0.5"

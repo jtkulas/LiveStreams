@@ -13,7 +13,7 @@ format:
     transition: convex
     transition-speed: slow
     code-overflow: wrap              ## instead of horizontal scroll
-    theme: ../../css/theming2026.scss ## themeplayground26.scss
+    theme: ../../../css/theming2026.scss ## themeplayground26.scss
     logo: https://png.pngtree.com/png-vector/20230814/ourmid/pngtree-an-illustration-of-a-bass-guitar-clipart-vector-png-image_6899720.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
     footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
     preview-links: false             ## true brings up iframe window instead of "site"
