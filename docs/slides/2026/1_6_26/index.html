@@ -6,12 +6,12 @@
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-2fef5ea3f8957b3e4ecc936fc74692ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/quarto-contrib/reveal-header-1.0.0/add_header.js" defer="true"></script>
 <link href="../../../site_libs/quarto-contrib/reveal-header-1.0.0/add_header.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/grid-no-htext-1.0.0/grid_no_htext.css" rel="stylesheet">
 <script src="../../../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.32">
+  <meta name="generator" content="quarto-1.8.26">
 
   <meta name="author" content="OOH Session #111… quarto®!!">
   <title>R is for  Authoring!!</title>
@@ -33,7 +33,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-025e4e6c931631d7fb4c512c5a042c03.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-7697f27f1bf85bc0ad6c8d104aadd6db.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -210,12 +210,12 @@ OOH Session #111…<br><span class="huge"><iconify-icon role="img" inline="" ico
 <h2><iconify-icon role="img" inline="" icon="devicon:r" style="font-size: 2em;" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> Session Info (January 02, 2026) Rendering:</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>R version 4.3.1 (2023-06-16 ucrt)
-Platform: x86_64-w64-mingw32/x64 (64-bit)
+<pre><code>R version 4.5.0 (2025-04-11 ucrt)
+Platform: x86_64-w64-mingw32/x64
 Running under: Windows 10 x64 (build 19045)
 
 Matrix products: default
-
+  LAPACK version 3.12.1
 
 locale:
 [1] LC_COLLATE=English_United States.utf8 
@@ -231,10 +231,10 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 loaded via a namespace (and not attached):
- [1] compiler_4.3.1    fastmap_1.1.1     cli_3.6.1         tools_4.3.1      
- [5] htmltools_0.5.7   rstudioapi_0.15.0 yaml_2.3.7        rmarkdown_2.25   
- [9] knitr_1.45        jsonlite_2.0.0    xfun_0.49         digest_0.6.37    
-[13] rlang_1.1.1       evaluate_1.0.5   </code></pre>
+ [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      
+ [5] htmltools_0.5.8.1 rstudioapi_0.17.1 yaml_2.3.10       rmarkdown_2.29   
+ [9] knitr_1.50        jsonlite_2.0.0    xfun_0.52         digest_0.6.37    
+[13] rlang_1.1.6       evaluate_1.0.5   </code></pre>
 </div>
 </div>
 
@@ -444,7 +444,7 @@ loaded via a namespace (and not attached):
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -594,13 +594,14 @@ loaded via a namespace (and not attached):
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy
