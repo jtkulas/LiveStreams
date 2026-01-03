@@ -1,5 +1,5 @@
 project:
-  type: website    ## helps with root-relative paths (finding /css etc)
-  output-dir: docs                  # ← relative to root, inside project → safe & reliable
+  type: website        ## uncomment to publish 
+  output-dir: docs     ## uncomment to publish  
   render:
     - "slides/**/**/*.qmd" 

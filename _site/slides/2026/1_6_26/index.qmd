@@ -65,7 +65,7 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ![](https://clipart-library.com/2024/clip-disney-pluto/clip-disney-pluto-4.png){.absolute width="130" top="265" right="110" .tilt}
 
-## [[Pluto!!]{.pluto2 .Bigger}](https://github.com/fonsp/Pluto.jl) 
+## [[Pluto!!]{.pluto2 .Bigger}](https://juliaclimate.github.io/Notebooks/) 
 
 ...very fun notebook authoring environment for {{< iconify logos:julia size=2x >}}
 
@@ -110,41 +110,25 @@ julia> Pluto.run()
 </a>
 :::
 
-::: {.absolute style="bottom: 230px; right: 10px; width: 220px;"}
+::: {.absolute style="bottom: 230px; left: 80px; width: 220px;"}
 <a href="https://quarto.org/docs/output-formats/pdf-basics.html">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/1667px-PDF_file_icon.svg.png">
 </a>
 :::
 
-::: {.absolute style="bottom: 250px; left: 80px; width: 250px;"}
+::: {.absolute style="bottom: 240px; right: 0px; width: 250px;"}
 <a href="https://quarto.org/docs/output-formats/typst.html">
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIla_SjlPzAr-yXZV7YN-ti1qNSbws-zd-mw&s">
 </a>
 :::
 
-::: {.absolute style="bottom: 10px; left: 270px; width: 160px;"}
-<a href="https://quarto.org/docs/reference/formats/docx.html">
-  <img src="https://static.vecteezy.com/system/resources/thumbnails/027/179/388/small/microsoft-word-icon-logo-symbol-free-png.png">
-</a>
-:::
+![](https://static.vecteezy.com/system/resources/thumbnails/027/179/388/small/microsoft-word-icon-logo-symbol-free-png.png){.absolute height="150" left="280" bottom="10"}
 
-::: {.absolute style="bottom: 10px; right: 220px; width: 180px;"}
-<a href="https://quarto.org/docs/presentations/powerpoint.html">
-  <img src="https://static.vecteezy.com/system/resources/thumbnails/027/179/348/small/microsoft-power-point-icon-logo-symbol-free-png.png">
-</a>
-:::
+![](https://static.vecteezy.com/system/resources/thumbnails/027/179/348/small/microsoft-power-point-icon-logo-symbol-free-png.png){.absolute height="150" right="230" bottom="10"}
 
-![](https://m.media-amazon.com/images/S/aplus-media-library-service-media/1d1b0cd8-1556-4ccf-8356-ecc92b6132ce.__CR0,0,970,300_PT0_SX970_V1___.jpg){.absolute top="-10" right="-140" height="160" .fragment fragment-index=2}
+![](https://m.media-amazon.com/images/S/aplus-media-library-service-media/1d1b0cd8-1556-4ccf-8356-ecc92b6132ce.__CR0,0,970,300_PT0_SX970_V1___.jpg){.absolute top="-10" right="-140" height="160" .fragment}
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1767px-Jupyter_logo.svg.png){.absolute left="-120" bottom="360" height="100" .fragment fragment-index=1}
-
-![](https://www.freeiconspng.com/thumbs/notepad-icon/notepad-icon-7.png){.absolute left="-140" bottom="250" height="100" .fragment fragment-index=1}
-
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/RStudio_logo_flat.svg/2560px-RStudio_logo_flat.svg.png){.absolute left="-140" bottom="140" height="100" .fragment fragment-index=1}
-
-![](https://positron.posit.co/assets/images/positron-logo_fullcolor-TM.png){.absolute left="-140" bottom="40" height="75" .fragment fragment-index=1}
-
-![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTliOW1neTZzd2ZvZ21zM29xZThnNzhlZnNnemUxNG55ejVuMDd3YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6ZsTQ8Y0D3kkDjJ6/giphy.gif){.absolute right="-140" bottom="-10" height="250"}
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTliOW1neTZzd2ZvZ21zM29xZThnNzhlZnNnemUxNG55ejVuMDd3YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6ZsTQ8Y0D3kkDjJ6/giphy.gif){.absolute left="-100" bottom="-10" height="250"}
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
