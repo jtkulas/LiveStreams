@@ -67,10 +67,36 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ## [[Pluto!!]{.pluto2 .Bigger}](https://juliaclimate.github.io/Notebooks/) 
 
+...very fun notebook authoring environment for {{< iconify logos:julia size=2x >}}
 
-![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzBqbjVjbDI4a3k2cWdmeDJtMmJ5YXU0OTF1dzQ2MDE1dmwyNTl6biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ohzdZdf1j0LwIuOQg/giphy.gif){.absolute right="-140" top="-30" height="300"}
+::: {.columns}
 
-![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmRtanA2cXh3NWFmYnh1amY4bGpkdzlibmIyMGQ4bTdyMTE2b2p6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2Qs2hKWMvEzdu/giphy.gif){.absolute left="00" bottom="100" height="350" .behind-image .fragment .fade-out fragment-index=2}
+::: {.column width="50%"}
+
+### Locally
+
+```
+julia> using Pkg
+julia> Pkg.add("Pluto")
+julia> using Pluto
+julia> Pluto.run()
+```
+:::
+
+::: {.column width="50%"}
+
+### Online
+
+[Tutorials](https://featured.plutojl.org/)
+
+[Examples](https://juliaclimate.github.io/Notebooks/)
+
+:::
+
+:::
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzBqbjVjbDI4a3k2cWdmeDJtMmJ5YXU0OTF1dzQ2MDE1dmwyNTl6biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ohzdZdf1j0LwIuOQg/giphy.gif){.absolute right="-140" bottom="40" height="300"}
+
+![](https://pngimg.com/uploads/pluto_disney/small/pluto_disney_PNG12.png){.absolute left="270" top="-20" height="250"}
 
 # Today...
 

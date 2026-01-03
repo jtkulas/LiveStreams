@@ -11,7 +11,7 @@
     "href": "slides/2026/1_6_26/index.html#pluto",
     "title": "R is for Authoring!!",
     "section": "Pluto!!",
-    "text": "Pluto!!"
+    "text": "Pluto!!\n…very fun notebook authoring environment for \n\n\nLocally\njulia&gt; using Pkg\njulia&gt; Pkg.add(\"Pluto\")\njulia&gt; using Pluto\njulia&gt; Pluto.run()\n\nOnline\nTutorials\nExamples"
   },
   {
     "objectID": "slides/2026/1_6_26/index.html#quarto",
