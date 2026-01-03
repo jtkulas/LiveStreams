@@ -104,11 +104,23 @@ julia> Pluto.run()
 
 ## [[quarto®!!]{.quarto .Bigger}](https://quarto.org/docs/guide/)
 
-![](https://cdn.freebiesupply.com/logos/large/2x/html-5-logo-svg-vector.svg){.absolute height="320" left="440" bottom="220"}
+::: {.absolute style="bottom: 140px; left: 420px; width: 280px;"}
+<a href="https://quarto.org/docs/output-formats/html-basics.html">
+  <img src="https://cdn.freebiesupply.com/logos/large/2x/html-5-logo-svg-vector.svg">
+</a>
+:::
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/1667px-PDF_file_icon.svg.png){.absolute height="270" left="80" bottom="230"}
+::: {.absolute style="bottom: 230px; left: 80px; width: 220px;"}
+<a href="https://quarto.org/docs/output-formats/pdf-basics.html">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/1667px-PDF_file_icon.svg.png">
+</a>
+:::
 
-![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIla_SjlPzAr-yXZV7YN-ti1qNSbws-zd-mw&s){.absolute height="250" right="0" bottom="240"}
+::: {.absolute style="bottom: 240px; right: 0px; width: 250px;"}
+<a href="https://quarto.org/docs/output-formats/typst.html">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIla_SjlPzAr-yXZV7YN-ti1qNSbws-zd-mw&s">
+</a>
+:::
 
 ![](https://static.vecteezy.com/system/resources/thumbnails/027/179/388/small/microsoft-word-icon-logo-symbol-free-png.png){.absolute height="150" left="280" bottom="10"}
 
@@ -116,7 +128,7 @@ julia> Pluto.run()
 
 ![](https://m.media-amazon.com/images/S/aplus-media-library-service-media/1d1b0cd8-1556-4ccf-8356-ecc92b6132ce.__CR0,0,970,300_PT0_SX970_V1___.jpg){.absolute top="-10" right="-140" height="160" .fragment}
 
-![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTliOW1neTZzd2ZvZ21zM29xZThnNzhlZnNnemUxNG55ejVuMDd3YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6ZsTQ8Y0D3kkDjJ6/giphy.gif){.absolute left="-100" bottom="-30" height="250"}
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTliOW1neTZzd2ZvZ21zM29xZThnNzhlZnNnemUxNG55ejVuMDd3YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6ZsTQ8Y0D3kkDjJ6/giphy.gif){.absolute left="-100" bottom="-10" height="250"}
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
