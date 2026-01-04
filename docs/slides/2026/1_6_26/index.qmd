@@ -63,7 +63,7 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 ## [[Pluto!!]{.pluto2 .Bigger}](https://github.com/fonsp/Pluto.jl) 
 
 ...very fun notebook authoring environment for {{< iconify logos:julia size=xl >}} <br>
-...you could also just use it as your {{< iconify bi:markdown-fill >}} editor if you wanted<br>to play a bit, although {{< iconify logos:julia size=xl >}} is needed<br>to access locally (see below)
+...you could also just use it as your {{< iconify bi:markdown-fill >}} editor if you wanted<br>to play a bit, although [{{< iconify logos:julia size=xl >}} is needed](https://julialang.org/downloads/)<br>to access locally (see below)
 
 ::: {.columns}
 
@@ -86,9 +86,9 @@ julia> Pluto.run()
 
 ### Online:
 
-[Tutorials](https://featured.plutojl.org/)
+[Tutorials{{< iconify fxemoji:graduationcap >}}](https://featured.plutojl.org/)
 
-[Examples](https://juliaclimate.github.io/Notebooks/)
+[Examples{{< iconify flat-color-icons:idea >}}](https://juliaclimate.github.io/Notebooks/)
 
 :::
 
