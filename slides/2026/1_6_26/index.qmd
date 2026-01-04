@@ -2,30 +2,25 @@
 title: "R is for <br>Authoring!!" 
 author: 'OOH Session #111...<br>[{{< iconify material-icon-theme:quarto >}}]{.huge}[quarto®!!]{.quarto .Bigger}'
 title-slide-attributes: 
-  data-background-image: /img/suzi2.png  #img/suzi2.png
+  data-background-image: /img/suzi2.png  
 #  data-background-opacity: ".7"
 format:
   revealjs:
-#    embed-resources: true           
-    mouse-wheel: true               ## code navigation messy
+    mouse-wheel: true              
     slide-tone: false
-#    navigation-mode: vertical
     transition: convex
     transition-speed: slow
-    code-overflow: wrap              ## instead of horizontal scroll
-    theme: ../../../css/theming2026.scss ## themeplayground26.scss
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
     logo: https://png.pngtree.com/png-vector/20230814/ourmid/pngtree-an-illustration-of-a-bass-guitar-clipart-vector-png-image_6899720.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
     footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
-    preview-links: false             ## true brings up iframe window instead of "site"
-    code-annotations: hover          ## select
-engine: knitr                        ## not picking up inline codes
-#bibliography: bib.bib
-csl: apa7.csl
-#lightbox: true
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
 filters: 
-  - reveal-header          ## extension to add a hyperlink to slide logo
+  - reveal-header         
 execute: 
-  eval: false              ## only 12/2 for fenced code (add after creating)
+  eval: false       ## for fenced code 
   freeze: false
 ---
 
@@ -67,13 +62,14 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ## [[Pluto!!]{.pluto2 .Bigger}](https://github.com/fonsp/Pluto.jl) 
 
-...very fun notebook authoring environment for {{< iconify logos:julia size=2x >}}
+...very fun notebook authoring environment for {{< iconify logos:julia size=xl >}} <br>
+...you could also just use it as your {{< iconify bi:markdown-fill >}} editor if you wanted<br>to play a bit, although {{< iconify logos:julia size=xl >}} is needed<br>to access locally (see below)
 
 ::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="40%"}
 
-### Locally
+### Locally: {#local}
 
 ```
 julia> using Pkg
@@ -83,9 +79,12 @@ julia> Pluto.run()
 ```
 :::
 
-::: {.column width="50%"}
+::: {.column width="5%"}
+:::
 
-### Online
+::: {.column width="55%"}
+
+### Online:
 
 [Tutorials](https://featured.plutojl.org/)
 
@@ -96,7 +95,7 @@ julia> Pluto.run()
 :::
 ![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzBqbjVjbDI4a3k2cWdmeDJtMmJ5YXU0OTF1dzQ2MDE1dmwyNTl6biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ohzdZdf1j0LwIuOQg/giphy.gif){.absolute right="-140" bottom="40" height="300"}
 
-![](https://pngimg.com/uploads/pluto_disney/small/pluto_disney_PNG12.png){.absolute left="270" top="-20" height="250"}
+![](https://pngimg.com/uploads/pluto_disney/small/pluto_disney_PNG12.png){.absolute right="-100" top="-30" height="250"}
 
 # Today...
 
