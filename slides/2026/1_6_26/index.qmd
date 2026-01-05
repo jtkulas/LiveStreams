@@ -54,7 +54,7 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
 
-# {background-image="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTRkOTI1YXIzcDRudDcyaWwyaGJxaG5pN3loZnUwd2xtazB0ZHQ5ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1kymxb4RCuOwE/giphy.gif"}
+# {background-image="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3lxd2toZHo3bGZocTNvcmY5c3RsYXAwbWw4bDUzdW91N21mamp2ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6ZBpUX0CdJdaU/giphy.gif"}
 
 # Recap of Session <br>#110: 
 
