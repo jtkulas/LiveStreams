@@ -1,0 +1,352 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: 'OOH Session #109...<br>[Positron]{.positron .Bigger} [{{< iconify eos-icons:atom-electron >}}]{.bigger}'
+title-slide-attributes: 
+  data-background-image: /img/positron.png #https://m.media-amazon.com/images/S/pv-target-images/5836cd1d9e93e57215f835dea330f34db72b119cdb76d3895433aa12ec7eac01._SX1080_FMpng_.png
+#  data-background-opacity: ".8"
+format:
+  revealjs:
+    mouse-wheel: true               ## code navigation messy
+    slide-tone: false
+#    navigation-mode: vertical
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## instead of horizontal scroll
+    theme: themeplayground26.scss
+    logo: https://pngimg.com/uploads/smiley/smiley_PNG158.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false             ## true brings up iframe window instead of "site"
+    code-annotations: hover          ## select
+engine: knitr                        ## not picking up inline codes
+bibliography: bib.bib
+csl: apa7.csl
+#lightbox: true
+filters: 
+  - reveal-header          ## extension to add a hyperlink to slide logo
+execute: 
+  eval: false              ## only 12/2 for fenced code (add after creating)
+  freeze: false
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {layout="[[10,10],]"}
+::: first-column
++ Recap session #108
++ Today's topic(s):
+    + [[Positron]{.positron .Bigger}](https://positron.posit.co/) {{< iconify eos-icons:atom-electron size=xl >}}
++ Shared problem-solving
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+::: second-column
+
+:::
+
+:::
+
+::: {.absolute style="top: 185px; right: -120px; width:550px;"}
+<a href="https://bookdown.org/jtkulas/12_16_25">
+  <img src="/img/title108.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#108: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://png.pngtree.com/png-vector/20230412/ourmid/pngtree-flow-chart-flat-icon-vector-png-image_6701343.png){.absolute width="150" top="240" right="100"}
+
+## [[[[[P]{.red}[R]{.orange}[I]{.yellow}[S]{.green}[M]{.blue}[A]{.indigo}]{.bigger} flow diagrams]{.prism2}{{< iconify icon-park:tree-diagram >}}]{.noshadow}](https://onlinelibrary.wiley.com/doi/full/10.1002/cl2.1230)  
+
+:::{.smaller}
+:::{.panel-tabset}
+
+### Whatdat?
+
+::: {.absolute style="bottom: 40px; left: 0px; width: 700px;"}
+<a href="https://guides.lib.unc.edu/prisma">
+  <img src="https://i.ytimg.com/vi/dN7CteDet6o/maxresdefault.jpg">
+</a>
+:::
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmEzcTJ2MDhjcWVla2dkZHZ2MGQ3YXhtdHI4djRidHo0NGM1Y2lhdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26BRMwn7YTid6KxWw/giphy.gif){.absolute right="-40" bottom="50" height="400"}
+
+### {{< iconify devicon:html5-wordmark >}}
+
+```{r}
+#| echo: fenced
+#| label: fig-prisma                            #<1>
+#| fig-cap: "Look at the pretty pretty PRISMA"  #<1>
+
+library(PRISMA2020)
+
+csvFile <- system.file("extdata", "PRISMA.csv", package = "PRISMA2020")                 #<2>
+
+data <- read.csv(csvFile)     #<2>
+
+##################################################################################
+## Identification: (new studies via databases and registers)    #<3>
+
+data[5,8] <- 1  ## databases (NA to exclude field)
+data[7,8] <- 2  ## registers (NA to exclude field)
+data[13,8] <- 3 ## duplicates (NA to exclude field)
+data[14,8] <- 4 ## ineligible by automation (NA to exclude field)
+data[15,8] <- 5 ## removed for other reasons (NA to exclude field)
+
+## Optional details:
+data[6,8] <- "PsychInfo, 100; GoogleScholar, 200"   ## set `detail_databases=TRUE` 
+data[8,8] <- "PsychInfo, 300; GoogleScholar, 400"   ## set `detail_registers=TRUE` 
+
+##################################################################################
+####### Screening:
+
+data[16,8] <- 6   ## records screened 
+data[17,8] <- 7   ## records excluded 
+data[18,8] <- 8   ## reports sought for retrieval 
+data[19,8] <- 9   ## reports not retrieved
+data[22,8] <- 10  ## reports assessed for eligibility
+
+## Specification:
+data[23,8] <- "stoopid, 500; boring, 600"  ## reports excluded
+
+##################################################################################
+####### Included:
+
+data[26,8] <- 11  ## New studies included 
+data[27,8] <- 12  ## Reports of new included studies
+
+##################################################################################
+##################################################################################
+##################################################################################
+
+prismadata <- PRISMA_data(data)
+
+PRISMA_flowdiagram(prismadata, 
+                           previous=FALSE,             ## TRUE for left-side column
+                           other=FALSE,                ## TRUE for right-hand column
+                           fontsize=14,
+                           detail_databases=FALSE,     ## TRUE if want to specify databases
+                           detail_registers=FALSE)     ## TRUE if want to specify registers
+
+
+
+```
+1. Only intended for `.html` output -- otherwise specify caption and tag within markdown specification (e.g., `![Look at the pretty pretty PRISMA](image){#fig-prisma}`)
+2. Self--contained data grab from within package -- no need to access template from other (external) locations
+3. These specifications will complete the primary PRISMA info -- you will need to expand if you wish to include "previous" or "other" diagram arms
+
+
+### {{< iconify catppuccin:typst >}}
+
+::: {.columns}
+
+::: {.column width="65%"}
+
+```{r}
+#| echo: fenced
+
+library(PRISMA2020)
+
+csvFile <- system.file("extdata", "PRISMA.csv", package = "PRISMA2020")
+
+data <- read.csv(csvFile)
+
+##################################################################################
+## Identification: (new studies via databases and registers)
+
+data[5,8] <- 1  ## databases (NA to exclude field)
+data[7,8] <- 2  ## registers (NA to exclude field)
+data[13,8] <- 3 ## duplicates (NA to exclude field)
+data[14,8] <- 4 ## ineligible by automation (NA to exclude field)
+data[15,8] <- 5 ## removed for other reasons (NA to exclude field)
+
+## Optional details:
+data[6,8] <- "PsychInfo, 100; GoogleScholar, 200"   ## set `detail_databases=TRUE` 
+data[8,8] <- "PsychInfo, 300; GoogleScholar, 400"   ## set `detail_registers=TRUE` 
+
+##################################################################################
+####### Screening:
+
+data[16,8] <- 6   ## records screened 
+data[17,8] <- 7   ## records excluded 
+data[18,8] <- 8   ## reports sought for retrieval 
+data[19,8] <- 9   ## reports not retrieved
+data[22,8] <- 10  ## reports assessed for eligibility
+
+## Specification:
+data[23,8] <- "stoopid, 500; boring, 600"  ## reports excluded
+
+##################################################################################
+####### Included:
+
+data[26,8] <- 11  ## New studies included 
+data[27,8] <- 12  ## Reports of new included studies
+
+##################################################################################
+##################################################################################
+##################################################################################
+
+prismadata <- PRISMA_data(data)
+
+plot <- PRISMA_flowdiagram(prismadata, 
+                           previous=FALSE,             ## TRUE for left-side column
+                           other=FALSE,                ## TRUE for right-hand column
+                           fontsize=14,
+                           detail_databases=FALSE,     ## TRUE if want to specify databases
+                           detail_registers=FALSE)     ## TRUE if want to specify registers
+
+PRISMA_save(plot, filename = "prisma.svg", overwrite=TRUE)  #<1>
+
+## You will call out the plot OUTSIDE of the code chunk
+
+
+```
+1. `overwrite` argument seems finicky -- may have to keep an eye on output messages {{< iconify fluent-emoji-flat:eyes >}}
+
+:::
+
+:::{.column width="35%"}
+
+{{< iconify line-md:arrow-left-circle-twotone >}}also works with {{< iconify devicon:html5-wordmark >}}
+```
+![caption](image){#fig-label}
+```
+
+![](/img/prisma.svg){.lightbox}
+
+:::
+
+:::
+
+### {{< iconify vscode-icons:file-type-pdf2 >}} 
+
+::: {.columns}
+
+::: {.column width="64%"}
+```{r}
+#| echo: fenced
+
+library(PRISMA2020)
+
+csvFile <- system.file("extdata", "PRISMA.csv", package = "PRISMA2020")
+
+data <- read.csv(csvFile)
+
+##################################################################################
+## Identification: (new studies via databases and registers)
+
+data[5,8] <- 1  ## databases (NA to exclude field)
+data[7,8] <- 2  ## registers (NA to exclude field)
+data[13,8] <- 3 ## duplicates (NA to exclude field)
+data[14,8] <- 4 ## ineligible by automation (NA to exclude field)
+data[15,8] <- 5 ## removed for other reasons (NA to exclude field)
+
+## Optional details:
+data[6,8] <- "PsychInfo, 100; GoogleScholar, 200"   ## set `detail_databases=TRUE` 
+data[8,8] <- "PsychInfo, 300; GoogleScholar, 400"   ## set `detail_registers=TRUE` 
+
+##################################################################################
+####### Screening:
+
+data[16,8] <- 6   ## records screened 
+data[17,8] <- 7   ## records excluded 
+data[18,8] <- 8   ## reports sought for retrieval 
+data[19,8] <- 9   ## reports not retrieved
+data[22,8] <- 10  ## reports assessed for eligibility
+
+## Specification:
+data[23,8] <- "stoopid, 500; boring, 600"  ## reports excluded
+
+##################################################################################
+####### Included:
+
+data[26,8] <- 11  ## New studies included 
+data[27,8] <- 12  ## Reports of new included studies
+
+##################################################################################
+##################################################################################
+##################################################################################
+
+prismadata <- PRISMA_data(data)
+
+plot <- PRISMA_flowdiagram(prismadata, 
+                           previous=FALSE,             ## TRUE for left-side column
+                           other=FALSE,                ## TRUE for right-hand column
+                           fontsize=14,
+                           detail_databases=FALSE,     ## TRUE if want to specify databases
+                           detail_registers=FALSE)     ## TRUE if want to specify registers
+
+PRISMA_save(plot, filename = "prisma.png", overwrite=TRUE)  
+
+## You will call out the plot OUTSIDE of the code chunk
+
+
+```
+:::
+
+::: {.column width="36%"}
+
+{{< iconify line-md:arrow-left-circle-twotone >}}also {{< iconify devicon:html5-wordmark >}}{{< iconify streamline-plump-color:ampersand >}}{{< iconify catppuccin:typst >}}
+```
+![caption](image){#fig-label}
+```
+
+::: {.callout-note .smaller}
+
+The `.svg` image file type requires additional support to be rendered within a Quarto {{< iconify vscode-icons:file-type-pdf2 >}}. [`rsvg-convert` should work](https://github.com/orgs/quarto-dev/discussions/10547), but simply accepting an alternative image file type is another work--around (that's what is done in the adjacent code chunk at line #52). 
+
+:::
+
+:::
+
+:::
+
+:::
+:::
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWxqZ3pqczZ0Nmo4bDRoazNmYm9xNHUwZjN0ZWw2M2tlejhicTVlcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tdE0yKn0vREELINhTf/giphy.gif){.absolute right="-140" top="-10" height="200"}
+
+# Today...
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTA5N2lvZHFvYjM3bXA4bHkwcGFzZ3pkZmNnaWxuNG5hMXlyNG85OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l46CxxgubL1RarATS/giphy.gif)
+
+## [[[Positron]{.positron .bigger}](https://quarto.org/docs/tools/positron/)]{.Bigger} {{< iconify eos-icons:atom-electron size=xl style="color:#ffffff;" >}}
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+### [{{< iconify logos:youtube-icon >}} Tutorial](https://youtu.be/SBPVcKbFbAk?si=foiLg7GI7XnY_vum)^[also many  {{< iconify simple-icons:posit style="color: #82b1ff;">}}--authored vids available --- see, for example, [{{< iconify logos:youtube-icon >}}](https://www.youtube.com/watch?v=aKSrptGegeo), [{{< iconify logos:youtube-icon >}}](https://www.youtube.com/watch?v=QU0N--y-skA), or [{{< iconify logos:youtube-icon >}}](https://www.youtube.com/watch?v=mru9z50IOhI)]
+
+{{< video https://www.youtube.com/watch?v=jLgyx-up9g0 width="100%" height="350px" >}}
+
+:::
+
+::: {.column width="50%"}
+
+### ["White paper"](Positron-Whitepaper-2025.pdf)
+
+<iframe src="Positron-Whitepaper-2025.pdf#page=1&zoom=40" width=700px height=350px>
+</iframe>
+
+:::
+
+:::
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDBuZnNlcjE1ZWRob2hoNm0yaHF5eHJhczFnM2xmNDI0YndjaWc1cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zME3s5T2Hgbi3FgkTE/giphy.gif){.absolute right="-120" top="-40" height="260"}
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+#| eval: true
+sessionInfo()
+```
+
+
