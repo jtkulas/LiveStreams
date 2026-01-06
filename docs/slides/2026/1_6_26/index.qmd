@@ -64,7 +64,7 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ## [[Pluto!!]{.pluto2 .Bigger}](https://github.com/fonsp/Pluto.jl) 
 
-...very fun notebook authoring environment for {{< iconify logos:julia size=xl >}} <br>
+...very fun notebook authoring environment for [{{< iconify logos:julia size=xl >}}](https://julialang.org/downloads/) <br>
 ...you could also just use it as your {{< iconify bi:markdown-fill >}} editor if you wanted<br>to play a bit, although [{{< iconify logos:julia size=xl >}} is needed](https://julialang.org/downloads/)<br>to access locally (see below)
 
 ::: {.columns}
