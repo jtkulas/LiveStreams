@@ -33,14 +33,21 @@ execute:
     + [[quarto®!!]{.quarto .Bigger}](https://quarto.org/docs/guide/)
 + Shared problem-solving
 
+:::
+
+::: second-column
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
 ::: {.callout-note}
 ## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
 Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
 :::
-
-:::
-
-::: second-column
 
 :::
 
