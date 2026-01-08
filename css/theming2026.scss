@@ -13,6 +13,7 @@
 @import url('https://fonts.googleapis.com/css?family=Kaushan Script');
 @import url('https://fonts.googleapis.com/css?family=Mouse Memoirs');
 @import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Inter Tight');
 
 $presentation-title-slide-text-align: right;
 
@@ -127,6 +128,10 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-size: 1.2em;
 }
 
+.biggeR {
+  font-size: 1.7em;
+}
+
 .Bigger {
   font-size: 2em;
 }
@@ -230,4 +235,20 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-weight: normal !important;
   text-shadow:
     0px 0px 0px black !important; 
+}
+
+.revealing {
+  font-family: Inter Tight;
+  color: white;
+  font-weight: normal !important;
+  text-shadow:
+    0px 0px 0px black !important;
+}
+
+.revealing2 {
+  font-family: Inter Tight;
+  color: black;
+  font-weight: normal !important;
+  text-shadow:
+    0px 0px 0px black !important;
 }

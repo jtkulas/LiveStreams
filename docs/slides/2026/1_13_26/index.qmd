@@ -1,0 +1,84 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: 'OOH Session #112...<br>![](https://gitlab.poul.org/uploads/-/system/project/avatar/109/reveal.js-2020-05-28_09-58-06-icon-resized.png){.absolute height="150"}[reveal{{< iconify fluent:code-js-rectangle-16-regular style="color:#000000;" >}}<br>slides!!]{.revealing2 .biggeR}'
+title-slide-attributes: 
+  data-background-image: /img/revealjs2.png #https://media.istockphoto.com/id/1167733411/vector/isolated-magician-s-black-hat-magic-hat-with-bunny-ears-white-rabbit-in-hat-with-magic-wand.jpg?s=612x612&w=0&k=20&c=qHBUgHOs62t4r8FTwk-SQsxTK0icjRCJkOof3PHc3rk= #https://img.freepik.com/premium-vector/open-zipper-icon-zipper-yellow-background_390775-1963.jpg?semt=ais_hybrid&w=740&q=80 #https://static.vecteezy.com/system/resources/previews/024/389/904/non_2x/unzip-background-unlock-zipper-open-clothing-zip-and-unbutton-clasp-backdrop-illustration-vector.jpg #/img/reveal.png #
+#  data-background-opacity: ".8"
+format:
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://images.vexels.com/media/users/3/243207/isolated/preview/cb2b3e27185f1abb1f7b1865d6a8d01a-magic-hat-with-bunny.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header         
+execute: 
+  eval: false       ## for fenced code 
+  freeze: false
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {layout="[[10,10],]"}
+::: first-column
++ Recap session #111
++ Today's topic(s):
+    + ![](https://gitlab.poul.org/uploads/-/system/project/avatar/109/reveal.js-2020-05-28_09-58-06-icon-resized.png){.absolute height="60"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[reveal{{< iconify fluent:code-js-rectangle-16-regular style="color:#FFFFFF;" >}}<br>slides!!]{.revealing}](https://revealjs.com/)
++ Shared problem-solving
+
+:::
+
+::: second-column
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 185px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/1_6_26">
+  <img src="/img/title111.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#111: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://rstudio.github.io/cheatsheets/html/images/logo-quarto.png){.absolute width="100" top="265" right="125"}
+
+## [[quarto®!!]{.quarto .Bigger}](https://quarto.org/docs/guide/) 
+
+# Today...
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbndkcm02bnJpNjNmdTE5MjNrMnhpYWRmMzFqZTFlYTN0aHhhOHRnciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yHjTkpkPqTOxO/giphy.gif)
+
+## ![](https://gitlab.poul.org/uploads/-/system/project/avatar/109/reveal.js-2020-05-28_09-58-06-icon-resized.png){.absolute height="100"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[reveal{{< iconify fluent:code-js-rectangle-16-regular style="color:#FFFFFF;" >}} slides!!]{.revealing .bigger}](https://revealjs.com/)
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+#| eval: true
+sessionInfo()
+```
+
+
