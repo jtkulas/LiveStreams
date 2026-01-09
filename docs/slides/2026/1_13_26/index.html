@@ -32,6 +32,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-9e8c029441318413577f1a427ea4c44f.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -125,6 +191,24 @@
       margin-right: 0; 
     }
   </style>
+  <link href="../../../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+
+  <script src="../../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+
+  <script src="../../../site_libs/plotly-binding-4.10.4/plotly.js"></script>
+
+  <script src="../../../site_libs/typedarray-0.1/typedarray.min.js"></script>
+
+  <script src="../../../site_libs/jquery-3.5.1/jquery.min.js"></script>
+
+  <link href="../../../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+
+  <script src="../../../site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+
+  <link href="../../../site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+
+  <script src="../../../site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+
 </head>
 <body class="quarto-dark">
   <div class="reveal">
@@ -142,8 +226,8 @@ OOH Session #112…<br><img data-src="https://gitlab.poul.org/uploads/-/system/p
 </div>
 
 </section>
-<section id="open-office-hours-january-08-2026" class="slide level2">
-<h2>Open Office Hours <br>(January 08, 2026)</h2>
+<section id="open-office-hours-january-09-2026" class="slide level2">
+<h2>Open Office Hours <br>(January 09, 2026)</h2>
 <div class="quarto-layout-panel" data-layout="[[10,10],]">
 <div class="quarto-layout-row">
 <div class="first-column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
@@ -185,9 +269,70 @@ OOH Session #112…<br><img data-src="https://gitlab.poul.org/uploads/-/system/p
 <p><img data-src="https://pngimg.com/d/sticky_note_PNG18964.png" class="absolute" style="top: 200px; right: 50px; "></p>
 <p><img data-src="https://rstudio.github.io/cheatsheets/html/images/logo-quarto.png" class="absolute" style="top: 265px; right: 125px; width: 100px; "></p>
 </section>
-<section id="quarto" class="slide level2">
-<h2><a href="https://quarto.org/docs/guide/"><span class="quarto Bigger">quarto®!!</span></a></h2>
-</section></section>
+<section id="quarto-3-types-of-content" class="slide level2">
+<h2><a href="https://quarto.org/docs/guide/"><span class="quarto bigger">quarto®!!</span></a> (3 <em>types</em> of content):</h2>
+<div class="columns smaller">
+<div class="column fragment semi-fade-out" data-fragment-index="1" style="width:33%;">
+<h3 id="narrative">Narrative</h3>
+<p><u><strong>plain–text</strong></u> (as you would specify on a notepad <iconify-icon role="img" inline="" icon="streamline-ultimate-color:paper-write" aria-label="Icon paper-write from streamline-ultimate-color Iconify.design set." title="Icon paper-write from streamline-ultimate-color Iconify.design set."></iconify-icon>) with formatting indicated by <a href="https://quarto.org/docs/authoring/markdown-basics.html">markdown</a><sup>1</sup>:</p>
+<pre><code># 1^st^ level heading 
+
+## 2^nd^ level Heading
+
+this is **bold**
+this is *italic*
+</code></pre>
+</div><div class="column fragment fade-in-then-semi-out" data-fragment-index="1" style="width:34%;">
+<h3 id="chunks">Computations</h3>
+<p>isolated bits of code indicated with either one (<a href="https://quarto.org/docs/computations/inline-code.html">inline</a>) or three (<a href="https://quarto.org/docs/output-formats/html-code.html">code block</a>) “ticks”:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-2"><pre class="sourceCode numberSource markdown code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode markdown"><span id="annotated-cell-2-1"><a href="#annotated-cell-2-1"></a><span class="in">```{r}</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="1">1</button><span id="annotated-cell-2-2" class="code-annotation-target"><a href="#annotated-cell-2-2"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="annotated-cell-2-3"><a href="#annotated-cell-2-3"></a></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="2">2</button><span id="annotated-cell-2-4" class="code-annotation-target"><a href="#annotated-cell-2-4"></a><span class="co"># Basic scatter plot</span></span>
+<span id="annotated-cell-2-5"><a href="#annotated-cell-2-5"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(</span>
+<span id="annotated-cell-2-6"><a href="#annotated-cell-2-6"></a>  <span class="at">x=</span>wt, <span class="at">y=</span>mpg)) <span class="sc">+</span> </span>
+<span id="annotated-cell-2-7"><a href="#annotated-cell-2-7"></a>  <span class="fu">geom_point</span>()</span>
+<span id="annotated-cell-2-8"><a href="#annotated-cell-2-8"></a><span class="in">```</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-2" data-code-lines="2" data-code-annotation="1">any <iconify-icon role="img" inline="" icon="devicon:r" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> command you would normally specify within scripts or the console is valid within code chunks (including the loading of packages)</span>
+</dd>
+<dt data-target-cell="annotated-cell-2" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-2" data-code-lines="4" data-code-annotation="2">comments<iconify-icon role="img" inline="" icon="ant-design:comment-outlined" aria-label="Icon comment-outlined from ant-design Iconify.design set." title="Icon comment-outlined from ant-design Iconify.design set."></iconify-icon> also operational within code chunks</span>
+</dd>
+</dl>
+</div>
+</div>
+</div><div class="column fragment fade-in" data-fragment-index="2" style="width:33%;">
+<h3 id="yaml">YAML</h3>
+<p>“executive” specs that control the look and feel of your document – always located at very top:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-3"><pre class="sourceCode numberSource yaml code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode yaml"><button class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="1">1</button><span id="annotated-cell-3-1" class="code-annotation-target"><a href="#annotated-cell-3-1"></a><span class="pp">---</span></span>
+<span id="annotated-cell-3-2"><a href="#annotated-cell-3-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Psychometric Reporting..."</span></span>
+<span id="annotated-cell-3-3"><a href="#annotated-cell-3-3"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"...with Quarto"</span></span>
+<span id="annotated-cell-3-4"><a href="#annotated-cell-3-4"></a><span class="fu">format</span><span class="kw">:</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="2">2</button><span id="annotated-cell-3-5" class="code-annotation-target"><a href="#annotated-cell-3-5"></a><span class="at">  </span><span class="fu">revealjs</span><span class="kw">:</span></span>
+<span id="annotated-cell-3-6"><a href="#annotated-cell-3-6"></a><span class="at">    </span><span class="fu">mouse-wheel</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="annotated-cell-3-7"><a href="#annotated-cell-3-7"></a><span class="pp">---</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-3" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-3" data-code-lines="1" data-code-annotation="1">opening and closing fences indicated by 3 dashes (<code>---</code>)</span>
+</dd>
+<dt data-target-cell="annotated-cell-3" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-3" data-code-lines="5,6" data-code-annotation="2">indentations tend to be important (and finicky) within your YAML</span>
+</dd>
+</dl>
+</div>
+</div>
+</div></div>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>or (possibly) <a href="https://www.latex-project.org/"><span class="math inline">\(\LaTeX\)</span></a> if generating a <iconify-icon role="img" inline="" icon="vscode-icons:file-type-pdf2" aria-label="Icon file-type-pdf2 from vscode-icons Iconify.design set." title="Icon file-type-pdf2 from vscode-icons Iconify.design set."></iconify-icon></p></li></ol></aside></section></section>
 <section>
 <section id="today" class="title-slide slide level1 center">
 <h1>Today…</h1>
@@ -195,9 +340,38 @@ OOH Session #112…<br><img data-src="https://gitlab.poul.org/uploads/-/system/p
 <img data-src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbndkcm02bnJpNjNmdTE5MjNrMnhpYWRmMzFqZTFlYTN0aHhhOHRnciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yHjTkpkPqTOxO/giphy.gif" class="r-stretch"></section>
 <section id="reveal-slides" class="slide level2">
 <h2><img data-src="https://gitlab.poul.org/uploads/-/system/project/avatar/109/reveal.js-2020-05-28_09-58-06-icon-resized.png" class="absolute" style="height: 100px; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://revealjs.com/"><span class="revealing bigger">reveal<iconify-icon role="img" inline="" icon="fluent:code-js-rectangle-16-regular" style="color:#FFFFFF;" aria-label="Icon code-js-rectangle-16-regular from fluent Iconify.design set." title="Icon code-js-rectangle-16-regular from fluent Iconify.design set."></iconify-icon> slides!!</span></a></h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<h3 id="capabilities">Capabilities</h3>
+<ul>
+<li><a href="https://quarto.org/docs/presentations/revealjs/presenting.html#multiplex">Multiplex</a><iconify-icon role="img" inline="" icon="grommet-icons:clone" aria-label="Icon clone from grommet-icons Iconify.design set." title="Icon clone from grommet-icons Iconify.design set."></iconify-icon></li>
+<li><a href="https://quarto.org/docs/presentations/revealjs/presenting.html#publishing">hosting</a><iconify-icon role="img" inline="" icon="streamline-ultimate-color:share" aria-label="Icon share from streamline-ultimate-color Iconify.design set." title="Icon share from streamline-ultimate-color Iconify.design set."></iconify-icon></li>
+<li><a href="https://quarto.org/docs/computations/execution-options.html#fenced-echo">teaching</a><iconify-icon role="img" inline="" icon="game-icons:teacher" aria-label="Icon teacher from game-icons Iconify.design set." title="Icon teacher from game-icons Iconify.design set."></iconify-icon></li>
+<li><a href="https://quarto.org/docs/authoring/code-annotation.html">annotation</a><iconify-icon role="img" inline="" icon="fluent-color:number-symbol-square-20" aria-label="Icon number-symbol-square-20 from fluent-color Iconify.design set." title="Icon number-symbol-square-20 from fluent-color Iconify.design set."></iconify-icon></li>
+<li><a href="https://quarto.org/docs/output-formats/html-lightbox-figures.html">lightbox</a><iconify-icon role="img" inline="" icon="openmoji:light-bulb" aria-label="Icon light-bulb from openmoji Iconify.design set." title="Icon light-bulb from openmoji Iconify.design set."></iconify-icon></li>
+<li><a href="https://quarto.org/docs/authoring/cross-references.html">cross–refs</a><iconify-icon role="img" inline="" icon="icon-park:copy-link" aria-label="Icon copy-link from icon-park Iconify.design set." title="Icon copy-link from icon-park Iconify.design set."></iconify-icon></li>
+</ul>
+</div><div class="column" style="width:33%;">
+<h3 id="extensions"><a href="https://quarto.org/docs/extensions/listing-revealjs.html">Extensions</a></h3>
+<ul>
+<li><a href="https://github.com/mcanouil/quarto-iconify">iconify</a><iconify-icon role="img" inline="" icon="line-md:iconify2-twotone" aria-label="Icon iconify2-twotone from line-md Iconify.design set." title="Icon iconify2-twotone from line-md Iconify.design set."></iconify-icon></li>
+<li><a href="https://github.com/EmilHvitfeldt/quarto-snow">snow</a><iconify-icon role="img" inline="" icon="streamline-emojis:snowflake" aria-label="Icon snowflake from streamline-emojis Iconify.design set." title="Icon snowflake from streamline-emojis Iconify.design set."></iconify-icon></li>
+<li><a href="https://github.com/parmsam/quarto-quiz">quiz</a><iconify-icon role="img" inline="" icon="healthicons:i-exam-multiple-choice" aria-label="Icon i-exam-multiple-choice from healthicons Iconify.design set." title="Icon i-exam-multiple-choice from healthicons Iconify.design set."></iconify-icon></li>
+<li><a href="https://github.com/quarto-ext/pointer">pointer</a><iconify-icon role="img" inline="" icon="fluent-emoji-flat:red-circle" aria-label="Icon red-circle from fluent-emoji-flat Iconify.design set." title="Icon red-circle from fluent-emoji-flat Iconify.design set."></iconify-icon></li>
+</ul>
+</div><div class="column" style="width:33%;">
+<h3 id="data">Data</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-8e062d99f536af1b0391" style="width:384px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-8e062d99f536af1b0391">{"x":{"visdat":{"19283caf794f":["function () ","plotlyVisDat"]},"cur_data":"19283caf794f","attrs":{"19283caf794f":{"y":{},"box":{"visible":true},"meanline":{"visible":true},"x0":"Total Bill","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"violin"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"yaxis":{"domain":[0,1],"automargin":true,"title":"","zeroline":false},"xaxis":{"domain":[0,1],"automargin":true},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"fillcolor":"rgba(31,119,180,0.5)","y":[16.989999999999998,10.34,21.010000000000002,23.68,24.59,25.289999999999999,8.7699999999999996,26.879999999999999,15.039999999999999,14.779999999999999,10.27,35.259999999999998,15.42,18.43,14.83,21.579999999999998,10.33,16.289999999999999,16.969999999999999,20.649999999999999,17.920000000000002,20.289999999999999,15.77,39.420000000000002,19.82,17.809999999999999,13.369999999999999,12.69,21.699999999999999,19.649999999999999,9.5500000000000007,18.350000000000001,15.06,20.690000000000001,17.780000000000001,24.059999999999999,16.309999999999999,16.93,18.690000000000001,31.27,16.039999999999999,17.460000000000001,13.94,9.6799999999999997,30.399999999999999,18.289999999999999,22.23,32.399999999999999,28.550000000000001,18.039999999999999,12.539999999999999,10.289999999999999,34.810000000000002,9.9399999999999995,25.559999999999999,19.489999999999998,38.009999999999998,26.41,11.24,48.270000000000003,20.289999999999999,13.81,11.02,18.289999999999999,17.59,20.079999999999998,16.449999999999999,3.0699999999999998,20.23,15.01,12.02,17.07,26.859999999999999,25.280000000000001,14.73,10.51,17.920000000000002,27.199999999999999,22.760000000000002,17.289999999999999,19.440000000000001,16.66,10.07,32.68,15.98,34.829999999999998,13.029999999999999,18.280000000000001,24.710000000000001,21.16,28.969999999999999,22.489999999999998,5.75,16.32,22.75,40.170000000000002,27.280000000000001,12.029999999999999,21.010000000000002,12.460000000000001,11.35,15.380000000000001,44.299999999999997,22.420000000000002,20.920000000000002,15.359999999999999,20.489999999999998,25.210000000000001,18.239999999999998,14.31,14,7.25,38.07,23.949999999999999,25.710000000000001,17.309999999999999,29.93,10.65,12.43,24.079999999999998,11.69,13.42,14.26,15.949999999999999,12.48,29.800000000000001,8.5199999999999996,14.52,11.380000000000001,22.82,19.079999999999998,20.27,11.17,12.26,18.260000000000002,8.5099999999999998,10.33,14.15,16,13.16,17.469999999999999,34.299999999999997,41.189999999999998,27.050000000000001,16.43,8.3499999999999996,18.640000000000001,11.869999999999999,9.7799999999999994,7.5099999999999998,14.07,13.130000000000001,17.260000000000002,24.550000000000001,19.77,29.850000000000001,48.170000000000002,25,13.390000000000001,16.489999999999998,21.5,12.66,16.210000000000001,13.81,17.510000000000002,24.52,20.760000000000002,31.710000000000001,10.59,10.630000000000001,50.810000000000002,15.81,7.25,31.850000000000001,16.82,32.899999999999999,17.890000000000001,14.48,9.5999999999999996,34.630000000000003,34.649999999999999,23.329999999999998,45.350000000000001,23.170000000000002,40.549999999999997,20.690000000000001,20.899999999999999,30.460000000000001,18.149999999999999,23.100000000000001,15.69,19.809999999999999,28.440000000000001,15.48,16.579999999999998,7.5599999999999996,10.34,43.109999999999999,13,13.51,18.710000000000001,12.74,13,16.399999999999999,20.530000000000001,16.469999999999999,26.59,38.729999999999997,24.27,12.76,30.059999999999999,25.890000000000001,48.329999999999998,13.27,28.170000000000002,12.9,28.149999999999999,11.59,7.7400000000000002,30.140000000000001,12.16,13.42,8.5800000000000001,15.98,13.42,16.27,10.09,20.449999999999999,13.279999999999999,22.120000000000001,24.010000000000002,15.69,11.609999999999999,10.77,15.529999999999999,10.07,12.6,32.829999999999998,35.829999999999998,29.030000000000001,27.18,22.670000000000002,17.82,18.780000000000001],"box":{"visible":true},"meanline":{"visible":true},"x0":"Total Bill","type":"violin","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div></div>
+<p><img data-src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnpwd2MxanN1MzM2ZmluZW5lNGdqYWVkbm9qamdkZWVjcHUybTZjOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lN3o4fk4ZgrSDK/giphy.gif" class="absolute" style="top: -40px; right: -140px; height: 300px; "></p>
 </section>
-<section id="session-info-january-08-2026-rendering" class="slide level2">
-<h2><iconify-icon role="img" inline="" icon="devicon:r" style="font-size: 2em;" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> Session Info (January 08, 2026) Rendering:</h2>
+<section id="session-info-january-09-2026-rendering" class="slide level2">
+<h2><iconify-icon role="img" inline="" icon="devicon:r" style="font-size: 2em;" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> Session Info (January 09, 2026) Rendering:</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.5.0 (2025-04-11 ucrt)
@@ -220,11 +394,20 @@ tzcode source: internal
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
+other attached packages:
+[1] plotly_4.10.4 ggplot2_3.5.2
+
 loaded via a namespace (and not attached):
- [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      
- [5] htmltools_0.5.8.1 rstudioapi_0.17.1 yaml_2.3.10       rmarkdown_2.29   
- [9] knitr_1.50        jsonlite_2.0.0    xfun_0.52         digest_0.6.37    
-[13] rlang_1.1.6       evaluate_1.0.5   </code></pre>
+ [1] vctrs_0.6.5        httr_1.4.7         cli_3.6.5          knitr_1.50        
+ [5] rlang_1.1.6        xfun_0.52          purrr_1.0.4        generics_0.1.4    
+ [9] data.table_1.17.0  jsonlite_2.0.0     glue_1.8.0         htmltools_0.5.8.1 
+[13] scales_1.4.0       rmarkdown_2.29     grid_4.5.0         crosstalk_1.2.1   
+[17] evaluate_1.0.5     tibble_3.3.0       fastmap_1.2.0      yaml_2.3.10       
+[21] lifecycle_1.0.4    compiler_4.5.0     dplyr_1.1.4        RColorBrewer_1.1-3
+[25] htmlwidgets_1.6.4  pkgconfig_2.0.3    tidyr_1.3.1        rstudioapi_0.17.1 
+[29] farver_2.1.2       digest_0.6.37      viridisLite_0.4.2  R6_2.6.1          
+[33] tidyselect_1.2.1   pillar_1.11.0      magrittr_2.0.3     withr_3.0.2       
+[37] tools_4.5.0        gtable_0.3.6       lazyeval_0.2.2    </code></pre>
 </div>
 </div>
 
@@ -244,6 +427,7 @@ loaded via a namespace (and not attached):
 </div>
 </div>
 </section></section>
+
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="https://images.vexels.com/media/users/3/243207/isolated/preview/cb2b3e27185f1abb1f7b1865d6a8d01a-magic-hat-with-bunny.png" class="slide-logo"></p>

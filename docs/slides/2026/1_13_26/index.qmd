@@ -67,13 +67,149 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ![](https://rstudio.github.io/cheatsheets/html/images/logo-quarto.png){.absolute width="100" top="265" right="125"}
 
-## [[quarto®!!]{.quarto .Bigger}](https://quarto.org/docs/guide/) 
+## [[quarto®!!]{.quarto .bigger}](https://quarto.org/docs/guide/) (3 *types* of content):
+
+::: {.columns .smaller}
+
+::: {.column width="33%" .fragment .semi-fade-out fragment-index=1}
+### Narrative
+
+[**plain--text**]{.underline} (as you would specify on a notepad {{< iconify streamline-ultimate-color:paper-write>}}) with formatting indicated by [markdown](https://quarto.org/docs/authoring/markdown-basics.html)^[or (possibly) [$\LaTeX$](https://www.latex-project.org/) if generating a {{< iconify vscode-icons:file-type-pdf2 >}}]:
+
+```
+# 1^st^ level heading 
+
+## 2^nd^ level Heading
+
+this is **bold**
+this is *italic*
+
+```
+
+:::
+
+::: {.column width="34%" .fragment .fade-in-then-semi-out fragment-index=1}
+### Computations{#chunks}
+
+isolated bits of code indicated with either one ([inline](https://quarto.org/docs/computations/inline-code.html)) or three ([code block](https://quarto.org/docs/output-formats/html-code.html)) "ticks":
+
+```{r}                   
+#| echo: fenced
+
+library(ggplot2)         #<1>
+
+# Basic scatter plot    #<2>  
+ggplot(mtcars, aes(
+  x=wt, y=mpg)) + 
+  geom_point()
+```
+1. any {{< iconify devicon:r >}} command you would normally specify within scripts or the console is valid within code chunks (including the loading of packages)
+2. comments{{< iconify ant-design:comment-outlined >}} also operational within code chunks 
+:::
+
+
+::: {.column width="33%" .fragment .fade-in fragment-index=2}
+### YAML{#yaml}
+
+"executive" specs that control the look and feel of your document -- always located at very top:
+
+```{yaml}                   
+#| echo: true
+---                    #<1>
+title: "Psychometric Reporting..."
+author: "...with Quarto"
+format:
+  revealjs:               #<2>
+    mouse-wheel: true     #<2>
+---
+```
+1. opening and closing fences indicated by 3 dashes (`---`)
+2. indentations tend to be important (and finicky) within your YAML
+
+:::
+
+:::
 
 # Today...
 
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbndkcm02bnJpNjNmdTE5MjNrMnhpYWRmMzFqZTFlYTN0aHhhOHRnciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yHjTkpkPqTOxO/giphy.gif)
 
 ## ![](https://gitlab.poul.org/uploads/-/system/project/avatar/109/reveal.js-2020-05-28_09-58-06-icon-resized.png){.absolute height="100"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[reveal{{< iconify fluent:code-js-rectangle-16-regular style="color:#FFFFFF;" >}} slides!!]{.revealing .bigger}](https://revealjs.com/)
+
+::: {.columns}
+
+::: {.column width="33%"}
+
+### Capabilities
+
++ [Multiplex](https://quarto.org/docs/presentations/revealjs/presenting.html#multiplex){{< iconify grommet-icons:clone >}}
++ [hosting](https://quarto.org/docs/presentations/revealjs/presenting.html#publishing){{< iconify streamline-ultimate-color:share >}}
++ [teaching](https://quarto.org/docs/computations/execution-options.html#fenced-echo){{< iconify game-icons:teacher >}}
++ [annotation](https://quarto.org/docs/authoring/code-annotation.html){{< iconify fluent-color:number-symbol-square-20 >}}
++ [lightbox](https://quarto.org/docs/output-formats/html-lightbox-figures.html){{< iconify openmoji:light-bulb >}}
++ [cross--refs](https://quarto.org/docs/authoring/cross-references.html){{< iconify icon-park:copy-link >}}
+
+
+:::
+
+::: {.column width="33%"}
+
+### [Extensions](https://quarto.org/docs/extensions/listing-revealjs.html)
+
++ [iconify](https://github.com/mcanouil/quarto-iconify){{< iconify line-md:iconify2-twotone >}}
++ [snow](https://github.com/EmilHvitfeldt/quarto-snow){{< iconify streamline-emojis:snowflake >}}
++ [quiz](https://github.com/parmsam/quarto-quiz){{< iconify healthicons:i-exam-multiple-choice >}}
++ [pointer](https://github.com/quarto-ext/pointer){{< iconify fluent-emoji-flat:red-circle >}}
+
+:::
+
+::: {.column width="33%"}
+
+### Data
+
+```{r}
+#| fig-width: 4
+#| echo: false
+#| warning: false
+#| eval: true
+#| 
+
+
+library(plotly)
+
+df <- read.csv("https://raw.githubusercontent.com/plotly/datasets/master/violin_data.csv")
+
+fig <- df %>%
+  plot_ly(
+    y = ~total_bill,
+    type = 'violin',
+    box = list(
+      visible = T
+    ),
+    meanline = list(
+      visible = T
+    ),
+    x0 = 'Total Bill'
+  ) 
+
+fig <- fig %>%
+  layout(
+    yaxis = list(
+      title = "",
+      zeroline = F
+    )
+  )
+
+fig
+
+```
+
+
+:::
+
+:::
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnpwd2MxanN1MzM2ZmluZW5lNGdqYWVkbm9qamdkZWVjcHUybTZjOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lN3o4fk4ZgrSDK/giphy.gif){.absolute right="-140" top="-40" height="300"}
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}

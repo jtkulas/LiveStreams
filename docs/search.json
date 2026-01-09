@@ -95,7 +95,7 @@
     "href": "slides/2026/1_13_26/index.html#quarto",
     "title": "R is for Authoring!!",
     "section": "quarto®!!",
-    "text": "quarto®!!"
+    "text": "quarto®!!\n3 types of content:\n\n\nNarrative\nplain–text (as you would specify on a notepad ) with formatting indicated by markdown1:\n# 1^st^ level heading \n\n## 2^nd^ level Heading\n\nthis is **bold**\nthis is *italic*\n\n\nComputations\nisolated bits of code indicated with either one (inline) or three (code block) “ticks”:\n\n```{r}\n1library(ggplot2)\n\n2# Basic scatter plot\nggplot(mtcars, aes(\n  x=wt, y=mpg)) + \n  geom_point()\n```\n\n\n1\n\nany  command you would normally specify within scripts or the console is valid within code chunks (including the loading of packages)\n\n2\n\ncomments also operational within code chunks\n\n\n\n\n\nYAML\n“executive” specifications that control the look and feel of your document – always located at very top:\n\n1---\ntitle: \"Psychometric Reporting...\"\nauthor: \"...with Quarto\"\nformat:\n2  revealjs:\n    mouse-wheel: true\n---\n\n\n1\n\nopening and closing fences indicated by 3 dashes (---)\n\n2\n\nindentations tend to be important (and finicky) within your YAML\n\n\n\n\n\nor (possibly) \\(\\LaTeX\\) if generating a"
   },
   {
     "objectID": "slides/2026/1_13_26/index.html#reveal-js-slides",
@@ -130,7 +130,7 @@
     "href": "slides/2026/1_13_26/index.html#reveal-slides",
     "title": "R is for Authoring!!",
     "section": "      reveal slides!!",
-    "text": "reveal slides!!"
+    "text": "reveal slides!!\n\n\nCapabilities\n\nMultiplex\nhosting\nteaching\nannotation\nlightbox\ncross–refs\n\n\nExtensions\n\niconify\nsnow\nquiz\npointer\n\n\nData"
   },
   {
     "objectID": "slides/2026/1_13_26/index.html#open-office-hours-january-08-2026",
@@ -145,5 +145,26 @@
     "title": "R is for Authoring!!",
     "section": " Session Info (January 08, 2026) Rendering:",
     "text": "Session Info (January 08, 2026) Rendering:\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 rstudioapi_0.17.1 yaml_2.3.10       rmarkdown_2.29   \n [9] knitr_1.50        jsonlite_2.0.0    xfun_0.52         digest_0.6.37    \n[13] rlang_1.1.6       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/1_13_26/index.html#open-office-hours-january-09-2026",
+    "href": "slides/2026/1_13_26/index.html#open-office-hours-january-09-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (January 09, 2026)",
+    "text": "Open Office Hours (January 09, 2026)\n\n\n\n\nRecap session #111\nToday’s topic(s):\n\n       revealslides!!\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/1_13_26/index.html#session-info-january-09-2026-rendering",
+    "href": "slides/2026/1_13_26/index.html#session-info-january-09-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (January 09, 2026) Rendering:",
+    "text": "Session Info (January 09, 2026) Rendering:\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n[1] plotly_4.10.4 ggplot2_3.5.2\n\nloaded via a namespace (and not attached):\n [1] vctrs_0.6.5        httr_1.4.7         cli_3.6.5          knitr_1.50        \n [5] rlang_1.1.6        xfun_0.52          purrr_1.0.4        generics_0.1.4    \n [9] data.table_1.17.0  jsonlite_2.0.0     glue_1.8.0         htmltools_0.5.8.1 \n[13] scales_1.4.0       rmarkdown_2.29     grid_4.5.0         crosstalk_1.2.1   \n[17] evaluate_1.0.5     tibble_3.3.0       fastmap_1.2.0      yaml_2.3.10       \n[21] lifecycle_1.0.4    compiler_4.5.0     dplyr_1.1.4        RColorBrewer_1.1-3\n[25] htmlwidgets_1.6.4  pkgconfig_2.0.3    tidyr_1.3.1        rstudioapi_0.17.1 \n[29] farver_2.1.2       digest_0.6.37      viridisLite_0.4.2  R6_2.6.1          \n[33] tidyselect_1.2.1   pillar_1.11.0      magrittr_2.0.3     withr_3.0.2       \n[37] tools_4.5.0        gtable_0.3.6       lazyeval_0.2.2"
+  },
+  {
+    "objectID": "slides/2026/1_13_26/index.html#quarto-3-types-of-content",
+    "href": "slides/2026/1_13_26/index.html#quarto-3-types-of-content",
+    "title": "R is for Authoring!!",
+    "section": "quarto®!! (3 types of content):",
+    "text": "quarto®!! (3 types of content):\n\n\nNarrative\nplain–text (as you would specify on a notepad ) with formatting indicated by markdown1:\n# 1^st^ level heading \n\n## 2^nd^ level Heading\n\nthis is **bold**\nthis is *italic*\n\n\nComputations\nisolated bits of code indicated with either one (inline) or three (code block) “ticks”:\n\n```{r}\n1library(ggplot2)\n\n2# Basic scatter plot\nggplot(mtcars, aes(\n  x=wt, y=mpg)) + \n  geom_point()\n```\n\n\n1\n\nany  command you would normally specify within scripts or the console is valid within code chunks (including the loading of packages)\n\n2\n\ncomments also operational within code chunks\n\n\n\n\n\nYAML\n“executive” specs that control the look and feel of your document – always located at very top:\n\n1---\ntitle: \"Psychometric Reporting...\"\nauthor: \"...with Quarto\"\nformat:\n2  revealjs:\n    mouse-wheel: true\n---\n\n\n1\n\nopening and closing fences indicated by 3 dashes (---)\n\n2\n\nindentations tend to be important (and finicky) within your YAML\n\n\n\n\n\nor (possibly) \\(\\LaTeX\\) if generating a"
   }
 ]
