@@ -165,6 +165,13 @@
     "href": "slides/2026/1_13_26/index.html#quarto-3-types-of-content",
     "title": "R is for Authoring!!",
     "section": "quarto®!! (3 types of content):",
-    "text": "quarto®!! (3 types of content):\n\n\nNarrative\nplain–text (as you would specify on a notepad ) with formatting indicated by markdown1:\n# 1^st^ level heading \n\n## 2^nd^ level Heading\n\nthis is **bold**\nthis is *italic*\n\n\nComputations\nisolated bits of code indicated with either one (inline) or three (code block) “ticks”:\n\n```{r}\n1library(ggplot2)\n\n2# Basic scatter plot\nggplot(mtcars, aes(\n  x=wt, y=mpg)) + \n  geom_point()\n```\n\n\n1\n\nany  command you would normally specify within scripts or the console is valid within code chunks (including the loading of packages)\n\n2\n\ncomments also operational within code chunks\n\n\n\n\n\nYAML\n“executive” specs that control the look and feel of your document – always located at very top:\n\n1---\ntitle: \"Psychometric Reporting...\"\nauthor: \"...with Quarto\"\nformat:\n2  revealjs:\n    mouse-wheel: true\n---\n\n\n1\n\nopening and closing fences indicated by 3 dashes (---)\n\n2\n\nindentations tend to be important (and finicky) within your YAML\n\n\n\n\n\nor (possibly) \\(\\LaTeX\\) if generating a"
+    "text": "quarto®!! (3 types of content):\n\n\nNarrative\nplain–text (as you would specify on a notepad ) with formatting indicated by markdown1:\n# 1^st^ level heading \n\n## 2^nd^ level Heading\n\nthis is **bold**\nthis is *italic*\n\n\nComputations\nisolated bits of code indicated with either one (inline) or three (code block) “ticks”:\n\n```{r}\n1library(ggplot2)\n\n2# Basic scatter plot\nggplot(mtcars, aes(\n  x=wt, y=mpg)) + \n  geom_point()\n```\n\n\n1\n\nany  command you would normally specify within scripts or the console is valid within code chunks (including the loading of packages)\n\n2\n\ncomments also operational within code chunks\n\n\n\n\n\nYAML\n“executive” specs that control the look and feel of your document – always located at very top:\n\n1---\ntitle: \"Psychometric Reporting...\"\nauthor: \"...with Quarto\"\nformat:\n2  revealjs:\n    mouse-wheel: true\n---\n\n\n1\n\nopening and closing fences indicated by 3 dashes (---)\n\n2\n\nindentations tend to be important (and finicky) within your \n\n\n\n\n\n\nor (possibly) \\(\\LaTeX\\) if generating a"
+  },
+  {
+    "objectID": "slides/2026/1_13_26/index.html#reveal-slides-via",
+    "href": "slides/2026/1_13_26/index.html#reveal-slides-via",
+    "title": "R is for Authoring!!",
+    "section": "      reveal slides (via )",
+    "text": "reveal slides (via )\n\n\nCapabilities\n\nMultiplex\nhosting\nteaching\nannotation\nlightbox\ncross–refs\n\n\nExtensions\n\niconify\nsnow\nquiz\npointer\n\n\nData"
   }
 ]

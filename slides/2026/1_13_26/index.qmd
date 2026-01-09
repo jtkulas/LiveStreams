@@ -109,7 +109,7 @@ ggplot(mtcars, aes(
 
 
 ::: {.column width="33%" .fragment .fade-in fragment-index=2}
-### YAML{#yaml}
+### [YAML](https://circleci.com/blog/what-is-yaml-a-beginner-s-guide/)
 
 "executive" specs that control the look and feel of your document -- always located at very top:
 
@@ -124,17 +124,19 @@ format:
 ---
 ```
 1. opening and closing fences indicated by 3 dashes (`---`)
-2. indentations tend to be important (and finicky) within your YAML
+2. indentations tend to be important (and finicky) within your {{< iconify devicon:yaml >}}
 
 :::
 
 :::
+
+![](https://static.vecteezy.com/system/resources/thumbnails/071/793/770/small/vibrant-red-electric-bass-guitar-for-music-lovers-and-rock-band-designs-a-dynamic-musical-instrument-free-png.png){.absolute right="-140" top="-40" height="170" .mirror}
 
 # Today...
 
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbndkcm02bnJpNjNmdTE5MjNrMnhpYWRmMzFqZTFlYTN0aHhhOHRnciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yHjTkpkPqTOxO/giphy.gif)
 
-## ![](https://gitlab.poul.org/uploads/-/system/project/avatar/109/reveal.js-2020-05-28_09-58-06-icon-resized.png){.absolute height="100"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[reveal{{< iconify fluent:code-js-rectangle-16-regular style="color:#FFFFFF;" >}} slides!!]{.revealing .bigger}](https://revealjs.com/)
+## ![](https://gitlab.poul.org/uploads/-/system/project/avatar/109/reveal.js-2020-05-28_09-58-06-icon-resized.png){.absolute height="100"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[reveal{{< iconify fluent:code-js-rectangle-16-regular style="color:#FFFFFF;" >}} slides]{.revealing .bigger}](https://revealjs.com/) [[(via {{< iconify material-icon-theme:quarto >}})]{.quarto}](https://quarto.org/docs/presentations/revealjs/)
 
 ::: {.columns}
 
@@ -209,7 +211,9 @@ fig
 
 :::
 
-![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnpwd2MxanN1MzM2ZmluZW5lNGdqYWVkbm9qamdkZWVjcHUybTZjOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lN3o4fk4ZgrSDK/giphy.gif){.absolute right="-140" top="-40" height="300"}
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnpwd2MxanN1MzM2ZmluZW5lNGdqYWVkbm9qamdkZWVjcHUybTZjOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lN3o4fk4ZgrSDK/giphy.gif){.absolute right="-140" top="-40" height="250"}
+
+![](https://static.vecteezy.com/system/resources/thumbnails/046/320/909/small/cute-bunny-rabbit-inside-magician-s-hat-on-transparent-background-png.png){.absolute bottom="-20" left="350" height="240"}
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
