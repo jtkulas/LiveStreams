@@ -72,9 +72,29 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 ::: {.columns .smaller}
 
 ::: {.column width="33%" .fragment .semi-fade-out fragment-index=1}
+### [YAML](https://circleci.com/blog/what-is-yaml-a-beginner-s-guide/)
+
+"executive" specs that control doc look & feel -- always located at very top:
+
+```{yaml}                   
+#| echo: true
+---                    #<1>
+title: "Mooseterpiece"
+author: "I.M. Awesome"
+format:
+  revealjs:               #<2>
+    mouse-wheel: true     #<2>
+---
+```
+1. opening and closing fences indicated by 3 dashes (`---`)
+2. indentations tend to be important (and finicky) within your {{< iconify devicon:yaml >}}
+
+:::
+
+::: {.column width="33%" .fragment .fade-in-then-semi-out fragment-index=1}
 ### Narrative
 
-[**plain--text**]{.underline} (as you would specify on a notepad {{< iconify streamline-ultimate-color:paper-write>}}) with formatting indicated by [markdown](https://quarto.org/docs/authoring/markdown-basics.html)^[or (possibly) [$\LaTeX$](https://www.latex-project.org/) if generating a {{< iconify vscode-icons:file-type-pdf2 >}}]:
+[**plain--text**]{.underline} (as you would specify on a notepad {{< iconify streamline-ultimate-color:paper-write>}}) with formatting indicated by [markdown](https://quarto.org/docs/authoring/markdown-basics.html):
 
 ```
 # 1^st^ level heading 
@@ -85,10 +105,11 @@ this is **bold**
 this is *italic*
 
 ```
-
 :::
 
-::: {.column width="34%" .fragment .fade-in-then-semi-out fragment-index=1}
+
+::: {.column width="34%" .fragment .fade-in fragment-index=2}
+
 ### Computations{#chunks}
 
 isolated bits of code indicated with either one ([inline](https://quarto.org/docs/computations/inline-code.html)) or three ([code block](https://quarto.org/docs/output-formats/html-code.html)) "ticks":
@@ -105,26 +126,6 @@ ggplot(mtcars, aes(
 ```
 1. any {{< iconify devicon:r >}} command you would normally specify within scripts or the console is valid within code chunks (including the loading of packages)
 2. comments{{< iconify ant-design:comment-outlined >}} also operational within code chunks 
-:::
-
-
-::: {.column width="33%" .fragment .fade-in fragment-index=2}
-### [YAML](https://circleci.com/blog/what-is-yaml-a-beginner-s-guide/)
-
-"executive" specs that control the look and feel of your document -- always located at very top:
-
-```{yaml}                   
-#| echo: true
----                    #<1>
-title: "Psychometric Reporting..."
-author: "...with Quarto"
-format:
-  revealjs:               #<2>
-    mouse-wheel: true     #<2>
----
-```
-1. opening and closing fences indicated by 3 dashes (`---`)
-2. indentations tend to be important (and finicky) within your {{< iconify devicon:yaml >}}
 
 :::
 
@@ -140,7 +141,7 @@ format:
 
 ::: {.columns}
 
-::: {.column width="33%"}
+::: {.column width="33%" .fragment .semi-fade-out fragment-index=1} 
 
 ### Capabilities
 
@@ -154,9 +155,13 @@ format:
 
 :::
 
-::: {.column width="33%"}
+::: {.column width="33%" .fragment .fade-in-then-semi-out fragment-index=1}
 
 ### [Extensions](https://quarto.org/docs/extensions/listing-revealjs.html)
+
+<br>
+<br>
+<br>
 
 + [iconify](https://github.com/mcanouil/quarto-iconify){{< iconify line-md:iconify2-twotone >}}
 + [snow](https://github.com/EmilHvitfeldt/quarto-snow){{< iconify streamline-emojis:snowflake >}}
@@ -165,7 +170,7 @@ format:
 
 :::
 
-::: {.column width="33%"}
+::: {.column width="33%" .fragment .fade-in fragment-index=2}
 
 ### Data
 
@@ -174,38 +179,17 @@ format:
 #| echo: false
 #| warning: false
 #| eval: true
-#| 
-
+#| fig-cap: Bunch o' flowers eh
+#| label: fig-iris
+#| fig-cap-location: top
 
 library(plotly)
 
-df <- read.csv("https://raw.githubusercontent.com/plotly/datasets/master/violin_data.csv")
+plot_ly(data = iris, x = ~Sepal.Length, y = ~Petal.Length, color = ~Species, colors = "Set1")
 
-fig <- df %>%
-  plot_ly(
-    y = ~total_bill,
-    type = 'violin',
-    box = list(
-      visible = T
-    ),
-    meanline = list(
-      visible = T
-    ),
-    x0 = 'Total Bill'
-  ) 
 
-fig <- fig %>%
-  layout(
-    yaxis = list(
-      title = "",
-      zeroline = F
-    )
-  )
-
-fig
 
 ```
-
 
 :::
 
@@ -213,7 +197,7 @@ fig
 
 ![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnpwd2MxanN1MzM2ZmluZW5lNGdqYWVkbm9qamdkZWVjcHUybTZjOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lN3o4fk4ZgrSDK/giphy.gif){.absolute right="-140" top="-40" height="250"}
 
-![](https://static.vecteezy.com/system/resources/thumbnails/046/320/909/small/cute-bunny-rabbit-inside-magician-s-hat-on-transparent-background-png.png){.absolute bottom="-20" left="350" height="240"}
+![](https://static.vecteezy.com/system/resources/thumbnails/046/320/909/small/cute-bunny-rabbit-inside-magician-s-hat-on-transparent-background-png.png){.absolute bottom="300" left="350" height="240" .fragment .fade-in fragment-index=1}
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
