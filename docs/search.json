@@ -172,7 +172,7 @@
     "href": "slides/2026/1_13_26/index.html#reveal-slides-via",
     "title": "R is for Authoring!!",
     "section": "      reveal slides (via )",
-    "text": "reveal slides (via )\n\n\nCapabilities\n\nMultiplex\nhosting\nteaching\nannotation\nlightbox\ncross–refs\n\n\nExtensions\n  \n\niconify\nsnow\nquiz\npointer\n\n\nData\n\n\n\n\n\n\n\n\nFigure 1: Bunch o’ flowers eh"
+    "text": "reveal slides (via )\n\n\nCapabilities\n\nMultiplex\nhosting\nteaching\nannotation\nlightbox\ncross–refs\n\n\nExtensions\n  \n\niconify\nsnow\nquiz\npointer\n\n\nData\n\n\n\n\n\n\n\n\nFigure 1: Bunch ’o flowers"
   },
   {
     "objectID": "slides/2026/1_13_26/index.html#open-office-hours-january-10-2026",
@@ -187,5 +187,19 @@
     "title": "R is for Authoring!!",
     "section": " Session Info (January 10, 2026) Rendering:",
     "text": "Session Info (January 10, 2026) Rendering:\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n[1] plotly_4.10.4 ggplot2_3.5.2\n\nloaded via a namespace (and not attached):\n [1] vctrs_0.6.5        httr_1.4.7         cli_3.6.5          knitr_1.50        \n [5] rlang_1.1.6        xfun_0.52          purrr_1.0.4        generics_0.1.4    \n [9] data.table_1.17.0  jsonlite_2.0.0     glue_1.8.0         htmltools_0.5.8.1 \n[13] scales_1.4.0       rmarkdown_2.29     grid_4.5.0         crosstalk_1.2.1   \n[17] evaluate_1.0.5     tibble_3.3.0       fastmap_1.2.0      yaml_2.3.10       \n[21] lifecycle_1.0.4    compiler_4.5.0     dplyr_1.1.4        RColorBrewer_1.1-3\n[25] htmlwidgets_1.6.4  pkgconfig_2.0.3    tidyr_1.3.1        rstudioapi_0.17.1 \n[29] farver_2.1.2       digest_0.6.37      viridisLite_0.4.2  R6_2.6.1          \n[33] tidyselect_1.2.1   pillar_1.11.0      magrittr_2.0.3     withr_3.0.2       \n[37] tools_4.5.0        gtable_0.3.6       lazyeval_0.2.2"
+  },
+  {
+    "objectID": "slides/2026/1_13_26/index.html#open-office-hours-january-11-2026",
+    "href": "slides/2026/1_13_26/index.html#open-office-hours-january-11-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (January 11, 2026)",
+    "text": "Open Office Hours (January 11, 2026)\n\n\n\n\nRecap session #111\nToday’s topic(s):\n\n       revealslides!!\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/1_13_26/index.html#session-info-january-11-2026-rendering",
+    "href": "slides/2026/1_13_26/index.html#session-info-january-11-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (January 11, 2026) Rendering:",
+    "text": "Session Info (January 11, 2026) Rendering:\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n[1] plotly_4.10.4 ggplot2_3.5.2\n\nloaded via a namespace (and not attached):\n [1] vctrs_0.6.5        httr_1.4.7         cli_3.6.5          knitr_1.50        \n [5] rlang_1.1.6        xfun_0.52          purrr_1.0.4        generics_0.1.4    \n [9] data.table_1.17.0  jsonlite_2.0.0     glue_1.8.0         htmltools_0.5.8.1 \n[13] scales_1.4.0       rmarkdown_2.29     grid_4.5.0         crosstalk_1.2.1   \n[17] evaluate_1.0.5     tibble_3.3.0       fastmap_1.2.0      yaml_2.3.10       \n[21] lifecycle_1.0.4    compiler_4.5.0     dplyr_1.1.4        RColorBrewer_1.1-3\n[25] htmlwidgets_1.6.4  pkgconfig_2.0.3    tidyr_1.3.1        rstudioapi_0.17.1 \n[29] farver_2.1.2       digest_0.6.37      viridisLite_0.4.2  R6_2.6.1          \n[33] tidyselect_1.2.1   pillar_1.11.0      magrittr_2.0.3     withr_3.0.2       \n[37] tools_4.5.0        gtable_0.3.6       lazyeval_0.2.2"
   }
 ]
