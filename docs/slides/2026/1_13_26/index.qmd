@@ -150,8 +150,8 @@ ggplot(mtcars, aes(
 + [teaching](https://quarto.org/docs/computations/execution-options.html#fenced-echo){{< iconify game-icons:teacher >}}
 + [annotation](https://quarto.org/docs/authoring/code-annotation.html){{< iconify fluent-color:number-symbol-square-20 >}}
 + [lightbox](https://quarto.org/docs/output-formats/html-lightbox-figures.html){{< iconify openmoji:light-bulb >}}
++ [zoom](https://quarto.org/docs/presentations/revealjs/presenting.html#slide-zoom){{< iconify fluent-emoji-flat:magnifying-glass-tilted-right >}}
 + [cross--refs](https://quarto.org/docs/authoring/cross-references.html){{< iconify icon-park:copy-link >}}
-
 
 :::
 
