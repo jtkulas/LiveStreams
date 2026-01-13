@@ -3,3 +3,6 @@ project:
   output-dir: docs     ## uncomment to publish  
   render:
     - "slides/**/**/*.qmd" 
+
+website:
+  google-analytics: "G-8ZE61PCXCP"
