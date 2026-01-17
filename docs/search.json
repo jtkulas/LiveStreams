@@ -215,5 +215,159 @@
     "title": "R is for Authoring!!",
     "section": " Session Info (January 13, 2026) Rendering:",
     "text": "Session Info (January 13, 2026) Rendering:\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n[1] plotly_4.10.4 ggplot2_3.5.2\n\nloaded via a namespace (and not attached):\n [1] vctrs_0.6.5        httr_1.4.7         cli_3.6.5          knitr_1.50        \n [5] rlang_1.1.6        xfun_0.52          purrr_1.0.4        generics_0.1.4    \n [9] data.table_1.17.0  jsonlite_2.0.0     glue_1.8.0         htmltools_0.5.8.1 \n[13] scales_1.4.0       rmarkdown_2.29     grid_4.5.0         crosstalk_1.2.1   \n[17] evaluate_1.0.5     tibble_3.3.0       fastmap_1.2.0      yaml_2.3.10       \n[21] lifecycle_1.0.4    compiler_4.5.0     dplyr_1.1.4        RColorBrewer_1.1-3\n[25] htmlwidgets_1.6.4  pkgconfig_2.0.3    tidyr_1.3.1        rstudioapi_0.17.1 \n[29] farver_2.1.2       digest_0.6.37      viridisLite_0.4.2  R6_2.6.1          \n[33] tidyselect_1.2.1   pillar_1.11.0      magrittr_2.0.3     withr_3.0.2       \n[37] tools_4.5.0        gtable_0.3.6       lazyeval_0.2.2"
+  },
+  {
+    "objectID": "slides/2026/1_20_26/index.html#open-office-hours-january-13-2026",
+    "href": "slides/2026/1_20_26/index.html#open-office-hours-january-13-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (January 13, 2026)",
+    "text": "Open Office Hours (January 13, 2026)\n\n\n\n\nRecap session #112\nToday’s topic(s):\n\nshiny!!](https://revealjs.com/)\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/1_20_26/index.html#quarto-3-types-of-content",
+    "href": "slides/2026/1_20_26/index.html#quarto-3-types-of-content",
+    "title": "R is for Authoring!!",
+    "section": "quarto®!! (3 types of content):",
+    "text": "quarto®!! (3 types of content):\n\n\nYAML\n“executive” specs that control doc look & feel – always located at very top:\n\n1---\ntitle: \"Mooseterpiece\"\nauthor: \"I.M. Awesome\"\nformat:\n2  revealjs:\n    mouse-wheel: true\n---\n\n\n1\n\nopening and closing fences indicated by 3 dashes (---)\n\n2\n\nindentations tend to be important (and finicky) within your \n\n\n\n\n\nNarrative\nplain–text (as you would specify on a notepad ) with formatting indicated by markdown:\n# 1^st^ level heading \n\n## 2^nd^ level Heading\n\nthis is **bold**\nthis is *italic*\n\n\nComputations\nisolated bits of code indicated with either one (inline) or three (code block) “ticks”:\n\n```{r}\n1library(ggplot2)\n\n2# Basic scatter plot\nggplot(mtcars, aes(\n  x=wt, y=mpg)) + \n  geom_point()\n```\n\n\n1\n\nany  command you would normally specify within scripts or the console is valid within code chunks (including the loading of packages)\n\n2\n\ncomments also operational within code chunks"
+  },
+  {
+    "objectID": "slides/2026/1_20_26/index.html#reveal-slides-via",
+    "href": "slides/2026/1_20_26/index.html#reveal-slides-via",
+    "title": "R is for Authoring!!",
+    "section": "      reveal slides (via )",
+    "text": "reveal slides (via )\n\n\necho: true:\n\nlibrary(plotly)\nlibrary(gapminder)\n\nfig &lt;- gapminder %&gt;%\n  plot_ly(\n1     ...)\n\n\n1\n\nbunch of code excluded, source code available here\n\n\n\n\necho: fenced:\n\n```{r}\n1fig %&gt;% layout(\n    xaxis = list(\n      type = \"log\"\n    )\n  )\n```\n\n\n1\n\nbottom bit of code – still missing middle guts"
+  },
+  {
+    "objectID": "slides/2026/1_20_26/index.html#session-info-january-13-2026-rendering",
+    "href": "slides/2026/1_20_26/index.html#session-info-january-13-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (January 13, 2026) Rendering:",
+    "text": "Session Info (January 13, 2026) Rendering:\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n[1] plotly_4.10.4 ggplot2_3.5.2\n\nloaded via a namespace (and not attached):\n [1] vctrs_0.6.5        httr_1.4.7         cli_3.6.5          knitr_1.50        \n [5] rlang_1.1.6        xfun_0.52          purrr_1.0.4        generics_0.1.4    \n [9] data.table_1.17.0  jsonlite_2.0.0     glue_1.8.0         htmltools_0.5.8.1 \n[13] scales_1.4.0       rmarkdown_2.29     grid_4.5.0         crosstalk_1.2.1   \n[17] evaluate_1.0.5     tibble_3.3.0       fastmap_1.2.0      yaml_2.3.10       \n[21] lifecycle_1.0.4    compiler_4.5.0     dplyr_1.1.4        RColorBrewer_1.1-3\n[25] htmlwidgets_1.6.4  pkgconfig_2.0.3    tidyr_1.3.1        rstudioapi_0.17.1 \n[29] farver_2.1.2       digest_0.6.37      viridisLite_0.4.2  R6_2.6.1          \n[33] tidyselect_1.2.1   pillar_1.11.0      magrittr_2.0.3     withr_3.0.2       \n[37] tools_4.5.0        gtable_0.3.6       lazyeval_0.2.2"
+  },
+  {
+    "objectID": "slides/2026/1_20_26/index.html#open-office-hours-january-14-2026",
+    "href": "slides/2026/1_20_26/index.html#open-office-hours-january-14-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (January 14, 2026)",
+    "text": "Open Office Hours (January 14, 2026)\n\n\n\n\nRecap session #112\nToday’s topic(s):\n\n\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/1_20_26/index.html#session-info-january-14-2026-rendering",
+    "href": "slides/2026/1_20_26/index.html#session-info-january-14-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (January 14, 2026) Rendering:",
+    "text": "Session Info (January 14, 2026) Rendering:\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n[1] plotly_4.10.4 ggplot2_3.5.2\n\nloaded via a namespace (and not attached):\n [1] vctrs_0.6.5        httr_1.4.7         cli_3.6.5          knitr_1.50        \n [5] rlang_1.1.6        xfun_0.52          purrr_1.0.4        generics_0.1.4    \n [9] data.table_1.17.0  jsonlite_2.0.0     glue_1.8.0         htmltools_0.5.8.1 \n[13] scales_1.4.0       rmarkdown_2.29     grid_4.5.0         crosstalk_1.2.1   \n[17] evaluate_1.0.5     tibble_3.3.0       fastmap_1.2.0      yaml_2.3.10       \n[21] lifecycle_1.0.4    compiler_4.5.0     dplyr_1.1.4        RColorBrewer_1.1-3\n[25] htmlwidgets_1.6.4  pkgconfig_2.0.3    tidyr_1.3.1        rstudioapi_0.17.1 \n[29] farver_2.1.2       digest_0.6.37      viridisLite_0.4.2  R6_2.6.1          \n[33] tidyselect_1.2.1   pillar_1.11.0      magrittr_2.0.3     withr_3.0.2       \n[37] tools_4.5.0        gtable_0.3.6       lazyeval_0.2.2"
+  },
+  {
+    "objectID": "slides/2026/1_20_26/index.html#reveal-slides-via-1",
+    "href": "slides/2026/1_20_26/index.html#reveal-slides-via-1",
+    "title": "R is for Authoring!!",
+    "section": "      reveal slides (via )",
+    "text": "reveal slides (via )\n\n\nCapabilities\n\nMultiplex\nhosting\nteaching\nannotation\nlightbox\nzoom\ncross–refs\n\n\nExtensions\n  \n\niconify\nsnow\nquiz\npointer\n\n\nData\n\n\n\n\n\n\n\n\nFigure 1: Bunch ’o flowers"
+  },
+  {
+    "objectID": "slides/2026/1_13_26/index.html#open-office-hours-january-15-2026",
+    "href": "slides/2026/1_13_26/index.html#open-office-hours-january-15-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (January 15, 2026)",
+    "text": "Open Office Hours (January 15, 2026)\n\n\n\n\nRecap session #111\nToday’s topic(s):\n\n       revealslides!!\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/1_13_26/index.html#session-info-january-15-2026-rendering",
+    "href": "slides/2026/1_13_26/index.html#session-info-january-15-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (January 15, 2026) Rendering:",
+    "text": "Session Info (January 15, 2026) Rendering:\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n[1] plotly_4.10.4 ggplot2_3.5.2\n\nloaded via a namespace (and not attached):\n [1] vctrs_0.6.5        httr_1.4.7         cli_3.6.5          knitr_1.50        \n [5] rlang_1.1.6        xfun_0.52          purrr_1.0.4        generics_0.1.4    \n [9] data.table_1.17.0  jsonlite_2.0.0     glue_1.8.0         htmltools_0.5.8.1 \n[13] scales_1.4.0       rmarkdown_2.29     grid_4.5.0         crosstalk_1.2.1   \n[17] evaluate_1.0.5     tibble_3.3.0       fastmap_1.2.0      yaml_2.3.10       \n[21] lifecycle_1.0.4    compiler_4.5.0     dplyr_1.1.4        RColorBrewer_1.1-3\n[25] htmlwidgets_1.6.4  pkgconfig_2.0.3    tidyr_1.3.1        rstudioapi_0.17.1 \n[29] farver_2.1.2       digest_0.6.37      viridisLite_0.4.2  R6_2.6.1          \n[33] tidyselect_1.2.1   pillar_1.11.0      magrittr_2.0.3     withr_3.0.2       \n[37] tools_4.5.0        gtable_0.3.6       lazyeval_0.2.2"
+  },
+  {
+    "objectID": "slides/2026/1_20_26/index.html#open-office-hours-january-15-2026",
+    "href": "slides/2026/1_20_26/index.html#open-office-hours-january-15-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (January 15, 2026)",
+    "text": "Open Office Hours (January 15, 2026)\n\n\n\n\nRecap session #112\nToday’s topic(s):\n\n\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/1_20_26/index.html#session-info-january-15-2026-rendering",
+    "href": "slides/2026/1_20_26/index.html#session-info-january-15-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (January 15, 2026) Rendering:",
+    "text": "Session Info (January 15, 2026) Rendering:\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 rstudioapi_0.17.1 yaml_2.3.10       rmarkdown_2.29   \n [9] knitr_1.50        jsonlite_2.0.0    xfun_0.52         digest_0.6.37    \n[13] rlang_1.1.6       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/1_20_26/index.html#section",
+    "href": "slides/2026/1_20_26/index.html#section",
+    "title": "R is for Authoring!!",
+    "section": "",
+    "text": "Tip\n\n\nGeneral across documents: https://quarto.org/docs/interactive/shiny/\n\n\n\n\n\n\n\n\n\nTip\n\n\nDashboards: https://quarto.org/docs/dashboards/interactivity/shiny-r.html"
+  },
+  {
+    "objectID": "slides/2026/1_20_26/index.html#open-office-hours-january-17-2026",
+    "href": "slides/2026/1_20_26/index.html#open-office-hours-january-17-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (January 17, 2026)",
+    "text": "Open Office Hours (January 17, 2026)\n\n\n\n\nRecap session #112\nToday’s topic(s):\n\n\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/1_20_26/index.html#session-info-january-17-2026-rendering",
+    "href": "slides/2026/1_20_26/index.html#session-info-january-17-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (January 17, 2026) Rendering:",
+    "text": "Session Info (January 17, 2026) Rendering:\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n[1] gapminder_1.0.1 plotly_4.10.4   ggplot2_3.5.2  \n\nloaded via a namespace (and not attached):\n [1] gtable_0.3.6       jsonlite_2.0.0     dplyr_1.1.4        compiler_4.5.0    \n [5] tidyselect_1.2.1   tidyr_1.3.1        scales_1.4.0       yaml_2.3.10       \n [9] fastmap_1.2.0      R6_2.6.1           generics_0.1.4     knitr_1.50        \n[13] htmlwidgets_1.6.4  tibble_3.3.0       pillar_1.11.0      RColorBrewer_1.1-3\n[17] rlang_1.1.6        xfun_0.52          lazyeval_0.2.2     viridisLite_0.4.2 \n[21] cli_3.6.5          withr_3.0.2        magrittr_2.0.3     crosstalk_1.2.1   \n[25] digest_0.6.37      grid_4.5.0         rstudioapi_0.17.1  lifecycle_1.0.4   \n[29] vctrs_0.6.5        evaluate_1.0.5     glue_1.8.0         data.table_1.17.0 \n[33] farver_2.1.2       rmarkdown_2.29     purrr_1.0.4        httr_1.4.7        \n[37] tools_4.5.0        pkgconfig_2.0.3    htmltools_0.5.8.1"
+  },
+  {
+    "objectID": "slides/2026/1_20_26/index.html#reveal-slides-via-i",
+    "href": "slides/2026/1_20_26/index.html#reveal-slides-via-i",
+    "title": "R is for Authoring!!",
+    "section": "      reveal slides via  (I)",
+    "text": "reveal slides via  (I)\n\n\n\nlightbox images:\n\n\n\n\ncross–referencing:\n\nWhat was that list of capabilities again? \nHow about today’s topic on this week’s slide deck?\n\n\n\ncode–fold:\nHit the button if you’d like to see the  code:\n\n\nCode\n## 5th grader code:\n\nwow &lt;- 5318008"
+  },
+  {
+    "objectID": "slides/2026/1_20_26/index.html#reveal-slides-via-ii",
+    "href": "slides/2026/1_20_26/index.html#reveal-slides-via-ii",
+    "title": "R is for Authoring!!",
+    "section": "      reveal slides via  (II)",
+    "text": "reveal slides via  (II)\n\n\necho: true:\n\nlibrary(plotly)\nlibrary(gapminder)\n\nfig &lt;- gapminder %&gt;%\n  plot_ly(\n1     ...)\n\n\n1\n\nbunch of code excluded, full source code for plot available here\n\n\n\n\necho: fenced:\n\n```{r}\n1fig %&gt;% layout(\n    xaxis = list(\n      type = \"log\"\n    ))\n```\n\n\n1\n\ncontinuation of code from above – still missing middle guts"
+  },
+  {
+    "objectID": "slides/2026/1_20_26/index.html#which-of-the-following-are-programming-languages",
+    "href": "slides/2026/1_20_26/index.html#which-of-the-following-are-programming-languages",
+    "title": "R is for Authoring!!",
+    "section": "Which of the following are programming languages?",
+    "text": "Which of the following are programming languages?\n\nPython\nJavaScript\nHTML\nCSS"
+  },
+  {
+    "objectID": "slides/2026/1_20_26/index.html#hiya",
+    "href": "slides/2026/1_20_26/index.html#hiya",
+    "title": "R is for Authoring!!",
+    "section": "Hiya",
+    "text": "Hiya\nWhich of the following are programming languages?\n\nPython\nJavaScript\nHTML\nCSS"
+  },
+  {
+    "objectID": "slides/2026/1_20_26/index.html#reveal-slides-via-iii",
+    "href": "slides/2026/1_20_26/index.html#reveal-slides-via-iii",
+    "title": "R is for Authoring!!",
+    "section": "      reveal slides (via  [III])",
+    "text": "reveal slides (via  [III])\n\nPython\nJavaScript\nHTML\nCSS"
+  },
+  {
+    "objectID": "slides/2026/1_20_26/index.html#reveal-slides-via-iii-whats-the-worlds-best-slides-format",
+    "href": "slides/2026/1_20_26/index.html#reveal-slides-via-iii-whats-the-worlds-best-slides-format",
+    "title": "R is for Authoring!!",
+    "section": "      reveal slides via  (III) What’s the world’s best slides format?",
+    "text": "reveal slides via  (III) What’s the world’s best slides format?\n\nReveal JS \nPower Point \nGoogle Slides"
+  },
+  {
+    "objectID": "slides/2026/1_20_26/index.html#today",
+    "href": "slides/2026/1_20_26/index.html#today",
+    "title": "R is for Authoring!!",
+    "section": "",
+    "text": "Tip\n\n\nGeneral across documents: https://quarto.org/docs/interactive/shiny/\n\n\n\n\n\n\n\n\n\nTip\n\n\nDashboards: https://quarto.org/docs/dashboards/interactivity/shiny-r.html"
+  },
+  {
+    "objectID": "slides/2026/1_20_26/index.html#topic",
+    "href": "slides/2026/1_20_26/index.html#topic",
+    "title": "R is for Authoring!!",
+    "section": "",
+    "text": "Tip\n\n\nGeneral across documents: https://quarto.org/docs/interactive/shiny/\n\n\n\n\n\n\n\n\n\nTip\n\n\nDashboards: https://quarto.org/docs/dashboards/interactivity/shiny-r.html"
   }
 ]

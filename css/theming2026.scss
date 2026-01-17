@@ -15,7 +15,7 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 @import url('https://fonts.googleapis.com/css?family=Inter Tight');
 
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: center;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
@@ -92,6 +92,12 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
     0px 0px 0px #222 !important;
 }
 
+.shadowlight {
+  text-shadow: 
+    4px 4px 4px white,
+    -4px -4px 4px white !important;  
+}
+
 .foreground-image {
   z-index: 1000 !important;
 }
@@ -106,6 +112,10 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
 
 .mirror {
   transform: rotateY(180deg);
+}
+
+.flip {
+  transform: rotateX(180deg);
 }
 
 .tilt {
@@ -252,3 +262,4 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   text-shadow:
     0px 0px 0px black !important;
 }
+

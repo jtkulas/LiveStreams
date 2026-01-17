@@ -1,0 +1,253 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: 'OOH Session #113...<br>![](https://cdn.prod.website-files.com/62e180bf512772a8ebb1025b/6303e449976363209b0d8ee5_open%20graph%20image%20logo%203.png){.absolute height="150"}![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Shiny_hex_logo.svg/960px-Shiny_hex_logo.svg.png){.absolute height="150"}'
+title-slide-attributes: 
+  data-background-image: https://img.freepik.com/premium-vector/spotlight-illustration-flat-style-vector-illustration_399089-17881.jpg?semt=ais_hybrid&w=740&q=80 #https://static.vecteezy.com/system/resources/previews/037/013/036/non_2x/spotlight-shining-on-white-background-glowing-on-wall-illustration-vector.jpg
+#  data-background-opacity: ".8"
+format:
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://static.vecteezy.com/system/resources/previews/009/383/430/non_2x/spotlight-clipart-design-illustration-free-png.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+    quiz:
+      defaultCorrect: "Correct-a-mundo!!"
+      defaultIncorrect: "Whatzzamattayou?!?!?"
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+revealjs-plugins:
+  - quiz
+execute: 
+  eval: false       ## for fenced code 
+  freeze: false
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {layout="[[10,10],]"}
+::: first-column
++ Recap session #112
++ Today's topic(s):
+    + ![](https://cdn.prod.website-files.com/62e180bf512772a8ebb1025b/6303e449976363209b0d8ee5_open%20graph%20image%20logo%203.png){.absolute height="80"}
++ Shared problem-solving
+
+:::
+
+::: second-column
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 185px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/1_13_26">
+  <img src="/img/title112.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Shiny_hex_logo.svg/960px-Shiny_hex_logo.svg.png){.absolute height="80" left="240" bottom="290"}
+
+# Recap of Session <br>#112: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://images.vexels.com/media/users/3/243207/isolated/preview/cb2b3e27185f1abb1f7b1865d6a8d01a-magic-hat-with-bunny.png){.absolute width="130" top="255" right="115"}
+
+## ![](https://gitlab.poul.org/uploads/-/system/project/avatar/109/reveal.js-2020-05-28_09-58-06-icon-resized.png){.absolute height="100"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[reveal{{< iconify fluent:code-js-rectangle-16-regular style="color:#FFFFFF;" >}} slides]{.revealing .bigger}](https://revealjs.com/) [[via {{< iconify material-icon-theme:quarto >}} ]{.quarto} [(I)]{.revealing .bigger}](https://quarto.org/docs/presentations/revealjs/)
+
+::: {.columns}
+
+::: {.column width="30%" .fragment .semi-fade-out fragment-index=1}
+
+<br>
+
+### lightbox images:
+
+<br>
+
+![](https://www.nicepng.com/png/full/44-444512_pink-panther-transparent-png-vector-black-and-white.png){.lightbox}
+
+:::
+
+::: {.column width="40%" .fragment .fade-in-then-semi-out fragment-index=1}
+
+<br>
+
+### cross--referencing:
+
++ What was that [list of capabilities](https://jtkulas.github.io/LiveStreams/slides/2026/1_13_26/#/reveal-slides-via) again? <br>
+
++ How about [today's topic](#topic) on this week's slide deck?  
+
+:::
+
+::: {.column width="30%" .fragment .fade-in fragment-index=2}
+
+<br>
+
+### code--fold:
+
+Hit the button if you'd like to see the {{< iconify devicon:r >}} code:
+
+```{r}
+#| echo: true
+#| code-fold: true
+
+## 5th grader code:
+
+wow <- 5318008
+
+```
+
+:::
+
+:::
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnpwd2MxanN1MzM2ZmluZW5lNGdqYWVkbm9qamdkZWVjcHUybTZjOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lN3o4fk4ZgrSDK/giphy.gif){.absolute right="-140" top="-40" height="250"}
+
+## ![](https://gitlab.poul.org/uploads/-/system/project/avatar/109/reveal.js-2020-05-28_09-58-06-icon-resized.png){.absolute height="100"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[reveal{{< iconify fluent:code-js-rectangle-16-regular style="color:#FFFFFF;" >}} slides]{.revealing .bigger}](https://revealjs.com/) [[via {{< iconify material-icon-theme:quarto >}}  ]{.quarto} [(II)]{.revealing .bigger}](https://quarto.org/docs/presentations/revealjs/)
+
+::: {.columns}
+
+::: {.column width="30%"}
+
+`echo: true`:
+```{r}
+#| echo: true
+
+library(plotly)
+library(gapminder)
+
+fig <- gapminder %>%
+  plot_ly(
+     ...)               #<1> 
+
+```
+1. bunch of code excluded, full source code for plot [available here](https://plotly.com/r/animations/)
+
+`echo: fenced`:
+```{r}
+#| echo: fenced
+
+fig %>% layout(       #<1>
+    xaxis = list(
+      type = "log"
+    ))                #<1>
+
+```
+1. continuation of code from above -- still missing middle guts
+
+:::
+
+::: {.column width="70%"}
+
+```{r}
+#| echo: false
+#| eval: true
+
+library(plotly)
+library(gapminder)
+
+df <- gapminder 
+fig <- df %>%
+  plot_ly(
+    x = ~gdpPercap, 
+    y = ~lifeExp, 
+    size = ~pop, 
+    color = ~continent, 
+    frame = ~year, 
+    text = ~country, 
+    hoverinfo = "text",
+    type = 'scatter',
+    mode = 'markers'
+  )
+fig <- fig %>% layout(
+    xaxis = list(
+      type = "log"
+    )
+  )
+
+fig |>
+  layout(                       ## plotly Reveal conflict (pageload)   
+    autosize=FALSE,
+    width=700,
+    height=500
+  )
+
+```
+
+:::
+
+:::
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnpwd2MxanN1MzM2ZmluZW5lNGdqYWVkbm9qamdkZWVjcHUybTZjOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lN3o4fk4ZgrSDK/giphy.gif){.absolute right="-140" top="-40" height="200" .mirror}
+
+## ![](https://gitlab.poul.org/uploads/-/system/project/avatar/109/reveal.js-2020-05-28_09-58-06-icon-resized.png){.absolute height="100"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[reveal{{< iconify fluent:code-js-rectangle-16-regular style="color:#FFFFFF;" >}} slides]{.revealing .bigger}](https://revealjs.com/) [[via {{< iconify material-icon-theme:quarto >}}  ]{.quarto} [(III)]{.revealing .bigger}](https://quarto.org/docs/presentations/revealjs/) What's the world's best {{< iconify noto:globe-showing-americas >}}<br>slides format? {.quiz-question}
+
+- [Reveal JS {{< iconify openmoji:javascript >}}]{.correct}
+- Power Point {{< iconify vscode-icons:file-type-powerpoint >}}
+- Google Slides {{< iconify logos:google-home >}}
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnpwd2MxanN1MzM2ZmluZW5lNGdqYWVkbm9qamdkZWVjcHUybTZjOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lN3o4fk4ZgrSDK/giphy.gif){.absolute right="-140" top="-40" height="250" .flip}
+
+# Today...
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjAzM3V2ZXE5djkyYXg1bmdzNWVtOTJwd3pzcjNyMml0dzVlNnZwayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/h1Hvk7Vp3KKIenIBWK/giphy.gif)
+
+## ![](https://cdn.prod.website-files.com/62e180bf512772a8ebb1025b/6303e449976363209b0d8ee5_open%20graph%20image%20logo%203.png){.absolute height="150"} {#topic}
+
+::: {.columns}
+
+::: {.column width="70%"}
+
+:::
+
+::: {.column width="30%"}
+
+::: {.callout-tip}
+
+General across documents: <https://quarto.org/docs/interactive/shiny/>
+
+:::
+
+::: {.callout-tip}
+
+Dashboards: <https://quarto.org/docs/dashboards/interactivity/shiny-r.html>
+
+:::
+
+
+:::
+
+:::
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Shiny_hex_logo.svg/960px-Shiny_hex_logo.svg.png){.absolute height="200" left="300" top="0"}
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+#| eval: true
+sessionInfo()
+```
+
+
