@@ -114,9 +114,11 @@ Hit the button if you'd like to see the {{< iconify devicon:r >}} code:
 #| echo: true
 #| code-fold: true
 
-## 5th grader code:
+## Australian 
+## 5th-grader's
+## blue-footed code:
 
-wow <- 5318008
+avians <- 5318008
 
 ```
 
@@ -215,34 +217,41 @@ fig |>
 
 ![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjAzM3V2ZXE5djkyYXg1bmdzNWVtOTJwd3pzcjNyMml0dzVlNnZwayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/h1Hvk7Vp3KKIenIBWK/giphy.gif)
 
-## ![](https://cdn.prod.website-files.com/62e180bf512772a8ebb1025b/6303e449976363209b0d8ee5_open%20graph%20image%20logo%203.png){.absolute height="150"} {#topic}
+## {background-image="https://static.vecteezy.com/system/resources/previews/037/013/036/non_2x/spotlight-shining-on-white-background-glowing-on-wall-illustration-vector.jpg" #topic} 
 
 ::: {.columns}
 
 ::: {.column width="70%"}
 
+
+
 :::
 
 ::: {.column width="30%"}
 
-::: {.callout-tip}
+<br>
+<br>
+<br>
+<br>
+<br>
 
-General across documents: <https://quarto.org/docs/interactive/shiny/>
+::: {.callout-note .smaller}
+
+## Helpful Resources
+
++ [general across documents](https://quarto.org/docs/interactive/shiny/) 
++ [within dashboards](https://quarto.org/docs/dashboards/interactivity/shiny-r.html)
++ [via `shinylive`](https://posit-dev.github.io/r-shinylive/)
 
 :::
 
-::: {.callout-tip}
-
-Dashboards: <https://quarto.org/docs/dashboards/interactivity/shiny-r.html>
-
-:::
-
-
 :::
 
 :::
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Shiny_hex_logo.svg/960px-Shiny_hex_logo.svg.png){.absolute height="200" left="300" top="0"}
+![](https://cdn.prod.website-files.com/62e180bf512772a8ebb1025b/6303e449976363209b0d8ee5_open%20graph%20image%20logo%203.png){.absolute height="200" left="350" bottom="200"}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Shiny_hex_logo.svg/960px-Shiny_hex_logo.svg.png){.absolute height="250" left="150" bottom="200"}
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
