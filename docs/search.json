@@ -368,7 +368,7 @@
     "href": "slides/2026/1_20_26/index.html#topic",
     "title": "R is for Authoring!!",
     "section": "",
-    "text": "Helpful Resources\n\n\n\ngeneral across documents\nwithin dashboards\nvia shinylive\nshiny assistant"
+    "text": "runExample()\n...display.mode=\"showcase\"\n\n\n\n      \n\n\n\n\n\n\n\nHelpful Resources\n\n\n\nstand–alone\nwithin dashboards\nvia shinylive\nshiny assistant"
   },
   {
     "objectID": "slides/2026/1_20_26/index.html#open-office-hours-january-19-2026",

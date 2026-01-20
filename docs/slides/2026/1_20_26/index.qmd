@@ -221,9 +221,23 @@ fig |>
 
 ::: {.columns}
 
-::: {.column width="70%"}
+::: {.column width="20%"}
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
+`runExample()`  
+`...display.mode="showcase"`
+:::
+
+::: {.column width="50%"}
 
 :::
 
@@ -235,12 +249,13 @@ fig |>
 <br>
 <br>
 <br>
+<br>
 
 ::: {.callout-note .smaller}
 
 ## Helpful Resources
 
-+ [general across documents](https://quarto.org/docs/interactive/shiny/) 
++ [stand--alone](https://shiny.posit.co/r/getstarted/shiny-basics/lesson1/#Go%20Further) 
 + [within dashboards](https://quarto.org/docs/dashboards/interactivity/shiny-r.html)
 + [via `shinylive`](https://posit-dev.github.io/r-shinylive/)
 + [shiny assistant {{< iconify fluent-color:bot-sparkle-16 >}}](https://shiny.posit.co/blog/posts/shiny-assistant/)
@@ -251,9 +266,9 @@ fig |>
 
 :::
 
-![](https://cdn.prod.website-files.com/62e180bf512772a8ebb1025b/6303e449976363209b0d8ee5_open%20graph%20image%20logo%203.png){.absolute height="200" left="350" bottom="200"}
+![](https://cdn.prod.website-files.com/62e180bf512772a8ebb1025b/6303e449976363209b0d8ee5_open%20graph%20image%20logo%203.png){.absolute height="200" left="370" bottom="200"}
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Shiny_hex_logo.svg/960px-Shiny_hex_logo.svg.png){.absolute height="250" left="150" bottom="200"}
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Shiny_hex_logo.svg/960px-Shiny_hex_logo.svg.png){.absolute height="250" left="170" bottom="200"}
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
