@@ -319,7 +319,7 @@
     "href": "slides/2026/1_20_26/index.html#reveal-slides-via-i",
     "title": "R is for Authoring!!",
     "section": "      reveal slides via  (I)",
-    "text": "reveal slides via  (I)\n\n\n\nlightbox images:\n\n\n\n\ncross–referencing:\n\nWhat was that list of capabilities again? \nHow about today’s topic on this week’s slide deck?\n\n\n\ncode–fold:\nHit the button if you’d like to see the  code:\n\n\nCode\n## Australian \n## 5th-grader's\n## blue-footed code:\n\navians &lt;- 5318008"
+    "text": "reveal slides via  (I)\n\n\n\nlightbox images:\n\n\n\n\ncross–referencing:\n\nWhat was that list of capabilities again? \nHow about today’s topic on this week’s slide deck?\n\n\n\ncode–fold:\nHit the  button if you’d like to see the  code:\n\n\nCode\n## Australian \n## 5th-grader's\n## blue-footed code:\n\navians &lt;- 5318008"
   },
   {
     "objectID": "slides/2026/1_20_26/index.html#reveal-slides-via-ii",

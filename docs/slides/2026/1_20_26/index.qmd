@@ -108,7 +108,7 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ### code--fold:
 
-Hit the button if you'd like to see the {{< iconify devicon:r >}} code:
+Hit the {{< iconify emojione-v1:play-button >}} button if you'd like to see the {{< iconify devicon:r >}} code:
 
 ```{r}
 #| echo: true
