@@ -234,6 +234,7 @@ fig |>
 <br>
 <br>
 <br>
+<br>
 
 ::: {.callout-note .smaller}
 
@@ -242,6 +243,7 @@ fig |>
 + [general across documents](https://quarto.org/docs/interactive/shiny/) 
 + [within dashboards](https://quarto.org/docs/dashboards/interactivity/shiny-r.html)
 + [via `shinylive`](https://posit-dev.github.io/r-shinylive/)
++ [shiny assistant {{< iconify fluent-color:bot-sparkle-16 >}}](https://shiny.posit.co/blog/posts/shiny-assistant/)
 
 :::
 
