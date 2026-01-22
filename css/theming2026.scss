@@ -14,8 +14,9 @@
 @import url('https://fonts.googleapis.com/css?family=Mouse Memoirs');
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 @import url('https://fonts.googleapis.com/css?family=Inter Tight');
+@import url('https://fonts.googleapis.com/css?family=Love Ya Like A Sister');
 
-$presentation-title-slide-text-align: center;
+$presentation-title-slide-text-align: right;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
@@ -261,5 +262,11 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-weight: normal !important;
   text-shadow:
     0px 0px 0px black !important;
+}
+
+.honk{
+  font-family: "Love Ya Like A Sister";
+  color: #ffefdb;
+  font-size: 2em;
 }
 
