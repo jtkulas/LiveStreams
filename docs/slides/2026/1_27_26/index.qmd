@@ -99,9 +99,17 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 :::
 
+::: {.absolute right="-100" bottom="0"}
+
+<iframe src="https://jtkulas.shinyapps.io/mooseterpiece/" width="800" height="400" title="Shiny Assistant App"></iframe>
+
+:::
+
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Shiny_hex_logo.svg/960px-Shiny_hex_logo.svg.png){.absolute height="200" top="0" left="300"}
 
 ![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcjAzM3V2ZXE5djkyYXg1bmdzNWVtOTJwd3pzcjNyMml0dzVlNnZwayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/h1Hvk7Vp3KKIenIBWK/giphy.gif){.absolute right="-140" top="-40" height="250"}
+
+![](https://upload.wikimedia.org/wikipedia/en/9/97/Chilly_Willy_logo.png){.absolute right="330" top="0" height="250"}
 
 # Today...
 
@@ -130,6 +138,12 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 ::: {.absolute style="top: -10px; right: -100px; width: 270px;" .tilt2}
 <a href="https://github.com/quarto-ext/typst-templates/tree/main/dept-news">
   <img src="https://github.com/quarto-ext/typst-templates/raw/main/dept-news/dept-news.png">
+</a>
+:::
+
+::: {.absolute style="top: -10px; right: 250px; width: 400px;"}
+<a href="https://github.com/sitandr/conchord?tab=readme-ov-file#conchord">
+  <img src="https://github.com/sitandr/conchord/blob/main/examples/simple-gen.png?raw=true">
 </a>
 :::
 
