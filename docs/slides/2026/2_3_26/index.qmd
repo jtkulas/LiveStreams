@@ -30,7 +30,7 @@ execute:
 ::: first-column
 + Recap session #114
 + Today's topic(s):
-    + [[uncïăls]{.uncial2} [ümlǻuts]{.exo2} [& uñiçodé]{.plainjane2}](https://www.britannica.com/topic/uncial)
+    + [[uncïăls]{.uncial2}]((https://www.britannica.com/topic/uncial)) [ümlǻuts]{.exo2} [[& uñiçodé]{.plainjane2}](https://symbl.cc/en/unicode-table/)
 + Shared problem-solving
 
 :::
@@ -186,9 +186,44 @@ Dear Joe,
 
 ![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTloc2czNWxvemx2OGVhOGNqczh3YzltdGJyd2ZpN2JkdTh5ZjZucSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/95P1vO6r7rsk0/giphy.gif)
 
-## [[uncïăls]{.uncial2} [ümlǻuts]{.exo2} [& uñiçodé]{.plainjane2}](https://www.britannica.com/topic/uncial)
+## [ümläüts]{.exo2} [[unicode]{.plainjane2}](https://symbl.cc/en/unicode-table/) [[&  uncials]{.uncial2}]((https://www.britannica.com/topic/uncial))  
 
+::: {.columns}
 
+::: {.column width="33%" .fragment .semi-fade-out fragment-index=1}
+
+### Ümläüts:
+
+[Numeric character references (NCRs)](https://www.w3schools.com/charsets/ref_html_entities_latin.asp) work across document types (typst, html, pdf).
+
+For example, 
+`&#228;` = &#228; <br>`&auml;` = &auml;
+
+:::
+
+::: {.column width="34%" .fragment .fade-in-then-semi-out fragment-index=1}
+
+### [Unicode](https://www.fileformat.info/info/unicode/char/search.htm):
+
+1,114,112 possible characters (from U+0000 to U+10FFFF) -- 159,801 currently assigned (Unicode 17.0)
+
+\*All NCRs *also* have unicode values
+
+:::
+
+::: {.column width="33%" .fragment .fade-in fragment-index=2}
+
+### Uncials:
+
+:::
+
+:::
+
+![](https://hmmlschool.org/assets/img/school/BL-MS-Add-89000.jpg){.absolute right="-10" bottom="10" height="500" .fragment .fade-in fragment-index=2}
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDNzcDZuN21ueWIwNjgxYTJ5YWwxZzBlOWJ0dm5pcHBsdGxlemFzbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DggdGj1E3n3jy/giphy.gif){.absolute right="-160" top="-40" height="170"}
+
+![](https://d1rjyex4ui0ya6.cloudfront.net/obituaries/traditional/stock/6842-16979-yodel.jpg){.absolute left="-160" bottom="180" height="150"}
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
