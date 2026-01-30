@@ -1,0 +1,199 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: 'OOH Session #115...<br>[UNUSUAL characters:]{.nofunny}<br>[uncïăls]{.uncial .noshadow} [ümlǻuts]{.exo .noshadow}<br>[& uñiçodé]{.plainjane .noshadow}'
+title-slide-attributes: 
+  data-background-image: ../../../img/calig.png 
+  data-background-opacity: ".8"
+format:
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://png.pngtree.com/png-vector/20250806/ourmid/pngtree-quill-pen-and-inkwell-vintage-writing-illustration-png-image_16850648.webp #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  freeze: false
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {layout="[[10,10],]"}
+::: first-column
++ Recap session #114
++ Today's topic(s):
+    + [[uncïăls]{.uncial2} [ümlǻuts]{.exo2} [& uñiçodé]{.plainjane2}](https://www.britannica.com/topic/uncial)
++ Shared problem-solving
+
+:::
+
+::: second-column
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 185px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/1_27_26">
+  <img src="/img/title114.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#114: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://pngimg.com/d/snoopy_PNG90.png){.absolute width="150" top="240" right="100"}
+
+## [[typst!!]{.honk .Bigger}](https://quarto.org/docs/output-formats/typst.html)
+
+::: {.panel-tabset}
+
+### columns {{< iconify fluent:text-column-two-20-regular style="color:#ffffff;" >}}
+
+::: {.columns .smaller}
+
+::: {.column width="50%"}
+
+no--go {{< iconify fluent-emoji-flat:no-entry >}}:
+```
+:::{.columns}
+
+::: {.column width="50%"}
+Content column 1
+:::
+
+::: {.column width="50%"}
+Content column 2
+:::
+
+:::
+```
+:::
+
+::: {.column width="50%" .Smaller}
+
+[effective {{< iconify streamline-ultimate-color:check >}}:]{.bigger}
+```
+:::{layout-ncol=2}
+
+Content column 1
+
+Content column 2
+
+:::
+```
+
+::: {.callout-note}
+
+Any `x` integer works within `layout-ncol=x` -- content within div will be distributed equally across `x` columns
+
+:::
+
+:::
+
+:::
+
+### pro letter {{< iconify mdi:document-sign style="color:#ffffff;" >}}
+
+::: {.columns}
+
+::: {.column width="35%"}
+:::
+
+::: {.column width="65%" .smaller}
+
+```{r}
+#| echo: true
+---
+subject: "Revision of our Procurement Contract"
+name: "Jane Smith \ Regional Director"
+sender: "Jane Smith, Universal Exports, 1 Heavy Plaza, Morristown, NJ 07964"
+recipient: |
+  Mr. John Doe \
+  Acme Corp. \
+  123 Glennwood Ave \
+  Quarto Creek, VA 22438 \
+sent: "Morristown, June 9th, 2023"
+format:                                 #<1>
+  letter-typst: default                 #<1>
+---
+
+Dear Joe,
+
+...
+```
+1. access the template via this alteration from standard `format: typst` specification
+
+:::
+
+:::
+
+::: {.absolute style="bottom: 0px; left: 30px; width: 300px;"}
+<a href="https://github.com/quarto-ext/typst-templates/tree/main/letter">
+  <img src="https://github.com/quarto-ext/typst-templates/raw/main/letter/letter.png">
+</a>
+:::
+
+### other templates {{< iconify fluent-mdl2:file-template style="color:#ffffff;" >}}
+
+::: {.columns}
+
+::: {.column width="45%"}
+
+[`AMS`](https://github.com/quarto-ext/typst-templates/tree/main/ams), [`poster`](https://github.com/quarto-ext/typst-templates/tree/main/poster) & [`dept--news`](https://github.com/quarto-ext/typst-templates/tree/main/dept-news) templates all contain scripting that is [not supported by the modern typst compiler](https://github.com/quarto-ext/typst-templates/issues/17) (version 0.13.0). 
+
+:::
+
+::: {.column width="55%" .smaller}
+
+2 work--arounds:
+
++ amend scripting within `.typ` template (located in `_extensions` folder)
++ install [older version of Quarto](https://quarto.org/docs/download/) & compile as usual (v 1.6.43 works)
+
+:::
+
+:::
+
+:::
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZjI4cmM5bnhja2hneDY0czNubGhjM2I4MDhuNHpjMDU4MmVzaGcxZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UTxMD2e7Ij3d6/giphy.gif){.absolute right="-140" top="-40" height="260"}
+
+# Today...
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTloc2czNWxvemx2OGVhOGNqczh3YzltdGJyd2ZpN2JkdTh5ZjZucSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/95P1vO6r7rsk0/giphy.gif)
+
+## [[uncïăls]{.uncial2} [ümlǻuts]{.exo2} [& uñiçodé]{.plainjane2}](https://www.britannica.com/topic/uncial)
+
+
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+#| eval: true
+sessionInfo()
+```
+
+

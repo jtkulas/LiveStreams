@@ -15,6 +15,9 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 @import url('https://fonts.googleapis.com/css?family=Inter Tight');
 @import url('https://fonts.googleapis.com/css?family=Love Ya Like A Sister');
+@import url('https://fonts.googleapis.com/css?family=Uncial Antiqua');
+@import url('https://fonts.googleapis.com/css?family=Exo');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 $presentation-title-slide-text-align: right;
 
@@ -97,6 +100,12 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   text-shadow: 
     4px 4px 4px white,
     -4px -4px 4px white !important;  
+}
+
+.noshadow {
+  text-shadow: 
+    0px 0px 0px #222,
+    -0px -0px 0px #222 !important;
 }
 
 .foreground-image {
@@ -268,5 +277,40 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-family: "Love Ya Like A Sister";
   color: #ffefdb;
   font-size: 2em;
+}
+
+.plainjane {
+  font-family: "Google Sans Code";
+  color: black;  
+}
+
+.plainjane2 {
+  font-family: "Google Sans Code";
+  color: white;  
+}
+
+.uncial{
+  font-family: "Uncial Antiqua";
+  color: black;
+}
+
+.uncial2{
+  font-family: "Uncial Antiqua";
+  color: white;
+}
+
+.exo {
+  font-family: "Exo";
+  color: black;  
+}
+
+.exo2 {
+  font-family: "Exo";
+  color: white;  
+}
+
+.nofunny {
+  font-family: "Fontdiner Swanky";
+  color: #a92777;
 }
 
