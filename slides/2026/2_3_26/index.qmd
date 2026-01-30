@@ -1,6 +1,6 @@
 ---
 title: "[R is for <br>Authoring!!]{.shadowsharp}" 
-author: 'OOH Session #115...<br>[UNUSUAL characters:]{.nofunny}<br>[uncïăls]{.uncial .noshadow} [ümlǻuts]{.exo .noshadow}<br>[& uñiçodé]{.plainjane .noshadow}'
+author: 'OOH Session #115...<br>[UNUSUAL characters:]{.nofunny}<br>[ümlǻuts]{.exo .noshadow} [uñiçodé]{.plainjane .noshadow}<br>[& uncïăls]{.uncial .noshadow}'
 title-slide-attributes: 
   data-background-image: ../../../img/calig.png 
   data-background-opacity: ".8"
@@ -30,7 +30,7 @@ execute:
 ::: first-column
 + Recap session #114
 + Today's topic(s):
-    + [[uncïăls]{.uncial2}]((https://www.britannica.com/topic/uncial)) [ümlǻuts]{.exo2} [[& uñiçodé]{.plainjane2}](https://symbl.cc/en/unicode-table/)
+    + [ümlǻuts]{.exo2} [[uñiçodé]{.plainjane2}](https://symbl.cc/en/unicode-table/)<br> [[& uncïăls]{.uncial2}]((https://www.britannica.com/topic/uncial))  
 + Shared problem-solving
 
 :::
@@ -192,7 +192,7 @@ Dear Joe,
 
 ::: {.column width="33%" .fragment .semi-fade-out fragment-index=1}
 
-### Ümläüts:
+### [Ümläüts](https://en.wikipedia.org/wiki/Umlaut_(linguistics)):
 
 [Numeric character references (NCRs)](https://www.w3schools.com/charsets/ref_html_entities_latin.asp) work across document types (typst, html, pdf).
 
@@ -201,29 +201,32 @@ For example,
 
 :::
 
-::: {.column width="34%" .fragment .fade-in-then-semi-out fragment-index=1}
+::: {.column width="36%" .fragment .fade-in-then-semi-out fragment-index=1}
 
 ### [Unicode](https://www.fileformat.info/info/unicode/char/search.htm):
 
-1,114,112 possible characters (from U+0000 to U+10FFFF) -- 159,801 currently assigned (Unicode 17.0)
+Many possible characters -- 159,801 currently *assigned*\* (Unicode 17.0)
 
-\*All NCRs *also* have unicode values
+\*All NCRs *also* have unicode values:
 
-:::
+`&#x00e4;` = &#x00e4;
 
-::: {.column width="33%" .fragment .fade-in fragment-index=2}
-
-### Uncials:
 
 :::
 
+::: {.column width="31%" .fragment .fade-in fragment-index=2}
+
+### [Uncials](https://en.wikipedia.org/wiki/Uncial_script):
+
 :::
 
-![](https://hmmlschool.org/assets/img/school/BL-MS-Add-89000.jpg){.absolute right="-10" bottom="10" height="500" .fragment .fade-in fragment-index=2}
+:::
+
+![](https://hmmlschool.org/assets/img/school/BL-MS-Add-89000.jpg){.absolute right="-20" bottom="10" height="500" .fragment .fade-in fragment-index=2}
 
 ![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDNzcDZuN21ueWIwNjgxYTJ5YWwxZzBlOWJ0dm5pcHBsdGxlemFzbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DggdGj1E3n3jy/giphy.gif){.absolute right="-160" top="-40" height="170"}
 
-![](https://d1rjyex4ui0ya6.cloudfront.net/obituaries/traditional/stock/6842-16979-yodel.jpg){.absolute left="-160" bottom="180" height="150"}
+![](https://d1rjyex4ui0ya6.cloudfront.net/obituaries/traditional/stock/6842-16979-yodel.jpg){.absolute left="-160" bottom="40" height="150"}
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}

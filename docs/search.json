@@ -557,7 +557,7 @@
     "href": "slides/2026/2_3_26/index.html#open-office-hours-january-30-2026",
     "title": "R is for Authoring!!",
     "section": "Open Office Hours (January 30, 2026)",
-    "text": "Open Office Hours (January 30, 2026)\n\n\n\n\n\n\n\nRecap session #114\nToday’s topic(s):\n\nuncïăls ümlǻuts & uñiçodé\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+    "text": "Open Office Hours (January 30, 2026)\n\n\n\n\n\n\n\nRecap session #114\nToday’s topic(s):\n\nümlǻuts uñiçodé & uncïăls\n\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
   },
   {
     "objectID": "slides/2026/2_3_26/index.html#session-info-january-30-2026-rendering",
@@ -578,6 +578,6 @@
     "href": "slides/2026/2_3_26/index.html#ümläüts-unicode-uncials",
     "title": "R is for Authoring!!",
     "section": "ümläüts unicode & uncials",
-    "text": "ümläüts unicode & uncials\n\n\nÜmläüts:\nNumeric character references (NCRs) work across document types (typst, html, pdf).\nFor example, &#228; = ä &auml; = ä\n\nUnicode:\n1,114,112 possible characters (from U+0000 to U+10FFFF) – 159,801 currently assigned (Unicode 17.0)\n*All NCRs also have unicode values\n\nUncials:"
+    "text": "ümläüts unicode & uncials\n\n\nÜmläüts:\nNumeric character references (NCRs) work across document types (typst, html, pdf).\nFor example, &#228; = ä &auml; = ä\n\nUnicode:\nMany possible characters – 159,801 currently assigned* (Unicode 17.0)\n*All NCRs also have unicode values:\n&#x00e4; = ä\n\nUncials:"
   }
 ]
