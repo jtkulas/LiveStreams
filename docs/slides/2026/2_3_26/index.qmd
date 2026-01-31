@@ -30,7 +30,7 @@ execute:
 ::: first-column
 + Recap session #114
 + Today's topic(s):
-    + [ümlǻuts]{.exo2} [[uñiçodé]{.plainjane2}](https://symbl.cc/en/unicode-table/)<br> [[& uncïăls]{.uncial2}]((https://www.britannica.com/topic/uncial))  
+    + [[ümlǻuts]{.exo2}](https://coffeebreaklanguages.com/2023/11/everything-you-need-to-know-about-the-german-umlaut/) [[uñiçodé]{.plainjane2}](https://symbl.cc/en/unicode-table/)<br> [[& uncïăls]{.uncial2}](https://www.britannica.com/topic/uncial)  
 + Shared problem-solving
 
 :::
@@ -186,18 +186,23 @@ Dear Joe,
 
 ![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTloc2czNWxvemx2OGVhOGNqczh3YzltdGJyd2ZpN2JkdTh5ZjZucSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/95P1vO6r7rsk0/giphy.gif)
 
-## [ümläüts]{.exo2} [[unicode]{.plainjane2}](https://symbl.cc/en/unicode-table/) [[&  uncials]{.uncial2}]((https://www.britannica.com/topic/uncial))  
+## [[ümläüts]{.exo2}](https://coffeebreaklanguages.com/2023/11/everything-you-need-to-know-about-the-german-umlaut/) [[unicode]{.plainjane2}](https://symbl.cc/en/unicode-table/) [[&  uncials]{.uncial2}](https://www.britannica.com/topic/uncial)  
 
 ::: {.columns}
 
 ::: {.column width="33%" .fragment .semi-fade-out fragment-index=1}
 
-### [Ümläüts](https://en.wikipedia.org/wiki/Umlaut_(linguistics)):
+### [Ümläüts](https://www.berlitz.com/blog/german-umlaut-meaning-letters):
 
 [Numeric character references (NCRs)](https://www.w3schools.com/charsets/ref_html_entities_latin.asp) work across document types (typst, html, pdf).
 
 For example, 
+
+::: {style="text-align: center"}
+
 `&#228;` = &#228; <br>`&auml;` = &auml;
+
+:::
 
 :::
 
@@ -209,8 +214,11 @@ Many possible characters -- 159,801 currently *assigned*\* (Unicode 17.0)
 
 \*All NCRs *also* have unicode values:
 
+::: {style="text-align: center"}
+
 `&#x00e4;` = &#x00e4;
 
+:::
 
 :::
 
