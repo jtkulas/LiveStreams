@@ -224,7 +224,7 @@ Many possible characters -- 159,801 currently *assigned*\* (Unicode 17.0)
 
 ::: {.column width="31%" .fragment .fade-in fragment-index=2}
 
-### [Uncials](https://en.wikipedia.org/wiki/Uncial_script):
+### [Uncials](https://spotlight.vatlib.it/latin-paleography/feature/7-1-use-and-characteristics-of-uncial):
 
 :::
 
