@@ -1,0 +1,243 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: 'OOH Session #116...<br>[{{< iconify streamline-sharp-color:double-heart >}}]{.smaller}[{{< iconify emojione-v1:red-heart >}}]{.bigger} [Valentines]{.valentines .Bigger} [{{< iconify emojione:red-heart >}}]{.bigger}[{{< iconify glyphs-poly:heart >}}]{.smaller}'
+title-slide-attributes: 
+  data-background-image: https://uploads.jovemnerd.com.br/wp-content/uploads/2016/07/pepe-le-pew-vitrine.jpg 
+  data-background-opacity: ".6"
+format:
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://upload.wikimedia.org/wikipedia/en/9/9a/Pep%C3%A9_Le_Pew.svg #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  freeze: false
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {layout="[[10,10],]"}
+::: first-column
++ Recap session #115
++ Today's topic(s):
+    + [{{< iconify streamline-sharp-color:double-heart >}}]{.smaller}{{< iconify emojione-v1:red-heart >}} [Valentines]{.valentines .Bigger} {{< iconify emojione:red-heart >}}[{{< iconify glyphs-poly:heart >}}]{.smaller}  
++ Shared problem-solving
+
+:::
+
+::: second-column
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 185px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/2_3_26">
+  <img src="/img/title115.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#115: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://png.pngtree.com/png-vector/20250806/ourmid/pngtree-quill-pen-and-inkwell-vintage-writing-illustration-png-image_16850648.webp){.absolute width="150" top="240" right="90"}
+
+## [[ümläüts]{.exo2}](https://coffeebreaklanguages.com/2023/11/everything-you-need-to-know-about-the-german-umlaut/) [[unicode]{.plainjane2}](https://symbl.cc/en/unicode-table/) [[&  uncials]{.uncial2}](https://www.britannica.com/topic/uncial)  
+
+::: {.panel-tabset}
+
+### columns {{< iconify fluent:text-column-two-20-regular style="color:#ffffff;" >}}
+
+::: {.columns .smaller}
+
+::: {.column width="50%"}
+
+no--go {{< iconify fluent-emoji-flat:no-entry >}}:
+```
+:::{.columns}
+
+::: {.column width="50%"}
+Content column 1
+:::
+
+::: {.column width="50%"}
+Content column 2
+:::
+
+:::
+```
+:::
+
+::: {.column width="50%" .Smaller}
+
+[effective {{< iconify streamline-ultimate-color:check >}}:]{.bigger}
+```
+:::{layout-ncol=2}
+
+Content column 1
+
+Content column 2
+
+:::
+```
+
+::: {.callout-note}
+
+Any `x` integer works within `layout-ncol=x` -- content within div will be distributed equally across `x` columns
+
+:::
+
+:::
+
+:::
+
+### pro letter {{< iconify mdi:document-sign style="color:#ffffff;" >}}
+
+::: {.columns}
+
+::: {.column width="35%"}
+:::
+
+::: {.column width="65%" .smaller}
+
+```{r}
+#| echo: true
+---
+subject: "Revision of our Procurement Contract"
+name: "Jane Smith \ Regional Director"
+sender: "Jane Smith, Universal Exports, 1 Heavy Plaza, Morristown, NJ 07964"
+recipient: |
+  Mr. John Doe \
+  Acme Corp. \
+  123 Glennwood Ave \
+  Quarto Creek, VA 22438 \
+sent: "Morristown, June 9th, 2023"
+format:                                 #<1>
+  letter-typst: default                 #<1>
+---
+
+Dear Joe,
+
+...
+```
+1. access the template via this alteration from standard `format: typst` specification
+
+:::
+
+:::
+
+::: {.absolute style="bottom: 0px; left: 30px; width: 300px;"}
+<a href="https://github.com/quarto-ext/typst-templates/tree/main/letter">
+  <img src="https://github.com/quarto-ext/typst-templates/raw/main/letter/letter.png">
+</a>
+:::
+
+### other templates {{< iconify fluent-mdl2:file-template style="color:#ffffff;" >}}
+
+::: {.columns}
+
+::: {.column width="45%"}
+
+[`AMS`](https://github.com/quarto-ext/typst-templates/tree/main/ams), [`poster`](https://github.com/quarto-ext/typst-templates/tree/main/poster) & [`dept--news`](https://github.com/quarto-ext/typst-templates/tree/main/dept-news) templates all contain scripting that is [not supported by the modern typst compiler](https://github.com/quarto-ext/typst-templates/issues/17) (version 0.13.0). 
+
+:::
+
+::: {.column width="55%" .smaller}
+
+2 work--arounds:
+
++ amend scripting within `.typ` template (located in `_extensions` folder)
++ install [older version of Quarto](https://quarto.org/docs/download/) & compile as usual (v 1.6.43 works)
+
+:::
+
+:::
+
+:::
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDNzcDZuN21ueWIwNjgxYTJ5YWwxZzBlOWJ0dm5pcHBsdGxlemFzbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DggdGj1E3n3jy/giphy.gif){.absolute right="-160" top="-40" height="170"}
+
+# Today...
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWVhM2JkMWFvanIyMDg5MTZta25wZ3FhdXRrNGxmazh5bmsxbTNzdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6Yg3udHmlvS9FWyk/giphy.gif)
+
+## [{{< iconify streamline-sharp-color:double-heart >}}]{.smaller}{{< iconify emojione-v1:red-heart >}} [Valentines]{.valentines .Bigger} {{< iconify emojione:red-heart >}}[{{< iconify glyphs-poly:heart >}}]{.smaller}  
+
+::: {.columns}
+
+::: {.column width="33%" .fragment .semi-fade-out fragment-index=1}
+
+### [Ümläüts](https://www.berlitz.com/blog/german-umlaut-meaning-letters):
+
+[Numeric character references (NCRs)](https://www.w3schools.com/charsets/ref_html_entities_latin.asp) work across document types (typst, html, pdf).
+
+For example, 
+
+::: {style="text-align: center"}
+
+`&#228;` = &#228; <br>`&auml;` = &auml;
+
+:::
+
+:::
+
+::: {.column width="36%" .fragment .fade-in-then-semi-out fragment-index=1}
+
+### [Unicode](https://www.fileformat.info/info/unicode/char/search.htm):
+
+Many possible characters -- 159,801 currently *assigned*\* (Unicode 17.0)
+
+\*All NCRs *also* have unicode values:
+
+::: {style="text-align: center"}
+
+`&#x00e4;` = &#x00e4;
+
+:::
+
+:::
+
+::: {.column width="31%" .fragment .fade-in fragment-index=2}
+
+### [Uncials](https://spotlight.vatlib.it/latin-paleography/feature/7-1-use-and-characteristics-of-uncial):
+
+:::
+
+:::
+
+![](https://hmmlschool.org/assets/img/school/BL-MS-Add-89000.jpg){.absolute right="-20" bottom="10" height="500" .fragment .fade-in fragment-index=2}
+
+![](https://www.pngkey.com/png/full/423-4233420_looney-tunes-pepe-le-pew-looney-toons-characters.png){.absolute left="-160" bottom="40" height="150"}
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+#| eval: true
+sessionInfo()
+```
+
+

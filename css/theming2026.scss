@@ -18,12 +18,13 @@
 @import url('https://fonts.googleapis.com/css?family=Uncial Antiqua');
 @import url('https://fonts.googleapis.com/css?family=Exo');
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Euphoria Script');
 
 $presentation-title-slide-text-align: right;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
-  height: 100px !important;
+  height: 75px !important;
 }
 
 /* adding background to inline code elements */
@@ -314,3 +315,9 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   color: #a92777;
 }
 
+.valentines {
+  font-family: "Euphoria Script";
+  color: #ffc5d3;
+  text-shadow:
+    2px 2px 0px #a92777 !important;
+}

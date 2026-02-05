@@ -1,0 +1,79 @@
+---
+format: 
+  revealjs:
+    mainfont: "Dancing Script"
+    mouse-wheel: true
+execute: 
+  echo: false
+  warning: false
+  error: false
+filters:
+  - snow
+---
+# {background-image="https://starbaseatlanta.com/wp-content/uploads/sihpt4674.jpg"}
+
+```{css}
+
+@import url('https://fonts.googleapis.com/css?family=Dancing Script');
+
+.snowflake__inner_type_0:before {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/1077/1077035.png') !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+}
+
+.snowflake__inner_type_1:before {
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/018/795/980/small/neon-glowing-shape-free-png.png') !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+}
+
+.snowflake__inner_type_2:before {
+    background-image: url('https://gallery.yopriceville.com/downloadfullsize/send/30848') !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+}
+
+.snowflake__inner_type_3:before {
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/010/977/961/small/red-paper-cut-heart-style-png.png') !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+}
+
+.snowflake__inner_type_4:before {
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/010/977/961/small/red-paper-cut-heart-style-png.png') !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+}
+
+.snowflake__inner_type_5:before {
+    background-image: url('https://images.vexels.com/media/users/3/136172/isolated/preview/148ec098a4529de7141003a8ec519d39-heart-like-icon.png') !important;
+    background-size: 100% 100% !important;
+    background-position: center !important;
+}
+
+```
+
+## Sappy sentiment goes here... {background-color="#ffe2f6"}
+
+```{r heart-animation}
+library(ggplot2)
+library(dplyr)
+library(gganimate)
+
+heartdf = tibble(
+	t = seq(0, 2*pi, pi/60),
+	x = 16*sin(t)^3,
+	y = 13*cos(t) - 5*cos(2*t) - 2*cos(3*t) - cos(4*t)
+)
+
+textdf = tibble(t = max(heartdf$t) + 1:15)
+
+ggplot(data = heartdf, aes(x, y)) + 
+	geom_polygon(aes(group = 1), fill = "red") +
+	geom_text(aes(x = 0, y = 0, label = "\u2661\u2764\u2665 Va va voom!!! \u2665\u2764\u2661", parse=TRUE), 
+			  data = textdf, size = 12, colour = "white") +
+  xlab("\u2665 XxXxXxX \u2665") +
+  ylab("\u2665 OoOoOoO \u2665") +
+	transition_reveal(t)
+```
