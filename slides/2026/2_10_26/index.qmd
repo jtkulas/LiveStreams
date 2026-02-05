@@ -30,7 +30,7 @@ execute:
 ::: first-column
 + Recap session #115
 + Today's topic(s):
-    + [{{< iconify streamline-sharp-color:double-heart >}}]{.smaller}{{< iconify emojione-v1:red-heart >}} [Valentines]{.valentines .Bigger} {{< iconify emojione:red-heart >}}[{{< iconify glyphs-poly:heart >}}]{.smaller}  
+    + [[{{< iconify streamline-sharp-color:double-heart >}}]{.smaller}{{< iconify emojione-v1:red-heart >}} [Valentines]{.valentines .Bigger} {{< iconify emojione:red-heart >}}[{{< iconify glyphs-poly:heart >}}]{.smaller}](https://www.noaa.gov/education/celebrate-Valentines-Day-with-NOAA)  
 + Shared problem-solving
 
 :::
@@ -71,108 +71,55 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ::: {.panel-tabset}
 
-### columns {{< iconify fluent:text-column-two-20-regular style="color:#ffffff;" >}}
+### [ümläüts]{.exo2} & [unicode]{.plainjane2}
 
-::: {.columns .smaller}
+::: {.column width="30%"}
 
-::: {.column width="50%"}
-
-no--go {{< iconify fluent-emoji-flat:no-entry >}}:
-```
-:::{.columns}
-
-::: {.column width="50%"}
-Content column 1
-:::
-
-::: {.column width="50%"}
-Content column 2
-:::
-
-:::
-```
-:::
-
-::: {.column width="50%" .Smaller}
-
-[effective {{< iconify streamline-ultimate-color:check >}}:]{.bigger}
-```
-:::{layout-ncol=2}
-
-Content column 1
-
-Content column 2
-
-:::
-```
-
-::: {.callout-note}
-
-Any `x` integer works within `layout-ncol=x` -- content within div will be distributed equally across `x` columns
+[ümläüts]{.exo2} (and other special characters) can be specified via [unicode]{.plainjane2} values:
 
 :::
 
+::: {.column width="70%"}
+
+| [unicode]{.plainjane2} | character  | specification |
+| ---------------------- | ---------- | ------------- |
+| U+2764                 | ❤️         | `&#x2764;`    |
+| U+2661                 | ♡          | `&#x2661;`    |
+| U+2765                 | ❥          | `&#x2765;`    |
+| U+1F0B1                | &#x1f0b1;  | `&#x1f0b1;`   |
 :::
 
-:::
-
-### pro letter {{< iconify mdi:document-sign style="color:#ffffff;" >}}
+### [uncials]{.uncial2}
 
 ::: {.columns}
 
-::: {.column width="35%"}
+::: {.column width="40%"}
+
+...and other font specifications may differ across document type -- local installation for pdf & typst (also mind `pdf-engine` with {{< iconify vscode-icons:file-type-pdf2 >}})
+
 :::
 
-::: {.column width="65%" .smaller}
+::: {.column width="60%"}
 
-```{r}
-#| echo: true
+````{r}
 ---
-subject: "Revision of our Procurement Contract"
-name: "Jane Smith \ Regional Director"
-sender: "Jane Smith, Universal Exports, 1 Heavy Plaza, Morristown, NJ 07964"
-recipient: |
-  Mr. John Doe \
-  Acme Corp. \
-  123 Glennwood Ave \
-  Quarto Creek, VA 22438 \
-sent: "Morristown, June 9th, 2023"
-format:                                 #<1>
-  letter-typst: default                 #<1>
+title: "Untitled"
+mainfont: "Uncial Antiqua"     #<1>
+format: html
+#  pdf:                        #<2>
+#    pdf-engine: lualatex      #<2>
 ---
 
-Dear Joe,
+```{css}                      #<3>
 
-...
-```
-1. access the template via this alteration from standard `format: typst` specification
+@import url('https://fonts.googleapis.com/css?family=Uncial Antiqua');
 
-:::
+```                           #<3>
 
-:::
-
-::: {.absolute style="bottom: 0px; left: 30px; width: 300px;"}
-<a href="https://github.com/quarto-ext/typst-templates/tree/main/letter">
-  <img src="https://github.com/quarto-ext/typst-templates/raw/main/letter/letter.png">
-</a>
-:::
-
-### other templates {{< iconify fluent-mdl2:file-template style="color:#ffffff;" >}}
-
-::: {.columns}
-
-::: {.column width="45%"}
-
-[`AMS`](https://github.com/quarto-ext/typst-templates/tree/main/ams), [`poster`](https://github.com/quarto-ext/typst-templates/tree/main/poster) & [`dept--news`](https://github.com/quarto-ext/typst-templates/tree/main/dept-news) templates all contain scripting that is [not supported by the modern typst compiler](https://github.com/quarto-ext/typst-templates/issues/17) (version 0.13.0). 
-
-:::
-
-::: {.column width="55%" .smaller}
-
-2 work--arounds:
-
-+ amend scripting within `.typ` template (located in `_extensions` folder)
-+ install [older version of Quarto](https://quarto.org/docs/download/) & compile as usual (v 1.6.43 works)
+````
+1. `mainfont` should apply to most document elements (but possibly not all -- keep an eye on {{< iconify fluent-emoji-flat:eyes >}})
+2. alternative YAML structure for {{< iconify vscode-icons:file-type-pdf2 >}} (if fonts not displaying as expected)
+3. option only within html documents if fonts not displaying as expected 
 
 :::
 
@@ -180,7 +127,9 @@ Dear Joe,
 
 :::
 
-![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDNzcDZuN21ueWIwNjgxYTJ5YWwxZzBlOWJ0dm5pcHBsdGxlemFzbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DggdGj1E3n3jy/giphy.gif){.absolute right="-160" top="-40" height="170"}
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDNzcDZuN21ueWIwNjgxYTJ5YWwxZzBlOWJ0dm5pcHBsdGxlemFzbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DggdGj1E3n3jy/giphy.gif){.absolute right="-160" top="0" height="170"}
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDIyb2o1MmUwbjhhdmVhd3kwamF6Nmd0cW04a2picDVmOGJpa3JpMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9E5wP1RiPvnos/giphy.gif){.absolute left="-160" bottom="150" height="180"}
 
 # Today...
 
@@ -188,51 +137,15 @@ Dear Joe,
 
 ## [{{< iconify streamline-sharp-color:double-heart >}}]{.smaller}{{< iconify emojione-v1:red-heart >}} [Valentines]{.valentines .Bigger} {{< iconify emojione:red-heart >}}[{{< iconify glyphs-poly:heart >}}]{.smaller}  
 
-::: {.columns}
+![](https://designshop-6aa0.kxcdn.com/photos/hearts-valentines-day-red-pink-graphic-love-lovely-relationship-postcard-greeting-card-send-online-4428_49.jpg){.absolute right="-120" top="0" height="300"}
 
-::: {.column width="33%" .fragment .semi-fade-out fragment-index=1}
+![](https://www.tvinsider.com/wp-content/uploads/2020/02/1963PWHallmarkValentineFirstEver.jpg){.absolute left="70" top="170" height="250"}
 
-### [Ümläüts](https://www.berlitz.com/blog/german-umlaut-meaning-letters):
+![](https://i.pinimg.com/736x/1c/c6/fb/1cc6fbb63c92eb68e3c2b9e2e07679d8--snoopy-valentine-happy-valentines-day.jpg){.absolute right="-20" bottom="30" height="300"}
 
-[Numeric character references (NCRs)](https://www.w3schools.com/charsets/ref_html_entities_latin.asp) work across document types (typst, html, pdf).
+![](https://www.pngkey.com/png/full/423-4233420_looney-tunes-pepe-le-pew-looney-toons-characters.png){.absolute left="-100" bottom="65" height="250"}
 
-For example, 
-
-::: {style="text-align: center"}
-
-`&#228;` = &#228; <br>`&auml;` = &auml;
-
-:::
-
-:::
-
-::: {.column width="36%" .fragment .fade-in-then-semi-out fragment-index=1}
-
-### [Unicode](https://www.fileformat.info/info/unicode/char/search.htm):
-
-Many possible characters -- 159,801 currently *assigned*\* (Unicode 17.0)
-
-\*All NCRs *also* have unicode values:
-
-::: {style="text-align: center"}
-
-`&#x00e4;` = &#x00e4;
-
-:::
-
-:::
-
-::: {.column width="31%" .fragment .fade-in fragment-index=2}
-
-### [Uncials](https://spotlight.vatlib.it/latin-paleography/feature/7-1-use-and-characteristics-of-uncial):
-
-:::
-
-:::
-
-![](https://hmmlschool.org/assets/img/school/BL-MS-Add-89000.jpg){.absolute right="-20" bottom="10" height="500" .fragment .fade-in fragment-index=2}
-
-![](https://www.pngkey.com/png/full/423-4233420_looney-tunes-pepe-le-pew-looney-toons-characters.png){.absolute left="-160" bottom="40" height="150"}
+![](https://images.fineartamerica.com/images/artworkimages/medium/3/us-looney-tunes-pepe-le-pew-valentines-kiss-01-white-sofiaf-canda-transparent.png?odnHeight=117&odnWidth=117&odnBg=FFFFFF){.absolute top="170" right="250" height="400"}
 
 ## [Backup [{{< iconify streamline-sharp-color:double-heart >}}]{.smaller}{{< iconify emojione-v1:red-heart >}} [Valentine]{.valentines .Bigger} {{< iconify emojione:red-heart >}}[{{< iconify glyphs-poly:heart >}}]{.smaller}](https://jtkulas.github.io/LiveStreams/slides/2026/valentine)
 
@@ -261,38 +174,26 @@ filters:
 
 .snowflake__inner_type_0:before {
     background-image: url('https://cdn-icons-png.flaticon.com/512/1077/1077035.png') !important;
-    background-size: 100% 100% !important;
-    background-position: center !important;
 }
 
 .snowflake__inner_type_1:before {
     background-image: url('https://static.vecteezy.com/system/resources/thumbnails/018/795/980/small/neon-glowing-shape-free-png.png') !important;
-    background-size: 100% 100% !important;
-    background-position: center !important;
 }
 
 .snowflake__inner_type_2:before {
     background-image: url('https://gallery.yopriceville.com/downloadfullsize/send/30848') !important;
-    background-size: 100% 100% !important;
-    background-position: center !important;
 }
 
 .snowflake__inner_type_3:before {
     background-image: url('https://static.vecteezy.com/system/resources/thumbnails/010/977/961/small/red-paper-cut-heart-style-png.png') !important;
-    background-size: 100% 100% !important;
-    background-position: center !important;
 }
 
 .snowflake__inner_type_4:before {
     background-image: url('https://static.vecteezy.com/system/resources/thumbnails/010/977/961/small/red-paper-cut-heart-style-png.png') !important;
-    background-size: 100% 100% !important;
-    background-position: center !important;
 }
 
 .snowflake__inner_type_5:before {
     background-image: url('https://images.vexels.com/media/users/3/136172/isolated/preview/148ec098a4529de7141003a8ec519d39-heart-like-icon.png') !important;
-    background-size: 100% 100% !important;
-    background-position: center !important;
 }
 
 ```
@@ -327,9 +228,9 @@ ggplot(data = heartdf, aes(x, y)) +
 
 ::: {.column width="35%"}
 
-::: {.callout-tip}
+::: {.callout-note}
 
-Code on left will create card [similar to the holiday card we created](https://jtkulas.github.io/LiveStreams/slides/2026/valentine) -- you can swap code images, colors, etc... 
+Code on left will create a card [similarly styled to the holiday card we created](https://jtkulas.github.io/LiveStreams/slides/2026/valentine) -- you can swap code images, colors, etc... 
 
 You'll need the [standard `snow` extension installed](https://github.com/EmilHvitfeldt/quarto-snow) for the heart--falling effect to work 
 
@@ -338,6 +239,10 @@ You'll need the [standard `snow` extension installed](https://github.com/EmilHvi
 :::
 
 :::
+
+![](https://www.pngkey.com/png/full/423-4233420_looney-tunes-pepe-le-pew-looney-toons-characters.png){.absolute right="-150" top="0" height="250" .mirror}
+
+![](https://upload.wikimedia.org/wikipedia/en/d/dd/Penelope_Pussycat.png){.absolute left="-170" bottom="150" height="250"}
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
