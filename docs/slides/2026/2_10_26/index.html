@@ -216,8 +216,8 @@ OOH Session #116…<br><span class="smaller"><iconify-icon role="img" inline="" 
 </div>
 
 </section>
-<section id="open-office-hours-february-05-2026" class="slide level2">
-<h2>Open Office Hours <br>(February 05, 2026)</h2>
+<section id="open-office-hours-february-06-2026" class="slide level2">
+<h2>Open Office Hours <br>(February 06, 2026)</h2>
 <div>
 
 </div>
@@ -282,19 +282,19 @@ OOH Session #116…<br><span class="smaller"><iconify-icon role="img" inline="" 
 </thead>
 <tbody>
 <tr class="odd">
+<td>U+00FC</td>
+<td>ü</td>
+<td><code>&amp;#xfc;</code>/<code>&amp;#x00FC;</code></td>
+</tr>
+<tr class="even">
 <td>U+2764</td>
 <td>❤️</td>
 <td><code>&amp;#x2764;</code></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>U+2661</td>
 <td>♡</td>
 <td><code>&amp;#x2661;</code></td>
-</tr>
-<tr class="odd">
-<td>U+2765</td>
-<td>❥</td>
-<td><code>&amp;#x2765;</code></td>
 </tr>
 <tr class="even">
 <td>U+1F0B1</td>
@@ -307,7 +307,7 @@ OOH Session #116…<br><span class="smaller"><iconify-icon role="img" inline="" 
 <div id="tabset-1-2">
 <div class="columns">
 <div class="column" style="width:40%;">
-<p>…and other font specifications may differ across document type – local installation for pdf &amp; typst (also mind <code>pdf-engine</code> with <iconify-icon role="img" inline="" icon="vscode-icons:file-type-pdf2" aria-label="Icon file-type-pdf2 from vscode-icons Iconify.design set." title="Icon file-type-pdf2 from vscode-icons Iconify.design set."></iconify-icon>)</p>
+<p>…and other font specifications differ across document type – <strong><em>local installation</em></strong> for pdf &amp; typst <u>but not html</u> (also mind <code>pdf-engine</code> with <iconify-icon role="img" inline="" icon="vscode-icons:file-type-pdf2" aria-label="Icon file-type-pdf2 from vscode-icons Iconify.design set." title="Icon file-type-pdf2 from vscode-icons Iconify.design set."></iconify-icon>)</p>
 </div><div class="column" style="width:60%;">
 <div class="cell">
 <div class="sourceCode cell-code" id="annotated-cell-2"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-2-1"><a href="#annotated-cell-2-1"></a><span class="sc">---</span></span>
@@ -335,7 +335,7 @@ OOH Session #116…<br><span class="smaller"><iconify-icon role="img" inline="" 
 </dd>
 <dt data-target-cell="annotated-cell-2" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-cell="annotated-cell-2" data-code-lines="9,13" data-code-annotation="3">option only within html documents if fonts not displaying as expected</span>
+<span data-code-cell="annotated-cell-2" data-code-lines="9,13" data-code-annotation="3">easiest html option if fonts not displaying as expected (html dependent on <em>viewer</em> setup, not your local font installations)</span>
 </dd>
 </dl>
 </div>
@@ -370,73 +370,85 @@ OOH Session #116…<br><span class="smaller"><iconify-icon role="img" inline="" 
 <div class="columns">
 <div class="column" style="width:65%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="sc">---</span></span>
-<span id="cb1-2"><a></a>format<span class="sc">:</span> </span>
-<span id="cb1-3"><a></a>  revealjs<span class="sc">:</span></span>
-<span id="cb1-4"><a></a>    mainfont<span class="sc">:</span> <span class="st">"Dancing Script"</span></span>
-<span id="cb1-5"><a></a>    mouse<span class="sc">-</span>wheel<span class="sc">:</span> true</span>
-<span id="cb1-6"><a></a>execute<span class="sc">:</span> </span>
-<span id="cb1-7"><a></a>  echo<span class="sc">:</span> false</span>
-<span id="cb1-8"><a></a>  warning<span class="sc">:</span> false</span>
-<span id="cb1-9"><a></a>  error<span class="sc">:</span> false</span>
-<span id="cb1-10"><a></a>filters<span class="sc">:</span></span>
-<span id="cb1-11"><a></a>  <span class="sc">-</span> snow</span>
-<span id="cb1-12"><a></a><span class="sc">---</span></span>
-<span id="cb1-13"><a></a><span class="co"># {background-image="https://starbaseatlanta.com/wp-content/uploads/sihpt4674.jpg"}</span></span>
-<span id="cb1-14"><a></a></span>
-<span id="cb1-15"><a></a><span class="st">```</span><span class="at">{css}</span></span>
-<span id="cb1-16"><a></a></span>
-<span id="cb1-17"><a></a><span class="at">@import url('https://fonts.googleapis.com/css?family=Dancing Script');</span></span>
-<span id="cb1-18"><a></a></span>
-<span id="cb1-19"><a></a><span class="at">.snowflake__inner_type_0:before {</span></span>
-<span id="cb1-20"><a></a><span class="at">    background-image: url('https://cdn-icons-png.flaticon.com/512/1077/1077035.png') !important;</span></span>
-<span id="cb1-21"><a></a><span class="at">}</span></span>
-<span id="cb1-22"><a></a></span>
-<span id="cb1-23"><a></a><span class="at">.snowflake__inner_type_1:before {</span></span>
-<span id="cb1-24"><a></a><span class="at">    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/018/795/980/small/neon-glowing-shape-free-png.png') !important;</span></span>
-<span id="cb1-25"><a></a><span class="at">}</span></span>
-<span id="cb1-26"><a></a></span>
-<span id="cb1-27"><a></a><span class="at">.snowflake__inner_type_2:before {</span></span>
-<span id="cb1-28"><a></a><span class="at">    background-image: url('https://gallery.yopriceville.com/downloadfullsize/send/30848') !important;</span></span>
-<span id="cb1-29"><a></a><span class="at">}</span></span>
-<span id="cb1-30"><a></a></span>
-<span id="cb1-31"><a></a><span class="at">.snowflake__inner_type_3:before {</span></span>
-<span id="cb1-32"><a></a><span class="at">    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/010/977/961/small/red-paper-cut-heart-style-png.png') !important;</span></span>
-<span id="cb1-33"><a></a><span class="at">}</span></span>
-<span id="cb1-34"><a></a></span>
-<span id="cb1-35"><a></a><span class="at">.snowflake__inner_type_4:before {</span></span>
-<span id="cb1-36"><a></a><span class="at">    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/010/977/961/small/red-paper-cut-heart-style-png.png') !important;</span></span>
-<span id="cb1-37"><a></a><span class="at">}</span></span>
-<span id="cb1-38"><a></a></span>
-<span id="cb1-39"><a></a><span class="at">.snowflake__inner_type_5:before {</span></span>
-<span id="cb1-40"><a></a><span class="at">    background-image: url('https://images.vexels.com/media/users/3/136172/isolated/preview/148ec098a4529de7141003a8ec519d39-heart-like-icon.png') !important;</span></span>
-<span id="cb1-41"><a></a><span class="at">}</span></span>
-<span id="cb1-42"><a></a></span>
-<span id="cb1-43"><a></a><span class="st">```</span></span>
-<span id="cb1-44"><a></a></span>
-<span id="cb1-45"><a></a><span class="do">## Sappy sentiment goes here... {background-color="#ffe2f6"}</span></span>
-<span id="cb1-46"><a></a></span>
-<span id="cb1-47"><a></a><span class="st">```</span><span class="at">{r heart-animation}</span></span>
-<span id="cb1-48"><a></a><span class="at">library(ggplot2)</span></span>
-<span id="cb1-49"><a></a><span class="at">library(dplyr)</span></span>
-<span id="cb1-50"><a></a><span class="at">library(gganimate)</span></span>
-<span id="cb1-51"><a></a></span>
-<span id="cb1-52"><a></a><span class="at">heartdf = tibble(</span></span>
-<span id="cb1-53"><a></a><span class="at">    t = seq(0, 2*pi, pi/60),</span></span>
-<span id="cb1-54"><a></a><span class="at">    x = 16*sin(t)^3,</span></span>
-<span id="cb1-55"><a></a><span class="at">    y = 13*cos(t) - 5*cos(2*t) - 2*cos(3*t) - cos(4*t)</span></span>
-<span id="cb1-56"><a></a><span class="at">)</span></span>
-<span id="cb1-57"><a></a></span>
-<span id="cb1-58"><a></a><span class="at">textdf = tibble(t = max(heartdf$t) + 1:15)</span></span>
-<span id="cb1-59"><a></a></span>
-<span id="cb1-60"><a></a><span class="at">ggplot(data = heartdf, aes(x, y)) + </span></span>
-<span id="cb1-61"><a></a><span class="at">    geom_polygon(aes(group = 1), fill = "red") +</span></span>
-<span id="cb1-62"><a></a><span class="at">    geom_text(aes(x = 0, y = 0, label = "\u2661\u2764\u2665 Va va voom!!! \u2665\u2764\u2661", parse=TRUE), </span></span>
-<span id="cb1-63"><a></a><span class="at">              data = textdf, size = 12, colour = "white") +</span></span>
-<span id="cb1-64"><a></a><span class="at">  xlab("\u2665 XxXxXxX \u2665") +</span></span>
-<span id="cb1-65"><a></a><span class="at">  ylab("\u2665 OoOoOoO \u2665") +</span></span>
-<span id="cb1-66"><a></a><span class="at">    transition_reveal(t)</span></span>
-<span id="cb1-67"><a></a><span class="st">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-3"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-3-1"><a href="#annotated-cell-3-1"></a><span class="sc">---</span></span>
+<span id="annotated-cell-3-2"><a href="#annotated-cell-3-2"></a>format<span class="sc">:</span> </span>
+<span id="annotated-cell-3-3"><a href="#annotated-cell-3-3"></a>  revealjs<span class="sc">:</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="1">1</button><span id="annotated-cell-3-4" class="code-annotation-target"><a href="#annotated-cell-3-4"></a>    mainfont<span class="sc">:</span> <span class="st">"Dancing Script"</span></span>
+<span id="annotated-cell-3-5"><a href="#annotated-cell-3-5"></a>    mouse<span class="sc">-</span>wheel<span class="sc">:</span> true</span>
+<span id="annotated-cell-3-6"><a href="#annotated-cell-3-6"></a>execute<span class="sc">:</span> </span>
+<span id="annotated-cell-3-7"><a href="#annotated-cell-3-7"></a>  echo<span class="sc">:</span> false</span>
+<span id="annotated-cell-3-8"><a href="#annotated-cell-3-8"></a>  warning<span class="sc">:</span> false</span>
+<span id="annotated-cell-3-9"><a href="#annotated-cell-3-9"></a>  error<span class="sc">:</span> false</span>
+<span id="annotated-cell-3-10"><a href="#annotated-cell-3-10"></a>filters<span class="sc">:</span></span>
+<span id="annotated-cell-3-11"><a href="#annotated-cell-3-11"></a>  <span class="sc">-</span> snow</span>
+<span id="annotated-cell-3-12"><a href="#annotated-cell-3-12"></a><span class="sc">---</span></span>
+<span id="annotated-cell-3-13"><a href="#annotated-cell-3-13"></a><span class="co"># {background-image="https://starbaseatlanta.com/wp-content/uploads/sihpt4674.jpg"}</span></span>
+<span id="annotated-cell-3-14"><a href="#annotated-cell-3-14"></a></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="2">2</button><span id="annotated-cell-3-15" class="code-annotation-target"><a href="#annotated-cell-3-15"></a><span class="st">```</span><span class="at">{css}</span></span>
+<span id="annotated-cell-3-16"><a href="#annotated-cell-3-16"></a></span>
+<span id="annotated-cell-3-17"><a href="#annotated-cell-3-17"></a><span class="at">@import url('https://fonts.googleapis.com/css?family=Dancing Script');</span></span>
+<span id="annotated-cell-3-18"><a href="#annotated-cell-3-18"></a></span>
+<span id="annotated-cell-3-19"><a href="#annotated-cell-3-19"></a><span class="at">.snowflake__inner_type_0:before {</span></span>
+<span id="annotated-cell-3-20"><a href="#annotated-cell-3-20"></a><span class="at">    background-image: url('https://cdn-icons-png.flaticon.com/512/1077/1077035.png') !important;</span></span>
+<span id="annotated-cell-3-21"><a href="#annotated-cell-3-21"></a><span class="at">}</span></span>
+<span id="annotated-cell-3-22"><a href="#annotated-cell-3-22"></a></span>
+<span id="annotated-cell-3-23"><a href="#annotated-cell-3-23"></a><span class="at">.snowflake__inner_type_1:before {</span></span>
+<span id="annotated-cell-3-24"><a href="#annotated-cell-3-24"></a><span class="at">    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/018/795/980/small/neon-glowing-shape-free-png.png') !important;</span></span>
+<span id="annotated-cell-3-25"><a href="#annotated-cell-3-25"></a><span class="at">}</span></span>
+<span id="annotated-cell-3-26"><a href="#annotated-cell-3-26"></a></span>
+<span id="annotated-cell-3-27"><a href="#annotated-cell-3-27"></a><span class="at">.snowflake__inner_type_2:before {</span></span>
+<span id="annotated-cell-3-28"><a href="#annotated-cell-3-28"></a><span class="at">    background-image: url('https://gallery.yopriceville.com/downloadfullsize/send/30848') !important;</span></span>
+<span id="annotated-cell-3-29"><a href="#annotated-cell-3-29"></a><span class="at">}</span></span>
+<span id="annotated-cell-3-30"><a href="#annotated-cell-3-30"></a></span>
+<span id="annotated-cell-3-31"><a href="#annotated-cell-3-31"></a><span class="at">.snowflake__inner_type_3:before {</span></span>
+<span id="annotated-cell-3-32"><a href="#annotated-cell-3-32"></a><span class="at">    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/010/977/961/small/red-paper-cut-heart-style-png.png') !important;</span></span>
+<span id="annotated-cell-3-33"><a href="#annotated-cell-3-33"></a><span class="at">}</span></span>
+<span id="annotated-cell-3-34"><a href="#annotated-cell-3-34"></a></span>
+<span id="annotated-cell-3-35"><a href="#annotated-cell-3-35"></a><span class="at">.snowflake__inner_type_4:before {</span></span>
+<span id="annotated-cell-3-36"><a href="#annotated-cell-3-36"></a><span class="at">    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/010/977/961/small/red-paper-cut-heart-style-png.png') !important;</span></span>
+<span id="annotated-cell-3-37"><a href="#annotated-cell-3-37"></a><span class="at">}</span></span>
+<span id="annotated-cell-3-38"><a href="#annotated-cell-3-38"></a></span>
+<span id="annotated-cell-3-39"><a href="#annotated-cell-3-39"></a><span class="at">.snowflake__inner_type_5:before {</span></span>
+<span id="annotated-cell-3-40"><a href="#annotated-cell-3-40"></a><span class="at">    background-image: url('https://images.vexels.com/media/users/3/136172/isolated/preview/148ec098a4529de7141003a8ec519d39-heart-like-icon.png') !important;</span></span>
+<span id="annotated-cell-3-41"><a href="#annotated-cell-3-41"></a><span class="at">}</span></span>
+<span id="annotated-cell-3-42"><a href="#annotated-cell-3-42"></a></span>
+<span id="annotated-cell-3-43"><a href="#annotated-cell-3-43"></a><span class="st">```</span></span>
+<span id="annotated-cell-3-44"><a href="#annotated-cell-3-44"></a></span>
+<span id="annotated-cell-3-45"><a href="#annotated-cell-3-45"></a><span class="do">## Sappy sentiment goes here... {background-color="#ffe2f6"}</span></span>
+<span id="annotated-cell-3-46"><a href="#annotated-cell-3-46"></a></span>
+<span id="annotated-cell-3-47"><a href="#annotated-cell-3-47"></a><span class="st">```</span><span class="at">{r heart-animation}</span></span>
+<span id="annotated-cell-3-48"><a href="#annotated-cell-3-48"></a><span class="at">library(ggplot2)</span></span>
+<span id="annotated-cell-3-49"><a href="#annotated-cell-3-49"></a><span class="at">library(dplyr)</span></span>
+<span id="annotated-cell-3-50"><a href="#annotated-cell-3-50"></a><span class="at">library(gganimate)</span></span>
+<span id="annotated-cell-3-51"><a href="#annotated-cell-3-51"></a></span>
+<span id="annotated-cell-3-52"><a href="#annotated-cell-3-52"></a><span class="at">heartdf = tibble(</span></span>
+<span id="annotated-cell-3-53"><a href="#annotated-cell-3-53"></a><span class="at">    t = seq(0, 2*pi, pi/60),</span></span>
+<span id="annotated-cell-3-54"><a href="#annotated-cell-3-54"></a><span class="at">    x = 16*sin(t)^3,</span></span>
+<span id="annotated-cell-3-55"><a href="#annotated-cell-3-55"></a><span class="at">    y = 13*cos(t) - 5*cos(2*t) - 2*cos(3*t) - cos(4*t)</span></span>
+<span id="annotated-cell-3-56"><a href="#annotated-cell-3-56"></a><span class="at">)</span></span>
+<span id="annotated-cell-3-57"><a href="#annotated-cell-3-57"></a></span>
+<span id="annotated-cell-3-58"><a href="#annotated-cell-3-58"></a><span class="at">textdf = tibble(t = max(heartdf$t) + 1:15)</span></span>
+<span id="annotated-cell-3-59"><a href="#annotated-cell-3-59"></a></span>
+<span id="annotated-cell-3-60"><a href="#annotated-cell-3-60"></a><span class="at">ggplot(data = heartdf, aes(x, y)) + </span></span>
+<span id="annotated-cell-3-61"><a href="#annotated-cell-3-61"></a><span class="at">    geom_polygon(aes(group = 1), fill = "red") +</span></span>
+<span id="annotated-cell-3-62"><a href="#annotated-cell-3-62"></a><span class="at">    geom_text(aes(x = 0, y = 0, label = "\u2661\u2764\u2665 Va va voom!!! \u2665\u2764\u2661", parse=TRUE), </span></span>
+<span id="annotated-cell-3-63"><a href="#annotated-cell-3-63"></a><span class="at">              data = textdf, size = 12, colour = "white") +</span></span>
+<span id="annotated-cell-3-64"><a href="#annotated-cell-3-64"></a><span class="at">  xlab("\u2665 XxXxXxX \u2665") +</span></span>
+<span id="annotated-cell-3-65"><a href="#annotated-cell-3-65"></a><span class="at">  ylab("\u2665 OoOoOoO \u2665") +</span></span>
+<span id="annotated-cell-3-66"><a href="#annotated-cell-3-66"></a><span class="at">    transition_reveal(t)</span></span>
+<span id="annotated-cell-3-67"><a href="#annotated-cell-3-67"></a><span class="st">```</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-3" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-3" data-code-lines="4" data-code-annotation="1">if you’d like to alter the script appearance, also change the font specification on line #17 (below, within the <code>css</code> chunk)</span>
+</dd>
+<dt data-target-cell="annotated-cell-3" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-3" data-code-lines="15" data-code-annotation="2">add/alter falling hearts by changing the url’s on line #’s 20, 24, 28, etc – there are 6 total images specified</span>
+</dd>
+</dl>
+</div>
 </div>
 </div><div class="column" style="width:35%;">
 <div class="callout callout-note callout-titled callout-style-default">
@@ -448,19 +460,19 @@ OOH Session #116…<br><span class="smaller"><iconify-icon role="img" inline="" 
 <p><strong>Note</strong></p>
 </div>
 <div class="callout-content">
-<p>Code on left will create a card <a href="https://jtkulas.github.io/LiveStreams/slides/2026/valentine">similarly styled to the holiday card we created</a> – you can swap code images, colors, etc…</p>
+<p>Code on left will <a href="https://jtkulas.github.io/LiveStreams/slides/2026/valentine">create a card</a> similarly styled to the holiday card we created – you can swap code images, colors, etc…</p>
 <p>You’ll need the <a href="https://github.com/EmilHvitfeldt/quarto-snow">standard <code>snow</code> extension installed</a> for the heart–falling effect to work</p>
 </div>
 </div>
 </div>
 </div></div>
 <p><img data-src="https://www.pngkey.com/png/full/423-4233420_looney-tunes-pepe-le-pew-looney-toons-characters.png" class="absolute mirror" style="top: 0px; right: -150px; height: 250px; "></p>
-<p><img data-src="https://upload.wikimedia.org/wikipedia/en/d/dd/Penelope_Pussycat.png" class="absolute" style="left: -170px; bottom: 150px; height: 250px; "></p>
+<p><img data-src="https://upload.wikimedia.org/wikipedia/en/d/dd/Penelope_Pussycat.png" class="absolute" style="top: 115px; left: -170px; height: 250px; "></p>
 </section>
-<section id="session-info-february-05-2026-rendering" class="slide level2">
-<h2><iconify-icon role="img" inline="" icon="devicon:r" style="font-size: 2em;" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> Session Info (February 05, 2026) Rendering:</h2>
+<section id="session-info-february-06-2026-rendering" class="slide level2">
+<h2><iconify-icon role="img" inline="" icon="devicon:r" style="font-size: 2em;" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> Session Info (February 06, 2026) Rendering:</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.5.0 (2025-04-11 ucrt)
 Platform: x86_64-w64-mingw32/x64
