@@ -135,19 +135,30 @@ format: html
 
 ![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWVhM2JkMWFvanIyMDg5MTZta25wZ3FhdXRrNGxmazh5bmsxbTNzdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6Yg3udHmlvS9FWyk/giphy.gif)
 
-## [{{< iconify streamline-sharp-color:double-heart >}}]{.smaller}{{< iconify emojione-v1:red-heart >}} [Valentines]{.valentines .Bigger} {{< iconify emojione:red-heart >}}[{{< iconify glyphs-poly:heart >}}]{.smaller}  
+## [[{{< iconify streamline-sharp-color:double-heart >}}]{.smaller}{{< iconify emojione-v1:red-heart >}} [Valentines]{.valentines .Bigger} {{< iconify emojione:red-heart >}}[{{< iconify glyphs-poly:heart >}}]{.smaller}](https://stackoverflow.com/questions/8082429/plot-a-heart-in-r)  
 
-![](https://designshop-6aa0.kxcdn.com/photos/hearts-valentines-day-red-pink-graphic-love-lovely-relationship-postcard-greeting-card-send-online-4428_49.jpg){.absolute right="-120" top="0" height="300"}
 
-![](https://www.tvinsider.com/wp-content/uploads/2020/02/1963PWHallmarkValentineFirstEver.jpg){.absolute left="70" top="170" height="250"}
+::: {.absolute style="top: 0px; right: -120px; width:400px;"}
+<a href="https://github.com/davidmvermillion/EquationsofLove">
+  <img src="https://designshop-6aa0.kxcdn.com/photos/hearts-valentines-day-red-pink-graphic-love-lovely-relationship-postcard-greeting-card-send-online-4428_49.jpg">
+</a>
+:::
 
-![](https://i.pinimg.com/736x/1c/c6/fb/1cc6fbb63c92eb68e3c2b9e2e07679d8--snoopy-valentine-happy-valentines-day.jpg){.absolute right="-20" bottom="30" height="300"}
+::: {.absolute style="top: 190px; left: -80px; width:450px;"}
+<a href="https://tomaztsql.wordpress.com/2021/02/08/little-useless-useful-r-functions-useless-r-poem-for-valentine/">
+  <img src="https://www.tvinsider.com/wp-content/uploads/2020/02/1963PWHallmarkValentineFirstEver.jpg">
+</a>
+:::
 
-![](https://www.pngkey.com/png/full/423-4233420_looney-tunes-pepe-le-pew-looney-toons-characters.png){.absolute left="-100" bottom="65" height="250"}
+::: {.absolute style="bottom: 30px; right: -20px; width:200px;"}
+<a href="https://jnolis.com/blog/introducing_ggirl">
+  <img src="https://i.pinimg.com/736x/1c/c6/fb/1cc6fbb63c92eb68e3c2b9e2e07679d8--snoopy-valentine-happy-valentines-day.jpg">
+</a>
+:::
 
-![](https://images.fineartamerica.com/images/artworkimages/medium/3/us-looney-tunes-pepe-le-pew-valentines-kiss-01-white-sofiaf-canda-transparent.png?odnHeight=117&odnWidth=117&odnBg=FFFFFF){.absolute top="170" right="250" height="400"}
+![](https://images.fineartamerica.com/images/artworkimages/medium/3/us-looney-tunes-pepe-le-pew-valentines-kiss-01-white-sofiaf-canda-transparent.png?odnHeight=117&odnWidth=117&odnBg=FFFFFF){.absolute top="160" right="230" height="400"}
 
-## [Backup [{{< iconify streamline-sharp-color:double-heart >}}]{.smaller}{{< iconify emojione-v1:red-heart >}} [Valentine]{.valentines .Bigger} {{< iconify emojione:red-heart >}}[{{< iconify glyphs-poly:heart >}}]{.smaller}](https://jtkulas.github.io/LiveStreams/slides/2026/valentine)
+## [Backup](https://gist.github.com/perlatex/0a4f103c28d115025f28e9f9c01b5201) [[{{< iconify streamline-sharp-color:double-heart >}}]{.smaller}{{< iconify emojione-v1:red-heart >}} [Valentine]{.valentines .Bigger} {{< iconify emojione:red-heart >}}[{{< iconify glyphs-poly:heart >}}]{.smaller}](https://jtkulas.github.io/LiveStreams/slides/2026/valentine)
 
 ::: {.columns}
 
