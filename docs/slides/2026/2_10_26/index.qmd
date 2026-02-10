@@ -243,7 +243,7 @@ ggplot(data = heartdf, aes(x, y)) +
 
 ::: {.callout-note}
 
-Code on left will [create a card](https://jtkulas.github.io/LiveStreams/slides/2026/valentine) similarly styled to the holiday card we created -- you can swap code images, colors, etc... 
+Code on left will [create a card](https://jtkulas.github.io/LiveStreams/slides/2026/valentine) similarly styled to the {{< iconify fluent-emoji-flat:snowman-without-snow >}}{{< iconify twemoji:christmas-tree >}}{{< iconify emojione:snowman >}} card we created -- you can swap code images, colors, etc... 
 
 You'll need the [standard `snow` extension installed](https://github.com/EmilHvitfeldt/quarto-snow) for the heart--falling effect to work 
 
