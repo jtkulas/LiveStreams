@@ -236,6 +236,29 @@ PRISMA_save(plot, filename = "prisma.svg", overwrite=TRUE)  #<1>
 
 library(PRISMA2020)
 
+
+unlockBinding("PRISMA_get_height_", asNamespace("PRISMA2020"))        #<1>
+
+# Now override the internal function directly in the package namespace
+assignInNamespace(
+  "PRISMA_get_height_",
+  function(n, offset, min = 2) {  #nolint  # match original signature
+    lines <- n + 1
+    if (isTRUE(lines > min)) {   # ← your fix: prevents length >1 error
+      height <- offset + (lines * 0.25) - (min * 0.25)
+    } else {
+      height <- offset
+    }
+    return(height)
+  },
+  "PRISMA2020"
+)
+
+# Optional: lock it back (good practice, though not strictly needed here)
+lockBinding("PRISMA_get_height_", asNamespace("PRISMA2020"))          #<1>
+
+
+
 csvFile <- system.file("extdata", "PRISMA.csv", package = "PRISMA2020")
 
 data <- read.csv(csvFile)
@@ -290,6 +313,8 @@ PRISMA_save(plot, filename = "prisma.png", overwrite=TRUE)
 
 
 ```
+1. added 2/12/26 after notified of a bug within `PRISMA2020` package -- if giving less than 2 reasons for exclusion, function throws error. This bit of `if (isTRUE(lines > min))` wraps the original function within a `isTRUE` condition which bypasses the error. 
+
 :::
 
 ::: {.column width="36%"}
@@ -308,6 +333,36 @@ The `.svg` image file type requires additional support to be rendered within a Q
 :::
 
 :::
+
+### {{< iconify emojione:construction >}} errors? {{< iconify emojione:construction >}} 
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+:::{.callout-warning}
+
+There is a bug within the `PRISMA2020` package -- if you provide too few values for some boxes (e.g., less than 2 reasons for exclusion), the function will throw an error. A workaround to the error is located on lines #5 {{< iconify fluent:arrow-swap-24-filled >}} #23 of the {{< iconify vscode-icons:file-type-pdf2 >}} tab.
+
+:::
+
+:::
+
+::: {.column width="60%"}
+
+The code to bypass this bug is located ONLY within the .pdf script specification (because it's not going to be needed by everyone & I didn't want to clutter the code)
+
+:::
+
+:::
+
+![](https://png.pngtree.com/png-vector/20240312/ourmid/pngtree-cartoon-cute-lady-bug-clipart-png-image_11929765.png){.absolute right="-60" bottom="-60"}
+
+![](https://freepngimg.com/thumb/categories/1286.png){.absolute left="-170" bottom="120" .tilt2}
+
+![](https://pngimg.com/d/bug_PNG3992.png){.absolute left="-140" top="50" height="200"}
+
+![](https://freepngimg.com/download/spider/30309-3-cute-spider-transparent-background.png){.absolute right="200" top="-60" height="250"}
 
 :::
 :::
