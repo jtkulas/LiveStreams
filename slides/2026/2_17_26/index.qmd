@@ -2,8 +2,8 @@
 title: "[R is for <br>Authoring!!]{.shadowsharp}" 
 author: 'OOH Session #117...<br>[watermarks]{.righteous .Bigger}'
 title-slide-attributes: 
-  data-background-image: https://www.starburstmagazine.com/wp-content/uploads/2020/03/backdrop-1920.jpg #https://media.istockphoto.com/id/1298585936/vector/underwater-background-with-water-bubbles-and-undersea-light-rays-shine.jpg?s=612x612&w=0&k=20&c=wO-ua-rpxoX3fhvginzgxu7g_Ll7kMEFoa1c20uwnKU= #../../../img/watermarks.png  #https://images.template.net/81071/free-transparent-water-illustration-1wqni.jpg #https://static.vecteezy.com/system/resources/thumbnails/052/937/537/small/hand-drawn-liquid-organic-blobs-irregular-water-blots-in-cartoon-style-abstract-and-simple-figures-with-dynamic-shapes-modern-asymmetric-spots-vector.jpg #https://media.istockphoto.com/id/1190904819/vector/abstract-fluid-design-element.jpg?s=612x612&w=0&k=20&c=_V4O6S1LTjDMv0des1nHAph2qsq90HO-gm24LZhFDCo=
-#  data-background-opacity: ".6"
+  data-background-image: https://cdn.dribbble.com/userupload/4028254/file/original-fe9a8e6ccf3feafb6b208c887de22ae3.jpg?resize=752x423&vertical=center #https://media.istockphoto.com/id/1298585936/vector/underwater-background-with-water-bubbles-and-undersea-light-rays-shine.jpg?s=612x612&w=0&k=20&c=wO-ua-rpxoX3fhvginzgxu7g_Ll7kMEFoa1c20uwnKU=   
+  data-background-opacity: ".8"
 format:
   revealjs:
     mouse-wheel: true              
@@ -30,7 +30,7 @@ execute:
 ::: first-column
 + Recap session #116
 + Today's topic(s):
-    + [watermarks](https://github.com/leovan/quarto-watermark)  
+    + [[watermarks]{.righteous .bigger}](https://github.com/leovan/quarto-watermark)  
 + Shared problem-solving
 
 :::
@@ -65,15 +65,15 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
 
-![](https://cdn.freebiesupply.com/logos/large/2x/spider-man-4-logo-png-transparent.png){.absolute width="150" top="240" right="90"}
+![](https://images.fineartamerica.com/images/artworkimages/medium/3/us-looney-tunes-pepe-le-pew-valentines-kiss-01-white-sofiaf-canda-transparent.png?odnHeight=117&odnWidth=117&odnBg=FFFFFF){.absolute width="140" top="250" right="105"}
 
 ## [[{{< iconify streamline-sharp-color:double-heart >}}]{.smaller}{{< iconify emojione-v1:red-heart >}}[Valentines]{.valentines .Bigger}{{< iconify emojione:red-heart >}}[{{< iconify glyphs-poly:heart >}}]{.smaller}](https://jtkulas.github.io/LiveStreams/slides/2026/valentine)
 
 ::: {.panel-tabset}
 
-### Cardio--like {{< iconify icon-park:heart-rate >}}
+### Cardiac {{< iconify icon-park:heart-rate >}}
 
-### Christmas--like {{< iconify glyphs-poly:heart >}}
+### Christmas card--like {{< iconify glyphs-poly:heart >}}
 
 ::: {.columns}
 
@@ -176,30 +176,15 @@ You'll need the [standard `snow` extension installed](https://github.com/EmilHvi
 
 # Today...
 
-![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWVhM2JkMWFvanIyMDg5MTZta25wZ3FhdXRrNGxmazh5bmsxbTNzdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6Yg3udHmlvS9FWyk/giphy.gif)
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDAwY3ZlYzJ1NzQ0eTdzeXJ4NHBnaDRrNW9pMHJyb3ZzZDF3NXlubyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11v0IGUN9hI4cU/giphy.gif)
 
-## [[{{< iconify streamline-sharp-color:double-heart >}}]{.smaller}{{< iconify emojione-v1:red-heart >}} [Valentines]{.valentines .Bigger} {{< iconify emojione:red-heart >}}[{{< iconify glyphs-poly:heart >}}]{.smaller}](https://stackoverflow.com/questions/8082429/plot-a-heart-in-r)  
+##  [[watermarks]{.righteous .Bigger}](https://quarto.org/docs/presentations/revealjs/#image-backgrounds) {background-image="https://static.vecteezy.com/system/resources/previews/021/433/004/non_2x/draft-rubber-stamp-free-png.png" background-opacity=".2"}
 
+![](https://toppng.com/uploads/thumbnail/confidential-stamp-11523429619gqcpdwcaka.png){.absolute left="-50" top="220" height="350"}
 
-::: {.absolute style="top: 0px; right: -120px; width:400px;"}
-<a href="https://github.com/davidmvermillion/EquationsofLove">
-  <img src="https://designshop-6aa0.kxcdn.com/photos/hearts-valentines-day-red-pink-graphic-love-lovely-relationship-postcard-greeting-card-send-online-4428_49.jpg">
-</a>
-:::
+![](https://www.pngall.com/wp-content/uploads/8/Sample-Watermark-Transparent.png){.absolute right="-110" top="180" height="500"}
 
-::: {.absolute style="top: 190px; left: -80px; width:450px;"}
-<a href="https://tomaztsql.wordpress.com/2021/02/08/little-useless-useful-r-functions-useless-r-poem-for-valentine/">
-  <img src="https://www.tvinsider.com/wp-content/uploads/2020/02/1963PWHallmarkValentineFirstEver.jpg">
-</a>
-:::
-
-::: {.absolute style="bottom: 30px; right: -20px; width:200px;"}
-<a href="https://jnolis.com/blog/introducing_ggirl">
-  <img src="https://i.pinimg.com/736x/1c/c6/fb/1cc6fbb63c92eb68e3c2b9e2e07679d8--snoopy-valentine-happy-valentines-day.jpg">
-</a>
-:::
-
-![](https://images.fineartamerica.com/images/artworkimages/medium/3/us-looney-tunes-pepe-le-pew-valentines-kiss-01-white-sofiaf-canda-transparent.png?odnHeight=117&odnWidth=117&odnBg=FFFFFF){.absolute top="160" right="230" height="400"}
+![](https://www.chestysoft.com/images/watermark.png){.absolute right="350" bottom="-20" height="600"}
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
