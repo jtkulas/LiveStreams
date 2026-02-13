@@ -326,7 +326,7 @@ PRISMA_save(plot, filename = "prisma.png", overwrite=TRUE)
 
 ::: {.callout-note .smaller}
 
-The `.svg` image file type requires additional support to be rendered within a Quarto {{< iconify vscode-icons:file-type-pdf2 >}}. [`rsvg-convert` should work](https://github.com/orgs/quarto-dev/discussions/10547), but simply accepting an alternative image file type is another work--around (that's what is done in the adjacent code chunk at line #52). 
+The `.svg` image file type requires additional support to be rendered within a Quarto {{< iconify vscode-icons:file-type-pdf2 >}}. [`rsvg-convert` should work](https://github.com/orgs/quarto-dev/discussions/10547), but simply accepting an alternative image file type is another work--around (that's what is done in the adjacent code chunk at line #75). 
 
 :::
 

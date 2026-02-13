@@ -2,7 +2,7 @@
 title: "[R is for <br>Authoring!!]{.shadowsharp}" 
 author: 'OOH Session #117...<br>[watermarks]{.righteous .Bigger}'
 title-slide-attributes: 
-  data-background-image: https://media.istockphoto.com/id/1298585936/vector/underwater-background-with-water-bubbles-and-undersea-light-rays-shine.jpg?s=612x612&w=0&k=20&c=wO-ua-rpxoX3fhvginzgxu7g_Ll7kMEFoa1c20uwnKU= #../../../img/watermarks.png  #https://images.template.net/81071/free-transparent-water-illustration-1wqni.jpg #https://static.vecteezy.com/system/resources/thumbnails/052/937/537/small/hand-drawn-liquid-organic-blobs-irregular-water-blots-in-cartoon-style-abstract-and-simple-figures-with-dynamic-shapes-modern-asymmetric-spots-vector.jpg #https://media.istockphoto.com/id/1190904819/vector/abstract-fluid-design-element.jpg?s=612x612&w=0&k=20&c=_V4O6S1LTjDMv0des1nHAph2qsq90HO-gm24LZhFDCo=
+  data-background-image: https://www.starburstmagazine.com/wp-content/uploads/2020/03/backdrop-1920.jpg #https://media.istockphoto.com/id/1298585936/vector/underwater-background-with-water-bubbles-and-undersea-light-rays-shine.jpg?s=612x612&w=0&k=20&c=wO-ua-rpxoX3fhvginzgxu7g_Ll7kMEFoa1c20uwnKU= #../../../img/watermarks.png  #https://images.template.net/81071/free-transparent-water-illustration-1wqni.jpg #https://static.vecteezy.com/system/resources/thumbnails/052/937/537/small/hand-drawn-liquid-organic-blobs-irregular-water-blots-in-cartoon-style-abstract-and-simple-figures-with-dynamic-shapes-modern-asymmetric-spots-vector.jpg #https://media.istockphoto.com/id/1190904819/vector/abstract-fluid-design-element.jpg?s=612x612&w=0&k=20&c=_V4O6S1LTjDMv0des1nHAph2qsq90HO-gm24LZhFDCo=
 #  data-background-opacity: ".6"
 format:
   revealjs:
@@ -65,100 +65,15 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
 
-![](https://png.pngtree.com/png-vector/20220531/ourmid/pngtree-cartoon-splash-effect-blue-water-motion-flash-cartoon-swat-droplet-vector-png-image_45995904.jpg){.absolute width="150" top="240" right="90"}
+![](https://cdn.freebiesupply.com/logos/large/2x/spider-man-4-logo-png-transparent.png){.absolute width="150" top="240" right="90"}
 
-## [[ümläüts]{.exo2}](https://coffeebreaklanguages.com/2023/11/everything-you-need-to-know-about-the-german-umlaut/) [[unicode]{.plainjane2}](https://symbl.cc/en/unicode-table/) [[&  uncials]{.uncial2}](https://www.britannica.com/topic/uncial)  
+## [[{{< iconify streamline-sharp-color:double-heart >}}]{.smaller}{{< iconify emojione-v1:red-heart >}}[Valentines]{.valentines .Bigger}{{< iconify emojione:red-heart >}}[{{< iconify glyphs-poly:heart >}}]{.smaller}](https://jtkulas.github.io/LiveStreams/slides/2026/valentine)
 
 ::: {.panel-tabset}
 
-### [ümläüts]{.exo2} & [unicode]{.plainjane2}
+### Cardio--like {{< iconify icon-park:heart-rate >}}
 
-::: {.column width="30%"}
-
-[ümläüts]{.exo2} (and other special characters) can be specified via [unicode]{.plainjane2} values:
-
-:::
-
-::: {.column width="70%"}
-
-| [unicode]{.plainjane2} | character  | specification |
-| ---------------------- | ---------- | ------------- |
-| U+00FC                 | &#xfc;     | `&#xfc;`/`&#x00FC;`    |
-| U+2764                 | ❤️         | `&#x2764;`    |
-| U+2661                 | ♡          | `&#x2661;`    |
-| U+1F0B1                | &#x1f0b1;  | `&#x1f0b1;`   |
-:::
-
-### [uncials]{.uncial2}
-
-::: {.columns}
-
-::: {.column width="40%"}
-
-...and other font specifications differ across document type -- ***local installation*** for pdf & typst [but not html]{.underline} (also mind `pdf-engine` with {{< iconify vscode-icons:file-type-pdf2 >}})
-
-:::
-
-::: {.column width="60%"}
-
-````{r}
----
-title: "Untitled"
-mainfont: "Uncial Antiqua"     #<1>
-format: html
-#  pdf:                        #<2>
-#    pdf-engine: lualatex      #<2>
----
-
-```{css}                      #<3>
-
-@import url('https://fonts.googleapis.com/css?family=Uncial Antiqua');
-
-```                           #<3>
-
-````
-1. `mainfont` should apply to most document elements (but possibly not all -- keep an eye on {{< iconify fluent-emoji-flat:eyes >}})
-2. alternative YAML structure for {{< iconify vscode-icons:file-type-pdf2 >}} (if fonts not displaying as expected)
-3. easiest html option if fonts not displaying as expected (html dependent on *viewer* setup, not your local font installations)
-
-:::
-
-:::
-
-:::
-
-![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDNzcDZuN21ueWIwNjgxYTJ5YWwxZzBlOWJ0dm5pcHBsdGxlemFzbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DggdGj1E3n3jy/giphy.gif){.absolute right="-160" top="0" height="170"}
-
-![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDIyb2o1MmUwbjhhdmVhd3kwamF6Nmd0cW04a2picDVmOGJpa3JpMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9E5wP1RiPvnos/giphy.gif){.absolute left="-160" bottom="150" height="180"}
-
-# Today...
-
-![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWVhM2JkMWFvanIyMDg5MTZta25wZ3FhdXRrNGxmazh5bmsxbTNzdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6Yg3udHmlvS9FWyk/giphy.gif)
-
-## [[{{< iconify streamline-sharp-color:double-heart >}}]{.smaller}{{< iconify emojione-v1:red-heart >}} [Valentines]{.valentines .Bigger} {{< iconify emojione:red-heart >}}[{{< iconify glyphs-poly:heart >}}]{.smaller}](https://stackoverflow.com/questions/8082429/plot-a-heart-in-r)  
-
-
-::: {.absolute style="top: 0px; right: -120px; width:400px;"}
-<a href="https://github.com/davidmvermillion/EquationsofLove">
-  <img src="https://designshop-6aa0.kxcdn.com/photos/hearts-valentines-day-red-pink-graphic-love-lovely-relationship-postcard-greeting-card-send-online-4428_49.jpg">
-</a>
-:::
-
-::: {.absolute style="top: 190px; left: -80px; width:450px;"}
-<a href="https://tomaztsql.wordpress.com/2021/02/08/little-useless-useful-r-functions-useless-r-poem-for-valentine/">
-  <img src="https://www.tvinsider.com/wp-content/uploads/2020/02/1963PWHallmarkValentineFirstEver.jpg">
-</a>
-:::
-
-::: {.absolute style="bottom: 30px; right: -20px; width:200px;"}
-<a href="https://jnolis.com/blog/introducing_ggirl">
-  <img src="https://i.pinimg.com/736x/1c/c6/fb/1cc6fbb63c92eb68e3c2b9e2e07679d8--snoopy-valentine-happy-valentines-day.jpg">
-</a>
-:::
-
-![](https://images.fineartamerica.com/images/artworkimages/medium/3/us-looney-tunes-pepe-le-pew-valentines-kiss-01-white-sofiaf-canda-transparent.png?odnHeight=117&odnWidth=117&odnBg=FFFFFF){.absolute top="160" right="230" height="400"}
-
-## [Backup](https://gist.github.com/perlatex/0a4f103c28d115025f28e9f9c01b5201) [[{{< iconify streamline-sharp-color:double-heart >}}]{.smaller}{{< iconify emojione-v1:red-heart >}} [Valentine]{.valentines .Bigger} {{< iconify emojione:red-heart >}}[{{< iconify glyphs-poly:heart >}}]{.smaller}](https://jtkulas.github.io/LiveStreams/slides/2026/valentine)
+### Christmas--like {{< iconify glyphs-poly:heart >}}
 
 ::: {.columns}
 
@@ -241,21 +156,50 @@ ggplot(data = heartdf, aes(x, y)) +
 
 ::: {.column width="35%"}
 
-::: {.callout-note}
+::: {.callout-note .smaller}
 
-Code on left will [create a card](https://jtkulas.github.io/LiveStreams/slides/2026/valentine) similarly styled to the {{< iconify fluent-emoji-flat:snowman-without-snow >}}{{< iconify twemoji:christmas-tree >}}{{< iconify emojione:snowman >}} card we created -- you can swap code images, colors, etc... 
+Code on left will [create a card](https://jtkulas.github.io/LiveStreams/slides/2026/valentine) similarly styled to the {{< iconify fluent-emoji-flat:snowman-without-snow >}}{{< iconify twemoji:christmas-tree >}}{{< iconify emojione:snowman >}} card we created 
 
-You'll need the [standard `snow` extension installed](https://github.com/EmilHvitfeldt/quarto-snow) for the heart--falling effect to work 
-
-:::
+You'll need the [standard `snow` extension installed](https://github.com/EmilHvitfeldt/quarto-snow) for the heart--falling effect  
 
 :::
 
 :::
 
-![](https://www.pngkey.com/png/full/423-4233420_looney-tunes-pepe-le-pew-looney-toons-characters.png){.absolute right="-150" top="0" height="250" .mirror}
+:::
 
 ![](https://upload.wikimedia.org/wikipedia/en/d/dd/Penelope_Pussycat.png){.absolute left="-170" top="115" height="250"}
+
+:::
+
+![](https://www.pngkey.com/png/full/423-4233420_looney-tunes-pepe-le-pew-looney-toons-characters.png){.absolute right="-150" top="0" height="300" .mirror}
+
+# Today...
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWVhM2JkMWFvanIyMDg5MTZta25wZ3FhdXRrNGxmazh5bmsxbTNzdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6Yg3udHmlvS9FWyk/giphy.gif)
+
+## [[{{< iconify streamline-sharp-color:double-heart >}}]{.smaller}{{< iconify emojione-v1:red-heart >}} [Valentines]{.valentines .Bigger} {{< iconify emojione:red-heart >}}[{{< iconify glyphs-poly:heart >}}]{.smaller}](https://stackoverflow.com/questions/8082429/plot-a-heart-in-r)  
+
+
+::: {.absolute style="top: 0px; right: -120px; width:400px;"}
+<a href="https://github.com/davidmvermillion/EquationsofLove">
+  <img src="https://designshop-6aa0.kxcdn.com/photos/hearts-valentines-day-red-pink-graphic-love-lovely-relationship-postcard-greeting-card-send-online-4428_49.jpg">
+</a>
+:::
+
+::: {.absolute style="top: 190px; left: -80px; width:450px;"}
+<a href="https://tomaztsql.wordpress.com/2021/02/08/little-useless-useful-r-functions-useless-r-poem-for-valentine/">
+  <img src="https://www.tvinsider.com/wp-content/uploads/2020/02/1963PWHallmarkValentineFirstEver.jpg">
+</a>
+:::
+
+::: {.absolute style="bottom: 30px; right: -20px; width:200px;"}
+<a href="https://jnolis.com/blog/introducing_ggirl">
+  <img src="https://i.pinimg.com/736x/1c/c6/fb/1cc6fbb63c92eb68e3c2b9e2e07679d8--snoopy-valentine-happy-valentines-day.jpg">
+</a>
+:::
+
+![](https://images.fineartamerica.com/images/artworkimages/medium/3/us-looney-tunes-pepe-le-pew-valentines-kiss-01-white-sofiaf-canda-transparent.png?odnHeight=117&odnWidth=117&odnBg=FFFFFF){.absolute top="160" right="230" height="400"}
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
