@@ -71,7 +71,7 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ::: {.panel-tabset}
 
-### base {{< iconify mdi:heart-pulse style="color:#950606;" >}}  
+### base {{< iconify mdi:heart-pulse style="color:#ff69b4;" >}}  
 
 ::: {.columns}
 
@@ -120,7 +120,7 @@ points(c(10,-10, -15, 15), c(-10, -10, 10, 10), pch=169, font=5)
 
 ![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZW43Z2F4bHhrN24xYm11azFpNXdlNWlxZ2VyeXY1N2U0a3YwaHB6aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RoJbe4ha8CTfO/giphy.gif){.absolute left="-160" bottom="0" height="250"}
 
-### `ggplot2` {{< iconify mdi:heart-pulse style="color:#35063e;" >}}
+### `ggplot2` {{< iconify mdi:heart-pulse style="color:#ff0000;" >}}
 
 ::: {.columns}
 
@@ -290,11 +290,23 @@ ggplot(data = heartdf, aes(x, y)) +
 
 ##  [[watermarks]{.righteous .Bigger}](https://quarto.org/docs/presentations/revealjs/#image-backgrounds) {background-image="https://static.vecteezy.com/system/resources/previews/021/433/004/non_2x/draft-rubber-stamp-free-png.png" background-opacity=".2"}
 
-![](https://toppng.com/uploads/thumbnail/confidential-stamp-11523429619gqcpdwcaka.png){.absolute height="350" top="220" left="-120"}
+::: {.absolute top="220px" left="-120px"}
+<a href="https://frederikaust.com/papaja_man/r-markdown-components.html">
+  ![](https://toppng.com/uploads/thumbnail/confidential-stamp-11523429619gqcpdwcaka.png){height="350"}
+</a>
+:::
 
-![](https://www.pngall.com/wp-content/uploads/8/Sample-Watermark-Transparent.png){.absolute right="-110" top="180" height="500"}
+::: {.absolute style="top: 180px; right: -170px; width:600px;"}
+<a href="https://github.com/leovan/quarto-watermark">
+  <img src="https://www.pngall.com/wp-content/uploads/8/Sample-Watermark-Transparent.png">
+</a>
+:::
 
-![](https://www.chestysoft.com/images/watermark.png){.absolute right="380" bottom="-20" height="600"}
+::: {.absolute bottom="-20px" right="390px"}
+<a href="https://ctan.org/pkg/draftwatermark?lang=en">
+  ![](https://www.chestysoft.com/images/watermark.png){width="450"}
+</a>
+:::
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
