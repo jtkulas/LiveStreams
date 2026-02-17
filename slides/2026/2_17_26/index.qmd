@@ -71,9 +71,119 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ::: {.panel-tabset}
 
-### Cardiac {{< iconify icon-park:heart-rate >}}
+### base {{< iconify mdi:heart-pulse style="color:#950606;" >}}  
 
-### Christmas card--like {{< iconify glyphs-poly:heart >}}
+::: {.columns}
+
+::: {.column width="15%"}
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| eval: true
+#| echo: false
+
+dat<- data.frame(t=seq(0, 2*pi, by=0.1) )
+ xhrt <- function(t) 16*sin(t)^3
+ yhrt <- function(t) 13*cos(t)-5*cos(2*t)-2*cos(3*t)-cos(4*t)
+ dat$y=yhrt(dat$t)
+ dat$x=xhrt(dat$t)
+ with(dat, plot(x,y, type="l"))
+ 
+with(dat, polygon(x,y, col="hotpink")) 
+points(c(10,-10, -15, 15), c(-10, -10, 10, 10), pch=169, font=5)
+ 
+```
+:::
+
+::: {.column width="35%"}
+
+```{r}
+#| eval: false
+#| echo: true
+
+dat<- data.frame(t=seq(0, 2*pi, by=0.1) )
+ xhrt <- function(t) 16*sin(t)^3
+ yhrt <- function(t) 13*cos(t)-5*cos(2*t)-2*cos(3*t)-cos(4*t)
+ dat$y=yhrt(dat$t)
+ dat$x=xhrt(dat$t)
+ with(dat, plot(x,y, type="l"))
+ 
+with(dat, polygon(x,y, col="hotpink")) 
+points(c(10,-10, -15, 15), c(-10, -10, 10, 10), pch=169, font=5)
+ 
+```
+:::
+
+:::
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcW54cTJuaXlnZjkzeTVlemw0Nm1kOWJ5cXlycXAya21nb2ZldWFiNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5VzfI0CX4r1io/giphy.gif){.absolute left="-160" bottom="0" height="250"}
+
+### `ggplot2` {{< iconify mdi:heart-pulse style="color:#35063e;" >}}
+
+::: {.columns}
+
+::: {.column width="15%"}
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+#| eval: true
+
+library(ggplot2)
+
+dat <- data.frame(t = seq(0, 2*pi, by = 0.01))
+x <-  function(t) 16 * sin(t)^3
+y <- function(t) 13*cos(t) - 5*cos(2*t) - 2*cos(3*t) - cos(4*t)
+
+dat$y <- y(dat$t)
+dat$x <- x(dat$t)
+
+heart <- ggplot(dat, aes(x,y)) +
+  geom_polygon(fill = "red", col = "firebrick", alpha = 0.8) +
+  geom_text(aes(x = 0, y = 0, label = "\u2661\u2764\u2665 Va va voom!!! \u2665\u2764\u2661"), size = 12, colour = "white") +
+  theme_classic()
+
+heart
+
+```
+
+:::
+
+::: {.column width="35%"}
+
+```{r}
+#| echo: true
+#| eval: false
+
+library(ggplot2)
+
+dat <- data.frame(t = seq(0, 2*pi, by = 0.01))
+x <-  function(t) 16 * sin(t)^3
+y <- function(t) 13*cos(t) - 5*cos(2*t) - 2*cos(3*t) - cos(4*t)
+
+dat$y <- y(dat$t)
+dat$x <- x(dat$t)
+
+heart <- ggplot(dat, aes(x,y)) +
+  geom_polygon(fill = "red", col = "firebrick", alpha = 0.8) +
+  geom_text(aes(x = 0, y = 0, label = "\u2661\u2764\u2665 Va va voom!!! \u2665\u2764\u2661"), size = 12, colour = "white") +
+  theme_classic()
+
+heart
+
+```
+
+:::
+
+:::
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZW43Z2F4bHhrN24xYm11azFpNXdlNWlxZ2VyeXY1N2U0a3YwaHB6aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RoJbe4ha8CTfO/giphy.gif){.absolute left="-160" bottom="0" height="250"}
+
+### Christmas card--like {{< iconify streamline-emojis:snowflake >}}
 
 ::: {.columns}
 
@@ -168,9 +278,9 @@ You'll need the [standard `snow` extension installed](https://github.com/EmilHvi
 
 :::
 
-![](https://upload.wikimedia.org/wikipedia/en/d/dd/Penelope_Pussycat.png){.absolute left="-170" top="115" height="250"}
-
 :::
+
+![](https://upload.wikimedia.org/wikipedia/en/d/dd/Penelope_Pussycat.png){.absolute left="-170" top="115" height="250"}
 
 ![](https://www.pngkey.com/png/full/423-4233420_looney-tunes-pepe-le-pew-looney-toons-characters.png){.absolute right="-150" top="0" height="300" .mirror}
 
@@ -180,11 +290,11 @@ You'll need the [standard `snow` extension installed](https://github.com/EmilHvi
 
 ##  [[watermarks]{.righteous .Bigger}](https://quarto.org/docs/presentations/revealjs/#image-backgrounds) {background-image="https://static.vecteezy.com/system/resources/previews/021/433/004/non_2x/draft-rubber-stamp-free-png.png" background-opacity=".2"}
 
-![](https://toppng.com/uploads/thumbnail/confidential-stamp-11523429619gqcpdwcaka.png){.absolute left="-50" top="220" height="350"}
+![](https://toppng.com/uploads/thumbnail/confidential-stamp-11523429619gqcpdwcaka.png){.absolute height="350" top="220" left="-120"}
 
 ![](https://www.pngall.com/wp-content/uploads/8/Sample-Watermark-Transparent.png){.absolute right="-110" top="180" height="500"}
 
-![](https://www.chestysoft.com/images/watermark.png){.absolute right="350" bottom="-20" height="600"}
+![](https://www.chestysoft.com/images/watermark.png){.absolute right="380" bottom="-20" height="600"}
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}

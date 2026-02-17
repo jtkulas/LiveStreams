@@ -216,8 +216,8 @@ OOH Session #117…<br><span class="righteous Bigger">watermarks</span>
 </div>
 
 </section>
-<section id="open-office-hours-february-13-2026" class="slide level2">
-<h2>Open Office Hours <br>(February 13, 2026)</h2>
+<section id="open-office-hours-february-17-2026" class="slide level2">
+<h2>Open Office Hours <br>(February 17, 2026)</h2>
 <div>
 
 </div>
@@ -266,91 +266,152 @@ OOH Session #117…<br><span class="righteous Bigger">watermarks</span>
 <section id="valentines" class="slide level2">
 <h2><a href="https://jtkulas.github.io/LiveStreams/slides/2026/valentine"><span class="smaller"><iconify-icon role="img" inline="" icon="streamline-sharp-color:double-heart" aria-label="Icon double-heart from streamline-sharp-color Iconify.design set." title="Icon double-heart from streamline-sharp-color Iconify.design set."></iconify-icon></span><iconify-icon role="img" inline="" icon="emojione-v1:red-heart" aria-label="Icon red-heart from emojione-v1 Iconify.design set." title="Icon red-heart from emojione-v1 Iconify.design set."></iconify-icon><span class="valentines Bigger">Valentines</span><iconify-icon role="img" inline="" icon="emojione:red-heart" aria-label="Icon red-heart from emojione Iconify.design set." title="Icon red-heart from emojione Iconify.design set."></iconify-icon><span class="smaller"><iconify-icon role="img" inline="" icon="glyphs-poly:heart" aria-label="Icon heart from glyphs-poly Iconify.design set." title="Icon heart from glyphs-poly Iconify.design set."></iconify-icon></span></a></h2>
 <div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Cardiac <iconify-icon role="img" inline="" icon="icon-park:heart-rate" aria-label="Icon heart-rate from icon-park Iconify.design set." title="Icon heart-rate from icon-park Iconify.design set."></iconify-icon></a></li><li><a href="#tabset-1-2">Christmas card–like <iconify-icon role="img" inline="" icon="glyphs-poly:heart" aria-label="Icon heart from glyphs-poly Iconify.design set." title="Icon heart from glyphs-poly Iconify.design set."></iconify-icon></a></li></ul>
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">base <iconify-icon role="img" inline="" icon="mdi:heart-pulse" style="color:#950606;" aria-label="Icon heart-pulse from mdi Iconify.design set." title="Icon heart-pulse from mdi Iconify.design set."></iconify-icon></a></li><li><a href="#tabset-1-2"><code>ggplot2</code> <iconify-icon role="img" inline="" icon="mdi:heart-pulse" style="color:#35063e;" aria-label="Icon heart-pulse from mdi Iconify.design set." title="Icon heart-pulse from mdi Iconify.design set."></iconify-icon></a></li><li><a href="#tabset-1-3">Christmas card–like <iconify-icon role="img" inline="" icon="streamline-emojis:snowflake" aria-label="Icon snowflake from streamline-emojis Iconify.design set." title="Icon snowflake from streamline-emojis Iconify.design set."></iconify-icon></a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
+<div class="columns">
+<div class="column" style="width:15%;">
 
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-1-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:35%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>dat<span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">t=</span><span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">2</span><span class="sc">*</span>pi, <span class="at">by=</span><span class="fl">0.1</span>) )</span>
+<span id="cb1-2"><a></a> xhrt <span class="ot">&lt;-</span> <span class="cf">function</span>(t) <span class="dv">16</span><span class="sc">*</span><span class="fu">sin</span>(t)<span class="sc">^</span><span class="dv">3</span></span>
+<span id="cb1-3"><a></a> yhrt <span class="ot">&lt;-</span> <span class="cf">function</span>(t) <span class="dv">13</span><span class="sc">*</span><span class="fu">cos</span>(t)<span class="sc">-</span><span class="dv">5</span><span class="sc">*</span><span class="fu">cos</span>(<span class="dv">2</span><span class="sc">*</span>t)<span class="sc">-</span><span class="dv">2</span><span class="sc">*</span><span class="fu">cos</span>(<span class="dv">3</span><span class="sc">*</span>t)<span class="sc">-</span><span class="fu">cos</span>(<span class="dv">4</span><span class="sc">*</span>t)</span>
+<span id="cb1-4"><a></a> dat<span class="sc">$</span>y<span class="ot">=</span><span class="fu">yhrt</span>(dat<span class="sc">$</span>t)</span>
+<span id="cb1-5"><a></a> dat<span class="sc">$</span>x<span class="ot">=</span><span class="fu">xhrt</span>(dat<span class="sc">$</span>t)</span>
+<span id="cb1-6"><a></a> <span class="fu">with</span>(dat, <span class="fu">plot</span>(x,y, <span class="at">type=</span><span class="st">"l"</span>))</span>
+<span id="cb1-7"><a></a> </span>
+<span id="cb1-8"><a></a><span class="fu">with</span>(dat, <span class="fu">polygon</span>(x,y, <span class="at">col=</span><span class="st">"hotpink"</span>)) </span>
+<span id="cb1-9"><a></a><span class="fu">points</span>(<span class="fu">c</span>(<span class="dv">10</span>,<span class="sc">-</span><span class="dv">10</span>, <span class="sc">-</span><span class="dv">15</span>, <span class="dv">15</span>), <span class="fu">c</span>(<span class="sc">-</span><span class="dv">10</span>, <span class="sc">-</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">10</span>), <span class="at">pch=</span><span class="dv">169</span>, <span class="at">font=</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div></div>
+<p><img data-src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcW54cTJuaXlnZjkzeTVlemw0Nm1kOWJ5cXlycXAya21nb2ZldWFiNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5VzfI0CX4r1io/giphy.gif" class="absolute" style="left: -160px; bottom: 0px; height: 250px; "></p>
 </div>
 <div id="tabset-1-2">
 <div class="columns">
+<div class="column" style="width:15%;">
+
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:35%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb2-2"><a></a></span>
+<span id="cb2-3"><a></a>dat <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">t =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">2</span><span class="sc">*</span>pi, <span class="at">by =</span> <span class="fl">0.01</span>))</span>
+<span id="cb2-4"><a></a>x <span class="ot">&lt;-</span>  <span class="cf">function</span>(t) <span class="dv">16</span> <span class="sc">*</span> <span class="fu">sin</span>(t)<span class="sc">^</span><span class="dv">3</span></span>
+<span id="cb2-5"><a></a>y <span class="ot">&lt;-</span> <span class="cf">function</span>(t) <span class="dv">13</span><span class="sc">*</span><span class="fu">cos</span>(t) <span class="sc">-</span> <span class="dv">5</span><span class="sc">*</span><span class="fu">cos</span>(<span class="dv">2</span><span class="sc">*</span>t) <span class="sc">-</span> <span class="dv">2</span><span class="sc">*</span><span class="fu">cos</span>(<span class="dv">3</span><span class="sc">*</span>t) <span class="sc">-</span> <span class="fu">cos</span>(<span class="dv">4</span><span class="sc">*</span>t)</span>
+<span id="cb2-6"><a></a></span>
+<span id="cb2-7"><a></a>dat<span class="sc">$</span>y <span class="ot">&lt;-</span> <span class="fu">y</span>(dat<span class="sc">$</span>t)</span>
+<span id="cb2-8"><a></a>dat<span class="sc">$</span>x <span class="ot">&lt;-</span> <span class="fu">x</span>(dat<span class="sc">$</span>t)</span>
+<span id="cb2-9"><a></a></span>
+<span id="cb2-10"><a></a>heart <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(dat, <span class="fu">aes</span>(x,y)) <span class="sc">+</span></span>
+<span id="cb2-11"><a></a>  <span class="fu">geom_polygon</span>(<span class="at">fill =</span> <span class="st">"red"</span>, <span class="at">col =</span> <span class="st">"firebrick"</span>, <span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb2-12"><a></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="dv">0</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">label =</span> <span class="st">"\u2661\u2764\u2665 Va va voom!!! \u2665\u2764\u2661"</span>), <span class="at">size =</span> <span class="dv">12</span>, <span class="at">colour =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb2-13"><a></a>  <span class="fu">theme_classic</span>()</span>
+<span id="cb2-14"><a></a></span>
+<span id="cb2-15"><a></a>heart</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div></div>
+<p><img data-src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZW43Z2F4bHhrN24xYm11azFpNXdlNWlxZ2VyeXY1N2U0a3YwaHB6aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RoJbe4ha8CTfO/giphy.gif" class="absolute" style="left: -160px; bottom: 0px; height: 250px; "></p>
+</div>
+<div id="tabset-1-3">
+<div class="columns">
 <div class="column" style="width:65%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="annotated-cell-2"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-2-1"><a href="#annotated-cell-2-1"></a><span class="sc">---</span></span>
-<span id="annotated-cell-2-2"><a href="#annotated-cell-2-2"></a>format<span class="sc">:</span> </span>
-<span id="annotated-cell-2-3"><a href="#annotated-cell-2-3"></a>  revealjs<span class="sc">:</span></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="1">1</button><span id="annotated-cell-2-4" class="code-annotation-target"><a href="#annotated-cell-2-4"></a>    mainfont<span class="sc">:</span> <span class="st">"Dancing Script"</span></span>
-<span id="annotated-cell-2-5"><a href="#annotated-cell-2-5"></a>    mouse<span class="sc">-</span>wheel<span class="sc">:</span> true</span>
-<span id="annotated-cell-2-6"><a href="#annotated-cell-2-6"></a>execute<span class="sc">:</span> </span>
-<span id="annotated-cell-2-7"><a href="#annotated-cell-2-7"></a>  echo<span class="sc">:</span> false</span>
-<span id="annotated-cell-2-8"><a href="#annotated-cell-2-8"></a>  warning<span class="sc">:</span> false</span>
-<span id="annotated-cell-2-9"><a href="#annotated-cell-2-9"></a>  error<span class="sc">:</span> false</span>
-<span id="annotated-cell-2-10"><a href="#annotated-cell-2-10"></a>filters<span class="sc">:</span></span>
-<span id="annotated-cell-2-11"><a href="#annotated-cell-2-11"></a>  <span class="sc">-</span> snow</span>
-<span id="annotated-cell-2-12"><a href="#annotated-cell-2-12"></a><span class="sc">---</span></span>
-<span id="annotated-cell-2-13"><a href="#annotated-cell-2-13"></a><span class="co"># {background-image="https://starbaseatlanta.com/wp-content/uploads/sihpt4674.jpg"}</span></span>
-<span id="annotated-cell-2-14"><a href="#annotated-cell-2-14"></a></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="2">2</button><span id="annotated-cell-2-15" class="code-annotation-target"><a href="#annotated-cell-2-15"></a><span class="st">```</span><span class="at">{css}</span></span>
-<span id="annotated-cell-2-16"><a href="#annotated-cell-2-16"></a></span>
-<span id="annotated-cell-2-17"><a href="#annotated-cell-2-17"></a><span class="at">@import url('https://fonts.googleapis.com/css?family=Dancing Script');</span></span>
-<span id="annotated-cell-2-18"><a href="#annotated-cell-2-18"></a></span>
-<span id="annotated-cell-2-19"><a href="#annotated-cell-2-19"></a><span class="at">.snowflake__inner_type_0:before {</span></span>
-<span id="annotated-cell-2-20"><a href="#annotated-cell-2-20"></a><span class="at">    background-image: url('https://cdn-icons-png.flaticon.com/512/1077/1077035.png') !important;</span></span>
-<span id="annotated-cell-2-21"><a href="#annotated-cell-2-21"></a><span class="at">}</span></span>
-<span id="annotated-cell-2-22"><a href="#annotated-cell-2-22"></a></span>
-<span id="annotated-cell-2-23"><a href="#annotated-cell-2-23"></a><span class="at">.snowflake__inner_type_1:before {</span></span>
-<span id="annotated-cell-2-24"><a href="#annotated-cell-2-24"></a><span class="at">    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/018/795/980/small/neon-glowing-shape-free-png.png') !important;</span></span>
-<span id="annotated-cell-2-25"><a href="#annotated-cell-2-25"></a><span class="at">}</span></span>
-<span id="annotated-cell-2-26"><a href="#annotated-cell-2-26"></a></span>
-<span id="annotated-cell-2-27"><a href="#annotated-cell-2-27"></a><span class="at">.snowflake__inner_type_2:before {</span></span>
-<span id="annotated-cell-2-28"><a href="#annotated-cell-2-28"></a><span class="at">    background-image: url('https://gallery.yopriceville.com/downloadfullsize/send/30848') !important;</span></span>
-<span id="annotated-cell-2-29"><a href="#annotated-cell-2-29"></a><span class="at">}</span></span>
-<span id="annotated-cell-2-30"><a href="#annotated-cell-2-30"></a></span>
-<span id="annotated-cell-2-31"><a href="#annotated-cell-2-31"></a><span class="at">.snowflake__inner_type_3:before {</span></span>
-<span id="annotated-cell-2-32"><a href="#annotated-cell-2-32"></a><span class="at">    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/010/977/961/small/red-paper-cut-heart-style-png.png') !important;</span></span>
-<span id="annotated-cell-2-33"><a href="#annotated-cell-2-33"></a><span class="at">}</span></span>
-<span id="annotated-cell-2-34"><a href="#annotated-cell-2-34"></a></span>
-<span id="annotated-cell-2-35"><a href="#annotated-cell-2-35"></a><span class="at">.snowflake__inner_type_4:before {</span></span>
-<span id="annotated-cell-2-36"><a href="#annotated-cell-2-36"></a><span class="at">    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/010/977/961/small/red-paper-cut-heart-style-png.png') !important;</span></span>
-<span id="annotated-cell-2-37"><a href="#annotated-cell-2-37"></a><span class="at">}</span></span>
-<span id="annotated-cell-2-38"><a href="#annotated-cell-2-38"></a></span>
-<span id="annotated-cell-2-39"><a href="#annotated-cell-2-39"></a><span class="at">.snowflake__inner_type_5:before {</span></span>
-<span id="annotated-cell-2-40"><a href="#annotated-cell-2-40"></a><span class="at">    background-image: url('https://images.vexels.com/media/users/3/136172/isolated/preview/148ec098a4529de7141003a8ec519d39-heart-like-icon.png') !important;</span></span>
-<span id="annotated-cell-2-41"><a href="#annotated-cell-2-41"></a><span class="at">}</span></span>
-<span id="annotated-cell-2-42"><a href="#annotated-cell-2-42"></a></span>
-<span id="annotated-cell-2-43"><a href="#annotated-cell-2-43"></a><span class="st">```</span></span>
-<span id="annotated-cell-2-44"><a href="#annotated-cell-2-44"></a></span>
-<span id="annotated-cell-2-45"><a href="#annotated-cell-2-45"></a><span class="do">## Sappy sentiment goes here... {background-color="#ffe2f6"}</span></span>
-<span id="annotated-cell-2-46"><a href="#annotated-cell-2-46"></a></span>
-<span id="annotated-cell-2-47"><a href="#annotated-cell-2-47"></a><span class="st">```</span><span class="at">{r heart-animation}</span></span>
-<span id="annotated-cell-2-48"><a href="#annotated-cell-2-48"></a><span class="at">library(ggplot2)</span></span>
-<span id="annotated-cell-2-49"><a href="#annotated-cell-2-49"></a><span class="at">library(dplyr)</span></span>
-<span id="annotated-cell-2-50"><a href="#annotated-cell-2-50"></a><span class="at">library(gganimate)</span></span>
-<span id="annotated-cell-2-51"><a href="#annotated-cell-2-51"></a></span>
-<span id="annotated-cell-2-52"><a href="#annotated-cell-2-52"></a><span class="at">heartdf = tibble(</span></span>
-<span id="annotated-cell-2-53"><a href="#annotated-cell-2-53"></a><span class="at">    t = seq(0, 2*pi, pi/60),</span></span>
-<span id="annotated-cell-2-54"><a href="#annotated-cell-2-54"></a><span class="at">    x = 16*sin(t)^3,</span></span>
-<span id="annotated-cell-2-55"><a href="#annotated-cell-2-55"></a><span class="at">    y = 13*cos(t) - 5*cos(2*t) - 2*cos(3*t) - cos(4*t)</span></span>
-<span id="annotated-cell-2-56"><a href="#annotated-cell-2-56"></a><span class="at">)</span></span>
-<span id="annotated-cell-2-57"><a href="#annotated-cell-2-57"></a></span>
-<span id="annotated-cell-2-58"><a href="#annotated-cell-2-58"></a><span class="at">textdf = tibble(t = max(heartdf$t) + 1:15)</span></span>
-<span id="annotated-cell-2-59"><a href="#annotated-cell-2-59"></a></span>
-<span id="annotated-cell-2-60"><a href="#annotated-cell-2-60"></a><span class="at">ggplot(data = heartdf, aes(x, y)) + </span></span>
-<span id="annotated-cell-2-61"><a href="#annotated-cell-2-61"></a><span class="at">    geom_polygon(aes(group = 1), fill = "red") +</span></span>
-<span id="annotated-cell-2-62"><a href="#annotated-cell-2-62"></a><span class="at">    geom_text(aes(x = 0, y = 0, label = "\u2661\u2764\u2665 Va va voom!!! \u2665\u2764\u2661", parse=TRUE), </span></span>
-<span id="annotated-cell-2-63"><a href="#annotated-cell-2-63"></a><span class="at">              data = textdf, size = 12, colour = "white") +</span></span>
-<span id="annotated-cell-2-64"><a href="#annotated-cell-2-64"></a><span class="at">  xlab("\u2665 XxXxXxX \u2665") +</span></span>
-<span id="annotated-cell-2-65"><a href="#annotated-cell-2-65"></a><span class="at">  ylab("\u2665 OoOoOoO \u2665") +</span></span>
-<span id="annotated-cell-2-66"><a href="#annotated-cell-2-66"></a><span class="at">    transition_reveal(t)</span></span>
-<span id="annotated-cell-2-67"><a href="#annotated-cell-2-67"></a><span class="st">```</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="annotated-cell-4"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-4-1"><a href="#annotated-cell-4-1"></a><span class="sc">---</span></span>
+<span id="annotated-cell-4-2"><a href="#annotated-cell-4-2"></a>format<span class="sc">:</span> </span>
+<span id="annotated-cell-4-3"><a href="#annotated-cell-4-3"></a>  revealjs<span class="sc">:</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="1">1</button><span id="annotated-cell-4-4" class="code-annotation-target"><a href="#annotated-cell-4-4"></a>    mainfont<span class="sc">:</span> <span class="st">"Dancing Script"</span></span>
+<span id="annotated-cell-4-5"><a href="#annotated-cell-4-5"></a>    mouse<span class="sc">-</span>wheel<span class="sc">:</span> true</span>
+<span id="annotated-cell-4-6"><a href="#annotated-cell-4-6"></a>execute<span class="sc">:</span> </span>
+<span id="annotated-cell-4-7"><a href="#annotated-cell-4-7"></a>  echo<span class="sc">:</span> false</span>
+<span id="annotated-cell-4-8"><a href="#annotated-cell-4-8"></a>  warning<span class="sc">:</span> false</span>
+<span id="annotated-cell-4-9"><a href="#annotated-cell-4-9"></a>  error<span class="sc">:</span> false</span>
+<span id="annotated-cell-4-10"><a href="#annotated-cell-4-10"></a>filters<span class="sc">:</span></span>
+<span id="annotated-cell-4-11"><a href="#annotated-cell-4-11"></a>  <span class="sc">-</span> snow</span>
+<span id="annotated-cell-4-12"><a href="#annotated-cell-4-12"></a><span class="sc">---</span></span>
+<span id="annotated-cell-4-13"><a href="#annotated-cell-4-13"></a><span class="co"># {background-image="https://starbaseatlanta.com/wp-content/uploads/sihpt4674.jpg"}</span></span>
+<span id="annotated-cell-4-14"><a href="#annotated-cell-4-14"></a></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="2">2</button><span id="annotated-cell-4-15" class="code-annotation-target"><a href="#annotated-cell-4-15"></a><span class="st">```</span><span class="at">{css}</span></span>
+<span id="annotated-cell-4-16"><a href="#annotated-cell-4-16"></a></span>
+<span id="annotated-cell-4-17"><a href="#annotated-cell-4-17"></a><span class="at">@import url('https://fonts.googleapis.com/css?family=Dancing Script');</span></span>
+<span id="annotated-cell-4-18"><a href="#annotated-cell-4-18"></a></span>
+<span id="annotated-cell-4-19"><a href="#annotated-cell-4-19"></a><span class="at">.snowflake__inner_type_0:before {</span></span>
+<span id="annotated-cell-4-20"><a href="#annotated-cell-4-20"></a><span class="at">    background-image: url('https://cdn-icons-png.flaticon.com/512/1077/1077035.png') !important;</span></span>
+<span id="annotated-cell-4-21"><a href="#annotated-cell-4-21"></a><span class="at">}</span></span>
+<span id="annotated-cell-4-22"><a href="#annotated-cell-4-22"></a></span>
+<span id="annotated-cell-4-23"><a href="#annotated-cell-4-23"></a><span class="at">.snowflake__inner_type_1:before {</span></span>
+<span id="annotated-cell-4-24"><a href="#annotated-cell-4-24"></a><span class="at">    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/018/795/980/small/neon-glowing-shape-free-png.png') !important;</span></span>
+<span id="annotated-cell-4-25"><a href="#annotated-cell-4-25"></a><span class="at">}</span></span>
+<span id="annotated-cell-4-26"><a href="#annotated-cell-4-26"></a></span>
+<span id="annotated-cell-4-27"><a href="#annotated-cell-4-27"></a><span class="at">.snowflake__inner_type_2:before {</span></span>
+<span id="annotated-cell-4-28"><a href="#annotated-cell-4-28"></a><span class="at">    background-image: url('https://gallery.yopriceville.com/downloadfullsize/send/30848') !important;</span></span>
+<span id="annotated-cell-4-29"><a href="#annotated-cell-4-29"></a><span class="at">}</span></span>
+<span id="annotated-cell-4-30"><a href="#annotated-cell-4-30"></a></span>
+<span id="annotated-cell-4-31"><a href="#annotated-cell-4-31"></a><span class="at">.snowflake__inner_type_3:before {</span></span>
+<span id="annotated-cell-4-32"><a href="#annotated-cell-4-32"></a><span class="at">    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/010/977/961/small/red-paper-cut-heart-style-png.png') !important;</span></span>
+<span id="annotated-cell-4-33"><a href="#annotated-cell-4-33"></a><span class="at">}</span></span>
+<span id="annotated-cell-4-34"><a href="#annotated-cell-4-34"></a></span>
+<span id="annotated-cell-4-35"><a href="#annotated-cell-4-35"></a><span class="at">.snowflake__inner_type_4:before {</span></span>
+<span id="annotated-cell-4-36"><a href="#annotated-cell-4-36"></a><span class="at">    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/010/977/961/small/red-paper-cut-heart-style-png.png') !important;</span></span>
+<span id="annotated-cell-4-37"><a href="#annotated-cell-4-37"></a><span class="at">}</span></span>
+<span id="annotated-cell-4-38"><a href="#annotated-cell-4-38"></a></span>
+<span id="annotated-cell-4-39"><a href="#annotated-cell-4-39"></a><span class="at">.snowflake__inner_type_5:before {</span></span>
+<span id="annotated-cell-4-40"><a href="#annotated-cell-4-40"></a><span class="at">    background-image: url('https://images.vexels.com/media/users/3/136172/isolated/preview/148ec098a4529de7141003a8ec519d39-heart-like-icon.png') !important;</span></span>
+<span id="annotated-cell-4-41"><a href="#annotated-cell-4-41"></a><span class="at">}</span></span>
+<span id="annotated-cell-4-42"><a href="#annotated-cell-4-42"></a></span>
+<span id="annotated-cell-4-43"><a href="#annotated-cell-4-43"></a><span class="st">```</span></span>
+<span id="annotated-cell-4-44"><a href="#annotated-cell-4-44"></a></span>
+<span id="annotated-cell-4-45"><a href="#annotated-cell-4-45"></a><span class="do">## Sappy sentiment goes here... {background-color="#ffe2f6"}</span></span>
+<span id="annotated-cell-4-46"><a href="#annotated-cell-4-46"></a></span>
+<span id="annotated-cell-4-47"><a href="#annotated-cell-4-47"></a><span class="st">```</span><span class="at">{r heart-animation}</span></span>
+<span id="annotated-cell-4-48"><a href="#annotated-cell-4-48"></a><span class="at">library(ggplot2)</span></span>
+<span id="annotated-cell-4-49"><a href="#annotated-cell-4-49"></a><span class="at">library(dplyr)</span></span>
+<span id="annotated-cell-4-50"><a href="#annotated-cell-4-50"></a><span class="at">library(gganimate)</span></span>
+<span id="annotated-cell-4-51"><a href="#annotated-cell-4-51"></a></span>
+<span id="annotated-cell-4-52"><a href="#annotated-cell-4-52"></a><span class="at">heartdf = tibble(</span></span>
+<span id="annotated-cell-4-53"><a href="#annotated-cell-4-53"></a><span class="at">    t = seq(0, 2*pi, pi/60),</span></span>
+<span id="annotated-cell-4-54"><a href="#annotated-cell-4-54"></a><span class="at">    x = 16*sin(t)^3,</span></span>
+<span id="annotated-cell-4-55"><a href="#annotated-cell-4-55"></a><span class="at">    y = 13*cos(t) - 5*cos(2*t) - 2*cos(3*t) - cos(4*t)</span></span>
+<span id="annotated-cell-4-56"><a href="#annotated-cell-4-56"></a><span class="at">)</span></span>
+<span id="annotated-cell-4-57"><a href="#annotated-cell-4-57"></a></span>
+<span id="annotated-cell-4-58"><a href="#annotated-cell-4-58"></a><span class="at">textdf = tibble(t = max(heartdf$t) + 1:15)</span></span>
+<span id="annotated-cell-4-59"><a href="#annotated-cell-4-59"></a></span>
+<span id="annotated-cell-4-60"><a href="#annotated-cell-4-60"></a><span class="at">ggplot(data = heartdf, aes(x, y)) + </span></span>
+<span id="annotated-cell-4-61"><a href="#annotated-cell-4-61"></a><span class="at">    geom_polygon(aes(group = 1), fill = "red") +</span></span>
+<span id="annotated-cell-4-62"><a href="#annotated-cell-4-62"></a><span class="at">    geom_text(aes(x = 0, y = 0, label = "\u2661\u2764\u2665 Va va voom!!! \u2665\u2764\u2661", parse=TRUE), </span></span>
+<span id="annotated-cell-4-63"><a href="#annotated-cell-4-63"></a><span class="at">              data = textdf, size = 12, colour = "white") +</span></span>
+<span id="annotated-cell-4-64"><a href="#annotated-cell-4-64"></a><span class="at">  xlab("\u2665 XxXxXxX \u2665") +</span></span>
+<span id="annotated-cell-4-65"><a href="#annotated-cell-4-65"></a><span class="at">  ylab("\u2665 OoOoOoO \u2665") +</span></span>
+<span id="annotated-cell-4-66"><a href="#annotated-cell-4-66"></a><span class="at">    transition_reveal(t)</span></span>
+<span id="annotated-cell-4-67"><a href="#annotated-cell-4-67"></a><span class="st">```</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-4" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-2" data-code-lines="4" data-code-annotation="1">if you’d like to alter the script appearance, also change the font specification on line #17 (below, within the <code>css</code> chunk)</span>
+<span data-code-cell="annotated-cell-4" data-code-lines="4" data-code-annotation="1">if you’d like to alter the script appearance, also change the font specification on line #17 (below, within the <code>css</code> chunk)</span>
 </dd>
-<dt data-target-cell="annotated-cell-2" data-target-annotation="2">2</dt>
+<dt data-target-cell="annotated-cell-4" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-2" data-code-lines="15" data-code-annotation="2">add/alter falling hearts by changing the url’s on line #’s 20, 24, 28, etc – there are 6 total images specified</span>
+<span data-code-cell="annotated-cell-4" data-code-lines="15" data-code-annotation="2">add/alter falling hearts by changing the url’s on line #’s 20, 24, 28, etc – there are 6 total images specified</span>
 </dd>
 </dl>
 </div>
@@ -373,10 +434,10 @@ OOH Session #117…<br><span class="righteous Bigger">watermarks</span>
 </div>
 </div>
 </div></div>
+</div>
+</div>
+</div>
 <p><img data-src="https://upload.wikimedia.org/wikipedia/en/d/dd/Penelope_Pussycat.png" class="absolute" style="top: 115px; left: -170px; height: 250px; "></p>
-</div>
-</div>
-</div>
 <p><img data-src="https://www.pngkey.com/png/full/423-4233420_looney-tunes-pepe-le-pew-looney-toons-characters.png" class="absolute mirror" style="top: 0px; right: -150px; height: 300px; "></p>
 </section></section>
 <section>
@@ -386,14 +447,14 @@ OOH Session #117…<br><span class="righteous Bigger">watermarks</span>
 <img data-src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDAwY3ZlYzJ1NzQ0eTdzeXJ4NHBnaDRrNW9pMHJyb3ZzZDF3NXlubyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11v0IGUN9hI4cU/giphy.gif" class="r-stretch"></section>
 <section id="watermarks" class="slide level2" data-background-image="https://static.vecteezy.com/system/resources/previews/021/433/004/non_2x/draft-rubber-stamp-free-png.png" data-background-opacity=".2">
 <h2><a href="https://quarto.org/docs/presentations/revealjs/#image-backgrounds"><span class="righteous Bigger">watermarks</span></a></h2>
-<p><img data-src="https://toppng.com/uploads/thumbnail/confidential-stamp-11523429619gqcpdwcaka.png" class="absolute" style="top: 220px; left: -50px; height: 350px; "></p>
+<p><img data-src="https://toppng.com/uploads/thumbnail/confidential-stamp-11523429619gqcpdwcaka.png" class="absolute" style="top: 220px; left: -120px; height: 350px; "></p>
 <p><img data-src="https://www.pngall.com/wp-content/uploads/8/Sample-Watermark-Transparent.png" class="absolute" style="top: 180px; right: -110px; height: 500px; "></p>
-<p><img data-src="https://www.chestysoft.com/images/watermark.png" class="absolute" style="bottom: -20px; right: 350px; height: 600px; "></p>
+<p><img data-src="https://www.chestysoft.com/images/watermark.png" class="absolute" style="bottom: -20px; right: 380px; height: 600px; "></p>
 </section>
-<section id="session-info-february-13-2026-rendering" class="slide level2">
-<h2><iconify-icon role="img" inline="" icon="devicon:r" style="font-size: 2em;" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> Session Info (February 13, 2026) Rendering:</h2>
+<section id="session-info-february-17-2026-rendering" class="slide level2">
+<h2><iconify-icon role="img" inline="" icon="devicon:r" style="font-size: 2em;" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> Session Info (February 17, 2026) Rendering:</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.5.0 (2025-04-11 ucrt)
 Platform: x86_64-w64-mingw32/x64
@@ -415,11 +476,18 @@ tzcode source: internal
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
+other attached packages:
+[1] ggplot2_3.5.2
+
 loaded via a namespace (and not attached):
- [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      
- [5] htmltools_0.5.8.1 rstudioapi_0.17.1 yaml_2.3.10       rmarkdown_2.29   
- [9] knitr_1.50        jsonlite_2.0.0    xfun_0.52         digest_0.6.37    
-[13] rlang_1.1.6       evaluate_1.0.5   </code></pre>
+ [1] vctrs_0.6.5        cli_3.6.5          knitr_1.50         rlang_1.1.6       
+ [5] xfun_0.52          generics_0.1.4     jsonlite_2.0.0     labeling_0.4.3    
+ [9] glue_1.8.0         htmltools_0.5.8.1  scales_1.4.0       rmarkdown_2.29    
+[13] grid_4.5.0         evaluate_1.0.5     tibble_3.3.0       fastmap_1.2.0     
+[17] yaml_2.3.10        lifecycle_1.0.5    compiler_4.5.0     dplyr_1.1.4       
+[21] RColorBrewer_1.1-3 pkgconfig_2.0.3    rstudioapi_0.17.1  farver_2.1.2      
+[25] digest_0.6.37      R6_2.6.1           tidyselect_1.2.1   pillar_1.11.0     
+[29] magrittr_2.0.3     withr_3.0.2        tools_4.5.0        gtable_0.3.6      </code></pre>
 </div>
 </div>
 
