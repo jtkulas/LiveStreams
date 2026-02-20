@@ -928,7 +928,7 @@
     "href": "slides/2026/2_24_26/index.html#watermarks",
     "title": "R is for Authoring!!",
     "section": "watermarks",
-    "text": "watermarks"
+    "text": "watermarks\n\n slides & \n\n\n\n\nbackground-image and background-opacity attributes (as well as others) can be added to slide title via inline curly brackets:\n## Hello, There {background-image=\"rainbowcat.jpg\" background-opacity=\".5\"}\n\nThis presentation will show you..."
   },
   {
     "objectID": "slides/2026/2_24_26/index.html#session-info-february-17-2026-rendering",
@@ -978,5 +978,19 @@
     "title": "R is for Authoring!!",
     "section": " Session Info (February 19, 2026) Rendering:",
     "text": "Session Info (February 19, 2026) Rendering:\n\nsessionInfo()\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.17.1 yaml_2.3.10      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.52        \n[13] digest_0.6.37     rlang_1.1.6       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/2_24_26/index.html#open-office-hours-february-20-2026",
+    "href": "slides/2026/2_24_26/index.html#open-office-hours-february-20-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (February 20, 2026)",
+    "text": "Open Office Hours (February 20, 2026)\n\n\n\n\n\n\n\nRecap session #117\nToday’s topic(s):\n\n Phantazee drapht order \nXaringan!!\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/2_24_26/index.html#session-info-february-20-2026-rendering",
+    "href": "slides/2026/2_24_26/index.html#session-info-february-20-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (February 20, 2026) Rendering:",
+    "text": "Session Info (February 20, 2026) Rendering:\n\nsessionInfo()\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.17.1 yaml_2.3.10      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.52        \n[13] digest_0.6.37     rlang_1.1.6       evaluate_1.0.5"
   }
 ]

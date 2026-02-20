@@ -74,6 +74,47 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ## [[watermarks]{.righteous .Bigger}](https://quarto.org/docs/presentations/revealjs/#image-backgrounds) {background-image="https://www.pngall.com/wp-content/uploads/8/Sample-Watermark-Transparent.png" background-opacity=".8" background-size="40%" background-repeat="repeat"}
 
+::: {.panel-tabset}
+
+### {{< iconify simple-icons:revealdotjs >}} slides
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+`background-image` and `background-opacity` attributes ([as well as others](https://quarto.org/docs/presentations/revealjs/#slide-backgrounds)) can be added to slide title via [inline curly brackets]{.underline}:
+
+```
+## Hello, There {background-image="rainbowcat.jpg" background-opacity=".5"}
+
+This presentation will show you...
+
+```
+:::
+
+::: {.column width="30%"}
+:::
+
+:::
+
+![](../../../img/watermarkcat.JPG){.absolute height="300" right="-150" bottom="80"}
+
+### {{< iconify vscode-icons:file-type-pdf2 >}} & {{< iconify devicon:html5-wordmark >}}
+
+
+:::
+
+![](https://static.vecteezy.com/system/resources/thumbnails/046/026/221/small_2x/liquid-water-splash-droplet-splatter-free-png.png){.absolute right="-150" top="-55" height="400"}
+
+![](https://static.vecteezy.com/system/resources/thumbnails/044/570/540/small_2x/single-water-drop-on-transparent-background-free-png.png){.absolute height="120" left="-140" bottom="350"}
+
+![](https://static.vecteezy.com/system/resources/thumbnails/044/570/540/small_2x/single-water-drop-on-transparent-background-free-png.png){.absolute height="40" left="-150" bottom="300"}
+
+![](https://static.vecteezy.com/system/resources/thumbnails/044/570/540/small_2x/single-water-drop-on-transparent-background-free-png.png){.absolute height="65" left="-60" bottom="230"}
+
+![](https://static.vecteezy.com/system/resources/thumbnails/044/570/540/small_2x/single-water-drop-on-transparent-background-free-png.png){.absolute height="150" left="-170" bottom="130"}
+
+![](https://static.vecteezy.com/system/resources/thumbnails/044/570/540/small_2x/single-water-drop-on-transparent-background-free-png.png){.absolute height="100" left="-100" bottom="40"}
 
 # Today...
 
