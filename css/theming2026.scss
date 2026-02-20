@@ -20,12 +20,13 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Euphoria Script');
 @import url('https://fonts.googleapis.com/css?family=Rubik Vinyl');
+@import url('https://fonts.googleapis.com/css?family=Kolker Brush');
 
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
-  height: 90px !important;
+  height: 150px !important;
 }
 
 /* adding background to inline code elements */
@@ -331,3 +332,34 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   text-shadow:
     2px 2px 0px #1434a4 !important;
 }
+
+.xaringantit {
+  font-family: "Kolker Brush";  
+  color:  white; 
+  font-size: 3.5em;
+  font-weight: normal !important;
+  text-shadow:
+    -2px -2px 4px #00f0ff, 
+    3px 3px 3px #0000ff !important; 
+}
+
+.xaringandon {
+  font-family: "Kolker Brush";  
+  color:  white; 
+  font-weight: normal !important;
+  text-shadow:
+    -1px -1px 5px #ad03de, // #0096ff,
+    3px 3px 3px #520380 !important; // #7df9ff !important;  
+}
+
+.xaringanraf {
+  font-family: "Kolker Brush";  
+  color:  white; 
+  font-weight: normal !important;
+  font-size: 3.5em;
+  text-shadow:
+    -1px -1px 5px #ff073a, 
+    3px 3px 3px #9c0412 !important; 
+}
+
+

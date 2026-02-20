@@ -1,0 +1,115 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: 'OOH Session #118...<br>[Xaringan!!]{.xaringantit}'
+title-slide-attributes: 
+  data-background-image: ../../../img/xaringan3.png  #https://wallpapercave.com/wp/wp10792097.jpg #https://e1.pxfuel.com/desktop-wallpaper/971/677/desktop-wallpaper-teenage-mutant-ninja-turtles-raphael.jpg #../../../img/xaringan2.png  
+#  data-background-opacity: ".8"
+format:
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://static.vecteezy.com/system/resources/thumbnails/055/758/272/small/cartoon-ninja-logo-no-background-free-png.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {layout="[[10,10],]"}
+::: first-column
++ Recap session #117
++ Today's topic(s):
+    + {{< iconify twemoji:american-football >}}{{< iconify twemoji:american-football >}}{{< iconify twemoji:american-football >}} Phantazee drapht order {{< iconify twemoji:1st-place-medal >}}{{< iconify twemoji:2nd-place-medal >}}{{< iconify twemoji:3rd-place-medal >}}
+    + [[[Xaringan!!]{.xaringandon}](https://github.com/yihui/xaringan)]{.Bigger}
++ Shared problem-solving
+
+:::
+
+::: second-column
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 185px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/2_17_26">
+  <img src="/img/title117.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# First... {{< iconify twemoji:1st-place-medal >}}{{< iconify twemoji:2nd-place-medal >}}{{< iconify twemoji:3rd-place-medal >}}
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTA0cGZuN2h3MWhyaWRmMmh2aTU4bDR4emV2ZG9ha3JjZXZ2N2o2aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT5LMLcvRrCS5Nf2Lu/giphy.gif)
+
+# Recap of Session <br>#117: {background-image="https://static.vecteezy.com/system/resources/previews/021/433/004/non_2x/draft-rubber-stamp-free-png.png" background-opacity=".2"}
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://toppng.com/uploads/thumbnail/confidential-stamp-11523429619gqcpdwcaka.png){.absolute width="130" top="270" right="110"}
+
+## [[watermarks]{.righteous .Bigger}](https://quarto.org/docs/presentations/revealjs/#image-backgrounds) {background-image="https://www.pngall.com/wp-content/uploads/8/Sample-Watermark-Transparent.png" background-opacity=".8" background-size="40%" background-repeat="repeat"}
+
+
+# Today...
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGh6N3RiMXU4MnRpdjM4dnJlenRlcnU0bGVuMWlidDg2d2diNDk3MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gffX1gq2vYtBVQJz7M/giphy.gif)
+
+## [[Xaringan!!]{.xaringanraf}](https://arm.rbind.io/slides/xaringan.html#1) {background-image="../../../img/xaringan2.png"}
+
+::: {.columns}
+
+::: {.column width="15%"}
+:::
+
+::: {.column width="50%"}
+<iframe src="https://jtkulas.github.io/MPPAW2023/#1" width="100%" height="350">
+</iframe>
+:::
+
+::: {.column width="35%"}
+:::
+
+:::
+
+![](https://www.pngmart.com/files/23/Ninja-PNG-Image.png){.absolute height="330" top="-90" left="230"}
+
+
+![](https://www.pngkey.com/png/full/33-333939_ninja-cartoon-png-clipart-free-stock-ninja-clipart.png){.absolute left="-160" bottom="80" height="250"}
+
+::: {.absolute top="160px" left="503px"}
+<a href="https://jtkulas.github.io/MPPAW2023/#1">
+  ![](https://png.pngtree.com/png-vector/20240317/ourmid/pngtree-ninja-mascot-cartoon-avatar-character-design-png-image_11993557.png){width="170"}
+</a>
+:::
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+#| eval: true
+sessionInfo()
+```
+
