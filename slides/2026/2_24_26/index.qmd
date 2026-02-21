@@ -200,7 +200,11 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 
 :::
 
-![](https://www.pngmart.com/files/23/Ninja-PNG-Image.png){.absolute height="330" top="-90" left="230"}
+::: {.absolute top="-97" left="245"}
+<a href="https://slides.yihui.org/xaringan/#1">
+![](https://www.pngmart.com/files/23/Ninja-PNG-Image.png){height="320"}
+</a>
+:::
 
 ::: {.absolute bottom="60" left="-162"}
 <a href="https://github.com/yihui/xaringan">
