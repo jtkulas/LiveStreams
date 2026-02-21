@@ -101,6 +101,69 @@ This presentation will show you...
 
 ### {{< iconify vscode-icons:file-type-pdf2 >}} & {{< iconify devicon:html5-wordmark >}}
 
+::: {.columns}
+
+::: {.column width="25%"}
+
+::: {.callout-note}
+
+[Quarto extension](https://github.com/leovan/quarto-watermark) works well for both formats
+
+:::
+
+:::
+
+::: {.column width="75%"}
+
+```{r}
+---
+title: "Quarto Watermark Extension Example"
+abstract: "This is an example document of quarto watermark extension."
+
+filters:
+  - watermark
+
+watermark:
+  text: "SAMPLE"     #<1> 
+  size: 4            #<2> 
+  angle: 45   
+  color: "#444444"   
+  opacity: 0.2       #<3> 
+  cols: 1            #<4>
+  rows: 1
+  col-space: 10
+  row-space: 10      #<4>
+  z-index: 1            
+
+format: pdf          #<5>
+---
+
+## Text
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+## Table
+
+| Command | Description |
+| --- | --- |
+| `git status` | List all *new or modified* files |
+| `git diff` | Show file differences that **haven't been** staged |
+
+## Figure
+
+![How qmd works](https://quarto.org/docs/get-started/hello/images/rstudio-qmd-how-it-works.png)
+```
+1. change to whatever text you're interested in displaying
+2. seems to carry most weight for (repeated vs solitary) display of watermark
+3. ranges from 0 (transparent) to 1 (opaque) -- desired effect will depend on color specification (line #12)
+4. can be commented out (along with `size` on line #10) to reduce/enhance repeated effect
+5. html or pdf equally effective -- not intended for typst documents
+
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/014/391/900/non_2x/right-arrow-curved-icon-isolated-on-transparent-background-free-png.png){.absolute left="0" bottom="50" height="140" .tilt}
+
+:::
 
 :::
 
@@ -139,10 +202,13 @@ This presentation will show you...
 
 ![](https://www.pngmart.com/files/23/Ninja-PNG-Image.png){.absolute height="330" top="-90" left="230"}
 
+::: {.absolute bottom="60" left="-162"}
+<a href="https://github.com/yihui/xaringan">
+![](https://www.pngkey.com/png/full/33-333939_ninja-cartoon-png-clipart-free-stock-ninja-clipart.png){height="270"}
+</a>
+:::
 
-![](https://www.pngkey.com/png/full/33-333939_ninja-cartoon-png-clipart-free-stock-ninja-clipart.png){.absolute left="-160" bottom="80" height="250"}
-
-::: {.absolute top="160px" left="503px"}
+::: {.absolute top="160px" left="502px"}
 <a href="https://jtkulas.github.io/MPPAW2023/#1">
   ![](https://png.pngtree.com/png-vector/20240317/ourmid/pngtree-ninja-mascot-cartoon-avatar-character-design-png-image_11993557.png){width="170"}
 </a>
