@@ -76,7 +76,7 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ::: {.panel-tabset}
 
-### {{< iconify simple-icons:revealdotjs >}} slides
+### {{< iconify simple-icons:revealdotjs style="color:#FFEA00;" >}} slides
 
 ::: {.columns}
 
