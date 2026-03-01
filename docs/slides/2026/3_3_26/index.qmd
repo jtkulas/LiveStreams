@@ -1,0 +1,265 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: 'OOH Session #119...<br>[YAML]{.ranchers}'
+title-slide-attributes: 
+  data-background-image: ../../../img/yaml.png   
+#  data-background-opacity: ".8"
+format:
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://images.seeklogo.com/logo-png/46/2/popeye-the-sailorman-logo-png_seeklogo-466664.png  #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {layout="[[10,10],]"}
+::: first-column
++ Recap session #118
++ Today's topic(s):
+    + [[YAML]{.ranchers2 .Bigger}](https://quarto.org/docs/authoring/front-matter.html)
++ Shared problem-solving
+
+:::
+
+::: second-column
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 185px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/2_24_26">
+  <img src="/img/title118.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#118: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://static.vecteezy.com/system/resources/thumbnails/055/758/272/small/cartoon-ninja-logo-no-background-free-png.png){.absolute width="210" top="215" right="70"}
+
+## [[[Xaringan!!]{.xaringandon}](https://github.com/yihui/xaringan)]{.Bigger}
+
+::: {.panel-tabset}
+
+### [YAML]{.ranchers2}
+
+::: {.columns}
+
+::: {.column width="30%"}
+
+<iframe src="https://slides.yihui.org/xaringan/#1" width="100%" height="350">
+</iframe>
+
+:::
+
+::: {.column width="60%"}
+
+```{r}
+---
+title: "Presentation Ninja"
+subtitle: "⚔<br/>with xaringan"
+author: "Yihui Xie"
+institute: "RStudio, PBC"
+date: "2016/12/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs                     #<1>
+    nature:                           #<2>
+      highlightStyle: github          #<3>
+      highlightLines: true            #<3>
+      countIncrementalSlides: false   #<4>
+---
+```
+1. helps make presentation self--contained by creating folder with necessary files when you knit {{< iconify unjs:knitwork >}} (generally considered good practice)
+2. slide behavior often specified here, under `nature` "sub--key" (for example, `autoplay` -- for more info, see [`?xaringan::moon_reader`](https://www.rdocumentation.org/packages/xaringan/versions/0.30/topics/moon_reader))
+3. refers to code highlighting (not hyperlinks)
+4. should fragments (`--` characters) be counted as separate slides or not within the slide counter
+
+:::
+
+:::
+
+### Formatting {{< iconify svg-spinners:blocks-shuffle-3 style="color:#6c3baa;" >}}
+
+::: {.columns}
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="45%"}
+
+#### [Xaringan:]{.xaringanraf}
+
+```
+.effect[
+content being affected
+]
+
+```
+:::
+
+::: {.column width="45%"}
+
+#### Quarto/RevealJS:
+
+```
+[content being affected]{.effect}
+
+OR, alternatively...
+
+::: {.effect}
+
+content being affected
+
+:::
+
+```
+
+:::
+
+:::
+
+### Shortcut keys {{< iconify fxemoji:keyboardandmouse >}}  
+
+::: {.columns}
+
+::: {.column width="13%"}
+:::
+
+::: {.column width="40%"}
+
+::: {.callout-note}
+
+Pressing `h` from anywhere *while [within the presentation](https://slides.yihui.org/xaringan/#1)* (as you are  navigating) reveals default shortcut keys & effects
+
+:::
+
+:::
+
+::: {.column width=47%"}
+:::
+
+:::
+
+![](../../../img/xaringanhelp.JPG){.absolute height=400 right="15" bottom="0"}
+
+![](https://static.vecteezy.com/system/resources/previews/014/391/900/non_2x/right-arrow-curved-icon-isolated-on-transparent-background-free-png.png){.absolute bottom="20" left="380" height="120" .tilt}
+
+### Extensions
+
+::: {.columns .smaller}
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="45%" .fragment .semi-fade-out fragment-index=1}
+`xaringanExtra`: 
+
++ [additional capabilities](https://pkg.garrickadenbuie.com/xaringanExtra/#/?id=xaringanextra) that do not come bundled with "base" `xaringan`
++ activated [within code blocks](https://github.com/gadenbuie/xaringanExtra/?tab=readme-ov-file#xaringanextra) (not YAML)
+
+:::
+
+::: {.column width="45%" .fragment .fade-in-then-semi-out fragment-index=1}
+
+[`xaringanthemer`](https://pkg.garrickadenbuie.com/xaringanthemer/):  
+
++ takes care of (color & font) [css stylings for you](https://pkg.garrickadenbuie.com/xaringanthemer/articles/xaringanthemer.html)  
++ called out within YAML, but [activated/specified within code chunk](https://pkg.garrickadenbuie.com/xaringanthemer/#quick-intro)
+
+
+:::
+
+:::
+
+:::
+
+![](https://www.pngkey.com/png/full/33-333939_ninja-cartoon-png-clipart-free-stock-ninja-clipart.png){.absolute height="250" top="0" right="-150" .mirror}
+
+![](https://pngimg.com/d/ninja_turtles_PNG65.png){.absolute height="250" top="-10" right="200"}
+
+![](https://pngimg.com/d/ninja_turtles_PNG69.png){.absolute height="250" top="-10" left="300" .mirror}
+
+![](https://pngimg.com/d/ninja_turtles_PNG72.png){.absolute height="250" left="-200" top="-40"}
+
+![](https://pngimg.com/d/ninja_turtles_PNG14.png){.absolute height="300" left="-170" bottom="0"}
+
+# Today...
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWkyeDNyNzJ2NThydGRwd24xY3dpcHRnb2VqaTRxcmpraXk2NTlldCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1ZrclCM6lGNRC/giphy.gif)
+
+## [[YAML]{.ranchers2 .bigger}](https://quarto.org/docs/authoring/front-matter.html) [[(YAML Ain't Markup Language...)]{.ranchers2 .smaller}](https://github.com/yaml/)
+
+::: {.columns .smaller}
+
+::: {.column width="50%"}
+
+### Generally:
+
++ cross-language [serialized data format](https://yaml.org/) 
+  + [where it began](https://yaml.com/blog/in-the-beginning/)
+  + currently [YAML 1.2.2](https://yaml.org/spec/1.2.2/)
++ tutorial 1: [{{< iconify emojione:school >}}](https://learnxinyminutes.com/yaml/), tutorial 2: [{{< iconify emojione:school >}}](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started)
++ beginner's guide 1: [{{< iconify flat-color-icons:reading-ebook >}}](https://circleci.com/blog/what-is-yaml-a-beginner-s-guide/), beginner's guide 2: [{{< iconify flat-color-icons:reading-ebook >}}](https://www.redhat.com/en/topics/automation/what-is-yaml)
+
+:::
+
+::: {.column width="50%"}
+
+### Quarto/ RMarkdown:
+
+Provides "meta" structure to be applied to entire rendered document (layout, fonts, format, stylings, etc)
+
++ [Quarto YAML](https://quarto-tdg.org/yaml)
+
+:::
+
+:::
+
+![](https://freepngimg.com/download/icon/file/10375-yaml-file-format.png){.absolute right="480" bottom="20" height="150"}
+
+![](https://upload.wikimedia.org/wikipedia/en/0/00/Popeye_the_Sailor.png){.absolute left="-160" top="-10" height="300"}
+
+![](https://alttabstore.com/cdn/shop/products/EugeneJeepthumbnail_4810x.png?v=1590538975){.absolute bottom="-10" right="-20" height="250"}
+
+![](https://www.nicepng.com/png/full/189-1892407_valerie-olive-oil-popeye.png){.absolute right="-150" top="10" height="350" .mirror}
+
+![](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5e951658-22c3-4cd5-b9d4-004e54adf055/dg3drcp-14a084bd-9fb1-4411-b476-a30812296f3b.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi81ZTk1MTY1OC0yMmMzLTRjZDUtYjlkNC0wMDRlNTRhZGYwNTUvZGczZHJjcC0xNGEwODRiZC05ZmIxLTQ0MTEtYjQ3Ni1hMzA4MTIyOTZmM2IucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.yV_DBuuAw3ZhGXpKj9S8EBitwuFtyatrer04FEzW1zY){.absolute left="-160" bottom="0" height="200"}
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+#| eval: true
+#| echo: false
+sessionInfo()
+```
+

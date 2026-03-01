@@ -1034,5 +1034,145 @@
     "title": "R is for Authoring!!",
     "section": " Session Info (February 24, 2026) Rendering:",
     "text": "Session Info (February 24, 2026) Rendering:\n\nsessionInfo()\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.17.1 yaml_2.3.10      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.52        \n[13] digest_0.6.37     rlang_1.1.6       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/3_3_26/index.html#open-office-hours-february-24-2026",
+    "href": "slides/2026/3_3_26/index.html#open-office-hours-february-24-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (February 24, 2026)",
+    "text": "Open Office Hours (February 24, 2026)\n\n\n\n\n\n\n\nRecap session #118\nToday’s topic(s):\n\nXaringan!!\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/3_3_26/index.html#watermarks",
+    "href": "slides/2026/3_3_26/index.html#watermarks",
+    "title": "R is for Authoring!!",
+    "section": "watermarks",
+    "text": "watermarks\n\n slides & \n\n\n\n\nbackground-image and background-opacity attributes (as well as others) can be added to slide title via inline curly brackets:\n## Hello, There {background-image=\"rainbowcat.jpg\" background-opacity=\".5\"}\n\nThis presentation will show you...\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\nQuarto extension works well for both formats\n\n\n\n\n\n---\ntitle: \"Quarto Watermark Extension Example\"\nabstract: \"This is an example document of quarto watermark extension.\"\n\nfilters:\n  - watermark\n\nwatermark:\n1  text: \"SAMPLE\"\n2  size: 4\n  angle: 45   \n  color: \"#444444\"   \n3  opacity: 0.2\n4  cols: 1\n  rows: 1\n  col-space: 10\n  row-space: 10\n  z-index: 1            \n\n5format: pdf\n---\n\n## Text\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n\n## Table\n\n| Command | Description |\n| --- | --- |\n| `git status` | List all *new or modified* files |\n| `git diff` | Show file differences that **haven't been** staged |\n\n## Figure\n\n![How qmd works](https://quarto.org/docs/get-started/hello/images/rstudio-qmd-how-it-works.png)\n\n\n1\n\nchange to whatever text you’re interested in displaying\n\n2\n\nseems to carry most weight for (repeated vs solitary) display of watermark\n\n3\n\nranges from 0 (transparent) to 1 (opaque) – desired effect will depend on color specification (line #12)\n\n4\n\ncan be commented out (along with size on line #10) to reduce/enhance repeated effect\n\n5\n\nhtml or pdf equally effective – not intended for typst documents"
+  },
+  {
+    "objectID": "slides/2026/3_3_26/index.html#xaringan",
+    "href": "slides/2026/3_3_26/index.html#xaringan",
+    "title": "R is for Authoring!!",
+    "section": "Xaringan!!",
+    "text": "Xaringan!!\n\nYAMLFormatting Shortcut keys Extensions\n\n\n\n\n\n\n\n\n---\ntitle: \"Presentation Ninja\"\nsubtitle: \"⚔&lt;br/&gt;with xaringan\"\nauthor: \"Yihui Xie\"\ninstitute: \"RStudio, PBC\"\ndate: \"2016/12/12 (updated: `r Sys.Date()`)\"\noutput:\n  xaringan::moon_reader:\n1    lib_dir: libs\n2    nature:\n3      highlightStyle: github\n      highlightLines: true\n4      countIncrementalSlides: false\n---\n\n\n1\n\nhelps make presentation self–contained by creating folder with necessary files when you knit  (generally considered good practice)\n\n2\n\nslide behavior often specified here, under nature “sub–key” (for example, autoplay – for more info, see ?xaringan::moon_reader)\n\n3\n\nrefers to code highlighting (not hyperlinks)\n\n4\n\nshould fragments (-- characters) be counted as separate slides or not within the slide counter\n\n\n\n\n\n\n\n\n\n\n\nXaringan:\n.effect[\ncontent being affected\n]\n\n\nQuarto/RevealJS:\n[content being affected]{.effect}\n\nOR, alternatively...\n\n::: {.effect}\n\ncontent being affected\n\n:::\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\nPressing h from anywhere while within the presentation (as you are navigating) reveals default shortcut keys & effects\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nxaringanExtra:\n\nadditional capabilities that do not come bundled with “base” xaringan\nactivated within code blocks (not YAML)\n\n\nxaringanthemer:\n\ntakes care of (color & font) css stylings for you\n\ncalled out within YAML, but activated/specified within code chunk"
+  },
+  {
+    "objectID": "slides/2026/3_3_26/index.html#session-info-february-24-2026-rendering",
+    "href": "slides/2026/3_3_26/index.html#session-info-february-24-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (February 24, 2026) Rendering:",
+    "text": "Session Info (February 24, 2026) Rendering:\n\nsessionInfo()\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.17.1 yaml_2.3.10      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.52        \n[13] digest_0.6.37     rlang_1.1.6       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/3_3_26/index.html#xaringan-1",
+    "href": "slides/2026/3_3_26/index.html#xaringan-1",
+    "title": "R is for Authoring!!",
+    "section": "Xaringan!!",
+    "text": "Xaringan!!"
+  },
+  {
+    "objectID": "slides/2026/3_3_26/index.html#open-office-hours-february-25-2026",
+    "href": "slides/2026/3_3_26/index.html#open-office-hours-february-25-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (February 25, 2026)",
+    "text": "Open Office Hours (February 25, 2026)\n\n\n\n\n\n\n\nRecap session #118\nToday’s topic(s):\n\nYAML\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/3_3_26/index.html#session-info-february-25-2026-rendering",
+    "href": "slides/2026/3_3_26/index.html#session-info-february-25-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (February 25, 2026) Rendering:",
+    "text": "Session Info (February 25, 2026) Rendering:\n\nsessionInfo()\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.17.1 yaml_2.3.10      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.52        \n[13] digest_0.6.37     rlang_1.1.6       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/3_3_26/index.html#yaml",
+    "href": "slides/2026/3_3_26/index.html#yaml",
+    "title": "R is for Authoring!!",
+    "section": "YAML",
+    "text": "YAML\nYAML Ain’t Markup Language…\n\n\n\na human-friendly, cross-language data serialization format designed for readability and portability. It’s widely used for configuration files, data exchange, and structured metadata\ncurrently YAML 1.2.2\nwhere it began\n\n\n\ntutorial 1, tutorial 2\nbeginner’s guide 1, beginner’s guide 2\nQuarto YAML"
+  },
+  {
+    "objectID": "slides/2026/3_3_26/index.html#open-office-hours-february-26-2026",
+    "href": "slides/2026/3_3_26/index.html#open-office-hours-february-26-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (February 26, 2026)",
+    "text": "Open Office Hours (February 26, 2026)\n\n\n\n\n\n\n\nRecap session #118\nToday’s topic(s):\n\nYAML\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/3_3_26/index.html#session-info-february-26-2026-rendering",
+    "href": "slides/2026/3_3_26/index.html#session-info-february-26-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (February 26, 2026) Rendering:",
+    "text": "Session Info (February 26, 2026) Rendering:\n\nsessionInfo()\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.17.1 yaml_2.3.10      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.52        \n[13] digest_0.6.37     rlang_1.1.6       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/3_3_26/index.html#yaml-aint-markup-language",
+    "href": "slides/2026/3_3_26/index.html#yaml-aint-markup-language",
+    "title": "R is for Authoring!!",
+    "section": "YAML Ain’t Markup Language…",
+    "text": "YAML Ain’t Markup Language…\nYAML Ain’t Markup Language:\n\na human-friendly, cross-language data serialization format designed for readability and portability. It’s widely used for configuration files, data exchange, and structured metadata\ncurrently YAML 1.2.2\nwhere it began\ntutorial 1, tutorial 2\nbeginner’s guide 1, beginner’s guide 2\nQuarto YAML"
+  },
+  {
+    "objectID": "slides/2026/3_3_26/index.html#yaml-yaml-aint-markup-language",
+    "href": "slides/2026/3_3_26/index.html#yaml-yaml-aint-markup-language",
+    "title": "R is for Authoring!!",
+    "section": "YAML (YAML Ain’t Markup Language…)",
+    "text": "YAML (YAML Ain’t Markup Language…)\n\n\nGenerally:\n\ncross-language serialized data format\n\nwhere it began\ncurrently YAML 1.2.2\n\ntutorial 1: , tutorial 2: \nbeginner’s guide 1: , beginner’s guide 2: \n\n\nQuarto/ RMarkdown:\nProvides “meta” structure to be applied to entire rendered document (layout, fonts, format, stylings, etc)\n\nQuarto YAML"
+  },
+  {
+    "objectID": "slides/2026/2_24_26/index.html#open-office-hours-february-27-2026",
+    "href": "slides/2026/2_24_26/index.html#open-office-hours-february-27-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (February 27, 2026)",
+    "text": "Open Office Hours (February 27, 2026)\n\n\n\n\n\n\n\nRecap session #117\nToday’s topic(s):\n\n Phantazee drapht order \nXaringan!!\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/2_24_26/index.html#session-info-february-27-2026-rendering",
+    "href": "slides/2026/2_24_26/index.html#session-info-february-27-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (February 27, 2026) Rendering:",
+    "text": "Session Info (February 27, 2026) Rendering:\n\nsessionInfo()\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.17.1 yaml_2.3.10      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.52        \n[13] digest_0.6.37     rlang_1.1.6       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/3_3_26/index.html#open-office-hours-february-27-2026",
+    "href": "slides/2026/3_3_26/index.html#open-office-hours-february-27-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (February 27, 2026)",
+    "text": "Open Office Hours (February 27, 2026)\n\n\n\n\n\n\n\nRecap session #118\nToday’s topic(s):\n\nYAML\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/3_3_26/index.html#session-info-february-27-2026-rendering",
+    "href": "slides/2026/3_3_26/index.html#session-info-february-27-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (February 27, 2026) Rendering:",
+    "text": "Session Info (February 27, 2026) Rendering:\n\nsessionInfo()\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.17.1 yaml_2.3.10      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.52        \n[13] digest_0.6.37     rlang_1.1.6       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/3_3_26/index.html#open-office-hours-february-28-2026",
+    "href": "slides/2026/3_3_26/index.html#open-office-hours-february-28-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (February 28, 2026)",
+    "text": "Open Office Hours (February 28, 2026)\n\n\n\n\n\n\n\nRecap session #118\nToday’s topic(s):\n\nYAML\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/3_3_26/index.html#session-info-february-28-2026-rendering",
+    "href": "slides/2026/3_3_26/index.html#session-info-february-28-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (February 28, 2026) Rendering:",
+    "text": "Session Info (February 28, 2026) Rendering:\n\nsessionInfo()\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.17.1 yaml_2.3.10      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.52        \n[13] digest_0.6.37     rlang_1.1.6       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/3_3_26/index.html#open-office-hours-march-01-2026",
+    "href": "slides/2026/3_3_26/index.html#open-office-hours-march-01-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (March 01, 2026)",
+    "text": "Open Office Hours (March 01, 2026)\n\n\n\n\n\n\n\nRecap session #118\nToday’s topic(s):\n\nYAML\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/3_3_26/index.html#session-info-march-01-2026-rendering",
+    "href": "slides/2026/3_3_26/index.html#session-info-march-01-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (March 01, 2026) Rendering:",
+    "text": "Session Info (March 01, 2026) Rendering:\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.17.1 yaml_2.3.10      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.52        \n[13] digest_0.6.37     rlang_1.1.6       evaluate_1.0.5"
   }
 ]
