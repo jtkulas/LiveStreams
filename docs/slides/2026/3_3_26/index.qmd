@@ -182,7 +182,8 @@ Pressing `h` from anywhere *while [within the presentation](https://slides.yihui
 ::: {.column width="10%"}
 :::
 
-::: {.column width="45%" .fragment .semi-fade-out fragment-index=1}
+::: {.column width="45%"}
+
 `xaringanExtra`: 
 
 + [additional capabilities](https://pkg.garrickadenbuie.com/xaringanExtra/#/?id=xaringanextra) that do not come bundled with "base" `xaringan`
@@ -190,13 +191,12 @@ Pressing `h` from anywhere *while [within the presentation](https://slides.yihui
 
 :::
 
-::: {.column width="45%" .fragment .fade-in-then-semi-out fragment-index=1}
+::: {.column width="45%"}
 
 [`xaringanthemer`](https://pkg.garrickadenbuie.com/xaringanthemer/):  
 
 + takes care of (color & font) [css stylings for you](https://pkg.garrickadenbuie.com/xaringanthemer/articles/xaringanthemer.html)  
 + called out within YAML, but [activated/specified within code chunk](https://pkg.garrickadenbuie.com/xaringanthemer/#quick-intro)
-
 
 :::
 
@@ -222,7 +222,7 @@ Pressing `h` from anywhere *while [within the presentation](https://slides.yihui
 
 ::: {.columns .smaller}
 
-::: {.column width="50%"}
+::: {.column width="50%" .fragment .semi-fade-out fragment-index=1}
 
 ### Generally:
 
@@ -234,7 +234,7 @@ Pressing `h` from anywhere *while [within the presentation](https://slides.yihui
 
 :::
 
-::: {.column width="50%"}
+::: {.column width="50%" .fragment fragment-index=1}
 
 ### Quarto/ RMarkdown:
 
