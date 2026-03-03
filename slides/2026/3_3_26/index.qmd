@@ -267,11 +267,29 @@ sessionInfo()
 
 Grok response (3/3/26):
 
+::: {.columns}
+
+::: {.column width="35%"}
+
+::: {.callout-tip}
+
+## Query:
+
+"I use YAML within Quarto and R Markdown documents. What are some other uses for YAML (please explain using non-technical jargon - e.g., to someone unfamiliar with computer languages)"
+
+:::
+
+:::
+
+::: {.column width="65%"}
+
 <iframe 
   src="https://jtkulas.github.io/LiveStreams/slides/2026/3_3_26/grok.html" 
   width="100%" 
-  height="600" 
-  frameborder="0" 
-  style="border: 1px solid #ccc; border-radius: 6px;"
+  style="height: 75vh; border: none;"
   allowfullscreen>
 </iframe>
+
+:::
+
+:::
