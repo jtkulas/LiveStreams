@@ -3,8 +3,8 @@ title: "[R is for <br>Authoring!!]{.shadowsharp}"
 author: 'OOH Session #119...<br>[YAML]{.ranchers}'
 title-slide-attributes: 
   data-background-image: ../../../img/yaml.png   
-#  data-background-opacity: ".8"
-format:
+#  data-background-opacity: ".4"
+format: 
   revealjs:
     mouse-wheel: true              
     slide-tone: false
