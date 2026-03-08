@@ -1209,5 +1209,89 @@
     "title": "R is for Authoring!!",
     "section": "YAML Whazzat?!?",
     "text": "YAML Whazzat?!?\nGrok response (3/3/26):\n\n\n\n\n\n\n\n\nQuery:\n\n\n“I use YAML within Quarto and R Markdown documents. What are some other uses for YAML (please explain using non-technical jargon - e.g., to someone unfamiliar with computer languages)”"
+  },
+  {
+    "objectID": "slides/2026/3_10_26/index.html#open-office-hours-march-04-2026",
+    "href": "slides/2026/3_10_26/index.html#open-office-hours-march-04-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (March 04, 2026)",
+    "text": "Open Office Hours (March 04, 2026)\n\n\n\n\n\n\n\nRecap session #119\nToday’s topic(s):\n\nZotero!!\n\nShared problem-solving\n\nCheck out the awesome artwork of Tőkű Mőriya\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/3_10_26/index.html#xaringan",
+    "href": "slides/2026/3_10_26/index.html#xaringan",
+    "title": "R is for Authoring!!",
+    "section": "Xaringan!!",
+    "text": "Xaringan!!\n\nYAMLFormatting Shortcut keys Extensions\n\n\n\n\n\n\n\n\n---\ntitle: \"Presentation Ninja\"\nsubtitle: \"⚔&lt;br/&gt;with xaringan\"\nauthor: \"Yihui Xie\"\ninstitute: \"RStudio, PBC\"\ndate: \"2016/12/12 (updated: `r Sys.Date()`)\"\noutput:\n  xaringan::moon_reader:\n1    lib_dir: libs\n2    nature:\n3      highlightStyle: github\n      highlightLines: true\n4      countIncrementalSlides: false\n---\n\n\n1\n\nhelps make presentation self–contained by creating folder with necessary files when you knit  (generally considered good practice)\n\n2\n\nslide behavior often specified here, under nature “sub–key” (for example, autoplay – for more info, see ?xaringan::moon_reader)\n\n3\n\nrefers to code highlighting (not hyperlinks)\n\n4\n\nshould fragments (-- characters) be counted as separate slides or not within the slide counter\n\n\n\n\n\n\n\n\n\n\n\nXaringan:\n.effect[\ncontent being affected\n]\n\n\nQuarto/RevealJS:\n[content being affected]{.effect}\n\nOR, alternatively...\n\n::: {.effect}\n\ncontent being affected\n\n:::\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\nPressing h from anywhere while within the presentation (as you are navigating) reveals default shortcut keys & effects\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nxaringanExtra:\n\nadditional capabilities that do not come bundled with “base” xaringan\nactivated within code blocks (not YAML)\n\n\nxaringanthemer:\n\ntakes care of (color & font) css stylings for you\n\ncalled out within YAML, but activated/specified within code chunk"
+  },
+  {
+    "objectID": "slides/2026/3_10_26/index.html#yaml-yaml-aint-markup-language",
+    "href": "slides/2026/3_10_26/index.html#yaml-yaml-aint-markup-language",
+    "title": "R is for Authoring!!",
+    "section": "YAML (YAML Ain’t Markup Language…)",
+    "text": "YAML (YAML Ain’t Markup Language…)\n\nWhazzat?!?Simple YAMLElaborate YAML\n\n\naka “front matter” – controls overall look, feel, & format of your rendered product (plain text within the body of your product typically doesn’t differentiate – YAML is where you differentiate)\n\n\n\n3 types of content within these  &  products:\n\n\n\n\n\n text \n\n YAML \n\n\n code \n\n\n\n\n\nParallels product specification:   simpler = less formatting restrictions (generally being ok with default appearance)\n\n\n---\ntitle: \"Untitled\"\n1format: revealjs\n---\n\n# Header\n  \nlorem ipsum lorem ipsum...\n\n\n1\n\nMany, many, many options here\n\n\n\n\n\n\n\n\n\nWhen you are more demanding regarding rendered document spex, you will have more keys and values within your YAML (also indenting for nested/sub–keys)\n\n\n---\ntitle             : \"The title\"\nshorttitle        : \"Title\"\n\nauthor: \n  - name          : \"First Author\"\n    affiliation   : \"1\"\n    corresponding : yes    # Define only one corresponding author\n    address       : \"Postal address\"\n    email         : \"my@email.com\"\n    role: # Contributorship roles (e.g., CRediT, https://credit.niso.org/)\n      - \"Conceptualization\"\n      - \"Writing - Original Draft Preparation\"\n      - \"Writing - Review & Editing\"\n  - name          : \"Ernst-August Doelle\"\n    affiliation   : \"1,2\"\n    role:\n      - \"Writing - Review & Editing\"\n      - \"Supervision\"\n\naffiliation:\n  - id            : \"1\"\n    institution   : \"Wilhelm-Wundt-University\"\n  - id            : \"2\"\n    institution   : \"Konstanz Business School\"\n\nauthornote: |\n  Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.\n\n  Enter author note here.\n\nabstract: |\n  One or two sentences providing a **basic introduction** to the field,  comprehensible to a scientist in any discipline.\n  Two to three sentences of **more detailed background**, comprehensible  to scientists in related disciplines.\n  One sentence clearly stating the **general problem** being addressed by  this particular study.\n  One sentence summarizing the main result (with the words \"**here we show**\" or their equivalent).\n  Two or three sentences explaining what the **main result** reveals in direct comparison to what was thought to be the case previously, or how the  main result adds to previous knowledge.\n  One or two sentences to put the results into a more **general context**.\n  Two or three sentences to provide a **broader perspective**, readily comprehensible to a scientist in any discipline.\n  \n  &lt;!-- https://tinyurl.com/ybremelq --&gt;\n  \nkeywords          : \"keywords\"\nwordcount         : \"X\"\n\nbibliography      : \"r-references.bib\"\n\nfloatsintext      : no\nlinenumbers       : yes\ndraft             : no\nmask              : no\n\nfigurelist        : no\ntablelist         : no\nfootnotelist      : no\n\nclassoption       : \"man\"\noutput            : papaja::apa6_pdf\n---\n\n```{r setup, include = FALSE}\nlibrary(\"papaja\")\nr_refs(\"r-references.bib\")\n```\n\n```{r analysis-preferences}\n# Seed for random number generation\nset.seed(42)\nknitr::opts_chunk$set(cache.extra = knitr::rand_seed)\n```\n\n\n\n# Methods\nWe report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. &lt;!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) --&gt;\n\n## Participants\n\n## Material\n\n## Procedure\n\n## Data analysis\nWe used `r cite_r(\"r-references.bib\")` for all our analyses.\n\n\n# Results\n\n# Discussion\n\n\n\\newpage\n\n# References\n\n::: {#refs custom-style=\"Bibliography\"}\n:::\n\n\n\n\n…and of course the greatest discovery of them all!!!\nOCTOTHORPES!!!"
+  },
+  {
+    "objectID": "slides/2026/3_10_26/index.html#session-info-march-04-2026-rendering",
+    "href": "slides/2026/3_10_26/index.html#session-info-march-04-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (March 04, 2026) Rendering:",
+    "text": "Session Info (March 04, 2026) Rendering:\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.17.1 yaml_2.3.10      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.52        \n[13] digest_0.6.37     rlang_1.1.6       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/3_10_26/index.html#yaml-whazzat",
+    "href": "slides/2026/3_10_26/index.html#yaml-whazzat",
+    "title": "R is for Authoring!!",
+    "section": "YAML Whazzat?!?",
+    "text": "YAML Whazzat?!?\nGrok response (3/3/26):\n\n\n\n\n\n\n\n\nQuery:\n\n\n“I use YAML within Quarto and R Markdown documents. What are some other uses for YAML (please explain using non-technical jargon - e.g., to someone unfamiliar with computer languages)”"
+  },
+  {
+    "objectID": "slides/2026/3_10_26/index.html#open-office-hours-march-05-2026",
+    "href": "slides/2026/3_10_26/index.html#open-office-hours-march-05-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (March 05, 2026)",
+    "text": "Open Office Hours (March 05, 2026)\n\n\n\n\nRecap session #119\nToday’s topic(s):\n\nZotero!!\n\nShared problem-solving\n\nCheck out the awesome artwork of Tőkű Mőriya\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/3_10_26/index.html#session-info-march-05-2026-rendering",
+    "href": "slides/2026/3_10_26/index.html#session-info-march-05-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (March 05, 2026) Rendering:",
+    "text": "Session Info (March 05, 2026) Rendering:\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.17.1 yaml_2.3.10      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.52        \n[13] digest_0.6.37     rlang_1.1.6       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/3_10_26/index.html#open-office-hours-march-07-2026",
+    "href": "slides/2026/3_10_26/index.html#open-office-hours-march-07-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (March 07, 2026)",
+    "text": "Open Office Hours (March 07, 2026)\n\n\n\n\nRecap session #119\nToday’s topic(s):\n\nZotero!!\n\nShared problem-solving\n\n\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!\n\n\n\n\n\n\n\n  \n\n\n\n* …also please check out the awesome artwork of Tőkű Mőriya"
+  },
+  {
+    "objectID": "slides/2026/3_10_26/index.html#session-info-march-07-2026-rendering",
+    "href": "slides/2026/3_10_26/index.html#session-info-march-07-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (March 07, 2026) Rendering:",
+    "text": "Session Info (March 07, 2026) Rendering:\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.17.1 yaml_2.3.10      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.52        \n[13] digest_0.6.37     rlang_1.1.6       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/3_10_26/index.html#yaml-yaml-aint-markup-language-1",
+    "href": "slides/2026/3_10_26/index.html#yaml-yaml-aint-markup-language-1",
+    "title": "R is for Authoring!!",
+    "section": "YAML (YAML Ain’t Markup Language…)",
+    "text": "YAML (YAML Ain’t Markup Language…)\n\n\nGenerally:\n\ncross-language serialized data format\n\nwhere it began\ncurrently YAML 1.2.2\n\ntutorial 1: , tutorial 2: \nbeginner’s guide 1: , beginner’s guide 2: \n\n\nQuarto/ RMarkdown:\nProvides “meta” structure to be applied to entire rendered document (layout, fonts, format, stylings, etc)\n\nQuarto YAML"
+  },
+  {
+    "objectID": "slides/2026/3_10_26/index.html#zotero",
+    "href": "slides/2026/3_10_26/index.html#zotero",
+    "title": "R is for Authoring!!",
+    "section": "Zotero!!",
+    "text": "Zotero!!\nVery popular citation “manager” (free)  Kulas mostly uses the style repository\n\n\n\nopen–source with many features\nuser forums seem active\n integration with visual editor\n\n\n\nlocal or online options (can sign–in, don’t need to)\n\nbrowser extensions (   )\n\nZotero 8 just released (end of January)"
+  },
+  {
+    "objectID": "slides/2026/3_10_26/index.html#zoterohttpswww.zorro.comwp-contentuploads201404zr_teaser_001_040_lr_0001_a001-web.jpg",
+    "href": "slides/2026/3_10_26/index.html#zoterohttpswww.zorro.comwp-contentuploads201404zr_teaser_001_040_lr_0001_a001-web.jpg",
+    "title": "R is for Authoring!!",
+    "section": "[Zotero!!](https://www.zorro.com/wp-content/uploads/2014/04/zr_teaser_001_040_lr_0001_a001-web.jpg”}",
+    "text": "[Zotero!!](https://www.zorro.com/wp-content/uploads/2014/04/zr_teaser_001_040_lr_0001_a001-web.jpg”}\nVery popular citation “manager” (free)\n\n\n\nopen–source with many features\nuser forums seem active\n\n\n\nlocal or online software (can sign–in, don’t need to)\n\nbrowser extensions\n\nZotero 8 just released (end of January)"
   }
 ]

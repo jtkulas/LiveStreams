@@ -23,11 +23,11 @@
 @import url('https://fonts.googleapis.com/css?family=Kolker Brush');
 @import url('https://fonts.googleapis.com/css?family=Barriecito');
 
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: left;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
-  height: 150px !important;
+  height: 100px !important;
 }
 
 /* adding background to inline code elements */
@@ -384,3 +384,19 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
     2px 2px 0px white !important; 
 }
 
+.zotero {
+  font-family: "Kaushan Script";
+  font-weight: normal !important;
+  color: black;
+  text-shadow:
+    -2px -2px 0px white !important;
+}
+
+.zoterotit {
+  font-family: "Kaushan Script";
+  font-weight: normal !important;
+  font-size: 2.5em;
+  color: black;
+  text-shadow:
+    -2px -2px 0px white !important;
+}

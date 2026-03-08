@@ -1,0 +1,327 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: 'OOH Session #120...<br>[Zotero!!]{.zoterotit}'
+title-slide-attributes: 
+  data-background-image: ../../../img/zorro.png  #https://m.media-amazon.com/images/S/pv-target-images/bf4e67b54f0ae4a7d090d9141d23be078eecbeb20a99d523f67c13d5e63f3c8c._SX1080_FMjpg_.jpg   
+#  data-background-opacity: ".4"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://images.squarespace-cdn.com/content/v1/599c8ee149fc2bd3b045f4d2/1543517888687-LXFVC2MA16UNCIRFOSNG/587b4fb344060909aa603a75.png  #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {layout="[[10,10],]"}
+::: first-column
++ Recap session #119
++ Today's topic(s):
+    + [[Zotero!!]{.zotero .Bigger}](https://quarto.org/docs/visual-editor/technical.html#citations)
++ Shared problem-solving
+
+::: aside
+
+\* ...also please [check out the awesome artwork](https://x.com/tokuyaartist/status/1580665323908321280?s=20) of Tőkű Mőriya {{< iconify noto-v1:artist-palette >}}
+
+:::
+
+:::
+
+::: second-column
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 185px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/3_3_26">
+  <img src="/img/title119.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#119: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://freepngimg.com/download/icon/file/10375-yaml-file-format.png){.absolute width="110" top="265" right="120"}
+
+## [[YAML]{.ranchers2 .bigger}](https://quarto.org/docs/authoring/front-matter.html) [[(YAML Ain't Markup Language...)]{.ranchers2 .smaller}](https://github.com/yaml/)
+
+::: {.panel-tabset}
+
+### Whazzat?!?
+
+aka "front matter" -- controls overall ***look***, ***feel***, & ***format*** of your rendered product (plain text within the body of your product typically doesn't differentiate -- [YAML]{.ranchers2} is where you differentiate)
+
+::: {.columns}
+
+::: {.column width="40%" .smaller}
+
+>3 [types]{.underline} of content within these {{< iconify material-icon-theme:quarto >}} & {{< iconify file-icons:rmarkdown style="color:#82b1ff;" >}} products:
+
+:::
+
+::: {.column width="3%"}
+:::
+
+::: {.column width="19%"}
+
+<br>
+
+{{< iconify mdi:number-2-box style="color:#82b1ff;" >}} text {{< iconify emojione:writing-hand-medium-light-skin-tone >}}
+
+:::
+
+::: {.column width="19%"}
+{{< iconify mdi:number-1-box style="color:#82b1ff;" >}} [YAML]{.ranchers2} {{< iconify streamline-ultimate-color:hierarchy-5 >}}
+:::
+
+::: {.column width="19%"}
+
+<br>
+
+{{< iconify mdi:number-3-box style="color:#82b1ff;" >}} code {{< iconify devicon:r >}}
+
+:::
+
+:::
+
+### Simple [YAML]{.ranchers2}
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+Parallels product specification: <br>
+<br>
+simpler = less formatting restrictions (generally being ok with `default` appearance)
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+---
+title: "Untitled"
+format: revealjs #<1>
+---
+
+# Header
+  
+lorem ipsum lorem ipsum...
+
+```
+1. Many, many, [many options](https://quarto.org/docs/output-formats/all-formats.html) here
+
+:::
+
+:::
+
+### Elaborate [YAML]{.ranchers2} 
+
+::: {.columns}
+
+::: {.column width="50%"}
+When you are more demanding regarding rendered document spex, you will have more `keys` and `values` within your [YAML]{.ranchers2} (also indenting for nested/sub--keys)
+:::
+
+::: {.column width="50%"}
+
+````{r}
+---
+title             : "The title"
+shorttitle        : "Title"
+
+author: 
+  - name          : "First Author"
+    affiliation   : "1"
+    corresponding : yes    # Define only one corresponding author
+    address       : "Postal address"
+    email         : "my@email.com"
+    role: # Contributorship roles (e.g., CRediT, https://credit.niso.org/)
+      - "Conceptualization"
+      - "Writing - Original Draft Preparation"
+      - "Writing - Review & Editing"
+  - name          : "Ernst-August Doelle"
+    affiliation   : "1,2"
+    role:
+      - "Writing - Review & Editing"
+      - "Supervision"
+
+affiliation:
+  - id            : "1"
+    institution   : "Wilhelm-Wundt-University"
+  - id            : "2"
+    institution   : "Konstanz Business School"
+
+authornote: |
+  Add complete departmental affiliations for each author here. Each new line herein must be indented, like this line.
+
+  Enter author note here.
+
+abstract: |
+  One or two sentences providing a **basic introduction** to the field,  comprehensible to a scientist in any discipline.
+  Two to three sentences of **more detailed background**, comprehensible  to scientists in related disciplines.
+  One sentence clearly stating the **general problem** being addressed by  this particular study.
+  One sentence summarizing the main result (with the words "**here we show**" or their equivalent).
+  Two or three sentences explaining what the **main result** reveals in direct comparison to what was thought to be the case previously, or how the  main result adds to previous knowledge.
+  One or two sentences to put the results into a more **general context**.
+  Two or three sentences to provide a **broader perspective**, readily comprehensible to a scientist in any discipline.
+  
+  <!-- https://tinyurl.com/ybremelq -->
+  
+keywords          : "keywords"
+wordcount         : "X"
+
+bibliography      : "r-references.bib"
+
+floatsintext      : no
+linenumbers       : yes
+draft             : no
+mask              : no
+
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+
+classoption       : "man"
+output            : papaja::apa6_pdf
+---
+
+```{r setup, include = FALSE}
+library("papaja")
+r_refs("r-references.bib")
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+
+
+
+# Methods
+We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
+
+## Participants
+
+## Material
+
+## Procedure
+
+## Data analysis
+We used `r cite_r("r-references.bib")` for all our analyses.
+
+
+# Results
+
+# Discussion
+
+
+\newpage
+
+# References
+
+::: {#refs custom-style="Bibliography"}
+:::
+
+````
+
+
+:::
+
+:::
+
+### {{< iconify emojione-v1:exclamation-question-mark >}}
+
+...and of course the greatest discovery of them all!!!
+
+[OCTOTHORPES!!!]{.huge}
+
+![](https://static.vecteezy.com/system/resources/previews/017/178/020/non_2x/red-hashtag-sign-symbol-on-transparent-background-free-png.png){.absolute height="250" left="350" bottom="0"}
+
+![](https://freepngimg.com/save/67579-icons-media-hashtag-number-sign-computer-social/894x981){.absolute height="200" right="-160" bottom="250"}
+
+![](https://static.vecteezy.com/system/resources/previews/027/391/953/non_2x/hashtag-symbol-isolated-on-a-transparent-background-free-png.png){.absolute height="300" left="-170" bottom="-20"}
+
+![](https://www.clker.com/cliparts/l/D/c/H/2/1/hash-sign-hi.png){.absolute height="150" left="170" bottom="40"}
+
+![](https://png.pngtree.com/png-vector/20250128/ourmid/pngtree-hashtag-3d-icon-isolated-on-a-transparent-background-symbolizing-trends-and-png-image_15359183.png){.absolute height="250" right="190" bottom="-10"}
+
+![](https://static.vecteezy.com/system/resources/thumbnails/060/686/120/small/signature-nordic-flat-black-hashtag-symbol-crisp-edges-clean-lines-with-scalable-design-ultra-hd-png.png){.absolute height="170" right="10" bottom="70"}
+
+![](https://static.vecteezy.com/system/resources/thumbnails/061/854/657/small/hashtag-grid-twist-png.png){.absolute height="150" left="-150" top="300"}
+
+:::
+
+![](https://upload.wikimedia.org/wikipedia/en/0/00/Popeye_the_Sailor.png){.absolute left="-160" top="-10" height="300"}
+
+![](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5e951658-22c3-4cd5-b9d4-004e54adf055/dg3drcp-14a084bd-9fb1-4411-b476-a30812296f3b.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi81ZTk1MTY1OC0yMmMzLTRjZDUtYjlkNC0wMDRlNTRhZGYwNTUvZGczZHJjcC0xNGEwODRiZC05ZmIxLTQ0MTEtYjQ3Ni1hMzA4MTIyOTZmM2IucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.yV_DBuuAw3ZhGXpKj9S8EBitwuFtyatrer04FEzW1zY){.absolute right="-160" top="0" height="200"}
+
+# Today...
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzhtMGZ3eWJtZGRkNHd6aWJrOTZ2bWYwcWJ1dnE1YzRpbWd4eTZ1ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13v7PUKv5zwwhi/giphy.gif)
+
+## [[Zotero!!]{.zotero .Bigger}](https://www.zotero.org/styles) {background-image="https://www.zorro.com/wp-content/uploads/2014/04/zr_teaser_001_040_lr_0001_a001-web.jpg" background-opacity=".4"}
+
+Very popular citation "manager" ([free](https://www.zotero.org/)) <br> Kulas mostly uses the [style repository](https://www.zotero.org/styles)
+
+::: {.columns}
+
+::: {.column width="50%"}
+
++ open--source with [many features](https://www.zotero.org/why) 
++ [user forums](https://forums.zotero.org/) seem active
++ [{{< iconify devicon:rstudio >}} integration](https://quarto.org/docs/visual-editor/technical.html#citations) with visual editor
+
+:::
+
+::: {.column width="50%"}
+
++ [local](https://www.zotero.org/download/) or [online](https://www.zotero.org/user/login) options (can sign--in, don't [need]{.underline} to)
+  + browser extensions ([{{< iconify devicon:safari >}} {{< iconify devicon:safari >}} {{< iconify logos:firefox >}} {{< iconify logos:microsoft-edge >}}](https://www.zotero.org/download/connectors))
++ Zotero 8 just released (end of January)
+
+:::
+
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/046/032/545/non_2x/illustration-on-a-transparent-background-cartoon-fox-little-fox-running-fox-free-png.png){.absolute bottom="0" left="-150" height="200"}
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTVmM3NnMGx6aTg3dWF4eW90dG5xb25zN2FvaTlxbDJsdGx4YWZyMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/v8pACm7D82olW/giphy.gif){.absolute right="-70" top="20" height="300"}
+
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+#| eval: true
+#| echo: false
+sessionInfo()
+```
