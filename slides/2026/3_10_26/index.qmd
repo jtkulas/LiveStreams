@@ -292,7 +292,7 @@ We used `r cite_r("r-references.bib")` for all our analyses.
 
 ## [[Zotero!!]{.zotero .Bigger}](https://www.zotero.org/styles) {background-image="https://www.zorro.com/wp-content/uploads/2014/04/zr_teaser_001_040_lr_0001_a001-web.jpg" background-opacity=".4"}
 
-Very popular ([free](https://www.zotero.org/)) citation "manager" <br> Kulas mostly uses the [style repository](https://www.zotero.org/styles)
+Very popular ([free](https://www.zotero.org/)) [citation](https://quarto.org/docs/authoring/citations.html) "manager" <br> Kulas mostly uses the [style repository](https://www.zotero.org/styles)
 
 ::: {.columns}
 
