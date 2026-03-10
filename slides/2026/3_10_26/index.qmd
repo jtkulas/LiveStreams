@@ -68,9 +68,9 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 # Recap of Session <br>#119: 
 
-![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+![](https://pngimg.com/d/sticky_note_PNG18952.png){.absolute right="50" top="200"}
 
-![](https://freepngimg.com/download/icon/file/10375-yaml-file-format.png){.absolute width="110" top="265" right="120"}
+![](https://freepngimg.com/download/icon/file/10375-yaml-file-format.png){.absolute width="170" top="245" right="80"}
 
 ## [[YAML]{.ranchers2 .bigger}](https://quarto.org/docs/authoring/front-matter.html) [[(YAML Ain't Markup Language...)]{.ranchers2 .smaller}](https://github.com/yaml/)
 
