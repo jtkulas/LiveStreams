@@ -318,10 +318,45 @@ Very popular ([free](https://www.zotero.org/)) [citation](https://quarto.org/doc
 
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTVmM3NnMGx6aTg3dWF4eW90dG5xb25zN2FvaTlxbDJsdGx4YWZyMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/v8pACm7D82olW/giphy.gif){.absolute right="-70" top="20" height="300"}
 
-
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
 #| eval: true
 #| echo: false
 sessionInfo()
 ```
+
+## Notes...
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+>`typst` document types have traditionally used a different citation processor than html/pdfs, so you may need an additional specification to have the desired [style]{.dancing .underline} effect: {{< iconify emojione-v1:eyes flip=horizontal >}}
+
+:::
+
+::: {.column width="50%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+```{r}
+#| code-line-numbers: "5"
+---
+title: "My Document"
+format:
+  typst:
+    citeproc: true               #<1> 
+    csl: apa.csl                 #<1>
+bibliography: references.bib
+---
+```
+1. Has been historically effective -- forcing the "normal" Pandoc citation processor
+:::
+
+:::
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZm9nbng5eGYwdjF4enN0MTFlY2JsbWYxMW13N2I4djd2Y2pieHFjNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l4pTqyJ8XMhLZ3ScE/giphy.gif){.absolute right="0" top="-40" height="450"}
