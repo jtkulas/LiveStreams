@@ -1,0 +1,262 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: 'OOH Session #121...<br>[{{< iconify noto:package >}}`package`{{< iconify fluent-emoji-flat:package >}}<br>{{< iconify noto:no-entry >}}]{.bigger}[citations!!]{.dancing}[{{< iconify noto:no-entry >}}]{.bigger}'
+title-slide-attributes: 
+  data-background-image: ../../../img/copcite.png #https://cdn.vectorstock.com/i/500p/89/26/police-officer-writing-ticket-traffic-violation-vector-36628926.jpg   
+#  data-background-opacity: ".4"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://png.pngtree.com/png-clipart/20220724/ourmid/pngtree-cute-packaging-delivery-box-png-image_6046130.png  #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {layout="[[10,10],]"}
+::: first-column
++ Recap session #120
++ Today's topic(s):
+    + {{< iconify noto:package >}}`package`{{< iconify fluent-emoji-flat:package >}}<br>{{< iconify noto:no-entry >}}[citations!!]{.dancing}{{< iconify noto:no-entry >}}
++ Shared problem-solving
+
+:::
+
+::: second-column
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 185px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/3_10_26">
+  <img src="/img/title120.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#120: 
+
+![](https://pngimg.com/d/sticky_note_PNG18952.png){.absolute right="50" top="200"}
+
+![](https://upload.wikimedia.org/wikipedia/commons/9/95/Zotero_icon.png){.absolute width="170" top="245" right="80"}
+
+## [[Zotero]{.zotero .Bigger}](https://quarto.org/docs/authoring/front-matter.html) {background-image="https://images.squarespace-cdn.com/content/v1/599c8ee149fc2bd3b045f4d2/1543517888687-LXFVC2MA16UNCIRFOSNG/587b4fb344060909aa603a75.png" background-opacity=".3"}
+
+::: {.panel-tabset}
+
+### Imp/Ex--porting
+
+::: {.columns .Smaller}
+
+::: {.column width="44%"}
+
+1. {{< iconify mdi:wand >}} ISBN, DOI (or other) identifier
+2. `File`{{< iconify maki:arrow >}}`Import...` -- then find your .bib file(s)
+3. browser [extensions/ connectors](https://www.zotero.org/download/connectors)
+
+:::
+
+::: {.column width="56%"}
+:::
+
+:::
+
+![](../../../img/zotsnip.png){.absolute right="-140" bottom="120"}
+
+### {{< iconify devicon:rstudio >}} & {{< iconify devicon:positron >}}
+
+::: {.columns .smaller}
+
+::: {.column width="55%"}
+
+:::
+
+::: {.column width="45%"}
+
+Both have identical interface within the `visual` editor(s)
+
+However -- Zotero [needs to be OPEN]{.underline} for Positron use -- R Studio will find entries regardless of whether Zotero is currently open or not
+
+:::
+
+:::
+
+![](../../../img/zoteropos.png){.absolute left="-120" bottom="70" height="300"}
+
+### Styles
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+1. Find desired style (use [Style Search](https://www.zotero.org/styles))
+2. Click hyperlink to download
+3. Place in project directory
+4. Call out within [YAML]{.yaml} {{< iconify emojione:left-arrow flip=horizontal >}}
+
+:::
+
+::: {.column width="40%"}
+
+::: {.callout-note}
+
+10,840 styles listed on [Zotero Style Repository](https://www.zotero.org/styles)
+
+:::
+
+```{r}
+#| code-line-numbers: "5"
+---
+title: "My Document"
+format: pdf
+bibliography: references.bib
+csl: apa.csl                 #<1>
+---
+```
+1. first--level specification unless using `format: typst` (see next tab)
+
+:::
+
+:::
+
+
+![](https://static.vecteezy.com/system/resources/previews/046/032/545/non_2x/illustration-on-a-transparent-background-cartoon-fox-little-fox-running-fox-free-png.png){.absolute bottom="370" left="-180" height="250"}
+
+### `typst` 
+
+::: {.columns}
+
+::: {.column width="65%"}
+
+>use `citeproc: true` to force Pandoc citation processor -- seemed to be more important for inline styling (end--of--document bibliography looked good)
+
+:::
+
+::: {.column width="35%"}
+
+<br>
+
+```{r}
+#| code-line-numbers: "5"
+---
+title: "My Document"
+format:
+  typst:
+    citeproc: true               #<1> 
+    csl: apa.csl                 #<1>
+bibliography: references.bib
+---
+```
+1. Has been historically effective -- forcing the "normal" Pandoc citation processor
+:::
+
+:::
+
+
+:::
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTVmM3NnMGx6aTg3dWF4eW90dG5xb25zN2FvaTlxbDJsdGx4YWZyMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/v8pACm7D82olW/giphy.gif){.absolute right="-150" top="-30" height="270"}
+
+# Today...
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2ZjcHZ3dW13bGZlb3NteGs0Z3I4a2dtZ2NjZnZqcHA0dHVodzR0eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vmTfdbGr8CwLB4S6lM/giphy.gif)
+
+## `package` [citations!!]{.dancing}
+
+
+::: {.columns .smaller}
+
+::: {.column width="40%"}
+
+### `knitr` functions
+
++ [`.packages()`](https://github.com/yihui/knitr/blob/master/R/defaults.R)
+  + hidden ("dot" prefix)
++ [`write_bib()`](https://yihui.org/rmarkdown-cookbook/write-bib)
+  + will overwrite existing .bib file
+  + use separate .bib for "other" citations
+
+:::
+
+::: {.column width="30%"}
+
+### structure
+
+::: {.fragment .semi-fade-out fragment-index=1}
+
+Chunk:
+
+```{r}
+knitr::write_bib(c
+    (.packages(), 
+      "ggplot2"), 
+    "packages.bib")
+```
+:::
+
+::: {.fragment .fade-in fragment-index=1}
+
+[YAML]{.yaml}:
+
+```{r}
+#| code-line-numbers: "4"
+---
+title: "Untitled"
+format: html
+bibliography: packages.bib
+---
+```
+
+:::
+
+:::
+
+::: {.column width="30%"}
+
+### other options
+
++ `grateful` 
++ [`knitcitations`](https://www.rdocumentation.org/packages/knitcitations/versions/1.0.12)
+
+:::
+
+:::
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMW9tNWl6dWNwOHhtN2gwcmJ1ZzEwb2VwdHd4ZXNoNnhxeWh6bDUzOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oz8xL4uzr5Rd3ZEwU/giphy.gif){.absolute right="-80" bottom="20" height="240"}
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDJjODFtYmk1eWltY2xja250amZkMmRmcHhjMnlocDN5a2Q0NTU4dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6MbelROhsc0E03XG/giphy.gif){.absolute right="-150" top="-40" height="220"}
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+#| eval: true
+#| echo: false
+sessionInfo()
+```
+

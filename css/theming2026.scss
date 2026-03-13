@@ -22,6 +22,7 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik Vinyl');
 @import url('https://fonts.googleapis.com/css?family=Kolker Brush');
 @import url('https://fonts.googleapis.com/css?family=Barriecito');
+@import url('https://fonts.googleapis.com/css?family=Black Ops One');
 
 $presentation-title-slide-text-align: left;
 
@@ -406,3 +407,13 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-size: 1.5em;
   font-family: 'Dancing Script';
 }
+
+.dancing {
+  color: black;
+  font-family: 'Black Ops One';
+  font-weight: normal !important;
+  text-shadow:
+    0px 0px 0px !important;
+}
+
+
