@@ -30,7 +30,7 @@ execute:
 ::: first-column
 + Recap session #120
 + Today's topic(s):
-    + {{< iconify noto:package >}}`package`{{< iconify fluent-emoji-flat:package >}}<br>{{< iconify noto:no-entry >}}[citations!!]{.dancing}{{< iconify noto:no-entry >}}
+    + [{{< iconify noto:package >}}`package`{{< iconify fluent-emoji-flat:package >}}<br>{{< iconify noto:no-entry >}}[citations!!]{.dancing}{{< iconify noto:no-entry >}}](https://yihui.org/rmarkdown-cookbook/write-bib#write-bib)
 + Shared problem-solving
 
 :::
@@ -119,7 +119,7 @@ However -- Zotero [needs to be OPEN]{.underline} for Positron use -- R Studio wi
 1. Find desired style (use [Style Search](https://www.zotero.org/styles))
 2. Click hyperlink to download
 3. Place in project directory
-4. Call out within [YAML]{.yaml} {{< iconify emojione:left-arrow flip=horizontal >}}
+4. Call out within [YAML]{.ranchers2} {{< iconify emojione:left-arrow flip=horizontal >}}
 
 :::
 
@@ -188,7 +188,7 @@ bibliography: references.bib
 
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2ZjcHZ3dW13bGZlb3NteGs0Z3I4a2dtZ2NjZnZqcHA0dHVodzR0eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vmTfdbGr8CwLB4S6lM/giphy.gif)
 
-## `package` [citations!!]{.dancing}
+## [`package` [citations!!]{.dancing}](https://yihui.org/rmarkdown-cookbook/write-bib#write-bib)
 
 
 ::: {.columns .smaller}
@@ -223,7 +223,7 @@ knitr::write_bib(c
 
 ::: {.fragment .fade-in fragment-index=1}
 
-[YAML]{.yaml}:
+[YAML]{.ranchers2}:
 
 ```{r}
 #| code-line-numbers: "4"
@@ -252,6 +252,18 @@ bibliography: packages.bib
 ![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMW9tNWl6dWNwOHhtN2gwcmJ1ZzEwb2VwdHd4ZXNoNnhxeWh6bDUzOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oz8xL4uzr5Rd3ZEwU/giphy.gif){.absolute right="-80" bottom="20" height="240"}
 
 ![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDJjODFtYmk1eWltY2xja250amZkMmRmcHhjMnlocDN5a2Q0NTU4dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6MbelROhsc0E03XG/giphy.gif){.absolute right="-150" top="-40" height="220"}
+
+![](https://pngimg.com/d/box_PNG49.png){.absolute right="-130" top="250" height="180"}
+
+![](https://appsilon.github.io/shiny.semantic/reference/figures/hexsticker.png){.absolute left="-170" top="125" height="150"}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Ggplot2_hex_logo.png/250px-Ggplot2_hex_logo.png){.absolute left="-120" bottom="300" height="150"}
+
+![](https://tidyverse.org/css/images/hex/tidyr.png){.absolute left="-170" bottom="165" height="150"}
+
+![](https://rstudio.github.io/cheatsheets/html/images/logo-purrr.png){.absolute left="-120" bottom="20" height="170"}
+
+
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
