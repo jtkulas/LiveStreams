@@ -242,8 +242,8 @@ bibliography: packages.bib
 
 ### other options
 
-+ `grateful` 
-+ [`knitcitations`](https://www.rdocumentation.org/packages/knitcitations/versions/1.0.12)
++ [`grateful`](https://pakillo.github.io/grateful/) 
++ [`pakret`](https://arnaudgallou.github.io/pakret/)
 
 :::
 

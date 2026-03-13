@@ -1376,7 +1376,7 @@
     "href": "slides/2026/3_17_26/index.html#package-citations",
     "title": "R is for Authoring!!",
     "section": "package citations!!",
-    "text": "package citations!!\n\n\nknitr functions\n\n.packages()\n\nhidden (“dot” prefix)\n\nwrite_bib()\n\nwill overwrite existing .bib file\nuse separate .bib for “other” citations\n\n\n\nstructure\n\nChunk:\n\nknitr::write_bib(c\n    (.packages(), \n      \"ggplot2\"), \n    \"packages.bib\")\n\n\n\nYAML:\n\n---\ntitle: \"Untitled\"\nformat: html\nbibliography: packages.bib\n---\n\n\n\nother options\n\ngrateful\nknitcitations"
+    "text": "package citations!!\n\n\nknitr functions\n\n.packages()\n\nhidden (“dot” prefix)\n\nwrite_bib()\n\nwill overwrite existing .bib file\nuse separate .bib for “other” citations\n\n\n\nstructure\n\nChunk:\n\nknitr::write_bib(c\n    (.packages(), \n      \"ggplot2\"), \n    \"packages.bib\")\n\n\n\nYAML:\n\n---\ntitle: \"Untitled\"\nformat: html\nbibliography: packages.bib\n---\n\n\n\nother options\n\ngrateful\npakret"
   },
   {
     "objectID": "slides/2026/3_17_26/index.html#open-office-hours-march-12-2026",
