@@ -240,7 +240,7 @@ bibliography: packages.bib
 
 ::: {.column width="30%"}
 
-### other options
+### [other options](https://www.rdocumentation.org/packages/papaja/versions/0.1.4/topics/cite_r)
 
 + [`grateful`](https://pakillo.github.io/grateful/) 
 + [`pakret`](https://arnaudgallou.github.io/pakret/)
