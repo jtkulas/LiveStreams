@@ -265,10 +265,13 @@ bibliography: packages.bib
 
 
 
-## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: {{< iconify fxemoji:fourleafclover >}}{{< iconify fxemoji:fourleafclover >}}{{< iconify fxemoji:fourleafclover >}}{{< iconify fxemoji:fourleafclover >}}
 ```{r}
 #| eval: true
 #| echo: false
 sessionInfo()
 ```
 
+![](https://www.clipartmax.com/png/full/361-3613443_luck-clipart-leprechaun-lucky-charms-leprechaun-png.png){.absolute right="-140" top="-30" height="300"}
+
+![](https://images.vexels.com/media/users/3/230393/isolated/preview/b8b675c65440b31aa8c29fbd667ca6a1-pot-of-gold-flat.png){.absolute right="150" bottom="-20" height="350"}
