@@ -1,0 +1,279 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: 'OOH Session #122...<br>[{{< iconify noto:package >}}`package`{{< iconify fluent-emoji-flat:package >}}<br>{{< iconify noto:no-entry >}}]{.bigger}[citations!!]{.dancing}[{{< iconify noto:no-entry >}}]{.bigger}'
+title-slide-attributes: 
+  data-background-image: ../../../img/copcite.png #https://cdn.vectorstock.com/i/500p/89/26/police-officer-writing-ticket-traffic-violation-vector-36628926.jpg   
+#  data-background-opacity: ".4"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://png.pngtree.com/png-clipart/20220724/ourmid/pngtree-cute-packaging-delivery-box-png-image_6046130.png  #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {layout="[[10,10],]"}
+::: first-column
++ Recap session #121
++ Today's topic(s):
+    + [{{< iconify noto:package >}}`package`{{< iconify fluent-emoji-flat:package >}}<br>{{< iconify noto:no-entry >}}[citations!!]{.dancing}{{< iconify noto:no-entry >}}](https://yihui.org/rmarkdown-cookbook/write-bib#write-bib)
++ Shared problem-solving
+
+:::
+
+::: second-column
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 185px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/3_17_26">
+  <img src="/img/title121.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#121: 
+
+![](https://pngimg.com/d/sticky_note_PNG18952.png){.absolute right="50" top="200"}
+
+![](https://raw.githubusercontent.com/dmi3kno/polite/master/data-raw/sticker.png){.absolute width="150" top="245" right="90"}
+
+## [{{< iconify noto:package >}}`package`{{< iconify fluent-emoji-flat:package >}}<br>{{< iconify noto:no-entry >}}[citations!!]{.dancing}{{< iconify noto:no-entry >}}](https://yihui.org/rmarkdown-cookbook/write-bib#write-bib)
+
+::: {.panel-tabset}
+
+### `knitr::`
+
+::: {.columns .smaller}
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="55%"}
+
+1. `write_bib` creates .bib file (will overwrite existing)
+
+2. `.packages()` is a hidden function that will include all loaded packages within the .bib^[you can also call--out specific packages if you'd like them included in the .bib file]
+
+:::
+
+::: {.column width="40%"}
+
+````{r}
+lorem ipsum lorem ipsum lorem ipsum 
+
+```{r}
+knitr::write_bib(c
+    (.packages(), 
+      "ggplot2"), 
+    "packages.bib")
+
+```
+````
+
+:::
+
+:::
+
+### `papaja::`
+
+::: {.columns .smaller}
+
+::: {.column width="55%"}
+
+:::
+
+::: {.column width="45%"}
+
+Both have identical interface within the `visual` editor(s)
+
+However -- Zotero [needs to be OPEN]{.underline} for Positron use -- R Studio will find entries regardless of whether Zotero is currently open or not
+
+:::
+
+:::
+
+![](../../../img/zoteropos.png){.absolute left="-120" bottom="70" height="300"}
+
+### Other options
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+1. Find desired style (use [Style Search](https://www.zotero.org/styles))
+2. Click hyperlink to download
+3. Place in project directory
+4. Call out within [YAML]{.ranchers2} {{< iconify emojione:left-arrow flip=horizontal >}}
+
+:::
+
+::: {.column width="40%"}
+
+::: {.callout-note}
+
+10,840 styles listed on [Zotero Style Repository](https://www.zotero.org/styles)
+
+:::
+
+```{r}
+#| code-line-numbers: "5"
+---
+title: "My Document"
+format: pdf
+bibliography: references.bib
+csl: apa.csl                 #<1>
+---
+```
+1. first--level specification unless using `format: typst` (see next tab)
+
+:::
+
+:::
+
+:::
+
+![](https://raw.githubusercontent.com/JeffreyRStevens/flashr/main/man/figures/logo.png){.absolute top="-40" right="50" height="230"}
+
+![](https://raw.githubusercontent.com/furrer-lab/abn/refs/heads/main/inst/figures/logo.png){.absolute right="-120" top="100"  height="230"}
+ 
+![](https://www.gavinrozzi.com/images/portfolio/r-packages/zipcoder-logo.webp){.absolute height="150" left="-150" top="150"}
+ 
+![](https://www.jumpingrivers.com/blog/spring-clean-r-package-usethis/sticker.png){.absolute left="-130" bottom="150" height="180"}
+
+![](https://64.media.tumblr.com/844d8b61c57c75d76a64fb21bbf6404e/ca3137f2bed7e0d8-13/s540x810/de4b379700e74d3159f693a7ddc87bb407e016a7.png)
+
+![](https://www.atorusresearch.com/wp-content/uploads/timber-885x1024.png)
+
+![](https://www.john-fox.ca/Companion/car-hex.png)
+
+![](https://cran.r-project.org/web/packages/hexfont/readme/man/figures/logo.png)
+
+![](https://raw.githubusercontent.com/lance-waller-lab/envi/main/man/figures/envi.png)
+
+![](https://www.tesselle.org/images/packages/alkahest.png)
+
+![](https://www.tidymodels.org/images/parsnip.png)
+
+![](https://www.tidymodels.org/images/recipes.png)
+
+# Today...
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ2ZjcHZ3dW13bGZlb3NteGs0Z3I4a2dtZ2NjZnZqcHA0dHVodzR0eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vmTfdbGr8CwLB4S6lM/giphy.gif)
+
+## [`package` [citations!!]{.dancing}](https://yihui.org/rmarkdown-cookbook/write-bib#write-bib)
+
+
+::: {.columns .smaller}
+
+::: {.column width="40%"}
+
+### `knitr` functions
+
++ [`.packages()`](https://github.com/yihui/knitr/blob/master/R/defaults.R)
+  + hidden ("dot" prefix)
++ [`write_bib()`](https://yihui.org/rmarkdown-cookbook/write-bib)
+  + will overwrite existing .bib file
+  + use separate .bib for "other" citations
+
+:::
+
+::: {.column width="30%"}
+
+### structure
+
+::: {.fragment .semi-fade-out fragment-index=1}
+
+Chunk:
+
+```{r}
+knitr::write_bib(c
+    (.packages(), 
+      "ggplot2"), 
+    "packages.bib")
+```
+:::
+
+::: {.fragment .fade-in fragment-index=1}
+
+[YAML]{.ranchers2}:
+
+```{r}
+#| code-line-numbers: "4"
+---
+title: "Untitled"
+format: html
+bibliography: packages.bib
+---
+```
+
+:::
+
+:::
+
+::: {.column width="30%"}
+
+### [other options](https://www.rdocumentation.org/packages/papaja/versions/0.1.4/topics/cite_r)
+
++ [`grateful`](https://pakillo.github.io/grateful/) 
++ [`pakret`](https://arnaudgallou.github.io/pakret/)
+
+:::
+
+:::
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMW9tNWl6dWNwOHhtN2gwcmJ1ZzEwb2VwdHd4ZXNoNnhxeWh6bDUzOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oz8xL4uzr5Rd3ZEwU/giphy.gif){.absolute right="-80" bottom="20" height="240"}
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDJjODFtYmk1eWltY2xja250amZkMmRmcHhjMnlocDN5a2Q0NTU4dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6MbelROhsc0E03XG/giphy.gif){.absolute right="-150" top="-40" height="220"}
+
+![](https://pngimg.com/d/box_PNG49.png){.absolute right="-130" top="250" height="180"}
+
+![](https://appsilon.github.io/shiny.semantic/reference/figures/hexsticker.png){.absolute left="-170" top="125" height="150"}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Ggplot2_hex_logo.png/250px-Ggplot2_hex_logo.png){.absolute left="-120" bottom="300" height="150"}
+
+![](https://tidyverse.org/css/images/hex/tidyr.png){.absolute left="-170" bottom="165" height="150"}
+
+![](https://rstudio.github.io/cheatsheets/html/images/logo-purrr.png){.absolute left="-120" bottom="20" height="170"}
+
+
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: {{< iconify fxemoji:fourleafclover >}}{{< iconify fxemoji:fourleafclover >}}{{< iconify fxemoji:fourleafclover >}}{{< iconify fxemoji:fourleafclover >}}
+```{r}
+#| eval: true
+#| echo: false
+sessionInfo()
+```
+
+![](https://www.clipartmax.com/png/full/361-3613443_luck-clipart-leprechaun-lucky-charms-leprechaun-png.png){.absolute right="-140" top="-30" height="300"}
+
+![](https://images.vexels.com/media/users/3/230393/isolated/preview/b8b675c65440b31aa8c29fbd667ca6a1-pot-of-gold-flat.png){.absolute right="150" bottom="-20" height="350"}
