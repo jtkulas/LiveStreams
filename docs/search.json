@@ -1446,7 +1446,7 @@
     "href": "slides/2026/3_24_26/index.html#package-citations",
     "title": "R is for Authoring!!",
     "section": "packagecitations!!",
-    "text": "packagecitations!!\n\nknitr::papaja::Other options\n\n\n\n\n\n\n\nwrite_bib creates .bib file (will overwrite existing)\n.packages() is a hidden function that will include all loaded packages within the .bib1\n\n\n\nlorem ipsum lorem ipsum lorem ipsum \n\n```{r}\nknitr::write_bib(c\n    (.packages(), \n      \"ggplot2\"), \n    \"packages.bib\")\n\n```\n\n\n\n\n\n\n\n\nBoth have identical interface within the visual editor(s)\nHowever – Zotero needs to be OPEN for Positron use – R Studio will find entries regardless of whether Zotero is currently open or not\n\n\n\n\n\n\n\nFind desired style (use Style Search)\nClick hyperlink to download\nPlace in project directory\nCall out within YAML \n\n\n\n\n\n\n\n\nNote\n\n\n10,840 styles listed on Zotero Style Repository\n\n\n\n\n---\ntitle: \"My Document\"\nformat: pdf\nbibliography: references.bib\n1csl: apa.csl\n---\n\n\n1\n\nfirst–level specification unless using format: typst (see next tab)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nyou can also call–out specific packages if you’d like them included in the .bib file"
+    "text": "packagecitations!!\n\nknitr::papaja::Other options\n\n\n\n\n\n\n\nwrite_bib creates .bib file (will overwrite existing)\n.packages() is a hidden function that will include all loaded packages within the .bib1\n\n\n\n---\nformat: html\n1bibliography: packages.bib\n---\n\n```{r}\nknitr::write_bib(c(.packages(), \n2      \"ggplot2\"), \"packages.bib\")\n\n```\n\n\n1\n\nshould match name YOU provide (line #8 here)\n\n2\n\nany non–loaded packages you want to include + your .bib filename\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncite_r() for auto–population of in–text citations\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nyou can also call–out specific packages if you’d like them included in the .bib file"
   },
   {
     "objectID": "slides/2026/3_24_26/index.html#package-citations-1",
@@ -1461,5 +1461,26 @@
     "title": "R is for Authoring!!",
     "section": " Session Info (March 20, 2026) Rendering: ",
     "text": "Session Info (March 20, 2026) Rendering: \n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.56        \n[13] digest_0.6.37     rlang_1.1.7       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/3_24_26/index.html#open-office-hours-march-21-2026",
+    "href": "slides/2026/3_24_26/index.html#open-office-hours-march-21-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (March 21, 2026)",
+    "text": "Open Office Hours (March 21, 2026)\n\n\n\n\nRecap session #121\nToday’s topic(s):\n\nNCAA tournamentbrackets \n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/3_24_26/index.html#session-info-march-21-2026-rendering",
+    "href": "slides/2026/3_24_26/index.html#session-info-march-21-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (March 21, 2026) Rendering:",
+    "text": "Session Info (March 21, 2026) Rendering:\n\n\nR version 4.3.1 (2023-06-16 ucrt)\nPlatform: x86_64-w64-mingw32/x64 (64-bit)\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.3.1    fastmap_1.1.1     cli_3.6.1         tools_4.3.1      \n [5] htmltools_0.5.7   rstudioapi_0.15.0 yaml_2.3.7        rmarkdown_2.25   \n [9] knitr_1.45        jsonlite_2.0.0    xfun_0.49         digest_0.6.37    \n[13] rlang_1.1.1       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/3_24_26/index.html#ncaa-tournament-brackets",
+    "href": "slides/2026/3_24_26/index.html#ncaa-tournament-brackets",
+    "title": "R is for Authoring!!",
+    "section": "NCAA tournament brackets",
+    "text": "NCAA tournament brackets"
   }
 ]

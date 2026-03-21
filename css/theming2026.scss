@@ -23,8 +23,10 @@
 @import url('https://fonts.googleapis.com/css?family=Kolker Brush');
 @import url('https://fonts.googleapis.com/css?family=Barriecito');
 @import url('https://fonts.googleapis.com/css?family=Black Ops One');
+@import url('https://fonts.googleapis.com/css?family=Graduate');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
 
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
@@ -416,4 +418,21 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
     0px 0px 0px !important;
 }
 
+.ncaa {
+  color: white;
+  font-family: 'Graduate';
+  font-style: italic;
+  font-weight: bold !important;
+  background-color: #009CDE;
+  text-shadow:
+    0px 0px 0px !important;
+}
+
+.ncaa2 {
+  color: #FFA500;
+  font-family: 'Merriweather';
+  font-weight: normal !important;
+  text-shadow:
+    2px 2px 0px #704214 !important;
+}
 
