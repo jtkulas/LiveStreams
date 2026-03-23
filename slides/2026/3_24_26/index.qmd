@@ -2,7 +2,7 @@
 title: "[R is for <br>Authoring!!]{.shadowsharp}" 
 author: 'OOH Session #122...<br>[NCAA]{.ncaa} [tournament]{.ncaa2}<br>{{< iconify mdi:bracket style="color:#000000;" >}}[brackets]{.ncaa2}{{< iconify mdi:bracket style="color:#000000;" flip="horizontal" >}} {{< iconify emojione:basketball >}}'
 title-slide-attributes: 
-  data-background-image: ../../../img/bb.png #https://cdn.vectorstock.com/i/500p/89/26/police-officer-writing-ticket-traffic-violation-vector-36628926.jpg   
+  data-background-image: ../../../img/bb.png 
 #  data-background-opacity: ".4"
 format: 
   revealjs:
@@ -80,9 +80,9 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ::: {.column width="55%"}
 
-1. `write_bib` creates .bib file (will overwrite existing)
+1. `write_bib()` creates .bib file (will overwrite existing)
 
-2. `.packages()` is a hidden function that will include all loaded packages within the .bib^[you can also call--out specific packages if you'd like them included in the .bib file]
+2. `.packages()` is a hidden function that will include all loaded packages within the .bib
 
 :::
 
@@ -102,7 +102,7 @@ knitr::write_bib(c(.packages(),
 
 ````
 1. should match name YOU provide (line #8 here)
-2. any non--loaded packages you want to include + your .bib filename
+2. `.packages()`, any non--loaded packages you want to include, & your .bib filename
 
 
 :::
@@ -120,18 +120,26 @@ knitr::write_bib(c(.packages(),
 ::: {.column width="5%"}
 :::
 
-::: {.column width="50%"}
-
-1. [`cite_r()`](https://www.rdocumentation.org/packages/papaja/versions/0.1.4/topics/cite_r) for auto--population of in--text citations
-
-:::
-
 ::: {.column width="45%"}
 
+1. use [`cite_r()`](https://www.rdocumentation.org/packages/papaja/versions/0.1.4/topics/cite_r) for auto--population of in--text citations:
+
+```{r}
+We used `r cite_r("packages.bib")`
+
+```
+
+:::
+
+::: {.column width="50%"}
 
 :::
 
 :::
+
+![](../../../img/intextcites.JPG){.absolute right="-120" bottom="160"}
+
+![](https://www.john-fox.ca/Companion/car-hex.png){.absolute height="200" right="-60" bottom="0"}
 
 ![](https://64.media.tumblr.com/844d8b61c57c75d76a64fb21bbf6404e/ca3137f2bed7e0d8-13/s540x810/de4b379700e74d3159f693a7ddc87bb407e016a7.png){.absolute height="150" left="-150" top="150"}
 
@@ -144,11 +152,19 @@ knitr::write_bib(c(.packages(),
 ::: {.column width="5%"}
 :::
 
-::: {.column width="55%"}
+::: {.column width="47%"}
+
+### [`grateful`](https://pakillo.github.io/grateful/)
+
++ option for printed [table]{.underline} with a listing of [package name, version, & in--text citation](https://pakillo.github.io/grateful/#frequently-asked-questions)
 
 :::
 
-::: {.column width="40%"}
+::: {.column width="48%"}
+
+### [`pakret`](https://arnaudgallou.github.io/pakret/)
+
++ [appends]{.underline} package spex to first `.bib` specified in [YAML]{.ranchers2} `bibliography:` field
 
 :::
 
@@ -158,19 +174,14 @@ knitr::write_bib(c(.packages(),
 
 ![](https://www.tidymodels.org/images/recipes.png){.absolute left="-130" bottom="150" height="180"}
 
+![](https://www.tesselle.org/images/packages/alkahest.png){.absolute right="-140" bottom="40" height="200"}
+
 :::
 
 ![](https://raw.githubusercontent.com/JeffreyRStevens/flashr/main/man/figures/logo.png){.absolute top="-40" right="50" height="230"}
 
 ![](https://raw.githubusercontent.com/furrer-lab/abn/refs/heads/main/inst/figures/logo.png){.absolute right="-120" top="100"  height="230"}
  
-
-
-
-![](https://www.john-fox.ca/Companion/car-hex.png)
-
-![](https://www.tesselle.org/images/packages/alkahest.png)
-
 # Today...
 
 ![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3JzbnBsOGNmcHI2aHJ1MTdlbnlvaGIxYnk3MjY2dmpsbjYxYjI0MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z54VPIMUNTnyg/giphy.gif)
