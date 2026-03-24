@@ -164,7 +164,7 @@ We used `r cite_r("packages.bib")`
 
 ### [`pakret`](https://arnaudgallou.github.io/pakret/)
 
-+ [appends]{.underline} package spex to first `.bib` specified in [YAML]{.ranchers2} `bibliography:` field
++ [appends]{.underline} package cites to first `.bib` specified in [YAML]{.ranchers2} `bibliography:` field
 
 :::
 
@@ -200,7 +200,7 @@ We used `r cite_r("packages.bib")`
 </a>
 :::
 
-## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering:
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: {{< iconify emojione:basketball >}}{{< iconify emojione:basketball >}}
 ```{r}
 #| eval: true
 #| echo: false
