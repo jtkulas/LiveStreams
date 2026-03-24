@@ -186,7 +186,7 @@ We used `r cite_r("packages.bib")`
 
 ![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3JzbnBsOGNmcHI2aHJ1MTdlbnlvaGIxYnk3MjY2dmpsbjYxYjI0MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z54VPIMUNTnyg/giphy.gif)
 
-## [[NCAA]{.ncaa} [tournament]{.ncaa2} {{< iconify mdi:bracket style="color:#ffffff;" >}}[brackets]{.ncaa2}{{< iconify mdi:bracket style="color:#ffffff;" flip="horizontal" >}}{{< iconify emojione:basketball >}}](https://github.com/alexkaechele/MMBracketR/blob/master/R/plotTourn.R) {background-image="https://library.sportingnews.com/styles/crop_style_16_9_desktop_webp/s3/2025-03/March%20Madness%20bracket%201.jpg.webp?itok=A5D7hrbC"}
+## [[NCAA]{.ncaa} [tournament]{.ncaa2} {{< iconify mdi:bracket style="color:#ffffff;" >}}[brackets]{.ncaa2}{{< iconify mdi:bracket style="color:#ffffff;" flip="horizontal" >}}{{< iconify emojione:basketball >}}](https://github.com/elishayer/mRchmadness) {background-image="https://library.sportingnews.com/styles/crop_style_16_9_desktop_webp/s3/2025-03/March%20Madness%20bracket%201.jpg.webp?itok=A5D7hrbC"}
 
 ::: {.absolute style="top: 210px; right: -120px; width: 500px;" .tilt2}
 <a href="https://www.rdocumentation.org/packages/bracketeer/versions/0.1.1">
@@ -195,7 +195,7 @@ We used `r cite_r("packages.bib")`
 :::
 
 ::: {.absolute style="top: 210px; left: -120px; width: 500px;" .tilt}
-<a href="https://github.com/zachmayer/kaggleNCAA">
+<a href="https://github.com/alexkaechele/MMBracketR/blob/master/R/plotTourn.R">
   <img src="https://library.sportingnews.com/styles/crop_style_4_3_desktop_webp/s3/2026-03/Men%27s%20Printable%20March%20Madness%20Bracket%20%282026%29.jpg.webp">
 </a>
 :::
