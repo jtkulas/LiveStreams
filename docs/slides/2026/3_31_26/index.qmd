@@ -99,6 +99,9 @@ plotTourn(32)   #<1>
 
 ![](../../../img/ncaabracketblank.JPG){.absolute right="0" bottom="60" height="400"}
 
+![](https://www.freeiconspng.com/uploads/trophy-clipart-png-4.png){.absolute left="-160" bottom="220" height="180"}
+
+
 ### Populated {{< iconify streamline-freehand-color:worldwide-web-users >}}
 
 ::: {.columns}
@@ -128,6 +131,8 @@ draw.bracket(bracket.empty=bracket.men.2026)  #<2>
 
 ![](../../../img/bracketncaafilled.JPG){.absolute bottom="80" right="-150" height="350"}
 
+![](https://cdn-icons-png.flaticon.com/512/11173/11173520.png){.absolute left="-160" bottom="220" height="180"}
+
 ### Run--yer--own {{< iconify vscode-icons:folder-type-tools >}}
 
 ::: {.columns}
@@ -147,6 +152,7 @@ draw.bracket(bracket.empty=bracket.men.2026)  #<2>
 
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGZzY3FtM3N2NjQ4OWtvOHBidnN2cG4zMmF0cGczM2FrNzdtNWcybSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xUNd9ME5OUPAmhyLew/giphy.gif){.absolute right="-20" bottom="80"}
 
+![](https://cdn-icons-png.flaticon.com/512/11173/11173524.png){.absolute left="-160" bottom="220" height="180"}
 :::
 
 # Today...
@@ -230,6 +236,10 @@ Lots goin' on here... {{< iconify fluent-emoji-flat:confused-face >}}
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTBiYWI0ZDVpaHNudWE0ZWhnenMzNndnazNhN3A5Ymhjc2hydjU1YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/InDHoW8hBWXIihMVtZ/giphy.gif){.absolute right="250" top="-40" height="200"}
 
 ![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjZ1M2gwMm5hdnlmdGdwdWV4YWpwNHd0b3Z6c29xeTY0bGJ1eGliMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4JXQxpySdGXGNJrHU9/giphy.gif){.absolute height="170" right="420" bottom="20"}
+
+![](https://pngimg.com/d/squirrel_PNG96428.png){.absolute top="-30" left="-160" height="200" .mirror}
+
+![](https://png.pngtree.com/png-vector/20241217/ourmid/pngtree-cute-squirrel-on-branch-clipart-illustration-png-image_14788577.png){.absolute right="-120" bottom="0" height="260" .mirror}
 
 ## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: {{< iconify noto:paintbrush >}}{{< iconify noto:paintbrush >}}{{< iconify noto:paintbrush >}}
 ```{r}
