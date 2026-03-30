@@ -1510,5 +1510,152 @@
     "title": "R is for Authoring!!",
     "section": " Session Info (March 24, 2026) Rendering: ",
     "text": "Session Info (March 24, 2026) Rendering: \n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.56        \n[13] digest_0.6.37     rlang_1.1.7       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/3_31_26/index.html#open-office-hours-march-25-2026",
+    "href": "slides/2026/3_31_26/index.html#open-office-hours-march-25-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (March 25, 2026)",
+    "text": "Open Office Hours (March 25, 2026)\n\n\n\n\nRecap session #122\nToday’s topic(s):\n\ntext animation\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/3_31_26/index.html#ncaa-tournament-brackets",
+    "href": "slides/2026/3_31_26/index.html#ncaa-tournament-brackets",
+    "title": "R is for Authoring!!",
+    "section": "NCAA tournament brackets",
+    "text": "NCAA tournament brackets\n\nBlank Populated Run–yer–own \n\n\n\n\n\nplotTourn function extracted from MMBracketR package\n\n\n## Rename \"Regions\"\n## Specify # of teams\n\n1plotTourn(32)\n\n\n1\n\nwhatever number you’d like – NCAA has 64 teams (32 plotted here for simplicity of presentation)\n\n\n\n\n\n\n\n\n\n\n\n\n\nmRchmadness package has many fun functions – vignettes(mRchmadness) walks through a few\n\n\nlibrary(mRchmadness)\n1vignettes(mRchmadness)\n\n2draw.bracket(bracket.empty=bracket.men.2026)\n\n\n1\n\ngood explanation of package purpose and capabilities\n\n2\n\nhas both mens and womens’ pre–populated brackets going back to the 2017 tournament\n\n\n\n\n\n\n\n\n\n\n\n\n\nbracketeer intended for general tournament design & management\nupdating capability (you input game results as the tourney progresses)"
+  },
+  {
+    "objectID": "slides/2026/3_31_26/index.html#ncaa-tournament-brackets-1",
+    "href": "slides/2026/3_31_26/index.html#ncaa-tournament-brackets-1",
+    "title": "R is for Authoring!!",
+    "section": "NCAA tournament brackets",
+    "text": "NCAA tournament brackets"
+  },
+  {
+    "objectID": "slides/2026/3_31_26/index.html#session-info-march-25-2026-rendering",
+    "href": "slides/2026/3_31_26/index.html#session-info-march-25-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (March 25, 2026) Rendering:",
+    "text": "Session Info (March 25, 2026) Rendering:\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.56        \n[13] digest_0.6.37     rlang_1.1.7       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/3_31_26/index.html#about-pages",
+    "href": "slides/2026/3_31_26/index.html#about-pages",
+    "title": "R is for Authoring!!",
+    "section": "“About” pages",
+    "text": "“About” pages"
+  },
+  {
+    "objectID": "slides/2026/3_31_26/index.html#text-animation",
+    "href": "slides/2026/3_31_26/index.html#text-animation",
+    "title": "R is for Authoring!!",
+    "section": "text animation",
+    "text": "text animation"
+  },
+  {
+    "objectID": "slides/2026/3_31_26/index.html#open-office-hours-march-26-2026",
+    "href": "slides/2026/3_31_26/index.html#open-office-hours-march-26-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (March 26, 2026)",
+    "text": "Open Office Hours (March 26, 2026)\n\n\n\n\nRecap session #122\nToday’s topic(s):\n\nText Animation\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/3_31_26/index.html#session-info-march-26-2026-rendering",
+    "href": "slides/2026/3_31_26/index.html#session-info-march-26-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (March 26, 2026) Rendering: ",
+    "text": "Session Info (March 26, 2026) Rendering: \n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.56        \n[13] digest_0.6.37     rlang_1.1.7       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/3_31_26/index.html#section",
+    "href": "slides/2026/3_31_26/index.html#section",
+    "title": "R is for Authoring!!",
+    "section": "Text Animation",
+    "text": "Text Animation\nLots goin’ on here… \n\n\nUnadorned\n\n## shortcode:\n\n{{&lt; animate flash \"Lookie Here!!\" &gt;}}\n\nLookie Here!!\n\nHyperlinked\n\n::: {.animate__animated .animate__bounce}\n\n[Lookie Here!!](https://m.canouil.fr/quarto-animate/)\n\n:::\n\n\nLookie Here!!\n\n\n Fonts\n\n::: {.animate__animated .animate__flip}\n\n[Lookie Here!!]{.risque .biggeR}\n\n:::\n\n\nLookie Here!!"
+  },
+  {
+    "objectID": "slides/2026/3_31_26/index.html#open-office-hours-march-27-2026",
+    "href": "slides/2026/3_31_26/index.html#open-office-hours-march-27-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (March 27, 2026)",
+    "text": "Open Office Hours (March 27, 2026)\n\n\n\n\nRecap session #122\nToday’s topic(s):\n\nText Animation\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/3_31_26/index.html#session-info-march-27-2026-rendering",
+    "href": "slides/2026/3_31_26/index.html#session-info-march-27-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (March 27, 2026) Rendering: ",
+    "text": "Session Info (March 27, 2026) Rendering: \n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.56        \n[13] digest_0.6.37     rlang_1.1.7       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/3_31_26/index.html#open-office-hours-march-28-2026",
+    "href": "slides/2026/3_31_26/index.html#open-office-hours-march-28-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (March 28, 2026)",
+    "text": "Open Office Hours (March 28, 2026)\n\n\n\n\nRecap session #122\nToday’s topic(s):\n\nText Animation\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/3_31_26/index.html#session-info-march-28-2026-rendering",
+    "href": "slides/2026/3_31_26/index.html#session-info-march-28-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (March 28, 2026) Rendering: ",
+    "text": "Session Info (March 28, 2026) Rendering: \n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.56        \n[13] digest_0.6.37     rlang_1.1.7       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/4_7_26/index.html#open-office-hours-march-29-2026",
+    "href": "slides/2026/4_7_26/index.html#open-office-hours-march-29-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (March 29, 2026)",
+    "text": "Open Office Hours (March 29, 2026)\n\n\n\n\nRecap session #122\nToday’s topic(s):\n\nText Animation\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/4_7_26/index.html#ncaa-tournament-brackets",
+    "href": "slides/2026/4_7_26/index.html#ncaa-tournament-brackets",
+    "title": "R is for Authoring!!",
+    "section": "NCAA tournament brackets",
+    "text": "NCAA tournament brackets\n\nBlank Populated Run–yer–own \n\n\n\n\n\nplotTourn function extracted from MMBracketR package\n\n\n## Rename \"Regions\"\n## Specify # of teams\n\n1plotTourn(32)\n\n\n1\n\nwhatever number you’d like – NCAA has 64 teams (32 plotted here for simplicity of presentation)\n\n\n\n\n\n\n\n\n\n\n\n\n\nmRchmadness package has many fun functions – vignettes(mRchmadness) walks through a few\n\n\nlibrary(mRchmadness)\n1vignettes(mRchmadness)\n\n2draw.bracket(bracket.empty=bracket.men.2026)\n\n\n1\n\ngood explanation of package purpose and capabilities\n\n2\n\nhas both mens and womens’ pre–populated brackets going back to the 2017 tournament\n\n\n\n\n\n\n\n\n\n\n\n::: {column width=“50%”}\nbracketeer intended for general tournament specification & management\nbuilt for updates (you input game results as the tourny progresses)\n\n\n::: {column width=“50%”}\n\n\n\n:::\n:::"
+  },
+  {
+    "objectID": "slides/2026/4_7_26/index.html#section",
+    "href": "slides/2026/4_7_26/index.html#section",
+    "title": "R is for Authoring!!",
+    "section": "Text Animation",
+    "text": "Text Animation\nLots goin’ on here… \n\n\nUnadorned\n\n## shortcode:\n\n{{&lt; animate flash \"Lookie Here!!\" &gt;}}\n\nLookie Here!!\n\nHyperlinked\n\n::: {.animate__animated .animate__bounce}\n\n[Lookie Here!!](https://m.canouil.fr/quarto-animate/)\n\n:::\n\n\nLookie Here!!\n\n\n Fonts\n\n::: {.animate__animated .animate__flip}\n\n[Lookie Here!!]{.risque .biggeR}\n\n:::\n\n\nLookie Here!!"
+  },
+  {
+    "objectID": "slides/2026/4_7_26/index.html#session-info-march-29-2026-rendering",
+    "href": "slides/2026/4_7_26/index.html#session-info-march-29-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (March 29, 2026) Rendering: ",
+    "text": "Session Info (March 29, 2026) Rendering: \n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.56        \n[13] digest_0.6.37     rlang_1.1.7       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/4_7_26/index.html#open-office-hours-march-30-2026",
+    "href": "slides/2026/4_7_26/index.html#open-office-hours-march-30-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (March 30, 2026)",
+    "text": "Open Office Hours (March 30, 2026)\n\n\n\n\nRecap session #122\nToday’s topic(s):\n\nText Animation\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/4_7_26/index.html#session-info-march-30-2026-rendering",
+    "href": "slides/2026/4_7_26/index.html#session-info-march-30-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (March 30, 2026) Rendering: ",
+    "text": "Session Info (March 30, 2026) Rendering: \n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.56        \n[13] digest_0.6.37     rlang_1.1.7       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/3_31_26/index.html#open-office-hours-march-30-2026",
+    "href": "slides/2026/3_31_26/index.html#open-office-hours-march-30-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (March 30, 2026)",
+    "text": "Open Office Hours (March 30, 2026)\n\n\n\n\nRecap session #122\nToday’s topic(s):\n\nText Animation\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/3_31_26/index.html#session-info-march-30-2026-rendering",
+    "href": "slides/2026/3_31_26/index.html#session-info-march-30-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (March 30, 2026) Rendering: ",
+    "text": "Session Info (March 30, 2026) Rendering: \n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.56        \n[13] digest_0.6.37     rlang_1.1.7       evaluate_1.0.5"
   }
 ]

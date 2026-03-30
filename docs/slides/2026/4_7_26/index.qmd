@@ -1,0 +1,238 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: 'OOH Session #124...<br>[Conference Posters]{.risque .biggeR}'
+title-slide-attributes: 
+  data-background-image: ../../../img/poster.png
+#  data-background-opacity: ".4"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://wallpapers.com/images/hd/looney-tunes-characters-spotlight-2160733rt9058jno.jpg   #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {layout="[[10,10],]"}
+::: first-column
++ Recap session #122
++ Today's topic(s):
+    + [[Text Animation]{.risque .biggeR}](https://github.com/mcanouil/quarto-animate)
++ Shared problem-solving
+
+:::
+
+::: second-column
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 185px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/3_24_26">
+  <img src="/img/title122.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#122: 
+
+![](https://pngimg.com/d/sticky_note_PNG18952.png){.absolute right="50" top="200"}
+
+![](https://clipart-library.com/2023/2742709.png){.absolute width="160" top="250" right="85"}
+
+## [[NCAA]{.ncaa} [tournament]{.ncaa2} {{< iconify mdi:bracket style="color:#ffffff;" >}}[brackets]{.ncaa2}{{< iconify mdi:bracket style="color:#ffffff;" flip="horizontal" >}}{{< iconify emojione:basketball >}}](https://nypost.com/wp-content/uploads/sites/2/2023/03/printable-blank-ncaa-bracket-2023.jpg?resize=1200,927&quality=75&strip=all)
+
+::: {.panel-tabset}
+
+### Blank {{< iconify hugeicons:bullet style="color:#FFA500;" >}}
+
+::: {.columns}
+
+::: {.column width="50%"}
+
++ `plotTourn` function extracted from [`MMBracketR` package](https://github.com/alexkaechele/MMBracketR/blob/master/R/plotTourn.R) 
+
+```{r}
+
+## Rename "Regions"
+## Specify # of teams
+
+plotTourn(32)   #<1>
+
+```
+1. whatever number you'd like -- [NCAA]{.ncaa} has 64 teams (32 plotted here for simplicity of presentation)
+
+:::
+
+::: {.column width="50%"}
+
+:::
+
+:::
+
+![](../../../img/ncaabracketblank.JPG){.absolute right="0" bottom="60" height="400"}
+
+### Populated {{< iconify streamline-freehand-color:worldwide-web-users >}}
+
+::: {.columns}
+
+::: {.column width="40%"}
+
++ [`mRchmadness` package](https://github.com/elishayer/mRchmadness) has many fun functions -- `vignettes(mRchmadness)` walks through a few
+
+```{r}
+
+library(mRchmadness)
+vignettes(mRchmadness) #<1>
+
+draw.bracket(bracket.empty=bracket.men.2026)  #<2>
+
+```
+1. good explanation of package purpose and capabilities
+2. has both mens and womens' pre--populated brackets going back to the 2017 tournament
+
+:::
+
+::: {.column width="60%"}
+
+:::
+
+:::
+
+![](../../../img/bracketncaafilled.JPG){.absolute bottom="80" right="-150" height="350"}
+
+### Run--yer--own {{< iconify vscode-icons:folder-type-tools >}}
+
+::: {.columns}
+
+::: {column width="50%"}
+
++ [`bracketeer`](https://www.rdocumentation.org/packages/bracketeer/versions/0.1.1) intended for general tournament specification & management
++ built for updates (you input game results as the tourny progresses)
+
+:::
+
+::: {column width="50%"}
+
+:::
+
+:::
+
+
+:::
+
+# Today...
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeTBvYm04b2Y1cHUybGNsd3V4Y3JndHJ6MzdocXRnM3FjcTVwbXNueCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hvpjW5tiu6cDK/giphy.gif)
+
+## {{< animate hinge "Text Animation" delay=3s duration=10s >}}
+
+Lots goin' on here... {{< iconify fluent-emoji-flat:confused-face >}}
+
+::: {.columns}
+
+::: {.column width="33%"}
+
+### Unadorned
+
+```{r}
+
+## shortcode:
+
+{{< animate flash "Lookie Here!!" >}}
+
+```
+
+{{< animate flash "Lookie Here!!" >}}
+
+
+:::
+
+::: {.column width="34%"}
+
+### Hyperlinked
+
+```{r}
+
+::: {.animate__animated .animate__bounce}
+
+[Lookie Here!!](https://m.canouil.fr/quarto-animate/)
+
+:::
+  
+```
+
+::: {.animate__animated .animate__bounce}
+
+[Lookie Here!!](https://m.canouil.fr/quarto-animate/)
+
+:::
+
+:::
+
+::: {.column width="33%"}
+
+### &nbsp;Fonts
+
+```{r}
+
+::: {.animate__animated .animate__flip}
+
+[Lookie Here!!]{.risque .biggeR}
+
+:::
+  
+```
+
+
+::: {.animate__animated .animate__flip}
+
+[Lookie Here!!]{.risque .biggeR}
+
+:::
+
+:::
+
+:::
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXlubTY3NjBhZWxvbWFqNzI4aG85Z3AwY244ZGszbml4bmV0MXN3MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0TK5JyuTqSfTxVTOwf/giphy.gif){.absolute right="-150" top="0" height="250"}
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTljemF4dDhiaGtsejlrMzd3Mnh0NzZyaHdxMjlxdnJ3N3RjZmwxeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HwGAKG8Z00F1wloAfQ/giphy.gif){.absolute left="-120" bottom="0" height="270"}
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTBiYWI0ZDVpaHNudWE0ZWhnenMzNndnazNhN3A5Ymhjc2hydjU1YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/InDHoW8hBWXIihMVtZ/giphy.gif){.absolute right="250" top="-40" height="200"}
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbjZ1M2gwMm5hdnlmdGdwdWV4YWpwNHd0b3Z6c29xeTY0bGJ1eGliMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4JXQxpySdGXGNJrHU9/giphy.gif){.absolute height="170" right="420" bottom="20"}
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: {{< iconify noto:paintbrush >}}{{< iconify noto:paintbrush >}}{{< iconify noto:paintbrush >}}
+```{r}
+#| eval: true
+#| echo: false
+sessionInfo()
+```
