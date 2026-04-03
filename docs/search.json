@@ -1671,5 +1671,75 @@
     "title": "R is for Authoring!!",
     "section": " Session Info (March 31, 2026) Rendering: ",
     "text": "Session Info (March 31, 2026) Rendering: \n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.56        \n[13] digest_0.6.37     rlang_1.1.7       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/4_7_26/index.html#open-office-hours-april-01-2026",
+    "href": "slides/2026/4_7_26/index.html#open-office-hours-april-01-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (April 01, 2026)",
+    "text": "Open Office Hours (April 01, 2026)\n\n\n\n\nRecap session #123\nToday’s topic(s):\n\nConference Posters\n\nShared problem-solving\n\n\n\n     \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/4_7_26/index.html#session-info-april-01-2026-rendering",
+    "href": "slides/2026/4_7_26/index.html#session-info-april-01-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (April 01, 2026) Rendering: ",
+    "text": "Session Info (April 01, 2026) Rendering: \n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.56        \n[13] digest_0.6.37     rlang_1.1.7       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/4_7_26/index.html#text-animation",
+    "href": "slides/2026/4_7_26/index.html#text-animation",
+    "title": "R is for Authoring!!",
+    "section": "Text Animation",
+    "text": "Text Animation\n\nQuarto Reveal SlidesExtension for \n\n\nSeveral built–in animations intended only for Reveal slides & referred to in documentation as “fragments:\n\n\n.fade-out\n.strike\n.highlight-green\n.fade-in-then-semi-out\n\n\n.shrink + .highlight-current-red\n\n\n.highlight-blue+ .grow\n\n\n\n\n\n\n\n\n\n\nmRchmadness package has many fun functions – vignettes(mRchmadness) walks through a few\n\n\nlibrary(mRchmadness)\n1vignettes(mRchmadness)\n\n2draw.bracket(bracket.empty=bracket.men.2026)\n\n\n1\n\ngood explanation of package purpose and capabilities\n\n2\n\nhas both mens and womens’ pre–populated brackets going back to the 2017 tournament"
+  },
+  {
+    "objectID": "slides/2026/4_7_26/index.html#conference-posters",
+    "href": "slides/2026/4_7_26/index.html#conference-posters",
+    "title": "R is for Authoring!!",
+    "section": "Conference Posters",
+    "text": "Conference Posters\nLots goin’ on here… \n\n\nUnadorned\n\n## shortcode:\n\n{{&lt; animate flash \"Lookie Here!!\" &gt;}}\n\nLookie Here!!\n\nHyperlinked\n\n::: {.animate__animated .animate__bounce}\n\n[Lookie Here!!](https://m.canouil.fr/quarto-animate/)\n\n:::\n\n\nLookie Here!!\n\n\n\n::: {.animate__animated .animate__flip}\n\n[Lookie Here!!]{.risque .biggeR}\n\n:::\n\n\nLookie Here!!"
+  },
+  {
+    "objectID": "slides/2026/4_7_26/index.html#open-office-hours-april-02-2026",
+    "href": "slides/2026/4_7_26/index.html#open-office-hours-april-02-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (April 02, 2026)",
+    "text": "Open Office Hours (April 02, 2026)\n\n\n\n\nRecap session #123\nToday’s topic(s):\n\nConference Posters\n\nShared problem-solving\n\n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/4_7_26/index.html#session-info-april-02-2026-rendering",
+    "href": "slides/2026/4_7_26/index.html#session-info-april-02-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (April 02, 2026) Rendering:",
+    "text": "Session Info (April 02, 2026) Rendering:\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.56        \n[13] digest_0.6.37     rlang_1.1.7       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/4_7_26/index.html#open-office-hours-april-03-2026",
+    "href": "slides/2026/4_7_26/index.html#open-office-hours-april-03-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (April 03, 2026)",
+    "text": "Open Office Hours (April 03, 2026)\n\n\n\nRecap session #123\nToday’s topic(s):\n\nConference Posters (I)\n\nShared problem-solving\n\n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/4_7_26/index.html#session-info-april-03-2026-rendering",
+    "href": "slides/2026/4_7_26/index.html#session-info-april-03-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (April 03, 2026) Rendering:",
+    "text": "Session Info (April 03, 2026) Rendering:\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.8.1 otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.30    knitr_1.51        jsonlite_2.0.0    xfun_0.56        \n[13] digest_0.6.37     rlang_1.1.7       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/4_7_26/index.html#conference-posters-i",
+    "href": "slides/2026/4_7_26/index.html#conference-posters-i",
+    "title": "R is for Authoring!!",
+    "section": "Conference Posters (I)",
+    "text": "Conference Posters (I)\n\n\n Options:\n\n\nposterdown – /CRAN archive, 2 styles css–modified with backend .pdf capability via pagedown:: chrome_print()\npostr – flexdashboard with screenshot to .pdf\n\\(\\LaTeX\\) templates (beamerposter; tikzposter; a0poster) – specify template: within YAML\n\n\n\n\n Options:\n\n\nTypst template – built–in to base distribution (1.4+)\nquarto_poster – will need to fork  repo (not an extension)\nUser templates (peace-of-posters; typst-poster) – specify template.typ or quarto use template"
+  },
+  {
+    "objectID": "slides/2026/4_7_26/index.html#text-animations",
+    "href": "slides/2026/4_7_26/index.html#text-animations",
+    "title": "R is for Authoring!!",
+    "section": "Text Animations",
+    "text": "Text Animations\n\nQuarto Reveal SlidesExtension for \n\n\nSeveral built–in animations intended only for Reveal slides & referred to in documentation as “fragments”:\n\n\n.fade-out\n.strike\n.highlight-green\n.fade-in-then-semi-out\n\n\n.shrink + .highlight-current-red\n\n\n.highlight-blue+ .grow\n\n\n\n\n\n\n\nquarto-animate works with all  files – extensive capabilities\n\n\n\nBouncy-Bouncy\nFlashy-Flashy\nShake Y\n\n\n\nJello\nRubber Band\nSwing\n\n\n\nTada!\nWobble\nHeartbeat"
   }
 ]

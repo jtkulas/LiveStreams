@@ -26,8 +26,9 @@
 @import url('https://fonts.googleapis.com/css?family=Graduate');
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
 @import url('https://fonts.googleapis.com/css?family=Risque');
+@import url('https://fonts.googleapis.com/css?family=Protest Revolution');
 
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: left;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
@@ -443,4 +444,20 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-weight: normal !important;
   text-shadow:
     2px 2px 0px #a92777 !important;
+}
+
+.revolttit {
+  color: #000000;
+  font-family: 'Protest Revolution';
+  font-weight: normal !important;
+  text-shadow:
+    0px 0px 0px0 !important;
+}
+
+.revolt {
+  color: #ffffff;
+  font-family: 'Protest Revolution';
+  font-weight: normal !important;
+  text-shadow:
+    0px 0px 0px0 !important;
 }
