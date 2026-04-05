@@ -60,13 +60,13 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ![](https://wallpapers.com/images/hd/looney-tunes-characters-spotlight-2160733rt9058jno.jpg){.absolute width="150" top="230" right="85"}
 
-## [Text Animations]{.risque .biggeR}
+## [[Text Animations]{.risque .biggeR}](https://m.canouil.dev/quarto-animate/)
 
 ::: {.panel-tabset}
 
 ### Quarto Reveal{{< iconify vscode-icons:file-type-js-official >}} Slides
 
-Several built--in animations intended only for Reveal{{< iconify vscode-icons:file-type-js-official >}} slides & [referred to in documentation as "fragments"](https://quarto.org/docs/presentations/revealjs/advanced.html#fragments"):
+Several built--in animations intended only for Reveal{{< iconify vscode-icons:file-type-js-official >}} slides ([referred to in documentation as "fragments"](https://quarto.org/docs/presentations/revealjs/advanced.html#fragments")):
 
 ::: {.columns}
 
@@ -102,9 +102,11 @@ Several built--in animations intended only for Reveal{{< iconify vscode-icons:fi
 
 ![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTljemF4dDhiaGtsejlrMzd3Mnh0NzZyaHdxMjlxdnJ3N3RjZmwxeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HwGAKG8Z00F1wloAfQ/giphy.gif){.absolute right="-100" bottom="30" height="250"}
 
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHNja2NnZ3V3dmdkM3I4ZWZqbGg4cHA4aWtmdTNkMHh6MG1pbTR3dyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/D2ESSSB3IYEYo/giphy.gif){.absolute left="220" bottom="165" height="130"}
+
 ### Extension for {{< iconify devicon:html5-wordmark >}}
 
-[`quarto-animate`](https://github.com/mcanouil/quarto-animate) works with all {{< iconify devicon:html5-wordmark >}} files -- [extensive capabilities](https://github.com/mcanouil/quarto-animate?tab=readme-ov-file#animation-effects) 
+[`quarto-animate`](https://github.com/mcanouil/quarto-animate) works with all {{< iconify devicon:html5-wordmark >}} files & has<br>[extensive capabilities](https://github.com/mcanouil/quarto-animate?tab=readme-ov-file#animation-effects) 
 
 ::: {.columns}
 
@@ -140,7 +142,7 @@ Several built--in animations intended only for Reveal{{< iconify vscode-icons:fi
 
 :::
 
-![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXlubTY3NjBhZWxvbWFqNzI4aG85Z3AwY244ZGszbml4bmV0MXN3MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0TK5JyuTqSfTxVTOwf/giphy.gif){.absolute right="-150" top="0" height="250"}
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExamt3MXJqeXRxajBqM3E5dzlwOWx5MTB0b3hhOWRiZzFpMHdseTdpdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GNzSXICrzxYfC/giphy.gif){.absolute right="-140" top="-20" height="250"}
 
 # Today...
 
@@ -156,9 +158,11 @@ Several built--in animations intended only for Reveal{{< iconify vscode-icons:fi
 
 ::: {.Smaller}
 
-+ [`posterdown`](https://github.com/brentthorne/posterdown) -- {{< iconify uiw:github style="color:#ffffff;" >}}/CRAN archive, 2 styles css--modified with backend .pdf capability via `pagedown:: chrome_print()`
++ [`posterdown`](https://github.com/brentthorne/posterdown) -- {{< iconify uiw:github style="color:#ffffff;" >}}/CRAN archive, css--modified with .pdf capability via `pagedown:: chrome_print()`
 
-+ [`postr`](https://github.com/odeleongt/postr) -- flexdashboard with [screenshot]{.underline} to .pdf
++ [`poster_relaxed`](https://pagedown.rbind.io/poster-relaxed) & [`poster_jacobs`](https://pagedown.rbind.io/poster-jacobs) via [`pagedown`](https://github.com/rstudio/pagedown)
+
++ [`postr`](https://github.com/odeleongt/postr) -- flexdashboard with [webshot](https://wch.github.io/webshot/articles/intro.html) to .png (possibly {{< iconify line-md:cog-off-loop >}})
 
 + $\LaTeX$ templates ([`beamerposter`]( https://github.com/deselaers/latex-beamerposter); [`tikzposter`](ttps://ctan.org/pkg/tikzposter); [`a0poster`](https://ctan.org/pkg/a0poster)) -- specify `template:` within [YAML]{.ranchers2}
 
@@ -190,7 +194,7 @@ Several built--in animations intended only for Reveal{{< iconify vscode-icons:fi
 
 ![](https://cdn.pixabay.com/photo/2016/07/31/20/56/presentation-1559937_1280.png){.absolute right="-100" top="-30" height="250"}
 
-![](https://freepngimg.com/save/14604-presentation-transparent/300x300){.absolute left="-170" bottom="260" height="200"}
+![](https://freepngimg.com/save/14604-presentation-transparent/300x300){.absolute left="-170" bottom="280" height="200"}
 
 ## {{< iconify file-icons:rmarkdown size=2x style="color:#82b1ff;" >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
