@@ -158,7 +158,7 @@ Several built--in animations intended only for Reveal{{< iconify vscode-icons:fi
 
 ::: {.Smaller}
 
-+ [`posterdown`](https://github.com/brentthorne/posterdown) -- {{< iconify uiw:github style="color:#ffffff;" >}}/CRAN archive, css--modified with .pdf capability via `pagedown:: chrome_print()`
++ [`posterdown`](https://github.com/brentthorne/posterdown/wiki) -- {{< iconify uiw:github style="color:#ffffff;" >}}/CRAN archive, css--modified with .pdf capability via `pagedown:: chrome_print()`
 
 + [`poster_relaxed`](https://pagedown.rbind.io/poster-relaxed) & [`poster_jacobs`](https://pagedown.rbind.io/poster-jacobs) via [`pagedown`](https://github.com/rstudio/pagedown)
 
@@ -192,9 +192,17 @@ Several built--in animations intended only for Reveal{{< iconify vscode-icons:fi
 
 :::
 
-![](https://cdn.pixabay.com/photo/2016/07/31/20/56/presentation-1559937_1280.png){.absolute right="-100" top="-30" height="250"}
+::: {.absolute style="top: -30px; right: -130px; width:300px;"}
+<a href="https://github.com/DiegoFigueiras/SIOP2022_POSTER/blob/main/index.pdf">
+  <img src="https://cdn.pixabay.com/photo/2016/07/31/20/56/presentation-1559937_1280.png">
+</a>
+:::
 
-![](https://freepngimg.com/save/14604-presentation-transparent/300x300){.absolute left="-170" bottom="280" height="200"}
+::: {.absolute style="bottom: 255px; left: -180px; width:220px;"}
+<a href="https://renatagppr93.github.io/SIOP2022/">
+  <img src="https://freepngimg.com/save/14604-presentation-transparent/300x300">
+</a>
+:::
 
 ## {{< iconify file-icons:rmarkdown size=2x style="color:#82b1ff;" >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
