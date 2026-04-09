@@ -1,0 +1,233 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: 'OOH Session #125...<br>[Conference Posters (II)]{.revolttit .Bigger}'
+title-slide-attributes: 
+  data-background-image: ../../../img/poster2.png
+#  data-background-opacity: ".4"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://www.i2clipart.com/cliparts/e/b/4/6/clipart-affiche-poster-256x256-eb46.png   #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {.columns}
+::: {.column width="55%"}
++ Recap session #124
++ Today's topic(s):
+    + [[Conference Posters (II)]{.revolt .bigger}](https://colinpurrington.com/tips/poster-design/)
++ Shared problem-solving
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+::: {.column width="45%"}
+
+:::
+
+:::
+
+::: {.absolute style="top: 185px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/4_7_26">
+  <img src="/img/title124.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#124: 
+
+![](https://pngimg.com/d/sticky_note_PNG18952.png){.absolute right="50" top="200"}
+
+![](https://cdn-icons-png.flaticon.com/512/5045/5045043.png){.absolute width="170" top="250" right="85"}
+
+![](https://pkgs.rstudio.com/rmarkdown/reference/figures/logo.png){.absolute width="70" top="270" right="135"}
+
+## [[Conference Posters ({{< iconify file-icons:rmarkdown style="color:#82b1ff;" >}})]{.revolt .bigger}](https://colinpurrington.com/tips/poster-design/)
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+`posterdown` & `pagedown` both capitalize on {{< iconify logos:html-5 >}}{{< iconify line-md:arrow-right >}}{{< iconify vscode-icons:file-type-pdf2 >}} transformation via `pagedown::chrome_print()`
+
+1. specify desired dimensions
+2. add extra YAML spex
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| code-line-numbers: "18-21"
+---
+title: Generate Reproducible & Live HTML and PDF Conference Posters Using RMarkdown
+author:
+  - name: Brent Thorne
+    affil: 1
+    orcid: '0000-0002-1099-3857'
+affiliation:
+  - num: 1
+    address: Department of Earth Science, Brock University Canada
+column_numbers: 3
+logoright_name: https&#58;//www.pngkey.com/png/full/380-3806364_chilly-willy-the-penguin.png
+logoleft_name: https&#58;//raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png
+primary_colour: "#60c0e6"
+secondary_colour: "#1c4859"
+accent_colour: "#d986d5"
+output: 
+  posterdown::posterdown_html:
+    poster_height: "36in"      #<1>
+    poster_width: "48in"       #<1>
+    self_contained: true       #<2>
+knit: pagedown::chrome_print 
+bibliography: packages.bib
+---
+```
+1. check with printer prior to size specification -- works as first--level YAML command as well (if you run into issues)
+2. default is `self_contained: false` -- has consequences for any external resource requirements. Setting to `true` eliminates external resource dependencies
+
+:::
+
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/014/391/904/non_2x/right-arrow-curved-icon-isolated-on-transparent-background-free-png.png){.absolute bottom="15" left="150" height="200" .tilt}
+
+![](https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png){.absolute bottom="0" left="-150" height="225"}
+
+![](https://cran.r-project.org/web/packages/pagedown/readme/man/figures/logo.png){.absolute top="-50" right="-150" height="200"}
+
+## [[Conference Posters (II -- How)]{.revolt .bigger}](https://colinpurrington.com/tips/poster-design/)
+
+::: {.columns}
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="50%"}
+
+[1. install `pagedown` & `posterdown`]{.fragment .semi-fade-out fragment-index=1}  
+
+[2. `File`{{< iconify maki:arrow >}}`New File`{{< iconify maki:arrow >}}`R Markdown`]{.fragment .fade-in-then-semi-out fragment-index=1}  
+
+[3. `From Template`{{< iconify maki:arrow >}}your preference -- choose from 3 `posterdown` & 2 `pagedown` poster templates]{.fragment .fade-in-then-semi-out fragment-index=2}
+
+:::
+
+::: {.column width="5%"}
+
+:::
+
+::: {.column width="40%" .fragment .fade-out fragment-index=1}
+
+```{r}
+
+## Available on CRAN:
+
+install.packages("pagedown")
+
+## Choose only 1 of the following:
+
+remotes::install_github("brentthorne/posterdown")  #<1>
+pak::pak("brentthorne/posterdown")  #<2>
+
+```
+1. core function that `devtools` has traditionally used (borrowed from `remotes`), however, `devtools` has depreciated `install_*()` functions and now recommends using `pak`
+2. currently recommended as the most efficient way to install from {{< iconify devicon:github-wordmark >}}
+
+:::
+
+:::
+
+[![](../../../img/posterss1.png){.absolute right="-80" bottom="30" height="550"}]{.fragment .fade-in-then-out fragment-index=1}
+[![](../../../img/posterss2.png){.absolute right="-120" bottom="60" height="500"}]{.fragment .fade-in-then-out fragment-index=2}
+
+![](https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png){.absolute top="-50" right="-150" height="200"}
+
+![](https://cran.r-project.org/web/packages/pagedown/readme/man/figures/logo.png){.absolute bottom="0" left="-150" height="225"}
+
+# Today...
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWdvOWJ2NzF6cnNsNjQ2NDM5NnQ4a2txdDA1b2gwMGM1NGMzeGl2dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/78fplCqoKnifbIpX6h/giphy.gif)
+
+## [[Conference Posters (II)]{.revolt .bigger}](https://colinpurrington.com/tips/poster-design/) 
+
+::: {.columns}
+
+::: {.column width="55%"}
+
+::: {.fragment .semi-fade-out}
+
+### {{< iconify file-icons:rmarkdown style="color:#82b1ff;" >}} Options:
+
+::: {.Smaller}
+
++ [`posterdown`](https://github.com/brentthorne/posterdown/wiki) -- {{< iconify uiw:github style="color:#ffffff;" >}}/CRAN archive, css--modified with .pdf capability via `pagedown:: chrome_print()`
+
++ [`poster_relaxed`](https://pagedown.rbind.io/poster-relaxed) & [`poster_jacobs`](https://pagedown.rbind.io/poster-jacobs) via [`pagedown`](https://github.com/rstudio/pagedown)
+
++ [`postr`](https://github.com/odeleongt/postr) -- flexdashboard with [webshot](https://wch.github.io/webshot/articles/intro.html) to .png (possibly {{< iconify line-md:cog-off-loop >}})
+
++ $\LaTeX$ templates ([`beamerposter`]( https://github.com/deselaers/latex-beamerposter); [`tikzposter`](ttps://ctan.org/pkg/tikzposter); [`a0poster`](https://ctan.org/pkg/a0poster)) -- specify `template:` within [YAML]{.ranchers2}
+
+:::
+
+:::
+
+:::
+
+::: {.column width="45%"}
+
+### {{< iconify material-icon-theme:quarto >}} Options:
+
+::: {.Smaller}
+
++ [Typst template](https://github.com/quarto-ext/typst-templates/tree/main/poster) -- built--in to base distribution ({{< iconify material-icon-theme:quarto >}}1.4+)
+
++ [quarto_poster](https://github.com/higgi13425/quarto_poster) -- [will need to fork]{.underline} {{< iconify uiw:github style="color:#ffffff;" >}} repo (not an extension)
+
++ User templates ([peace-of-posters](https://github.com/jonaspleyer/peace-of-posters); [typst-poster](https://github.com/pncnmnp/typst-poster)) -- specify `template.typ` or `quarto use template`
+
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: -30px; right: -130px; width:300px;"}
+<a href="https://github.com/DiegoFigueiras/SIOP2022_POSTER/blob/main/index.pdf">
+  <img src="https://cdn.pixabay.com/photo/2016/07/31/20/56/presentation-1559937_1280.png">
+</a>
+:::
+
+::: {.absolute style="bottom: 255px; left: -180px; width:220px;"}
+<a href="https://renatagppr93.github.io/SIOP2022/">
+  <img src="https://freepngimg.com/save/14604-presentation-transparent/300x300">
+</a>
+:::
+
+## {{< iconify material-icon-theme:quarto size=2x style="color:#82b1ff;" >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+#| eval: true
+#| echo: false
+sessionInfo()
+```

@@ -1769,5 +1769,96 @@
     "title": "R is for Authoring!!",
     "section": " Session Info (April 07, 2026) Rendering:",
     "text": "Session Info (April 07, 2026) Rendering:\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/4_14_26/index.html#open-office-hours-april-07-2026",
+    "href": "slides/2026/4_14_26/index.html#open-office-hours-april-07-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (April 07, 2026)",
+    "text": "Open Office Hours (April 07, 2026)\n\n\n\nRecap session #124\nToday’s topic(s):\n\nConference Posters (II)\n\nShared problem-solving\n\n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/4_14_26/index.html#conference-posters-i",
+    "href": "slides/2026/4_14_26/index.html#conference-posters-i",
+    "title": "R is for Authoring!!",
+    "section": "Conference Posters (I)–",
+    "text": "Conference Posters (I)–\n\n\nposterdown & pagedown both capitalize on  –&gt;  via pagedown::chrome_print()\n\nspecify desired dimensions\nextra YAML spex"
+  },
+  {
+    "objectID": "slides/2026/4_14_26/index.html#conference-posters-i-1",
+    "href": "slides/2026/4_14_26/index.html#conference-posters-i-1",
+    "title": "R is for Authoring!!",
+    "section": "Conference Posters (I)",
+    "text": "Conference Posters (I)\n\n\n Options:\n\n\nposterdown – /CRAN archive, css–modified with .pdf capability via pagedown:: chrome_print()\nposter_relaxed & poster_jacobs via pagedown\npostr – flexdashboard with webshot to .png (possibly )\n\\(\\LaTeX\\) templates (beamerposter; tikzposter; a0poster) – specify template: within YAML\n\n\n\n\n Options:\n\n\nTypst template – built–in to base distribution (1.4+)\nquarto_poster – will need to fork  repo (not an extension)\nUser templates (peace-of-posters; typst-poster) – specify template.typ or quarto use template"
+  },
+  {
+    "objectID": "slides/2026/4_14_26/index.html#session-info-april-07-2026-rendering",
+    "href": "slides/2026/4_14_26/index.html#session-info-april-07-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (April 07, 2026) Rendering:",
+    "text": "Session Info (April 07, 2026) Rendering:\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/4_14_26/index.html#open-office-hours-april-08-2026",
+    "href": "slides/2026/4_14_26/index.html#open-office-hours-april-08-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (April 08, 2026)",
+    "text": "Open Office Hours (April 08, 2026)\n\n\n\nRecap session #124\nToday’s topic(s):\n\nConference Posters (II)\n\nShared problem-solving\n\n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/4_14_26/index.html#session-info-april-08-2026-rendering",
+    "href": "slides/2026/4_14_26/index.html#session-info-april-08-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (April 08, 2026) Rendering:",
+    "text": "Session Info (April 08, 2026) Rendering:\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/4_14_26/index.html#conference-posters-ii",
+    "href": "slides/2026/4_14_26/index.html#conference-posters-ii",
+    "title": "R is for Authoring!!",
+    "section": "Conference Posters (II)",
+    "text": "Conference Posters (II)\n\n\n\n Options:\n\n\nposterdown – /CRAN archive, css–modified with .pdf capability via pagedown:: chrome_print()\nposter_relaxed & poster_jacobs via pagedown\npostr – flexdashboard with webshot to .png (possibly )\n\\(\\LaTeX\\) templates (beamerposter; tikzposter; a0poster) – specify template: within YAML\n\n\n\n\n Options:\n\n\nTypst template – built–in to base distribution (1.4+)\nquarto_poster – will need to fork  repo (not an extension)\nUser templates (peace-of-posters; typst-poster) – specify template.typ or quarto use template"
+  },
+  {
+    "objectID": "slides/2026/4_14_26/index.html#conference-posters",
+    "href": "slides/2026/4_14_26/index.html#conference-posters",
+    "title": "R is for Authoring!!",
+    "section": "Conference Posters ()",
+    "text": "Conference Posters ()\n\n\nposterdown & pagedown both capitalize on  transformation via pagedown::chrome_print()\n\nspecify desired dimensions\nadd extra YAML spex\n\n\n\n---\ntitle: Generate Reproducible & Live HTML and PDF Conference Posters Using RMarkdown\nauthor:\n  - name: Brent Thorne\n    affil: 1\n    orcid: '0000-0002-1099-3857'\naffiliation:\n  - num: 1\n    address: Department of Earth Science, Brock University Canada\ncolumn_numbers: 3\nlogoright_name: https&#58;//www.pngkey.com/png/full/380-3806364_chilly-willy-the-penguin.png\nlogoleft_name: https&#58;//raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png\nprimary_colour: \"#60c0e6\"\nsecondary_colour: \"#1c4859\"\naccent_colour: \"#d986d5\"\noutput: \n  posterdown::posterdown_html:\n1    poster_height: \"36in\"\n    poster_width: \"48in\"\n2    self_contained: true\nknit: pagedown::chrome_print \nbibliography: packages.bib\n---\n\n\n1\n\ncheck with printer prior to size specification – works as first–level YAML command as well (if you run into issues)\n\n2\n\ndefault is self_contained: false – has consequences for any external resource requirements. Setting to true eliminates external resource dependencies"
+  },
+  {
+    "objectID": "slides/2026/4_14_26/index.html#open-office-hours-april-09-2026",
+    "href": "slides/2026/4_14_26/index.html#open-office-hours-april-09-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (April 09, 2026)",
+    "text": "Open Office Hours (April 09, 2026)\n\n\n\nRecap session #124\nToday’s topic(s):\n\nConference Posters (II)\n\nShared problem-solving\n\n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/4_14_26/index.html#session-info-april-09-2026-rendering",
+    "href": "slides/2026/4_14_26/index.html#session-info-april-09-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (April 09, 2026) Rendering:",
+    "text": "Session Info (April 09, 2026) Rendering:\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/4_14_26/index.html#conference-posters-ii-1",
+    "href": "slides/2026/4_14_26/index.html#conference-posters-ii-1",
+    "title": "R is for Authoring!!",
+    "section": "Conference Posters (II)",
+    "text": "Conference Posters (II)\n\n\n\n Options:\n\n\nposterdown – /CRAN archive, css–modified with .pdf capability via pagedown:: chrome_print()\nposter_relaxed & poster_jacobs via pagedown\npostr – flexdashboard with webshot to .png (possibly )\n\\(\\LaTeX\\) templates (beamerposter; tikzposter; a0poster) – specify template: within YAML\n\n\n\n\n Options:\n\n\nTypst template – built–in to base distribution (1.4+)\nquarto_poster – will need to fork  repo (not an extension)\nUser templates (peace-of-posters; typst-poster) – specify template.typ or quarto use template"
+  },
+  {
+    "objectID": "slides/2026/4_14_26/index.html#conference-posters-ii-how-to",
+    "href": "slides/2026/4_14_26/index.html#conference-posters-ii-how-to",
+    "title": "R is for Authoring!!",
+    "section": "Conference Posters (II – How to)",
+    "text": "Conference Posters (II – How to)\n\n\n1. install pagedown & posterdown 2. FileNew FileR Markdown\n3. From Templateyour preference (3 posterdown & 2 pagedown poster templates)\n\n\n\n\ninstall.packages(\"pagedown\")\n\nremotes::install_github(\"brentthorne/posterdown\")"
+  },
+  {
+    "objectID": "slides/2026/4_14_26/index.html#conference-posters-ii-how",
+    "href": "slides/2026/4_14_26/index.html#conference-posters-ii-how",
+    "title": "R is for Authoring!!",
+    "section": "Conference Posters (II – How)",
+    "text": "Conference Posters (II – How)\n\n\n\n\n1. install pagedown & posterdown\n2. FileNew FileR Markdown\n3. From Templateyour preference – choose from 3 posterdown & 2 pagedown poster templates\n\n\n\n\n## Available on CRAN:\n\ninstall.packages(\"pagedown\")\n\n## Choose only 1 of the following:\n\n1remotes::install_github(\"brentthorne/posterdown\")\n2pak::pak(\"brentthorne/posterdown\")\n\n\n1\n\ncore function that devtools has traditionally used (borrowed from remotes), however, devtools has depreciated install_*() functions and now recommends using pak\n\n2\n\ncurrently recommended as the most efficient way to install from"
   }
 ]
