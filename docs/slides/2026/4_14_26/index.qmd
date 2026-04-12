@@ -54,6 +54,36 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
 
+# {background-image="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOG5wMDRnYnl3bGZiMzVsMG94OHF0MWVqaHQ2ZTVqYnlxNGtraHVrMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/eTWOi2fWRCwTNqVJQo/giphy.gif" background-size="1000px"}
+
+## {{< iconify material-icon-theme:quarto >}} New Quarto Version!! {{< iconify material-icon-theme:quarto >}}
+
+::: {.columns}
+
+::: {.column width="60%"}
+
++ [1.9.37](https://quarto.org/docs/blog/posts/2026-03-24-1.9-release/) -- released 4/9/26
++ [LLM accomodation for websites](https://quarto.org/docs/websites/website-llms.html)
++ [new table specification](https://quarto.org/docs/websites/website-llms.html) (alternative to {{< iconify devicon:markdown >}})
+
+:::
+
+::: {.column width="40%"}
+
++ more/improved typst support/integration
+
+::: {.callout-note}
+
+Kulas only realized because this week's poster template had a Quarto version requirement of > 1.9.xx
+
+:::
+
+:::
+
+:::
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGJlcnc0NXM2MHhoZGdrMGJteWkwb2YzMjJqeGdydjAzZGMwNmt1cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MfIWeKMJNZpF8D0n15/giphy.gif){.absolute left="120" bottom="10" height="300"}
+
 # Recap of Session <br>#124: 
 
 ![](https://pngimg.com/d/sticky_note_PNG18952.png){.absolute right="50" top="200"}
