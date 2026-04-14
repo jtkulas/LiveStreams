@@ -1887,6 +1887,20 @@
     "href": "slides/2026/4_14_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7d-new-quarto-version-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7d",
     "title": "R is for Authoring!!",
     "section": " New Quarto Version!! ",
-    "text": "New Quarto Version!! \n\n\n\n1.9.37 – released 4/9/26\nLLM accomodation for websites\nnew table specification (alternative to )\n\n\n\nmore/improved typst support/integration\n\n\n\n\n\n\n\nNote\n\n\nKulas only realized because this week’s poster template had a Quarto version requirement of &gt; 1.9.xx"
+    "text": "New Quarto Version!! \n\n\n\n1.9.37 – released 4/9/26\nLLM accomodation for websites\nnew table specification (alternative to )\n\n\n\nmore/improved typst support/integration\n\n\n\n\n\n\n\n\nNote\n\n\nKulas only realized because this week’s poster template had a Quarto version requirement of &gt; 1.9"
+  },
+  {
+    "objectID": "slides/2026/4_14_26/index.html#open-office-hours-april-14-2026",
+    "href": "slides/2026/4_14_26/index.html#open-office-hours-april-14-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (April 14, 2026)",
+    "text": "Open Office Hours (April 14, 2026)\n\n\n\nRecap session #124\nToday’s topic(s):\n\nConference Posters (II)\n\nShared problem-solving\n\n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/4_14_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-session-info-april-14-2026-rendering",
+    "href": "slides/2026/4_14_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-session-info-april-14-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (April 14, 2026) Rendering:",
+    "text": "Session Info (April 14, 2026) Rendering:\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5"
   }
 ]

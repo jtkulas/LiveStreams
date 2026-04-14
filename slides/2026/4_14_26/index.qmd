@@ -70,11 +70,15 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ::: {.column width="40%"}
 
+
+
 + more/improved typst support/integration
+
+<br>
 
 ::: {.callout-note}
 
-Kulas only realized because this week's poster template had a Quarto version requirement of > 1.9.xx
+Kulas only realized because this week's poster template had a Quarto version requirement of > 1.9  {{< iconify fluent-emoji-flat:eyes >}}
 
 :::
 
@@ -82,7 +86,7 @@ Kulas only realized because this week's poster template had a Quarto version req
 
 :::
 
-![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGJlcnc0NXM2MHhoZGdrMGJteWkwb2YzMjJqeGdydjAzZGMwNmt1cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MfIWeKMJNZpF8D0n15/giphy.gif){.absolute left="120" bottom="10" height="300"}
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGx5c2lkc2p3YXgxZ2F1cmxtZXc1bW1uMWswYndiZ3cwZ3pudHk5aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9VkusmHdKHuAE/giphy.gif){.absolute left="120" bottom="10" height="300"}
 
 # Recap of Session <br>#124: 
 
@@ -98,7 +102,7 @@ Kulas only realized because this week's poster template had a Quarto version req
 
 ::: {.column width="50%"}
 
-`posterdown` & `pagedown` both capitalize on {{< iconify logos:html-5 >}}{{< iconify line-md:arrow-right >}}{{< iconify vscode-icons:file-type-pdf2 >}} transformation via `pagedown::chrome_print()`
+[`posterdown`](https://github.com/brentthorne/posterdown) & [`pagedown`](https://github.com/rstudio/pagedown?tab=readme-ov-file#posters) both capitalize on {{< iconify logos:html-5 >}}{{< iconify line-md:arrow-right >}}{{< iconify vscode-icons:file-type-pdf2 >}} transformation via `pagedown::chrome_print()`
 
 1. specify desired dimensions
 2. add extra YAML spex
@@ -191,7 +195,7 @@ pak::pak("brentthorne/posterdown")  #<2>
 [![](../../../img/posterss1.png){.absolute right="-80" bottom="30" height="550"}]{.fragment .fade-in-then-out fragment-index=1}
 [![](../../../img/posterss2.png){.absolute right="-120" bottom="60" height="500"}]{.fragment .fade-in-then-out fragment-index=2}
 
-![](https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png){.absolute top="-50" right="-150" height="200"}
+![](https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png){.absolute top="130" left="-150" height="200"}
 
 ![](https://cran.r-project.org/web/packages/pagedown/readme/man/figures/logo.png){.absolute bottom="0" left="-150" height="225"}
 
