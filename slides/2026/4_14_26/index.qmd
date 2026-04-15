@@ -64,7 +64,7 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 + [1.9.37](https://quarto.org/docs/blog/posts/2026-03-24-1.9-release/) -- released 4/9/26
 + [LLM accomodation for websites](https://quarto.org/docs/websites/website-llms.html)
-+ [new table specification](https://quarto.org/docs/websites/website-llms.html) (alternative to {{< iconify devicon:markdown >}})
++ [new table specification](https://quarto.org/docs/blog/posts/2026-03-24-1.9-release/#list-tables) (alternative to {{< iconify devicon:markdown >}})
 
 :::
 
