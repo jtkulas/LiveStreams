@@ -13,7 +13,7 @@
 <script src="../../../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.37">
 
-  <meta name="author" content="OOH Session #125… Conference Posters (II)">
+  <meta name="author" content="OOH Session #126… new typst capabilities via Quarto 1.9">
   <title>R is for  Authoring!!</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -102,7 +102,7 @@
     code span.vs { color: #abe338; } /* VerbatimString */
     code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-9da3a9796494bb7fe832a7866d697a4d.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-b2f2f35402610f72e0fd5e78b2932bb5.css">
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-8ZE61PCXCP"></script>
 
   <script type="text/javascript">
@@ -208,30 +208,32 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="../../../img/poster2.png" class="quarto-title-block center">
+<section id="title-slide" data-background-image="../../../img/typst2.png" data-background-opacity=".7" class="quarto-title-block center">
   <h1 class="title"><span class="shadowsharp">R is for <br>Authoring!!</span></h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-OOH Session #125…<br><span class="revolttit Bigger">Conference Posters (II)</span> 
+OOH Session #126…<br><span class="typst">new <code>typst</code><br>capabilities via<br><iconify-icon role="img" inline="" icon="material-icon-theme:quarto" aria-label="Icon quarto from material-icon-theme Iconify.design set." title="Icon quarto from material-icon-theme Iconify.design set."></iconify-icon>Quarto 1.9</span> 
 </div>
 </div>
 </div>
 
 </section>
-<section id="open-office-hours-april-15-2026" class="slide level2">
-<h2>Open Office Hours <br>(April 15, 2026)</h2>
+<section id="open-office-hours-april-16-2026" class="slide level2">
+<h2>Open Office Hours <br>(April 16, 2026)</h2>
 <div class="columns">
 <div class="column" style="width:55%;">
 <ul>
-<li>Recap session #124</li>
+<li>Recap session #125</li>
 <li>Today’s topic(s):
 <ul>
-<li><a href="https://colinpurrington.com/tips/poster-design/"><span class="revolt bigger">Conference Posters (II)</span></a></li>
+<li><a href="https://quarto.org/docs/blog/posts/2026-03-31-typst-books-and-more/"><span class="typst">new <code>typst</code><br>capabilities via<br><iconify-icon role="img" inline="" icon="material-icon-theme:quarto" aria-label="Icon quarto from material-icon-theme Iconify.design set." title="Icon quarto from material-icon-theme Iconify.design set."></iconify-icon>Quarto 1.9</span></a></li>
 </ul></li>
 <li>Shared problem-solving</li>
 </ul>
+</div><div class="column" style="width:45%;">
+<p><br> <br> <br> <br> <br></p>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -245,186 +247,193 @@ OOH Session #125…<br><span class="revolttit Bigger">Conference Posters (II)</s
 </div>
 </div>
 </div>
-</div><div class="column" style="width:45%;">
-
 </div></div>
-<div class="absolute" style="top: 185px; right: -120px; width:550px;">
-<p><a href="https://jtkulas.github.io/LiveStreams/slides/2026/4_7_26"> <img src="../../../img/title124.JPG"> </a></p>
+<div class="absolute" style="top: 170px; right: -120px; width:550px;">
+<p><a href="https://jtkulas.github.io/LiveStreams/slides/2026/4_14_26"> <img src="../../../img/title125.JPG"> </a></p>
 </div>
 <p><img data-src="https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png" class="absolute" style="top: 165px; left: 385px; width: 200px; "></p>
 </section>
 <section>
-<section id="section" class="title-slide slide level1 center" data-background-image="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExOG5wMDRnYnl3bGZiMzVsMG94OHF0MWVqaHQ2ZTVqYnlxNGtraHVrMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/eTWOi2fWRCwTNqVJQo/giphy.gif" data-background-size="1000px">
-<h1></h1>
-
-</section>
-<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7d-new-quarto-version-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7d" class="slide level2">
-<h2><iconify-icon role="img" inline="" icon="material-icon-theme:quarto" aria-label="Icon quarto from material-icon-theme Iconify.design set." title="Icon quarto from material-icon-theme Iconify.design set."></iconify-icon> New Quarto Version!! <iconify-icon role="img" inline="" icon="material-icon-theme:quarto" aria-label="Icon quarto from material-icon-theme Iconify.design set." title="Icon quarto from material-icon-theme Iconify.design set."></iconify-icon></h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<ul>
-<li><a href="https://quarto.org/docs/blog/posts/2026-03-24-1.9-release/">1.9.37</a> – released 4/9/26</li>
-<li><a href="https://quarto.org/docs/websites/website-llms.html">LLM accomodation for websites</a></li>
-<li><a href="https://quarto.org/docs/blog/posts/2026-03-24-1.9-release/#list-tables">new table specification</a> (alternative to <iconify-icon role="img" inline="" icon="devicon:markdown" aria-label="Icon markdown from devicon Iconify.design set." title="Icon markdown from devicon Iconify.design set."></iconify-icon>)</li>
-</ul>
-</div><div class="column" style="width:40%;">
-<ul>
-<li>more/improved typst support/integration</li>
-</ul>
-<p><br></p>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Note</strong></p>
-</div>
-<div class="callout-content">
-<p>Kulas only realized because this week’s poster template had a Quarto version requirement of &gt; 1.9 <iconify-icon role="img" inline="" icon="fluent-emoji-flat:eyes" aria-label="Icon eyes from fluent-emoji-flat Iconify.design set." title="Icon eyes from fluent-emoji-flat Iconify.design set."></iconify-icon></p>
-</div>
-</div>
-</div>
-</div></div>
-<p><img data-src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdGx5c2lkc2p3YXgxZ2F1cmxtZXc1bW1uMWswYndiZ3cwZ3pudHk5aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9VkusmHdKHuAE/giphy.gif" class="absolute" style="left: 120px; bottom: 10px; height: 300px; "></p>
-</section></section>
-<section>
-<section id="recap-of-session-124" class="title-slide slide level1 center">
-<h1>Recap of Session <br>#124:</h1>
+<section id="recap-of-session-125" class="title-slide slide level1 center">
+<h1>Recap of Session <br>#125:</h1>
 <p><img data-src="https://pngimg.com/d/sticky_note_PNG18952.png" class="absolute" style="top: 200px; right: 50px; "></p>
 <p><img data-src="https://cdn-icons-png.flaticon.com/512/5045/5045043.png" class="absolute" style="top: 250px; right: 85px; width: 170px; "></p>
-<p><img data-src="https://pkgs.rstudio.com/rmarkdown/reference/figures/logo.png" class="absolute" style="top: 270px; right: 135px; width: 70px; "></p>
+<p><img data-src="https://quarto.org/quarto-dark-bg.jpeg" class="absolute" style="top: 280px; right: 120px; width: 100px; "></p>
 </section>
-<section id="conference-posters-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792066696c652d69636f6e733a726d61726b646f776e207374796c653d22636f6c6f723a233832623166663b22203e7d7d" class="slide level2">
-<h2><a href="https://colinpurrington.com/tips/poster-design/"><span class="revolt bigger">Conference Posters (<iconify-icon role="img" inline="" icon="file-icons:rmarkdown" style="color:#82b1ff;" aria-label="Icon rmarkdown from file-icons Iconify.design set." title="Icon rmarkdown from file-icons Iconify.design set."></iconify-icon>)</span></a></h2>
+<section id="conference-posters-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7d" class="slide level2">
+<h2><a href="https://colinpurrington.com/tips/poster-design/"><span class="revolt bigger">Conference Posters (<iconify-icon role="img" inline="" icon="material-icon-theme:quarto" aria-label="Icon quarto from material-icon-theme Iconify.design set." title="Icon quarto from material-icon-theme Iconify.design set."></iconify-icon>)</span></a></h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1"><iconify-icon role="img" inline="" icon="material-icon-theme:quarto" aria-label="Icon quarto from material-icon-theme Iconify.design set." title="Icon quarto from material-icon-theme Iconify.design set."></iconify-icon></a></li><li><a href="#tabset-1-2"><iconify-icon role="img" inline="" icon="file-icons:rmarkdown" style="color:#82b1ff;" aria-label="Icon rmarkdown from file-icons Iconify.design set." title="Icon rmarkdown from file-icons Iconify.design set."></iconify-icon><iconify-icon role="img" inline="" icon="noto:fight-cloud" aria-label="Icon fight-cloud from noto Iconify.design set." title="Icon fight-cloud from noto Iconify.design set."></iconify-icon><iconify-icon role="img" inline="" icon="material-icon-theme:quarto" aria-label="Icon quarto from material-icon-theme Iconify.design set." title="Icon quarto from material-icon-theme Iconify.design set."></iconify-icon></a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="columns">
+<div class="column smaller" style="width:55%;">
+<ul>
+<li><a href="https://github.com/quarto-ext/typst-templates/tree/main/poster"><iconify-icon role="img" inline="" icon="material-icon-theme:typst" aria-label="Icon typst from material-icon-theme Iconify.design set." title="Icon typst from material-icon-theme Iconify.design set."></iconify-icon>template</a> – operates in same manner as <a href="https://quarto.org/docs/extensions/">an extension</a></li>
+<li><code>typst</code> code chunks an easy way to tweak (<iconify-icon role="img" inline="" icon="fluent-emoji-flat:eyes" aria-label="Icon eyes from fluent-emoji-flat Iconify.design set." title="Icon eyes from fluent-emoji-flat Iconify.design set."></iconify-icon> line #s 17<iconify-icon role="img" inline="" icon="ph:arrow-right-bold" aria-label="Icon arrow-right-bold from ph Iconify.design set." title="Icon arrow-right-bold from ph Iconify.design set."></iconify-icon>18)</li>
+<li>adjust 1) <code>size</code> dims, 2) <code>num-columns:</code>, &amp; 3) body text font–size to fit content</li>
+</ul>
+</div><div class="column" style="width:45%;">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" data-code-line-numbers="5,14,17-19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="sc">---</span></span>
+<span id="cb1-2"><a></a>title<span class="sc">:</span> This is an academic poster with typst and quarto<span class="sc">!</span></span>
+<span id="cb1-3"><a></a>format<span class="sc">:</span></span>
+<span id="cb1-4"><a></a>  poster<span class="sc">-</span>typst<span class="sc">:</span> </span>
+<span id="cb1-5"><a></a>    size<span class="sc">:</span> <span class="st">"36x24"</span></span>
+<span id="cb1-6"><a></a>    poster<span class="sc">-</span>authors<span class="sc">:</span> <span class="st">"A. Smith, B. Jones, C. Brown, D. Miller"</span></span>
+<span id="cb1-7"><a></a>    departments<span class="sc">:</span> <span class="st">"Department of Computer Science"</span></span>
+<span id="cb1-8"><a></a>    institution<span class="sc">-</span>logo<span class="sc">:</span> <span class="st">"./images/ncstate.png"</span></span>
+<span id="cb1-9"><a></a>    footer<span class="sc">-</span>text<span class="sc">:</span> <span class="st">"posit::conf 2023"</span></span>
+<span id="cb1-10"><a></a>    footer<span class="sc">-</span>url<span class="sc">:</span> <span class="st">"https://posit.co/conference/"</span></span>
+<span id="cb1-11"><a></a>    footer<span class="sc">-</span>emails<span class="sc">:</span> <span class="st">"abc@example.com"</span></span>
+<span id="cb1-12"><a></a>    footer<span class="sc">-</span>color<span class="sc">:</span> <span class="st">"ebcfb2"</span></span>
+<span id="cb1-13"><a></a>    keywords<span class="sc">:</span> [<span class="st">"Typesetting"</span>, <span class="st">"Typst"</span>, <span class="st">"Quarto"</span>]</span>
+<span id="cb1-14"><a></a>    num<span class="sc">-</span>columns<span class="sc">:</span> <span class="dv">3</span></span>
+<span id="cb1-15"><a></a><span class="sc">---</span></span>
+<span id="cb1-16"><a></a></span>
+<span id="cb1-17"><a></a><span class="st">```</span><span class="at">{=typst}</span></span>
+<span id="cb1-18"><a></a><span class="at">#set text(size: 18pt)  // or whatever you want for body</span></span>
+<span id="cb1-19"><a></a><span class="st">```</span></span>
+<span id="cb1-20"><a></a></span>
+<span id="cb1-21"><a></a></span>
+<span id="cb1-22"><a></a><span class="co"># Blue</span></span>
+<span id="cb1-23"><a></a></span>
+<span id="cb1-24"><a></a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri tamen permagna accessio potest, si aliquod aeternum et infinitum impendere malum nobis opinemur. Quod idem licet transferre <span class="cf">in</span> voluptatem, ut postea variari voluptas distinguique possit, augeri amplificarique non possit. At etiam Athenis, ut e patre audiebam facete et urbane Stoicos irridente, statua est <span class="cf">in</span> quo a nobis philosophia defensa et collaudata est, cum id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, om<span class="sc">-</span> nis dolor repellendus. Temporibus autem quibusdam et.</span>
+<span id="cb1-25"><a></a></span>
+<span id="cb1-26"><a></a><span class="st">```</span><span class="at">{r}</span></span>
+<span id="cb1-27"><a></a><span class="at">#| echo: false</span></span>
+<span id="cb1-28"><a></a><span class="at">#| warning: false</span></span>
+<span id="cb1-29"><a></a><span class="at">#| message: false</span></span>
+<span id="cb1-30"><a></a><span class="at"># Load libraries</span></span>
+<span id="cb1-31"><a></a><span class="at">library(ggplot2)</span></span>
+<span id="cb1-32"><a></a><span class="at">library(dplyr)</span></span>
+<span id="cb1-33"><a></a></span>
+<span id="cb1-34"><a></a><span class="at"># Create a simple dataset</span></span>
+<span id="cb1-35"><a></a><span class="at">df &lt;- data.frame(</span></span>
+<span id="cb1-36"><a></a><span class="at">  x = 1:10,</span></span>
+<span id="cb1-37"><a></a><span class="at">  y = rnorm(10, mean = 5, sd = 2)</span></span>
+<span id="cb1-38"><a></a><span class="at">)</span></span>
+<span id="cb1-39"><a></a></span>
+<span id="cb1-40"><a></a><span class="at">ggplot(df, aes(x, y)) +</span></span>
+<span id="cb1-41"><a></a><span class="at">  geom_point() +</span></span>
+<span id="cb1-42"><a></a><span class="at">  geom_segment(aes(x = 2, y = 2, xend = 8, yend = 8),</span></span>
+<span id="cb1-43"><a></a><span class="at">    arrow = arrow()</span></span>
+<span id="cb1-44"><a></a><span class="at">  ) +</span></span>
+<span id="cb1-45"><a></a><span class="at">  theme_minimal()</span></span>
+<span id="cb1-46"><a></a><span class="st">```</span></span>
+<span id="cb1-47"><a></a></span>
+<span id="cb1-48"><a></a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri tamen permagna accessio potest, si aliquod aeternum et infinitum impendere malum nobis opinemur. Quod idem licet transferre <span class="cf">in</span> voluptatem, ut postea variari voluptas distinguique possit, augeri amplificarique non pos<span class="sc">-</span> sit. At.</span>
+<span id="cb1-49"><a></a></span>
+<span id="cb1-50"><a></a><span class="co"># Red</span></span>
+<span id="cb1-51"><a></a></span>
+<span id="cb1-52"><a></a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri.</span>
+<span id="cb1-53"><a></a></span>
+<span id="cb1-54"><a></a><span class="fl">1.</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</span>
+<span id="cb1-55"><a></a><span class="fl">1.</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</span>
+<span id="cb1-56"><a></a><span class="fl">1.</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</span>
+<span id="cb1-57"><a></a></span>
+<span id="cb1-58"><a></a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri tamen permagna accessio potest, si aliquod aeternum et infinitum impendere malum nobis opinemur. Quod idem licet transferre <span class="cf">in</span> voluptatem, ut.</span>
+<span id="cb1-59"><a></a></span>
+<span id="cb1-60"><a></a><span class="sc">|</span> Lorem ipsum dolor sit. <span class="sc">|</span> Lorem ipsum. <span class="sc">|</span> Lorem ipsum. <span class="sc">|</span></span>
+<span id="cb1-61"><a></a><span class="er">|</span><span class="sc">------------------------</span><span class="er">|</span><span class="sc">--------------</span><span class="er">|</span><span class="sc">--------------</span><span class="er">|</span></span>
+<span id="cb1-62"><a></a><span class="er">|</span> Lorem ipsum dolor.     <span class="sc">|</span> Lorem ipsum. <span class="sc">|</span> <span class="er">$</span>\alpha<span class="sc">$</span>     <span class="er">|</span></span>
+<span id="cb1-63"><a></a><span class="er">|</span> Lorem ipsum.           <span class="sc">|</span> Lorem ipsum. <span class="sc">|</span> <span class="er">$</span>\beta<span class="sc">$</span>      <span class="er">|</span></span>
+<span id="cb1-64"><a></a><span class="er">|</span> Lorem.                 <span class="sc">|</span> Lorem.       <span class="sc">|</span> <span class="er">$</span>\gamma<span class="sc">$</span>     <span class="er">|</span></span>
+<span id="cb1-65"><a></a><span class="er">|</span> Lorem ipsum dolor.     <span class="sc">|</span> Lorem.       <span class="sc">|</span> <span class="er">$</span>\theta<span class="sc">$</span>     <span class="er">|</span></span>
+<span id="cb1-66"><a></a></span>
+<span id="cb1-67"><a></a><span class="er">:</span> Lorem ipsum dolor sit amet {<span class="co">#tbl-1}</span></span>
+<span id="cb1-68"><a></a></span>
+<span id="cb1-69"><a></a>Lorem <span class="sc">@</span>tbl<span class="dv">-1</span> ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri tamen permagna accessio potest, si aliquod aeternum et infinitum impendere malum nobis opinemur. Quod idem licet transferre <span class="cf">in</span> voluptatem, ut postea variari voluptas distinguique possit, augeri amplificarique non possit. At etiam Athenis, ut e patre audiebam facete et urbane Stoicos irridente, statua est <span class="cf">in</span> quo a nobis philosophia defensa et.</span>
+<span id="cb1-70"><a></a></span>
+<span id="cb1-71"><a></a><span class="do">## Lorem ipsum dolor sit amet</span></span>
+<span id="cb1-72"><a></a></span>
+<span id="cb1-73"><a></a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri tamen permagna accessio potest, si aliquod aeternum et infinitum impendere malum nobis opinemur. Quod idem licet transferre <span class="cf">in</span> voluptatem, ut postea variari voluptas distinguique possit, augeri amplificarique non possit. At etiam Athenis, ut e patre.</span>
+<span id="cb1-74"><a></a></span>
+<span id="cb1-75"><a></a><span class="sc">!</span>[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.](.<span class="sc">/</span>images<span class="sc">/</span>Standard_lettering.png){width<span class="ot">=</span><span class="st">"100%"</span>}</span>
+<span id="cb1-76"><a></a></span>
+<span id="cb1-77"><a></a><span class="co"># Green</span></span>
+<span id="cb1-78"><a></a></span>
+<span id="cb1-79"><a></a><span class="sc">:::</span> {.block fill<span class="ot">=</span><span class="fu">rgb</span>(<span class="st">"de76aa"</span>) inset<span class="ot">=</span><span class="st">"12pt"</span> radius<span class="ot">=</span><span class="st">"14pt"</span> stroke<span class="ot">=</span><span class="st">"8pt + black"</span>} </span>
+<span id="cb1-80"><a></a></span>
+<span id="cb1-81"><a></a><span class="sc">$</span><span class="er">$</span></span>
+<span id="cb1-82"><a></a>\sum_{(<span class="at">k=</span><span class="dv">1</span>)<span class="sc">^</span>n} k <span class="ot">=</span> \frac{(<span class="fu">n</span>(n<span class="sc">+</span><span class="dv">1</span>))}{<span class="dv">2</span>} <span class="ot">=</span> \frac{(n<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> n)}{<span class="dv">2</span>}</span>
+<span id="cb1-83"><a></a><span class="sc">$</span><span class="er">$</span></span>
+<span id="cb1-84"><a></a></span>
+<span id="cb1-85"><a></a><span class="sc">-</span> That was a math equation bracketed by <span class="sc">$</span> (which invokes the math translator), notice that the box extends across column breaks. Watch the indent when this extends across a whole line. Note that this box does not have a lot of inset padding, unlike the gray box below, where the text can <span class="st">'breathe'</span>. </span>
+<span id="cb1-86"><a></a><span class="sc">-</span> Also notice how rounded the corners <span class="fu">are</span> (radius) <span class="cf">in</span> the two different boxes.</span>
+<span id="cb1-87"><a></a><span class="sc">-</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</span>
+<span id="cb1-88"><a></a></span>
+<span id="cb1-89"><a></a><span class="sc">:::</span></span>
+<span id="cb1-90"><a></a></span>
+<span id="cb1-91"><a></a><span class="do">## Lorem ipsum etiam</span></span>
+<span id="cb1-92"><a></a></span>
+<span id="cb1-93"><a></a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri tamen permagna accessio potest, si aliquod aeternum et infinitum impendere malum nobis opinemur. </span>
+<span id="cb1-94"><a></a></span>
+<span id="cb1-95"><a></a><span class="do">## Lorem ipsum possimus</span></span>
+<span id="cb1-96"><a></a></span>
+<span id="cb1-97"><a></a>Quod idem licet transferre <span class="cf">in</span> voluptatem, ut postea variari voluptas distinguique possit, augeri amplificarique non possit. At etiam Athenis, ut e patre audiebam facete et urbane Stoicos irridente, statua est <span class="cf">in</span> quo a nobis philosophia defensa et collaudata est, cum id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, om<span class="sc">-</span> nis dolor repellendus. Temporibus autem quibusdam et.</span>
+<span id="cb1-98"><a></a></span>
+<span id="cb1-99"><a></a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri tamen permagna accessio potest, si aliquod aeternum et infinitum impendere malum nobis opinemur. </span>
+<span id="cb1-100"><a></a></span>
+<span id="cb1-101"><a></a><span class="sc">!</span>[Temperature and ozone level](images<span class="sc">/</span>fig<span class="sc">-</span>airquality<span class="fl">-1.</span>svg)</span>
+<span id="cb1-102"><a></a></span>
+<span id="cb1-103"><a></a>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri tamen permagna accessio potest, si aliquod aeternum et infinitum impendere malum nobis opinemur. Quod idem licet transferre <span class="cf">in</span> voluptatem, ut postea variari voluptas distinguique possit, augeri amplificarique non possit. At etiam Athenis, ut e patre audiebam facete et urbane Stoicos irridente, statua est <span class="cf">in</span> quo a nobis philosophia defensa et collaudata est, cum id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, om<span class="sc">-</span> nis dolor repellendus. Temporibus autem quibusdam et.</span>
+<span id="cb1-104"><a></a></span>
+<span id="cb1-105"><a></a><span class="sc">-</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.</span>
+<span id="cb1-106"><a></a>  <span class="sc">-</span> Lorem ipsum dolor sit amet.</span>
+<span id="cb1-107"><a></a>  <span class="sc">-</span>  Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+<span id="cb1-108"><a></a><span class="sc">-</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</span>
+<span id="cb1-109"><a></a>  <span class="sc">-</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed. </span>
+<span id="cb1-110"><a></a>  <span class="sc">-</span> Lorem ipsum dolor sit amet, consectetur adipiscing.</span>
+<span id="cb1-111"><a></a></span>
+<span id="cb1-112"><a></a><span class="sc">$</span><span class="er">$</span></span>
+<span id="cb1-113"><a></a>\sum_{(<span class="at">k=</span><span class="dv">1</span>)<span class="sc">^</span>n} k <span class="ot">=</span> \frac{(<span class="fu">n</span>(n<span class="sc">+</span><span class="dv">1</span>))}{<span class="dv">2</span>} <span class="ot">=</span> \frac{(n<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> n)}{<span class="dv">2</span>}</span>
+<span id="cb1-114"><a></a><span class="sc">$</span><span class="er">$</span></span>
+<span id="cb1-115"><a></a></span>
+<span id="cb1-116"><a></a><span class="co"># That's all folks!!</span></span>
+<span id="cb1-117"><a></a></span>
+<span id="cb1-118"><a></a><span class="er">:::</span> {.callout<span class="sc">-</span>note}</span>
+<span id="cb1-119"><a></a></span>
+<span id="cb1-120"><a></a>THIS WAS AWESOME<span class="sc">!!</span> OUR POSTER WON THE BEST EVER SCENE</span>
+<span id="cb1-121"><a></a></span>
+<span id="cb1-122"><a></a><span class="sc">!</span>[](https<span class="sc">:</span><span class="er">//</span>encrypted<span class="sc">-</span>tbn0.gstatic.com<span class="sc">/</span>images?<span class="at">q=</span>tbn<span class="sc">:</span>ANd9GcSEvGpf6vpMTC6fTklxDNo37LBZhnbyv8rV5VCvfIUuTNu2qz0bkwc2AAxz7cr4KofqcNaJUQAvmHTtQbtNvsSp<span class="sc">-</span>u1rLD106IefUtLCuA<span class="sc">&amp;</span><span class="at">s=</span><span class="dv">10</span>)</span>
+<span id="cb1-123"><a></a></span>
+<span id="cb1-124"><a></a><span class="sc">:::</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div></div>
+</div>
+<div id="tabset-1-2">
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><a href="https://github.com/brentthorne/posterdown"><code>posterdown</code></a> &amp; <a href="https://github.com/rstudio/pagedown?tab=readme-ov-file#posters"><code>pagedown</code></a> both capitalize on <iconify-icon role="img" inline="" icon="logos:html-5" aria-label="Icon html-5 from logos Iconify.design set." title="Icon html-5 from logos Iconify.design set."></iconify-icon><iconify-icon role="img" inline="" icon="line-md:arrow-right" aria-label="Icon arrow-right from line-md Iconify.design set." title="Icon arrow-right from line-md Iconify.design set."></iconify-icon><iconify-icon role="img" inline="" icon="vscode-icons:file-type-pdf2" aria-label="Icon file-type-pdf2 from vscode-icons Iconify.design set." title="Icon file-type-pdf2 from vscode-icons Iconify.design set."></iconify-icon> transformation via <code>pagedown::chrome_print()</code></p>
-<ol type="1">
-<li>specify desired dimensions</li>
-<li>add extra YAML spex</li>
-</ol>
+<h3 id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792066696c652d69636f6e733a726d61726b646f776e207374796c653d22636f6c6f723a233832623166663b22203e7d7d-via-posterdown"><iconify-icon role="img" inline="" icon="file-icons:rmarkdown" style="color:#82b1ff;" aria-label="Icon rmarkdown from file-icons Iconify.design set." title="Icon rmarkdown from file-icons Iconify.design set."></iconify-icon> via <a href="https://github.com/brentthorne/posterdown/wiki"><code>posterdown</code></a></h3>
+<p><iconify-icon role="img" inline="" icon="streamline-ultimate-color:check" aria-label="Icon check from streamline-ultimate-color Iconify.design set." title="Icon check from streamline-ultimate-color Iconify.design set."></iconify-icon> YAML dimension spex<br>
+<iconify-icon role="img" inline="" icon="streamline-ultimate-color:check" aria-label="Icon check from streamline-ultimate-color Iconify.design set." title="Icon check from streamline-ultimate-color Iconify.design set."></iconify-icon> format tweaks (via <iconify-icon role="img" inline="" icon="devicon:css3-wordmark" aria-label="Icon css3-wordmark from devicon Iconify.design set." title="Icon css3-wordmark from devicon Iconify.design set."></iconify-icon>)<br>
+<iconify-icon role="img" inline="" icon="noto:face-with-raised-eyebrow" aria-label="Icon face-with-raised-eyebrow from noto Iconify.design set." title="Icon face-with-raised-eyebrow from noto Iconify.design set."></iconify-icon> .html to .pdf<br>
+<iconify-icon role="img" inline="" icon="streamline-ultimate-color:check" aria-label="Icon check from streamline-ultimate-color Iconify.design set." title="Icon check from streamline-ultimate-color Iconify.design set."></iconify-icon> 3 different templates<br>
+<iconify-icon role="img" inline="" icon="streamline-ultimate-color:remove-bold" aria-label="Icon remove-bold from streamline-ultimate-color Iconify.design set." title="Icon remove-bold from streamline-ultimate-color Iconify.design set."></iconify-icon> currently <u><strong>in</strong></u>active</p>
 </div><div class="column" style="width:50%;">
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-1" data-code-line-numbers="18-21"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-1-1"><a href="#annotated-cell-1-1"></a><span class="sc">---</span></span>
-<span id="annotated-cell-1-2"><a href="#annotated-cell-1-2"></a>title<span class="sc">:</span> Generate Reproducible <span class="sc">&amp;</span> Live HTML and PDF Conference Posters Using RMarkdown</span>
-<span id="annotated-cell-1-3"><a href="#annotated-cell-1-3"></a>author<span class="sc">:</span></span>
-<span id="annotated-cell-1-4"><a href="#annotated-cell-1-4"></a>  <span class="sc">-</span> name<span class="sc">:</span> Brent Thorne</span>
-<span id="annotated-cell-1-5"><a href="#annotated-cell-1-5"></a>    affil<span class="sc">:</span> <span class="dv">1</span></span>
-<span id="annotated-cell-1-6"><a href="#annotated-cell-1-6"></a>    orcid<span class="sc">:</span> <span class="st">'0000-0002-1099-3857'</span></span>
-<span id="annotated-cell-1-7"><a href="#annotated-cell-1-7"></a>affiliation<span class="sc">:</span></span>
-<span id="annotated-cell-1-8"><a href="#annotated-cell-1-8"></a>  <span class="sc">-</span> num<span class="sc">:</span> <span class="dv">1</span></span>
-<span id="annotated-cell-1-9"><a href="#annotated-cell-1-9"></a>    address<span class="sc">:</span> Department of Earth Science, Brock University Canada</span>
-<span id="annotated-cell-1-10"><a href="#annotated-cell-1-10"></a>column_numbers<span class="sc">:</span> <span class="dv">3</span></span>
-<span id="annotated-cell-1-11"><a href="#annotated-cell-1-11"></a>logoright_name<span class="sc">:</span> https<span class="sc">&amp;</span><span class="co">#58;//www.pngkey.com/png/full/380-3806364_chilly-willy-the-penguin.png</span></span>
-<span id="annotated-cell-1-12"><a href="#annotated-cell-1-12"></a>logoleft_name<span class="sc">:</span> https<span class="sc">&amp;</span><span class="co">#58;//raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png</span></span>
-<span id="annotated-cell-1-13"><a href="#annotated-cell-1-13"></a>primary_colour<span class="sc">:</span> <span class="st">"#60c0e6"</span></span>
-<span id="annotated-cell-1-14"><a href="#annotated-cell-1-14"></a>secondary_colour<span class="sc">:</span> <span class="st">"#1c4859"</span></span>
-<span id="annotated-cell-1-15"><a href="#annotated-cell-1-15"></a>accent_colour<span class="sc">:</span> <span class="st">"#d986d5"</span></span>
-<span id="annotated-cell-1-16"><a href="#annotated-cell-1-16"></a>output<span class="sc">:</span> </span>
-<span id="annotated-cell-1-17"><a href="#annotated-cell-1-17"></a>  posterdown<span class="sc">::</span>posterdown_html<span class="sc">:</span></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="1">1</button><span id="annotated-cell-1-18" class="code-annotation-target"><a href="#annotated-cell-1-18"></a>    poster_height<span class="sc">:</span> <span class="st">"36in"</span></span>
-<span id="annotated-cell-1-19"><a href="#annotated-cell-1-19"></a>    poster_width<span class="sc">:</span> <span class="st">"48in"</span></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="2">2</button><span id="annotated-cell-1-20" class="code-annotation-target"><a href="#annotated-cell-1-20"></a>    self_contained<span class="sc">:</span> true</span>
-<span id="annotated-cell-1-21"><a href="#annotated-cell-1-21"></a>knit<span class="sc">:</span> pagedown<span class="sc">::</span>chrome_print </span>
-<span id="annotated-cell-1-22"><a href="#annotated-cell-1-22"></a>bibliography<span class="sc">:</span> packages.bib</span>
-<span id="annotated-cell-1-23"><a href="#annotated-cell-1-23"></a><span class="sc">---</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-annotation">
-<dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
-<dd>
-<span data-code-cell="annotated-cell-1" data-code-lines="18,19" data-code-annotation="1">check with printer prior to size specification – works as first–level YAML command as well (if you run into issues)</span>
-</dd>
-<dt data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
-<dd>
-<span data-code-cell="annotated-cell-1" data-code-lines="20" data-code-annotation="2">default is <code>self_contained: false</code> – has consequences for any external resource requirements. Setting to <code>true</code> eliminates external resource dependencies</span>
-</dd>
-</dl>
-</div>
-</div>
+<h3 id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7d-via-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a7479707374203e7d7dtemplate"><iconify-icon role="img" inline="" icon="material-icon-theme:quarto" aria-label="Icon quarto from material-icon-theme Iconify.design set." title="Icon quarto from material-icon-theme Iconify.design set."></iconify-icon> via <a href="https://github.com/quarto-ext/typst-templates/tree/main/poster"><iconify-icon role="img" inline="" icon="material-icon-theme:typst" aria-label="Icon typst from material-icon-theme Iconify.design set." title="Icon typst from material-icon-theme Iconify.design set."></iconify-icon>template</a></h3>
+<p><iconify-icon role="img" inline="" icon="streamline-ultimate-color:check" aria-label="Icon check from streamline-ultimate-color Iconify.design set." title="Icon check from streamline-ultimate-color Iconify.design set."></iconify-icon> YAML dimension spex<br>
+<iconify-icon role="img" inline="" icon="streamline-ultimate-color:check" aria-label="Icon check from streamline-ultimate-color Iconify.design set." title="Icon check from streamline-ultimate-color Iconify.design set."></iconify-icon> format tweaks (via <iconify-icon role="img" inline="" icon="material-icon-theme:typst" aria-label="Icon typst from material-icon-theme Iconify.design set." title="Icon typst from material-icon-theme Iconify.design set."></iconify-icon>)<br>
+<iconify-icon role="img" inline="" icon="streamline-ultimate-color:check" aria-label="Icon check from streamline-ultimate-color Iconify.design set." title="Icon check from streamline-ultimate-color Iconify.design set."></iconify-icon> direct to .pdf<br>
+<iconify-icon role="img" inline="" icon="streamline-ultimate-color:remove-bold" aria-label="Icon remove-bold from streamline-ultimate-color Iconify.design set." title="Icon remove-bold from streamline-ultimate-color Iconify.design set."></iconify-icon> 1 standard template<br>
+<iconify-icon role="img" inline="" icon="streamline-ultimate-color:check" aria-label="Icon check from streamline-ultimate-color Iconify.design set." title="Icon check from streamline-ultimate-color Iconify.design set."></iconify-icon> currently active</p>
 </div></div>
-<p><img data-src="https://static.vecteezy.com/system/resources/previews/014/391/904/non_2x/right-arrow-curved-icon-isolated-on-transparent-background-free-png.png" class="absolute tilt" style="left: 150px; bottom: 15px; height: 200px; "></p>
-<p><img data-src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png" class="absolute" style="left: -150px; bottom: 0px; height: 225px; "></p>
-<p><img data-src="https://cran.r-project.org/web/packages/pagedown/readme/man/figures/logo.png" class="absolute" style="top: -50px; right: -150px; height: 200px; "></p>
-</section>
-<section id="conference-posters-ii-how" class="slide level2">
-<h2><a href="https://colinpurrington.com/tips/poster-design/"><span class="revolt bigger">Conference Posters (II – How)</span></a></h2>
-<div class="columns">
-<div class="column" style="width:5%;">
-
-</div><div class="column" style="width:50%;">
-<p><span class="fragment semi-fade-out" data-fragment-index="1">1. install <code>pagedown</code> &amp; <code>posterdown</code></span></p>
-<p><span class="fragment fade-in-then-semi-out" data-fragment-index="1">2. <code>File</code><iconify-icon role="img" inline="" icon="maki:arrow" aria-label="Icon arrow from maki Iconify.design set." title="Icon arrow from maki Iconify.design set."></iconify-icon><code>New File</code><iconify-icon role="img" inline="" icon="maki:arrow" aria-label="Icon arrow from maki Iconify.design set." title="Icon arrow from maki Iconify.design set."></iconify-icon><code>R Markdown</code></span></p>
-<p><span class="fragment fade-in-then-semi-out" data-fragment-index="2">3. <code>From Template</code><iconify-icon role="img" inline="" icon="maki:arrow" aria-label="Icon arrow from maki Iconify.design set." title="Icon arrow from maki Iconify.design set."></iconify-icon>your preference – choose from 3 <code>posterdown</code> &amp; 2 <code>pagedown</code> poster templates</span></p>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column fragment fade-out" data-fragment-index="1" style="width:40%;">
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-2"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-2-1"><a href="#annotated-cell-2-1"></a><span class="do">## Available on CRAN:</span></span>
-<span id="annotated-cell-2-2"><a href="#annotated-cell-2-2"></a></span>
-<span id="annotated-cell-2-3"><a href="#annotated-cell-2-3"></a><span class="fu">install.packages</span>(<span class="st">"pagedown"</span>)</span>
-<span id="annotated-cell-2-4"><a href="#annotated-cell-2-4"></a></span>
-<span id="annotated-cell-2-5"><a href="#annotated-cell-2-5"></a><span class="do">## Choose only 1 of the following:</span></span>
-<span id="annotated-cell-2-6"><a href="#annotated-cell-2-6"></a></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="1">1</button><span id="annotated-cell-2-7" class="code-annotation-target"><a href="#annotated-cell-2-7"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"brentthorne/posterdown"</span>)</span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="2">2</button><span id="annotated-cell-2-8" class="code-annotation-target"><a href="#annotated-cell-2-8"></a>pak<span class="sc">::</span><span class="fu">pak</span>(<span class="st">"brentthorne/posterdown"</span>)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-annotation">
-<dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-2" data-target-annotation="1">1</dt>
-<dd>
-<span data-code-cell="annotated-cell-2" data-code-lines="7" data-code-annotation="1">core function that <code>devtools</code> has traditionally used (borrowed from <code>remotes</code>), however, <code>devtools</code> has depreciated <code>install_*()</code> functions and now recommends using <code>pak</code></span>
-</dd>
-<dt data-target-cell="annotated-cell-2" data-target-annotation="2">2</dt>
-<dd>
-<span data-code-cell="annotated-cell-2" data-code-lines="8" data-code-annotation="2">currently recommended as the most efficient way to install from <iconify-icon role="img" inline="" icon="devicon:github-wordmark" aria-label="Icon github-wordmark from devicon Iconify.design set." title="Icon github-wordmark from devicon Iconify.design set."></iconify-icon></span>
-</dd>
-</dl>
 </div>
 </div>
-</div></div>
-<p><span class="fragment fade-in-then-out" data-fragment-index="1"><img data-src="../../../img/posterss1.png" class="absolute" style="bottom: 30px; right: -80px; height: 550px; "></span> <span class="fragment fade-in-then-out" data-fragment-index="2"><img data-src="../../../img/posterss2.png" class="absolute" style="bottom: 60px; right: -120px; height: 500px; "></span></p>
-<p><img data-src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/betterhexlogo.png" class="absolute" style="top: 130px; left: -150px; height: 200px; "></p>
-<p><img data-src="https://cran.r-project.org/web/packages/pagedown/readme/man/figures/logo.png" class="absolute" style="left: -150px; bottom: 0px; height: 225px; "></p>
+</div>
+<p><img data-src="https://static.vecteezy.com/system/resources/thumbnails/013/395/352/small/reports-and-statistics-illustration-in-minimal-style-png.png" class="absolute" style="top: -30px; right: -150px; height: 250px; "></p>
 </section></section>
 <section>
 <section id="today" class="title-slide slide level1 center">
 <h1>Today…</h1>
 
-<img data-src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWdvOWJ2NzF6cnNsNjQ2NDM5NnQ4a2txdDA1b2gwMGM1NGMzeGl2dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/78fplCqoKnifbIpX6h/giphy.gif" class="r-stretch"></section>
-<section id="conference-posters-ii" class="slide level2">
-<h2><a href="https://colinpurrington.com/tips/poster-design/"><span class="revolt bigger">Conference Posters (II)</span></a></h2>
-<div class="columns">
-<div class="column" style="width:55%;">
-<div class="fragment semi-fade-out">
-<h3 id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792066696c652d69636f6e733a726d61726b646f776e207374796c653d22636f6c6f723a233832623166663b22203e7d7d-options"><iconify-icon role="img" inline="" icon="file-icons:rmarkdown" style="color:#82b1ff;" aria-label="Icon rmarkdown from file-icons Iconify.design set." title="Icon rmarkdown from file-icons Iconify.design set."></iconify-icon> Options:</h3>
-<div class="Smaller">
-<ul>
-<li><p><a href="https://github.com/brentthorne/posterdown/wiki"><code>posterdown</code></a> – <iconify-icon role="img" inline="" icon="uiw:github" style="color:#ffffff;" aria-label="Icon github from uiw Iconify.design set." title="Icon github from uiw Iconify.design set."></iconify-icon>/CRAN archive, css–modified with .pdf capability via <code>pagedown:: chrome_print()</code></p></li>
-<li><p><a href="https://pagedown.rbind.io/poster-relaxed"><code>poster_relaxed</code></a> &amp; <a href="https://pagedown.rbind.io/poster-jacobs"><code>poster_jacobs</code></a> via <a href="https://github.com/rstudio/pagedown"><code>pagedown</code></a></p></li>
-<li><p><a href="https://github.com/odeleongt/postr"><code>postr</code></a> – flexdashboard with <a href="https://wch.github.io/webshot/articles/intro.html">webshot</a> to .png (possibly <iconify-icon role="img" inline="" icon="line-md:cog-off-loop" aria-label="Icon cog-off-loop from line-md Iconify.design set." title="Icon cog-off-loop from line-md Iconify.design set."></iconify-icon>)</p></li>
-<li><p><span class="math inline">\(\LaTeX\)</span> templates (<a href="https://github.com/deselaers/latex-beamerposter"><code>beamerposter</code></a>; <a href="ttps://ctan.org/pkg/tikzposter"><code>tikzposter</code></a>; <a href="https://ctan.org/pkg/a0poster"><code>a0poster</code></a>) – specify <code>template:</code> within <span class="ranchers2">YAML</span></p></li>
-</ul>
-</div>
-</div>
-</div><div class="column" style="width:45%;">
-<h3 id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7d-options"><iconify-icon role="img" inline="" icon="material-icon-theme:quarto" aria-label="Icon quarto from material-icon-theme Iconify.design set." title="Icon quarto from material-icon-theme Iconify.design set."></iconify-icon> Options:</h3>
-<div class="Smaller">
-<ul>
-<li><p><a href="https://github.com/quarto-ext/typst-templates/tree/main/poster">Typst template</a> – built–in to base distribution (<iconify-icon role="img" inline="" icon="material-icon-theme:quarto" aria-label="Icon quarto from material-icon-theme Iconify.design set." title="Icon quarto from material-icon-theme Iconify.design set."></iconify-icon>1.4+)</p></li>
-<li><p><a href="https://github.com/higgi13425/quarto_poster">quarto_poster</a> – <u>will need to fork</u> <iconify-icon role="img" inline="" icon="uiw:github" style="color:#ffffff;" aria-label="Icon github from uiw Iconify.design set." title="Icon github from uiw Iconify.design set."></iconify-icon> repo (not an extension)</p></li>
-<li><p>User templates (<a href="https://github.com/jonaspleyer/peace-of-posters">peace-of-posters</a>; <a href="https://github.com/pncnmnp/typst-poster">typst-poster</a>) – specify <code>template.typ</code> or <code>quarto use template</code></p></li>
-</ul>
-</div>
-</div></div>
-<div class="absolute" style="top: -30px; right: -130px; width:300px;">
-<p><a href="https://github.com/DiegoFigueiras/SIOP2022_POSTER/blob/main/index.pdf"> <img src="https://cdn.pixabay.com/photo/2016/07/31/20/56/presentation-1559937_1280.png"> </a></p>
-</div>
-<div class="absolute" style="bottom: 255px; left: -180px; width:220px;">
-<p><a href="https://renatagppr93.github.io/SIOP2022/"> <img src="https://freepngimg.com/save/14604-presentation-transparent/300x300"> </a></p>
-</div>
+<img data-src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXhlN3VhM3QwMTJjYjZyczl2djZzaXp2dDRtNmlrOGZrOWZ0MzhrMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11xBk5MoWjrYoE/giphy.gif" class="r-stretch"></section>
+<section id="new-typst-capabilities-via-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7dquarto-1.9" class="slide level2">
+<h2><a href="https://quarto.org/docs/blog/posts/2026-03-31-typst-books-and-more/"><span class="typst">new <code>typst</code> capabilities via <iconify-icon role="img" inline="" icon="material-icon-theme:quarto" aria-label="Icon quarto from material-icon-theme Iconify.design set." title="Icon quarto from material-icon-theme Iconify.design set."></iconify-icon>Quarto 1.9</span></a></h2>
 </section>
-<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-session-info-april-15-2026-rendering" class="slide level2">
-<h2><iconify-icon role="img" inline="" icon="material-icon-theme:quarto" style="color:#82b1ff;;font-size: 2em;" aria-label="Icon quarto from material-icon-theme Iconify.design set." title="Icon quarto from material-icon-theme Iconify.design set."></iconify-icon> Session Info (April 15, 2026) Rendering:</h2>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-session-info-april-16-2026-rendering" class="slide level2">
+<h2><iconify-icon role="img" inline="" icon="devicon:r" style="color:#82b1ff;;font-size: 2em;" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> Session Info (April 16, 2026) Rendering:</h2>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.5.0 (2025-04-11 ucrt)
@@ -473,7 +482,7 @@ loaded via a namespace (and not attached):
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="https://www.i2clipart.com/cliparts/e/b/4/6/clipart-affiche-poster-256x256-eb46.png" class="slide-logo"></p>
+<p><img src="https://freedesignfile.com/image/thumb/55443/typewriter-three-quarters-clipart.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>

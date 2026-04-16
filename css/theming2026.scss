@@ -28,7 +28,7 @@
 @import url('https://fonts.googleapis.com/css?family=Risque');
 @import url('https://fonts.googleapis.com/css?family=Protest Revolution');
 
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
@@ -460,4 +460,11 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-weight: normal !important;
   text-shadow:
     0px 0px 0px0 !important;
+}
+
+.typst{
+  font-family: "Love Ya Like A Sister";
+  font-weight: normal !important;
+  color: #ffefdb;
+  font-size: 1.3em;
 }

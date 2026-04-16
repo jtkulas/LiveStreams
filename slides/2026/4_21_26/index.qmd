@@ -1,0 +1,267 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: 'OOH Session #126...<br>[new `typst`<br>capabilities via<br>{{< iconify material-icon-theme:quarto >}}Quarto 1.9]{.typst}'
+title-slide-attributes: 
+  data-background-image: ../../../img/typst2.png
+  data-background-opacity: ".7"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://freedesignfile.com/image/thumb/55443/typewriter-three-quarters-clipart.png   #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {.columns}
+::: {.column width="55%"}
++ Recap session #125
++ Today's topic(s):
+    + [[new `typst`<br>capabilities via<br>{{< iconify material-icon-theme:quarto >}}Quarto 1.9]{.typst}](https://quarto.org/docs/blog/posts/2026-03-31-typst-books-and-more/)
++ Shared problem-solving
+
+:::
+
+::: {.column width="45%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 170px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/4_14_26">
+  <img src="/img/title125.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#125: 
+
+![](https://pngimg.com/d/sticky_note_PNG18952.png){.absolute right="50" top="200"}
+
+![](https://cdn-icons-png.flaticon.com/512/5045/5045043.png){.absolute width="170" top="250" right="85"}
+
+![](https://quarto.org/quarto-dark-bg.jpeg){.absolute width="100" top="280" right="120"}
+
+## [[Conference Posters ({{< iconify material-icon-theme:quarto >}})]{.revolt .bigger}](https://colinpurrington.com/tips/poster-design/)
+
+::: {.panel-tabset}
+
+### {{< iconify material-icon-theme:quarto >}}
+
+::: {.columns}
+
+::: {.column width="55%" .smaller}
+
++ [{{< iconify material-icon-theme:typst >}}template](https://github.com/quarto-ext/typst-templates/tree/main/poster) -- operates in same manner as [an extension](https://quarto.org/docs/extensions/)
++ `typst` code chunks an easy way to tweak ({{< iconify fluent-emoji-flat:eyes >}} line #s 17{{< iconify ph:arrow-right-bold >}}18)
++ adjust 1) `size` dims, 2) `num-columns:`, & 3) body text font--size to fit content
+
+:::
+
+::: {.column width="45%"}
+
+````{r}
+#| code-line-numbers: "5,14,17-19"
+---
+title: This is an academic poster with typst and quarto!
+format:
+  poster-typst: 
+    size: "36x24"
+    poster-authors: "A. Smith, B. Jones, C. Brown, D. Miller"
+    departments: "Department of Computer Science"
+    institution-logo: "./images/ncstate.png"
+    footer-text: "posit::conf 2023"
+    footer-url: "https://posit.co/conference/"
+    footer-emails: "abc@example.com"
+    footer-color: "ebcfb2"
+    keywords: ["Typesetting", "Typst", "Quarto"]
+    num-columns: 3
+---
+
+```{=typst}
+#set text(size: 18pt)  // or whatever you want for body
+```
+
+
+# Blue
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri tamen permagna accessio potest, si aliquod aeternum et infinitum impendere malum nobis opinemur. Quod idem licet transferre in voluptatem, ut postea variari voluptas distinguique possit, augeri amplificarique non possit. At etiam Athenis, ut e patre audiebam facete et urbane Stoicos irridente, statua est in quo a nobis philosophia defensa et collaudata est, cum id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, om- nis dolor repellendus. Temporibus autem quibusdam et.
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+# Load libraries
+library(ggplot2)
+library(dplyr)
+
+# Create a simple dataset
+df <- data.frame(
+  x = 1:10,
+  y = rnorm(10, mean = 5, sd = 2)
+)
+
+ggplot(df, aes(x, y)) +
+  geom_point() +
+  geom_segment(aes(x = 2, y = 2, xend = 8, yend = 8),
+    arrow = arrow()
+  ) +
+  theme_minimal()
+```
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri tamen permagna accessio potest, si aliquod aeternum et infinitum impendere malum nobis opinemur. Quod idem licet transferre in voluptatem, ut postea variari voluptas distinguique possit, augeri amplificarique non pos- sit. At.
+
+# Red
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri.
+
+1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+1. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri tamen permagna accessio potest, si aliquod aeternum et infinitum impendere malum nobis opinemur. Quod idem licet transferre in voluptatem, ut.
+
+| Lorem ipsum dolor sit. | Lorem ipsum. | Lorem ipsum. |
+|------------------------|--------------|--------------|
+| Lorem ipsum dolor.     | Lorem ipsum. | $\alpha$     |
+| Lorem ipsum.           | Lorem ipsum. | $\beta$      |
+| Lorem.                 | Lorem.       | $\gamma$     |
+| Lorem ipsum dolor.     | Lorem.       | $\theta$     |
+
+: Lorem ipsum dolor sit amet {#tbl-1}
+
+Lorem @tbl-1 ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri tamen permagna accessio potest, si aliquod aeternum et infinitum impendere malum nobis opinemur. Quod idem licet transferre in voluptatem, ut postea variari voluptas distinguique possit, augeri amplificarique non possit. At etiam Athenis, ut e patre audiebam facete et urbane Stoicos irridente, statua est in quo a nobis philosophia defensa et.
+
+## Lorem ipsum dolor sit amet
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri tamen permagna accessio potest, si aliquod aeternum et infinitum impendere malum nobis opinemur. Quod idem licet transferre in voluptatem, ut postea variari voluptas distinguique possit, augeri amplificarique non possit. At etiam Athenis, ut e patre.
+
+![Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.](./images/Standard_lettering.png){width="100%"}
+
+# Green
+
+::: {.block fill=rgb("de76aa") inset="12pt" radius="14pt" stroke="8pt + black"} 
+
+$$
+\sum_{(k=1)^n} k = \frac{(n(n+1))}{2} = \frac{(n^2 + n)}{2}
+$$
+
+- That was a math equation bracketed by $ (which invokes the math translator), notice that the box extends across column breaks. Watch the indent when this extends across a whole line. Note that this box does not have a lot of inset padding, unlike the gray box below, where the text can 'breathe'. 
+- Also notice how rounded the corners are (radius) in the two different boxes.
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+
+:::
+
+## Lorem ipsum etiam
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri tamen permagna accessio potest, si aliquod aeternum et infinitum impendere malum nobis opinemur. 
+
+## Lorem ipsum possimus
+
+Quod idem licet transferre in voluptatem, ut postea variari voluptas distinguique possit, augeri amplificarique non possit. At etiam Athenis, ut e patre audiebam facete et urbane Stoicos irridente, statua est in quo a nobis philosophia defensa et collaudata est, cum id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, om- nis dolor repellendus. Temporibus autem quibusdam et.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri tamen permagna accessio potest, si aliquod aeternum et infinitum impendere malum nobis opinemur. 
+
+![Temperature and ozone level](images/fig-airquality-1.svg)
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim aeque doleamus animo, cum corpore dolemus, fieri tamen permagna accessio potest, si aliquod aeternum et infinitum impendere malum nobis opinemur. Quod idem licet transferre in voluptatem, ut postea variari voluptas distinguique possit, augeri amplificarique non possit. At etiam Athenis, ut e patre audiebam facete et urbane Stoicos irridente, statua est in quo a nobis philosophia defensa et collaudata est, cum id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, om- nis dolor repellendus. Temporibus autem quibusdam et.
+
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+  - Lorem ipsum dolor sit amet.
+  -  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed. 
+  - Lorem ipsum dolor sit amet, consectetur adipiscing.
+
+$$
+\sum_{(k=1)^n} k = \frac{(n(n+1))}{2} = \frac{(n^2 + n)}{2}
+$$
+
+# That's all folks!!
+
+::: {.callout-note}
+
+THIS WAS AWESOME!! OUR POSTER WON THE BEST EVER SCENE
+
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEvGpf6vpMTC6fTklxDNo37LBZhnbyv8rV5VCvfIUuTNu2qz0bkwc2AAxz7cr4KofqcNaJUQAvmHTtQbtNvsSp-u1rLD106IefUtLCuA&s=10)
+
+:::
+````
+
+
+:::
+
+:::
+
+### {{< iconify file-icons:rmarkdown style="color:#82b1ff;" >}}{{< iconify noto:fight-cloud >}}{{< iconify material-icon-theme:quarto >}}  
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+### {{< iconify file-icons:rmarkdown style="color:#82b1ff;" >}} via [`posterdown`](https://github.com/brentthorne/posterdown/wiki)
+
+{{< iconify streamline-ultimate-color:check >}} YAML dimension spex  
+{{< iconify streamline-ultimate-color:check >}} format tweaks (via {{< iconify devicon:css3-wordmark >}})   
+{{< iconify noto:face-with-raised-eyebrow >}} .html to .pdf   
+{{< iconify streamline-ultimate-color:check >}} 3 different templates   
+{{< iconify streamline-ultimate-color:remove-bold >}} currently [**in**]{.underline}active 
+
+:::
+
+::: {.column width="50%"}
+
+### {{< iconify material-icon-theme:quarto >}} via [{{< iconify material-icon-theme:typst >}}template](https://github.com/quarto-ext/typst-templates/tree/main/poster)
+
+{{< iconify streamline-ultimate-color:check >}} YAML dimension spex  
+{{< iconify streamline-ultimate-color:check >}} format tweaks (via {{< iconify material-icon-theme:typst >}})  
+{{< iconify streamline-ultimate-color:check >}} direct to .pdf   
+{{< iconify streamline-ultimate-color:remove-bold >}} 1 standard template   
+{{< iconify streamline-ultimate-color:check >}} currently active 
+
+:::
+
+:::
+
+:::
+
+![](https://static.vecteezy.com/system/resources/thumbnails/013/395/352/small/reports-and-statistics-illustration-in-minimal-style-png.png){.absolute right="-150" top="-30" height="250"}
+
+# Today...
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXhlN3VhM3QwMTJjYjZyczl2djZzaXp2dDRtNmlrOGZrOWZ0MzhrMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11xBk5MoWjrYoE/giphy.gif)
+
+## [[new `typst` capabilities via {{< iconify material-icon-theme:quarto >}}Quarto 1.9]{.typst}](https://quarto.org/docs/blog/posts/2026-03-31-typst-books-and-more/)
+
+## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+#| eval: true
+#| echo: false
+sessionInfo()
+```
