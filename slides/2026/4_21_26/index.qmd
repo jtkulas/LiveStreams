@@ -257,7 +257,25 @@ THIS WAS AWESOME!! OUR POSTER WON THE BEST EVER SCENE
 
 ![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXhlN3VhM3QwMTJjYjZyczl2djZzaXp2dDRtNmlrOGZrOWZ0MzhrMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11xBk5MoWjrYoE/giphy.gif)
 
-## [[new `typst` capabilities via {{< iconify material-icon-theme:quarto >}}Quarto 1.9]{.typst}](https://quarto.org/docs/blog/posts/2026-03-31-typst-books-and-more/)
+## [[new `typst` capabilities via {{< iconify material-icon-theme:quarto >}}Quarto 1.9]{.typst}](https://quarto.org/docs/blog/posts/2026-03-24-1.9-release/#improvements-to-typst-support)
+
+::: {.absolute style="top: 250px; right: 170px; width:600px;"}
+<a href="https://quarto.org/docs/blog/posts/2026-03-31-typst-books-and-more/#typst-books">
+  <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExamtrZzZsZzc4djB0cXBtNzU1bmpkenN1Z3Jra29jcG90a2czNTNhZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3oxRmoTueKDmUguzL2/giphy.gif">
+</a>
+:::
+
+::: {.absolute style="top: 180px; right: -80px; width:300px;" .tilt}
+<a href="https://quarto.org/docs/blog/posts/2026-03-31-typst-books-and-more/#article-layout-in-typst">
+  <img src="https://www.latextemplates.com/actions/action_fetch_template_image?image=1&template=journal-article">
+</a>
+:::
+
+::: {.absolute style="bottom: 10px; left: -40px; width:300px;" .tilt2}
+<a href="https://quarto.org/docs/authoring/cross-references.html#theorems-and-proofs">
+  <img src="https://external-preview.redd.it/a-theorem-of-pythagoras-art-v0-6ls8GwasVHmplzEIuE4lx1A5ey27MZZxfrDj4ksNZ18.jpg?auto=webp&s=a908c0360c33aa8510069ab81e5b4e44a6be676f">
+</a>
+:::
 
 ## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 ```{r}
