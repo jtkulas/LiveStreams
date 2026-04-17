@@ -225,19 +225,19 @@ THIS WAS AWESOME!! OUR POSTER WON THE BEST EVER SCENE
 
 ::: {.column width="50%"}
 
-### {{< iconify file-icons:rmarkdown style="color:#82b1ff;" >}} via [`posterdown`](https://github.com/brentthorne/posterdown/wiki)
+### {{< iconify file-icons:rmarkdown style="color:#82b1ff;" >}} [via `posterdown`](https://github.com/brentthorne/posterdown/wiki)
 
 {{< iconify streamline-ultimate-color:check >}} YAML dimension spex  
 {{< iconify streamline-ultimate-color:check >}} format tweaks (via {{< iconify devicon:css3-wordmark >}})   
 {{< iconify noto:face-with-raised-eyebrow >}} .html to .pdf   
-{{< iconify streamline-ultimate-color:check >}} 3 different templates   
+{{< iconify streamline-ultimate-color:check >}} 5 different templates^{{< iconify streamline:asterisk-1-solid >}}^  
 {{< iconify streamline-ultimate-color:remove-bold >}} currently [**in**]{.underline}active 
 
 :::
 
 ::: {.column width="50%"}
 
-### {{< iconify material-icon-theme:quarto >}} via [{{< iconify material-icon-theme:typst >}}template](https://github.com/quarto-ext/typst-templates/tree/main/poster)
+### {{< iconify material-icon-theme:quarto >}} [via {{< iconify material-icon-theme:typst >}}template](https://github.com/quarto-ext/typst-templates/tree/main/poster)
 
 {{< iconify streamline-ultimate-color:check >}} YAML dimension spex  
 {{< iconify streamline-ultimate-color:check >}} format tweaks (via {{< iconify material-icon-theme:typst >}})  
