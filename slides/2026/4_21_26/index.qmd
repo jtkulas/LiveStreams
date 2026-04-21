@@ -277,9 +277,22 @@ THIS WAS AWESOME!! OUR POSTER WON THE BEST EVER SCENE
 </a>
 :::
 
-## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+
+::: {.columns}
+
+::: {.column width="80%"}
 ```{r}
-#| eval: true
 #| echo: false
+#| eval: true
 sessionInfo()
 ```
+:::
+
+::: {.column width="20%"}
+
+Quarto version `r quarto::quarto_version()`
+
+:::
+
+:::
