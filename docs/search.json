@@ -2042,5 +2042,117 @@
     "title": "R is for Authoring!!",
     "section": " &  Session Info (April 21, 2026) Rendering:",
     "text": "&  Session Info (April 21, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/4_28_26/index.html#open-office-hours-april-22-2026",
+    "href": "slides/2026/4_28_26/index.html#open-office-hours-april-22-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (April 22, 2026)",
+    "text": "Open Office Hours (April 22, 2026)\n\n\n\nRecap session #126\nToday’s topic(s):\n\nAttributions\n\nShared problem-solving\n\n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/4_28_26/index.html#new-typst-capabilities-via-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7dquarto-1.9",
+    "href": "slides/2026/4_28_26/index.html#new-typst-capabilities-via-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7dquarto-1.9",
+    "title": "R is for Authoring!!",
+    "section": "new typst capabilities via Quarto 1.9",
+    "text": "new typst capabilities via Quarto 1.9"
+  },
+  {
+    "objectID": "slides/2026/4_28_26/index.html#new-typst-capabilities-via-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7dquarto-1.9-1",
+    "href": "slides/2026/4_28_26/index.html#new-typst-capabilities-via-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7dquarto-1.9-1",
+    "title": "R is for Authoring!!",
+    "section": "new typst capabilities via Quarto 1.9",
+    "text": "new typst capabilities via Quarto 1.9"
+  },
+  {
+    "objectID": "slides/2026/4_28_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-april-22-2026-rendering",
+    "href": "slides/2026/4_28_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-april-22-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (April 22, 2026) Rendering:",
+    "text": "&  Session Info (April 22, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/4_28_26/index.html#new-typst-capabilities",
+    "href": "slides/2026/4_28_26/index.html#new-typst-capabilities",
+    "title": "R is for Authoring!!",
+    "section": "new typst capabilities",
+    "text": "new typst capabilities\n\nTheorems Books Margins \n\n\n\n\n4 template appearances: simple, fancy, clouds, rainbow\n\n\n---\nformat:\n  typst:\n1    theorem-appearance: fancy\n---\n  \n::: {#thm-circle}\n\n## Circle\n\nThe equation of the area within a circle is:\n\n$$\narea = \\pi(r^{2})\n$$\n:::\n\n::: {#thm-line}\n\n## Line\n\nThe equation of any straight line, called a linear equation, can be written as:\n\n$$\ny = mx + b\n$$\n:::\n\n\n1\n\n“fancy” value will inheret color scheme (if have _brand.yml specified)\n\n\n\n\n\n\n\n\n\n\n1. FileNew Project\n2. New Directory\n3. Quarto Book (choose folder & save when prompted)\n4. Look in your project directory(_quarto.yml)"
+  },
+  {
+    "objectID": "slides/2026/4_28_26/index.html#open-office-hours-april-23-2026",
+    "href": "slides/2026/4_28_26/index.html#open-office-hours-april-23-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (April 23, 2026)",
+    "text": "Open Office Hours (April 23, 2026)\n\n\n\nRecap session #126\nToday’s topic(s):\n\nPublishing via PositConnect Cloud \n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/4_28_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-april-23-2026-rendering",
+    "href": "slides/2026/4_28_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-april-23-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (April 23, 2026) Rendering:",
+    "text": "&  Session Info (April 23, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/4_28_26/index.html#publishing-via-posit-connect-cloud-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792073747265616d6c696e652d636f6c6f723a636c6f75642d7368617265203e7d7d",
+    "href": "slides/2026/4_28_26/index.html#publishing-via-posit-connect-cloud-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792073747265616d6c696e652d636f6c6f723a636c6f75642d7368617265203e7d7d",
+    "title": "R is for Authoring!!",
+    "section": "Publishing via Posit Connect Cloud ",
+    "text": "Publishing via Posit Connect Cloud"
+  },
+  {
+    "objectID": "slides/2026/4_28_26/index.html#open-office-hours-april-24-2026",
+    "href": "slides/2026/4_28_26/index.html#open-office-hours-april-24-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (April 24, 2026)",
+    "text": "Open Office Hours (April 24, 2026)\n\n\n\nRecap session #126\nToday’s topic(s):\n\nPublishing via PositConnect Cloud \n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/4_28_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-april-24-2026-rendering",
+    "href": "slides/2026/4_28_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-april-24-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (April 24, 2026) Rendering:",
+    "text": "&  Session Info (April 24, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/4_28_26/index.html#open-office-hours-april-25-2026",
+    "href": "slides/2026/4_28_26/index.html#open-office-hours-april-25-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (April 25, 2026)",
+    "text": "Open Office Hours (April 25, 2026)\n\n\n\nRecap session #126\nToday’s topic(s):\n\nPublishing via PositConnect Cloud \n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/4_28_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-april-25-2026-rendering",
+    "href": "slides/2026/4_28_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-april-25-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (April 25, 2026) Rendering:",
+    "text": "&  Session Info (April 25, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/4_14_26/index.html#open-office-hours-april-27-2026",
+    "href": "slides/2026/4_14_26/index.html#open-office-hours-april-27-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (April 27, 2026)",
+    "text": "Open Office Hours (April 27, 2026)\n\n\n\nRecap session #124\nToday’s topic(s):\n\nConference Posters (II)\n\nShared problem-solving\n\n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/4_14_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-session-info-april-27-2026-rendering",
+    "href": "slides/2026/4_14_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-session-info-april-27-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (April 27, 2026) Rendering:",
+    "text": "Session Info (April 27, 2026) Rendering:\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5"
+  },
+  {
+    "objectID": "slides/2026/4_28_26/index.html#open-office-hours-april-27-2026",
+    "href": "slides/2026/4_28_26/index.html#open-office-hours-april-27-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (April 27, 2026)",
+    "text": "Open Office Hours (April 27, 2026)\n\n\n\nRecap session #126\nToday’s topic(s):\n\nPublishing via PositConnect Cloud \n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/4_28_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-april-27-2026-rendering",
+    "href": "slides/2026/4_28_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-april-27-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (April 27, 2026) Rendering:",
+    "text": "&  Session Info (April 27, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
   }
 ]

@@ -1,0 +1,200 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: 'OOH Session #127...<br>[Publishing via<br>Posit Connect Cloud {{< iconify streamline-color:cloud-share >}}]{.positron .Bigger}'
+title-slide-attributes: 
+  data-background-image: https://wallpapers.com/images/hd/looney-tunes-tweety-on-a-cloud-t7xz5xavldfq3k0c.jpg 
+#  data-background-opacity: ".7"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://cartoon-clipart.co/amp/images/tweety-bird-cloud.png   #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {.columns}
+::: {.column width="55%"}
++ Recap session #126
++ Today's topic(s):
+    + [[Publishing via Posit<br>Connect Cloud {{< iconify streamline-color:cloud-share >}}]{.positron .bigger}](https://quarto.org/docs/blog/posts/2026-03-24-1.9-release/#publish-to-posit-connect-cloud)
++ Shared problem-solving
+
+:::
+
+::: {.column width="45%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 170px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/4_21_26">
+  <img src="/img/title126.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#126: 
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXM3cnp5MXZ3ZHp2Y3Vma2dsaDh2ZjJwdGIxYXZhbnIwdDhxNHJ4MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xUPGcCEoY4LKQGOrFm/giphy.gif)
+
+## [[new `typst` capabilities]{.typst}](https://quarto.org/docs/blog/posts/2026-03-24-1.9-release/#improvements-to-typst-support)
+
+::: {.panel-tabset}
+
+### Theorems {{< iconify fluent:math-formula-sparkle-16-filled style="color:#fa003f;" >}}
+
+::: {.columns}
+
+::: {.column width="55%"}
+
+4 template appearances: [`simple`, `fancy`, `clouds`, `rainbow`](https://quarto.org/docs/output-formats/typst.html#theorems) 
+
+:::
+
+::: {.column width="45%"}
+
+````{r}
+#| code-line-numbers: "4"
+---
+format:
+  typst:
+    theorem-appearance: fancy   #<1>
+---
+  
+::: {#thm-circle}
+
+## Circle
+
+The equation of the area within a circle is:
+
+$$
+area = \pi(r^{2})
+$$
+:::
+
+::: {#thm-line}
+
+## Line
+
+The equation of any straight line, called a linear equation, can be written as:
+
+$$
+y = mx + b
+$$
+:::
+
+````
+1. "fancy" value will inheret color scheme (if have [`_brand.yml` specified](https://quarto.org/docs/authoring/brand.html))
+
+:::
+
+:::
+
+[![](../../../img/theorems.JPG)]{.absolute left="-100" bottom="0" height="290"}
+
+### Books {{< iconify streamline-emojis:green-book >}}  
+
+::: {.columns}
+
+::: {.column width="55%"}
+
+[1. `File`{{< iconify maki:arrow >}}`New Project`]{.fragment .semi-fade-out fragment-index=1}  
+
+[2. `New Directory`]{.fragment .fade-in-then-semi-out fragment-index=1}  
+
+[3. `Quarto Book` (choose folder & save when prompted)]{.fragment .fade-in-then-semi-out fragment-index=2}
+
+[4. Look in your project directory(`_quarto.yml`){{< iconify noto:face-with-monocle >}}]{.fragment .fade-in-then-semi-out fragment-index=3}
+
+:::
+
+::: {.column width="45%"}
+
+:::
+
+:::
+
+[![](../../../img/book1.png){.absolute right="-80" bottom="30" height="400"}]{.fragment .fade-out fragment-index=1}
+[![](../../../img/book2.png){.absolute right="-20" bottom="50" height="400"}]{.fragment .fade-in-then-out fragment-index=1}
+[![](../../../img/book3.png){.absolute right="-40" bottom="50" height="400"}]{.fragment .fade-in-then-out fragment-index=2}
+[![](../../../img/book4.png){.absolute right="-90" bottom="50" height="400"}]{.fragment .fade-in-then-out fragment-index=3}
+
+### Margins {{< iconify streamline-ultimate-color:layout flip=horizontal >}}
+
+:::
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXhlN3VhM3QwMTJjYjZyczl2djZzaXp2dDRtNmlrOGZrOWZ0MzhrMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11xBk5MoWjrYoE/giphy.gif){.absolute right="-130" top="-40" height="250"}
+
+# Today...
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3J6cTY4cDYzMHV1MHg5cmRpenY4N2VhNW1kOTZyemZ6ejV0NmZhbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NAVQDibk6Sesg/giphy.gif)
+
+## [[Publishing via Posit Connect Cloud {{< iconify streamline-color:cloud-share >}}]{.positron .bigger}](https://quarto.org/docs/publishing/posit-connect-cloud.html)
+
+::: {.absolute style="top: 140px; left: 280px; width:950px;"}
+<a href="https://quarto.org/docs/websites/">
+  <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExdHdsOXVsN2xjZHZ1ZGxzNGRhdXQweHhhOWdvZTRxbzFxNnUxNDI4cCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ih8qJNQSiuPCg/giphy.gif">
+</a>
+:::
+
+::: {.absolute style="bottom: 30px; right: -50px; width:350px;"}
+<a href="https://carpentries-incubator.github.io/targets-workshop/quarto.html">
+  <img src="https://holistiquetraining.com/storage/write-a-report.jpg">
+</a>
+:::
+
+::: {.absolute style="bottom: 50px; left: -100px; width:550px;"}
+<a href="https://quarto.org/docs/dashboards/">
+  <img src="https://slidemodel.com/wp-content/uploads/21508-01-support-team-powerpoint-dashboard-16x9-1-1-640x360.jpg">
+</a>
+:::
+
+![](https://cdn-icons-png.flaticon.com/512/8365/8365149.png){.absolute top="100" left="-110" height="230"}
+
+## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+
+::: {.columns}
+
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| eval: true
+sessionInfo()
+```
+:::
+
+::: {.column width="20%"}
+
+Quarto version `r quarto::quarto_version()`
+
+:::
+
+:::
+
