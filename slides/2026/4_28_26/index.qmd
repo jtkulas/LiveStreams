@@ -146,7 +146,32 @@ $$
 [![](../../../img/book3.png){.absolute right="-40" bottom="50" height="400"}]{.fragment .fade-in-then-out fragment-index=2}
 [![](../../../img/book4.png){.absolute right="-90" bottom="50" height="400"}]{.fragment .fade-in-then-out fragment-index=3}
 
-### Margins {{< iconify streamline-ultimate-color:layout flip=horizontal >}}
+### Margin content {{< iconify streamline-ultimate-color:layout flip=horizontal >}}
+
+::: {.columns}
+
+::: {.column width="55%"}
+
++ [long--standing html capability](https://quarto.org/docs/blog/posts/2022-02-17-advanced-layout/) for right--hand margin  
+  + images, figures, tables, asides, citations
++ now available [with typst documents](https://quarto.org/docs/blog/posts/2026-03-31-typst-books-and-more/#article-layout-in-typst)  
+
+
+:::
+
+::: {.column width="45%"}
+
++ can be specified:
+  i. [in YAML](https://quarto.org/docs/authoring/article-layout.html#margin-references)
+  ii. [within codeblocks](https://quarto.org/docs/authoring/article-layout.html#margin-figures)
+  iii. [fenced divs](https://quarto.org/docs/authoring/article-layout.html#margin-content)
+  iv. [bracketed spans](https://quarto.org/docs/authoring/article-layout.html#asides)
+
+:::
+
+:::
+
+![](https://takintimeout.com/wp-content/uploads/2015/09/image.jpg){.absolute right="-120" bottom="200" height="200"}
 
 :::
 
