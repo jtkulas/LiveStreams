@@ -27,8 +27,9 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather');
 @import url('https://fonts.googleapis.com/css?family=Risque');
 @import url('https://fonts.googleapis.com/css?family=Protest Revolution');
+@import url('https://fonts.googleapis.com/css?family=Bangers');
 
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: left;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
@@ -467,4 +468,11 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-weight: normal !important;
   color: #ffefdb;
   font-size: 1.3em;
+}
+
+.bangers{
+  font-family: "Bangers";
+  font-weight: normal !important;
+  color: #cf99c2;
+  font-size: 2em;
 }

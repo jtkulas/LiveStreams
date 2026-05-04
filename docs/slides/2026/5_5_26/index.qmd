@@ -1,0 +1,157 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: 'OOH Session #128...<br>[List Tables!!]{.bangers}'
+title-slide-attributes: 
+  data-background-image: https://pixel.disco.nowtv.com/uuid/20809a1a-838b-3fa1-aa72-c4157907893f/LAND_16_9?language=en-GB&proposition=NOWOTT&version=afad5e92-4db1-39e7-8189-2d427a72dc0c
+#  data-background-opacity: ".7"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://png.pngtree.com/png-vector/20230808/ourmid/pngtree-kitchen-table-clipart-cartoon-sytle-isolated-on-white-with-table-and-vector-png-image_6868363.png   #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {.columns}
+::: {.column width="55%"}
++ Recap session #127
++ Today's topic(s):
+    + [[List Tables!!]{.bangers}](https://quarto.org/docs/blog/posts/2026-03-24-1.9-release/#list-tables)
++ Shared problem-solving
+
+:::
+
+::: {.column width="45%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 170px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/4_28_26">
+  <img src="/img/title127.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#127: 
+
+![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
+
+![](https://apps.odoo.com/web/image/loempia.module/140445/icon_image?unique=9aa3160){.absolute top="320" right="115" height="140"}
+
+## [[Publishing via Posit Connect Cloud {{< iconify streamline-color:cloud-share >}}]{.positron .bigger}](https://quarto.org/docs/publishing/posit-connect-cloud.html)
+
+::: {.columns}
+
+::: {.column width="55%"}
+
++ [sign--up](https://connect.posit.cloud/) for free acount 
++ use `rsconnect` package (from within {{< iconify devicon:rstudio >}}) to connect 
++ within console, run `rsconnect::connectCloudUser()`
+  + this will walk you through authentication
+
+:::
+
+::: {.column width="45%"}
+
++ you will now have single--button publishing capability:
+
+:::
+
+:::
+
+![](../../../img/publish.png){.absolute right="-120" bottom="50"}
+
+![](https://cdn-icons-png.flaticon.com/512/8365/8365149.png){.absolute bottom="50" left="-150" height="200"}
+
+# Today...
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3luMzNqeDN4endudmN1YXp2MnpsdmdzbGxhcGVkam40dWs5eGQ3ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5yYoECDolGySFHKZYl/giphy.gif)
+
+## [[List Tables!!]{.bangers}](https://quarto.org/docs/blog/posts/2026-03-24-1.9-release/#list-tables)
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+Combine different object types within the same table -- permits complex mashups:  
+
++ e.g., code blocks alongside "normal" table elements
+
+
+:::
+
+::: {.column width="60%"}
+
+::: {.list-table}
+- - Function
+  - Description
+
+- - `sum()`
+  - Adds values:
+
+    ```r
+    sum(1, 2, 3)
+    ```
+
+- - `nrow()`
+  - Number of rows:
+
+    - e.g., dataframes
+    - `ncol()` for width
+
+:::
+
+:::
+
+:::
+
+![](https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-picnic-table-vector-png-image_6990714.png){.absolute right="-120" top="-70"}
+
+## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+
+::: {.columns}
+
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| eval: true
+sessionInfo()
+```
+:::
+
+::: {.column width="20%"}
+
+Quarto version `r quarto::quarto_version()`
+
+:::
+
+:::
+
