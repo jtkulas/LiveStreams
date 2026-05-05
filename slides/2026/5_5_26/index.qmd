@@ -73,7 +73,7 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 ::: {.column width="55%"}
 
 + [sign--up](https://connect.posit.cloud/) for free acount 
-+ use `rsconnect` package (from within {{< iconify devicon:rstudio >}}) to connect 
++ use [`rsconnect` package](https://rstudio.github.io/rsconnect/) (from within {{< iconify devicon:rstudio >}}) to connect 
 + within console, run `rsconnect::connectCloudUser()`
   + this will walk you through authentication
 
