@@ -95,15 +95,15 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3luMzNqeDN4endudmN1YXp2MnpsdmdzbGxhcGVkam40dWs5eGQ3ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5yYoECDolGySFHKZYl/giphy.gif)
 
-## [[List Tables!!]{.bangers}](https://quarto.org/docs/blog/posts/2026-03-24-1.9-release/#list-tables)
+## [[List Tables!!]{.bangers}](https://quarto.org/docs/authoring/tables.html#list-tables)
 
 ::: {.columns}
 
 ::: {.column width="40%"}
 
-Combine different object types within the same table -- permits complex mashups:  
+Combine different object types within the same table -- permits complex mashups  
 
-+ e.g., code blocks alongside "normal" table elements
++ e.g., code blocks alongside "normal" table elements {{< iconify maki:arrow >}}
 
 
 :::
