@@ -2231,5 +2231,75 @@
     "title": "R is for Authoring!!",
     "section": " &  Session Info (May 05, 2026) Rendering:",
     "text": "&  Session Info (May 05, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/5_12_26/index.html#open-office-hours-may-05-2026",
+    "href": "slides/2026/5_12_26/index.html#open-office-hours-may-05-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (May 05, 2026)",
+    "text": "Open Office Hours (May 05, 2026)\n\n\n\nRecap session #128\nToday’s topic(s):\n\nList Tables!!\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/5_12_26/index.html#list-tables",
+    "href": "slides/2026/5_12_26/index.html#list-tables",
+    "title": "R is for Authoring!!",
+    "section": "List Tables!!",
+    "text": "List Tables!!\n\n\n1::: {#tbl-weird .list-table}\n2What a unique table!!!\n\n3- - Wazzat\n  - Uselessness\n  - Yadda\n\n- - `sum()`\n    - bullet\n  - ```r\n    sum(1,2,3)\n    ```\n  - ![](https://t3.ftcdn.net/jpg/03/82/90/02/360_F_382900298_PRa4JfdbMUQixhkEdjhC64Ci4gqB5EDL.jpg){.absolute height=\"120\"}\n\n- - `sd()`  \n\n  - ![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDI3dmVyODNleXltZDRvYXFsc211dTNnMjhydnFtODFsb3JmOHQ5cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jarNoneOdIBC8/giphy.gif){.absolute height=\"120\"}\n  - ```r\n    sd(4,5,6)\n    ```\n:::\n\nCheck out @tbl-weird\n\n1\n\nlarge number of bootstrap classes can be applied here within curly brackets (not operative in all renderred formats)\n\n2\n\ntitle/label specification different here with .list-table\n\n3\n\nnested bullets define placement of content (first–level bullet indicates new row)\n\n\nCheck out Table 1\n\n\n\n\nTable 1: What a unique table!!!\n\n\n\n\n\nWazzat\nUselessness\nYadda\n\n\n\n\nsum()\n\nbullet\n\nsum(1,2,3)\n\n\n\nsd()\n\n\nsd(4,5,6)"
+  },
+  {
+    "objectID": "slides/2026/5_12_26/index.html#list-tables-1",
+    "href": "slides/2026/5_12_26/index.html#list-tables-1",
+    "title": "R is for Authoring!!",
+    "section": "List Tables!!",
+    "text": "List Tables!!\n\n\nCombine different object types within the same table – permits complex mashups\n\ne.g., code blocks alongside “normal” table elements \n\n\n\n\n\nFunction\nDescription\n\n\n\n\nsum()\nAdds values:\nsum(1, 2, 3)\n\n\nnrow()\nNumber of rows:\n\ne.g., dataframes\nncol() for width"
+  },
+  {
+    "objectID": "slides/2026/5_12_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-05-2026-rendering",
+    "href": "slides/2026/5_12_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-05-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (May 05, 2026) Rendering:",
+    "text": "&  Session Info (May 05, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/5_12_26/index.html#open-office-hours-may-06-2026",
+    "href": "slides/2026/5_12_26/index.html#open-office-hours-may-06-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (May 06, 2026)",
+    "text": "Open Office Hours (May 06, 2026)\n\n\n\nRecap session #128\nToday’s topic(s):\n\nPresentation Accessibility Enhancements!!\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/5_12_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-06-2026-rendering",
+    "href": "slides/2026/5_12_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-06-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (May 06, 2026) Rendering:",
+    "text": "&  Session Info (May 06, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/5_12_26/index.html#presentation-accessibility-enhancementsb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206c613a61636365737369626c652d69636f6e203e7d7d",
+    "href": "slides/2026/5_12_26/index.html#presentation-accessibility-enhancementsb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206c613a61636365737369626c652d69636f6e203e7d7d",
+    "title": "R is for Authoring!!",
+    "section": "Presentation Accessibility Enhancements!!",
+    "text": "Presentation Accessibility Enhancements!!\n\n\nBuilt–in \n\naxe-core integration\nalt text (images)\nslide–tone\naccessibility themes\nlang\n\n\nExtension capabilities\n\nSkip navigation links\nEnhanced focus indicators\nReduced motion support\nHigh contrast mode\nFont size controls\nScreen reader announcements\nAccessibility settings menu (press A)"
+  },
+  {
+    "objectID": "slides/2026/5_12_26/index.html#grok",
+    "href": "slides/2026/5_12_26/index.html#grok",
+    "title": "R is for Authoring!!",
+    "section": "Grok",
+    "text": "Grok\nQuarto provides strong accessibility support, especially for its HTML-based outputs (including RevealJS presentations), through semantic structure, built-in tools, author-controllable features, and extensions. Much of this stems from Pandoc’s HTML generation and Reveal.js underpinnings.\nGeneral Accessibility Features in Quarto (HTML Outputs)\n\nAxe-core Integration (Quarto 1.8+): Quarto includes built-in support for axe-core, a leading open-source accessibility testing engine. Enable it in YAML for html, revealjs, or dashboard formats:\nformat:\n  html:  # or revealjs\n    axe: true   # Console warnings in dev tools\n    # axe:\n    #   output: document  # Visible report on page (good for debugging)\n    #   output: json      # For automation\nThis catches issues like insufficient color contrast, missing alt text, ARIA problems, etc., during preview.\nSemantic HTML Structure: Quarto’s Markdown-to-HTML conversion produces well-structured output (headings, lists, tables, figures) that benefits screen readers. Document metadata (title, lang, etc.) flows into proper HTML attributes.\nAlt Text for Figures: Use fig-alt chunk option (or image attributes) for descriptive text. This passes through to HTML (and increasingly to PDF).\nColor Contrast & Themes: The a11y syntax highlighting theme provides good contrast and adapts to light/dark modes. Brand colors and other themes can be chosen with accessibility in mind.\nLanguage & Direction: Set lang in YAML for proper screen reader support and bidirectional text handling.\nPDF Accessibility (Quarto 1.9+): Experimental support for tagged PDFs (PDF/UA standards) via LaTeX (ua-2) or Typst (ua-1), including metadata, semantic structure, and alt text.\n\nOther author best practices include providing captions, using proper heading levels, avoiding complex layouts that break linear reading order, and testing with screen readers.\nAccessibility in RevealJS Presentations\nRevealJS outputs are HTML-based, so they inherit the above features (axe-core checks, semantic structure, alt text, etc.). Additional RevealJS-specific capabilities include:\n\nSlide Tone: Plays subtle auditory cues (increasing pitch) on slide changes or incremental reveals. Useful for presenters relying on audio feedback (originally requested by a blind user).\nformat:\n  revealjs:\n    slide-tone: true\nKeyboard Navigation & Controls: Full keyboard support, swipe/touch navigation, progress bar, overview mode, and navigation menu. Options like controls, progress, history, and touch enhance usability.\nSpeaker View & Notes: Accessible speaker notes (press S) and PDF export for handouts.\nIncremental Content & Fragments: Supports pauses and progressive reveals while maintaining logical reading order.\nHigh-Contrast & Reduced Motion Considerations: Use accessible themes; avoid overly animated transitions where possible.\nSelf-Contained Output: embed-resources: true creates portable files, though some plugins may have limitations.\n\nKnown Challenges: Complex Quarto HTML (including RevealJS) can sometimes flag issues in institutional checkers (e.g., Blackboard). Vertical slides may confuse some users. Test thoroughly.\nDedicated RevealJS Accessibility Extension\nInstall the community quarto-revealjs-a11y extension for advanced features:\n\nSkip navigation links\nEnhanced focus indicators\nReduced motion support\nHigh contrast mode\nFont size controls\nScreen reader announcements\nAccessibility settings menu (press A)\n\nThis is highly recommended for presentations targeting strict accessibility standards (e.g., WCAG/ADA).\nTips for Better Accessibility\n\nAlways add fig-alt, captions, and descriptive link text.\nUse axe checks during development.\nTest with tools like screen readers (NVDA, VoiceOver), WAVE, or Lighthouse.\nPrefer HTML/RevealJS over PDF when possible for dynamic accessibility.\nFor presentations, consider the a11y extension + slide-tone.\n\nQuarto’s accessibility continues to improve (e.g., stronger PDF support in 1.9+). Check the official docs for the latest: HTML Accessibility and RevealJS reference.\nFor institution-specific compliance, combine Quarto features with manual testing."
+  },
+  {
+    "objectID": "slides/2026/5_12_26/index.html#open-office-hours-may-07-2026",
+    "href": "slides/2026/5_12_26/index.html#open-office-hours-may-07-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (May 07, 2026)",
+    "text": "Open Office Hours (May 07, 2026)\n\n\n\nRecap session #128\nToday’s topic(s):\n\nPresentation Accessibility Enhancements!!\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/5_12_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-07-2026-rendering",
+    "href": "slides/2026/5_12_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-07-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (May 07, 2026) Rendering:",
+    "text": "&  Session Info (May 07, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
   }
 ]
