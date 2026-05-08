@@ -60,6 +60,21 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
 
+# Scheduling Announcement!!! {background-image="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2ZpdjV4MHByN2IybjByOHJvaDJmbjh6ZXRkOGVjajg3Yng3OThyaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CsV1pnR9hYLuM/giphy.gif" background-opacity=".3"}
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+[Next week's session (5/19) will begin 2 hours early @5:00 Eastern]{.fragment .risque style="font-size: 1.5em;"}
+
+:::
+
+::: {.column width="60%"}
+:::
+
+:::
+
 # Recap of Session <br>#128: 
 
 ![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
@@ -88,21 +103,18 @@ What a unique table!!!       #<2>
   - ![](https://t3.ftcdn.net/jpg/03/82/90/02/360_F_382900298_PRa4JfdbMUQixhkEdjhC64Ci4gqB5EDL.jpg){.absolute height="120"}
 
 - - `sd()`  
-{{< iconify line-md:sunny-filled-loop-to-moon-filled-alt-loop-transition style="color:#ffce1b;" >}}
+{< iconify line-md:sunny-filled-loop-to-moon-filled-alt-loop-transition style="color:#ffce1b;" >}    #<4>
   - ![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDI3dmVyODNleXltZDRvYXFsc211dTNnMjhydnFtODFsb3JmOHQ5cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jarNoneOdIBC8/giphy.gif){.absolute height="120"}
   - ```r
     sd(4,5,6)
     ```
 :::
 
-Check out @tbl-weird
-
 ````
 1. large number of [bootstrap classes](https://quarto.org/docs/authoring/tables.html#using-bootstrap-classes) can be applied here within curly brackets (not operative in all renderred formats)
 2. title/label specification different here with `.list-table`
 3. nested bullets define placement of content (first--level bullet indicates new row)
-
-Check out @tbl-weird
+4. full [Quarto shortcode](https://quarto.org/docs/authoring/shortcodes.html) is not represented within code block (opening [`{`] and closing [`}`] curly brackets have been omitted due to rendered ghosting of full shortcode script) -- note you'll also need the [`iconify` Quarto extension](https://github.com/mcanouil/quarto-iconify) to render: {{< iconify line-md:sunny-filled-loop-to-moon-filled-alt-loop-transition style="color:#ffce1b;" >}} 
 
 :::
 
@@ -148,31 +160,28 @@ What a unique table!!!
 
 ### [Built--in {{< iconify simple-icons:revealdotjs style="color:#e157e6;" >}}{{< iconify vscode-icons:file-type-js-official >}}](https://quarto.org/docs/presentations/revealjs/presenting.html#slide-tone)
 
-+ [`axe-core` integration](https://quarto.org/docs/output-formats/html-accessibility.html)
-+ alt text (images)
++ [`axe-core`](https://quarto.org/docs/output-formats/html-accessibility.html) testing
++ [alt text](https://quarto.org/docs/authoring/figures.html#alt-text) (images)
 + [slide--tone](https://quarto.org/docs/presentations/revealjs/presenting.html#slide-tone)
-+ accessibility themes
-+ `lang`
 
 :::
 
 ::: {.column width="60%"}
 
-### Extension capabilities
+### [Extension capabilities](https://m.canouil.dev/quarto-revealjs-a11y/#/title-slide)
 
-- Skip navigation links
-- Enhanced focus indicators
+- Keyboard navigation
 - Reduced motion support
-- High contrast mode
-- Font size controls
+- Content appearance controls
 - Screen reader announcements
-- Accessibility settings menu (press `A`)
 
 :::
 
 :::
 
 ![](https://gitlab.poul.org/uploads/-/system/project/avatar/109/reveal.js-2020-05-28_09-58-06-icon-resized.png){.absolute right="-150" bottom="180" height="220"}
+
+![](https://revealjs.com/images/logo/reveal-black-text-sticker.png){.absolute left="-100" bottom="15" height="150"}
 
 ## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 
@@ -188,85 +197,11 @@ sessionInfo()
 
 ::: {.column width="20%"}
 
-Quarto version `r quarto::quarto_version()`
+Quarto version `r quarto::quarto_version()`  
+<br>
+[crossref](https://quarto.org/docs/authoring/cross-references.html#tables) for @tbl-weird
 
 :::
 
 :::
 
-## Grok
-
-**Quarto** provides strong accessibility support, especially for its HTML-based outputs (including **RevealJS** presentations), through semantic structure, built-in tools, author-controllable features, and extensions. Much of this stems from Pandoc's HTML generation and Reveal.js underpinnings.
-
-### General Accessibility Features in Quarto (HTML Outputs)
-- **Axe-core Integration** (Quarto 1.8+): Quarto includes built-in support for **axe-core**, a leading open-source accessibility testing engine. Enable it in YAML for `html`, `revealjs`, or `dashboard` formats:
-
-  ```yaml
-  format:
-    html:  # or revealjs
-      axe: true   # Console warnings in dev tools
-      # axe:
-      #   output: document  # Visible report on page (good for debugging)
-      #   output: json      # For automation
-  ```
-
-  This catches issues like insufficient color contrast, missing alt text, ARIA problems, etc., during preview.
-
-- **Semantic HTML Structure**: Quarto's Markdown-to-HTML conversion produces well-structured output (headings, lists, tables, figures) that benefits screen readers. Document metadata (title, lang, etc.) flows into proper HTML attributes.
-
-- **Alt Text for Figures**: Use `fig-alt` chunk option (or image attributes) for descriptive text. This passes through to HTML (and increasingly to PDF).
-
-- **Color Contrast & Themes**: The `a11y` syntax highlighting theme provides good contrast and adapts to light/dark modes. Brand colors and other themes can be chosen with accessibility in mind.
-
-- **Language & Direction**: Set `lang` in YAML for proper screen reader support and bidirectional text handling.
-
-- **PDF Accessibility** (Quarto 1.9+): Experimental support for tagged PDFs (PDF/UA standards) via LaTeX (`ua-2`) or Typst (`ua-1`), including metadata, semantic structure, and alt text.
-
-Other author best practices include providing captions, using proper heading levels, avoiding complex layouts that break linear reading order, and testing with screen readers.
-
-### Accessibility in RevealJS Presentations
-RevealJS outputs are HTML-based, so they inherit the above features (axe-core checks, semantic structure, alt text, etc.). Additional RevealJS-specific capabilities include:
-
-- **Slide Tone**: Plays subtle auditory cues (increasing pitch) on slide changes or incremental reveals. Useful for presenters relying on audio feedback (originally requested by a blind user).
-
-  ```yaml
-  format:
-    revealjs:
-      slide-tone: true
-  ```
-
-- **Keyboard Navigation & Controls**: Full keyboard support, swipe/touch navigation, progress bar, overview mode, and navigation menu. Options like `controls`, `progress`, `history`, and `touch` enhance usability.
-
-- **Speaker View & Notes**: Accessible speaker notes (press `S`) and PDF export for handouts.
-
-- **Incremental Content & Fragments**: Supports pauses and progressive reveals while maintaining logical reading order.
-
-- **High-Contrast & Reduced Motion Considerations**: Use accessible themes; avoid overly animated transitions where possible.
-
-- **Self-Contained Output**: `embed-resources: true` creates portable files, though some plugins may have limitations.
-
-**Known Challenges**: Complex Quarto HTML (including RevealJS) can sometimes flag issues in institutional checkers (e.g., Blackboard). Vertical slides may confuse some users. Test thoroughly.
-
-### Dedicated RevealJS Accessibility Extension
-Install the community **quarto-revealjs-a11y** extension for advanced features:
-
-- Skip navigation links
-- Enhanced focus indicators
-- Reduced motion support
-- High contrast mode
-- Font size controls
-- Screen reader announcements
-- Accessibility settings menu (press `A`)
-
-This is highly recommended for presentations targeting strict accessibility standards (e.g., WCAG/ADA).
-
-### Tips for Better Accessibility
-- Always add `fig-alt`, captions, and descriptive link text.
-- Use axe checks during development.
-- Test with tools like screen readers (NVDA, VoiceOver), WAVE, or Lighthouse.
-- Prefer HTML/RevealJS over PDF when possible for dynamic accessibility.
-- For presentations, consider the a11y extension + slide-tone.
-
-Quarto's accessibility continues to improve (e.g., stronger PDF support in 1.9+). Check the official docs for the latest: [HTML Accessibility](https://quarto.org/docs/output-formats/html-accessibility.html) and [RevealJS reference](https://quarto.org/docs/presentations/revealjs/).
-
-For institution-specific compliance, combine Quarto features with manual testing.
