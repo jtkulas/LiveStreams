@@ -29,6 +29,7 @@
 @import url('https://fonts.googleapis.com/css?family=Protest Revolution');
 @import url('https://fonts.googleapis.com/css?family=Bangers');
 @import url('https://fonts.googleapis.com/css?family=Lexend');
+@import url('https://fonts.googleapis.com/css?family=Syncopate');
 
 $presentation-title-slide-text-align: left;
 
@@ -145,6 +146,13 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
 
 .tilt2 {
   rotate: -20deg;
+}
+
+.squish {
+    transform: scaleY(0.7);           /* adjust 0.7 to your preferred squish amount */
+  transform-origin: bottom;         /* ← This keeps the baseline aligned */
+  display: inline-block;            /* important for transform to work reliably */
+  vertical-align: bottom;           /* helps maintain baseline with surrounding text */
 }
 
 .smaller {
@@ -483,4 +491,10 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-weight: normal !important;
   color: #0096FF;
   font-size: 1.3em;
+}
+
+.syncopate{
+  font-family: "Syncopate";
+  font-weight: normal !important;
+  color: #383874;
 }

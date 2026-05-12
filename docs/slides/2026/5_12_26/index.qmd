@@ -60,7 +60,7 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
 
-# Scheduling Announcement!!! {background-image="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2ZpdjV4MHByN2IybjByOHJvaDJmbjh6ZXRkOGVjajg3Yng3OThyaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CsV1pnR9hYLuM/giphy.gif" background-opacity=".3"}
+# Scheduling Announcement!!! {background-image="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2ZpdjV4MHByN2IybjByOHJvaDJmbjh6ZXRkOGVjajg3Yng3OThyaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CsV1pnR9hYLuM/giphy.gif" background-opacity=".45"}
 
 ::: {.columns}
 
@@ -158,7 +158,7 @@ What a unique table!!!
 
 ::: {.column width="40%"}
 
-### [Built--in {{< iconify simple-icons:revealdotjs style="color:#e157e6;" >}}{{< iconify vscode-icons:file-type-js-official >}}](https://quarto.org/docs/presentations/revealjs/presenting.html#slide-tone)
+### [Built--in {{< iconify simple-icons:revealdotjs style="color:#e157e6;" >}}{{< iconify vscode-icons:file-type-js-official >}}](https://github.com/hakimel/reveal.js/issues/3637)
 
 + [`axe-core`](https://quarto.org/docs/output-formats/html-accessibility.html) testing
 + [alt text](https://quarto.org/docs/authoring/figures.html#alt-text) (images)

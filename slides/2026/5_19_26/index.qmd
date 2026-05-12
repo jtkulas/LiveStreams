@@ -1,9 +1,9 @@
 ---
 title: "[R is for <br>Authoring!!]{.shadowsharp}" 
-author: 'OOH Session #129...<br>[Presentation Accessibility Enhancements!!]{.nostress}[{{< iconify la:accessible-icon >}}]{.bigger}'
+author: 'OOH Session #130...<br>[{{< iconify material-icon-theme:quarto >}}]{.bigger} [Shortcodes!!]{.syncopate .squish}'
 title-slide-attributes: 
-  data-background-image: ../../../img/access.png
-  data-background-opacity: ".8"
+  data-background-image: ../../../img/mugsy.png
+#  data-background-opacity: ".8"
 format: 
   revealjs:
     mouse-wheel: true              
@@ -12,7 +12,7 @@ format:
     transition-speed: slow
     code-overflow: wrap              ## has never "worked"
     theme: ../../../css/theming2026.scss 
-    logo: https://thebasie.org/wp-content/uploads/2025/09/accessibility.png   #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    logo: https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e4638f60-ecd7-4228-b667-e7628252709e/dhq1lm1-a29e1617-2f53-4409-9dd8-39f0a86a6c30.png/v1/fit/w_828,h_1072/looney_tunes_cartoons____36__rocky_by_disneycrossover143_dhq1lm1-414w-2x.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzMwMCIsInBhdGgiOiIvZi9lNDYzOGY2MC1lY2Q3LTQyMjgtYjY2Ny1lNzYyODI1MjcwOWUvZGhxMWxtMS1hMjllMTYxNy0yZjUzLTQ0MDktOWRkOC0zOWYwYTg2YTZjMzAucG5nIiwid2lkdGgiOiI8PTI1NTAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.uD3Pu7EgEY3-Av8BLHhSnD5wfr80lua0k8AXqEQlvxo   #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
     footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
     preview-links: false      ## true brings up iframe window instead of "site"
     code-annotations: hover   ## select
@@ -28,9 +28,9 @@ execute:
 
 ::: {.columns}
 ::: {.column width="55%"}
-+ Recap session #128
++ Recap session #129
 + Today's topic(s):
-    + [[Presentation Accessibility Enhancements!!]{.nostress}[{{< iconify la:accessible-icon >}}]{.bigger}](https://github.com/mcanouil/quarto-revealjs-a11y)
+    + [{{< iconify material-icon-theme:quarto >}} [Shortcodes!!]{.syncopate}](https://quarto.org/docs/authoring/shortcodes.html)
 + Shared problem-solving
 
 :::
@@ -53,35 +53,20 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 :::
 
 ::: {.absolute style="top: 170px; right: -120px; width:550px;"}
-<a href="https://jtkulas.github.io/LiveStreams/slides/2026/5_5_26">
-  <img src="/img/title128.JPG">
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/5_12_26">
+  <img src="/img/title129.JPG">
 </a>
 :::
 
 ![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
 
-# Scheduling Announcement!!! {background-image="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2ZpdjV4MHByN2IybjByOHJvaDJmbjh6ZXRkOGVjajg3Yng3OThyaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/CsV1pnR9hYLuM/giphy.gif" background-opacity=".45"}
-
-::: {.columns}
-
-::: {.column width="40%"}
-
-[Next week's session (5/19) will begin 2 hours early @5:00 Eastern]{.fragment .risque style="font-size: 1.5em;"}
-
-:::
-
-::: {.column width="60%"}
-:::
-
-:::
-
-# Recap of Session <br>#128: 
+# Recap of Session <br>#129: 
 
 ![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
 
-![](https://png.pngtree.com/png-vector/20230808/ourmid/pngtree-kitchen-table-clipart-cartoon-sytle-isolated-on-white-with-table-and-vector-png-image_6868363.png){.absolute top="280" right="115" height="200"}
+![](https://thebasie.org/wp-content/uploads/2025/09/accessibility.png){.absolute top="285" right="115" height="200"}
 
-## [[List Tables!!]{.bangers}](https://quarto.org/docs/authoring/tables.html#list-tables)
+## [[Presentation Accessibility Enhancements!!]{.nostress}[{{< iconify la:accessible-icon >}}]{.bigger}](https://github.com/mcanouil/quarto-revealjs-a11y)
 
 ::: {.columns}
 
@@ -150,7 +135,7 @@ What a unique table!!!
 
 # Today...
 
-![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTN4MjVjMGxuOHR3eGdjbWN6eDMxb2R1aWZzN29jOXo3dDA3N2J3aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L7dzJ0g5hjQXXirWUu/giphy.gif)
+![](https://media1.tenor.com/m/p5RICZgdNGMAAAAC/fi-fidonia-cachetada.gif)
 
 ## [[Presentation Accessibility Enhancements!!]{.nostress}[{{< iconify la:accessible-icon >}}]{.bigger}](https://github.com/mcanouil/quarto-revealjs-a11y)
 
@@ -158,7 +143,7 @@ What a unique table!!!
 
 ::: {.column width="40%"}
 
-### [Built--in {{< iconify simple-icons:revealdotjs style="color:#e157e6;" >}}{{< iconify vscode-icons:file-type-js-official >}}](https://github.com/hakimel/reveal.js/issues/3637)
+### [Built--in {{< iconify simple-icons:revealdotjs style="color:#e157e6;" >}}{{< iconify vscode-icons:file-type-js-official >}}](https://quarto.org/docs/presentations/revealjs/presenting.html#slide-tone)
 
 + [`axe-core`](https://quarto.org/docs/output-formats/html-accessibility.html) testing
 + [alt text](https://quarto.org/docs/authoring/figures.html#alt-text) (images)
@@ -181,7 +166,7 @@ What a unique table!!!
 
 ![](https://gitlab.poul.org/uploads/-/system/project/avatar/109/reveal.js-2020-05-28_09-58-06-icon-resized.png){.absolute right="-150" bottom="180" height="220"}
 
-![](https://revealjs.com/images/logo/reveal-black-text-sticker.png){.absolute left="-100" bottom="15" height="150"}
+![](){.absolute left="-100" bottom="15" height="150"}
 
 ## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 
@@ -198,8 +183,6 @@ sessionInfo()
 ::: {.column width="20%"}
 
 Quarto version `r quarto::quarto_version()`  
-<br>
-[crossref](https://quarto.org/docs/authoring/cross-references.html#tables) for @tbl-weird
 
 :::
 
