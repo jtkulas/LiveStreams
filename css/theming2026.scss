@@ -29,9 +29,10 @@
 @import url('https://fonts.googleapis.com/css?family=Protest Revolution');
 @import url('https://fonts.googleapis.com/css?family=Bangers');
 @import url('https://fonts.googleapis.com/css?family=Lexend');
-@import url('https://fonts.googleapis.com/css?family=Syncopate');
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Fira Code');
 
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
@@ -44,8 +45,8 @@ $presentation-title-slide-text-align: left;
   padding: 0.1em 0.2em;
   border-radius: 4px;
   font-size: 0.6em;
-  font-family: Google Sans Code !important;
-  color: #324c7c !important;
+  font-family: Fira Code !important;
+  color: #3b3b3b !important;
   border: 1px solid #022866;
 }
 
@@ -146,13 +147,6 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
 
 .tilt2 {
   rotate: -20deg;
-}
-
-.squish {
-    transform: scaleY(0.7);           /* adjust 0.7 to your preferred squish amount */
-  transform-origin: bottom;         /* ← This keeps the baseline aligned */
-  display: inline-block;            /* important for transform to work reliably */
-  vertical-align: bottom;           /* helps maintain baseline with surrounding text */
 }
 
 .smaller {
@@ -494,7 +488,7 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
 }
 
 .syncopate{
-  font-family: "Syncopate";
+  font-family: "Anton";
   font-weight: normal !important;
-  color: #383874;
+  color: #82b1ff;
 }

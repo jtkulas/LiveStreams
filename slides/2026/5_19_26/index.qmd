@@ -1,6 +1,6 @@
 ---
 title: "[R is for <br>Authoring!!]{.shadowsharp}" 
-author: 'OOH Session #130...<br>[{{< iconify material-icon-theme:quarto >}}]{.bigger} [Shortcodes!!]{.syncopate .squish}'
+author: 'OOH Session #130...<br>[{{< iconify material-icon-theme:quarto >}}]{.bigger} [Shortcodes!!]{.syncopate}<br>`{{< yadda yadda >}}`'
 title-slide-attributes: 
   data-background-image: ../../../img/mugsy.png
 #  data-background-opacity: ".8"
@@ -30,7 +30,7 @@ execute:
 ::: {.column width="55%"}
 + Recap session #129
 + Today's topic(s):
-    + [{{< iconify material-icon-theme:quarto >}} [Shortcodes!!]{.syncopate}](https://quarto.org/docs/authoring/shortcodes.html)
+    + [[{{< iconify material-icon-theme:quarto >}}]{.bigger} [Shortcodes!!]{.syncopate}<br>`{{< yadda yadda >}}`](https://quarto.org/docs/authoring/shortcodes.html)
 + Shared problem-solving
 
 :::
@@ -68,105 +68,95 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ## [[Presentation Accessibility Enhancements!!]{.nostress}[{{< iconify la:accessible-icon >}}]{.bigger}](https://github.com/mcanouil/quarto-revealjs-a11y)
 
+::: {.panel-tabset}
+
+### built--in {{< iconify simple-icons:revealdotjs style="color:#e157e6;" >}}{{< iconify vscode-icons:file-type-js-official >}}
+
 ::: {.columns}
 
-::: {.column width="40%"}
+::: {.column width="19%"}
 
-````
-::: {#tbl-weird .list-table} #<1>
-What a unique table!!!       #<2>
-
-- - Wazzat                   #<3>
-  - Uselessness
-  - Yadda                    #<3>
-
-- - `sum()`
-    - bullet
-  - ```r
-    sum(1,2,3)
-    ```
-  - ![](https://t3.ftcdn.net/jpg/03/82/90/02/360_F_382900298_PRa4JfdbMUQixhkEdjhC64Ci4gqB5EDL.jpg){.absolute height="120"}
-
-- - `sd()`  
-{< iconify line-md:sunny-filled-loop-to-moon-filled-alt-loop-transition style="color:#ffce1b;" >}    #<4>
-  - ![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDI3dmVyODNleXltZDRvYXFsc211dTNnMjhydnFtODFsb3JmOHQ5cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jarNoneOdIBC8/giphy.gif){.absolute height="120"}
-  - ```r
-    sd(4,5,6)
-    ```
 :::
 
-````
-1. large number of [bootstrap classes](https://quarto.org/docs/authoring/tables.html#using-bootstrap-classes) can be applied here within curly brackets (not operative in all renderred formats)
-2. title/label specification different here with `.list-table`
-3. nested bullets define placement of content (first--level bullet indicates new row)
-4. full [Quarto shortcode](https://quarto.org/docs/authoring/shortcodes.html) is not represented within code block (opening [`{`] and closing [`}`] curly brackets have been omitted due to rendered ghosting of full shortcode script) -- note you'll also need the [`iconify` Quarto extension](https://github.com/mcanouil/quarto-iconify) to render: {{< iconify line-md:sunny-filled-loop-to-moon-filled-alt-loop-transition style="color:#ffce1b;" >}} 
++ [`axe-core`](https://quarto.org/docs/output-formats/html-accessibility.html) testing
++ [alt text](https://quarto.org/docs/authoring/figures.html#alt-text) (images)
++ [slide--tone](https://quarto.org/docs/presentations/revealjs/presenting.html#slide-tone)
++ [web--standards](https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model) built
+
+:::
+
+![](../../../img/axecore.png){.absolute right="-30" bottom="0" height="350"}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Accessibility.svg/1280px-Accessibility.svg.png){.absolute left="-130" bottom="40" height="300"}
+
+### `a11y` extension 
+
+::: {.columns}
+
+::: {.column width="18%"}
+
++ [Description](https://github.com/mcanouil/quarto-revealjs-a11y#revealjs-a11y)
++ [Options](https://github.com/mcanouil/quarto-revealjs-a11y#options)
++ [Shortcuts](https://github.com/mcanouil/quarto-revealjs-a11y#options)
++ [Installation](https://github.com/mcanouil/quarto-revealjs-a11y#installation)
+
+::: 
+
+::: {.column width="18%"}
 
 :::
 
 ::: {.column width="60%"}
 
-::: {#tbl-weird .list-table}
-What a unique table!!!
+<iframe
+src="https://m.canouil.dev/quarto-revealjs-a11y/#/title-slide"
+width="600"
+height="350"
+style="border:none;">
+</iframe>
 
-- - Wazzat
-  - Uselessness
-  - Yadda
-
-- - `sum()`
-    - bullet
-  - ```r
-    sum(1,2,3)
-    ```
-  - ![](https://t3.ftcdn.net/jpg/03/82/90/02/360_F_382900298_PRa4JfdbMUQixhkEdjhC64Ci4gqB5EDL.jpg){.absolute height="120"}
-
-- - `sd()`  
-{{< iconify line-md:sunny-filled-loop-to-moon-filled-alt-loop-transition style="color:#ffce1b;" >}}
-  - ![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDI3dmVyODNleXltZDRvYXFsc211dTNnMjhydnFtODFsb3JmOHQ5cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jarNoneOdIBC8/giphy.gif){.absolute height="120"}
-  - ```r
-    sd(4,5,6)
-    ```
 :::
 
 :::
 
 :::
 
-![](https://static.vecteezy.com/system/resources/thumbnails/037/224/455/small/ai-generated-cute-tablecloth-in-cartoon-style-png.png){.absolute right="-150" top="-20" height="250"}
+![](https://revealjs.com/images/logo/reveal-black-text-sticker.png){.absolute right="-110" top="135" height="100"}
 
 # Today...
 
 ![](https://media1.tenor.com/m/p5RICZgdNGMAAAAC/fi-fidonia-cachetada.gif)
 
-## [[Presentation Accessibility Enhancements!!]{.nostress}[{{< iconify la:accessible-icon >}}]{.bigger}](https://github.com/mcanouil/quarto-revealjs-a11y)
+## [[{{< iconify material-icon-theme:quarto >}}]{.bigger} [Shortcodes!!]{.syncopate}](https://quarto.org/docs/authoring/shortcodes.html)
 
-::: {.columns}
+<br>
 
-::: {.column width="40%"}
++ Structure is `{{< name arg1 arg2 key=value >}}`  
++ entire `{{{< ... >}}}` is referred to as a "[shortcode](https://github.com/quarto-dev/quarto-shortcodes)"
 
-### [Built--in {{< iconify simple-icons:revealdotjs style="color:#e157e6;" >}}{{< iconify vscode-icons:file-type-js-official >}}](https://quarto.org/docs/presentations/revealjs/presenting.html#slide-tone)
+::: {.smaller}
+::: {.list-table tbl-colwidths="[40,35,25]"}
 
-+ [`axe-core`](https://quarto.org/docs/output-formats/html-accessibility.html) testing
-+ [alt text](https://quarto.org/docs/authoring/figures.html#alt-text) (images)
-+ [slide--tone](https://quarto.org/docs/presentations/revealjs/presenting.html#slide-tone)
+- - [shortcode]{.underline}:
+  - [description]{.underline}:
+  - [rendered]{.underline}:
+
+- - `{{{< meta title >}}}`
+  - title as specified in YAML
+  
+  - {{< meta title >}} 
+  
+- - `{{{< version >}}}`
+  - Quarto version
+  
+  - {{< version >}} 
 
 :::
-
-::: {.column width="60%"}
-
-### [Extension capabilities](https://m.canouil.dev/quarto-revealjs-a11y/#/title-slide)
-
-- Keyboard navigation
-- Reduced motion support
-- Content appearance controls
-- Screen reader announcements
-
 :::
 
-:::
+![](https://m.media-amazon.com/images/S/pv-target-images/b6a9dde0a56008f4cb9ef604fbc2ef3ba06614685b05a4f24d8e97dc1edfc7cf._BR-6_AC_SX720_FMjpg_.jpg){.absolute right="-10" top="-40" height="250"}
 
-![](https://gitlab.poul.org/uploads/-/system/project/avatar/109/reveal.js-2020-05-28_09-58-06-icon-resized.png){.absolute right="-150" bottom="180" height="220"}
-
-![](){.absolute left="-100" bottom="15" height="150"}
+![](https://comicvine.gamespot.com/a/uploads/original/1/15776/8674793-rocky.png){.absolute left="-150" top="140" height="200" .mirror}
 
 ## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 

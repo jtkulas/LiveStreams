@@ -2335,7 +2335,7 @@
     "href": "slides/2026/5_19_26/index.html#presentation-accessibility-enhancementsb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206c613a61636365737369626c652d69636f6e203e7d7d",
     "title": "R is for Authoring!!",
     "section": "Presentation Accessibility Enhancements!!",
-    "text": "Presentation Accessibility Enhancements!!\n\n\n1::: {#tbl-weird .list-table}\n2What a unique table!!!\n\n3- - Wazzat\n  - Uselessness\n  - Yadda\n\n- - `sum()`\n    - bullet\n  - ```r\n    sum(1,2,3)\n    ```\n  - ![](https://t3.ftcdn.net/jpg/03/82/90/02/360_F_382900298_PRa4JfdbMUQixhkEdjhC64Ci4gqB5EDL.jpg){.absolute height=\"120\"}\n\n- - `sd()`  \n4{&lt; iconify line-md:sunny-filled-loop-to-moon-filled-alt-loop-transition style=\"color:#ffce1b;\" &gt;}\n  - ![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDI3dmVyODNleXltZDRvYXFsc211dTNnMjhydnFtODFsb3JmOHQ5cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jarNoneOdIBC8/giphy.gif){.absolute height=\"120\"}\n  - ```r\n    sd(4,5,6)\n    ```\n:::\n\n1\n\nlarge number of bootstrap classes can be applied here within curly brackets (not operative in all renderred formats)\n\n2\n\ntitle/label specification different here with .list-table\n\n3\n\nnested bullets define placement of content (first–level bullet indicates new row)\n\n4\n\nfull Quarto shortcode is not represented within code block (opening [{] and closing [}] curly brackets have been omitted due to rendered ghosting of full shortcode script) – note you’ll also need the iconify Quarto extension to render: \n\n\n\n\n\n\nTable 1: What a unique table!!!\n\n\n\n\n\nWazzat\nUselessness\nYadda\n\n\n\n\nsum()\n\nbullet\n\nsum(1,2,3)\n\n\n\nsd()\n\n\nsd(4,5,6)"
+    "text": "Presentation Accessibility Enhancements!!\n\nbuilt–in a11y extension\n\n\n\n\n\n\naxe-core testing\nalt text (images)\nslide–tone\nweb–standards built\n\n\n\n\n\n\n\n\n\nDescription\nOptions\nShortcuts\nInstallation"
   },
   {
     "objectID": "slides/2026/5_19_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-09-2026-rendering",
@@ -2406,5 +2406,96 @@
     "title": "R is for Authoring!!",
     "section": " &  Session Info (May 12, 2026) Rendering:",
     "text": "&  Session Info (May 12, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37\n crossref for Table 1"
+  },
+  {
+    "objectID": "slides/2026/5_19_26/index.html#open-office-hours-may-13-2026",
+    "href": "slides/2026/5_19_26/index.html#open-office-hours-may-13-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (May 13, 2026)",
+    "text": "Open Office Hours (May 13, 2026)\n\n\n\nRecap session #129\nToday’s topic(s):\n\n Shortcodes!!{{&lt; yadda yadda &gt;}}\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/5_19_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-13-2026-rendering",
+    "href": "slides/2026/5_19_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-13-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (May 13, 2026) Rendering:",
+    "text": "&  Session Info (May 13, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/5_19_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7d-shortcodes-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c207961646461207961646461203e7d7d",
+    "href": "slides/2026/5_19_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7d-shortcodes-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c207961646461207961646461203e7d7d",
+    "title": "R is for Authoring!!",
+    "section": " Shortcodes!!{{< yadda yadda >}}",
+    "text": "Shortcodes!!{{&lt; yadda yadda &gt;}}\n\n\n\n\n\n\n\n\n\nshortcode\ndescription\nrendered\n\n\n\n\n{{&lt; meta title &gt;}}\nPrint value from document metadata\nR is for Authoring!!\n\n\n\n\n{{&lt; meta title &gt;}}"
+  },
+  {
+    "objectID": "slides/2026/5_19_26/index.html#open-office-hours-may-14-2026",
+    "href": "slides/2026/5_19_26/index.html#open-office-hours-may-14-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (May 14, 2026)",
+    "text": "Open Office Hours (May 14, 2026)\n\n\n\nRecap session #129\nToday’s topic(s):\n\n Shortcodes!!{{&lt; yadda yadda &gt;}}\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/5_19_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-14-2026-rendering",
+    "href": "slides/2026/5_19_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-14-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (May 14, 2026) Rendering:",
+    "text": "&  Session Info (May 14, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/5_19_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7d-shortcodes",
+    "href": "slides/2026/5_19_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7d-shortcodes",
+    "title": "R is for Authoring!!",
+    "section": " Shortcodes!!",
+    "text": "Shortcodes!!\n\n\nStructure is {{&lt; name arg1 arg2 key=value &gt;}}\n\nentire {{&lt; ... &gt;}} is referred to as a “shortcode”\n\n\n\n\n\n\n\n\n\n\nshortcode:\ndescription:\nrendered:\n\n\n\n\n{{&lt; meta title &gt;}}\ntitle as specified in YAML\nR is for Authoring!!\n\n\n{{&lt; version &gt;}}\nQuarto version\n1.9.37"
+  },
+  {
+    "objectID": "slides/2026/5_19_26/index.html#open-office-hours-may-17-2026",
+    "href": "slides/2026/5_19_26/index.html#open-office-hours-may-17-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (May 17, 2026)",
+    "text": "Open Office Hours (May 17, 2026)\n\n\n\nRecap session #129\nToday’s topic(s):\n\n Shortcodes!!{{&lt; yadda yadda &gt;}}\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/5_19_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-17-2026-rendering",
+    "href": "slides/2026/5_19_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-17-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (May 17, 2026) Rendering:",
+    "text": "&  Session Info (May 17, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/5_19_26/example.html",
+    "href": "slides/2026/5_19_26/example.html",
+    "title": "axe–core",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see the URL."
+  },
+  {
+    "objectID": "slides/2026/5_19_26/example.html#quarto",
+    "href": "slides/2026/5_19_26/example.html#quarto",
+    "title": "axe–core",
+    "section": "",
+    "text": "Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see the URL."
+  },
+  {
+    "objectID": "slides/2026/5_19_26/example.html#bullets",
+    "href": "slides/2026/5_19_26/example.html#bullets",
+    "title": "axe–core",
+    "section": "Bullets",
+    "text": "Bullets\nWhen you click the Render button a document will be generated that includes:\n\nContent authored with markdown\nOutput from executable code"
+  },
+  {
+    "objectID": "slides/2026/5_19_26/example.html#code",
+    "href": "slides/2026/5_19_26/example.html#code",
+    "title": "axe–core",
+    "section": "Code",
+    "text": "Code\nWhen you click the Render button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "slides/2026/5_19_26/example.html#images",
+    "href": "slides/2026/5_19_26/example.html#images",
+    "title": "axe–core",
+    "section": "Images",
+    "text": "Images\n\n\n\n\n\n\nFigure 1: WITH alt-text (fig-alt)\n\n\n\n\n\n\n\n\n\nFigure 2: without alt-text"
   }
 ]
