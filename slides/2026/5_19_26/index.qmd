@@ -158,6 +158,8 @@ style="border:none;">
 
 ![](https://comicvine.gamespot.com/a/uploads/original/1/15776/8674793-rocky.png){.absolute left="-150" top="140" height="200" .mirror}
 
+![](https://preview.redd.it/who-is-everyones-favorite-looney-tune-and-why-v0-tk5m5e2zfzfe1.jpeg?width=759&format=pjpg&auto=webp&s=eda70c60e2367b1b9aca8461e672f2637ad24930){.absolute left="-160" bottom="100" height="150"}
+
 ## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 
 ::: {.columns}
