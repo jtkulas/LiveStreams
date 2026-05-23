@@ -1,0 +1,170 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: "OOH Session #131...<br>[...let's make a website!!]{.bangers2 .Bigger}{{< iconify game-icons:web-spit style='color:#ffffff;' >}}"
+title-slide-attributes: 
+  data-background-image: https://disney.images.edge.bamgrid.com/ripcut-delivery/v2/variant/disney/544a09f2-38ae-47b4-a295-f7eeaf669023/compose?format=webp&width=2560 
+  data-background-opacity: ".9"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://www.freeiconspng.com/thumbs/spider-web-png/white-spider-web-png-9.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {.columns}
+::: {.column width="55%"}
++ Recap session #130
++ Today's topic(s):
+    + [[...let's make a website!!]{.bangers2 .biggeR}{{< iconify game-icons:web-spit style="color:#ffffff;" >}}](https://quarto.org/docs/websites/)
++ Shared problem-solving
+
+:::
+
+::: {.column width="45%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 170px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/5_19_26">
+  <img src="/img/title130.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#130: 
+
+![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
+
+![](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e4638f60-ecd7-4228-b667-e7628252709e/dhq1lm1-a29e1617-2f53-4409-9dd8-39f0a86a6c30.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi9lNDYzOGY2MC1lY2Q3LTQyMjgtYjY2Ny1lNzYyODI1MjcwOWUvZGhxMWxtMS1hMjllMTYxNy0yZjUzLTQ0MDktOWRkOC0zOWYwYTg2YTZjMzAucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.RGZa4bbfqyqQSXzNujPQzmp24K6DVgfBg4V1U0N5T3Y){.absolute top="285" right="115" height="200"}
+
+## [[{{< iconify material-icon-theme:quarto >}}]{.bigger} [Shortcodes!!]{.syncopate}](https://quarto.org/docs/authoring/shortcodes.html)
+
+::: {.panel-tabset}
+
++ Structure is `{{< name arg1 arg2 key=value >}}`  
++ entire `{{{< ... >}}}` is referred to as a "[shortcode](https://github.com/quarto-dev/quarto-shortcodes)"
+
+### whazzat{{< iconify noto-v1:exclamation-question-mark >}} 
+
+::: {.smaller}
+::: {.list-table tbl-colwidths="[40,35,25]"}
+
+- - [shortcode]{.underline}:
+  - [description]{.underline}:
+  - [rendered]{.underline}:
+
+- - `{{{< meta title >}}}`
+  - title as specified in YAML
+  
+  - {{< meta title >}} 
+  
+- - `{{{< version >}}}`
+  - Quarto version
+  
+  - {{< version >}} 
+
+- - `{{{< date >}}}`
+  - current date
+  
+  - `r Sys.Date()` 
+  
+:::
+:::
+
+### pre--built 
+
+::: {.columns}
+
+::: {.column width="19%"}
+
+:::
+
+
+:::
+
+### build--your--own {{< iconify mdi:crane style="color:#c4c21d;" >}}
+
+::: {.columns}
+
+::: {.column width="18%"}
+
+
+::: 
+
+::: {.column width="18%"}
+
+:::
+
+::: {.column width="60%"}
+
+
+:::
+
+:::
+
+:::
+
+![](https://comicvine.gamespot.com/a/uploads/original/1/15776/8674793-rocky.png){.absolute left="-150" bottom="140" height="200" .mirror}
+
+![](https://preview.redd.it/who-is-everyones-favorite-looney-tune-and-why-v0-tk5m5e2zfzfe1.jpeg?width=759&format=pjpg&auto=webp&s=eda70c60e2367b1b9aca8461e672f2637ad24930){.absolute right="-70" top="-5" height="250"}
+
+# Today...
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnNkYjNvN3Vlc2U2YnJvYTI4NHdxbm96YTN5NXh4ZndtamVuamhuaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/10fFT7qzHrN0D6/giphy.gif)
+
+## [[...let's make a website!!]{.bangers2 .biggeR}{{< iconify game-icons:web-spit style="color:#ffffff;" >}}](https://quarto.org/docs/websites/)
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmYzaDY0YWxxcnV4MTZnY3F3NDUwMnhyeGNwNHEycndwMjZnbWt2YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Eb63LPCiBNwRy/giphy.gif){.absolute left="-10" height="500"}
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGg5MXcxanVveWt3a2R1dWR3Z3hndWo1bmN5MHhmMHAwODJvdGJ6ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/B9O4oVqGjOBFu/giphy.gif){.absolute right="-100" bottom="170"}
+
+
+## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+
+::: {.columns}
+
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| eval: true
+sessionInfo()
+```
+:::
+
+::: {.column width="20%"}
+
+Quarto version `r quarto::quarto_version()`  
+
+:::
+
+:::
+

@@ -32,7 +32,7 @@
 @import url('https://fonts.googleapis.com/css?family=Anton');
 @import url('https://fonts.googleapis.com/css?family=Fira Code');
 
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: left;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
@@ -478,6 +478,12 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-weight: normal !important;
   color: #cf99c2;
   font-size: 2em;
+}
+
+.bangers2{
+  font-family: "Bangers";
+  font-weight: normal !important;
+  color: #2596be;
 }
 
 .nostress{

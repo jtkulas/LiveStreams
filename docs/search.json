@@ -2511,5 +2511,124 @@
     "title": "R is for Authoring!!",
     "section": " &  Session Info (May 19, 2026) Rendering:",
     "text": "&  Session Info (May 19, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/5_26_26/index.html#open-office-hours-may-20-2026",
+    "href": "slides/2026/5_26_26/index.html#open-office-hours-may-20-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (May 20, 2026)",
+    "text": "Open Office Hours (May 20, 2026)\n\n\n\nRecap session #130\nToday’s topic(s):\n\n…let’s make a website!!\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/5_26_26/index.html#presentation-accessibility-enhancementsb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206c613a61636365737369626c652d69636f6e203e7d7d",
+    "href": "slides/2026/5_26_26/index.html#presentation-accessibility-enhancementsb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206c613a61636365737369626c652d69636f6e203e7d7d",
+    "title": "R is for Authoring!!",
+    "section": "Presentation Accessibility Enhancements!!",
+    "text": "Presentation Accessibility Enhancements!!\n\nbuilt–in a11y extension\n\n\n\n\n\n\naxe-core testing\nalt text (images)\nslide–tone\nweb–standards built\n\n\n\n\n\n\n\n\n\nDescription\nOptions\nShortcuts\nInstallation"
+  },
+  {
+    "objectID": "slides/2026/5_26_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7d-shortcodes",
+    "href": "slides/2026/5_26_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7d-shortcodes",
+    "title": "R is for Authoring!!",
+    "section": " Shortcodes!!",
+    "text": "Shortcodes!!\n\nwhazzatpre–builtbuild–your–own \n\n\n\n\n\n\n\n\n\n\n\nshortcode:\ndescription:\nrendered:\n\n\n\n\n{{&lt; meta title &gt;}}\ntitle as specified in YAML\nR is for Authoring!!\n\n\n{{&lt; version &gt;}}\nQuarto version\n1.9.37\n\n\n{{&lt; date &gt;}}\ncurrent date\n2026-05-22"
+  },
+  {
+    "objectID": "slides/2026/5_26_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-20-2026-rendering",
+    "href": "slides/2026/5_26_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-20-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (May 20, 2026) Rendering:",
+    "text": "&  Session Info (May 20, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/5_26_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7d-shortcodes-1",
+    "href": "slides/2026/5_26_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7d-shortcodes-1",
+    "title": "R is for Authoring!!",
+    "section": " Shortcodes!!",
+    "text": "Shortcodes!!\n\n\nStructure is {{&lt; name arg1 arg2 key=value &gt;}}\n\nentire {{&lt; ... &gt;}} is referred to as a “shortcode”\n\n\n\n\n\n\n\n\n\n\nshortcode:\ndescription:\nrendered:\n\n\n\n\n{{&lt; meta title &gt;}}\ntitle as specified in YAML\nR is for Authoring!!\n\n\n{{&lt; version &gt;}}\nQuarto version\n1.9.37"
+  },
+  {
+    "objectID": "slides/2026/5_26_26/index.html#lets-make-a-website",
+    "href": "slides/2026/5_26_26/index.html#lets-make-a-website",
+    "title": "R is for Authoring!!",
+    "section": "…let’s make a website!!",
+    "text": "…let’s make a website!!\n\nStructure is {{&lt; name arg1 arg2 key=value &gt;}}\n\nentire {{&lt; ... &gt;}} is referred to as a “shortcode”\n\n\n\n\n\n\n\n\n\n\nshortcode:\ndescription:\nrendered:\n\n\n\n\n{{&lt; meta title &gt;}}\ntitle as specified in YAML\nR is for Authoring!!\n\n\n{{&lt; version &gt;}}\nQuarto version\n1.9.37"
+  },
+  {
+    "objectID": "slides/2026/5_26_26/index.html#lets-make-a-websiteb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792067616d652d69636f6e733a7765622d73706974207374796c653d22636f6c6f723a236666666666663b22203e7d7d",
+    "href": "slides/2026/5_26_26/index.html#lets-make-a-websiteb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792067616d652d69636f6e733a7765622d73706974207374796c653d22636f6c6f723a236666666666663b22203e7d7d",
+    "title": "R is for Authoring!!",
+    "section": "…let’s make a website!!",
+    "text": "…let’s make a website!!"
+  },
+  {
+    "objectID": "slides/2026/5_26_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792067616d652d69636f6e733a7765622d7370697420726f746174653d313830646567207374796c653d22636f6c6f723a236666666666663b22203e7d7dlets-make-a-websiteb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792067616d652d69636f6e733a7765622d73706974207374796c653d22636f6c6f723a236666666666663b22203e7d7d",
+    "href": "slides/2026/5_26_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792067616d652d69636f6e733a7765622d7370697420726f746174653d313830646567207374796c653d22636f6c6f723a236666666666663b22203e7d7dlets-make-a-websiteb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792067616d652d69636f6e733a7765622d73706974207374796c653d22636f6c6f723a236666666666663b22203e7d7d",
+    "title": "R is for Authoring!!",
+    "section": "…let’s make a website!!",
+    "text": "…let’s make a website!!\n\nStructure is {{&lt; name arg1 arg2 key=value &gt;}}\n\nentire {{&lt; ... &gt;}} is referred to as a “shortcode”\n\n\n\n\n\n\n\n\n\n\nshortcode:\ndescription:\nrendered:\n\n\n\n\n{{&lt; meta title &gt;}}\ntitle as specified in YAML\nR is for Authoring!!\n\n\n{{&lt; version &gt;}}\nQuarto version\n1.9.37"
+  },
+  {
+    "objectID": "slides/2026/5_26_26/index.html#open-office-hours-may-21-2026",
+    "href": "slides/2026/5_26_26/index.html#open-office-hours-may-21-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (May 21, 2026)",
+    "text": "Open Office Hours (May 21, 2026)\n\n\n\nRecap session #130\nToday’s topic(s):\n\n…let’s make a website!!\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/5_26_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-21-2026-rendering",
+    "href": "slides/2026/5_26_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-21-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (May 21, 2026) Rendering:",
+    "text": "&  Session Info (May 21, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/5_26_26/index.html#open-office-hours-may-22-2026",
+    "href": "slides/2026/5_26_26/index.html#open-office-hours-may-22-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (May 22, 2026)",
+    "text": "Open Office Hours (May 22, 2026)\n\n\n\nRecap session #130\nToday’s topic(s):\n\n…let’s make a website!!\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/5_26_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-22-2026-rendering",
+    "href": "slides/2026/5_26_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-22-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (May 22, 2026) Rendering:",
+    "text": "&  Session Info (May 22, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/bookdown/jupyter/index.html#open-office-hours-may-23-2026",
+    "href": "slides/bookdown/jupyter/index.html#open-office-hours-may-23-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (May 23, 2026)1",
+    "text": "Open Office Hours (May 23, 2026)1\n\n\n\n\nRecap session #100\nToday’s topic(s):\n\n  \n\nShared problem-solving\n\n\n\n    \n\n\n\n\n\n\nNote\n\n\nOriginal slide rendering and  LiveStream was 10/28/25\n\n\n\n\n\n\n\n  \n\n\nAlien astronaut by Claudette Barjoud!!"
+  },
+  {
+    "objectID": "slides/bookdown/jupyter/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206c6f676f733a6a756c6961203e7d7db58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792073747265616d6c696e652d756c74696d6174652d636f6c6f723a627573696e6573732d6465616c2d68616e647368616b652d31203e7d7db58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a6a7570797465722d776f72646d61726b203e7d7d",
+    "href": "slides/bookdown/jupyter/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206c6f676f733a6a756c6961203e7d7db58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792073747265616d6c696e652d756c74696d6174652d636f6c6f723a627573696e6573732d6465616c2d68616e647368616b652d31203e7d7db58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a6a7570797465722d776f72646d61726b203e7d7d",
+    "title": "R is for Authoring!!",
+    "section": "",
+    "text": "lab installation installation\n\n\n\n\n\n\ninstall \naccess command prompt:\ntype pip install jupyterlab\nnavigate to project folder\ntype jupyter lab\n\n\n\n\nOther options:\n\nanaconda/miniconda\n\nlab desktop\n\n codespaces\n\n vs lab interface ()\n\n\n\n\n\n\npleb install (.exe wizard):\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\nAdd XXX to PATH also important  for  (or any  install – tells your computer where to look from any  location)"
+  },
+  {
+    "objectID": "slides/bookdown/jupyter/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a6a756c69612d776f72646d61726b203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792073747265616d6c696e652d756c74696d6174652d636f6c6f723a627573696e6573732d6465616c2d68616e647368616b652d31203e7d7db58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7db58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792073747265616d6c696e652d756c74696d6174652d636f6c6f723a627573696e6573732d6465616c2d68616e647368616b652d31203e7d7db58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a6a7570797465722d776f72646d61726b203e7d7d",
+    "href": "slides/bookdown/jupyter/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a6a756c69612d776f72646d61726b203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792073747265616d6c696e652d756c74696d6174652d636f6c6f723a627573696e6573732d6465616c2d68616e647368616b652d31203e7d7db58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7db58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792073747265616d6c696e652d756c74696d6174652d636f6c6f723a627573696e6573732d6465616c2d68616e647368616b652d31203e7d7db58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a6a7570797465722d776f72646d61726b203e7d7d",
+    "title": "R is for Authoring!!",
+    "section": " ",
+    "text": "Note\n\n\nQuarto works out–of–the–box (renders from terminal) but there is also a jupyterlab-quarto extension that adds toolbar buttons and helps document previews\n\n\n\n\n\n\nYou can use  to work with  and , but  is more seamless (Grok, 10.16.25)"
+  },
+  {
+    "objectID": "slides/bookdown/jupyter/index.html#additional-resources",
+    "href": "slides/bookdown/jupyter/index.html#additional-resources",
+    "title": "R is for Authoring!!",
+    "section": "Additional Resources:",
+    "text": "Additional Resources:\n  — lab installation and navigation\n — lab overview & keyboard     shortcuts\n — Connecting  to lab\n — Connecting  to lab"
+  },
+  {
+    "objectID": "slides/bookdown/jupyter/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278203e7d7d-session-info-may-23-2026-rendering",
+    "href": "slides/bookdown/jupyter/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278203e7d7d-session-info-may-23-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " Session Info (May 23, 2026) Rendering:",
+    "text": "Session Info (May 23, 2026) Rendering:\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5"
   }
 ]
