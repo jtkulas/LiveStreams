@@ -75,6 +75,26 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ### whazzat{{< iconify noto-v1:exclamation-question-mark >}} 
 
+::: {.columns}
+
+::: {.column width="5%"}
+
+:::
+
+::: {.column width="50%"}
+
+<br>
+
+`{{{< ... >}}}` structured [markdown]{.underline} shortcuts for (potentially more complicated) content
+
+:::
+
+:::
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3pscW1sbWZqemc5a3BlNG9mcHIwMWs0NWY2dGZuMWR1ZjZzY24wdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IHnROpQICe4kE/giphy.gif){.absolute right="-40" bottom="50" height="400"}
+
+### pre--built 
+
 ::: {.smaller}
 ::: {.list-table tbl-colwidths="[40,35,25]"}
 
@@ -91,42 +111,42 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
   - Quarto version
   
   - {{< version >}} 
-
-- - `{{{< date >}}}`
-  - current date
   
-  - `r Sys.Date()` 
+- - `{{{< placeholder >}}}`
+  - placeholder image
+  
+  - {{< placeholder 200 60 >}} 
   
 :::
 :::
-
-### pre--built 
-
-::: {.columns}
-
-::: {.column width="19%"}
-
-:::
-
-
-:::
-
 ### build--your--own {{< iconify mdi:crane style="color:#c4c21d;" >}}
 
+At terminal, type [`quarto create extension shortcode`](https://quarto.org/docs/extensions/shortcodes.html#quick-start)
+
 ::: {.columns}
 
-::: {.column width="18%"}
-
+::: {.column width="5%"}
 
 ::: 
 
-::: {.column width="18%"}
+::: {.column width="45%"}
+
++ do this [*within a project directory*]{.underline}
++ capability is specified within `name.lua` file {{< iconify line-md:upload-loop rotate=45 >}}
 
 :::
 
-::: {.column width="60%"}
+::: {.column width="50%"}
 
+Default .lua function: 
 
+```{r}
+return {
+  ['shorty'] = function(args, kwargs, meta) 
+    return pandoc.Str("Hello from Shorty!")
+  end
+}
+```
 :::
 
 :::

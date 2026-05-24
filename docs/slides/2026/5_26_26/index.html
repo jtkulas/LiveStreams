@@ -35,6 +35,72 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #f8f8f2;  }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #f8f8f2; } /* Normal */
+    code span.al { color: #f07178; } /* Alert */
+    code span.an { color: #d4d0ab; } /* Annotation */
+    code span.at { color: #00e0e0; } /* Attribute */
+    code span.bn { color: #d4d0ab; } /* BaseN */
+    code span.bu { color: #abe338; } /* BuiltIn */
+    code span.cf { color: #ffa07a; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #abe338; } /* Char */
+    code span.cn { color: #ffd700; } /* Constant */
+    code span.co { color: #f8f8f2; font-style: italic; } /* Comment */
+    code span.cv { color: #ffd700; } /* CommentVar */
+    code span.do { color: #f8f8f2; } /* Documentation */
+    code span.dt { color: #ffa07a; } /* DataType */
+    code span.dv { color: #d4d0ab; } /* DecVal */
+    code span.er { color: #f07178; text-decoration: underline; } /* Error */
+    code span.ex { color: #00e0e0; font-weight: bold; } /* Extension */
+    code span.fl { color: #d4d0ab; } /* Float */
+    code span.fu { color: #ffa07a; } /* Function */
+    code span.im { color: #abe338; } /* Import */
+    code span.in { color: #d4d0ab; } /* Information */
+    code span.kw { color: #ffa07a; font-weight: bold; } /* Keyword */
+    code span.op { color: #ffa07a; } /* Operator */
+    code span.ot { color: #00e0e0; } /* Other */
+    code span.pp { color: #dcc6e0; } /* Preprocessor */
+    code span.re { color: #00e0e0; background-color: #f8f8f2; } /* RegionMarker */
+    code span.sc { color: #abe338; } /* SpecialChar */
+    code span.ss { color: #abe338; } /* SpecialString */
+    code span.st { color: #abe338; } /* String */
+    code span.va { color: #00e0e0; } /* Variable */
+    code span.vs { color: #abe338; } /* VerbatimString */
+    code span.wa { color: #dcc6e0; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-01d8b422c275b1d803eef8dea3af8062.css">
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-8ZE61PCXCP"></script>
@@ -154,8 +220,8 @@ OOH Session #131…<br><span class="bangers2 Bigger">…let’s make a website!!
 </div>
 
 </section>
-<section id="open-office-hours-may-22-2026" class="slide level2">
-<h2>Open Office Hours <br>(May 22, 2026)</h2>
+<section id="open-office-hours-may-24-2026" class="slide level2">
+<h2>Open Office Hours <br>(May 24, 2026)</h2>
 <div class="columns">
 <div class="column" style="width:55%;">
 <ul>
@@ -199,6 +265,16 @@ OOH Session #131…<br><span class="bangers2 Bigger">…let’s make a website!!
 <ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">whazzat<iconify-icon role="img" inline="" icon="noto-v1:exclamation-question-mark" aria-label="Icon exclamation-question-mark from noto-v1 Iconify.design set." title="Icon exclamation-question-mark from noto-v1 Iconify.design set."></iconify-icon></a></li><li><a href="#tabset-1-2">pre–built</a></li><li><a href="#tabset-1-3">build–your–own <iconify-icon role="img" inline="" icon="mdi:crane" style="color:#c4c21d;" aria-label="Icon crane from mdi Iconify.design set." title="Icon crane from mdi Iconify.design set."></iconify-icon></a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
+<div class="columns">
+<div class="column" style="width:5%;">
+
+</div><div class="column" style="width:50%;">
+<p><br></p>
+<p><code>{{&lt; ... &gt;}}</code> structured <u>markdown</u> shortcuts for (potentially more complicated) content</p>
+</div></div>
+<p><img data-src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3pscW1sbWZqemc5a3BlNG9mcHIwMWs0NWY2dGZuMWR1ZjZzY24wdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IHnROpQICe4kE/giphy.gif" class="absolute" style="bottom: 50px; right: -40px; height: 400px; "></p>
+</div>
+<div id="tabset-1-2">
 <div class="smaller">
 <table class="caption-top">
 <colgroup>
@@ -225,28 +301,33 @@ OOH Session #131…<br><span class="bangers2 Bigger">…let’s make a website!!
 <td><p>1.9.37</p></td>
 </tr>
 <tr class="odd">
-<td><p><code>{{&lt; date &gt;}}</code></p></td>
-<td><p>current date</p></td>
-<td><p>2026-05-22</p></td>
+<td><p><code>{{&lt; placeholder &gt;}}</code></p></td>
+<td><p>placeholder image</p></td>
+<td><p><img data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAAA8CAYAAAAjW/WRAAABz0lEQVR4nO3XsXEqMRSGUVGA3YDdgN2AaYCMjAqogIwIIjIyKqACKqACGoCIDBqAAt7jrgePA8+fQXROwo5W2kjfSPSOx+O/BvxJIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIE9wOp3a+XxuHx8f7fX1te33++73/f29e3e5XNrn5+dt5t/q/eFw6NaX+3N9g8cSyBNst9v29vbWNptNGwwG7Xq9dmPL5bJNp9Nu7OXlpfX7/S6YCqciukezWCzaaDS6PX1/q57rW5PJ5DbCIwnkSeoUqE1dv7Wxa6PfI6hAVqtVN15ju93utqK18XjcBbNer3/m1XPNu8/nsQTyJHVSzGaznw1esdQVqYL5vfHLcDjsTpeKogKpmOrUqDml5gnkOQTyBBVHxVD/G76+vrqNXtesiqDe1fWqTou6WtW7ezDz+fy2+vuK1ev1urUVTK2tK1tFw2MJBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgE/wGL02p0FrlkbAAAAABJRU5ErkJggg=="></p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<div id="tabset-1-2">
-<div class="columns">
-<div class="column" style="width:19%;">
-
-</div></div>
-</div>
 <div id="tabset-1-3">
+<p>At terminal, type <a href="https://quarto.org/docs/extensions/shortcodes.html#quick-start"><code>quarto create extension shortcode</code></a></p>
 <div class="columns">
-<div class="column" style="width:18%;">
+<div class="column" style="width:5%;">
 
-</div><div class="column" style="width:18%;">
-
-</div><div class="column" style="width:60%;">
-
+</div><div class="column" style="width:45%;">
+<ul>
+<li>do this <u><em>within a project directory</em></u></li>
+<li>capability is specified within <code>name.lua</code> file <iconify-icon role="img" inline="" icon="line-md:upload-loop" aria-label="Icon upload-loop from line-md Iconify.design set." title="Icon upload-loop from line-md Iconify.design set." rotate="45"></iconify-icon></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p>Default .lua function:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>return {</span>
+<span id="cb1-2"><a></a>  [<span class="st">'shorty'</span>] <span class="ot">=</span> <span class="cf">function</span>(args, kwargs, meta) </span>
+<span id="cb1-3"><a></a>    return <span class="fu">pandoc.Str</span>(<span class="st">"Hello from Shorty!"</span>)</span>
+<span id="cb1-4"><a></a>  end</span>
+<span id="cb1-5"><a></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div></div>
 </div>
 </div>
@@ -264,8 +345,8 @@ OOH Session #131…<br><span class="bangers2 Bigger">…let’s make a website!!
 <p><img data-src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmYzaDY0YWxxcnV4MTZnY3F3NDUwMnhyeGNwNHEycndwMjZnbWt2YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Eb63LPCiBNwRy/giphy.gif" class="absolute" style="left: -10px; height: 500px; "></p>
 <p><img data-src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGg5MXcxanVveWt3a2R1dWR3Z3hndWo1bmN5MHhmMHAwODJvdGJ6ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/B9O4oVqGjOBFu/giphy.gif" class="absolute" style="bottom: 170px; right: -100px; "></p>
 </section>
-<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-22-2026-rendering" class="slide level2">
-<h2><iconify-icon role="img" inline="" icon="devicon:r" style="color:#82b1ff;;font-size: 2em;" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> &amp; <iconify-icon role="img" inline="" icon="material-icon-theme:quarto" style="font-size: 2em;" aria-label="Icon quarto from material-icon-theme Iconify.design set." title="Icon quarto from material-icon-theme Iconify.design set."></iconify-icon> Session Info (May 22, 2026) Rendering:</h2>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-24-2026-rendering" class="slide level2">
+<h2><iconify-icon role="img" inline="" icon="devicon:r" style="color:#82b1ff;;font-size: 2em;" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> &amp; <iconify-icon role="img" inline="" icon="material-icon-theme:quarto" style="font-size: 2em;" aria-label="Icon quarto from material-icon-theme Iconify.design set." title="Icon quarto from material-icon-theme Iconify.design set."></iconify-icon> Session Info (May 24, 2026) Rendering:</h2>
 <div class="columns">
 <div class="column" style="width:80%;">
 <div class="cell">
