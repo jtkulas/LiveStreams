@@ -1,0 +1,258 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: "OOH Session #132...<br>[Accordion folding]{.frijole  style='font-size:1.3em;'}"
+title-slide-attributes: 
+  data-background-image: ../../../img/accordian.png
+#  data-background-opacity: ".9"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://cdn.creazilla.com/cliparts/7754652/accordion-clipart-xl.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {.columns}
+::: {.column width="55%"}
++ Recap session #131
++ Today's topic(s):
+    + [[Accordion folding]{.frijole}](https://github.com/royfrancis/quarto-accordion)
++ Shared problem-solving
+
+:::
+
+::: {.column width="45%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 170px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/5_26_26">
+  <img src="/img/title131.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#131: 
+
+![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
+
+![](https://static.vecteezy.com/system/resources/thumbnails/072/335/467/small/spiderman-action-pose-in-high-resolution-free-png.png){.absolute top="280" right="115" height="210"}
+
+## [[building a website!!]{.bangers2 .biggeR}{{< iconify game-icons:web-spit style="color:#ffffff;" >}}](https://quarto.org/docs/websites/)
+
+::: {.panel-tabset}
+
+### Project set--up 
+
+::: {.Smaller}
+
+Typical website structured as several different .qmd files -- easiest to manage from [within a project folder](https://martinctc.github.io/blog/rstudio-projects-and-working-directories-a-beginner%27s-guide/)
+
+::: {.columns}
+
+::: {.column width="65%"}
+
+{{< iconify devicon:rstudio >}} wizard (version 2024.12.1; Build 563) only provides template files if you follow the `New Project...` {{< iconify weui:arrow-filled >}} `New Directory` path  
+
++ `Existing Directory` & `Version Control` paths do not provide "Quarto Website" template option (no biggie)
+
+:::
+
+::: {.column width="35%"}
+:::
+
+:::
+
+:::
+
+![](../../../img/bandsnip.JPG){.absolute right="-70" bottom="40" height="300"}
+
+### `_quarto.yml` 
+
+::: {.columns}
+
+::: {.column width="55%"}
+
+```{r}
+project:
+  type: website
+  output-dir: docs     #<1>
+
+website:
+  title: "Kitty Wampas"
+  navbar:              
+    logo: "img/wampa.png"         #<2>
+    left:
+      - href: index.qmd
+        text: Home
+      - href: discography.qmd
+        text: Discography
+      - calendar.qmd
+      - contact.qmd               #<2>
+    tools:                        #<3>
+      - icon: github
+        menu:
+          - text: Source Code
+            href: https://github.com/jtkulas/kittywampas
+          - text: Report an Issue
+            href: https://github.com/jtkulas/kittywampas/issues
+      - icon: facebook
+        href: https://facebook.com
+      - icon: twitter-x
+        href: https://x.com
+      - icon: youtube
+        href: https://www.youtube.com/@Kittywampas1     #<3>
+  page-footer:  
+    border: true
+    center: "no Kitties or Wampas were harmed during the making of this band"
+    left: "©Kitty Wampas 2026"
+    right: 
+      - text: "contact us"
+        href: contact.qmd
+    
+format:
+  html:
+    mainfont: Zen Dots              #<4>
+    theme:
+      light: flatly                 #<5>
+      dark: darkly                  #<5>
+    css: styles.css
+    toc: true
+    
+    
+#    
+```
+1. Important for publishing with GitHub -- not necessary if publishing to Posit Connect Cloud
+2. Navigation content & page ordering specified here
+3. Right--hand navbar content specified here
+4. Affects majority of content displayed on page -- best practice is to also provide backup fonts (to be used if yours isn't findable by a browser)
+5. Specifying both `light:` and `dark:` gives you the navbar toggle
+
+:::
+
+::: {.column width="45%"}
+
+"overarching" YAML specifications that bind separate .qmd files into one coherent product (most commonly a book or website)
+
+:::
+
+:::
+
+### Publishing
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+Published to [Posit Connect Cloud](https://jtkulas-kittyband.share.connect.posit.cloud/) on the stream -- moved to [GitHub](https://jtkulas.github.io/kittywampas/) after the stream  
+
+  + updated site [font](https://fonts.google.com/specimen/Zen+Dots?preview.script=Latn)
+  + added [social media links](https://quarto.org/docs/websites/website-navigation.html#navbar-tools)
+  + [DT](https://rstudio.github.io/DT/) table [songs list](https://jtkulas.github.io/kittywampas/discography.html#songs-played)
+
+:::
+
+::: {.column width="40%"}
+
+:::
+
+:::
+
+![](../../../img/posconnect1.JPG){.absolute right="-150" bottom="80" height="300"}
+
+:::
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmh2aTAwZnZ6bjZvY3ZmMmRvMGljZm5jcWZtcHdyOGJuazVieHN3NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/m1fdMAcKFUY48/giphy.gif){.absolute right="-120" top="-40" height="300"}
+
+# Today...
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHE3bzB5ajFzM3pubWZkYmVsYnluYm4wbW1neGFpeWk2bWhlcTlseCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cCbhtlc1p3UYlldT6t/giphy.gif)
+
+## [[Accoridion folding]{.frijole}](https://github.com/royfrancis/quarto-accordion)
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+Same concept as<br>[code--folding](https://quarto.org/docs/output-formats/html-code.html#folding-code):
+
+```{r}
+#| eval: true
+#| code-fold: true
+#| code-summary: "Show the code"
+
+# assign values
+x <- 10.5
+y <- 55
+
+# manipulate values
+z <- x + y
+
+# show the value 
+z
+
+```
+
+:::
+
+::: {.column width="60%" .smaller}
+
+<br>
+
+{{< accordion header="Click here to view contents" body="This accordion only contains text, BUT..." >}}
+
+{{< accordion header="Now that you know the drill..." body="...how 'bout some visuals? ![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHNvZmZoemNtcmo0MjF4cWhjNmx3dWdzZ3VqajBkaXZzcDlmN3BpMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/F3IsU82rkfVpWvIAvG/giphy.gif)" >}}
+:::
+
+:::
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3Vmb3k4ZnptMjhwdWkxMHcxZndldXN5bWFqOTBhbDczMXF5OXRnOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/10MMlwUbTHen28/giphy.gif){.absolute right="-150" top="-40" height="225"}
+
+## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+
+::: {.columns}
+
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| eval: true
+sessionInfo()
+```
+:::
+
+::: {.column width="20%"}
+
+Quarto version `r quarto::quarto_version()`  
+
+:::
+
+:::
+

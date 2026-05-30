@@ -31,8 +31,9 @@
 @import url('https://fonts.googleapis.com/css?family=Lexend');
 @import url('https://fonts.googleapis.com/css?family=Anton');
 @import url('https://fonts.googleapis.com/css?family=Fira Code');
+@import url('https://fonts.googleapis.com/css?family=Frijole');
 
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
@@ -497,4 +498,10 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-family: "Anton";
   font-weight: normal !important;
   color: #82b1ff;
+}
+
+.frijole{
+  font-family: "Frijole";
+  font-weight: normal !important;
+  color: #fdf260;
 }

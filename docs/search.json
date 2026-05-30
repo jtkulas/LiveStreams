@@ -2658,5 +2658,89 @@
     "title": "R is for Authoring!!",
     "section": " &  Session Info (May 26, 2026) Rendering:",
     "text": "&  Session Info (May 26, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/6_2_26/index.html#open-office-hours-may-27-2026",
+    "href": "slides/2026/6_2_26/index.html#open-office-hours-may-27-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (May 27, 2026)",
+    "text": "Open Office Hours (May 27, 2026)\n\n\n\nRecap session #131\nToday’s topic(s):\n\nAccoridian Content\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/6_2_26/index.html#building-a-websiteb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792067616d652d69636f6e733a7765622d73706974207374796c653d22636f6c6f723a236666666666663b22203e7d7d",
+    "href": "slides/2026/6_2_26/index.html#building-a-websiteb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792067616d652d69636f6e733a7765622d73706974207374796c653d22636f6c6f723a236666666666663b22203e7d7d",
+    "title": "R is for Authoring!!",
+    "section": "building a website!!",
+    "text": "building a website!!\n\nProject set–up_quarto.ymlPublishing\n\n\n\nTypical website structured as several different .qmd files – easiest to manage from within a project folder\n\n\n wizard (version 2024.12.1; Build 563) only provides template files if you follow the New Project...  New Directory path\n\nExisting Directory & Version Control paths do not provide “Quarto Website” template option (no biggie)\n\n\n\n\n\n\n\n\n\n\n\nproject:\n  type: website\n1  output-dir: docs\n\nwebsite:\n  title: \"Kitty Wampas\"\n  navbar:              \n2    logo: \"img/wampa.png\"\n    left:\n      - href: index.qmd\n        text: Home\n      - href: discography.qmd\n        text: Discography\n      - calendar.qmd\n      - contact.qmd\n3    tools:\n      - icon: github\n        menu:\n          - text: Source Code\n            href: https://github.com/jtkulas/kittywampas\n          - text: Report an Issue\n            href: https://github.com/jtkulas/kittywampas/issues\n      - icon: facebook\n        href: https://facebook.com\n      - icon: twitter-x\n        href: https://x.com\n      - icon: youtube\n        href: https://www.youtube.com/@Kittywampas1\n  page-footer:  \n    border: true\n    center: \"no Kitties or Wampas were harmed during the making of this band\"\n    left: \"©Kitty Wampas 2026\"\n    right: \n      - text: \"contact us\"\n        href: contact.qmd\n    \nformat:\n  html:\n4    mainfont: Zen Dots\n    theme:\n5      light: flatly\n      dark: darkly\n    css: styles.css\n    toc: true\n    \n    \n#    \n\n\n1\n\nImportant for publishing with GitHub – not necessary if publishing to Posit Connect Cloud\n\n2\n\nNavigation content & page ordering specified here\n\n3\n\nRight–hand navbar content specified here\n\n4\n\nAffects majority of content displayed on page – best practice is to also provide backup fonts (to be used if yours isn’t findable by a browser)\n\n5\n\nSpecifying both light: and dark: gives you the navbar toggle\n\n\n\n\n\n“overarching” YAML specifications that bind separate .qmd files into one coherent product (most commonly a book or website)\n\n\n\n\n\nPublished to Posit Connect Cloud on the stream – moved to GitHub after the stream\n\nupdated site font\nadded social media links\nDT table songs list"
+  },
+  {
+    "objectID": "slides/2026/6_2_26/index.html#lets-make-a-websiteb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792067616d652d69636f6e733a7765622d73706974207374796c653d22636f6c6f723a236666666666663b22203e7d7d",
+    "href": "slides/2026/6_2_26/index.html#lets-make-a-websiteb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792067616d652d69636f6e733a7765622d73706974207374796c653d22636f6c6f723a236666666666663b22203e7d7d",
+    "title": "R is for Authoring!!",
+    "section": "…let’s make a website!!",
+    "text": "…let’s make a website!!"
+  },
+  {
+    "objectID": "slides/2026/6_2_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-27-2026-rendering",
+    "href": "slides/2026/6_2_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-27-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (May 27, 2026) Rendering:",
+    "text": "&  Session Info (May 27, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/6_2_26/index.html#accoridian-content",
+    "href": "slides/2026/6_2_26/index.html#accoridian-content",
+    "title": "R is for Authoring!!",
+    "section": "Accoridian Content",
+    "text": "Accoridian Content"
+  },
+  {
+    "objectID": "slides/2026/6_2_26/index.html#open-office-hours-may-28-2026",
+    "href": "slides/2026/6_2_26/index.html#open-office-hours-may-28-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (May 28, 2026)",
+    "text": "Open Office Hours (May 28, 2026)\n\n\n\nRecap session #131\nToday’s topic(s):\n\nAccordion folding\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/6_2_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-28-2026-rendering",
+    "href": "slides/2026/6_2_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-28-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (May 28, 2026) Rendering:",
+    "text": "&  Session Info (May 28, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/6_2_26/index.html#accoridion-folding",
+    "href": "slides/2026/6_2_26/index.html#accoridion-folding",
+    "title": "R is for Authoring!!",
+    "section": "Accoridion folding",
+    "text": "Accoridion folding\n\n\nSame concept ascode–folding:\n\n\nShow the code\n# assign values\nx &lt;- 10.5\ny &lt;- 55\n\n# manipulate values\nz &lt;- x + y\n\n# show the value \nz\n\n\n[1] 65.5\n\n\n\n\n\n\n\n\n\nClick here to view contents\n\n\n\n\n\n\nThis accordion only contains text, BUT…\n\n\n\n\n\n\n\n\n\n\nNow that you know the drill…\n\n\n\n\n\n\n…how ’bout some visuals?"
+  },
+  {
+    "objectID": "slides/2026/6_2_26/index.html#open-office-hours-may-29-2026",
+    "href": "slides/2026/6_2_26/index.html#open-office-hours-may-29-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (May 29, 2026)",
+    "text": "Open Office Hours (May 29, 2026)\n\n\n\nRecap session #131\nToday’s topic(s):\n\nAccordion folding\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/6_2_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-29-2026-rendering",
+    "href": "slides/2026/6_2_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-29-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (May 29, 2026) Rendering:",
+    "text": "&  Session Info (May 29, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/6_2_26/index.html#open-office-hours-may-30-2026",
+    "href": "slides/2026/6_2_26/index.html#open-office-hours-may-30-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (May 30, 2026)",
+    "text": "Open Office Hours (May 30, 2026)\n\n\n\nRecap session #131\nToday’s topic(s):\n\nAccordion folding\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/6_2_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-30-2026-rendering",
+    "href": "slides/2026/6_2_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-may-30-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (May 30, 2026) Rendering:",
+    "text": "&  Session Info (May 30, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
   }
 ]
