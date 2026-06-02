@@ -2770,5 +2770,12 @@
     "title": "R is for Authoring!!",
     "section": " &  Session Info (June 02, 2026) Rendering:",
     "text": "&  Session Info (June 02, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/6_2_26/index.html#accordion-folding",
+    "href": "slides/2026/6_2_26/index.html#accordion-folding",
+    "title": "R is for Authoring!!",
+    "section": "Accordion folding",
+    "text": "Accordion folding\n\n\nSame concept ascode–folding:1\n\n\nShow the code\n# assign values\nx &lt;- 10.5\ny &lt;- 55\n\nz &lt;- x + y\n\n# show the value \nz\n\n\n[1] 65.5\n\n\n\n\n\n\n\n\n\nClick here to view contents\n\n\n\n\n\n\nThis accordion only contains text, BUT…\n\n\n\n\n\n\n\n\n\n\nNow that you know the drill…\n\n\n\n\n\n\n…how ’bout some visuals? \n\n\n\n\n\n\n\n…also callout blocks"
   }
 ]

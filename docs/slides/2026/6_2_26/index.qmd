@@ -196,7 +196,7 @@ Published to [Posit Connect Cloud](https://jtkulas-kittyband.share.connect.posit
 
 ![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHE3bzB5ajFzM3pubWZkYmVsYnluYm4wbW1neGFpeWk2bWhlcTlseCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cCbhtlc1p3UYlldT6t/giphy.gif)
 
-## [[Accoridion folding]{.frijole}](https://github.com/royfrancis/quarto-accordion)
+## [[Accordion folding]{.frijole}](https://github.com/royfrancis/quarto-accordion)
 
 ::: {.columns}
 
