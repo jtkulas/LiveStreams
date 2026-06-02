@@ -202,7 +202,7 @@ Published to [Posit Connect Cloud](https://jtkulas-kittyband.share.connect.posit
 
 ::: {.column width="40%"}
 
-Same concept as<br>[code--folding](https://quarto.org/docs/output-formats/html-code.html#folding-code):
+Same concept as<br>[code--folding](https://quarto.org/docs/output-formats/html-code.html#folding-code):^[...also [callout blocks](https://quarto.org/docs/authoring/callouts.html#collapse)]
 
 ```{r}
 #| eval: true
@@ -213,7 +213,6 @@ Same concept as<br>[code--folding](https://quarto.org/docs/output-formats/html-c
 x <- 10.5
 y <- 55
 
-# manipulate values
 z <- x + y
 
 # show the value 
