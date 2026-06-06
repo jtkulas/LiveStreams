@@ -1,0 +1,188 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: "OOH Session #133...<br>[Code Appendices]{.glitch  style='font-size:2em;'}"
+title-slide-attributes: 
+  data-background-image: https://store.hp.com/app/assets/images/uploads/prod/level-up-your-hacker-lingo-hero1540855008473.jpg 
+  data-background-opacity: ".6"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/3840px-R_logo.svg.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {.columns}
+::: {.column width="55%"}
++ Recap session #132
++ Today's topic(s):
+    + [[Code Appendices]{.glitch .bigger}](https://github.com/cl-roberts/code-appendix)
++ Shared problem-solving
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+::: {.column width="45%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+:::
+
+:::
+
+::: {.absolute style="top: 170px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/6_2_26">
+  <img src="/img/title132.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#132: 
+
+![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
+
+![](https://cdn.creazilla.com/cliparts/7754652/accordion-clipart-xl.png){.absolute top="290" right="112" height="180"}
+
+## {{< iconify noto:accordion >}}[[Accordion folding]{.frijole}](https://github.com/royfrancis/quarto-accordion){{< iconify fluent-emoji-flat:accordion >}}
+
+::: {.panel-tabset}
+
+### Accessing {{< iconify streamline-emojis:locked-with-key >}}
+
+::: {.columns}
+
+::: {.column width="65%"}
+
+<https://github.com/royfrancis/quarto-accordion>
+
+```{r}
+quarto add royfrancis/quarto-accordion
+```
+:::
+
+::: {.column width="35%"}
+:::
+
+:::
+
+### Implementing {{< iconify line-md:uploading-loop >}}
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+#### YAML
+
+:::
+
+::: {.column width="50%"}
+
+#### in--line
+
+
+:::
+
+:::
+
+### Tweaking {{< iconify vscode-icons:folder-type-tools >}}
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+:::
+
+::: {.column width="40%"}
+
+:::
+
+:::
+
+:::
+
+# Today...
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzMyYXExOTYzZGM3NWIzdGp1NDFzbGVjbWxzNjdwdXBuNmY3cmc3ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pbIavlMZE7TkcVriMM/giphy.gif)
+
+## [[Code Appendices]{.glitch .bigger}](https://github.com/cl-roberts/code-appendix)
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+Same concept as<br>[code--folding](https://quarto.org/docs/output-formats/html-code.html#folding-code):^[...also [callout blocks](https://quarto.org/docs/authoring/callouts.html#collapse)]
+
+```{r}
+#| eval: true
+#| code-fold: true
+#| code-summary: "Show the code"
+
+# assign values
+x <- 10.5
+y <- 55
+
+z <- x + y
+
+# show the value 
+z
+
+```
+
+:::
+
+::: {.column width="60%" .smaller}
+
+<br>
+
+{{< accordion header="Click here to view contents" body="This accordion only contains text, BUT..." >}}
+
+{{< accordion header="Now that you know the drill..." body="...how 'bout some visuals? ![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHNvZmZoemNtcmo0MjF4cWhjNmx3dWdzZ3VqajBkaXZzcDlmN3BpMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/F3IsU82rkfVpWvIAvG/giphy.gif)" >}}
+:::
+
+:::
+
+## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+
+::: {.columns}
+
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| eval: true
+sessionInfo()
+```
+:::
+
+::: {.column width="20%"}
+
+Quarto version `r quarto::quarto_version()`  
+
+:::
+
+:::
+

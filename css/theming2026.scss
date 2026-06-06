@@ -32,12 +32,13 @@
 @import url('https://fonts.googleapis.com/css?family=Anton');
 @import url('https://fonts.googleapis.com/css?family=Fira Code');
 @import url('https://fonts.googleapis.com/css?family=Frijole');
+@import url('https://fonts.googleapis.com/css?family=Rubik Glitch');
 
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: left;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
-  height: 120px !important;
+  height: 80px !important;
 }
 
 /* adding background to inline code elements */
@@ -504,4 +505,10 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-family: "Frijole";
   font-weight: normal !important;
   color: #fdf260;
+}
+
+.glitch{
+  font-family: "Rubik Glitch";
+  font-weight: normal !important;
+  color: #21de1c;
 }
