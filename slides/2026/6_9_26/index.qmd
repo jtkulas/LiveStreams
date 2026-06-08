@@ -76,16 +76,25 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ::: {.columns}
 
-::: {.column width="65%"}
+::: {.column width="60%"}
 
-<https://github.com/royfrancis/quarto-accordion>
+1. Inspect [{{< iconify octicon:lockup-github-24 style="color:#ffffff;" >}} repository](https://github.com/royfrancis/quarto-accordion)
+
+2. ([within project directory](https://martinctc.github.io/blog/rstudio-projects-and-working-directories-a-beginner%27s-guide/)), type into {{< iconify devicon:rstudio >}} terminal:
 
 ```{r}
 quarto add royfrancis/quarto-accordion
 ```
+
+:::
+
+:::{.column width="5%"}
 :::
 
 ::: {.column width="35%"}
+
+{{< accordion header="Wanna see something?" body="![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3BnZ2poa3Q5Nm9odjMzcGk4OWQ2emdka2E3eTRzcmx2dDVid21vMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lOzTIL8lfZ15fy/giphy.gif)" >}}
+
 :::
 
 :::
@@ -96,32 +105,96 @@ quarto add royfrancis/quarto-accordion
 
 ::: {.column width="50%"}
 
-#### YAML
+#### [YAML:](https://github.com/royfrancis/quarto-accordion#yaml-metadata)
+
+````{r}
+---
+title: Accordion
+accordion:
+  - accordion-1:          #<1>
+    - header: Click here to view contents
+      body: This is the body content
+      collapsed: true
+      id: custom-item-1
+---
+
+{{< accordion accordion-1 >}}
+````
+1. Use this `label` (here "accordion-1") to execute content within body of document (e.g., on line #11)
 
 :::
 
 ::: {.column width="50%"}
 
-#### in--line
+#### [in--line:](https://github.com/royfrancis/quarto-accordion#inline-content)
 
+````{r}
+{{< accordion 
+  header="Click here to view contents" 
+  body="This is the body content" 
+  collapsed=true 
+  id="custom-item-1" >}}                #<1>
+````
+1. id's are auto--generated but can also be manually specified if desired. Seemingly most useful for direct links
 
+{{< accordion header="Click here to view contents" body="This is the body content" collapsed=true id="custom-item-1" >}} 
+  
 :::
 
 :::
 
 ### Tweaking {{< iconify vscode-icons:folder-type-tools >}}
 
+Help pages have a section on [css styling](https://www.royfrancis.com/quarto-accordion/usage.html#css-styling) -- AI can help craft styling specifications
+
 ::: {.columns}
 
-::: {.column width="60%"}
+::: {.column width="65%"}
+
+```{css}
+
+/* Blue accordion styling */
+.quarto-accordion .accordion-item {
+  background-color: white;          
+  border-color: black;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.quarto-accordion .accordion-button {
+  background-color: #0a58ca;
+  color: white;
+  font-weight: 500;
+}
+
+.quarto-accordion .accordion-button:not(.collapsed) {
+  background-color: #ade8f4;           
+  color: #000000;
+  box-shadow: none;
+}
+
+.quarto-accordion .accordion-body {
+  background-color: #f8f9fa;          
+  color: #212529;
+}
+
+
+
+
+//
+
+```
 
 :::
 
-::: {.column width="40%"}
+::: {.column width="35%"}
 
 :::
 
 :::
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjQwM3o1czJzejR3dDV2d25nY2ZqbmZ2dnNxeWF4Njd3dDBpZ2wzYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/875ca3hG7COps5BsN1/giphy.gif){.absolute right="-120" bottom="30"}
 
 :::
 
@@ -131,40 +204,29 @@ quarto add royfrancis/quarto-accordion
 
 ## [[Code Appendices]{.glitch .bigger}](https://github.com/cl-roberts/code-appendix)
 
+Built--in option with RMarkdown, extension for Quarto
+
 ::: {.columns}
 
-::: {.column width="40%"}
+::: {.column width="50%"}
 
-Same concept as<br>[code--folding](https://quarto.org/docs/output-formats/html-code.html#folding-code):^[...also [callout blocks](https://quarto.org/docs/authoring/callouts.html#collapse)]
-
-```{r}
-#| eval: true
-#| code-fold: true
-#| code-summary: "Show the code"
-
-# assign values
-x <- 10.5
-y <- 55
-
-z <- x + y
-
-# show the value 
-z
-
-```
+### [Quarto {{< iconify material-icon-theme:quarto >}}]((https://github.com/cl-roberts/code-appendix)) 
 
 :::
 
-::: {.column width="60%" .smaller}
+::: {.column width="50%"}
 
-<br>
+### [{{< iconify file-icons:rmarkdown style="color:#82b1ff;" >}} Markdown](https://pkg.yihui.org/rmarkdown-cookbook/code-appendix) 
 
-{{< accordion header="Click here to view contents" body="This accordion only contains text, BUT..." >}}
-
-{{< accordion header="Now that you know the drill..." body="...how 'bout some visuals? ![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHNvZmZoemNtcmo0MjF4cWhjNmx3dWdzZ3VqajBkaXZzcDlmN3BpMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/F3IsU82rkfVpWvIAvG/giphy.gif)" >}}
 :::
 
 :::
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHM1MWs4NjN0a3NxczIxem1mNWYzdm8waDM0MXo4ODcxeHRjeHRubyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jfTDrYfZvlZja/giphy.gif){.absolute bottom="40" left="250"}
+
+![](https://static.cambridge.org/content/id/urn%3Acambridge.org%3Aid%3Abook%3A9781139167246/resource/name/firstPage-9781139167246apx3_p236-252_CBO.jpg){.absolute right="-50" bottom="20" height="400"}
+
+![](https://i.sstatic.net/NB1N1.png){.absolute left="-70" bottom="20" height="400"}
 
 ## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 
