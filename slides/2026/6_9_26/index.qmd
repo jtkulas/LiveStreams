@@ -210,7 +210,7 @@ Built--in option with RMarkdown, extension for Quarto
 
 ::: {.column width="50%"}
 
-### [Quarto {{< iconify material-icon-theme:quarto >}}]((https://github.com/cl-roberts/code-appendix)) 
+### [Quarto {{< iconify material-icon-theme:quarto >}}](https://github.com/cl-roberts/code-appendix) 
 
 :::
 
