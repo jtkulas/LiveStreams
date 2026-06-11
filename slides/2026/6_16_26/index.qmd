@@ -1,0 +1,158 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: "OOH Session #134...<br>[Custom<br>Callouts!!]{.calling  style='font-size:2em;'}"
+title-slide-attributes: 
+  data-background-image: ../../../img/bubble.png
+  data-background-opacity: ".7"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://cdn.creazilla.com/cliparts/1996313/cheer-megaphone-clipart-md.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+custom-callout:
+  todo:
+    icon-symbol: "💯"
+    color: "white"
+  thumbs-up:
+    icon-symbol: "fa-jedi"
+    color: "#008000"
+  eighteen: 
+    title: "Adults Only!"
+    icon-symbol: "🔞"
+    color: "red"
+filters: 
+  - reveal-header
+  - custom-callout
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {.columns}
+::: {.column width="55%"}
++ Recap session #133
++ Today's topic(s):
+    + [[Custom Callouts!!]{.calling .bigger}](https://github.com/coatless-quarto/custom-callout)
++ Shared problem-solving
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+::: {.column width="45%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+:::
+
+:::
+
+::: {.absolute style="top: 170px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/6_9_26">
+  <img src="/img/title133.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#133: 
+
+![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/3840px-R_logo.svg.png){.absolute top="305" right="118" height="150"}
+
+## [[Code Appendices]{.glitch .bigger}](https://github.com/cl-roberts/code-appendix)
+
+Built--in option with RMarkdown, extension for Quarto
+
+::: {.panel-tabset}
+
+### Quarto {{< iconify material-icon-theme:quarto >}}
+
+<https://github.com/cl-roberts/code-appendix>
+
+### {{< iconify file-icons:rmarkdown style="color:#82b1ff;" >}} Markdown
+
+<https://pkg.yihui.org/rmarkdown-cookbook/code-appendix>
+
+:::
+
+# Today...
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnlibzF6bXNxMHJxcmZtY3dvbGp3YWl0b3FuOGZjYjR2Z3BsaGVnbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YF6ruFN9tmEElUAB6q/giphy.gif)
+
+## [[Custom Callouts!!]{.calling .bigger}](https://github.com/coatless-quarto/custom-callout)
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+::: todo
+
+::: {.smaller}
+
++ dis...
++ dat...
++ ...& de udder ting
+
+:::
+
+:::
+
+::: {.thumbs-up title="Use the force, Wicket"}
+![](https://www.lucasfilm.com/app/uploads/star-wars-ewoks-standard-page-marquee-02.jpg)
+:::
+
+:::
+
+::: {.column width="50%"}
+
+::: eighteen
+Noone under 18 allowed!!
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDRpZjhzNDE5cDdwdmNrNXQwd2dpYW1oa3g2djIzcHYzejJoczBidCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fT5iGWCHaBaWQ/giphy.gif)
+:::
+
+:::
+
+:::
+
+## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+
+::: {.columns}
+
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| eval: true
+sessionInfo()
+```
+:::
+
+::: {.column width="20%"}
+
+Quarto version `r quarto::quarto_version()`  
+
+:::
+
+:::
+

@@ -34,7 +34,7 @@
 @import url('https://fonts.googleapis.com/css?family=Frijole');
 @import url('https://fonts.googleapis.com/css?family=Rubik Glitch');
 
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
@@ -511,4 +511,10 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-family: "Rubik Glitch";
   font-weight: normal !important;
   color: #21de1c;
+}
+
+.calling{
+  font-family: "Bangers";
+  font-weight: normal !important;
+  color: #fd3d85;
 }
