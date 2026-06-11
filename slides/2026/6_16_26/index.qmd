@@ -82,39 +82,99 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ## [[Code Appendices]{.glitch .bigger}](https://github.com/cl-roberts/code-appendix)
 
-Built--in option with RMarkdown, extension for Quarto
+`knitr` package [function](https://pkg.yihui.org/rmarkdown-cookbook/code-appendix) and [Quarto extension(s)](https://github.com/coatless-quarto/regurgitate)
 
 ::: {.panel-tabset}
 
 ### Quarto {{< iconify material-icon-theme:quarto >}}
 
-<https://github.com/cl-roberts/code-appendix>
+::: {.columns}
+
+::: {.column width="70%"}
+
+1. [install extension]() (from terminal):
+
+```{r}
+quarto add cl-roberts/code-appendix
+```
+
+2. activate capability within .qmd YAML:
+
+```{r}
+---
+filters:
+    - code-appendix
+---
+```
+
+:::
+
+::: {.column width="30%"}
+
+::: {.callout-note}
+
+Set `echo: true` on chunks you want to be displayed within the Appendix. [`regurgitate` is another option](https://github.com/coatless-quarto/regurgitate) (we didn't test)
+
+:::
+
+:::
+
+:::
 
 ### {{< iconify file-icons:rmarkdown style="color:#82b1ff;" >}} Markdown
 
-<https://pkg.yihui.org/rmarkdown-cookbook/code-appendix>
+::: {.columns}
+
+::: {.column width="65%"}
+
+````{r}
+# Appendix: All code for this report
+
+```{r ref.label=knitr::all_labels(), echo=TRUE, eval=FALSE}
+## Can be empty -- effect is located within chunk specification
+```
+````
+
+::: {.smaller}
+
++ Can also use [within Quarto documents](https://github.com/orgs/quarto-dev/discussions/6650#discussioncomment-6861503)
++ Appendix heading **NOT** auto--generated
 
 :::
+
+:::
+
+::: {.column width="35%"}
+
+::: {.callout-note}
+
+Operates independently from individual code chunks (if you don't want duplicate echoing, set individual code chunk options to `echo: false`)
+
+:::
+
+:::
+
+:::
+
+:::
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHg4MmIwZ2VnNTRhMTZvdnA0eHc3aHAwY2JoaWNkdWp5NWc2bXlyOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/H7f4BTCtRNnYlnANyj/giphy.gif){.absolute right="-140" top="-30" height="300"}
 
 # Today...
 
 ![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnlibzF6bXNxMHJxcmZtY3dvbGp3YWl0b3FuOGZjYjR2Z3BsaGVnbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YF6ruFN9tmEElUAB6q/giphy.gif)
 
-## [[Custom Callouts!!]{.calling .bigger}](https://github.com/coatless-quarto/custom-callout)
+## [[Custom Callouts!!]{.calling .bigger}](https://github.com/coatless-quarto/custom-callout)^[deeper customization [also possible](https://jtkulas.github.io/LiveStreams/slides/bookdown/callouts/#/customized-callouts) -- more flexible but much less convenient]
 
-::: {.columns}
+::: {.columns .Smaller}
 
 ::: {.column width="50%"}
 
 ::: todo
 
-::: {.smaller}
-
 + dis...
 + dat...
 + ...& de udder ting
-
-:::
 
 :::
 

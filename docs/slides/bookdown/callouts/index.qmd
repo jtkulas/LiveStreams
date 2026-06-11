@@ -61,7 +61,6 @@ library(fontawesome)
 ::: {.column width="50%"}
 
 ```{css}
-
 @import url('https://fonts.googleapis.com/css?family=Dancing Script');
 
 .trynew {                             /*<1>*/
