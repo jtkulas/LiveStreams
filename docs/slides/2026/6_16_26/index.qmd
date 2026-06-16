@@ -196,6 +196,9 @@ Noone under 18 allowed!!
 
 :::
 
+## [BREAKING NEWS!!!](https://github.com/jtkulas/callout-png) {background-image="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWV2OG5zeDZ2NjVjZjc1eWh2NW1ibGRpbGt1bWswbHpjcWFpaWltZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rjZom7deOq2grVGXm4/giphy.gif"}
+
+
 ## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 
 ::: {.columns}
