@@ -147,7 +147,7 @@ extension version of [older spec](https://jtkulas.github.io/LiveStreams/slides/b
 
 :::
 
-### Comparison
+### Comparison {{< iconify noto:thinking-face >}}
 
 ::: {.columns .Smaller}
 
@@ -158,7 +158,7 @@ extension version of [older spec](https://jtkulas.github.io/LiveStreams/slides/b
 + mimics native Quarto [appearance(s)](https://quarto.org/docs/authoring/callouts.html#appearance)
   + color on border (banner washed)
 + collapsable
-+ only `format: html` & `format: revealjs`
++ &#x2705; html &#x2705; revealjs <br> &#x274C; typst &#x274C; pdf
 
 :::
 
@@ -167,9 +167,9 @@ extension version of [older spec](https://jtkulas.github.io/LiveStreams/slides/b
 ### `callout-png`
 
 + all image types
-  + including icons
+  + including icons\*
 + fixed image/title locations
-+ `format: html`, `format: revealjs`, `format: typst`, `format: pdf`
++ &#x2705; html &#x2705; revealjs <br> &#x2705; typst &#x2705; pdf
 
 :::
 
