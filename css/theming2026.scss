@@ -33,12 +33,13 @@
 @import url('https://fonts.googleapis.com/css?family=Fira Code');
 @import url('https://fonts.googleapis.com/css?family=Frijole');
 @import url('https://fonts.googleapis.com/css?family=Rubik Glitch');
+@import url('https://fonts.googleapis.com/css?family=DM Serif Display');
 
 $presentation-title-slide-text-align: right;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
-  height: 80px !important;
+  height: 120px !important;
 }
 
 /* adding background to inline code elements */
@@ -111,6 +112,12 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
     0px 0px 0px #222 !important;
 }
 
+.shadowmax {
+  text-shadow: 
+    12px 12px 0px #222,
+    0px 0px 0px #222 !important;
+}
+
 .shadowlight {
   text-shadow: 
     4px 4px 4px white,
@@ -121,6 +128,15 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   text-shadow: 
     0px 0px 0px #222,
     -0px -0px 0px #222 !important;
+}
+
+.nofunny {
+  font-family: 'Roboto' !important;
+  font-size: .8em !important;
+  color: black !important;
+  font-weight: normal !important;
+  text-shadow:
+   0px 0px 0px !important;  
 }
 
 .foreground-image {
@@ -518,3 +534,21 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-weight: normal !important;
   color: #fd3d85;
 }
+
+.bravo{
+  font-family: "Bangers";
+  font-weight: normal !important;
+  color: #ffce1b;
+}
+
+
+.reveal .callout-png-header,
+.reveal .callout-png-header h3 {
+  font-family: 'DM Serif Display' !important;
+  font-size: .9em !important;
+  color: #222 !important;
+  font-weight: normal !important;
+  text-shadow:
+   0px 0px 0px !important;
+}
+

@@ -1,0 +1,235 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: "OOH Session #135...<br>[FONT AWESOME<br>icons!!!]{.bravo  style='font-size:2em;' .shadowmax}&nbsp;[{{< fa thumbs-up >}}]{.Bigger}"
+title-slide-attributes: 
+  data-background-image: ../../../img/awesome.png
+#  data-background-opacity: ".9"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://cdn.freebiesupply.com/logos/thumbs/2x/johnny-bravo-1-logo.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+custom-callout:
+  eighteen: 
+    title: "Adults Only!"
+    icon-symbol: "🔞"
+    color: "red"
+filters: 
+  - reveal-header
+  - custom-callout
+  - callout-png
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {.columns}
+::: {.column width="55%"}
++ Recap session #134
++ Today's topic(s):
+    + [[FONT AWESOME<br>icons!!]{.bravo style='font-size:1.5em;'}&nbsp;[{{< fa champagne-glasses >}}]{.bigger}](https://quarto-ext.github.io/fontawesome/)
++ Shared problem-solving
+
+
+:::
+
+::: {.column width="45%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 170px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/6_16_26">
+  <img src="/img/title134.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#134: 
+
+![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
+
+![](https://cdn.creazilla.com/cliparts/1996313/cheer-megaphone-clipart-md.png){.absolute top="305" right="118" height="150"}
+
+## [[Custom Callouts!!]{.calling .bigger}](https://github.com/coatless-quarto/custom-callout)
+
+::: {.panel-tabset}
+
+### icons {{< iconify line-md:iconify2 >}}
+
+::: {.columns}
+
+::: {.column width="70%"}
+
+[`custom-callout` ({{< iconify octicon:lockup-github-16 style="color:#ffffff;" >}}) ](https://github.com/coatless-quarto/custom-callout):  
+
+```{bash}
+---
+custom-callout:
+  eighteen: 
+    title: "Adults Only!"
+    icon-symbol: "🔞"
+    color: "red"
+---
+
+::: {.eighteen}
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe36NJlNE_FLPrdqKEcn-n6w1z1xCWSnDkKi5c1cByBK403DmVC7IeFew&s=10)
+:::
+
+```
+
+:::
+
+::: {.column width="30%"}
+
+::: {.eighteen}
+![](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe36NJlNE_FLPrdqKEcn-n6w1z1xCWSnDkKi5c1cByBK403DmVC7IeFew&s=10)
+:::
+
+:::
+
+:::
+
+### images {{< iconify twemoji:framed-picture >}}
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+[`callout-png` ({{< iconify octicon:lockup-github-16 style="color:#ffffff;" >}}) ](https://github.com/jtkulas/callout-png): 
+
+```{bash}
+
+::: {.callout-png title="Adults Only!"image="https://png.pngtree.com/png-vector/20220723/ourmid/pngtree-18-icon-png-png-image_6034772.png" color="#a02f2c" image-height="1.2em" header-vpad=".5em"}  
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExajdheGkxcWYzOXZrNGhzbmxqczRkaWxqa3l0YTFrY2RwcDZxeDloOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Gns1lc03zB3sw8oXvD/giphy.gif)
+
+:::
+  
+```
+
+extension version of [older spec](https://jtkulas.github.io/LiveStreams/slides/bookdown/callouts/#/customized-callouts)
+
+:::
+
+::: {.column width="40%"}
+
+::: {.callout-png title="Adults Only!"image="https://png.pngtree.com/png-vector/20220723/ourmid/pngtree-18-icon-png-png-image_6034772.png" color="#a02f2c" image-height="1.2em" header-vpad=".5em"}  
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExajdheGkxcWYzOXZrNGhzbmxqczRkaWxqa3l0YTFrY2RwcDZxeDloOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Gns1lc03zB3sw8oXvD/giphy.gif)
+
+:::
+
+:::
+
+:::
+
+### Comparison
+
+::: {.columns .Smaller}
+
+::: {.column width="50%"}
+
+### `custom-callout` 
+
++ mimics native Quarto [appearance(s)](https://quarto.org/docs/authoring/callouts.html#appearance)
+  + color on border (banner washed)
++ collapsable
++ only `format: html` & `format: revealjs`
+
+:::
+
+::: {.column width="50%"}
+
+### `callout-png`
+
++ all image types
+  + including icons
++ fixed image/title locations
++ `format: html`, `format: revealjs`, `format: typst`, `format: pdf`
+
+:::
+
+
+
+:::
+
+:::
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNDZ6MGU1dWIxYTh0OGd4N2F6OGMweTQ1OHA1bnpoY2xtZjFxa2JxYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Vl5WoEWS5G21oFFdo2/giphy.gif){.absolute right="-140" top="-40" height="270"}
+
+# Today...
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnZsdzhydnlkeThpNWhzaHkzeTZ3eG14bnVmdGRkNDVnbjRmZXRzeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/WyyhtSnaQl8Eo/giphy.gif)
+
+## [[[FONT AWESOME icons!!]{.bravo}&nbsp;{{< fa heart >}}]{.bigger}](https://quarto-ext.github.io/fontawesome/)
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+[[{{< iconify material-icon-theme:quarto >}} Extension:](https://quarto-ext.github.io/fontawesome/)]{.Bigger}
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHVkbmp2d2RpNGtqeG5mNXh5bTNxeDRocjdjbG92aDg0ajJmOTQ5cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mvW2WgHHi6vOo/giphy.gif)
+
+:::
+
+::: {.column width="50%"}
+
+[[{{< iconify devicon:r >}} Package:](https://cran.r-project.org/web/packages/fontawesome/fontawesome.pdf)]{.Bigger}
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa("r-project", fill="#FFFFFF", height="5em")`
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`r fontawesome::fa("yin-yang", fill="#000000", height="5em")` 
+
+:::
+
+::: {.column width="33%"}
+
+:::
+
+:::
+
+## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+
+::: {.columns}
+
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| eval: true
+sessionInfo()
+```
+:::
+
+::: {.column width="20%"}
+
+Quarto version `r quarto::quarto_version()`  
+
+:::
+
+:::
+
