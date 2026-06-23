@@ -149,26 +149,27 @@ extension version of [older spec](https://jtkulas.github.io/LiveStreams/slides/b
 
 ### Comparison {{< iconify noto:thinking-face >}}
 
-::: {.columns .Smaller}
+::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="55%" .Smaller}
 
 ### `custom-callout` 
 
++ icons, unicode & strings
 + mimics native Quarto [appearance(s)](https://quarto.org/docs/authoring/callouts.html#appearance)
   + color on border (banner washed)
-+ collapsable
+  + collapsable
 + &#x2705; html &#x2705; revealjs <br> &#x274C; typst &#x274C; pdf
 
 :::
 
-::: {.column width="50%"}
+::: {.column width="45%" .smaller}
 
 ### `callout-png`
 
 + all image types
   + including icons\*
-+ fixed image/title locations
++ relative image/title positioning
 + &#x2705; html &#x2705; revealjs <br> &#x2705; typst &#x2705; pdf
 
 :::
