@@ -3106,5 +3106,96 @@
     "title": "R is for Authoring!!",
     "section": " &  Session Info (June 23, 2026) Rendering:",
     "text": "&  Session Info (June 23, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       fontawesome_0.5.3 evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/6_30_26/index.html#open-office-hours-june-23-2026",
+    "href": "slides/2026/6_30_26/index.html#open-office-hours-june-23-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (June 23, 2026)",
+    "text": "Open Office Hours (June 23, 2026)\n\n\n\nRecap session #135\nToday’s topic(s):\n\nPowerPoint!!\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/6_30_26/index.html#font-awesome-icons-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206865617274203e7d7d",
+    "href": "slides/2026/6_30_26/index.html#font-awesome-icons-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c206661206865617274203e7d7d",
+    "title": "R is for Authoring!!",
+    "section": "FONT AWESOME icons!! ",
+    "text": "FONT AWESOME icons!! \n\nRepository Package Extension\n\n\n\n\n\n\n\npopular library for icons (used by developers & designers)\nprovides icons for over 200 million sites\nsimple integration\nregularly updated\n\n\n\n  \n\n\n\n\n\n\nusing ? ✅\nusing ? ❌\n\n\nlibrary(fontawesome)\n\n1`r fa(\"r-project\")`\n`r fa(\"r-project\", fill=\"#bada55\")`\n`r fa(\"r-project\", fill=\"#000000\", height=\"5em\")`\n`r fa(\"r-project\", fill=\"#4287f5\", title=\"Boo!!\")`\n\n\n1\n\nactually prefer to structure as fontawesome::fa() (specify library within inline code – fa is/was shared with other packages used by Psychologists)\n\n\n\n\n\n   Boo!!\n\n\n\n\n\nAvailable on \n\nactivate from terminal (within project directory)\n\n\n{{&lt; fa brands r-project &gt;}} \n[{{&lt; fa brands r-project &gt;}}]{style='color:#bada55;'}  \n[{{&lt; fa brands r-project size=5x &gt;}}]{style='color:#000000;'} \n[{{&lt; fa brands r-project title=\"Boo!!\" &gt;}}]{style='color:#4287f5;'}"
+  },
+  {
+    "objectID": "slides/2026/6_30_26/index.html#powerpoint",
+    "href": "slides/2026/6_30_26/index.html#powerpoint",
+    "title": "R is for Authoring!!",
+    "section": "PowerPoint!!",
+    "text": "PowerPoint!!\n\n\n Extension:\n\n\n Package:"
+  },
+  {
+    "objectID": "slides/2026/6_30_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-june-23-2026-rendering",
+    "href": "slides/2026/6_30_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-june-23-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (June 23, 2026) Rendering:",
+    "text": "&  Session Info (June 23, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       fontawesome_0.5.3 evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/6_30_26/index.html#open-office-hours-june-24-2026",
+    "href": "slides/2026/6_30_26/index.html#open-office-hours-june-24-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (June 24, 2026)",
+    "text": "Open Office Hours (June 24, 2026)\n\n\n\nRecap session #135\nToday’s topic(s):\n\nPowerPoint!!\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/6_30_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-june-24-2026-rendering",
+    "href": "slides/2026/6_30_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-june-24-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (June 24, 2026) Rendering:",
+    "text": "&  Session Info (June 24, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       fontawesome_0.5.3 evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/6_30_26/index.html#open-office-hours-june-25-2026",
+    "href": "slides/2026/6_30_26/index.html#open-office-hours-june-25-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (June 25, 2026)",
+    "text": "Open Office Hours (June 25, 2026)\n\n\n\nRecap session #135\nToday’s topic(s):\n\nPowerPoint!! \n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/6_30_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-june-25-2026-rendering",
+    "href": "slides/2026/6_30_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-june-25-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (June 25, 2026) Rendering:",
+    "text": "&  Session Info (June 25, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       fontawesome_0.5.3 evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/6_30_26/index.html#powerpoint-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679207673636f64652d69636f6e733a66696c652d747970652d706f776572706f696e7432203e7d7d",
+    "href": "slides/2026/6_30_26/index.html#powerpoint-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679207673636f64652d69636f6e733a66696c652d747970652d706f776572706f696e7432203e7d7d",
+    "title": "R is for Authoring!!",
+    "section": "PowerPoint!! ",
+    "text": "PowerPoint!!"
+  },
+  {
+    "objectID": "slides/2026/6_30_26/index.html#open-office-hours-june-26-2026",
+    "href": "slides/2026/6_30_26/index.html#open-office-hours-june-26-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (June 26, 2026)",
+    "text": "Open Office Hours (June 26, 2026)\n\n\n\nRecap session #135\nToday’s topic(s):\n\nPowerPoint!! \n\nShared problem-solving\n\n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/6_30_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-june-26-2026-rendering",
+    "href": "slides/2026/6_30_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-june-26-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (June 26, 2026) Rendering:",
+    "text": "&  Session Info (June 26, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       fontawesome_0.5.3 evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/6_30_26/index.html#open-office-hours-june-28-2026",
+    "href": "slides/2026/6_30_26/index.html#open-office-hours-june-28-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (June 28, 2026)",
+    "text": "Open Office Hours (June 28, 2026)\n\n\n\nRecap session #135\nToday’s topic(s):\n\nPowerPoint!! \n\nShared problem-solving\n\n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/6_30_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-june-28-2026-rendering",
+    "href": "slides/2026/6_30_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-june-28-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (June 28, 2026) Rendering:",
+    "text": "&  Session Info (June 28, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       fontawesome_0.5.3 evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
   }
 ]

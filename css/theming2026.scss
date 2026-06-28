@@ -34,12 +34,13 @@
 @import url('https://fonts.googleapis.com/css?family=Frijole');
 @import url('https://fonts.googleapis.com/css?family=Rubik Glitch');
 @import url('https://fonts.googleapis.com/css?family=DM Serif Display');
+@import url('https://fonts.googleapis.com/css?family=Fjalla One');
 
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: left;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
-  height: 120px !important;
+  height: 90px !important;
 }
 
 /* adding background to inline code elements */
@@ -209,6 +210,19 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
 .indigo{
   color: #4b0082;
 }
+
+// forcing non-mainfont for callout-png banner
+
+.reveal .callout-png-header,
+.reveal .callout-png-header h3 {
+  font-family: 'DM Serif Display' !important;
+  font-size: .9em !important;
+  color: #222 !important;
+  font-weight: normal !important;
+  text-shadow:
+   0px 0px 0px !important;
+}
+
 
 // fonts
 
@@ -541,14 +555,9 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   color: #ffce1b;
 }
 
-
-.reveal .callout-png-header,
-.reveal .callout-png-header h3 {
-  font-family: 'DM Serif Display' !important;
-  font-size: .9em !important;
-  color: #222 !important;
+.powerpoint{
+  font-family: "Fjalla One";
   font-weight: normal !important;
-  text-shadow:
-   0px 0px 0px !important;
+  color: #d33922;
 }
 
