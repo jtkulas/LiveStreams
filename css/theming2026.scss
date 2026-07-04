@@ -35,8 +35,9 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik Glitch');
 @import url('https://fonts.googleapis.com/css?family=DM Serif Display');
 @import url('https://fonts.googleapis.com/css?family=Fjalla One');
+@import url('https://fonts.googleapis.com/css?family=Slackey');
 
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
@@ -561,3 +562,8 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   color: #d33922;
 }
 
+.msword{
+  font-family: "Slackey";
+  font-weight: normal !important;
+  color: #1447a6;
+}
