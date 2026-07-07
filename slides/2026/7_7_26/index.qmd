@@ -99,7 +99,7 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3ExcXd3cXgwMXZrd3VqZzN1NGplMDk3Z3EzeHBzZXUwN3J3ZmptbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/d5ktzgbVFftMkLaZ33/giphy.gif)
 
-## [[Word {{< iconify selfhst:microsoft-word-2013 >}}]{.msword}](https://quarto.org/docs/output-formats/ms-word.html)
+## [[Word {{< iconify selfhst:microsoft-word-2013 >}}]{.msword .Bigger}](https://quarto.org/docs/output-formats/ms-word.html)
 
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXJ1bjN1cHJ6aWdrbXhjcHJ2bnhkbWI2NDk5aWt6YTdhYzFzdjdsbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qUB8aayj9DNQI/giphy.gif){.absolute height="500" left="70"}
 
