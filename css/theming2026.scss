@@ -36,12 +36,13 @@
 @import url('https://fonts.googleapis.com/css?family=DM Serif Display');
 @import url('https://fonts.googleapis.com/css?family=Fjalla One');
 @import url('https://fonts.googleapis.com/css?family=Slackey');
+@import url('https://fonts.googleapis.com/css?family=Londrina Sketch');
 
 $presentation-title-slide-text-align: right;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
-  height: 90px !important;
+  height: 120px !important;
 }
 
 /* adding background to inline code elements */
@@ -566,4 +567,9 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-family: "Slackey";
   font-weight: normal !important;
   color: #1447a6;
+}
+
+.distill {
+  font-family: "Londrina Sketch";
+  color: #e2fae1;
 }
