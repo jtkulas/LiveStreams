@@ -76,8 +76,8 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 ### Pros {{< iconify openmoji:check-mark >}}  
 
 + Ubiquity {{< iconify noto:face-with-monocle >}}
-+ Columns, bullets, notes, code echoing
-+ Portability across rendering formats
++ Bullets, callouts, code echoing, table of contents
++ Format
 + End--user customization\*
 
 :::
@@ -85,8 +85,8 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 ::: {.column width="50%"}
 ### Cons {{< iconify streamline-ultimate-color:delete-2 >}}
 
-+ Style (strongest control with [templates](https://quarto.org/docs/presentations/powerpoint.html#powerpoint-templates))
-+ Sharability options
++ Style (strongest control with [templates](https://quarto.org/docs/output-formats/ms-word-templates.html))
++ Layout (see above)
 + No interactivity support
 + End--user customization\*
 
@@ -95,15 +95,15 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 :::
 
-![](https://i.pinimg.com/474x/15/10/be/1510be4132e3cb07108200b199983315.jpg){.absolute right="-130" top="-20" height="250"}
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnFiNmU1aDVpbWI3aWV4cGJqNXYzcGlib2x1M3BhbDRiYmRtMmo2MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/celuaOLksXkeVSF2H2/giphy.gif){.absolute right="-130" top="-20" height="250"}
 
 # Today...
 
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGMzMTdnYzh0NHhuOWZteGtwYTk0Yzl0YmNmMm83cmdjZ2FiNXphNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xThuWfythXoyPR2hi0/giphy.gif)
 
-## [[Distill]{.distill style='font-size:2.5em;'}](https://rstudio.github.io/distill/)
+## [[Distill](https://rstudio.github.io/distill/)^[originally `Radix`]]{.distill style='font-size:2.5em;'}
 
-![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWtxazk2dnp1cGxpa2ZkcGFyaXptY2E5bWVoYmxqem43czZrczdzdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fyhjTYpu3J1ny/giphy.gif){.absolute height="500" left="70"}
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWtxazk2dnp1cGxpa2ZkcGFyaXptY2E5bWVoYmxqem43czZrczdzdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fyhjTYpu3J1ny/giphy.gif)
 
 ## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 

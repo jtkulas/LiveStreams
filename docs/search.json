@@ -3343,7 +3343,7 @@
     "href": "slides/2026/7_14_26/index.html#word-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792073656c666873743a6d6963726f736f66742d776f72642d32303133203e7d7d",
     "title": "R is for Authoring!!",
     "section": "Word ",
-    "text": "Word \n\n\nPros \n\nUbiquity \nColumns, bullets, notes, code echoing\nPortability across rendering formats\nEnd–user customization*\n\n\nCons \n\nStyle (strongest control with templates)\nSharability options\nNo interactivity support\nEnd–user customization*"
+    "text": "Word \n\n\nPros \n\nUbiquity \nBullets, callouts, code echoing, table of contents\nFormat\nEnd–user customization*\n\n\nCons \n\nStyle (strongest control with templates)\nLayout (see above)\nNo interactivity support\nEnd–user customization*"
   },
   {
     "objectID": "slides/2026/7_14_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-july-08-2026-rendering",
@@ -3356,7 +3356,21 @@
     "objectID": "slides/2026/7_14_26/index.html#distill",
     "href": "slides/2026/7_14_26/index.html#distill",
     "title": "R is for Authoring!!",
-    "section": "Distill",
-    "text": "Distill"
+    "section": "Distill1",
+    "text": "Distill1\n\noriginally Radix"
+  },
+  {
+    "objectID": "slides/2026/7_14_26/index.html#open-office-hours-july-09-2026",
+    "href": "slides/2026/7_14_26/index.html#open-office-hours-july-09-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (July 09, 2026)",
+    "text": "Open Office Hours (July 09, 2026)\n\n\n\nRecap session #137\nToday’s topic(s):\n\nDistill\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/7_14_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-july-09-2026-rendering",
+    "href": "slides/2026/7_14_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-july-09-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (July 09, 2026) Rendering:",
+    "text": "&  Session Info (July 09, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
   }
 ]
