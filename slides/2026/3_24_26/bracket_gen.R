@@ -1,7 +1,7 @@
 # For the latest version of the package, updated frequently during the first
 # couple weeks of March, install directly from this GitHub repository.
 
-## mRchmadness
+## mRchmadness - filled bracket
 
 devtools::install_github("elishayer/mRchmadness", build_vignettes = TRUE, force=TRUE)
 
@@ -9,7 +9,8 @@ library(mRchmadness)
 
 draw.bracket(bracket.empty = bracket.men.2026)
 
-
+#########################################################
+######################################################### Empty Bracket Function
 library(MMBracketR)
 plotTourn(games = 64, playin = TRUE)
 
@@ -40,3 +41,17 @@ plotTourn <- function(games=32, playin = NA){
 }
 
 plotTourn(games = 64)
+
+
+
+#######################################################################################
+#######################################################################################
+
+
+# =============================================
+# 2026 NCAA Men's Basketball Bracket (Sweet 16 onward)
+# Using bracketeer — perfect for live presentation
+# =============================================
+
+library(bracketeer)
+
