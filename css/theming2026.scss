@@ -37,8 +37,9 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla One');
 @import url('https://fonts.googleapis.com/css?family=Slackey');
 @import url('https://fonts.googleapis.com/css?family=Londrina Sketch');
+@import url('https://fonts.googleapis.com/css?family=DM Sans');
 
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: left;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
@@ -176,6 +177,10 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
 
 .Smaller {
   font-size: .8em;
+}
+
+.Smallest {
+  font-size: .6em;
 }
 
 .bigger {
@@ -572,4 +577,9 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
 .distill {
   font-family: "Londrina Sketch";
   color: #e2fae1;
+}
+
+.plainjane {
+  font-family: "DM Sans";
+  color: #60b6ff;
 }

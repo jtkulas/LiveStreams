@@ -3372,5 +3372,89 @@
     "title": "R is for Authoring!!",
     "section": " &  Session Info (July 09, 2026) Rendering:",
     "text": "&  Session Info (July 09, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/7_21_26/index.html#open-office-hours-july-19-2026",
+    "href": "slides/2026/7_21_26/index.html#open-office-hours-july-19-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (July 19, 2026)",
+    "text": "Open Office Hours (July 19, 2026)\n\n\n\nRecap session #138\nToday’s topic(s):\n\nAI–Assisted App Build\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/7_21_26/index.html#distill",
+    "href": "slides/2026/7_21_26/index.html#distill",
+    "title": "R is for Authoring!!",
+    "section": "Distill",
+    "text": "Distill\n\n\n\n“Legacy”  package\nScientific/technical communication\n\nstatic  dynamic\n  \n\nFormat/Styling \n\n\n\n“Article” format\n\nblogs\nwebsites\n\nWould most likely use for blog\n\neverything else would prefer Quarto"
+  },
+  {
+    "objectID": "slides/2026/7_21_26/index.html#distill-1",
+    "href": "slides/2026/7_21_26/index.html#distill-1",
+    "title": "R is for Authoring!!",
+    "section": "Distill1",
+    "text": "Distill1\n\noriginally Radix"
+  },
+  {
+    "objectID": "slides/2026/7_21_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-july-19-2026-rendering",
+    "href": "slides/2026/7_21_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-july-19-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (July 19, 2026) Rendering:",
+    "text": "&  Session Info (July 19, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/7_21_26/index.html#aiassisted-app",
+    "href": "slides/2026/7_21_26/index.html#aiassisted-app",
+    "title": "R is for Authoring!!",
+    "section": "AI–Assisted App",
+    "text": "AI–Assisted App"
+  },
+  {
+    "objectID": "slides/2026/7_21_26/index.html#aiassisted-app-build",
+    "href": "slides/2026/7_21_26/index.html#aiassisted-app-build",
+    "title": "R is for Authoring!!",
+    "section": "AI–Assisted App Build",
+    "text": "AI–Assisted App Build\n\n\n\nStandalones\n\nClaude\nGrok\n\n\nInside IDE\n\nGitHub Copilot (via R Studio)\nPosit Assistant\nSupermaven\n\n\nHybrid\n\nGitHub Copilot (via GitHub)"
+  },
+  {
+    "objectID": "slides/2026/7_21_26/index.html#open-office-hours-july-20-2026",
+    "href": "slides/2026/7_21_26/index.html#open-office-hours-july-20-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (July 20, 2026)",
+    "text": "Open Office Hours (July 20, 2026)\n\n\n\nRecap session #138\nToday’s topic(s):\n\nAI–Assisted App Build\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/7_21_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-july-20-2026-rendering",
+    "href": "slides/2026/7_21_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-july-20-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (July 20, 2026) Rendering:",
+    "text": "&  Session Info (July 20, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/7_21_26/index.html#open-office-hours-july-21-2026",
+    "href": "slides/2026/7_21_26/index.html#open-office-hours-july-21-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (July 21, 2026)",
+    "text": "Open Office Hours (July 21, 2026)\n\n\n\nRecap session #138\nToday’s topic(s):\n\nAI–Assisted App Build\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/7_21_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-july-21-2026-rendering",
+    "href": "slides/2026/7_21_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-july-21-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (July 21, 2026) Rendering:",
+    "text": "&  Session Info (July 21, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
+  },
+  {
+    "objectID": "slides/2026/7_21_26/index.html#section",
+    "href": "slides/2026/7_21_26/index.html#section",
+    "title": "R is for Authoring!!",
+    "section": "",
+    "text": "Level\nReasoning Depth\nContext Awareness\nSpeed\nR/Quarto Support\nBest For\nCost/Privacy\n\n\n\n\n1. Standalone\nHigh\nProject description\nMedium\nExcellent (via prompting)\nPlanning & learning\nVaries (API)\n\n\n2. IDE-Integrated\nMedium\nFile + open project\nHigh\nStrong (esp. Copilot)\nDaily coding\nSubscription\n\n\n3. Agentic\nHigh\nFull codebase\nMedium-High\nGood (with good prompting)\nComplex/multi-file work\nHigher\n\n\n4. Platform\nMedium\nRepo + team\nMedium\nGood\nReview & collab\nPlatform-dependent"
+  },
+  {
+    "objectID": "slides/2026/7_21_26/index.html#ai-categorization",
+    "href": "slides/2026/7_21_26/index.html#ai-categorization",
+    "title": "R is for Authoring!!",
+    "section": "    AI Categorization1",
+    "text": "AI Categorization1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLevel\nReasoning Depth\nContext Awareness\nSpeed\nR/Quarto Support\nBest For\nCost/Privacy\n\n\n\n\n1. Standalone\nHigh\nProject description\nMedium\nExcellent (via prompting)\nPlanning & learning\nVaries (API)\n\n\n2. IDE-Integrated\nMedium\nFile + open project\nHigh\nStrong (esp. Copilot)\nDaily coding\nSubscription\n\n\n3. Agentic\nHigh\nFull codebase\nMedium-High\nGood (with good prompting)\nComplex/multi-file work\nHigher\n\n\n4. Platform\nMedium\nRepo + team\nMedium\nGood\nReview & collab\nPlatform-dependent\n\n\n\n\n\nfull report available here"
   }
 ]
