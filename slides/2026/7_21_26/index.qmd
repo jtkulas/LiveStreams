@@ -138,7 +138,7 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOW53ZXdtOGV1c3hvY2V4YnQwYjNieWhuY3ZnNTh5OHg3a3ZqNDRxZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT0BKJvJKEvgVyyWje/giphy.gif){.absolute height="250" right="-150" top="-40"}
 
-## &emsp;&emsp;&emsp;&emsp;AI Categorization^[full report available [here]()]
+## &emsp;&emsp;&emsp;&emsp;AI Categorization^[full report available [here](https://github.com/jtkulas/LiveStreams/blob/main/slides/2026/7_21_26/AI.pdf)]
 
 <br>
 
