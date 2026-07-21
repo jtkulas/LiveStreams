@@ -77,7 +77,7 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 + Ubiquity {{< iconify noto:face-with-monocle >}}
 + Bullets, callouts, code echoing, table of contents
-+ Format
++ Sharp base format
 + End--user customization\*
 
 :::
@@ -101,9 +101,29 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGMzMTdnYzh0NHhuOWZteGtwYTk0Yzl0YmNmMm83cmdjZ2FiNXphNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xThuWfythXoyPR2hi0/giphy.gif)
 
-## [[Distill](https://rstudio.github.io/distill/)^[originally `Radix`]]{.distill style='font-size:2.5em;'}
+## [[Distill](https://rstudio.github.io/distill/)^[originally [`Radix`](https://rstudio.github.io/distill/migrating.html)]]{.distill style='font-size:2.5em;'}
 
-![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWtxazk2dnp1cGxpa2ZkcGFyaXptY2E5bWVoYmxqem43czZrczdzdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fyhjTYpu3J1ny/giphy.gif)
+::: {.columns .Smaller}
+
+::: {.column width="60%"}
+
+HTML output format for R Markdown documents -- optimized for scientific and technical web--based communication
+
+[Distill.pub](https://distill.pub/guide/) emphasized moving beyond static PDFs. It offered prizes for outstanding explanatory work and aimed to legitimize non-traditional research artifacts (e.g., interactive articles).
+
+:::
+
+::: {.column width="40%"}
+
+<br>
+
+The name and core design come from the Distill web framework, originally created for Distill.pub, an online scientific journal focused on machine learning (launched around 2016--2017).
+
+:::
+
+:::
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWtxazk2dnp1cGxpa2ZkcGFyaXptY2E5bWVoYmxqem43czZrczdzdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fyhjTYpu3J1ny/giphy.gif){.absolute right="15" top="-20" height="320"}
 
 ## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 

@@ -3357,7 +3357,7 @@
     "href": "slides/2026/7_14_26/index.html#distill",
     "title": "R is for Authoring!!",
     "section": "Distill1",
-    "text": "Distill1\n\noriginally Radix"
+    "text": "Distill1\n\n\nHTML output format for R Markdown documents – optimized for scientific and technical web–based communication\nDistill.pub emphasized moving beyond static PDFs. It offered prizes for outstanding explanatory work and aimed to legitimize non-traditional research artifacts (e.g., interactive articles).\n\n\nThe name and core design come from the Distill web framework, originally created for Distill.pub, an online scientific journal focused on machine learning (launched around 2016–2017).\n\n\noriginally Radix"
   },
   {
     "objectID": "slides/2026/7_14_26/index.html#open-office-hours-july-09-2026",
@@ -3374,6 +3374,7 @@
     "text": "&  Session Info (July 09, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.9.37"
   },
   {
+<<<<<<< HEAD
     "objectID": "slides/2026/7_21_26/index.html#open-office-hours-july-19-2026",
     "href": "slides/2026/7_21_26/index.html#open-office-hours-july-19-2026",
     "title": "R is for Authoring!!",
@@ -3456,5 +3457,40 @@
     "title": "R is for Authoring!!",
     "section": "    AI Categorization1",
     "text": "AI Categorization1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nLevel\nReasoning Depth\nContext Awareness\nSpeed\nR/Quarto Support\nBest For\nCost/Privacy\n\n\n\n\n1. Standalone\nHigh\nProject description\nMedium\nExcellent (via prompting)\nPlanning & learning\nVaries (API)\n\n\n2. IDE-Integrated\nMedium\nFile + open project\nHigh\nStrong (esp. Copilot)\nDaily coding\nSubscription\n\n\n3. Agentic\nHigh\nFull codebase\nMedium-High\nGood (with good prompting)\nComplex/multi-file work\nHigher\n\n\n4. Platform\nMedium\nRepo + team\nMedium\nGood\nReview & collab\nPlatform-dependent\n\n\n\n\n\nfull report available here"
+=======
+    "objectID": "slides/2026/7_14_26/index.html#open-office-hours-july-14-2026",
+    "href": "slides/2026/7_14_26/index.html#open-office-hours-july-14-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (July 14, 2026)",
+    "text": "Open Office Hours (July 14, 2026)\n\n\n\nRecap session #137\nToday’s topic(s):\n\nDistill\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/7_14_26/index.html#word",
+    "href": "slides/2026/7_14_26/index.html#word",
+    "title": "R is for Authoring!!",
+    "section": "Word ",
+    "text": "Word \n\n\nPros \n\nUbiquity \nBullets, callouts, code echoing, table of contents\nSharp base format\nEnd–user customization*\n\n\nCons \n\nStyle (strongest control with templates)\nLayout (see above)\nNo interactivity support\nEnd–user customization*"
+  },
+  {
+    "objectID": "slides/2026/7_14_26/index.html#session-info-july-14-2026-rendering",
+    "href": "slides/2026/7_14_26/index.html#session-info-july-14-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (July 14, 2026) Rendering:",
+    "text": "&  Session Info (July 14, 2026) Rendering:\n\n\n\n\nR version 4.3.1 (2023-06-16 ucrt)\nPlatform: x86_64-w64-mingw32/x64 (64-bit)\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: Asia/Tokyo\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.3.1    fastmap_1.1.1     cli_3.6.1         tools_4.3.1      \n [5] htmltools_0.5.7   rstudioapi_0.15.0 yaml_2.3.7        rmarkdown_2.25   \n [9] knitr_1.45        jsonlite_2.0.0    xfun_0.49         digest_0.6.37    \n[13] rlang_1.1.1       evaluate_1.0.5   \n\n\n\nQuarto version 1.7.32"
+  },
+  {
+    "objectID": "slides/2026/7_14_26/index.html#open-office-hours-july-15-2026",
+    "href": "slides/2026/7_14_26/index.html#open-office-hours-july-15-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (July 15, 2026)",
+    "text": "Open Office Hours (July 15, 2026)\n\n\n\nRecap session #137\nToday’s topic(s):\n\nDistill\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/7_14_26/index.html#session-info-july-15-2026-rendering",
+    "href": "slides/2026/7_14_26/index.html#session-info-july-15-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (July 15, 2026) Rendering:",
+    "text": "&  Session Info (July 15, 2026) Rendering:\n\n\n\n\nR version 4.3.1 (2023-06-16 ucrt)\nPlatform: x86_64-w64-mingw32/x64 (64-bit)\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: Asia/Tokyo\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.3.1    fastmap_1.1.1     cli_3.6.1         tools_4.3.1      \n [5] htmltools_0.5.7   rstudioapi_0.15.0 yaml_2.3.7        rmarkdown_2.25   \n [9] knitr_1.45        jsonlite_2.0.0    xfun_0.49         digest_0.6.37    \n[13] rlang_1.1.1       evaluate_1.0.5   \n\n\n\nQuarto version 1.7.32"
+>>>>>>> e49c011e2bd155c0e2e6e509efc50cf50494c8ed
   }
 ]
