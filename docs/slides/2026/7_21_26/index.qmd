@@ -112,17 +112,21 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 ### Standalones
 
 + Claude
++ ChatGPT
++ Gemini
 + Grok
 
 :::
 
 ::: {.column width="34%"}
 
-### Inside IDE
+### Integrated
 
-+ GitHub Copilot (via R Studio)
-+ Posit Assistant
-+ Supermaven
++ [GitHub Copilot](https://docs.posit.co/ide/user/ide/guide/tools/copilot.html) 
++ [Posit Assistant](https://positron.posit.co/assistant.html)
++ [Cursor AI](https://www.emgoto.com/cursor/)
++ [Supermaven](https://supermaven.com/)
+
 
 ::: 
 
@@ -130,7 +134,11 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ### Hybrid
 
-+ GitHub Copilot (via GitHub)
++ GitHub Copilot 
+  + within GitHub
++ [`gptstudio`](https://michelnivard.github.io/gptstudio/) & [`gpttools`](https://jameshwade.github.io/gpttools/)
+  + {{< iconify devicon:rstudio >}} "add--in" packages 
+  
 
 :::
 
