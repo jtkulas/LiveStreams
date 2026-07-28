@@ -39,7 +39,7 @@
 @import url('https://fonts.googleapis.com/css?family=Londrina Sketch');
 @import url('https://fonts.googleapis.com/css?family=DM Sans');
 
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
@@ -169,6 +169,10 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
 
 .tilt2 {
   rotate: -20deg;
+}
+
+.tiltpostit {
+  rotate: -3deg;
 }
 
 .smaller {
