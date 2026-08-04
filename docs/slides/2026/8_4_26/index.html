@@ -13,7 +13,7 @@
 <script src="../../../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.37">
 
-  <meta name="author" content="OOH Session #112… reveal slides!!">
+  <meta name="author" content="OOH Session #141… AI–Assisted App Build (III)">
   <title>R is for  Authoring!!</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -203,57 +203,37 @@
       margin-right: 0; 
     }
   </style>
-  <link href="../../../site_libs/htmltools-fill-0.5.9/fill.css" rel="stylesheet">
-
-  <script src="../../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-
-  <script src="../../../site_libs/plotly-binding-4.10.4/plotly.js"></script>
-
-  <script src="../../../site_libs/typedarray-0.1/typedarray.min.js"></script>
-
-  <script src="../../../site_libs/jquery-3.5.1/jquery.min.js"></script>
-
-  <link href="../../../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
-
-  <script src="../../../site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
-
-  <link href="../../../site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
-
-  <script src="../../../site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
-
 </head>
 <body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="../../../img/revealjs2.png" class="quarto-title-block center">
+<section id="title-slide" data-background-image="../../../img/bender.png" class="quarto-title-block center">
   <h1 class="title"><span class="shadowsharp">R is for <br>Authoring!!</span></h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-OOH Session #112…<br><img data-src="https://gitlab.poul.org/uploads/-/system/project/avatar/109/reveal.js-2020-05-28_09-58-06-icon-resized.png" class="absolute" style="height: 150px; "><span class="revealing2 biggeR">reveal<iconify-icon role="img" inline="" icon="fluent:code-js-rectangle-16-regular" style="color:#000000;" aria-label="Icon code-js-rectangle-16-regular from fluent Iconify.design set." title="Icon code-js-rectangle-16-regular from fluent Iconify.design set."></iconify-icon><br>slides!!</span> 
+OOH Session #141…<br><span class="plainjane" style="font-size:1.5em;">AI–Assisted<br>App Build (III)</span> 
 </div>
 </div>
 </div>
 
 </section>
-<section id="open-office-hours-august-03-2026" class="slide level2">
-<h2>Open Office Hours <br>(August 03, 2026)</h2>
-<div class="quarto-layout-panel" data-layout="[[10,10],]">
-<div class="quarto-layout-row">
-<div class="first-column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<section id="open-office-hours-august-04-2026" class="slide level2">
+<h2>Open Office Hours <br>(August 04, 2026)</h2>
+<div class="columns">
+<div class="column" style="width:55%;">
 <ul>
-<li>Recap session #111</li>
+<li>Recap session #140</li>
 <li>Today’s topic(s):
 <ul>
-<li><img data-src="https://gitlab.poul.org/uploads/-/system/project/avatar/109/reveal.js-2020-05-28_09-58-06-icon-resized.png" class="absolute" style="height: 60px; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://revealjs.com/"><span class="revealing">reveal<iconify-icon role="img" inline="" icon="fluent:code-js-rectangle-16-regular" style="color:#FFFFFF;" aria-label="Icon code-js-rectangle-16-regular from fluent Iconify.design set." title="Icon code-js-rectangle-16-regular from fluent Iconify.design set."></iconify-icon><br>slides!!</span></a></li>
+<li><span class="plainjane" style="font-size:1.2em;"><a href="https://posit.co/blog/introducing-ai-in-rstudio">AI–Assisted</a><br> App Build (III)</span></li>
 </ul></li>
 <li>Shared problem-solving</li>
 </ul>
-</div>
-<div class="second-column quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p><br> <br> <br> <br> <br> <br></p>
+</div><div class="column" style="width:45%;">
+<p><br> <br> <br> <br> <br></p>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -267,134 +247,139 @@ OOH Session #112…<br><img data-src="https://gitlab.poul.org/uploads/-/system/p
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-<div class="absolute" style="top: 185px; right: -120px; width:550px;">
-<p><a href="https://jtkulas.github.io/LiveStreams/slides/2026/1_6_26"> <img src="../../../img/title111.JPG"> </a></p>
+</div></div>
+<div class="absolute" style="top: 170px; right: -120px; width:550px;">
+<p><a href="https://jtkulas.github.io/LiveStreams/slides/2026/7_28_26"> <img src="../../../img/title140.JPG"> </a></p>
 </div>
 <p><img data-src="https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png" class="absolute" style="top: 165px; left: 385px; width: 200px; "></p>
 </section>
 <section>
-<section id="recap-of-session-111" class="title-slide slide level1 center">
-<h1>Recap of Session <br>#111:</h1>
-<p><img data-src="https://pngimg.com/d/sticky_note_PNG18964.png" class="absolute" style="top: 200px; right: 50px; "></p>
-<p><img data-src="https://rstudio.github.io/cheatsheets/html/images/logo-quarto.png" class="absolute" style="top: 265px; right: 125px; width: 100px; "></p>
+<section id="recap-of-session-140" class="title-slide slide level1 center">
+<h1>Recap of Session <br>#140:</h1>
+<p><img data-src="https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png" class="absolute" style="right: 100px; "></p>
+<p><img data-src="https://images.vexels.com/media/users/3/127207/isolated/preview/cfd9d59883d9dce3282073476f909da7-blue-progress-bar-line-icon-svg.png" class="absolute tiltpostit" style="top: 295px; right: 125px; height: 180px; "></p>
 </section>
-<section id="quarto-3-types-of-content" class="slide level2">
-<h2><a href="https://quarto.org/docs/guide/"><span class="quarto bigger">quarto®!!</span></a> <span class="quarto">(3 <u>types</u> of content):</span></h2>
-<div class="columns smaller">
-<div class="column fragment semi-fade-out" data-fragment-index="1" style="width:33%;">
-<h3 id="yaml"><a href="https://circleci.com/blog/what-is-yaml-a-beginner-s-guide/">YAML</a></h3>
-<p>“executive” specs that control doc look &amp; feel – always located at very top:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-1"><pre class="sourceCode numberSource yaml code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode yaml"><button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="1">1</button><span id="annotated-cell-1-1" class="code-annotation-target"><a href="#annotated-cell-1-1"></a><span class="pp">---</span></span>
-<span id="annotated-cell-1-2"><a href="#annotated-cell-1-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Mooseterpiece"</span></span>
-<span id="annotated-cell-1-3"><a href="#annotated-cell-1-3"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"I.M. Awesome"</span></span>
-<span id="annotated-cell-1-4"><a href="#annotated-cell-1-4"></a><span class="fu">format</span><span class="kw">:</span></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="2">2</button><span id="annotated-cell-1-5" class="code-annotation-target"><a href="#annotated-cell-1-5"></a><span class="at">  </span><span class="fu">revealjs</span><span class="kw">:</span></span>
-<span id="annotated-cell-1-6"><a href="#annotated-cell-1-6"></a><span class="at">    </span><span class="fu">mouse-wheel</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="annotated-cell-1-7"><a href="#annotated-cell-1-7"></a><span class="pp">---</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-annotation">
-<dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
-<dd>
-<span data-code-cell="annotated-cell-1" data-code-lines="1" data-code-annotation="1">opening and closing fences indicated by 3 dashes (<code>---</code>)</span>
-</dd>
-<dt data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
-<dd>
-<span data-code-cell="annotated-cell-1" data-code-lines="5,6" data-code-annotation="2">indentations tend to be important (and finicky) within your <iconify-icon role="img" inline="" icon="devicon:yaml" aria-label="Icon yaml from devicon Iconify.design set." title="Icon yaml from devicon Iconify.design set."></iconify-icon></span>
-</dd>
-</dl>
+<section id="aiassisted-app-build-ii" class="slide level2">
+<h2><span class="plainjane" style="font-size:1.2em;">AI–Assisted App Build (II)</span></h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Week II</a></li><li><a href="#tabset-1-2">Week I</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<p><code>app.R</code> (copilot’s suggestion)</p>
 </div>
-</div>
-</div><div class="column fragment fade-in-then-semi-out" data-fragment-index="1" style="width:33%;">
-<h3 id="narrative">Narrative</h3>
-<p><u><strong>plain–text</strong></u> (as you would specify on a notepad <iconify-icon role="img" inline="" icon="streamline-ultimate-color:paper-write" aria-label="Icon paper-write from streamline-ultimate-color Iconify.design set." title="Icon paper-write from streamline-ultimate-color Iconify.design set."></iconify-icon>) with formatting indicated by <a href="https://quarto.org/docs/authoring/markdown-basics.html">markdown</a>:</p>
-<pre><code># 1^st^ level heading 
-
-## 2^nd^ level Heading
-
-this is **bold**
-this is *italic*
-</code></pre>
-</div><div class="column fragment fade-in" data-fragment-index="2" style="width:34%;">
-<h3 id="chunks">Computations</h3>
-<p>isolated bits of code indicated with either one (<a href="https://quarto.org/docs/computations/inline-code.html">inline</a>) or three (<a href="https://quarto.org/docs/output-formats/html-code.html">code block</a>) “ticks”:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-3"><pre class="sourceCode numberSource markdown code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode markdown"><span id="annotated-cell-3-1"><a href="#annotated-cell-3-1"></a><span class="in">```{r}</span></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="1">1</button><span id="annotated-cell-3-2" class="code-annotation-target"><a href="#annotated-cell-3-2"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="annotated-cell-3-3"><a href="#annotated-cell-3-3"></a></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="2">2</button><span id="annotated-cell-3-4" class="code-annotation-target"><a href="#annotated-cell-3-4"></a><span class="co"># Basic scatter plot</span></span>
-<span id="annotated-cell-3-5"><a href="#annotated-cell-3-5"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(</span>
-<span id="annotated-cell-3-6"><a href="#annotated-cell-3-6"></a>  <span class="at">x=</span>wt, <span class="at">y=</span>mpg)) <span class="sc">+</span> </span>
-<span id="annotated-cell-3-7"><a href="#annotated-cell-3-7"></a>  <span class="fu">geom_point</span>()</span>
-<span id="annotated-cell-3-8"><a href="#annotated-cell-3-8"></a><span class="in">```</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-annotation">
-<dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-3" data-target-annotation="1">1</dt>
-<dd>
-<span data-code-cell="annotated-cell-3" data-code-lines="2" data-code-annotation="1">any <iconify-icon role="img" inline="" icon="devicon:r" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> command you would normally specify within scripts or the console is valid within code chunks (including the loading of packages)</span>
-</dd>
-<dt data-target-cell="annotated-cell-3" data-target-annotation="2">2</dt>
-<dd>
-<span data-code-cell="annotated-cell-3" data-code-lines="4" data-code-annotation="2">comments<iconify-icon role="img" inline="" icon="ant-design:comment-outlined" aria-label="Icon comment-outlined from ant-design Iconify.design set." title="Icon comment-outlined from ant-design Iconify.design set."></iconify-icon> also operational within code chunks</span>
-</dd>
-</dl>
-</div>
-</div>
+<div id="tabset-1-2">
+<div class="columns Smaller">
+<div class="column" style="width:72%;">
+<ul>
+<li>Initial fail (app cycling without presenting visual)
+<ul>
+<li>2 or 3 correction fails</li>
+<li>not touched since last week (total time = ~20 minutes)</li>
+</ul></li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>I would like to build a Quarto dashboard, powered by </span>
+<span id="cb1-2"><a></a>R, that has 3 primary functions. #1 - user types an </span>
+<span id="cb1-3"><a></a>address, #2 - a map displays the address, and #3 -data </span>
+<span id="cb1-4"><a></a>is shown about the address. I do have a US Census </span>
+<span id="cb1-5"><a></a>API Key if we go that route for the address data, but </span>
+<span id="cb1-6"><a></a>I am open to alternatives. Please provide all code </span>
+<span id="cb1-7"><a></a>necessary to execute this dashboard </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column" style="width:28%;">
+<p><br></p>
+<p>Out of <a href="https://jtkulas.github.io/LiveStreams/slides/2026/7_21_26/#/aiassisted-app-build">several considered options</a>, chose to build via GitHub Copilot <iconify-icon role="img" inline="" icon="logos:github-copilot" aria-label="Icon github-copilot from logos Iconify.design set." title="Icon github-copilot from logos Iconify.design set."></iconify-icon> from within GitHub <iconify-icon role="img" inline="" icon="icon-park:github" aria-label="Icon github from icon-park Iconify.design set." title="Icon github from icon-park Iconify.design set."></iconify-icon></p>
 </div></div>
-<p><img data-src="https://static.vecteezy.com/system/resources/thumbnails/071/793/770/small/vibrant-red-electric-bass-guitar-for-music-lovers-and-rock-band-designs-a-dynamic-musical-instrument-free-png.png" class="absolute mirror" style="top: -40px; right: -140px; height: 170px; "></p>
+</div>
+</div>
+</div>
+<p><img data-src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXl2YXBzZDFzc2txOTRnbnczYTN2YjVodnVmdnM5bDllc3hheTU3ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3nJhJtq110IP6/giphy.gif" class="absolute" style="top: -30px; right: -170px; height: 230px; "></p>
 </section></section>
 <section>
 <section id="today" class="title-slide slide level1 center">
 <h1>Today…</h1>
 
-<img data-src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbndkcm02bnJpNjNmdTE5MjNrMnhpYWRmMzFqZTFlYTN0aHhhOHRnciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/yHjTkpkPqTOxO/giphy.gif" class="r-stretch"></section>
-<section id="revealb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e69667920666c75656e743a636f64652d6a732d72656374616e676c652d31362d726567756c6172207374796c653d22636f6c6f723a234646464646463b22203e7d7d-slides-via-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7d" class="slide level2">
-<h2><img data-src="https://gitlab.poul.org/uploads/-/system/project/avatar/109/reveal.js-2020-05-28_09-58-06-icon-resized.png" class="absolute" style="height: 100px; ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://revealjs.com/"><span class="revealing bigger">reveal<iconify-icon role="img" inline="" icon="fluent:code-js-rectangle-16-regular" style="color:#FFFFFF;" aria-label="Icon code-js-rectangle-16-regular from fluent Iconify.design set." title="Icon code-js-rectangle-16-regular from fluent Iconify.design set."></iconify-icon> slides</span></a> <a href="https://quarto.org/docs/presentations/revealjs/"><span class="quarto">(via <iconify-icon role="img" inline="" icon="material-icon-theme:quarto" aria-label="Icon quarto from material-icon-theme Iconify.design set." title="Icon quarto from material-icon-theme Iconify.design set."></iconify-icon>)</span></a></h2>
+<img data-src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExemNlZ2VwdHgybXJyYXBhMHNhM3F4cHY4eHhsZjczZGJmNzVjcmg3diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/12dBjCf9NclhBe/giphy.gif" class="r-stretch"></section>
+<section id="bite-my-shiny-metal" class="slide level2">
+<h2><span class="plainjane" style="font-size:1.2em;">Bite my shiny metal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;!!!</span></h2>
 <div class="columns">
-<div class="column fragment semi-fade-out" data-fragment-index="1" style="width:33%;">
-<h3 id="capabilities">Capabilities</h3>
-<ul>
-<li><a href="https://quarto.org/docs/presentations/revealjs/presenting.html#multiplex">Multiplex</a><iconify-icon role="img" inline="" icon="grommet-icons:clone" aria-label="Icon clone from grommet-icons Iconify.design set." title="Icon clone from grommet-icons Iconify.design set."></iconify-icon></li>
-<li><a href="https://quarto.org/docs/presentations/revealjs/presenting.html#publishing">hosting</a><iconify-icon role="img" inline="" icon="streamline-ultimate-color:share" aria-label="Icon share from streamline-ultimate-color Iconify.design set." title="Icon share from streamline-ultimate-color Iconify.design set."></iconify-icon></li>
-<li><a href="https://quarto.org/docs/computations/execution-options.html#fenced-echo">teaching</a><iconify-icon role="img" inline="" icon="game-icons:teacher" aria-label="Icon teacher from game-icons Iconify.design set." title="Icon teacher from game-icons Iconify.design set."></iconify-icon></li>
-<li><a href="https://quarto.org/docs/authoring/code-annotation.html">annotation</a><iconify-icon role="img" inline="" icon="fluent-color:number-symbol-square-20" aria-label="Icon number-symbol-square-20 from fluent-color Iconify.design set." title="Icon number-symbol-square-20 from fluent-color Iconify.design set."></iconify-icon></li>
-<li><a href="https://quarto.org/docs/output-formats/html-lightbox-figures.html">lightbox</a><iconify-icon role="img" inline="" icon="openmoji:light-bulb" aria-label="Icon light-bulb from openmoji Iconify.design set." title="Icon light-bulb from openmoji Iconify.design set."></iconify-icon></li>
-<li><a href="https://quarto.org/docs/presentations/revealjs/presenting.html#slide-zoom">zoom</a><iconify-icon role="img" inline="" icon="fluent-emoji-flat:magnifying-glass-tilted-right" aria-label="Icon magnifying-glass-tilted-right from fluent-emoji-flat Iconify.design set." title="Icon magnifying-glass-tilted-right from fluent-emoji-flat Iconify.design set."></iconify-icon></li>
-<li><a href="https://quarto.org/docs/authoring/cross-references.html">cross–refs</a><iconify-icon role="img" inline="" icon="icon-park:copy-link" aria-label="Icon copy-link from icon-park Iconify.design set." title="Icon copy-link from icon-park Iconify.design set."></iconify-icon></li>
-</ul>
-</div><div class="column fragment fade-in-then-semi-out" data-fragment-index="1" style="width:33%;">
-<h3 id="extensions"><a href="https://quarto.org/docs/extensions/listing-revealjs.html">Extensions</a></h3>
-<p><br> <br> <br></p>
-<ul>
-<li><a href="https://github.com/mcanouil/quarto-iconify">iconify</a><iconify-icon role="img" inline="" icon="line-md:iconify2-twotone" aria-label="Icon iconify2-twotone from line-md Iconify.design set." title="Icon iconify2-twotone from line-md Iconify.design set."></iconify-icon></li>
-<li><a href="https://github.com/EmilHvitfeldt/quarto-snow">snow</a><iconify-icon role="img" inline="" icon="streamline-emojis:snowflake" aria-label="Icon snowflake from streamline-emojis Iconify.design set." title="Icon snowflake from streamline-emojis Iconify.design set."></iconify-icon></li>
-<li><a href="https://github.com/parmsam/quarto-quiz">quiz</a><iconify-icon role="img" inline="" icon="healthicons:i-exam-multiple-choice" aria-label="Icon i-exam-multiple-choice from healthicons Iconify.design set." title="Icon i-exam-multiple-choice from healthicons Iconify.design set."></iconify-icon></li>
-<li><a href="https://github.com/quarto-ext/pointer">pointer</a><iconify-icon role="img" inline="" icon="fluent-emoji-flat:red-circle" aria-label="Icon red-circle from fluent-emoji-flat Iconify.design set." title="Icon red-circle from fluent-emoji-flat Iconify.design set."></iconify-icon></li>
-</ul>
-</div><div class="column fragment fade-in" data-fragment-index="2" style="width:33%;">
-<h3 id="data">Data</h3>
-<div class="cell fig-cap-location-top">
-<div id="fig-iris" class="cell-output-display quarto-float quarto-figure quarto-figure-center">
-<figure class="quarto-float quarto-float-fig">
-<div aria-describedby="fig-iris-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="plotly html-widget html-fill-item" id="htmlwidget-914e9e5a49da263c9963" style="width:384px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-914e9e5a49da263c9963">{"x":{"visdat":{"43ac79372983":["function () ","plotlyVisDat"]},"cur_data":"43ac79372983","attrs":{"43ac79372983":{"x":{},"y":{},"color":{},"colors":"Set1","alpha_stroke":1,"sizes":[10,100],"spans":[1,20]}},"layout":{"width":300,"height":450,"margin":{"b":40,"l":60,"t":25,"r":10},"autosize":false,"xaxis":{"domain":[0,1],"automargin":true,"title":"Sepal.Length"},"yaxis":{"domain":[0,1],"automargin":true,"title":"Petal.Length"},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[5.0999999999999996,4.9000000000000004,4.7000000000000002,4.5999999999999996,5,5.4000000000000004,4.5999999999999996,5,4.4000000000000004,4.9000000000000004,5.4000000000000004,4.7999999999999998,4.7999999999999998,4.2999999999999998,5.7999999999999998,5.7000000000000002,5.4000000000000004,5.0999999999999996,5.7000000000000002,5.0999999999999996,5.4000000000000004,5.0999999999999996,4.5999999999999996,5.0999999999999996,4.7999999999999998,5,5,5.2000000000000002,5.2000000000000002,4.7000000000000002,4.7999999999999998,5.4000000000000004,5.2000000000000002,5.5,4.9000000000000004,5,5.5,4.9000000000000004,4.4000000000000004,5.0999999999999996,5,4.5,4.4000000000000004,5,5.0999999999999996,4.7999999999999998,5.0999999999999996,4.5999999999999996,5.2999999999999998,5],"y":[1.3999999999999999,1.3999999999999999,1.3,1.5,1.3999999999999999,1.7,1.3999999999999999,1.5,1.3999999999999999,1.5,1.5,1.6000000000000001,1.3999999999999999,1.1000000000000001,1.2,1.5,1.3,1.3999999999999999,1.7,1.5,1.7,1.5,1,1.7,1.8999999999999999,1.6000000000000001,1.6000000000000001,1.5,1.3999999999999999,1.6000000000000001,1.6000000000000001,1.5,1.5,1.3999999999999999,1.5,1.2,1.3,1.3999999999999999,1.3,1.5,1.3,1.3,1.3,1.6000000000000001,1.8999999999999999,1.3999999999999999,1.6000000000000001,1.3999999999999999,1.5,1.3999999999999999],"type":"scatter","mode":"markers","name":"setosa","marker":{"color":"rgba(228,26,28,1)","line":{"color":"rgba(228,26,28,1)"}},"textfont":{"color":"rgba(228,26,28,1)"},"error_y":{"color":"rgba(228,26,28,1)"},"error_x":{"color":"rgba(228,26,28,1)"},"line":{"color":"rgba(228,26,28,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[7,6.4000000000000004,6.9000000000000004,5.5,6.5,5.7000000000000002,6.2999999999999998,4.9000000000000004,6.5999999999999996,5.2000000000000002,5,5.9000000000000004,6,6.0999999999999996,5.5999999999999996,6.7000000000000002,5.5999999999999996,5.7999999999999998,6.2000000000000002,5.5999999999999996,5.9000000000000004,6.0999999999999996,6.2999999999999998,6.0999999999999996,6.4000000000000004,6.5999999999999996,6.7999999999999998,6.7000000000000002,6,5.7000000000000002,5.5,5.5,5.7999999999999998,6,5.4000000000000004,6,6.7000000000000002,6.2999999999999998,5.5999999999999996,5.5,5.5,6.0999999999999996,5.7999999999999998,5,5.5999999999999996,5.7000000000000002,5.7000000000000002,6.2000000000000002,5.0999999999999996,5.7000000000000002],"y":[4.7000000000000002,4.5,4.9000000000000004,4,4.5999999999999996,4.5,4.7000000000000002,3.2999999999999998,4.5999999999999996,3.8999999999999999,3.5,4.2000000000000002,4,4.7000000000000002,3.6000000000000001,4.4000000000000004,4.5,4.0999999999999996,4.5,3.8999999999999999,4.7999999999999998,4,4.9000000000000004,4.7000000000000002,4.2999999999999998,4.4000000000000004,4.7999999999999998,5,4.5,3.5,3.7999999999999998,3.7000000000000002,3.8999999999999999,5.0999999999999996,4.5,4.5,4.7000000000000002,4.4000000000000004,4.0999999999999996,4,4.4000000000000004,4.5999999999999996,4,3.2999999999999998,4.2000000000000002,4.2000000000000002,4.2000000000000002,4.2999999999999998,3,4.0999999999999996],"type":"scatter","mode":"markers","name":"versicolor","marker":{"color":"rgba(55,126,184,1)","line":{"color":"rgba(55,126,184,1)"}},"textfont":{"color":"rgba(55,126,184,1)"},"error_y":{"color":"rgba(55,126,184,1)"},"error_x":{"color":"rgba(55,126,184,1)"},"line":{"color":"rgba(55,126,184,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[6.2999999999999998,5.7999999999999998,7.0999999999999996,6.2999999999999998,6.5,7.5999999999999996,4.9000000000000004,7.2999999999999998,6.7000000000000002,7.2000000000000002,6.5,6.4000000000000004,6.7999999999999998,5.7000000000000002,5.7999999999999998,6.4000000000000004,6.5,7.7000000000000002,7.7000000000000002,6,6.9000000000000004,5.5999999999999996,7.7000000000000002,6.2999999999999998,6.7000000000000002,7.2000000000000002,6.2000000000000002,6.0999999999999996,6.4000000000000004,7.2000000000000002,7.4000000000000004,7.9000000000000004,6.4000000000000004,6.2999999999999998,6.0999999999999996,7.7000000000000002,6.2999999999999998,6.4000000000000004,6,6.9000000000000004,6.7000000000000002,6.9000000000000004,5.7999999999999998,6.7999999999999998,6.7000000000000002,6.7000000000000002,6.2999999999999998,6.5,6.2000000000000002,5.9000000000000004],"y":[6,5.0999999999999996,5.9000000000000004,5.5999999999999996,5.7999999999999998,6.5999999999999996,4.5,6.2999999999999998,5.7999999999999998,6.0999999999999996,5.0999999999999996,5.2999999999999998,5.5,5,5.0999999999999996,5.2999999999999998,5.5,6.7000000000000002,6.9000000000000004,5,5.7000000000000002,4.9000000000000004,6.7000000000000002,4.9000000000000004,5.7000000000000002,6,4.7999999999999998,4.9000000000000004,5.5999999999999996,5.7999999999999998,6.0999999999999996,6.4000000000000004,5.5999999999999996,5.0999999999999996,5.5999999999999996,6.0999999999999996,5.5999999999999996,5.5,4.7999999999999998,5.4000000000000004,5.5999999999999996,5.0999999999999996,5.0999999999999996,5.9000000000000004,5.7000000000000002,5.2000000000000002,5,5.2000000000000002,5.4000000000000004,5.0999999999999996],"type":"scatter","mode":"markers","name":"virginica","marker":{"color":"rgba(77,175,74,1)","line":{"color":"rgba(77,175,74,1)"}},"textfont":{"color":"rgba(77,175,74,1)"},"error_y":{"color":"rgba(77,175,74,1)"},"error_x":{"color":"rgba(77,175,74,1)"},"line":{"color":"rgba(77,175,74,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-iris-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Bunch ’o flowers
-</figcaption>
-</figure>
-</div>
-</div>
+<div class="column" style="width:70%;">
+
+</div><div class="column" style="width:30%;">
+
 </div></div>
-<p><img data-src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNnpwd2MxanN1MzM2ZmluZW5lNGdqYWVkbm9qamdkZWVjcHUybTZjOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l41lN3o4fk4ZgrSDK/giphy.gif" class="absolute" style="top: -40px; right: -140px; height: 250px; "></p>
-<p><img data-src="https://static.vecteezy.com/system/resources/thumbnails/046/320/909/small/cute-bunny-rabbit-inside-magician-s-hat-on-transparent-background-png.png" class="absolute fragment fade-in" style="left: 350px; bottom: 300px; height: 240px; " data-fragment-index="1"></p>
+<p><img data-src="https://emojiisland.com/cdn/shop/products/6_cc0e0b6b-4b8c-4b52-ba5d-e8da39abe776_large.png?v=1571606116" class="absolute" style="top: 20px; right: 235px; height: 100px; "></p>
+<p><img data-src="https://pngimg.com/uploads/futurama/futurama_PNG15.png" class="absolute" style="bottom: 150px; right: -50px; height: 500px; "></p>
 </section>
-<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278203e7d7d-session-info-august-03-2026-rendering" class="slide level2">
-<h2><iconify-icon role="img" inline="" icon="devicon:r" style="font-size: 2em;" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> Session Info (August 03, 2026) Rendering:</h2>
+<section id="ai-categorization" class="slide level2">
+<h2>    AI Categorization<sup>1</sup></h2>
+<p><br></p>
+<div class="Smallest">
+<table class="caption-top">
+<colgroup>
+<col style="width: 7%">
+<col style="width: 18%">
+<col style="width: 20%">
+<col style="width: 7%">
+<col style="width: 19%">
+<col style="width: 10%">
+<col style="width: 15%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Level</th>
+<th>Reasoning Depth</th>
+<th>Context Awareness</th>
+<th>Speed</th>
+<th>R/Quarto Support</th>
+<th>Best For</th>
+<th>Cost/Privacy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1. Standalone</td>
+<td>High</td>
+<td>Project description</td>
+<td>Medium</td>
+<td>Excellent (via prompting)</td>
+<td>Planning &amp; learning</td>
+<td>Varies (API)</td>
+</tr>
+<tr class="even">
+<td>2. IDE-Integrated</td>
+<td>Medium</td>
+<td>File + open project</td>
+<td>High</td>
+<td>Strong (esp.&nbsp;Copilot)</td>
+<td>Daily coding</td>
+<td>Subscription</td>
+</tr>
+<tr class="odd">
+<td>3. Agentic</td>
+<td>High</td>
+<td>Full codebase</td>
+<td>Medium-High</td>
+<td>Good (with good prompting)</td>
+<td>Complex/multi-file work</td>
+<td>Higher</td>
+</tr>
+<tr class="even">
+<td>4. Platform</td>
+<td>Medium</td>
+<td>Repo + team</td>
+<td>Medium</td>
+<td>Good</td>
+<td>Review &amp; collab</td>
+<td>Platform-dependent</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><img data-src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2lydXNidDdybDVtMWpyMTB2MWowdXBtZTlkangwY2VmNndld3JneCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/llwf790LJlOThd1Q3g/giphy.gif" class="absolute mirror" style="top: -40px; left: 0px; height: 230px; "></p>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>full report available <a href="https://github.com/jtkulas/LiveStreams/blob/main/slides/2026/7_21_26/AI.pdf">here</a></p></li></ol></aside></section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-august-04-2026-rendering" class="slide level2">
+<h2><iconify-icon role="img" inline="" icon="devicon:r" style="color:#82b1ff;;font-size: 2em;" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> &amp; <iconify-icon role="img" inline="" icon="material-icon-theme:quarto" style="font-size: 2em;" aria-label="Icon quarto from material-icon-theme Iconify.design set." title="Icon quarto from material-icon-theme Iconify.design set."></iconify-icon> Session Info (August 04, 2026) Rendering:</h2>
+<div class="columns">
+<div class="column" style="width:80%;">
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.5.0 (2025-04-11 ucrt)
@@ -417,26 +402,16 @@ tzcode source: internal
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
-other attached packages:
-[1] plotly_4.10.4 ggplot2_4.0.3
-
 loaded via a namespace (and not attached):
- [1] gtable_0.3.6        jsonlite_2.0.0      dplyr_1.2.0        
- [4] compiler_4.5.0      tidyselect_1.2.1    tidyr_1.3.2        
- [7] scales_1.4.0        yaml_2.3.12         fastmap_1.2.0      
-[10] R6_2.6.1            generics_0.1.4      knitr_1.51         
-[13] htmlwidgets_1.6.4   tibble_3.3.1        pillar_1.11.1      
-[16] RColorBrewer_1.1-3  rlang_1.1.7         xfun_0.57          
-[19] S7_0.2.1            lazyeval_0.2.2      otel_0.2.0         
-[22] viridisLite_0.4.3   cli_3.6.5           withr_3.0.2        
-[25] magrittr_2.0.4      crosstalk_1.2.1     digest_0.6.39      
-[28] grid_4.5.0          rstudioapi_0.18.0   lifecycle_1.0.5    
-[31] vctrs_0.7.2         evaluate_1.0.5      glue_1.8.0         
-[34] data.table_1.18.2.1 farver_2.1.2        rmarkdown_2.31     
-[37] purrr_1.0.4         httr_1.4.8          tools_4.5.0        
-[40] pkgconfig_2.0.3     htmltools_0.5.9    </code></pre>
+ [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      
+ [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      
+ [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        
+[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   </code></pre>
 </div>
 </div>
+</div><div class="column" style="width:20%;">
+<p>Quarto version 1.9.37</p>
+</div></div>
 
 
 <div class="reveal-header">
@@ -454,9 +429,10 @@ loaded via a namespace (and not attached):
 </div>
 </div>
 </section></section>
+
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
-<p><img src="https://images.vexels.com/media/users/3/243207/isolated/preview/cb2b3e27185f1abb1f7b1865d6a8d01a-magic-hat-with-bunny.png" class="slide-logo"></p>
+<p><img src="https://pngimg.com/uploads/robot/robot_PNG96.png" class="slide-logo"></p>
 <div class="footer footer-default">
 
 </div>
