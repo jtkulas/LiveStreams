@@ -120,18 +120,34 @@ Out of [several considered options](https://jtkulas.github.io/LiveStreams/slides
 
 ::: {.columns}
 
-::: {.column width="70%"}
+::: {.column width="75%"}
+
+```{r}
+#| echo: false
+#| eval: true
+#| fig-height: 5   # or use width/height in leaflet() itself
+library(leaflet)
+
+leaflet(height = "500px", width = "100%") %>%
+  addTiles() %>%                          # OpenStreetMap tiles
+  addMarkers(
+    lng = 174.768, 
+    lat = -36.852, 
+    popup = "The birthplace of R"
+  ) %>%
+  setView(lng = 174.768, lat = -36.852, zoom = 12)
+```
 
 :::
 
-::: {.column width="30%"}
+::: {.column width="25%"}
 
 
 :::
 
 :::
 
-![](https://emojiisland.com/cdn/shop/products/6_cc0e0b6b-4b8c-4b52-ba5d-e8da39abe776_large.png?v=1571606116){.absolute right="235" top="20" height="100"}
+![](https://emojiisland.com/cdn/shop/products/6_cc0e0b6b-4b8c-4b52-ba5d-e8da39abe776_large.png?v=1571606116){.absolute right="240" top="20" height="100"}
 
 ![](https://pngimg.com/uploads/futurama/futurama_PNG15.png){.absolute right="-50" bottom="150" height="500"}
 
