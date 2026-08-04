@@ -64,7 +64,7 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
 
-![](https://images.vexels.com/media/users/3/127207/isolated/preview/cfd9d59883d9dce3282073476f909da7-blue-progress-bar-line-icon-svg.png){.absolute top="295" right="125" height="180" .tiltpostit}
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnFjc3VpejZ1eDByOW9qOTVlbmlkZW9hOG1sZ2RucjQyMW9leTF0byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dWOKEQ5ewh94RJLemj/giphy.gif){.absolute top="295" right="140" height="180" .tiltpostit}
 
 ## [AI--Assisted App Build (II)]{.plainjane style='font-size:1.2em;'}
 
@@ -72,7 +72,30 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ### Week II
 
-`app.R` (copilot's suggestion)
+::: {.columns}
+
+::: {.column width="60%"}
+
++ dev within `app.R` 
+  + {{< iconify devicon:githubcopilot >}}'s suggestion
++ 2--layers of capability
++ {{< iconify icon-park:bug >}} debugging along the way {{< iconify emojione-v1:bug >}}
++ heavy {{< iconify devicon:r >}}--lifting within source script
+
+:::
+
+::: {.column width="40%"}
+
+#### Currently: 
+
++ accepts addresses 
+  + format not tested
++ locates & zooms
++ {{< iconify twemoji:no-entry >}} [no US Census connection]{.red} {{< iconify twemoji:no-entry >}}
+
+:::
+
+:::
 
 ### Week I
 
@@ -96,12 +119,14 @@ necessary to execute this dashboard
 
 :::
 
+::: {.column width="4%"}
+:::
 
-::: {.column width="28%"}
+::: {.column width="24%"}
 
 <br>
 
-Out of [several considered options](https://jtkulas.github.io/LiveStreams/slides/2026/7_21_26/#/aiassisted-app-build), chose to build via GitHub Copilot {{< iconify logos:github-copilot >}} from within GitHub {{< iconify icon-park:github >}}
+\*Out of [several considered options](https://jtkulas.github.io/LiveStreams/slides/2026/7_21_26/#/aiassisted-app-build), chose to build via GitHub Copilot {{< iconify octicon:copilot-16 >}} from within GitHub {{< iconify mdi:github >}}
 
 :::
 
