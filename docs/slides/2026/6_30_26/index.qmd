@@ -1,0 +1,195 @@
+---
+title: "<br>[R is for <br>Authoring!!]{.shadowsharp}" 
+author: "OOH Session #136...<br>[PowerPoint!!! {{< iconify vscode-icons:file-type-powerpoint2 >}}]{.powerpoint  style='font-size:2em;'}"
+title-slide-attributes: 
+  data-background-image: ../../../img/pointing.png
+#  data-background-opacity: ".8"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Microsoft_Office_PowerPoint_%282019%E2%80%932025%29.svg/960px-Microsoft_Office_PowerPoint_%282019%E2%80%932025%29.svg.png?_=20210821050414 #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {.columns}
+::: {.column width="55%"}
++ Recap session #135
++ Today's topic(s):
+    + [[PowerPoint!! {{< iconify vscode-icons:file-type-powerpoint2 >}}]{.powerpoint}](https://quarto.org/docs/presentations/powerpoint.html)
++ Shared problem-solving
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+::: {.column width="45%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+:::
+
+:::
+
+::: {.absolute style="top: 170px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/6_23_26">
+  <img src="/img/title135.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#135: 
+
+![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
+
+![](https://cdn.freebiesupply.com/logos/thumbs/2x/johnny-bravo-1-logo.png){.absolute top="283" right="80" height="200"}
+
+## [[[FONT AWESOME icons!!]{.bravo}&nbsp;{{< fa heart >}}]{.bigger}](https://quarto-ext.github.io/fontawesome/)
+
+::: {.panel-tabset}
+
+### Repository
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+:::
+
+::: {.column width="40%" .smaller}
+
++ popular library for icons ([used by developers & designers](https://github.com/FortAwesome/Font-Awesome))
++ provides icons for over 200 million sites
++ simple integration
++ regularly updated
+
+:::
+
+:::
+
+::: {.absolute style="bottom: 65px; left: -140px; height:400px;"}
+<a href="https://fontawesome.com/">
+  <img src="/img/fontawesome.JPG">
+</a>
+:::
+
+### {{< iconify devicon:r >}} Package
+
+::: {.columns}
+
+::: {.column width="75%"}
+
++ using {{< iconify logos:r-lang >}}? &#x2705;
++ using {{< iconify devicon:python >}}? &#x274C;
+
+```{bash}
+library(fontawesome)
+
+`r fa("r-project")`                                  #<1>
+`r fa("r-project", fill="#bada55")`
+`r fa("r-project", fill="#000000", height="5em")`
+`r fa("r-project", fill="#4287f5", title="Boo!!")`   #<1>
+```
+1. actually prefer to structure as `fontawesome::fa()` (specify library within inline code -- `fa` is/was shared with other packages used by Psychologists)
+
+:::
+
+::: {.column width="25%"}
+
+`r fontawesome::fa("r-project")`<br>
+`r fontawesome::fa("r-project", fill="#bada55")`<br>
+`r fontawesome::fa("r-project", fill="#000000", height="5em")`<br>
+`r fontawesome::fa("r-project", fill="#4287f5", title="Boo!!")`
+
+:::
+
+:::
+
+### {{< iconify material-icon-theme:quarto >}} Extension
+
+::: {.columns}
+
+::: {.column width="80%"}
+
+Available [on {{< iconify octicon:lockup-github-16 style="color:#ffffff;" >}}](https://github.com/quarto-ext/fontawesome)  
+
++ activate from terminal (within project directory)
+
+```{bash}
+{{< fa brands r-project >}} 
+[{{< fa brands r-project >}}]{style='color:#bada55;'}  
+[{{< fa brands r-project size=5x >}}]{style='color:#000000;'} 
+[{{< fa brands r-project title="Boo!!" >}}]{style='color:#4287f5;'} 
+```
+
+:::
+
+::: {.column width="20%"}
+
+{{< fa brands r-project >}} <br>
+[{{< fa brands r-project >}}]{style='color:#bada55;'}  <br>
+[{{< fa brands r-project size=5x >}}]{style='color:#000000;'} <br>
+[{{< fa brands r-project title="Boo!!" >}}]{style='color:#4287f5;'}  
+
+:::
+
+:::
+
+:::
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExODFoNDkzbm02dmpscGY1NDhhNW13enhicWh6dHZpMXNncHg5emltYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6Nd5Yp1UrnyjC/giphy.gif){.absolute right="-150" top="-40" height="250"}
+
+# Today...
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzF5b2RmYmx0dGlocGY3bHd3MTNrajR6dzY5MWFtbTZ0M3hpdWVzeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5h7nwwMJdNpxoWxmlh/giphy.gif)
+
+## [[PowerPoint!! {{< iconify vscode-icons:file-type-powerpoint2 >}}]{.powerpoint .bigger}](https://quarto.org/docs/presentations/powerpoint.html)
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOXExazlpYXVxdjZyODV3MDhyOTNjeXpkeGVvMTBrenIwNWF3ZnFpayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1oHmASyOkABYmqecGn/giphy.gif){.absolute height="500" left="70"}
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWFzMTQ0cjNlbjMyOGNoZjZvNnRoZXA2eWRybGdyN3FveTY2a3RuaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/iaRKKzK2IqPKWxChFS/giphy.gif){.absolute left="-130" bottom="40" height="300"}
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzY4ajZ3azZpMGo3ZnQ3MmtxbTVrb2QwNHFiZjE1dm53ZjNzaHoyNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3VydkbG6UOcUg/giphy.gif){.absolute right="-150" top="0" height="250"}
+
+## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+
+::: {.columns}
+
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| eval: true
+sessionInfo()
+```
+:::
+
+::: {.column width="20%"}
+
+Quarto version `r quarto::quarto_version()`  
+
+:::
+
+:::
+

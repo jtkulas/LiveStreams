@@ -1,0 +1,484 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css?family=Dancing Script');
+@import url('https://fonts.googleapis.com/css?family=Fontdiner Swanky');
+@import url('https://fonts.googleapis.com/css?family=Mona Sans');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Joti One');
+@import url('https://fonts.googleapis.com/css?family=Michroma');
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
+@import url('https://fonts.googleapis.com/css?family=Grechen Fuemen');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Shadows Into Light');
+@import url('https://fonts.googleapis.com/css?family=Gochi Hand');
+@import url('https://fonts.googleapis.com/css?family=Great Vibes');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url('https://fonts.googleapis.com/css?family=Kaushan Script');
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
+@import url('https://fonts.googleapis.com/css?family=Alan Sans');
+@import url('https://fonts.googleapis.com/css?family=Fleur De Leah');
+@import url('https://fonts.googleapis.com/css?family=Kavoon');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Pangolin');
+@import url('https://fonts.googleapis.com/css?family=Exo');
+@import url('https://fonts.googleapis.com/css?family=Permanent Marker');
+@import url('https://fonts.googleapis.com/css?family=Berkshire Swash');
+@import url('https://fonts.googleapis.com/css?family=Google Sans Flex');
+@import url('https://fonts.googleapis.com/css?family=Tilt Prism');
+@import url('https://fonts.googleapis.com/css?family=Love Ya Like A Sister');
+
+$presentation-title-slide-text-align: right;
+
+// fonts
+$font-family-sans-serif: "Palatino Linotype", "Book Antiqua", Palatino,
+  FreeSerif, serif !default;
+$presentation-line-height: 1.4;
+
+.quarto-title-author-name {
+  font-size: 65px;
+  color: white;     /*-- #ccaadd white --*/
+  font-weight: bold;
+  font-family: 'Dancing Script';
+  text-shadow: 
+    4px 4px 0px black,
+    -1px -1px 0px black;
+}
+
+.reveal .slide-logo {       /*-- use for small image renderings --*/
+  max-height: unset !important;
+  height: 150px !important;
+}
+
+.centered {
+  text-align: center; /*-- justify --*/
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+// colors
+$body-bg: #e9cee5; 
+$body-color: #a92777;
+$link-color: #c94f8e;
+$selection-bg: #2a1625;              
+
+// headings
+$presentation-heading-font: "Fontdiner Swanky", "Book Antiqua", Palatino,
+  FreeSerif, serif !default;             
+$presentation-heading-color: #a92777 !default;
+$presentation-h1-text-shadow: 7px 7px #222;
+$presentation-heading-text-shadow: 5px 5px #222;
+
+// callouts
+
+/* ------------------------------------------------------------------
+   1. Base colour for the note call-out
+   ------------------------------------------------------------------ */
+$callout-color-note: #a92777 !default;          // your pink
+
+/* ------------------------------------------------------------------
+   2. Title-background opacity (global) – 0 = transparent, 1 = solid
+   ------------------------------------------------------------------ */
+$callout-title-bg-opacity: 0.35 !default;
+
+/* ------------------------------------------------------------------
+   3. OPTIONAL: solid background for the note title (overrides opacity)
+   ------------------------------------------------------------------ */
+$callout-title-bg-note: rgba($callout-color-note, 0.35) !default;
+
+/* ------------------------------------------------------------------
+   4. Left accent bar
+   ------------------------------------------------------------------ */
+$callout-border-left-width-note: 6px !default;
+
+/* ------------------------------------------------------------------
+   5. Padding & icon (you already have these)
+   ------------------------------------------------------------------ */
+$callout-padding: 1.2em !default;
+$callout-icon-note: "book-fill" !default;
+
+/* ------------------------------------------------------------------
+   6. (Optional) Make sure the title text is readable on the pink bg
+   ------------------------------------------------------------------ */
+$callout-title-color-note: #fff !default;      // white text
+
+// code blocks 
+
+/*$code-block-bg: #241f23;*/
+$code-block-border-color: #a92777;
+
+/* adding background to inline code elements */
+:not(pre) > code {
+  background-color:  #e9cee5 !important; /* Light gray shade, adjustable */
+  padding: 0.1em 0.2em;
+  border-radius: 4px;
+  font-size: 0.6em;
+  font-family: ui-monospace, Menlo, Monaco, "Courier New", monospace;
+  border: 1px solid #a92777;
+}
+
+/*-- scss:mixins --*/
+
+// Background generator
+@mixin bodyBackground() {
+  @include radial-gradient(#f2bbea, #faf5f9);
+}
+
+/*-- scss:rules --*/
+
+.callout-note .callout-title {
+  background: $callout-title-bg-note !important;   /* solid or semi-transparent */
+  color: $callout-title-color-note !important;
+}
+
+.titleauthor {
+  font-size: 65px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Dancing Script';
+  text-shadow: 
+    2px 2px 2px black,
+    -3px -3px 3px black;
+}
+
+.titlestyle {
+  color: 	#a92777;
+  font-weight: bold;
+  font-family: 'Fontdiner Swanky';
+  text-shadow: 
+    5px 5px 0px #222;
+}
+
+// tilts, mirrors, etc 
+
+.shadow {
+  text-shadow: 
+    2px 2px 3px #222,
+    -2px -2px 3px #222 !important;
+}
+
+.noshadow {
+  text-shadow: 
+    0px 0px 0px #222,
+    -0px -0px 0px #222 !important;
+}
+
+.foreground-image {
+  z-index: 1000 !important;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.mirror {
+  transform: rotateY(180deg);
+}
+
+.tilt {
+  rotate: 20deg;
+}
+
+.tilt2 {
+  rotate: -20deg;
+}
+
+.smaller {
+  font-size: .9em;
+}
+
+.Smaller {
+  font-size: .8em;
+}
+
+.Smallest {
+  font-size: .6em;
+}
+
+.bigger {
+  font-size: 1.4em;
+}
+
+.Bigger {
+  font-size: 2em;
+}
+
+.red{
+  color: #ff000F;
+}
+.orange{
+  color: #ff5c00;
+}
+.yellow{
+  color: #ffff00;
+}
+.green{
+  color: #00ff00;
+}
+.blue{
+  color: #0000ff;
+}
+.indigo{
+  color: #4b0082;
+}
+
+// fonts
+
+.copilot2 {
+  font-family: "Oswald";
+  color: transparent; /* Make the text color transparent to show the gradient */
+  background: linear-gradient(to bottom, #1E90FF 50%, #9146bd 100%); /* Gradient from purple to blue */
+  -webkit-background-clip: text; /* Clip the gradient to the text */
+  background-clip: text; /* Standard property for broader support */
+  --fade-start: 50%; /* Kept for consistency, though not used here */
+  font-weight: bold;
+}
+
+.copilot3 {
+  font-family: "Oswald";
+  color: transparent; /* Make the text color transparent to show the gradient */
+  background: linear-gradient(to bottom, #1E90FF 50%, #9146bd 100%); /* Gradient from purple to blue */
+  -webkit-background-clip: text; /* Clip the gradient to the text */
+  background-clip: text; /* Standard property for broader support */
+  --fade-start: 50%; /* Kept for consistency, though not used here */
+  font-weight: bold;
+  text-shadow: 0px 0px !important;
+}
+
+.themingpink{
+  color: #db72b6;
+  font-family: "Fontdiner Swanky";
+  text-shadow: 
+    0px 0px 0px #2c528f,
+    -5px -5px 0px #2c528f !important;
+}
+
+.themingblue{
+  color: #2c528f;
+  font-family: "Fontdiner Swanky";
+  text-shadow: 
+    0px 0px 0px #db72b6,
+    -4px -4px 0px #db72b6 !important;
+}
+
+.chatter {
+  color: white;
+  font-family: "Joti One";
+  text-shadow: 
+    4px 4px 0px black,
+    -2px -2px 2px black !important;
+}
+
+.positron {
+  color: #ffecf2; //#ffecf2
+  font-family: "Michroma";
+  text-shadow: 
+    1px 1px 0px black,
+    -1px -1px 0px black !important;
+}
+
+.supergirl {
+  color: #f11712; 
+  font-family: "Bangers";
+  text-shadow: 
+    2px 2px 2px #34f9fe,
+    -2px -2px 2px #34f9fe !important;
+}
+
+.tangerine {
+  color: #000; 
+  font-family: "Tangerine";
+  font-size: 3em;  
+  font-weight: normal !important;
+  text-shadow: 
+    2px 2px 2px white,
+    -2px -2px 2px #a92777 !important;
+}
+
+.tangerine2 {
+  color: #000; 
+  font-family: "Tangerine";
+  font-weight: normal !important;
+  text-shadow: 
+    1px 1px 1px white,
+    -1px -1px 1px #a92777 !important;
+}
+
+.titans {
+  color: #FAFDFF; 
+  font-family: Grechen Fuemen;
+  text-shadow: 
+    3px 3px 5px #00f0ff,
+    -3px -3px 5px #00f0ff !important;
+}
+
+.titans2 {
+  color: #FAFDFF; 
+  font-family: Grechen Fuemen;
+  text-shadow: 
+    2px 2px 4px #04d9ff,
+    -2px -2px 4px #04d9ff !important;
+}
+
+.automobile {
+  color: #f5276c; 
+  font-family: Lobster;
+  font-weight: normal !important;
+  text-shadow: 
+    -3px -3px 0px white,
+    3px 3px 0px black !important;
+}
+
+.auto2 {
+  color: #f5276c; 
+  font-family: Lobster;
+  font-weight: normal !important;
+  text-shadow: 
+    2px 2px 0px black !important;
+}
+
+.speech {
+  color: #db72b6; 
+  font-weight: normal !important;
+  font-family: Shadows Into Light;
+  text-shadow: 
+    1px 1px 0px #a92777 !important;
+}
+
+.gochi {
+  color: #f4bc1c; 
+  font-family: Gochi Hand;
+//  text-shadow: 
+//    1px 1px 0px black;
+}
+
+.fencing {
+  color: #7d7d7d; 
+  font-family: Great Vibes;
+//  font-weight: normal !important;
+//  text-shadow: 
+//    1px 1px 0px black !important;
+}
+
+.orbitron {
+  color: #F9c70c; 
+  font-family: Orbitron;
+  text-shadow: 
+    -2px -2px 6px black,
+    3px 3px 0px #938200 !important;
+}
+
+
+.embedding {
+  color: #90d5ff; 
+  font-family: Kaushan Script;
+  text-shadow: 
+    2px 2px 0px black;
+}
+
+.funkymats {
+  color: #98fbcb; 
+  font-family: Satisfy;
+  font-weight: normal !important;
+  text-shadow: 
+    2px 2px 0px black,
+    -1px -1px 0px #5200ff;
+}
+
+.nofunnybusiness {
+  font-family: Alan Sans;
+  color: black;
+  text-shadow:
+    0 0 0,
+    0 0 0 !important;
+}
+
+.flowery {
+  font-family: Fleur De Leah;
+  color: #4CBB17;
+  font-weight: normal !important;
+  text-shadow:
+   -1px -1px 0px #40826D,
+    2px 2px 0px black !important;
+}
+
+.frame {
+  font-family: Kavoon;
+  color: #ad5cad;
+  font-weight: normal !important;
+  text-shadow:
+   -1px -1px 0px white,
+   4px 4px 0px black !important;
+}
+
+.juplab {
+  font-family: Roboto;
+  color: #f37821;
+}
+
+.quarto {
+  font-family: michroma;   // close but not perfect
+  color: #42729b;
+}
+
+.knitting {
+  font-family: Pangolin; 
+  font-weight: normal !important;
+  color: #4e91c9;
+}
+
+.layout {
+  font-family: Exo; 
+  font-weight: normal !important;
+  color: #fae1ab;
+}
+
+.marker {
+  font-family: Permanent Marker; 
+  font-weight: normal !important;
+  color: #242938;
+  text-shadow:
+   -0px -0px 0px white,
+   0px 0px 0px black !important;
+}
+
+.noel {
+  font-family: Berkshire Swash;  
+  color: #4CBB17;
+  font-weight: normal !important;
+  text-shadow:
+   -1px -1px 0px #40826D,
+    2px 2px 0px black !important;
+}
+
+.observable {
+  font-family: "Google Sans Flex";  
+  color: #000000;
+  font-weight: normal !important;
+  text-shadow:
+   -2px -2px 4px #f7e018,
+    2px 2px 4px #f7e018 !important;
+}
+
+.observable2 {
+  font-family: "Google Sans Flex";  
+  color: #000000;
+  font-weight: normal !important;
+}
+
+.prism {
+  font-family: "Tilt Prism";  
+  color: white;
+}
+
+.prism2 {
+  font-family: "Tilt Prism";  
+  color: black;
+}
+
+.honk{
+  font-family: "Love Ya Like A Sister";
+  color: #ffefdb;
+  font-size: 1.5em;
+}
+

@@ -1,0 +1,32 @@
+---
+title: "axe--core"
+format: 
+  html:
+    axe: 
+      output: document
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see [the URL](https://quarto.org/docs/presentations/).
+
+## Bullets
+
+When you click the **Render** button a document will be generated that includes:
+
+-   Content authored with markdown
+-   Output from executable code
+
+## Code
+
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+## Images
+
+![WITH alt-text (`fig-alt`)](https://upload.wikimedia.org/wikipedia/en/thumb/f/f4/Daffy_Duck.svg/250px-Daffy_Duck.svg.png){fig-alt="Happy Daffy!!" #fig-daffy1}
+
+![without alt-text](https://i.ebayimg.com/images/g/PuQAAOSwyLBiYvw2/s-l1200.png){#fig-daffy2}

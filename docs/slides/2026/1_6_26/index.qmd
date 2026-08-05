@@ -1,0 +1,163 @@
+---
+title: "R is for <br>Authoring!!" 
+author: 'OOH Session #111...<br>[{{< iconify material-icon-theme:quarto >}}]{.huge}[quarto®!!]{.quarto .Bigger}'
+title-slide-attributes: 
+  data-background-image: /img/suzi2.png  
+#  data-background-opacity: ".7"
+format:
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://png.pngtree.com/png-vector/20230814/ourmid/pngtree-an-illustration-of-a-bass-guitar-clipart-vector-png-image_6899720.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header         
+execute: 
+  eval: false       ## for fenced code 
+  freeze: false
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {layout="[[10,10],]"}
+::: first-column
++ Recap session #110
++ Today's topic(s):
+    + [[quarto®!!]{.quarto .Bigger}](https://quarto.org/docs/guide/)
++ Shared problem-solving
+
+:::
+
+::: second-column
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 185px; right: -120px; width:550px;"}
+<a href="https://bookdown.org/jtkulas/12_30_25">
+  <img src="/img/title110.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# {background-image="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3lxd2toZHo3bGZocTNvcmY5c3RsYXAwbWw4bDUzdW91N21mamp2ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6ZBpUX0CdJdaU/giphy.gif"}
+
+# Recap of Session <br>#110: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://clipart-library.com/2024/clip-disney-pluto/clip-disney-pluto-4.png){.absolute width="130" top="265" right="110" .tilt}
+
+## [[Pluto!!]{.pluto2 .Bigger}](https://github.com/fonsp/Pluto.jl) 
+
+...very fun notebook authoring environment for [{{< iconify logos:julia size=xl >}}](https://julialang.org/downloads/) <br>
+...you could also just use it as your {{< iconify bi:markdown-fill >}} editor if you wanted<br>to play a bit, although [{{< iconify logos:julia size=xl >}} is needed](https://julialang.org/downloads/)<br>to access locally (see below)
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+### Locally: {#local}
+
+```
+julia> using Pkg
+julia> Pkg.add("Pluto")
+julia> using Pluto
+julia> Pluto.run()
+```
+:::
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="55%"}
+
+### Online:
+
+[Tutorials{{< iconify fxemoji:graduationcap >}}](https://featured.plutojl.org/)
+
+[Examples{{< iconify flat-color-icons:idea >}}](https://juliaclimate.github.io/Notebooks/)
+
+:::
+
+:::
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzBqbjVjbDI4a3k2cWdmeDJtMmJ5YXU0OTF1dzQ2MDE1dmwyNTl6biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ohzdZdf1j0LwIuOQg/giphy.gif){.absolute right="-140" bottom="40" height="300"}
+
+![](https://pngimg.com/uploads/pluto_disney/small/pluto_disney_PNG12.png){.absolute right="-100" top="-30" height="250"}
+
+# Today...
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnFjbjVibnpncm01Y2llbGFhZGdlZG1qaGdicnl1ZnAzYXl2bWVtZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6ZtqsAjNmn0IdWFi/giphy.gif)
+
+## [[quarto®!!]{.quarto .Bigger}](https://quarto.org/docs/guide/)
+
+::: {.absolute style="bottom: 140px; left: 420px; width: 280px;"}
+<a href="https://quarto.org/docs/output-formats/html-basics.html">
+  <img src="https://cdn.freebiesupply.com/logos/large/2x/html-5-logo-svg-vector.svg">
+</a>
+:::
+
+::: {.absolute style="bottom: 230px; right: 10px; width: 220px;"}
+<a href="https://quarto.org/docs/output-formats/pdf-basics.html">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/PDF_file_icon.svg/1667px-PDF_file_icon.svg.png">
+</a>
+:::
+
+::: {.absolute style="bottom: 250px; left: 80px; width: 250px;"}
+<a href="https://quarto.org/docs/output-formats/typst.html">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIla_SjlPzAr-yXZV7YN-ti1qNSbws-zd-mw&s">
+</a>
+:::
+
+::: {.absolute style="bottom: 10px; left: 270px; width: 160px;"}
+<a href="https://quarto.org/docs/reference/formats/docx.html">
+  <img src="https://static.vecteezy.com/system/resources/thumbnails/027/179/388/small/microsoft-word-icon-logo-symbol-free-png.png">
+</a>
+:::
+
+::: {.absolute style="bottom: 10px; right: 220px; width: 180px;"}
+<a href="https://quarto.org/docs/presentations/powerpoint.html">
+  <img src="https://static.vecteezy.com/system/resources/thumbnails/027/179/348/small/microsoft-power-point-icon-logo-symbol-free-png.png">
+</a>
+:::
+
+![](https://m.media-amazon.com/images/S/aplus-media-library-service-media/1d1b0cd8-1556-4ccf-8356-ecc92b6132ce.__CR0,0,970,300_PT0_SX970_V1___.jpg){.absolute top="-10" right="-140" height="160" .fragment fragment-index=2}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Jupyter_logo.svg/1767px-Jupyter_logo.svg.png){.absolute left="-120" bottom="360" height="100" .fragment fragment-index=1}
+
+![](https://www.freeiconspng.com/thumbs/notepad-icon/notepad-icon-7.png){.absolute left="-140" bottom="250" height="100" .fragment fragment-index=1}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/RStudio_logo_flat.svg/2560px-RStudio_logo_flat.svg.png){.absolute left="-140" bottom="140" height="100" .fragment fragment-index=1}
+
+![](https://positron.posit.co/assets/images/positron-logo_fullcolor-TM.png){.absolute left="-140" bottom="40" height="75" .fragment fragment-index=1}
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMTliOW1neTZzd2ZvZ21zM29xZThnNzhlZnNnemUxNG55ejVuMDd3YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6ZsTQ8Y0D3kkDjJ6/giphy.gif){.absolute right="-140" bottom="-10" height="250"}
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+#| eval: true
+sessionInfo()
+```
+
+

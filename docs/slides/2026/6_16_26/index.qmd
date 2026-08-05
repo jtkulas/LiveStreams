@@ -1,0 +1,221 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: "OOH Session #134...<br>[Custom<br>Callouts!!]{.calling  style='font-size:2em;'}"
+title-slide-attributes: 
+  data-background-image: ../../../img/bubble.png
+  data-background-opacity: ".7"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://cdn.creazilla.com/cliparts/1996313/cheer-megaphone-clipart-md.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+custom-callout:
+  todo:
+    icon-symbol: "💯"
+    color: "white"
+  thumbs-up:
+    icon-symbol: "fa-jedi"
+    color: "#008000"
+  eighteen: 
+    title: "Adults Only!"
+    icon-symbol: "🔞"
+    color: "red"
+filters: 
+  - reveal-header
+  - custom-callout
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {.columns}
+::: {.column width="55%"}
++ Recap session #133
++ Today's topic(s):
+    + [[Custom Callouts!!]{.calling .bigger}](https://github.com/coatless-quarto/custom-callout)
++ Shared problem-solving
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+::: {.column width="45%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+:::
+
+:::
+
+::: {.absolute style="top: 170px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/6_9_26">
+  <img src="/img/title133.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#133: 
+
+![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/3840px-R_logo.svg.png){.absolute top="305" right="118" height="150"}
+
+## [[Code Appendices]{.glitch .bigger}](https://github.com/cl-roberts/code-appendix)
+
+`knitr` package [function](https://pkg.yihui.org/rmarkdown-cookbook/code-appendix) and [Quarto extension(s)](https://github.com/coatless-quarto/regurgitate)
+
+::: {.panel-tabset}
+
+### Quarto {{< iconify material-icon-theme:quarto >}}
+
+::: {.columns}
+
+::: {.column width="70%"}
+
+1. [install extension]() (from terminal):
+
+```{r}
+quarto add cl-roberts/code-appendix
+```
+
+2. activate capability within .qmd YAML:
+
+```{r}
+---
+filters:
+    - code-appendix
+---
+```
+
+:::
+
+::: {.column width="30%"}
+
+::: {.callout-note}
+
+Set `echo: true` on chunks you want to be displayed within the Appendix. [`regurgitate` is another option](https://github.com/coatless-quarto/regurgitate) (we didn't test)
+
+:::
+
+:::
+
+:::
+
+### {{< iconify file-icons:rmarkdown style="color:#82b1ff;" >}} Markdown
+
+::: {.columns}
+
+::: {.column width="65%"}
+
+````{r}
+# Appendix: All code for this report
+
+```{r ref.label=knitr::all_labels(), echo=TRUE, eval=FALSE}
+## Can be empty -- effect is located within chunk specification
+```
+````
+
+::: {.smaller}
+
++ Can also use [within Quarto documents](https://github.com/orgs/quarto-dev/discussions/6650#discussioncomment-6861503)
++ Appendix heading **NOT** auto--generated
+
+:::
+
+:::
+
+::: {.column width="35%"}
+
+::: {.callout-note}
+
+Operates independently from individual code chunks (if you don't want duplicate echoing, set individual code chunk options to `echo: false`)
+
+:::
+
+:::
+
+:::
+
+:::
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHg4MmIwZ2VnNTRhMTZvdnA0eHc3aHAwY2JoaWNkdWp5NWc2bXlyOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/H7f4BTCtRNnYlnANyj/giphy.gif){.absolute right="-140" top="-30" height="300"}
+
+# Today...
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnlibzF6bXNxMHJxcmZtY3dvbGp3YWl0b3FuOGZjYjR2Z3BsaGVnbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YF6ruFN9tmEElUAB6q/giphy.gif)
+
+## [[Custom Callouts!!]{.calling .bigger}](https://github.com/coatless-quarto/custom-callout)^[deeper customization [also possible](https://jtkulas.github.io/LiveStreams/slides/bookdown/callouts/#/customized-callouts) -- more flexible but much less convenient]
+
+::: {.columns .Smaller}
+
+::: {.column width="50%"}
+
+::: todo
+
++ dis...
++ dat...
++ ...& de udder ting
+
+:::
+
+::: {.thumbs-up title="Use the force, Wicket"}
+![](https://www.lucasfilm.com/app/uploads/star-wars-ewoks-standard-page-marquee-02.jpg)
+:::
+
+:::
+
+::: {.column width="50%"}
+
+::: eighteen
+Noone under 18 allowed!!
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdDRpZjhzNDE5cDdwdmNrNXQwd2dpYW1oa3g2djIzcHYzejJoczBidCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/fT5iGWCHaBaWQ/giphy.gif)
+:::
+
+:::
+
+:::
+
+# [BREAKING NEWS!!!](https://github.com/jtkulas/callout-png) {background-image="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWV2OG5zeDZ2NjVjZjc1eWh2NW1ibGRpbGt1bWswbHpjcWFpaWltZiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rjZom7deOq2grVGXm4/giphy.gif"}
+
+
+## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+
+::: {.columns}
+
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| eval: true
+sessionInfo()
+```
+:::
+
+::: {.column width="20%"}
+
+Quarto version `r quarto::quarto_version()`  
+
+:::
+
+:::
+

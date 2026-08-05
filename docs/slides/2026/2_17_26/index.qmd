@@ -1,0 +1,316 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: 'OOH Session #117...<br>[watermarks]{.righteous .Bigger}'
+title-slide-attributes: 
+  data-background-image: https://cdn.dribbble.com/userupload/4028254/file/original-fe9a8e6ccf3feafb6b208c887de22ae3.jpg?resize=752x423&vertical=center #https://media.istockphoto.com/id/1298585936/vector/underwater-background-with-water-bubbles-and-undersea-light-rays-shine.jpg?s=612x612&w=0&k=20&c=wO-ua-rpxoX3fhvginzgxu7g_Ll7kMEFoa1c20uwnKU=   
+  data-background-opacity: ".8"
+format:
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://freepngimg.com/thumb/tap/4-2-tap-png-clipart.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {layout="[[10,10],]"}
+::: first-column
++ Recap session #116
++ Today's topic(s):
+    + [[watermarks]{.righteous .bigger}](https://github.com/leovan/quarto-watermark)  
++ Shared problem-solving
+
+:::
+
+::: second-column
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 185px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/2_10_26">
+  <img src="/img/title116.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#116: 
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://images.fineartamerica.com/images/artworkimages/medium/3/us-looney-tunes-pepe-le-pew-valentines-kiss-01-white-sofiaf-canda-transparent.png?odnHeight=117&odnWidth=117&odnBg=FFFFFF){.absolute width="140" top="250" right="105"}
+
+## [[{{< iconify streamline-sharp-color:double-heart >}}]{.smaller}{{< iconify emojione-v1:red-heart >}}[Valentines]{.valentines .Bigger}{{< iconify emojione:red-heart >}}[{{< iconify glyphs-poly:heart >}}]{.smaller}](https://jtkulas.github.io/LiveStreams/slides/2026/valentine)
+
+::: {.panel-tabset}
+
+### base {{< iconify mdi:heart-pulse style="color:#ff69b4;" >}}  
+
+::: {.columns}
+
+::: {.column width="15%"}
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| eval: true
+#| echo: false
+
+dat<- data.frame(t=seq(0, 2*pi, by=0.1) )
+ xhrt <- function(t) 16*sin(t)^3
+ yhrt <- function(t) 13*cos(t)-5*cos(2*t)-2*cos(3*t)-cos(4*t)
+ dat$y=yhrt(dat$t)
+ dat$x=xhrt(dat$t)
+ with(dat, plot(x,y, type="l"))
+ 
+with(dat, polygon(x,y, col="hotpink")) 
+points(c(10,-10, -15, 15), c(-10, -10, 10, 10), pch=169, font=5)
+ 
+```
+:::
+
+::: {.column width="35%"}
+
+```{r}
+#| eval: false
+#| echo: true
+
+dat<- data.frame(t=seq(0, 2*pi, by=0.1) )
+ xhrt <- function(t) 16*sin(t)^3
+ yhrt <- function(t) 13*cos(t)-5*cos(2*t)-2*cos(3*t)-cos(4*t)
+ dat$y=yhrt(dat$t)
+ dat$x=xhrt(dat$t)
+ with(dat, plot(x,y, type="l"))
+ 
+with(dat, polygon(x,y, col="hotpink")) 
+points(c(10,-10, -15, 15), c(-10, -10, 10, 10), pch=169, font=5)
+ 
+```
+:::
+
+:::
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZW43Z2F4bHhrN24xYm11azFpNXdlNWlxZ2VyeXY1N2U0a3YwaHB6aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RoJbe4ha8CTfO/giphy.gif){.absolute left="-160" bottom="0" height="250"}
+
+### `ggplot2` {{< iconify mdi:heart-pulse style="color:#ff0000;" >}}
+
+::: {.columns}
+
+::: {.column width="15%"}
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+#| eval: true
+
+library(ggplot2)
+
+dat <- data.frame(t = seq(0, 2*pi, by = 0.01))
+x <-  function(t) 16 * sin(t)^3
+y <- function(t) 13*cos(t) - 5*cos(2*t) - 2*cos(3*t) - cos(4*t)
+
+dat$y <- y(dat$t)
+dat$x <- x(dat$t)
+
+heart <- ggplot(dat, aes(x,y)) +
+  geom_polygon(fill = "red", col = "firebrick", alpha = 0.8) +
+  geom_text(aes(x = 0, y = 0, label = "\u2661\u2764\u2665 Va va voom!!! \u2665\u2764\u2661"), size = 12, colour = "white") +
+  theme_classic()
+
+heart
+
+```
+
+:::
+
+::: {.column width="35%"}
+
+```{r}
+#| echo: true
+#| eval: false
+
+library(ggplot2)
+
+dat <- data.frame(t = seq(0, 2*pi, by = 0.01))
+x <-  function(t) 16 * sin(t)^3
+y <- function(t) 13*cos(t) - 5*cos(2*t) - 2*cos(3*t) - cos(4*t)
+
+dat$y <- y(dat$t)
+dat$x <- x(dat$t)
+
+heart <- ggplot(dat, aes(x,y)) +
+  geom_polygon(fill = "red", col = "firebrick", alpha = 0.8) +
+  geom_text(aes(x = 0, y = 0, label = "\u2661\u2764\u2665 Va va voom!!! \u2665\u2764\u2661"), size = 12, colour = "white") +
+  theme_classic()
+
+heart
+
+```
+
+:::
+
+:::
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcW54cTJuaXlnZjkzeTVlemw0Nm1kOWJ5cXlycXAya21nb2ZldWFiNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5VzfI0CX4r1io/giphy.gif){.absolute left="-160" bottom="0" height="250"}
+
+### Christmas card--like {{< iconify streamline-emojis:snowflake >}}
+
+::: {.columns}
+
+::: {.column width="15%"}
+:::
+
+::: {.column width="50%"}
+
+<iframe src="https://jtkulas.github.io/LiveStreams/slides/2026/valentine" width="100%" height="300">
+</iframe>
+
+:::
+
+::: {.column width="35%"}
+
+````{r}
+---
+format: 
+  revealjs:
+    mainfont: "Dancing Script"   #<1>
+    mouse-wheel: true
+execute: 
+  echo: false
+  warning: false
+  error: false
+filters:
+  - snow
+---
+# {background-image="https://starbaseatlanta.com/wp-content/uploads/sihpt4674.jpg"}
+
+```{css}                 #<2>
+
+@import url('https://fonts.googleapis.com/css?family=Dancing Script');
+
+.snowflake__inner_type_0:before {
+    background-image: url('https://cdn-icons-png.flaticon.com/512/1077/1077035.png') !important;
+}
+
+.snowflake__inner_type_1:before {
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/018/795/980/small/neon-glowing-shape-free-png.png') !important;
+}
+
+.snowflake__inner_type_2:before {
+    background-image: url('https://gallery.yopriceville.com/downloadfullsize/send/30848') !important;
+}
+
+.snowflake__inner_type_3:before {
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/010/977/961/small/red-paper-cut-heart-style-png.png') !important;
+}
+
+.snowflake__inner_type_4:before {
+    background-image: url('https://static.vecteezy.com/system/resources/thumbnails/010/977/961/small/red-paper-cut-heart-style-png.png') !important;
+}
+
+.snowflake__inner_type_5:before {
+    background-image: url('https://images.vexels.com/media/users/3/136172/isolated/preview/148ec098a4529de7141003a8ec519d39-heart-like-icon.png') !important;
+}
+
+```
+
+## Sappy sentiment goes here... {background-color="#ffe2f6"}
+
+```{r heart-animation}
+library(ggplot2)
+library(dplyr)
+library(gganimate)
+
+heartdf = tibble(
+	t = seq(0, 2*pi, pi/60),
+	x = 16*sin(t)^3,
+	y = 13*cos(t) - 5*cos(2*t) - 2*cos(3*t) - cos(4*t)
+)
+
+textdf = tibble(t = max(heartdf$t) + 1:15)
+
+ggplot(data = heartdf, aes(x, y)) + 
+	geom_polygon(aes(group = 1), fill = "red") +
+	geom_text(aes(x = 0, y = 0, label = "\u2661\u2764\u2665 Va va voom!!! \u2665\u2764\u2661", parse=TRUE), 
+			  data = textdf, size = 12, colour = "white") +
+  xlab("\u2665 XxXxXxX \u2665") +
+  ylab("\u2665 OoOoOoO \u2665") +
+	transition_reveal(t)
+```
+
+````
+1. if you'd like to alter the script appearance, also change the font specification on line #17 (below, within the `css` chunk) 
+2. add/alter falling hearts by changing the url's on line #'s 20, 24, 28, etc -- there are 6 total images specified
+
+:::
+
+:::
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWhmdHZtYndwMWppNmkwb3hyc240cmhjamcwajB3aTdzdGg4MjZ3ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YF7TXiyXqcWrK/giphy.gif){.absolute left="-160" bottom="0" height="250"}
+
+:::
+
+![](https://upload.wikimedia.org/wikipedia/en/d/dd/Penelope_Pussycat.png){.absolute left="-170" top="115" height="250"}
+
+![](https://www.pngkey.com/png/full/423-4233420_looney-tunes-pepe-le-pew-looney-toons-characters.png){.absolute right="-150" top="0" height="300" .mirror}
+
+# Today...
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDAwY3ZlYzJ1NzQ0eTdzeXJ4NHBnaDRrNW9pMHJyb3ZzZDF3NXlubyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/11v0IGUN9hI4cU/giphy.gif)
+
+##  [[watermarks]{.righteous .Bigger}](https://quarto.org/docs/presentations/revealjs/#image-backgrounds) {background-image="https://static.vecteezy.com/system/resources/previews/021/433/004/non_2x/draft-rubber-stamp-free-png.png" background-opacity=".2"}
+
+::: {.absolute top="220px" left="-120px"}
+<a href="https://frederikaust.com/papaja_man/r-markdown-components.html">
+  ![](https://toppng.com/uploads/thumbnail/confidential-stamp-11523429619gqcpdwcaka.png){height="350"}
+</a>
+:::
+
+::: {.absolute style="top: 180px; right: -170px; width:600px;"}
+<a href="https://github.com/leovan/quarto-watermark">
+  <img src="https://www.pngall.com/wp-content/uploads/8/Sample-Watermark-Transparent.png">
+</a>
+:::
+
+::: {.absolute bottom="-20px" right="390px"}
+<a href="https://ctan.org/pkg/draftwatermark?lang=en">
+  ![](https://www.chestysoft.com/images/watermark.png){width="450"}
+</a>
+:::
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+#| eval: true
+sessionInfo()
+```
+

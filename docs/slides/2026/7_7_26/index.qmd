@@ -1,0 +1,129 @@
+---
+title: "<br>[R is for <br>Authoring!!]{.shadowsharp}" 
+author: "OOH Session #137...<br>[Word {{< iconify selfhst:microsoft-word-2013 >}}]{.msword style='font-size:2em;'}"
+title-slide-attributes: 
+  data-background-image: /img/hiphop.png
+#  data-background-opacity: ".8"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://icons.iconarchive.com/icons/blackvariant/button-ui-ms-office-2016/512/Word-2-icon.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {.columns}
+::: {.column width="55%"}
++ Recap session #136
++ Today's topic(s):
+    + [[Word {{< iconify selfhst:microsoft-word-2013 >}}]{.msword}](https://quarto.org/docs/output-formats/ms-word.html)
++ Shared problem-solving
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+::: {.column width="45%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+:::
+
+:::
+
+::: {.absolute style="top: 170px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/6_30_26">
+  <img src="/img/title136.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#136: 
+
+![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Microsoft_Office_PowerPoint_%282019%E2%80%932025%29.svg/960px-Microsoft_Office_PowerPoint_%282019%E2%80%932025%29.svg.png?_=20210821050414){.absolute top="300" right="130" height="170"}
+
+## [[PowerPoint!! {{< iconify vscode-icons:file-type-powerpoint2 >}}]{.powerpoint .Bigger}](https://quarto.org/docs/presentations/powerpoint.html)
+
+::: {.columns}
+
+::: {.column width="50%"}
+### Pros {{< iconify openmoji:check-mark >}}  
+
++ Ubiquity {{< iconify noto:face-with-monocle >}}
++ Columns, bullets, notes, code echoing
++ Portability across rendering formats
++ End--user customization\*
+
+:::
+
+::: {.column width="50%"}
+### Cons {{< iconify streamline-ultimate-color:delete-2 >}}
+
++ Style (strongest control with [templates](https://quarto.org/docs/presentations/powerpoint.html#powerpoint-templates))
++ Sharability options
++ No interactivity support
++ End--user customization\*
+
+:::
+
+
+:::
+
+![](https://i.pinimg.com/474x/15/10/be/1510be4132e3cb07108200b199983315.jpg){.absolute right="-130" top="-20" height="250"}
+
+# Today...
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3ExcXd3cXgwMXZrd3VqZzN1NGplMDk3Z3EzeHBzZXUwN3J3ZmptbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/d5ktzgbVFftMkLaZ33/giphy.gif)
+
+## [[Word {{< iconify selfhst:microsoft-word-2013 >}}]{.msword .Bigger}](https://quarto.org/docs/output-formats/ms-word.html)
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXJ1bjN1cHJ6aWdrbXhjcHJ2bnhkbWI2NDk5aWt6YTdhYzFzdjdsbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qUB8aayj9DNQI/giphy.gif){.absolute height="500" left="70"}
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2w3OGVkdHAzNW15ZzB3eDB4NW9md245YTU5M2ZyNXd2bmUyOWZkNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13V60VgE2ED7oc/giphy.gif){.absolute left="-130" bottom="40" height="300"}
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExb283NmNyMjZsM2JnMjJhbDBpZzhmcmQ1amk5b2FtZ3ZhaWRqaTllcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/T7ukTzXQVmWqI/giphy.gif){.absolute right="-150" top="0" height="250"}
+
+## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+
+::: {.columns}
+
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| eval: true
+sessionInfo()
+```
+:::
+
+::: {.column width="20%"}
+
+Quarto version `r quarto::quarto_version()`  
+
+:::
+
+:::
+

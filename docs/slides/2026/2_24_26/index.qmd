@@ -1,0 +1,226 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: 'OOH Session #118...<br>[Xaringan!!]{.xaringantit}'
+title-slide-attributes: 
+  data-background-image: ../../../img/xaringan3.png  #https://wallpapercave.com/wp/wp10792097.jpg #https://e1.pxfuel.com/desktop-wallpaper/971/677/desktop-wallpaper-teenage-mutant-ninja-turtles-raphael.jpg #../../../img/xaringan2.png  
+#  data-background-opacity: ".8"
+format:
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://static.vecteezy.com/system/resources/thumbnails/055/758/272/small/cartoon-ninja-logo-no-background-free-png.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {layout="[[10,10],]"}
+::: first-column
++ Recap session #117
++ Today's topic(s):
+    + {{< iconify twemoji:american-football >}}{{< iconify twemoji:american-football >}}{{< iconify twemoji:american-football >}} Phantazee drapht order {{< iconify twemoji:1st-place-medal >}}{{< iconify twemoji:2nd-place-medal >}}{{< iconify twemoji:3rd-place-medal >}}
+    + [[[Xaringan!!]{.xaringandon}](https://github.com/yihui/xaringan)]{.Bigger}
++ Shared problem-solving
+
+:::
+
+::: second-column
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 185px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/2_17_26">
+  <img src="/img/title117.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# First... {{< iconify twemoji:1st-place-medal >}}{{< iconify twemoji:2nd-place-medal >}}{{< iconify twemoji:3rd-place-medal >}}
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTA0cGZuN2h3MWhyaWRmMmh2aTU4bDR4emV2ZG9ha3JjZXZ2N2o2aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT5LMLcvRrCS5Nf2Lu/giphy.gif)
+
+# Recap of Session <br>#117: {background-image="https://static.vecteezy.com/system/resources/previews/021/433/004/non_2x/draft-rubber-stamp-free-png.png" background-opacity=".2"}
+
+![](https://pngimg.com/d/sticky_note_PNG18964.png){.absolute right="50" top="200"}
+
+![](https://toppng.com/uploads/thumbnail/confidential-stamp-11523429619gqcpdwcaka.png){.absolute width="130" top="270" right="110"}
+
+## [[watermarks]{.righteous .Bigger}](https://quarto.org/docs/presentations/revealjs/#image-backgrounds) {background-image="https://www.pngall.com/wp-content/uploads/8/Sample-Watermark-Transparent.png" background-opacity=".8" background-size="40%" background-repeat="repeat"}
+
+::: {.panel-tabset}
+
+### {{< iconify simple-icons:revealdotjs style="color:#FFEA00;" >}} slides
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+`background-image` and `background-opacity` attributes ([as well as others](https://quarto.org/docs/presentations/revealjs/#slide-backgrounds)) can be added to slide title via [inline curly brackets]{.underline}:
+
+```
+## Hello, There {background-image="rainbowcat.jpg" background-opacity=".5"}
+
+This presentation will show you...
+
+```
+:::
+
+::: {.column width="30%"}
+:::
+
+:::
+
+![](../../../img/watermarkcat.JPG){.absolute height="300" right="-150" bottom="80"}
+
+### {{< iconify vscode-icons:file-type-pdf2 >}} & {{< iconify devicon:html5-wordmark >}}
+
+::: {.columns}
+
+::: {.column width="25%"}
+
+::: {.callout-note}
+
+[Quarto extension](https://github.com/leovan/quarto-watermark) works well for both formats
+
+:::
+
+:::
+
+::: {.column width="75%"}
+
+```{r}
+---
+title: "Quarto Watermark Extension Example"
+abstract: "This is an example document of quarto watermark extension."
+
+filters:
+  - watermark
+
+watermark:
+  text: "SAMPLE"     #<1> 
+  size: 4            #<2> 
+  angle: 45   
+  color: "#444444"   
+  opacity: 0.2       #<3> 
+  cols: 1            #<4>
+  rows: 1
+  col-space: 10
+  row-space: 10      #<4>
+  z-index: 1            
+
+format: pdf          #<5>
+---
+
+## Text
+
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+## Table
+
+| Command | Description |
+| --- | --- |
+| `git status` | List all *new or modified* files |
+| `git diff` | Show file differences that **haven't been** staged |
+
+## Figure
+
+![How qmd works](https://quarto.org/docs/get-started/hello/images/rstudio-qmd-how-it-works.png)
+```
+1. change to whatever text you're interested in displaying
+2. seems to carry most weight for (repeated vs solitary) display of watermark
+3. ranges from 0 (transparent) to 1 (opaque) -- desired effect will depend on color specification (line #12)
+4. can be commented out (along with `size` on line #10) to reduce/enhance repeated effect
+5. html or pdf equally effective -- not intended for typst documents
+
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/014/391/900/non_2x/right-arrow-curved-icon-isolated-on-transparent-background-free-png.png){.absolute left="0" bottom="50" height="140" .tilt}
+
+:::
+
+:::
+
+![](https://static.vecteezy.com/system/resources/thumbnails/046/026/221/small_2x/liquid-water-splash-droplet-splatter-free-png.png){.absolute right="-150" top="-55" height="400"}
+
+![](https://static.vecteezy.com/system/resources/thumbnails/044/570/540/small_2x/single-water-drop-on-transparent-background-free-png.png){.absolute height="120" left="-140" bottom="350"}
+
+![](https://static.vecteezy.com/system/resources/thumbnails/044/570/540/small_2x/single-water-drop-on-transparent-background-free-png.png){.absolute height="40" left="-150" bottom="300"}
+
+![](https://static.vecteezy.com/system/resources/thumbnails/044/570/540/small_2x/single-water-drop-on-transparent-background-free-png.png){.absolute height="65" left="-60" bottom="230"}
+
+![](https://static.vecteezy.com/system/resources/thumbnails/044/570/540/small_2x/single-water-drop-on-transparent-background-free-png.png){.absolute height="150" left="-170" bottom="130"}
+
+![](https://static.vecteezy.com/system/resources/thumbnails/044/570/540/small_2x/single-water-drop-on-transparent-background-free-png.png){.absolute height="100" left="-100" bottom="40"}
+
+# Today...
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExeGh6N3RiMXU4MnRpdjM4dnJlenRlcnU0bGVuMWlidDg2d2diNDk3MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gffX1gq2vYtBVQJz7M/giphy.gif)
+
+## [[Xaringan!!]{.xaringanraf}](https://arm.rbind.io/slides/xaringan.html#1) {background-image="../../../img/xaringan2.png"}
+
+::: {.columns}
+
+::: {.column width="15%"}
+:::
+
+::: {.column width="50%"}
+<iframe src="https://jtkulas.github.io/MPPAW2023/#1" width="100%" height="350">
+</iframe>
+:::
+
+::: {.column width="35%"}
+:::
+
+:::
+
+::: {.absolute top="-97" left="245"}
+<a href="https://slides.yihui.org/xaringan/#1">
+![](https://www.pngmart.com/files/23/Ninja-PNG-Image.png){height="320"}
+</a>
+:::
+
+::: {.absolute bottom="60" left="-162"}
+<a href="https://github.com/yihui/xaringan">
+![](https://www.pngkey.com/png/full/33-333939_ninja-cartoon-png-clipart-free-stock-ninja-clipart.png){height="270"}
+</a>
+:::
+
+::: {.absolute top="160px" left="502px"}
+<a href="https://jtkulas.github.io/MPPAW2023/#1">
+  ![](https://png.pngtree.com/png-vector/20240317/ourmid/pngtree-ninja-mascot-cartoon-avatar-character-design-png-image_11993557.png){width="170"}
+</a>
+:::
+
+## {{< iconify devicon:r size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+```{r}
+#| eval: true
+sessionInfo()
+```
+
