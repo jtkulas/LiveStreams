@@ -220,8 +220,8 @@ OOH Session #142…<br><span class="honk">typst&nbsp;&nbsp;<br>INVOICE&nbsp;&nbs
 </div>
 
 </section>
-<section id="open-office-hours-august-10-2026" class="slide level2">
-<h2>Open Office Hours <br>(August 10, 2026)</h2>
+<section id="open-office-hours-august-11-2026" class="slide level2">
+<h2>Open Office Hours <br>(August 11, 2026)</h2>
 <div class="columns">
 <div class="column" style="width:55%;">
 <ul>
@@ -277,399 +277,407 @@ OOH Session #142…<br><span class="honk">typst&nbsp;&nbsp;<br>INVOICE&nbsp;&nbs
 <div class="column" style="width:50%;">
 <p><code>app.R</code>:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># app.R - standalone Shiny app that geocodes an address, shows it on a leaflet map,</span></span>
-<span id="cb1-2"><a></a><span class="co"># displays lat/lon, matched address, and a small Census tract population (if available).</span></span>
-<span id="cb1-3"><a></a><span class="co"># Updated: show ACS 'NAME' (pop$name) when available; attempt coords-&gt;geographies fallback when needed.</span></span>
-<span id="cb1-4"><a></a></span>
-<span id="cb1-5"><a></a><span class="fu">library</span>(shiny)</span>
-<span id="cb1-6"><a></a><span class="fu">library</span>(leaflet)</span>
-<span id="cb1-7"><a></a></span>
-<span id="cb1-8"><a></a><span class="co"># Load geocode and Census helper</span></span>
-<span id="cb1-9"><a></a><span class="fu">source</span>(<span class="st">"R/helpers.R"</span>)</span>
-<span id="cb1-10"><a></a></span>
-<span id="cb1-11"><a></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
-<span id="cb1-12"><a></a>  <span class="fu">titlePanel</span>(<span class="st">"Address → Map with info"</span>),</span>
-<span id="cb1-13"><a></a>  <span class="fu">sidebarLayout</span>(</span>
-<span id="cb1-14"><a></a>    <span class="fu">sidebarPanel</span>(</span>
-<span id="cb1-15"><a></a>      <span class="fu">textInput</span>(<span class="st">"address"</span>, <span class="st">"Type an address (one line):"</span>, <span class="at">value =</span> <span class="st">"1600 Pennsylvania Ave NW, Washington, DC 20500"</span>),</span>
-<span id="cb1-16"><a></a>      <span class="fu">actionButton</span>(<span class="st">"go"</span>, <span class="st">"Locate address"</span>),</span>
-<span id="cb1-17"><a></a>      <span class="fu">br</span>(), <span class="fu">br</span>(),</span>
-<span id="cb1-18"><a></a>      tags<span class="sc">$</span><span class="fu">b</span>(<span class="st">"Parsed location"</span>),</span>
-<span id="cb1-19"><a></a>      <span class="fu">br</span>(),</span>
-<span id="cb1-20"><a></a>      <span class="fu">verbatimTextOutput</span>(<span class="st">"latlon"</span>, <span class="at">placeholder =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb1-21"><a></a>      <span class="fu">verbatimTextOutput</span>(<span class="st">"matched"</span>, <span class="at">placeholder =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb1-22"><a></a>      <span class="fu">verbatimTextOutput</span>(<span class="st">"pop_name"</span>, <span class="at">placeholder =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb1-23"><a></a>      <span class="fu">verbatimTextOutput</span>(<span class="st">"tract_info"</span>, <span class="at">placeholder =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb1-24"><a></a>      <span class="fu">br</span>(),</span>
-<span id="cb1-25"><a></a>      tags<span class="sc">$</span><span class="fu">div</span>(</span>
-<span id="cb1-26"><a></a>        tags<span class="sc">$</span><span class="fu">small</span>(<span class="st">"If the app reports </span><span class="sc">\"</span><span class="st">Census key not set</span><span class="sc">\"</span><span class="st"> for tract info, you can add a Census API key here: "</span>),</span>
-<span id="cb1-27"><a></a>        <span class="fu">actionButton</span>(<span class="st">"set_key_btn"</span>, <span class="st">"Set Census API key"</span>),</span>
-<span id="cb1-28"><a></a>        tags<span class="sc">$</span><span class="fu">br</span>(),</span>
-<span id="cb1-29"><a></a>        tags<span class="sc">$</span><span class="fu">small</span>(<span class="st">"Get a free Census API key: "</span>),</span>
-<span id="cb1-30"><a></a>        tags<span class="sc">$</span><span class="fu">a</span>(<span class="at">href =</span> <span class="st">"https://api.census.gov/data/key_signup.html"</span>, <span class="st">"Census API key signup"</span>, <span class="at">target =</span> <span class="st">"_blank"</span>)</span>
-<span id="cb1-31"><a></a>      ),</span>
-<span id="cb1-32"><a></a>      <span class="fu">br</span>(),</span>
-<span id="cb1-33"><a></a>      tags<span class="sc">$</span><span class="fu">small</span>(<span class="st">"Debug log:"</span>),</span>
-<span id="cb1-34"><a></a>      <span class="fu">verbatimTextOutput</span>(<span class="st">"debug"</span>, <span class="at">placeholder =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb1-35"><a></a>    ),</span>
-<span id="cb1-36"><a></a>    <span class="fu">mainPanel</span>(</span>
-<span id="cb1-37"><a></a>      <span class="fu">leafletOutput</span>(<span class="st">"map"</span>, <span class="at">height =</span> <span class="st">"600px"</span>)</span>
-<span id="cb1-38"><a></a>    )</span>
-<span id="cb1-39"><a></a>  )</span>
-<span id="cb1-40"><a></a>)</span>
-<span id="cb1-41"><a></a></span>
-<span id="cb1-42"><a></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output, session) {</span>
-<span id="cb1-43"><a></a></span>
-<span id="cb1-44"><a></a>  <span class="co"># simple in-memory debug messages</span></span>
-<span id="cb1-45"><a></a>  msgs <span class="ot">&lt;-</span> <span class="fu">reactiveVal</span>(<span class="fu">character</span>())</span>
-<span id="cb1-46"><a></a>  log <span class="ot">&lt;-</span> <span class="cf">function</span>(...) {</span>
-<span id="cb1-47"><a></a>    new <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="fu">Sys.time</span>(), <span class="st">" - "</span>, <span class="fu">paste0</span>(..., <span class="at">collapse =</span> <span class="st">" "</span>))</span>
-<span id="cb1-48"><a></a>    <span class="fu">msgs</span>(<span class="fu">c</span>(<span class="fu">msgs</span>(), new))</span>
-<span id="cb1-49"><a></a>    <span class="fu">message</span>(new)</span>
-<span id="cb1-50"><a></a>  }</span>
-<span id="cb1-51"><a></a></span>
-<span id="cb1-52"><a></a>  output<span class="sc">$</span>debug <span class="ot">&lt;-</span> <span class="fu">renderText</span>({ <span class="fu">paste</span>(<span class="fu">msgs</span>(), <span class="at">collapse =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>) })</span>
-<span id="cb1-53"><a></a></span>
-<span id="cb1-54"><a></a>  output<span class="sc">$</span>map <span class="ot">&lt;-</span> <span class="fu">renderLeaflet</span>({</span>
-<span id="cb1-55"><a></a>    <span class="fu">leaflet</span>() <span class="sc">%&gt;%</span> <span class="fu">addTiles</span>() <span class="sc">%&gt;%</span> <span class="fu">setView</span>(<span class="at">lng =</span> <span class="sc">-</span><span class="fl">98.5795</span>, <span class="at">lat =</span> <span class="fl">39.8283</span>, <span class="at">zoom =</span> <span class="dv">4</span>)</span>
-<span id="cb1-56"><a></a>  })</span>
-<span id="cb1-57"><a></a></span>
-<span id="cb1-58"><a></a>  <span class="co"># display parsed lat/lon and matched address</span></span>
-<span id="cb1-59"><a></a>  latlon_val <span class="ot">&lt;-</span> <span class="fu">reactiveVal</span>(<span class="cn">NULL</span>)</span>
-<span id="cb1-60"><a></a>  matched_val <span class="ot">&lt;-</span> <span class="fu">reactiveVal</span>(<span class="cn">NULL</span>)</span>
-<span id="cb1-61"><a></a>  tract_val <span class="ot">&lt;-</span> <span class="fu">reactiveVal</span>(<span class="cn">NULL</span>)</span>
-<span id="cb1-62"><a></a>  pop_name_val <span class="ot">&lt;-</span> <span class="fu">reactiveVal</span>(<span class="cn">NULL</span>)</span>
-<span id="cb1-63"><a></a></span>
-<span id="cb1-64"><a></a>  output<span class="sc">$</span>latlon <span class="ot">&lt;-</span> <span class="fu">renderText</span>({</span>
-<span id="cb1-65"><a></a>    v <span class="ot">&lt;-</span> <span class="fu">latlon_val</span>()</span>
-<span id="cb1-66"><a></a>    <span class="cf">if</span> (<span class="fu">is.null</span>(v)) <span class="fu">return</span>(<span class="st">"lat: -, lon: -"</span>)</span>
-<span id="cb1-67"><a></a>    <span class="fu">paste0</span>(<span class="st">"lat: "</span>, v<span class="sc">$</span>lat, <span class="st">" , lon: "</span>, v<span class="sc">$</span>lon)</span>
-<span id="cb1-68"><a></a>  })</span>
-<span id="cb1-69"><a></a>  output<span class="sc">$</span>matched <span class="ot">&lt;-</span> <span class="fu">renderText</span>({</span>
-<span id="cb1-70"><a></a>    v <span class="ot">&lt;-</span> <span class="fu">matched_val</span>()</span>
-<span id="cb1-71"><a></a>    <span class="cf">if</span> (<span class="fu">is.null</span>(v)) <span class="fu">return</span>(<span class="st">"matched: -"</span>)</span>
-<span id="cb1-72"><a></a>    <span class="fu">paste0</span>(<span class="st">"matched: "</span>, v)</span>
-<span id="cb1-73"><a></a>  })</span>
-<span id="cb1-74"><a></a>  output<span class="sc">$</span>pop_name <span class="ot">&lt;-</span> <span class="fu">renderText</span>({</span>
-<span id="cb1-75"><a></a>    v <span class="ot">&lt;-</span> <span class="fu">pop_name_val</span>()</span>
-<span id="cb1-76"><a></a>    <span class="cf">if</span> (<span class="fu">is.null</span>(v)) <span class="fu">return</span>(<span class="st">"Place name (ACS NAME): -"</span>)</span>
-<span id="cb1-77"><a></a>    <span class="fu">paste0</span>(<span class="st">"Place name (ACS NAME): "</span>, v)</span>
-<span id="cb1-78"><a></a>  })</span>
-<span id="cb1-79"><a></a>  output<span class="sc">$</span>tract_info <span class="ot">&lt;-</span> <span class="fu">renderText</span>({</span>
-<span id="cb1-80"><a></a>    v <span class="ot">&lt;-</span> <span class="fu">tract_val</span>()</span>
-<span id="cb1-81"><a></a>    <span class="cf">if</span> (<span class="fu">is.null</span>(v)) <span class="fu">return</span>(<span class="st">"tract: -"</span>)</span>
-<span id="cb1-82"><a></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(v<span class="sc">$</span>status) <span class="sc">&amp;&amp;</span> v<span class="sc">$</span>status <span class="sc">==</span> <span class="st">"ok"</span>) {</span>
-<span id="cb1-83"><a></a>      <span class="fu">paste0</span>(<span class="st">"Tract GEOID: "</span>, v<span class="sc">$</span>geoid, <span class="st">"</span><span class="sc">\n</span><span class="st">Population (ACS5): "</span>, v<span class="sc">$</span>population, <span class="st">"</span><span class="sc">\n</span><span class="st">Name: "</span>, v<span class="sc">$</span>name)</span>
-<span id="cb1-84"><a></a>    } <span class="cf">else</span> <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(v<span class="sc">$</span>status) <span class="sc">&amp;&amp;</span> v<span class="sc">$</span>status <span class="sc">==</span> <span class="st">"no_key"</span>) {</span>
-<span id="cb1-85"><a></a>      <span class="fu">paste0</span>(<span class="st">"Tract GEOID: "</span>, v<span class="sc">$</span>geoid, <span class="st">" (Census key not set; population not fetched). Click 'Set Census API key' to enter a key and fetch."</span>)</span>
-<span id="cb1-86"><a></a>    } <span class="cf">else</span> {</span>
-<span id="cb1-87"><a></a>      <span class="fu">paste0</span>(<span class="st">"Tract lookup: "</span>, v<span class="sc">$</span>message)</span>
-<span id="cb1-88"><a></a>    }</span>
-<span id="cb1-89"><a></a>  })</span>
-<span id="cb1-90"><a></a></span>
-<span id="cb1-91"><a></a>  <span class="co"># Nominatim fallback</span></span>
-<span id="cb1-92"><a></a>  nominatim_one <span class="ot">&lt;-</span> <span class="cf">function</span>(address) {</span>
-<span id="cb1-93"><a></a>    url <span class="ot">&lt;-</span> <span class="st">"https://nominatim.openstreetmap.org/search"</span></span>
-<span id="cb1-94"><a></a>    res <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>(</span>
-<span id="cb1-95"><a></a>      httr<span class="sc">::</span><span class="fu">GET</span>(url, <span class="at">query =</span> <span class="fu">list</span>(<span class="at">q =</span> address, <span class="at">format =</span> <span class="st">"json"</span>, <span class="at">limit =</span> <span class="dv">1</span>), httr<span class="sc">::</span><span class="fu">user_agent</span>(<span class="st">"TommyBoy-App/1.0"</span>), httr<span class="sc">::</span><span class="fu">timeout</span>(<span class="dv">10</span>)),</span>
-<span id="cb1-96"><a></a>      <span class="at">error =</span> <span class="cf">function</span>(e) <span class="cn">NULL</span></span>
-<span id="cb1-97"><a></a>    )</span>
-<span id="cb1-98"><a></a>    <span class="cf">if</span> (<span class="fu">is.null</span>(res) <span class="sc">||</span> httr<span class="sc">::</span><span class="fu">status_code</span>(res) <span class="sc">!=</span> <span class="dv">200</span>) <span class="fu">return</span>(<span class="cn">NULL</span>)</span>
-<span id="cb1-99"><a></a>    parsed <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">content</span>(res, <span class="at">as =</span> <span class="st">"parsed"</span>)</span>
-<span id="cb1-100"><a></a>    <span class="cf">if</span> (<span class="fu">length</span>(parsed) <span class="sc">==</span> <span class="dv">0</span>) <span class="fu">return</span>(<span class="cn">NULL</span>)</span>
-<span id="cb1-101"><a></a>    d <span class="ot">&lt;-</span> parsed[[<span class="dv">1</span>]]</span>
-<span id="cb1-102"><a></a>    <span class="fu">list</span>(<span class="at">lat =</span> <span class="fu">as.numeric</span>(d<span class="sc">$</span>lat), <span class="at">lon =</span> <span class="fu">as.numeric</span>(d<span class="sc">$</span>lon), <span class="at">label =</span> d<span class="sc">$</span>display_name, <span class="at">raw =</span> d)</span>
-<span id="cb1-103"><a></a>  }</span>
-<span id="cb1-104"><a></a></span>
-<span id="cb1-105"><a></a>  <span class="co"># Extract tract GEOID from the 'raw' match object returned by Census geocoder - fallback to coords geographies</span></span>
-<span id="cb1-106"><a></a>  extract_tract_geoid <span class="ot">&lt;-</span> <span class="cf">function</span>(raw_match) {</span>
-<span id="cb1-107"><a></a>    <span class="cf">if</span> (<span class="fu">is.null</span>(raw_match)) <span class="fu">return</span>(<span class="cn">NULL</span>)</span>
-<span id="cb1-108"><a></a>    geogs <span class="ot">&lt;-</span> raw_match<span class="sc">$</span>geographies</span>
-<span id="cb1-109"><a></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(geogs) <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">is.null</span>(geogs<span class="sc">$</span><span class="st">`</span><span class="at">Census Tracts</span><span class="st">`</span>) <span class="sc">&amp;&amp;</span> <span class="fu">length</span>(geogs<span class="sc">$</span><span class="st">`</span><span class="at">Census Tracts</span><span class="st">`</span>) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
-<span id="cb1-110"><a></a>      ct <span class="ot">&lt;-</span> geogs<span class="sc">$</span><span class="st">`</span><span class="at">Census Tracts</span><span class="st">`</span>[[<span class="dv">1</span>]]</span>
-<span id="cb1-111"><a></a>      <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(ct<span class="sc">$</span>GEOID)) <span class="fu">return</span>(ct<span class="sc">$</span>GEOID)</span>
-<span id="cb1-112"><a></a>    }</span>
-<span id="cb1-113"><a></a>    <span class="fu">return</span>(<span class="cn">NULL</span>)</span>
-<span id="cb1-114"><a></a>  }</span>
-<span id="cb1-115"><a></a></span>
-<span id="cb1-116"><a></a>  <span class="co"># Helper to attempt tract population fetch if geoid present and key available</span></span>
-<span id="cb1-117"><a></a>  try_fetch_tract <span class="ot">&lt;-</span> <span class="cf">function</span>(tract_geoid) {</span>
-<span id="cb1-118"><a></a>    <span class="fu">pop_name_val</span>(<span class="cn">NULL</span>)</span>
-<span id="cb1-119"><a></a>    <span class="cf">if</span> (<span class="fu">is.null</span>(tract_geoid)) <span class="fu">return</span>(<span class="cn">NULL</span>)</span>
-<span id="cb1-120"><a></a>    key <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"CENSUS_API_KEY"</span>, <span class="st">""</span>)</span>
-<span id="cb1-121"><a></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">nzchar</span>(key)) {</span>
-<span id="cb1-122"><a></a>      <span class="fu">tract_val</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"no_key"</span>, <span class="at">geoid =</span> tract_geoid))</span>
-<span id="cb1-123"><a></a>      <span class="fu">return</span>(<span class="cn">NULL</span>)</span>
-<span id="cb1-124"><a></a>    }</span>
-<span id="cb1-125"><a></a>    pop_res <span class="ot">&lt;-</span> <span class="fu">fetch_acs_population</span>(tract_geoid, <span class="at">year =</span> <span class="dv">2021</span>, <span class="at">key =</span> key)</span>
-<span id="cb1-126"><a></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(pop_res) <span class="sc">&amp;&amp;</span> <span class="fu">is.list</span>(pop_res) <span class="sc">&amp;&amp;</span> <span class="fu">identical</span>(pop_res<span class="sc">$</span>status, <span class="st">"ok"</span>)) {</span>
-<span id="cb1-127"><a></a>      <span class="fu">tract_val</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"ok"</span>, <span class="at">geoid =</span> tract_geoid, <span class="at">population =</span> pop_res<span class="sc">$</span>population, <span class="at">name =</span> pop_res<span class="sc">$</span>name))</span>
-<span id="cb1-128"><a></a>      <span class="fu">pop_name_val</span>(pop_res<span class="sc">$</span>name)</span>
-<span id="cb1-129"><a></a>    } <span class="cf">else</span> {</span>
-<span id="cb1-130"><a></a>      <span class="fu">tract_val</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(pop_res<span class="sc">$</span>message)) pop_res<span class="sc">$</span>message <span class="cf">else</span> <span class="st">"Census fetch failed"</span>, <span class="at">geoid =</span> tract_geoid))</span>
-<span id="cb1-131"><a></a>      <span class="co"># if pop_res has a name even when status != ok, try to display it</span></span>
-<span id="cb1-132"><a></a>      <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(pop_res<span class="sc">$</span>name)) <span class="fu">pop_name_val</span>(pop_res<span class="sc">$</span>name)</span>
-<span id="cb1-133"><a></a>    }</span>
-<span id="cb1-134"><a></a>  }</span>
-<span id="cb1-135"><a></a></span>
-<span id="cb1-136"><a></a>  <span class="fu">observeEvent</span>(input<span class="sc">$</span>go, {</span>
-<span id="cb1-137"><a></a>    addr <span class="ot">&lt;-</span> <span class="fu">trimws</span>(input<span class="sc">$</span>address)</span>
-<span id="cb1-138"><a></a>    <span class="fu">log</span>(<span class="st">"Locate button clicked. Address:"</span>, addr)</span>
-<span id="cb1-139"><a></a>    <span class="cf">if</span> (addr <span class="sc">==</span> <span class="st">""</span> <span class="sc">||</span> <span class="fu">is.null</span>(addr)) { <span class="fu">log</span>(<span class="st">"Empty address"</span>); <span class="fu">showNotification</span>(<span class="st">"Please enter an address."</span>, <span class="at">type =</span> <span class="st">"warning"</span>); <span class="fu">return</span>() }</span>
-<span id="cb1-140"><a></a></span>
-<span id="cb1-141"><a></a>    <span class="co"># Primary: use Census geocoder</span></span>
-<span id="cb1-142"><a></a>    res_obj <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
-<span id="cb1-143"><a></a>    res_obj <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>(<span class="fu">geocode_census_one</span>(addr), <span class="at">error =</span> <span class="cf">function</span>(e) { <span class="fu">log</span>(<span class="st">"geocode_census_one error:"</span>, e<span class="sc">$</span>message); <span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> e<span class="sc">$</span>message) })</span>
-<span id="cb1-144"><a></a></span>
-<span id="cb1-145"><a></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(res_obj) <span class="sc">&amp;&amp;</span> <span class="fu">is.list</span>(res_obj) <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">is.null</span>(res_obj<span class="sc">$</span>status) <span class="sc">&amp;&amp;</span> res_obj<span class="sc">$</span>status <span class="sc">==</span> <span class="st">"ok"</span>) {</span>
-<span id="cb1-146"><a></a>      <span class="co"># success</span></span>
-<span id="cb1-147"><a></a>      <span class="fu">log</span>(<span class="fu">paste0</span>(<span class="st">"Census geocoder returned:lat="</span>, res_obj<span class="sc">$</span>lat, <span class="st">" lon="</span>, res_obj<span class="sc">$</span>lon, <span class="st">" label="</span>, res_obj<span class="sc">$</span>label))</span>
-<span id="cb1-148"><a></a>      <span class="fu">latlon_val</span>(<span class="fu">list</span>(<span class="at">lat =</span> res_obj<span class="sc">$</span>lat, <span class="at">lon =</span> res_obj<span class="sc">$</span>lon))</span>
-<span id="cb1-149"><a></a>      <span class="fu">matched_val</span>(res_obj<span class="sc">$</span>label)</span>
-<span id="cb1-150"><a></a>      <span class="fu">pop_name_val</span>(<span class="cn">NULL</span>)</span>
-<span id="cb1-151"><a></a></span>
-<span id="cb1-152"><a></a>      <span class="co"># Update map</span></span>
-<span id="cb1-153"><a></a>      <span class="fu">leafletProxy</span>(<span class="st">"map"</span>) <span class="sc">%&gt;%</span> <span class="fu">clearMarkers</span>() <span class="sc">%&gt;%</span> <span class="fu">addMarkers</span>(<span class="at">lng =</span> res_obj<span class="sc">$</span>lon, <span class="at">lat =</span> res_obj<span class="sc">$</span>lat, <span class="at">popup =</span> res_obj<span class="sc">$</span>label) <span class="sc">%&gt;%</span> <span class="fu">setView</span>(<span class="at">lng =</span> res_obj<span class="sc">$</span>lon, <span class="at">lat =</span> res_obj<span class="sc">$</span>lat, <span class="at">zoom =</span> <span class="dv">16</span>)</span>
-<span id="cb1-154"><a></a></span>
-<span id="cb1-155"><a></a>      <span class="co"># Try to extract tract GEOID from raw response</span></span>
-<span id="cb1-156"><a></a>      tract_geoid <span class="ot">&lt;-</span> <span class="fu">extract_tract_geoid</span>(res_obj<span class="sc">$</span>raw)</span>
-<span id="cb1-157"><a></a>      <span class="cf">if</span> (<span class="fu">is.null</span>(tract_geoid)) {</span>
-<span id="cb1-158"><a></a>        <span class="co"># fallback: call coordinates-&gt;geographies to obtain tracts</span></span>
-<span id="cb1-159"><a></a>        geo_res <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>(<span class="fu">geographies_for_coords</span>(<span class="at">lat =</span> res_obj<span class="sc">$</span>lat, <span class="at">lon =</span> res_obj<span class="sc">$</span>lon), <span class="at">error =</span> <span class="cf">function</span>(e) <span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> e<span class="sc">$</span>message))</span>
-<span id="cb1-160"><a></a>        <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(geo_res) <span class="sc">&amp;&amp;</span> <span class="fu">is.list</span>(geo_res) <span class="sc">&amp;&amp;</span> <span class="fu">identical</span>(geo_res<span class="sc">$</span>status, <span class="st">"ok"</span>)) {</span>
-<span id="cb1-161"><a></a>          <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(geo_res<span class="sc">$</span>geographies<span class="sc">$</span><span class="st">`</span><span class="at">Census Tracts</span><span class="st">`</span>) <span class="sc">&amp;&amp;</span> <span class="fu">length</span>(geo_res<span class="sc">$</span>geographies<span class="sc">$</span><span class="st">`</span><span class="at">Census Tracts</span><span class="st">`</span>) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
-<span id="cb1-162"><a></a>            tract_geoid <span class="ot">&lt;-</span> geo_res<span class="sc">$</span>geographies<span class="sc">$</span><span class="st">`</span><span class="at">Census Tracts</span><span class="st">`</span>[[<span class="dv">1</span>]]<span class="sc">$</span>GEOID</span>
-<span id="cb1-163"><a></a>            <span class="fu">log</span>(<span class="fu">paste0</span>(<span class="st">"Found tract GEOID via coords-&gt;geographies: "</span>, tract_geoid))</span>
-<span id="cb1-164"><a></a>          }</span>
-<span id="cb1-165"><a></a>        } <span class="cf">else</span> {</span>
-<span id="cb1-166"><a></a>          <span class="fu">log</span>(<span class="fu">paste0</span>(<span class="st">"coords-&gt;geographies lookup failed: "</span>, <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(geo_res<span class="sc">$</span>message)) geo_res<span class="sc">$</span>message <span class="cf">else</span> <span class="st">"unknown"</span>))</span>
-<span id="cb1-167"><a></a>        }</span>
-<span id="cb1-168"><a></a>      }</span>
-<span id="cb1-169"><a></a></span>
-<span id="cb1-170"><a></a>      <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(tract_geoid)) {</span>
-<span id="cb1-171"><a></a>        <span class="fu">try_fetch_tract</span>(tract_geoid)</span>
-<span id="cb1-172"><a></a>      } <span class="cf">else</span> {</span>
-<span id="cb1-173"><a></a>        <span class="fu">tract_val</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"nomatch"</span>, <span class="at">message =</span> <span class="st">"No tract GEOID in geocoder response"</span>))</span>
-<span id="cb1-174"><a></a>      }</span>
-<span id="cb1-175"><a></a></span>
-<span id="cb1-176"><a></a>      <span class="fu">showNotification</span>(<span class="st">"Location found and map updated."</span>, <span class="at">type =</span> <span class="st">"message"</span>)</span>
-<span id="cb1-177"><a></a>      <span class="fu">return</span>()</span>
-<span id="cb1-178"><a></a>    }</span>
-<span id="cb1-179"><a></a></span>
-<span id="cb1-180"><a></a>    <span class="co"># If Census geocoder didn't return ok, try Nominatim fallback</span></span>
-<span id="cb1-181"><a></a>    <span class="fu">log</span>(<span class="st">"Census geocoder did not return ok; attempting Nominatim fallback."</span>)</span>
-<span id="cb1-182"><a></a>    res_nom <span class="ot">&lt;-</span> <span class="fu">nominatim_one</span>(addr)</span>
-<span id="cb1-183"><a></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(res_nom)) {</span>
-<span id="cb1-184"><a></a>      <span class="fu">log</span>(<span class="fu">paste0</span>(<span class="st">"Nominatim returned lat="</span>, res_nom<span class="sc">$</span>lat, <span class="st">" lon="</span>, res_nom<span class="sc">$</span>lon, <span class="st">" label="</span>, res_nom<span class="sc">$</span>label))</span>
-<span id="cb1-185"><a></a>      <span class="fu">latlon_val</span>(<span class="fu">list</span>(<span class="at">lat =</span> res_nom<span class="sc">$</span>lat, <span class="at">lon =</span> res_nom<span class="sc">$</span>lon))</span>
-<span id="cb1-186"><a></a>      <span class="fu">matched_val</span>(res_nom<span class="sc">$</span>label)</span>
-<span id="cb1-187"><a></a>      <span class="fu">tract_val</span>(<span class="cn">NULL</span>)</span>
-<span id="cb1-188"><a></a>      <span class="fu">pop_name_val</span>(<span class="cn">NULL</span>)</span>
-<span id="cb1-189"><a></a>      <span class="fu">leafletProxy</span>(<span class="st">"map"</span>) <span class="sc">%&gt;%</span> <span class="fu">clearMarkers</span>() <span class="sc">%&gt;%</span> <span class="fu">addMarkers</span>(<span class="at">lng =</span> res_nom<span class="sc">$</span>lon, <span class="at">lat =</span> res_nom<span class="sc">$</span>lat, <span class="at">popup =</span> res_nom<span class="sc">$</span>label) <span class="sc">%&gt;%</span> <span class="fu">setView</span>(<span class="at">lng =</span> res_nom<span class="sc">$</span>lon, <span class="at">lat =</span> res_nom<span class="sc">$</span>lat, <span class="at">zoom =</span> <span class="dv">16</span>)</span>
-<span id="cb1-190"><a></a>      <span class="fu">showNotification</span>(<span class="st">"Location found (fallback) and map updated."</span>, <span class="at">type =</span> <span class="st">"message"</span>)</span>
-<span id="cb1-191"><a></a>      <span class="fu">return</span>()</span>
-<span id="cb1-192"><a></a>    }</span>
-<span id="cb1-193"><a></a></span>
-<span id="cb1-194"><a></a>    <span class="fu">log</span>(<span class="st">"All geocoding attempts failed."</span>)</span>
-<span id="cb1-195"><a></a>    <span class="fu">showNotification</span>(<span class="st">"No geocode result."</span>, <span class="at">type =</span> <span class="st">"warning"</span>)</span>
-<span id="cb1-196"><a></a>  })</span>
-<span id="cb1-197"><a></a></span>
-<span id="cb1-198"><a></a>  <span class="co"># Modal for setting Census API key</span></span>
-<span id="cb1-199"><a></a>  <span class="fu">observeEvent</span>(input<span class="sc">$</span>set_key_btn, {</span>
-<span id="cb1-200"><a></a>    <span class="fu">showModal</span>(<span class="fu">modalDialog</span>(</span>
-<span id="cb1-201"><a></a>      <span class="at">title =</span> <span class="st">"Set Census API key"</span>,</span>
-<span id="cb1-202"><a></a>      <span class="fu">tagList</span>(</span>
-<span id="cb1-203"><a></a>        tags<span class="sc">$</span><span class="fu">p</span>(<span class="st">"If you have a Census API key, paste it here to allow fetching ACS tract data (population, name). This sets the key for the current R session."</span>),</span>
-<span id="cb1-204"><a></a>        tags<span class="sc">$</span><span class="fu">p</span>(tags<span class="sc">$</span><span class="fu">a</span>(<span class="at">href =</span> <span class="st">"https://api.census.gov/data/key_signup.html"</span>, <span class="st">"Get a free Census API key"</span>, <span class="at">target =</span> <span class="st">"_blank"</span>)),</span>
-<span id="cb1-205"><a></a>        <span class="fu">textInput</span>(<span class="st">"census_key_input"</span>, <span class="st">"Paste Census API key:"</span>),</span>
-<span id="cb1-206"><a></a>        tags<span class="sc">$</span><span class="fu">small</span>(<span class="st">"After saving the key, any displayed tract GEOID will attempt to fetch population automatically."</span>)</span>
-<span id="cb1-207"><a></a>      ),</span>
-<span id="cb1-208"><a></a>      <span class="at">footer =</span> <span class="fu">tagList</span>(<span class="fu">actionButton</span>(<span class="st">"save_census_key"</span>, <span class="st">"Save key and fetch"</span>), <span class="fu">modalButton</span>(<span class="st">"Cancel"</span>)),</span>
-<span id="cb1-209"><a></a>      <span class="at">easyClose =</span> <span class="cn">TRUE</span></span>
-<span id="cb1-210"><a></a>    ))</span>
-<span id="cb1-211"><a></a>  })</span>
-<span id="cb1-212"><a></a></span>
-<span id="cb1-213"><a></a>  <span class="fu">observeEvent</span>(input<span class="sc">$</span>save_census_key, {</span>
-<span id="cb1-214"><a></a>    key_val <span class="ot">&lt;-</span> input<span class="sc">$</span>census_key_input</span>
-<span id="cb1-215"><a></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(key_val) <span class="sc">&amp;&amp;</span> <span class="fu">nzchar</span>(<span class="fu">trimws</span>(key_val))) {</span>
-<span id="cb1-216"><a></a>      <span class="fu">Sys.setenv</span>(<span class="at">CENSUS_API_KEY =</span> <span class="fu">trimws</span>(key_val))</span>
-<span id="cb1-217"><a></a>      <span class="fu">log</span>(<span class="st">"Census API key set in session."</span>)</span>
-<span id="cb1-218"><a></a>      <span class="fu">removeModal</span>()</span>
-<span id="cb1-219"><a></a>      <span class="fu">showNotification</span>(<span class="st">"Census API key set in this R session."</span>, <span class="at">type =</span> <span class="st">"message"</span>)</span>
-<span id="cb1-220"><a></a></span>
-<span id="cb1-221"><a></a>      <span class="co"># If we have a tract GEOID displayed with no_key or error, try fetching now</span></span>
-<span id="cb1-222"><a></a>      current_tract <span class="ot">&lt;-</span> <span class="fu">tract_val</span>()</span>
-<span id="cb1-223"><a></a>      <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(current_tract) <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">is.null</span>(current_tract<span class="sc">$</span>geoid)) {</span>
-<span id="cb1-224"><a></a>        <span class="fu">log</span>(<span class="fu">paste0</span>(<span class="st">"Attempting to fetch population for GEOID: "</span>, current_tract<span class="sc">$</span>geoid))</span>
-<span id="cb1-225"><a></a>        <span class="fu">try_fetch_tract</span>(current_tract<span class="sc">$</span>geoid)</span>
-<span id="cb1-226"><a></a>      }</span>
-<span id="cb1-227"><a></a>    } <span class="cf">else</span> {</span>
-<span id="cb1-228"><a></a>      <span class="fu">showNotification</span>(<span class="st">"No key entered."</span>, <span class="at">type =</span> <span class="st">"warning"</span>)</span>
-<span id="cb1-229"><a></a>    }</span>
-<span id="cb1-230"><a></a>  })</span>
-<span id="cb1-231"><a></a></span>
-<span id="cb1-232"><a></a>  <span class="co"># initial message</span></span>
-<span id="cb1-233"><a></a>  <span class="fu">observe</span>({</span>
-<span id="cb1-234"><a></a>    <span class="cf">if</span> (<span class="fu">length</span>(<span class="fu">msgs</span>()) <span class="sc">==</span> <span class="dv">0</span>) {</span>
-<span id="cb1-235"><a></a>      <span class="cf">if</span> (<span class="fu">exists</span>(<span class="st">"geocode_census_one"</span>)) <span class="fu">log</span>(<span class="st">"App started: geocode_census_one() available."</span>) <span class="cf">else</span> <span class="fu">log</span>(<span class="st">"App started: geocode_census_one() NOT available."</span>)</span>
-<span id="cb1-236"><a></a>    }</span>
-<span id="cb1-237"><a></a>  })</span>
-<span id="cb1-238"><a></a>}</span>
-<span id="cb1-239"><a></a></span>
-<span id="cb1-240"><a></a><span class="fu">shinyApp</span>(ui, server)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-1" data-code-line-numbers="9"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-1-1"><a href="#annotated-cell-1-1"></a><span class="co"># app.R - standalone Shiny app that geocodes an address, shows it on a leaflet map,</span></span>
+<span id="annotated-cell-1-2"><a href="#annotated-cell-1-2"></a><span class="co"># displays lat/lon, matched address, and a small Census tract population (if available).</span></span>
+<span id="annotated-cell-1-3"><a href="#annotated-cell-1-3"></a><span class="co"># Updated: show ACS 'NAME' (pop$name) when available; attempt coords-&gt;geographies fallback when needed.</span></span>
+<span id="annotated-cell-1-4"><a href="#annotated-cell-1-4"></a></span>
+<span id="annotated-cell-1-5"><a href="#annotated-cell-1-5"></a><span class="fu">library</span>(shiny)</span>
+<span id="annotated-cell-1-6"><a href="#annotated-cell-1-6"></a><span class="fu">library</span>(leaflet)</span>
+<span id="annotated-cell-1-7"><a href="#annotated-cell-1-7"></a></span>
+<span id="annotated-cell-1-8"><a href="#annotated-cell-1-8"></a><span class="co"># Load geocode and Census helper</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="1">1</button><span id="annotated-cell-1-9" class="code-annotation-target"><a href="#annotated-cell-1-9"></a><span class="fu">source</span>(<span class="st">"R/helpers.R"</span>)</span>
+<span id="annotated-cell-1-10"><a href="#annotated-cell-1-10"></a></span>
+<span id="annotated-cell-1-11"><a href="#annotated-cell-1-11"></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
+<span id="annotated-cell-1-12"><a href="#annotated-cell-1-12"></a>  <span class="fu">titlePanel</span>(<span class="st">"Address → Map with info"</span>),</span>
+<span id="annotated-cell-1-13"><a href="#annotated-cell-1-13"></a>  <span class="fu">sidebarLayout</span>(</span>
+<span id="annotated-cell-1-14"><a href="#annotated-cell-1-14"></a>    <span class="fu">sidebarPanel</span>(</span>
+<span id="annotated-cell-1-15"><a href="#annotated-cell-1-15"></a>      <span class="fu">textInput</span>(<span class="st">"address"</span>, <span class="st">"Type an address (one line):"</span>, <span class="at">value =</span> <span class="st">"1600 Pennsylvania Ave NW, Washington, DC 20500"</span>),</span>
+<span id="annotated-cell-1-16"><a href="#annotated-cell-1-16"></a>      <span class="fu">actionButton</span>(<span class="st">"go"</span>, <span class="st">"Locate address"</span>),</span>
+<span id="annotated-cell-1-17"><a href="#annotated-cell-1-17"></a>      <span class="fu">br</span>(), <span class="fu">br</span>(),</span>
+<span id="annotated-cell-1-18"><a href="#annotated-cell-1-18"></a>      tags<span class="sc">$</span><span class="fu">b</span>(<span class="st">"Parsed location"</span>),</span>
+<span id="annotated-cell-1-19"><a href="#annotated-cell-1-19"></a>      <span class="fu">br</span>(),</span>
+<span id="annotated-cell-1-20"><a href="#annotated-cell-1-20"></a>      <span class="fu">verbatimTextOutput</span>(<span class="st">"latlon"</span>, <span class="at">placeholder =</span> <span class="cn">TRUE</span>),</span>
+<span id="annotated-cell-1-21"><a href="#annotated-cell-1-21"></a>      <span class="fu">verbatimTextOutput</span>(<span class="st">"matched"</span>, <span class="at">placeholder =</span> <span class="cn">TRUE</span>),</span>
+<span id="annotated-cell-1-22"><a href="#annotated-cell-1-22"></a>      <span class="fu">verbatimTextOutput</span>(<span class="st">"pop_name"</span>, <span class="at">placeholder =</span> <span class="cn">TRUE</span>),</span>
+<span id="annotated-cell-1-23"><a href="#annotated-cell-1-23"></a>      <span class="fu">verbatimTextOutput</span>(<span class="st">"tract_info"</span>, <span class="at">placeholder =</span> <span class="cn">TRUE</span>),</span>
+<span id="annotated-cell-1-24"><a href="#annotated-cell-1-24"></a>      <span class="fu">br</span>(),</span>
+<span id="annotated-cell-1-25"><a href="#annotated-cell-1-25"></a>      tags<span class="sc">$</span><span class="fu">div</span>(</span>
+<span id="annotated-cell-1-26"><a href="#annotated-cell-1-26"></a>        tags<span class="sc">$</span><span class="fu">small</span>(<span class="st">"If the app reports </span><span class="sc">\"</span><span class="st">Census key not set</span><span class="sc">\"</span><span class="st"> for tract info, you can add a Census API key here: "</span>),</span>
+<span id="annotated-cell-1-27"><a href="#annotated-cell-1-27"></a>        <span class="fu">actionButton</span>(<span class="st">"set_key_btn"</span>, <span class="st">"Set Census API key"</span>),</span>
+<span id="annotated-cell-1-28"><a href="#annotated-cell-1-28"></a>        tags<span class="sc">$</span><span class="fu">br</span>(),</span>
+<span id="annotated-cell-1-29"><a href="#annotated-cell-1-29"></a>        tags<span class="sc">$</span><span class="fu">small</span>(<span class="st">"Get a free Census API key: "</span>),</span>
+<span id="annotated-cell-1-30"><a href="#annotated-cell-1-30"></a>        tags<span class="sc">$</span><span class="fu">a</span>(<span class="at">href =</span> <span class="st">"https://api.census.gov/data/key_signup.html"</span>, <span class="st">"Census API key signup"</span>, <span class="at">target =</span> <span class="st">"_blank"</span>)</span>
+<span id="annotated-cell-1-31"><a href="#annotated-cell-1-31"></a>      ),</span>
+<span id="annotated-cell-1-32"><a href="#annotated-cell-1-32"></a>      <span class="fu">br</span>(),</span>
+<span id="annotated-cell-1-33"><a href="#annotated-cell-1-33"></a>      tags<span class="sc">$</span><span class="fu">small</span>(<span class="st">"Debug log:"</span>),</span>
+<span id="annotated-cell-1-34"><a href="#annotated-cell-1-34"></a>      <span class="fu">verbatimTextOutput</span>(<span class="st">"debug"</span>, <span class="at">placeholder =</span> <span class="cn">TRUE</span>)</span>
+<span id="annotated-cell-1-35"><a href="#annotated-cell-1-35"></a>    ),</span>
+<span id="annotated-cell-1-36"><a href="#annotated-cell-1-36"></a>    <span class="fu">mainPanel</span>(</span>
+<span id="annotated-cell-1-37"><a href="#annotated-cell-1-37"></a>      <span class="fu">leafletOutput</span>(<span class="st">"map"</span>, <span class="at">height =</span> <span class="st">"600px"</span>)</span>
+<span id="annotated-cell-1-38"><a href="#annotated-cell-1-38"></a>    )</span>
+<span id="annotated-cell-1-39"><a href="#annotated-cell-1-39"></a>  )</span>
+<span id="annotated-cell-1-40"><a href="#annotated-cell-1-40"></a>)</span>
+<span id="annotated-cell-1-41"><a href="#annotated-cell-1-41"></a></span>
+<span id="annotated-cell-1-42"><a href="#annotated-cell-1-42"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output, session) {</span>
+<span id="annotated-cell-1-43"><a href="#annotated-cell-1-43"></a></span>
+<span id="annotated-cell-1-44"><a href="#annotated-cell-1-44"></a>  <span class="co"># simple in-memory debug messages</span></span>
+<span id="annotated-cell-1-45"><a href="#annotated-cell-1-45"></a>  msgs <span class="ot">&lt;-</span> <span class="fu">reactiveVal</span>(<span class="fu">character</span>())</span>
+<span id="annotated-cell-1-46"><a href="#annotated-cell-1-46"></a>  log <span class="ot">&lt;-</span> <span class="cf">function</span>(...) {</span>
+<span id="annotated-cell-1-47"><a href="#annotated-cell-1-47"></a>    new <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="fu">Sys.time</span>(), <span class="st">" - "</span>, <span class="fu">paste0</span>(..., <span class="at">collapse =</span> <span class="st">" "</span>))</span>
+<span id="annotated-cell-1-48"><a href="#annotated-cell-1-48"></a>    <span class="fu">msgs</span>(<span class="fu">c</span>(<span class="fu">msgs</span>(), new))</span>
+<span id="annotated-cell-1-49"><a href="#annotated-cell-1-49"></a>    <span class="fu">message</span>(new)</span>
+<span id="annotated-cell-1-50"><a href="#annotated-cell-1-50"></a>  }</span>
+<span id="annotated-cell-1-51"><a href="#annotated-cell-1-51"></a></span>
+<span id="annotated-cell-1-52"><a href="#annotated-cell-1-52"></a>  output<span class="sc">$</span>debug <span class="ot">&lt;-</span> <span class="fu">renderText</span>({ <span class="fu">paste</span>(<span class="fu">msgs</span>(), <span class="at">collapse =</span> <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>) })</span>
+<span id="annotated-cell-1-53"><a href="#annotated-cell-1-53"></a></span>
+<span id="annotated-cell-1-54"><a href="#annotated-cell-1-54"></a>  output<span class="sc">$</span>map <span class="ot">&lt;-</span> <span class="fu">renderLeaflet</span>({</span>
+<span id="annotated-cell-1-55"><a href="#annotated-cell-1-55"></a>    <span class="fu">leaflet</span>() <span class="sc">%&gt;%</span> <span class="fu">addTiles</span>() <span class="sc">%&gt;%</span> <span class="fu">setView</span>(<span class="at">lng =</span> <span class="sc">-</span><span class="fl">98.5795</span>, <span class="at">lat =</span> <span class="fl">39.8283</span>, <span class="at">zoom =</span> <span class="dv">4</span>)</span>
+<span id="annotated-cell-1-56"><a href="#annotated-cell-1-56"></a>  })</span>
+<span id="annotated-cell-1-57"><a href="#annotated-cell-1-57"></a></span>
+<span id="annotated-cell-1-58"><a href="#annotated-cell-1-58"></a>  <span class="co"># display parsed lat/lon and matched address</span></span>
+<span id="annotated-cell-1-59"><a href="#annotated-cell-1-59"></a>  latlon_val <span class="ot">&lt;-</span> <span class="fu">reactiveVal</span>(<span class="cn">NULL</span>)</span>
+<span id="annotated-cell-1-60"><a href="#annotated-cell-1-60"></a>  matched_val <span class="ot">&lt;-</span> <span class="fu">reactiveVal</span>(<span class="cn">NULL</span>)</span>
+<span id="annotated-cell-1-61"><a href="#annotated-cell-1-61"></a>  tract_val <span class="ot">&lt;-</span> <span class="fu">reactiveVal</span>(<span class="cn">NULL</span>)</span>
+<span id="annotated-cell-1-62"><a href="#annotated-cell-1-62"></a>  pop_name_val <span class="ot">&lt;-</span> <span class="fu">reactiveVal</span>(<span class="cn">NULL</span>)</span>
+<span id="annotated-cell-1-63"><a href="#annotated-cell-1-63"></a></span>
+<span id="annotated-cell-1-64"><a href="#annotated-cell-1-64"></a>  output<span class="sc">$</span>latlon <span class="ot">&lt;-</span> <span class="fu">renderText</span>({</span>
+<span id="annotated-cell-1-65"><a href="#annotated-cell-1-65"></a>    v <span class="ot">&lt;-</span> <span class="fu">latlon_val</span>()</span>
+<span id="annotated-cell-1-66"><a href="#annotated-cell-1-66"></a>    <span class="cf">if</span> (<span class="fu">is.null</span>(v)) <span class="fu">return</span>(<span class="st">"lat: -, lon: -"</span>)</span>
+<span id="annotated-cell-1-67"><a href="#annotated-cell-1-67"></a>    <span class="fu">paste0</span>(<span class="st">"lat: "</span>, v<span class="sc">$</span>lat, <span class="st">" , lon: "</span>, v<span class="sc">$</span>lon)</span>
+<span id="annotated-cell-1-68"><a href="#annotated-cell-1-68"></a>  })</span>
+<span id="annotated-cell-1-69"><a href="#annotated-cell-1-69"></a>  output<span class="sc">$</span>matched <span class="ot">&lt;-</span> <span class="fu">renderText</span>({</span>
+<span id="annotated-cell-1-70"><a href="#annotated-cell-1-70"></a>    v <span class="ot">&lt;-</span> <span class="fu">matched_val</span>()</span>
+<span id="annotated-cell-1-71"><a href="#annotated-cell-1-71"></a>    <span class="cf">if</span> (<span class="fu">is.null</span>(v)) <span class="fu">return</span>(<span class="st">"matched: -"</span>)</span>
+<span id="annotated-cell-1-72"><a href="#annotated-cell-1-72"></a>    <span class="fu">paste0</span>(<span class="st">"matched: "</span>, v)</span>
+<span id="annotated-cell-1-73"><a href="#annotated-cell-1-73"></a>  })</span>
+<span id="annotated-cell-1-74"><a href="#annotated-cell-1-74"></a>  output<span class="sc">$</span>pop_name <span class="ot">&lt;-</span> <span class="fu">renderText</span>({</span>
+<span id="annotated-cell-1-75"><a href="#annotated-cell-1-75"></a>    v <span class="ot">&lt;-</span> <span class="fu">pop_name_val</span>()</span>
+<span id="annotated-cell-1-76"><a href="#annotated-cell-1-76"></a>    <span class="cf">if</span> (<span class="fu">is.null</span>(v)) <span class="fu">return</span>(<span class="st">"Place name (ACS NAME): -"</span>)</span>
+<span id="annotated-cell-1-77"><a href="#annotated-cell-1-77"></a>    <span class="fu">paste0</span>(<span class="st">"Place name (ACS NAME): "</span>, v)</span>
+<span id="annotated-cell-1-78"><a href="#annotated-cell-1-78"></a>  })</span>
+<span id="annotated-cell-1-79"><a href="#annotated-cell-1-79"></a>  output<span class="sc">$</span>tract_info <span class="ot">&lt;-</span> <span class="fu">renderText</span>({</span>
+<span id="annotated-cell-1-80"><a href="#annotated-cell-1-80"></a>    v <span class="ot">&lt;-</span> <span class="fu">tract_val</span>()</span>
+<span id="annotated-cell-1-81"><a href="#annotated-cell-1-81"></a>    <span class="cf">if</span> (<span class="fu">is.null</span>(v)) <span class="fu">return</span>(<span class="st">"tract: -"</span>)</span>
+<span id="annotated-cell-1-82"><a href="#annotated-cell-1-82"></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(v<span class="sc">$</span>status) <span class="sc">&amp;&amp;</span> v<span class="sc">$</span>status <span class="sc">==</span> <span class="st">"ok"</span>) {</span>
+<span id="annotated-cell-1-83"><a href="#annotated-cell-1-83"></a>      <span class="fu">paste0</span>(<span class="st">"Tract GEOID: "</span>, v<span class="sc">$</span>geoid, <span class="st">"</span><span class="sc">\n</span><span class="st">Population (ACS5): "</span>, v<span class="sc">$</span>population, <span class="st">"</span><span class="sc">\n</span><span class="st">Name: "</span>, v<span class="sc">$</span>name)</span>
+<span id="annotated-cell-1-84"><a href="#annotated-cell-1-84"></a>    } <span class="cf">else</span> <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(v<span class="sc">$</span>status) <span class="sc">&amp;&amp;</span> v<span class="sc">$</span>status <span class="sc">==</span> <span class="st">"no_key"</span>) {</span>
+<span id="annotated-cell-1-85"><a href="#annotated-cell-1-85"></a>      <span class="fu">paste0</span>(<span class="st">"Tract GEOID: "</span>, v<span class="sc">$</span>geoid, <span class="st">" (Census key not set; population not fetched). Click 'Set Census API key' to enter a key and fetch."</span>)</span>
+<span id="annotated-cell-1-86"><a href="#annotated-cell-1-86"></a>    } <span class="cf">else</span> {</span>
+<span id="annotated-cell-1-87"><a href="#annotated-cell-1-87"></a>      <span class="fu">paste0</span>(<span class="st">"Tract lookup: "</span>, v<span class="sc">$</span>message)</span>
+<span id="annotated-cell-1-88"><a href="#annotated-cell-1-88"></a>    }</span>
+<span id="annotated-cell-1-89"><a href="#annotated-cell-1-89"></a>  })</span>
+<span id="annotated-cell-1-90"><a href="#annotated-cell-1-90"></a></span>
+<span id="annotated-cell-1-91"><a href="#annotated-cell-1-91"></a>  <span class="co"># Nominatim fallback</span></span>
+<span id="annotated-cell-1-92"><a href="#annotated-cell-1-92"></a>  nominatim_one <span class="ot">&lt;-</span> <span class="cf">function</span>(address) {</span>
+<span id="annotated-cell-1-93"><a href="#annotated-cell-1-93"></a>    url <span class="ot">&lt;-</span> <span class="st">"https://nominatim.openstreetmap.org/search"</span></span>
+<span id="annotated-cell-1-94"><a href="#annotated-cell-1-94"></a>    res <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>(</span>
+<span id="annotated-cell-1-95"><a href="#annotated-cell-1-95"></a>      httr<span class="sc">::</span><span class="fu">GET</span>(url, <span class="at">query =</span> <span class="fu">list</span>(<span class="at">q =</span> address, <span class="at">format =</span> <span class="st">"json"</span>, <span class="at">limit =</span> <span class="dv">1</span>), httr<span class="sc">::</span><span class="fu">user_agent</span>(<span class="st">"TommyBoy-App/1.0"</span>), httr<span class="sc">::</span><span class="fu">timeout</span>(<span class="dv">10</span>)),</span>
+<span id="annotated-cell-1-96"><a href="#annotated-cell-1-96"></a>      <span class="at">error =</span> <span class="cf">function</span>(e) <span class="cn">NULL</span></span>
+<span id="annotated-cell-1-97"><a href="#annotated-cell-1-97"></a>    )</span>
+<span id="annotated-cell-1-98"><a href="#annotated-cell-1-98"></a>    <span class="cf">if</span> (<span class="fu">is.null</span>(res) <span class="sc">||</span> httr<span class="sc">::</span><span class="fu">status_code</span>(res) <span class="sc">!=</span> <span class="dv">200</span>) <span class="fu">return</span>(<span class="cn">NULL</span>)</span>
+<span id="annotated-cell-1-99"><a href="#annotated-cell-1-99"></a>    parsed <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">content</span>(res, <span class="at">as =</span> <span class="st">"parsed"</span>)</span>
+<span id="annotated-cell-1-100"><a href="#annotated-cell-1-100"></a>    <span class="cf">if</span> (<span class="fu">length</span>(parsed) <span class="sc">==</span> <span class="dv">0</span>) <span class="fu">return</span>(<span class="cn">NULL</span>)</span>
+<span id="annotated-cell-1-101"><a href="#annotated-cell-1-101"></a>    d <span class="ot">&lt;-</span> parsed[[<span class="dv">1</span>]]</span>
+<span id="annotated-cell-1-102"><a href="#annotated-cell-1-102"></a>    <span class="fu">list</span>(<span class="at">lat =</span> <span class="fu">as.numeric</span>(d<span class="sc">$</span>lat), <span class="at">lon =</span> <span class="fu">as.numeric</span>(d<span class="sc">$</span>lon), <span class="at">label =</span> d<span class="sc">$</span>display_name, <span class="at">raw =</span> d)</span>
+<span id="annotated-cell-1-103"><a href="#annotated-cell-1-103"></a>  }</span>
+<span id="annotated-cell-1-104"><a href="#annotated-cell-1-104"></a></span>
+<span id="annotated-cell-1-105"><a href="#annotated-cell-1-105"></a>  <span class="co"># Extract tract GEOID from the 'raw' match object returned by Census geocoder - fallback to coords geographies</span></span>
+<span id="annotated-cell-1-106"><a href="#annotated-cell-1-106"></a>  extract_tract_geoid <span class="ot">&lt;-</span> <span class="cf">function</span>(raw_match) {</span>
+<span id="annotated-cell-1-107"><a href="#annotated-cell-1-107"></a>    <span class="cf">if</span> (<span class="fu">is.null</span>(raw_match)) <span class="fu">return</span>(<span class="cn">NULL</span>)</span>
+<span id="annotated-cell-1-108"><a href="#annotated-cell-1-108"></a>    geogs <span class="ot">&lt;-</span> raw_match<span class="sc">$</span>geographies</span>
+<span id="annotated-cell-1-109"><a href="#annotated-cell-1-109"></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(geogs) <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">is.null</span>(geogs<span class="sc">$</span><span class="st">`</span><span class="at">Census Tracts</span><span class="st">`</span>) <span class="sc">&amp;&amp;</span> <span class="fu">length</span>(geogs<span class="sc">$</span><span class="st">`</span><span class="at">Census Tracts</span><span class="st">`</span>) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="annotated-cell-1-110"><a href="#annotated-cell-1-110"></a>      ct <span class="ot">&lt;-</span> geogs<span class="sc">$</span><span class="st">`</span><span class="at">Census Tracts</span><span class="st">`</span>[[<span class="dv">1</span>]]</span>
+<span id="annotated-cell-1-111"><a href="#annotated-cell-1-111"></a>      <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(ct<span class="sc">$</span>GEOID)) <span class="fu">return</span>(ct<span class="sc">$</span>GEOID)</span>
+<span id="annotated-cell-1-112"><a href="#annotated-cell-1-112"></a>    }</span>
+<span id="annotated-cell-1-113"><a href="#annotated-cell-1-113"></a>    <span class="fu">return</span>(<span class="cn">NULL</span>)</span>
+<span id="annotated-cell-1-114"><a href="#annotated-cell-1-114"></a>  }</span>
+<span id="annotated-cell-1-115"><a href="#annotated-cell-1-115"></a></span>
+<span id="annotated-cell-1-116"><a href="#annotated-cell-1-116"></a>  <span class="co"># Helper to attempt tract population fetch if geoid present and key available</span></span>
+<span id="annotated-cell-1-117"><a href="#annotated-cell-1-117"></a>  try_fetch_tract <span class="ot">&lt;-</span> <span class="cf">function</span>(tract_geoid) {</span>
+<span id="annotated-cell-1-118"><a href="#annotated-cell-1-118"></a>    <span class="fu">pop_name_val</span>(<span class="cn">NULL</span>)</span>
+<span id="annotated-cell-1-119"><a href="#annotated-cell-1-119"></a>    <span class="cf">if</span> (<span class="fu">is.null</span>(tract_geoid)) <span class="fu">return</span>(<span class="cn">NULL</span>)</span>
+<span id="annotated-cell-1-120"><a href="#annotated-cell-1-120"></a>    key <span class="ot">&lt;-</span> <span class="fu">Sys.getenv</span>(<span class="st">"CENSUS_API_KEY"</span>, <span class="st">""</span>)</span>
+<span id="annotated-cell-1-121"><a href="#annotated-cell-1-121"></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">nzchar</span>(key)) {</span>
+<span id="annotated-cell-1-122"><a href="#annotated-cell-1-122"></a>      <span class="fu">tract_val</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"no_key"</span>, <span class="at">geoid =</span> tract_geoid))</span>
+<span id="annotated-cell-1-123"><a href="#annotated-cell-1-123"></a>      <span class="fu">return</span>(<span class="cn">NULL</span>)</span>
+<span id="annotated-cell-1-124"><a href="#annotated-cell-1-124"></a>    }</span>
+<span id="annotated-cell-1-125"><a href="#annotated-cell-1-125"></a>    pop_res <span class="ot">&lt;-</span> <span class="fu">fetch_acs_population</span>(tract_geoid, <span class="at">year =</span> <span class="dv">2021</span>, <span class="at">key =</span> key)</span>
+<span id="annotated-cell-1-126"><a href="#annotated-cell-1-126"></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(pop_res) <span class="sc">&amp;&amp;</span> <span class="fu">is.list</span>(pop_res) <span class="sc">&amp;&amp;</span> <span class="fu">identical</span>(pop_res<span class="sc">$</span>status, <span class="st">"ok"</span>)) {</span>
+<span id="annotated-cell-1-127"><a href="#annotated-cell-1-127"></a>      <span class="fu">tract_val</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"ok"</span>, <span class="at">geoid =</span> tract_geoid, <span class="at">population =</span> pop_res<span class="sc">$</span>population, <span class="at">name =</span> pop_res<span class="sc">$</span>name))</span>
+<span id="annotated-cell-1-128"><a href="#annotated-cell-1-128"></a>      <span class="fu">pop_name_val</span>(pop_res<span class="sc">$</span>name)</span>
+<span id="annotated-cell-1-129"><a href="#annotated-cell-1-129"></a>    } <span class="cf">else</span> {</span>
+<span id="annotated-cell-1-130"><a href="#annotated-cell-1-130"></a>      <span class="fu">tract_val</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(pop_res<span class="sc">$</span>message)) pop_res<span class="sc">$</span>message <span class="cf">else</span> <span class="st">"Census fetch failed"</span>, <span class="at">geoid =</span> tract_geoid))</span>
+<span id="annotated-cell-1-131"><a href="#annotated-cell-1-131"></a>      <span class="co"># if pop_res has a name even when status != ok, try to display it</span></span>
+<span id="annotated-cell-1-132"><a href="#annotated-cell-1-132"></a>      <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(pop_res<span class="sc">$</span>name)) <span class="fu">pop_name_val</span>(pop_res<span class="sc">$</span>name)</span>
+<span id="annotated-cell-1-133"><a href="#annotated-cell-1-133"></a>    }</span>
+<span id="annotated-cell-1-134"><a href="#annotated-cell-1-134"></a>  }</span>
+<span id="annotated-cell-1-135"><a href="#annotated-cell-1-135"></a></span>
+<span id="annotated-cell-1-136"><a href="#annotated-cell-1-136"></a>  <span class="fu">observeEvent</span>(input<span class="sc">$</span>go, {</span>
+<span id="annotated-cell-1-137"><a href="#annotated-cell-1-137"></a>    addr <span class="ot">&lt;-</span> <span class="fu">trimws</span>(input<span class="sc">$</span>address)</span>
+<span id="annotated-cell-1-138"><a href="#annotated-cell-1-138"></a>    <span class="fu">log</span>(<span class="st">"Locate button clicked. Address:"</span>, addr)</span>
+<span id="annotated-cell-1-139"><a href="#annotated-cell-1-139"></a>    <span class="cf">if</span> (addr <span class="sc">==</span> <span class="st">""</span> <span class="sc">||</span> <span class="fu">is.null</span>(addr)) { <span class="fu">log</span>(<span class="st">"Empty address"</span>); <span class="fu">showNotification</span>(<span class="st">"Please enter an address."</span>, <span class="at">type =</span> <span class="st">"warning"</span>); <span class="fu">return</span>() }</span>
+<span id="annotated-cell-1-140"><a href="#annotated-cell-1-140"></a></span>
+<span id="annotated-cell-1-141"><a href="#annotated-cell-1-141"></a>    <span class="co"># Primary: use Census geocoder</span></span>
+<span id="annotated-cell-1-142"><a href="#annotated-cell-1-142"></a>    res_obj <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="annotated-cell-1-143"><a href="#annotated-cell-1-143"></a>    res_obj <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>(<span class="fu">geocode_census_one</span>(addr), <span class="at">error =</span> <span class="cf">function</span>(e) { <span class="fu">log</span>(<span class="st">"geocode_census_one error:"</span>, e<span class="sc">$</span>message); <span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> e<span class="sc">$</span>message) })</span>
+<span id="annotated-cell-1-144"><a href="#annotated-cell-1-144"></a></span>
+<span id="annotated-cell-1-145"><a href="#annotated-cell-1-145"></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(res_obj) <span class="sc">&amp;&amp;</span> <span class="fu">is.list</span>(res_obj) <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">is.null</span>(res_obj<span class="sc">$</span>status) <span class="sc">&amp;&amp;</span> res_obj<span class="sc">$</span>status <span class="sc">==</span> <span class="st">"ok"</span>) {</span>
+<span id="annotated-cell-1-146"><a href="#annotated-cell-1-146"></a>      <span class="co"># success</span></span>
+<span id="annotated-cell-1-147"><a href="#annotated-cell-1-147"></a>      <span class="fu">log</span>(<span class="fu">paste0</span>(<span class="st">"Census geocoder returned:lat="</span>, res_obj<span class="sc">$</span>lat, <span class="st">" lon="</span>, res_obj<span class="sc">$</span>lon, <span class="st">" label="</span>, res_obj<span class="sc">$</span>label))</span>
+<span id="annotated-cell-1-148"><a href="#annotated-cell-1-148"></a>      <span class="fu">latlon_val</span>(<span class="fu">list</span>(<span class="at">lat =</span> res_obj<span class="sc">$</span>lat, <span class="at">lon =</span> res_obj<span class="sc">$</span>lon))</span>
+<span id="annotated-cell-1-149"><a href="#annotated-cell-1-149"></a>      <span class="fu">matched_val</span>(res_obj<span class="sc">$</span>label)</span>
+<span id="annotated-cell-1-150"><a href="#annotated-cell-1-150"></a>      <span class="fu">pop_name_val</span>(<span class="cn">NULL</span>)</span>
+<span id="annotated-cell-1-151"><a href="#annotated-cell-1-151"></a></span>
+<span id="annotated-cell-1-152"><a href="#annotated-cell-1-152"></a>      <span class="co"># Update map</span></span>
+<span id="annotated-cell-1-153"><a href="#annotated-cell-1-153"></a>      <span class="fu">leafletProxy</span>(<span class="st">"map"</span>) <span class="sc">%&gt;%</span> <span class="fu">clearMarkers</span>() <span class="sc">%&gt;%</span> <span class="fu">addMarkers</span>(<span class="at">lng =</span> res_obj<span class="sc">$</span>lon, <span class="at">lat =</span> res_obj<span class="sc">$</span>lat, <span class="at">popup =</span> res_obj<span class="sc">$</span>label) <span class="sc">%&gt;%</span> <span class="fu">setView</span>(<span class="at">lng =</span> res_obj<span class="sc">$</span>lon, <span class="at">lat =</span> res_obj<span class="sc">$</span>lat, <span class="at">zoom =</span> <span class="dv">16</span>)</span>
+<span id="annotated-cell-1-154"><a href="#annotated-cell-1-154"></a></span>
+<span id="annotated-cell-1-155"><a href="#annotated-cell-1-155"></a>      <span class="co"># Try to extract tract GEOID from raw response</span></span>
+<span id="annotated-cell-1-156"><a href="#annotated-cell-1-156"></a>      tract_geoid <span class="ot">&lt;-</span> <span class="fu">extract_tract_geoid</span>(res_obj<span class="sc">$</span>raw)</span>
+<span id="annotated-cell-1-157"><a href="#annotated-cell-1-157"></a>      <span class="cf">if</span> (<span class="fu">is.null</span>(tract_geoid)) {</span>
+<span id="annotated-cell-1-158"><a href="#annotated-cell-1-158"></a>        <span class="co"># fallback: call coordinates-&gt;geographies to obtain tracts</span></span>
+<span id="annotated-cell-1-159"><a href="#annotated-cell-1-159"></a>        geo_res <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>(<span class="fu">geographies_for_coords</span>(<span class="at">lat =</span> res_obj<span class="sc">$</span>lat, <span class="at">lon =</span> res_obj<span class="sc">$</span>lon), <span class="at">error =</span> <span class="cf">function</span>(e) <span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> e<span class="sc">$</span>message))</span>
+<span id="annotated-cell-1-160"><a href="#annotated-cell-1-160"></a>        <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(geo_res) <span class="sc">&amp;&amp;</span> <span class="fu">is.list</span>(geo_res) <span class="sc">&amp;&amp;</span> <span class="fu">identical</span>(geo_res<span class="sc">$</span>status, <span class="st">"ok"</span>)) {</span>
+<span id="annotated-cell-1-161"><a href="#annotated-cell-1-161"></a>          <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(geo_res<span class="sc">$</span>geographies<span class="sc">$</span><span class="st">`</span><span class="at">Census Tracts</span><span class="st">`</span>) <span class="sc">&amp;&amp;</span> <span class="fu">length</span>(geo_res<span class="sc">$</span>geographies<span class="sc">$</span><span class="st">`</span><span class="at">Census Tracts</span><span class="st">`</span>) <span class="sc">&gt;</span> <span class="dv">0</span>) {</span>
+<span id="annotated-cell-1-162"><a href="#annotated-cell-1-162"></a>            tract_geoid <span class="ot">&lt;-</span> geo_res<span class="sc">$</span>geographies<span class="sc">$</span><span class="st">`</span><span class="at">Census Tracts</span><span class="st">`</span>[[<span class="dv">1</span>]]<span class="sc">$</span>GEOID</span>
+<span id="annotated-cell-1-163"><a href="#annotated-cell-1-163"></a>            <span class="fu">log</span>(<span class="fu">paste0</span>(<span class="st">"Found tract GEOID via coords-&gt;geographies: "</span>, tract_geoid))</span>
+<span id="annotated-cell-1-164"><a href="#annotated-cell-1-164"></a>          }</span>
+<span id="annotated-cell-1-165"><a href="#annotated-cell-1-165"></a>        } <span class="cf">else</span> {</span>
+<span id="annotated-cell-1-166"><a href="#annotated-cell-1-166"></a>          <span class="fu">log</span>(<span class="fu">paste0</span>(<span class="st">"coords-&gt;geographies lookup failed: "</span>, <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(geo_res<span class="sc">$</span>message)) geo_res<span class="sc">$</span>message <span class="cf">else</span> <span class="st">"unknown"</span>))</span>
+<span id="annotated-cell-1-167"><a href="#annotated-cell-1-167"></a>        }</span>
+<span id="annotated-cell-1-168"><a href="#annotated-cell-1-168"></a>      }</span>
+<span id="annotated-cell-1-169"><a href="#annotated-cell-1-169"></a></span>
+<span id="annotated-cell-1-170"><a href="#annotated-cell-1-170"></a>      <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(tract_geoid)) {</span>
+<span id="annotated-cell-1-171"><a href="#annotated-cell-1-171"></a>        <span class="fu">try_fetch_tract</span>(tract_geoid)</span>
+<span id="annotated-cell-1-172"><a href="#annotated-cell-1-172"></a>      } <span class="cf">else</span> {</span>
+<span id="annotated-cell-1-173"><a href="#annotated-cell-1-173"></a>        <span class="fu">tract_val</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"nomatch"</span>, <span class="at">message =</span> <span class="st">"No tract GEOID in geocoder response"</span>))</span>
+<span id="annotated-cell-1-174"><a href="#annotated-cell-1-174"></a>      }</span>
+<span id="annotated-cell-1-175"><a href="#annotated-cell-1-175"></a></span>
+<span id="annotated-cell-1-176"><a href="#annotated-cell-1-176"></a>      <span class="fu">showNotification</span>(<span class="st">"Location found and map updated."</span>, <span class="at">type =</span> <span class="st">"message"</span>)</span>
+<span id="annotated-cell-1-177"><a href="#annotated-cell-1-177"></a>      <span class="fu">return</span>()</span>
+<span id="annotated-cell-1-178"><a href="#annotated-cell-1-178"></a>    }</span>
+<span id="annotated-cell-1-179"><a href="#annotated-cell-1-179"></a></span>
+<span id="annotated-cell-1-180"><a href="#annotated-cell-1-180"></a>    <span class="co"># If Census geocoder didn't return ok, try Nominatim fallback</span></span>
+<span id="annotated-cell-1-181"><a href="#annotated-cell-1-181"></a>    <span class="fu">log</span>(<span class="st">"Census geocoder did not return ok; attempting Nominatim fallback."</span>)</span>
+<span id="annotated-cell-1-182"><a href="#annotated-cell-1-182"></a>    res_nom <span class="ot">&lt;-</span> <span class="fu">nominatim_one</span>(addr)</span>
+<span id="annotated-cell-1-183"><a href="#annotated-cell-1-183"></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(res_nom)) {</span>
+<span id="annotated-cell-1-184"><a href="#annotated-cell-1-184"></a>      <span class="fu">log</span>(<span class="fu">paste0</span>(<span class="st">"Nominatim returned lat="</span>, res_nom<span class="sc">$</span>lat, <span class="st">" lon="</span>, res_nom<span class="sc">$</span>lon, <span class="st">" label="</span>, res_nom<span class="sc">$</span>label))</span>
+<span id="annotated-cell-1-185"><a href="#annotated-cell-1-185"></a>      <span class="fu">latlon_val</span>(<span class="fu">list</span>(<span class="at">lat =</span> res_nom<span class="sc">$</span>lat, <span class="at">lon =</span> res_nom<span class="sc">$</span>lon))</span>
+<span id="annotated-cell-1-186"><a href="#annotated-cell-1-186"></a>      <span class="fu">matched_val</span>(res_nom<span class="sc">$</span>label)</span>
+<span id="annotated-cell-1-187"><a href="#annotated-cell-1-187"></a>      <span class="fu">tract_val</span>(<span class="cn">NULL</span>)</span>
+<span id="annotated-cell-1-188"><a href="#annotated-cell-1-188"></a>      <span class="fu">pop_name_val</span>(<span class="cn">NULL</span>)</span>
+<span id="annotated-cell-1-189"><a href="#annotated-cell-1-189"></a>      <span class="fu">leafletProxy</span>(<span class="st">"map"</span>) <span class="sc">%&gt;%</span> <span class="fu">clearMarkers</span>() <span class="sc">%&gt;%</span> <span class="fu">addMarkers</span>(<span class="at">lng =</span> res_nom<span class="sc">$</span>lon, <span class="at">lat =</span> res_nom<span class="sc">$</span>lat, <span class="at">popup =</span> res_nom<span class="sc">$</span>label) <span class="sc">%&gt;%</span> <span class="fu">setView</span>(<span class="at">lng =</span> res_nom<span class="sc">$</span>lon, <span class="at">lat =</span> res_nom<span class="sc">$</span>lat, <span class="at">zoom =</span> <span class="dv">16</span>)</span>
+<span id="annotated-cell-1-190"><a href="#annotated-cell-1-190"></a>      <span class="fu">showNotification</span>(<span class="st">"Location found (fallback) and map updated."</span>, <span class="at">type =</span> <span class="st">"message"</span>)</span>
+<span id="annotated-cell-1-191"><a href="#annotated-cell-1-191"></a>      <span class="fu">return</span>()</span>
+<span id="annotated-cell-1-192"><a href="#annotated-cell-1-192"></a>    }</span>
+<span id="annotated-cell-1-193"><a href="#annotated-cell-1-193"></a></span>
+<span id="annotated-cell-1-194"><a href="#annotated-cell-1-194"></a>    <span class="fu">log</span>(<span class="st">"All geocoding attempts failed."</span>)</span>
+<span id="annotated-cell-1-195"><a href="#annotated-cell-1-195"></a>    <span class="fu">showNotification</span>(<span class="st">"No geocode result."</span>, <span class="at">type =</span> <span class="st">"warning"</span>)</span>
+<span id="annotated-cell-1-196"><a href="#annotated-cell-1-196"></a>  })</span>
+<span id="annotated-cell-1-197"><a href="#annotated-cell-1-197"></a></span>
+<span id="annotated-cell-1-198"><a href="#annotated-cell-1-198"></a>  <span class="co"># Modal for setting Census API key</span></span>
+<span id="annotated-cell-1-199"><a href="#annotated-cell-1-199"></a>  <span class="fu">observeEvent</span>(input<span class="sc">$</span>set_key_btn, {</span>
+<span id="annotated-cell-1-200"><a href="#annotated-cell-1-200"></a>    <span class="fu">showModal</span>(<span class="fu">modalDialog</span>(</span>
+<span id="annotated-cell-1-201"><a href="#annotated-cell-1-201"></a>      <span class="at">title =</span> <span class="st">"Set Census API key"</span>,</span>
+<span id="annotated-cell-1-202"><a href="#annotated-cell-1-202"></a>      <span class="fu">tagList</span>(</span>
+<span id="annotated-cell-1-203"><a href="#annotated-cell-1-203"></a>        tags<span class="sc">$</span><span class="fu">p</span>(<span class="st">"If you have a Census API key, paste it here to allow fetching ACS tract data (population, name). This sets the key for the current R session."</span>),</span>
+<span id="annotated-cell-1-204"><a href="#annotated-cell-1-204"></a>        tags<span class="sc">$</span><span class="fu">p</span>(tags<span class="sc">$</span><span class="fu">a</span>(<span class="at">href =</span> <span class="st">"https://api.census.gov/data/key_signup.html"</span>, <span class="st">"Get a free Census API key"</span>, <span class="at">target =</span> <span class="st">"_blank"</span>)),</span>
+<span id="annotated-cell-1-205"><a href="#annotated-cell-1-205"></a>        <span class="fu">textInput</span>(<span class="st">"census_key_input"</span>, <span class="st">"Paste Census API key:"</span>),</span>
+<span id="annotated-cell-1-206"><a href="#annotated-cell-1-206"></a>        tags<span class="sc">$</span><span class="fu">small</span>(<span class="st">"After saving the key, any displayed tract GEOID will attempt to fetch population automatically."</span>)</span>
+<span id="annotated-cell-1-207"><a href="#annotated-cell-1-207"></a>      ),</span>
+<span id="annotated-cell-1-208"><a href="#annotated-cell-1-208"></a>      <span class="at">footer =</span> <span class="fu">tagList</span>(<span class="fu">actionButton</span>(<span class="st">"save_census_key"</span>, <span class="st">"Save key and fetch"</span>), <span class="fu">modalButton</span>(<span class="st">"Cancel"</span>)),</span>
+<span id="annotated-cell-1-209"><a href="#annotated-cell-1-209"></a>      <span class="at">easyClose =</span> <span class="cn">TRUE</span></span>
+<span id="annotated-cell-1-210"><a href="#annotated-cell-1-210"></a>    ))</span>
+<span id="annotated-cell-1-211"><a href="#annotated-cell-1-211"></a>  })</span>
+<span id="annotated-cell-1-212"><a href="#annotated-cell-1-212"></a></span>
+<span id="annotated-cell-1-213"><a href="#annotated-cell-1-213"></a>  <span class="fu">observeEvent</span>(input<span class="sc">$</span>save_census_key, {</span>
+<span id="annotated-cell-1-214"><a href="#annotated-cell-1-214"></a>    key_val <span class="ot">&lt;-</span> input<span class="sc">$</span>census_key_input</span>
+<span id="annotated-cell-1-215"><a href="#annotated-cell-1-215"></a>    <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(key_val) <span class="sc">&amp;&amp;</span> <span class="fu">nzchar</span>(<span class="fu">trimws</span>(key_val))) {</span>
+<span id="annotated-cell-1-216"><a href="#annotated-cell-1-216"></a>      <span class="fu">Sys.setenv</span>(<span class="at">CENSUS_API_KEY =</span> <span class="fu">trimws</span>(key_val))</span>
+<span id="annotated-cell-1-217"><a href="#annotated-cell-1-217"></a>      <span class="fu">log</span>(<span class="st">"Census API key set in session."</span>)</span>
+<span id="annotated-cell-1-218"><a href="#annotated-cell-1-218"></a>      <span class="fu">removeModal</span>()</span>
+<span id="annotated-cell-1-219"><a href="#annotated-cell-1-219"></a>      <span class="fu">showNotification</span>(<span class="st">"Census API key set in this R session."</span>, <span class="at">type =</span> <span class="st">"message"</span>)</span>
+<span id="annotated-cell-1-220"><a href="#annotated-cell-1-220"></a></span>
+<span id="annotated-cell-1-221"><a href="#annotated-cell-1-221"></a>      <span class="co"># If we have a tract GEOID displayed with no_key or error, try fetching now</span></span>
+<span id="annotated-cell-1-222"><a href="#annotated-cell-1-222"></a>      current_tract <span class="ot">&lt;-</span> <span class="fu">tract_val</span>()</span>
+<span id="annotated-cell-1-223"><a href="#annotated-cell-1-223"></a>      <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(current_tract) <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">is.null</span>(current_tract<span class="sc">$</span>geoid)) {</span>
+<span id="annotated-cell-1-224"><a href="#annotated-cell-1-224"></a>        <span class="fu">log</span>(<span class="fu">paste0</span>(<span class="st">"Attempting to fetch population for GEOID: "</span>, current_tract<span class="sc">$</span>geoid))</span>
+<span id="annotated-cell-1-225"><a href="#annotated-cell-1-225"></a>        <span class="fu">try_fetch_tract</span>(current_tract<span class="sc">$</span>geoid)</span>
+<span id="annotated-cell-1-226"><a href="#annotated-cell-1-226"></a>      }</span>
+<span id="annotated-cell-1-227"><a href="#annotated-cell-1-227"></a>    } <span class="cf">else</span> {</span>
+<span id="annotated-cell-1-228"><a href="#annotated-cell-1-228"></a>      <span class="fu">showNotification</span>(<span class="st">"No key entered."</span>, <span class="at">type =</span> <span class="st">"warning"</span>)</span>
+<span id="annotated-cell-1-229"><a href="#annotated-cell-1-229"></a>    }</span>
+<span id="annotated-cell-1-230"><a href="#annotated-cell-1-230"></a>  })</span>
+<span id="annotated-cell-1-231"><a href="#annotated-cell-1-231"></a></span>
+<span id="annotated-cell-1-232"><a href="#annotated-cell-1-232"></a>  <span class="co"># initial message</span></span>
+<span id="annotated-cell-1-233"><a href="#annotated-cell-1-233"></a>  <span class="fu">observe</span>({</span>
+<span id="annotated-cell-1-234"><a href="#annotated-cell-1-234"></a>    <span class="cf">if</span> (<span class="fu">length</span>(<span class="fu">msgs</span>()) <span class="sc">==</span> <span class="dv">0</span>) {</span>
+<span id="annotated-cell-1-235"><a href="#annotated-cell-1-235"></a>      <span class="cf">if</span> (<span class="fu">exists</span>(<span class="st">"geocode_census_one"</span>)) <span class="fu">log</span>(<span class="st">"App started: geocode_census_one() available."</span>) <span class="cf">else</span> <span class="fu">log</span>(<span class="st">"App started: geocode_census_one() NOT available."</span>)</span>
+<span id="annotated-cell-1-236"><a href="#annotated-cell-1-236"></a>    }</span>
+<span id="annotated-cell-1-237"><a href="#annotated-cell-1-237"></a>  })</span>
+<span id="annotated-cell-1-238"><a href="#annotated-cell-1-238"></a>}</span>
+<span id="annotated-cell-1-239"><a href="#annotated-cell-1-239"></a></span>
+<span id="annotated-cell-1-240"><a href="#annotated-cell-1-240"></a><span class="fu">shinyApp</span>(ui, server)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="9" data-code-annotation="1">could also be folded into <code>app.R</code> – “sourcing” an option for efficient scripting of primary capability. Note the subfolder location if replicating locally.</span>
+</dd>
+</dl>
+</div>
 </div>
 </div><div class="column" style="width:50%;">
 <p><code>helpers.R</code>:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># Helper functions for geocoding and simple Census API access</span></span>
-<span id="cb2-2"><a></a><span class="co"># Keep lightweight: only depend on httr and jsonlite to avoid heavy system deps</span></span>
-<span id="cb2-3"><a></a></span>
-<span id="cb2-4"><a></a><span class="fu">library</span>(httr)</span>
-<span id="cb2-5"><a></a><span class="fu">library</span>(jsonlite)</span>
-<span id="cb2-6"><a></a></span>
-<span id="cb2-7"><a></a><span class="co"># geocode_census_one: calls US Census onelineaddress geocoder and returns structured result</span></span>
-<span id="cb2-8"><a></a>geocode_census_one <span class="ot">&lt;-</span> <span class="cf">function</span>(address, <span class="at">benchmark =</span> <span class="st">"Public_AR_Current"</span>, <span class="at">timeout_seconds =</span> <span class="dv">10</span>) {</span>
-<span id="cb2-9"><a></a>  <span class="cf">if</span> (<span class="fu">missing</span>(address) <span class="sc">||</span> <span class="fu">nchar</span>(<span class="fu">trimws</span>(address)) <span class="sc">==</span> <span class="dv">0</span>) <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="st">"empty address"</span>))</span>
-<span id="cb2-10"><a></a>  base <span class="ot">&lt;-</span> <span class="st">"https://geocoding.geo.census.gov/geocoder/locations/onelineaddress"</span></span>
-<span id="cb2-11"><a></a></span>
-<span id="cb2-12"><a></a>  resp <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>({</span>
-<span id="cb2-13"><a></a>    httr<span class="sc">::</span><span class="fu">GET</span>(</span>
-<span id="cb2-14"><a></a>      <span class="at">url =</span> base,</span>
-<span id="cb2-15"><a></a>      <span class="at">query =</span> <span class="fu">list</span>(<span class="at">address =</span> address, <span class="at">benchmark =</span> benchmark, <span class="at">format =</span> <span class="st">"json"</span>),</span>
-<span id="cb2-16"><a></a>      httr<span class="sc">::</span><span class="fu">user_agent</span>(<span class="st">"TommyBoy/1.0 (geocode_census_one)"</span>),</span>
-<span id="cb2-17"><a></a>      httr<span class="sc">::</span><span class="fu">timeout</span>(timeout_seconds)</span>
-<span id="cb2-18"><a></a>    )</span>
-<span id="cb2-19"><a></a>  }, <span class="at">error =</span> <span class="cf">function</span>(e) {</span>
-<span id="cb2-20"><a></a>    <span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="fu">paste0</span>(<span class="st">"HTTP error: "</span>, e<span class="sc">$</span>message))</span>
-<span id="cb2-21"><a></a>  })</span>
-<span id="cb2-22"><a></a></span>
-<span id="cb2-23"><a></a>  <span class="cf">if</span> (<span class="fu">is.list</span>(resp) <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">inherits</span>(resp, <span class="st">"response"</span>)) <span class="fu">return</span>(resp)</span>
-<span id="cb2-24"><a></a>  <span class="cf">if</span> (httr<span class="sc">::</span><span class="fu">status_code</span>(resp) <span class="sc">!=</span> <span class="dv">200</span>) <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="fu">paste0</span>(<span class="st">"HTTP status "</span>, httr<span class="sc">::</span><span class="fu">status_code</span>(resp))))</span>
-<span id="cb2-25"><a></a></span>
-<span id="cb2-26"><a></a>  txt <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">content</span>(resp, <span class="at">as =</span> <span class="st">"text"</span>, <span class="at">encoding =</span> <span class="st">"UTF-8"</span>)</span>
-<span id="cb2-27"><a></a>  parsed <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>({ jsonlite<span class="sc">::</span><span class="fu">fromJSON</span>(txt, <span class="at">simplifyVector =</span> <span class="cn">FALSE</span>) }, <span class="at">error =</span> <span class="cf">function</span>(e) <span class="cn">NULL</span>)</span>
-<span id="cb2-28"><a></a>  <span class="cf">if</span> (<span class="fu">is.null</span>(parsed)) <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="st">"JSON parse error"</span>))</span>
-<span id="cb2-29"><a></a></span>
-<span id="cb2-30"><a></a>  matches <span class="ot">&lt;-</span> parsed<span class="sc">$</span>result<span class="sc">$</span>addressMatches</span>
-<span id="cb2-31"><a></a>  <span class="cf">if</span> (<span class="fu">is.null</span>(matches) <span class="sc">||</span> <span class="fu">length</span>(matches) <span class="sc">==</span> <span class="dv">0</span>) <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"nomatch"</span>, <span class="at">message =</span> <span class="st">"no addressMatches returned"</span>, <span class="at">raw =</span> parsed<span class="sc">$</span>result))</span>
-<span id="cb2-32"><a></a></span>
-<span id="cb2-33"><a></a>  m <span class="ot">&lt;-</span> matches[[<span class="dv">1</span>]]</span>
-<span id="cb2-34"><a></a>  coords <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
-<span id="cb2-35"><a></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(m<span class="sc">$</span>coordinates)) coords <span class="ot">&lt;-</span> m<span class="sc">$</span>coordinates</span>
-<span id="cb2-36"><a></a>  <span class="cf">if</span> (<span class="fu">is.null</span>(coords) <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">is.null</span>(m<span class="sc">$</span>coordinates<span class="sc">$</span>x) <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">is.null</span>(m<span class="sc">$</span>coordinates<span class="sc">$</span>y)) coords <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">x =</span> m<span class="sc">$</span>coordinates<span class="sc">$</span>x, <span class="at">y =</span> m<span class="sc">$</span>coordinates<span class="sc">$</span>y)</span>
-<span id="cb2-37"><a></a>  <span class="cf">if</span> (<span class="fu">is.null</span>(coords)) <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="st">"match found but coordinates missing"</span>, <span class="at">raw =</span> m))</span>
-<span id="cb2-38"><a></a></span>
-<span id="cb2-39"><a></a>  lon <span class="ot">&lt;-</span> <span class="fu">suppressWarnings</span>(<span class="fu">as.numeric</span>(coords<span class="sc">$</span>x))</span>
-<span id="cb2-40"><a></a>  lat <span class="ot">&lt;-</span> <span class="fu">suppressWarnings</span>(<span class="fu">as.numeric</span>(coords<span class="sc">$</span>y))</span>
-<span id="cb2-41"><a></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.finite</span>(lat) <span class="sc">||</span> <span class="sc">!</span><span class="fu">is.finite</span>(lon)) <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="st">"coordinates not numeric/finite"</span>, <span class="at">raw =</span> m))</span>
-<span id="cb2-42"><a></a></span>
-<span id="cb2-43"><a></a>  label <span class="ot">&lt;-</span> <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(m<span class="sc">$</span>matchedAddress)) m<span class="sc">$</span>matchedAddress <span class="cf">else</span> address</span>
-<span id="cb2-44"><a></a>  <span class="fu">list</span>(<span class="at">status =</span> <span class="st">"ok"</span>, <span class="at">lat =</span> lat, <span class="at">lon =</span> lon, <span class="at">label =</span> label, <span class="at">raw =</span> m)</span>
-<span id="cb2-45"><a></a>}</span>
-<span id="cb2-46"><a></a></span>
-<span id="cb2-47"><a></a><span class="co"># geographies_for_coords: call Census coordinates-&gt;geographies endpoint to get tract GEOID etc.</span></span>
-<span id="cb2-48"><a></a><span class="co"># Returns list(status='ok', geographies=...) or structured error/nomatch</span></span>
-<span id="cb2-49"><a></a>geographies_for_coords <span class="ot">&lt;-</span> <span class="cf">function</span>(lat, lon, <span class="at">benchmark =</span> <span class="st">"Public_AR_Census2020"</span>, <span class="at">vintage =</span> <span class="st">"Census2020_Census2020"</span>, <span class="at">timeout_seconds =</span> <span class="dv">10</span>) {</span>
-<span id="cb2-50"><a></a>  <span class="cf">if</span> (<span class="fu">missing</span>(lat) <span class="sc">||</span> <span class="fu">missing</span>(lon) <span class="sc">||</span> <span class="sc">!</span><span class="fu">is.finite</span>(lat) <span class="sc">||</span> <span class="sc">!</span><span class="fu">is.finite</span>(lon)) <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="st">"invalid lat/lon"</span>))</span>
-<span id="cb2-51"><a></a>  base <span class="ot">&lt;-</span> <span class="st">"https://geocoding.geo.census.gov/geocoder/geographies/coordinates"</span></span>
-<span id="cb2-52"><a></a></span>
-<span id="cb2-53"><a></a>  resp <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>({</span>
-<span id="cb2-54"><a></a>    httr<span class="sc">::</span><span class="fu">GET</span>(</span>
-<span id="cb2-55"><a></a>      <span class="at">url =</span> base,</span>
-<span id="cb2-56"><a></a>      <span class="at">query =</span> <span class="fu">list</span>(<span class="at">x =</span> lon, <span class="at">y =</span> lat, <span class="at">benchmark =</span> benchmark, <span class="at">vintage =</span> vintage, <span class="at">format =</span> <span class="st">"json"</span>),</span>
-<span id="cb2-57"><a></a>      httr<span class="sc">::</span><span class="fu">user_agent</span>(<span class="st">"TommyBoy/1.0 (geographies_for_coords)"</span>),</span>
-<span id="cb2-58"><a></a>      httr<span class="sc">::</span><span class="fu">timeout</span>(timeout_seconds)</span>
-<span id="cb2-59"><a></a>    )</span>
-<span id="cb2-60"><a></a>  }, <span class="at">error =</span> <span class="cf">function</span>(e) {</span>
-<span id="cb2-61"><a></a>    <span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="fu">paste0</span>(<span class="st">"HTTP error: "</span>, e<span class="sc">$</span>message))</span>
-<span id="cb2-62"><a></a>  })</span>
-<span id="cb2-63"><a></a></span>
-<span id="cb2-64"><a></a>  <span class="cf">if</span> (<span class="fu">is.list</span>(resp) <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">inherits</span>(resp, <span class="st">"response"</span>)) <span class="fu">return</span>(resp)</span>
-<span id="cb2-65"><a></a>  <span class="cf">if</span> (httr<span class="sc">::</span><span class="fu">status_code</span>(resp) <span class="sc">!=</span> <span class="dv">200</span>) {</span>
-<span id="cb2-66"><a></a>    body <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>(httr<span class="sc">::</span><span class="fu">content</span>(resp, <span class="at">as =</span> <span class="st">"text"</span>, <span class="at">encoding =</span> <span class="st">"UTF-8"</span>), <span class="at">error =</span> <span class="cf">function</span>(e) <span class="st">""</span>)</span>
-<span id="cb2-67"><a></a>    <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="fu">paste0</span>(<span class="st">"HTTP status "</span>, httr<span class="sc">::</span><span class="fu">status_code</span>(resp), <span class="st">"; body: "</span>, body)))</span>
-<span id="cb2-68"><a></a>  }</span>
-<span id="cb2-69"><a></a></span>
-<span id="cb2-70"><a></a>  txt <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">content</span>(resp, <span class="at">as =</span> <span class="st">"text"</span>, <span class="at">encoding =</span> <span class="st">"UTF-8"</span>)</span>
-<span id="cb2-71"><a></a>  parsed <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>({ jsonlite<span class="sc">::</span><span class="fu">fromJSON</span>(txt, <span class="at">simplifyVector =</span> <span class="cn">FALSE</span>) }, <span class="at">error =</span> <span class="cf">function</span>(e) <span class="cn">NULL</span>)</span>
-<span id="cb2-72"><a></a>  <span class="cf">if</span> (<span class="fu">is.null</span>(parsed)) <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="st">"JSON parse error"</span>))</span>
-<span id="cb2-73"><a></a></span>
-<span id="cb2-74"><a></a>  geogs <span class="ot">&lt;-</span> parsed<span class="sc">$</span>result<span class="sc">$</span>geographies</span>
-<span id="cb2-75"><a></a>  <span class="cf">if</span> (<span class="fu">is.null</span>(geogs) <span class="sc">||</span> <span class="fu">length</span>(geogs) <span class="sc">==</span> <span class="dv">0</span>) <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"nomatch"</span>, <span class="at">message =</span> <span class="st">"no geographies returned"</span>, <span class="at">raw =</span> parsed<span class="sc">$</span>result))</span>
-<span id="cb2-76"><a></a></span>
-<span id="cb2-77"><a></a>  <span class="fu">list</span>(<span class="at">status =</span> <span class="st">"ok"</span>, <span class="at">geographies =</span> geogs)</span>
-<span id="cb2-78"><a></a>}</span>
-<span id="cb2-79"><a></a></span>
-<span id="cb2-80"><a></a><span class="co"># fetch_acs_population: given 11-digit tract GEOID, query Census API for total population and NAME</span></span>
-<span id="cb2-81"><a></a><span class="co"># Returns list(status='ok', population=..., name=...) or structured error</span></span>
-<span id="cb2-82"><a></a>fetch_acs_population <span class="ot">&lt;-</span> <span class="cf">function</span>(tract_geoid, <span class="at">year =</span> <span class="dv">2021</span>, <span class="at">key =</span> <span class="fu">Sys.getenv</span>(<span class="st">"CENSUS_API_KEY"</span>, <span class="st">""</span>)) {</span>
-<span id="cb2-83"><a></a>  <span class="cf">if</span> (<span class="fu">missing</span>(tract_geoid) <span class="sc">||</span> <span class="fu">is.null</span>(tract_geoid) <span class="sc">||</span> <span class="fu">nchar</span>(<span class="fu">trimws</span>(tract_geoid)) <span class="sc">&lt;</span> <span class="dv">11</span>) <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="st">"invalid tract GEOID"</span>))</span>
-<span id="cb2-84"><a></a></span>
-<span id="cb2-85"><a></a>  state <span class="ot">&lt;-</span> <span class="fu">substr</span>(tract_geoid, <span class="dv">1</span>, <span class="dv">2</span>)</span>
-<span id="cb2-86"><a></a>  county <span class="ot">&lt;-</span> <span class="fu">substr</span>(tract_geoid, <span class="dv">3</span>, <span class="dv">5</span>)</span>
-<span id="cb2-87"><a></a>  tract <span class="ot">&lt;-</span> <span class="fu">substr</span>(tract_geoid, <span class="dv">6</span>, <span class="dv">11</span>)</span>
-<span id="cb2-88"><a></a>  <span class="cf">if</span> (<span class="fu">nchar</span>(tract) <span class="sc">&lt;</span> <span class="dv">6</span>) tract <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">"%06s"</span>, tract)</span>
-<span id="cb2-89"><a></a></span>
-<span id="cb2-90"><a></a>  base <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">"https://api.census.gov/data/%s/acs/acs5"</span>, <span class="fu">as.character</span>(year))</span>
-<span id="cb2-91"><a></a></span>
-<span id="cb2-92"><a></a>  <span class="co"># Try with the estimate variable (B01003_001E) which the ACS API accepts</span></span>
-<span id="cb2-93"><a></a>  query <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">get =</span> <span class="st">"B01003_001E,NAME"</span>)</span>
-<span id="cb2-94"><a></a>  query[[<span class="st">"for"</span>]] <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"tract:"</span>, tract)</span>
-<span id="cb2-95"><a></a>  query[[<span class="st">"in"</span>]] <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"state:"</span>, state, <span class="st">"+county:"</span>, county)</span>
-<span id="cb2-96"><a></a>  <span class="cf">if</span> (<span class="fu">nzchar</span>(key)) query<span class="sc">$</span>key <span class="ot">&lt;-</span> key</span>
-<span id="cb2-97"><a></a></span>
-<span id="cb2-98"><a></a>  resp <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>({ httr<span class="sc">::</span><span class="fu">GET</span>(base, <span class="at">query =</span> query, httr<span class="sc">::</span><span class="fu">timeout</span>(<span class="dv">15</span>)) }, <span class="at">error =</span> <span class="cf">function</span>(e) <span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="fu">paste0</span>(<span class="st">"HTTP error: "</span>, e<span class="sc">$</span>message)))</span>
-<span id="cb2-99"><a></a>  <span class="cf">if</span> (<span class="fu">is.list</span>(resp) <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">inherits</span>(resp, <span class="st">"response"</span>)) <span class="fu">return</span>(resp)</span>
-<span id="cb2-100"><a></a></span>
-<span id="cb2-101"><a></a>  status_code <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">status_code</span>(resp)</span>
-<span id="cb2-102"><a></a>  <span class="cf">if</span> (status_code <span class="sc">!=</span> <span class="dv">200</span>) {</span>
-<span id="cb2-103"><a></a>    <span class="co"># capture body for diagnostics</span></span>
-<span id="cb2-104"><a></a>    body <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>(httr<span class="sc">::</span><span class="fu">content</span>(resp, <span class="at">as =</span> <span class="st">"text"</span>, <span class="at">encoding =</span> <span class="st">"UTF-8"</span>), <span class="at">error =</span> <span class="cf">function</span>(e) <span class="st">""</span>)</span>
-<span id="cb2-105"><a></a>    <span class="co"># If variable unknown, try fallback to B01003_001 (non-E)</span></span>
-<span id="cb2-106"><a></a>    <span class="cf">if</span> (<span class="fu">grepl</span>(<span class="st">"unknown variable"</span>, body, <span class="at">ignore.case =</span> <span class="cn">TRUE</span>)) {</span>
-<span id="cb2-107"><a></a>      query2 <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">get =</span> <span class="st">"B01003_001,NAME"</span>)</span>
-<span id="cb2-108"><a></a>      query2[[<span class="st">"for"</span>]] <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"tract:"</span>, tract)</span>
-<span id="cb2-109"><a></a>      query2[[<span class="st">"in"</span>]] <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"state:"</span>, state, <span class="st">"+county:"</span>, county)</span>
-<span id="cb2-110"><a></a>      <span class="cf">if</span> (<span class="fu">nzchar</span>(key)) query2<span class="sc">$</span>key <span class="ot">&lt;-</span> key</span>
-<span id="cb2-111"><a></a>      resp2 <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>({ httr<span class="sc">::</span><span class="fu">GET</span>(base, <span class="at">query =</span> query2, httr<span class="sc">::</span><span class="fu">timeout</span>(<span class="dv">15</span>)) }, <span class="at">error =</span> <span class="cf">function</span>(e) <span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="fu">paste0</span>(<span class="st">"HTTP error: "</span>, e<span class="sc">$</span>message)))</span>
-<span id="cb2-112"><a></a>      <span class="cf">if</span> (<span class="fu">is.list</span>(resp2) <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">inherits</span>(resp2, <span class="st">"response"</span>)) <span class="fu">return</span>(resp2)</span>
-<span id="cb2-113"><a></a>      <span class="cf">if</span> (httr<span class="sc">::</span><span class="fu">status_code</span>(resp2) <span class="sc">==</span> <span class="dv">200</span>) {</span>
-<span id="cb2-114"><a></a>        txt2 <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">content</span>(resp2, <span class="at">as =</span> <span class="st">"text"</span>, <span class="at">encoding =</span> <span class="st">"UTF-8"</span>)</span>
-<span id="cb2-115"><a></a>        parsed2 <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>({ jsonlite<span class="sc">::</span><span class="fu">fromJSON</span>(txt2, <span class="at">simplifyVector =</span> <span class="cn">TRUE</span>) }, <span class="at">error =</span> <span class="cf">function</span>(e) <span class="cn">NULL</span>)</span>
-<span id="cb2-116"><a></a>        <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(parsed2) <span class="sc">&amp;&amp;</span> <span class="fu">length</span>(parsed2) <span class="sc">&gt;=</span> <span class="dv">2</span>) {</span>
-<span id="cb2-117"><a></a>          hdr2 <span class="ot">&lt;-</span> parsed2[<span class="dv">1</span>, ]</span>
-<span id="cb2-118"><a></a>          vals2 <span class="ot">&lt;-</span> parsed2[<span class="dv">2</span>, ]</span>
-<span id="cb2-119"><a></a>          pop_idx2 <span class="ot">&lt;-</span> <span class="fu">which</span>(hdr2 <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"B01003_001E"</span>, <span class="st">"B01003_001"</span>))</span>
-<span id="cb2-120"><a></a>          name_idx2 <span class="ot">&lt;-</span> <span class="fu">which</span>(hdr2 <span class="sc">==</span> <span class="st">"NAME"</span>)</span>
-<span id="cb2-121"><a></a>          pop2 <span class="ot">&lt;-</span> <span class="cf">if</span> (<span class="fu">length</span>(pop_idx2) <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="fu">as.numeric</span>(vals2[[pop_idx2]]) <span class="cf">else</span> <span class="cn">NA</span></span>
-<span id="cb2-122"><a></a>          name2 <span class="ot">&lt;-</span> <span class="cf">if</span> (<span class="fu">length</span>(name_idx2) <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="fu">as.character</span>(vals2[[name_idx2]]) <span class="cf">else</span> <span class="cn">NA</span></span>
-<span id="cb2-123"><a></a>          <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"ok"</span>, <span class="at">population =</span> pop2, <span class="at">name =</span> name2, <span class="at">state =</span> state, <span class="at">county =</span> county, <span class="at">tract =</span> tract))</span>
-<span id="cb2-124"><a></a>        }</span>
-<span id="cb2-125"><a></a>      } <span class="cf">else</span> {</span>
-<span id="cb2-126"><a></a>        body2 <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>(httr<span class="sc">::</span><span class="fu">content</span>(resp2, <span class="at">as =</span> <span class="st">"text"</span>, <span class="at">encoding =</span> <span class="st">"UTF-8"</span>), <span class="at">error =</span> <span class="cf">function</span>(e) <span class="st">""</span>)</span>
-<span id="cb2-127"><a></a>        <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="fu">paste0</span>(<span class="st">"Census API status: "</span>, httr<span class="sc">::</span><span class="fu">status_code</span>(resp2), <span class="st">"; body: "</span>, body2)))</span>
-<span id="cb2-128"><a></a>      }</span>
-<span id="cb2-129"><a></a>    }</span>
-<span id="cb2-130"><a></a></span>
-<span id="cb2-131"><a></a>    <span class="co"># If 400 and no key, give helpful message</span></span>
-<span id="cb2-132"><a></a>    <span class="cf">if</span> (status_code <span class="sc">==</span> <span class="dv">400</span> <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">nzchar</span>(key)) <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="fu">paste0</span>(<span class="st">"Census API returned status 400. The Census API may require an API key for this endpoint. Set CENSUS_API_KEY in your environment. Body: "</span>, body)))</span>
-<span id="cb2-133"><a></a></span>
-<span id="cb2-134"><a></a>    <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="fu">paste0</span>(<span class="st">"Census API status: "</span>, status_code, <span class="st">"; body: "</span>, body)))</span>
-<span id="cb2-135"><a></a>  }</span>
-<span id="cb2-136"><a></a></span>
-<span id="cb2-137"><a></a>  txt <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">content</span>(resp, <span class="at">as =</span> <span class="st">"text"</span>, <span class="at">encoding =</span> <span class="st">"UTF-8"</span>)</span>
-<span id="cb2-138"><a></a>  parsed <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>({ jsonlite<span class="sc">::</span><span class="fu">fromJSON</span>(txt, <span class="at">simplifyVector =</span> <span class="cn">TRUE</span>) }, <span class="at">error =</span> <span class="cf">function</span>(e) <span class="cn">NULL</span>)</span>
-<span id="cb2-139"><a></a>  <span class="cf">if</span> (<span class="fu">is.null</span>(parsed) <span class="sc">||</span> <span class="fu">length</span>(parsed) <span class="sc">&lt;</span> <span class="dv">2</span>) <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="st">"Census API returned no data"</span>))</span>
-<span id="cb2-140"><a></a></span>
-<span id="cb2-141"><a></a>  hdr <span class="ot">&lt;-</span> parsed[<span class="dv">1</span>, ]</span>
-<span id="cb2-142"><a></a>  vals <span class="ot">&lt;-</span> parsed[<span class="dv">2</span>, ]</span>
-<span id="cb2-143"><a></a>  pop_idx <span class="ot">&lt;-</span> <span class="fu">which</span>(hdr <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"B01003_001E"</span>, <span class="st">"B01003_001"</span>))</span>
-<span id="cb2-144"><a></a>  name_idx <span class="ot">&lt;-</span> <span class="fu">which</span>(hdr <span class="sc">==</span> <span class="st">"NAME"</span>)</span>
-<span id="cb2-145"><a></a>  pop <span class="ot">&lt;-</span> <span class="cf">if</span> (<span class="fu">length</span>(pop_idx) <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="fu">as.numeric</span>(vals[[pop_idx]]) <span class="cf">else</span> <span class="cn">NA</span></span>
-<span id="cb2-146"><a></a>  name <span class="ot">&lt;-</span> <span class="cf">if</span> (<span class="fu">length</span>(name_idx) <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="fu">as.character</span>(vals[[name_idx]]) <span class="cf">else</span> <span class="cn">NA</span></span>
-<span id="cb2-147"><a></a></span>
-<span id="cb2-148"><a></a>  <span class="fu">list</span>(<span class="at">status =</span> <span class="st">"ok"</span>, <span class="at">population =</span> pop, <span class="at">name =</span> name, <span class="at">state =</span> state, <span class="at">county =</span> county, <span class="at">tract =</span> tract)</span>
-<span id="cb2-149"><a></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># Helper functions for geocoding and simple Census API access</span></span>
+<span id="cb1-2"><a></a><span class="co"># Keep lightweight: only depend on httr and jsonlite to avoid heavy system deps</span></span>
+<span id="cb1-3"><a></a></span>
+<span id="cb1-4"><a></a><span class="fu">library</span>(httr)</span>
+<span id="cb1-5"><a></a><span class="fu">library</span>(jsonlite)</span>
+<span id="cb1-6"><a></a></span>
+<span id="cb1-7"><a></a><span class="co"># geocode_census_one: calls US Census onelineaddress geocoder and returns structured result</span></span>
+<span id="cb1-8"><a></a>geocode_census_one <span class="ot">&lt;-</span> <span class="cf">function</span>(address, <span class="at">benchmark =</span> <span class="st">"Public_AR_Current"</span>, <span class="at">timeout_seconds =</span> <span class="dv">10</span>) {</span>
+<span id="cb1-9"><a></a>  <span class="cf">if</span> (<span class="fu">missing</span>(address) <span class="sc">||</span> <span class="fu">nchar</span>(<span class="fu">trimws</span>(address)) <span class="sc">==</span> <span class="dv">0</span>) <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="st">"empty address"</span>))</span>
+<span id="cb1-10"><a></a>  base <span class="ot">&lt;-</span> <span class="st">"https://geocoding.geo.census.gov/geocoder/locations/onelineaddress"</span></span>
+<span id="cb1-11"><a></a></span>
+<span id="cb1-12"><a></a>  resp <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>({</span>
+<span id="cb1-13"><a></a>    httr<span class="sc">::</span><span class="fu">GET</span>(</span>
+<span id="cb1-14"><a></a>      <span class="at">url =</span> base,</span>
+<span id="cb1-15"><a></a>      <span class="at">query =</span> <span class="fu">list</span>(<span class="at">address =</span> address, <span class="at">benchmark =</span> benchmark, <span class="at">format =</span> <span class="st">"json"</span>),</span>
+<span id="cb1-16"><a></a>      httr<span class="sc">::</span><span class="fu">user_agent</span>(<span class="st">"TommyBoy/1.0 (geocode_census_one)"</span>),</span>
+<span id="cb1-17"><a></a>      httr<span class="sc">::</span><span class="fu">timeout</span>(timeout_seconds)</span>
+<span id="cb1-18"><a></a>    )</span>
+<span id="cb1-19"><a></a>  }, <span class="at">error =</span> <span class="cf">function</span>(e) {</span>
+<span id="cb1-20"><a></a>    <span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="fu">paste0</span>(<span class="st">"HTTP error: "</span>, e<span class="sc">$</span>message))</span>
+<span id="cb1-21"><a></a>  })</span>
+<span id="cb1-22"><a></a></span>
+<span id="cb1-23"><a></a>  <span class="cf">if</span> (<span class="fu">is.list</span>(resp) <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">inherits</span>(resp, <span class="st">"response"</span>)) <span class="fu">return</span>(resp)</span>
+<span id="cb1-24"><a></a>  <span class="cf">if</span> (httr<span class="sc">::</span><span class="fu">status_code</span>(resp) <span class="sc">!=</span> <span class="dv">200</span>) <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="fu">paste0</span>(<span class="st">"HTTP status "</span>, httr<span class="sc">::</span><span class="fu">status_code</span>(resp))))</span>
+<span id="cb1-25"><a></a></span>
+<span id="cb1-26"><a></a>  txt <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">content</span>(resp, <span class="at">as =</span> <span class="st">"text"</span>, <span class="at">encoding =</span> <span class="st">"UTF-8"</span>)</span>
+<span id="cb1-27"><a></a>  parsed <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>({ jsonlite<span class="sc">::</span><span class="fu">fromJSON</span>(txt, <span class="at">simplifyVector =</span> <span class="cn">FALSE</span>) }, <span class="at">error =</span> <span class="cf">function</span>(e) <span class="cn">NULL</span>)</span>
+<span id="cb1-28"><a></a>  <span class="cf">if</span> (<span class="fu">is.null</span>(parsed)) <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="st">"JSON parse error"</span>))</span>
+<span id="cb1-29"><a></a></span>
+<span id="cb1-30"><a></a>  matches <span class="ot">&lt;-</span> parsed<span class="sc">$</span>result<span class="sc">$</span>addressMatches</span>
+<span id="cb1-31"><a></a>  <span class="cf">if</span> (<span class="fu">is.null</span>(matches) <span class="sc">||</span> <span class="fu">length</span>(matches) <span class="sc">==</span> <span class="dv">0</span>) <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"nomatch"</span>, <span class="at">message =</span> <span class="st">"no addressMatches returned"</span>, <span class="at">raw =</span> parsed<span class="sc">$</span>result))</span>
+<span id="cb1-32"><a></a></span>
+<span id="cb1-33"><a></a>  m <span class="ot">&lt;-</span> matches[[<span class="dv">1</span>]]</span>
+<span id="cb1-34"><a></a>  coords <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb1-35"><a></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(m<span class="sc">$</span>coordinates)) coords <span class="ot">&lt;-</span> m<span class="sc">$</span>coordinates</span>
+<span id="cb1-36"><a></a>  <span class="cf">if</span> (<span class="fu">is.null</span>(coords) <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">is.null</span>(m<span class="sc">$</span>coordinates<span class="sc">$</span>x) <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">is.null</span>(m<span class="sc">$</span>coordinates<span class="sc">$</span>y)) coords <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">x =</span> m<span class="sc">$</span>coordinates<span class="sc">$</span>x, <span class="at">y =</span> m<span class="sc">$</span>coordinates<span class="sc">$</span>y)</span>
+<span id="cb1-37"><a></a>  <span class="cf">if</span> (<span class="fu">is.null</span>(coords)) <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="st">"match found but coordinates missing"</span>, <span class="at">raw =</span> m))</span>
+<span id="cb1-38"><a></a></span>
+<span id="cb1-39"><a></a>  lon <span class="ot">&lt;-</span> <span class="fu">suppressWarnings</span>(<span class="fu">as.numeric</span>(coords<span class="sc">$</span>x))</span>
+<span id="cb1-40"><a></a>  lat <span class="ot">&lt;-</span> <span class="fu">suppressWarnings</span>(<span class="fu">as.numeric</span>(coords<span class="sc">$</span>y))</span>
+<span id="cb1-41"><a></a>  <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.finite</span>(lat) <span class="sc">||</span> <span class="sc">!</span><span class="fu">is.finite</span>(lon)) <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="st">"coordinates not numeric/finite"</span>, <span class="at">raw =</span> m))</span>
+<span id="cb1-42"><a></a></span>
+<span id="cb1-43"><a></a>  label <span class="ot">&lt;-</span> <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(m<span class="sc">$</span>matchedAddress)) m<span class="sc">$</span>matchedAddress <span class="cf">else</span> address</span>
+<span id="cb1-44"><a></a>  <span class="fu">list</span>(<span class="at">status =</span> <span class="st">"ok"</span>, <span class="at">lat =</span> lat, <span class="at">lon =</span> lon, <span class="at">label =</span> label, <span class="at">raw =</span> m)</span>
+<span id="cb1-45"><a></a>}</span>
+<span id="cb1-46"><a></a></span>
+<span id="cb1-47"><a></a><span class="co"># geographies_for_coords: call Census coordinates-&gt;geographies endpoint to get tract GEOID etc.</span></span>
+<span id="cb1-48"><a></a><span class="co"># Returns list(status='ok', geographies=...) or structured error/nomatch</span></span>
+<span id="cb1-49"><a></a>geographies_for_coords <span class="ot">&lt;-</span> <span class="cf">function</span>(lat, lon, <span class="at">benchmark =</span> <span class="st">"Public_AR_Census2020"</span>, <span class="at">vintage =</span> <span class="st">"Census2020_Census2020"</span>, <span class="at">timeout_seconds =</span> <span class="dv">10</span>) {</span>
+<span id="cb1-50"><a></a>  <span class="cf">if</span> (<span class="fu">missing</span>(lat) <span class="sc">||</span> <span class="fu">missing</span>(lon) <span class="sc">||</span> <span class="sc">!</span><span class="fu">is.finite</span>(lat) <span class="sc">||</span> <span class="sc">!</span><span class="fu">is.finite</span>(lon)) <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="st">"invalid lat/lon"</span>))</span>
+<span id="cb1-51"><a></a>  base <span class="ot">&lt;-</span> <span class="st">"https://geocoding.geo.census.gov/geocoder/geographies/coordinates"</span></span>
+<span id="cb1-52"><a></a></span>
+<span id="cb1-53"><a></a>  resp <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>({</span>
+<span id="cb1-54"><a></a>    httr<span class="sc">::</span><span class="fu">GET</span>(</span>
+<span id="cb1-55"><a></a>      <span class="at">url =</span> base,</span>
+<span id="cb1-56"><a></a>      <span class="at">query =</span> <span class="fu">list</span>(<span class="at">x =</span> lon, <span class="at">y =</span> lat, <span class="at">benchmark =</span> benchmark, <span class="at">vintage =</span> vintage, <span class="at">format =</span> <span class="st">"json"</span>),</span>
+<span id="cb1-57"><a></a>      httr<span class="sc">::</span><span class="fu">user_agent</span>(<span class="st">"TommyBoy/1.0 (geographies_for_coords)"</span>),</span>
+<span id="cb1-58"><a></a>      httr<span class="sc">::</span><span class="fu">timeout</span>(timeout_seconds)</span>
+<span id="cb1-59"><a></a>    )</span>
+<span id="cb1-60"><a></a>  }, <span class="at">error =</span> <span class="cf">function</span>(e) {</span>
+<span id="cb1-61"><a></a>    <span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="fu">paste0</span>(<span class="st">"HTTP error: "</span>, e<span class="sc">$</span>message))</span>
+<span id="cb1-62"><a></a>  })</span>
+<span id="cb1-63"><a></a></span>
+<span id="cb1-64"><a></a>  <span class="cf">if</span> (<span class="fu">is.list</span>(resp) <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">inherits</span>(resp, <span class="st">"response"</span>)) <span class="fu">return</span>(resp)</span>
+<span id="cb1-65"><a></a>  <span class="cf">if</span> (httr<span class="sc">::</span><span class="fu">status_code</span>(resp) <span class="sc">!=</span> <span class="dv">200</span>) {</span>
+<span id="cb1-66"><a></a>    body <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>(httr<span class="sc">::</span><span class="fu">content</span>(resp, <span class="at">as =</span> <span class="st">"text"</span>, <span class="at">encoding =</span> <span class="st">"UTF-8"</span>), <span class="at">error =</span> <span class="cf">function</span>(e) <span class="st">""</span>)</span>
+<span id="cb1-67"><a></a>    <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="fu">paste0</span>(<span class="st">"HTTP status "</span>, httr<span class="sc">::</span><span class="fu">status_code</span>(resp), <span class="st">"; body: "</span>, body)))</span>
+<span id="cb1-68"><a></a>  }</span>
+<span id="cb1-69"><a></a></span>
+<span id="cb1-70"><a></a>  txt <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">content</span>(resp, <span class="at">as =</span> <span class="st">"text"</span>, <span class="at">encoding =</span> <span class="st">"UTF-8"</span>)</span>
+<span id="cb1-71"><a></a>  parsed <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>({ jsonlite<span class="sc">::</span><span class="fu">fromJSON</span>(txt, <span class="at">simplifyVector =</span> <span class="cn">FALSE</span>) }, <span class="at">error =</span> <span class="cf">function</span>(e) <span class="cn">NULL</span>)</span>
+<span id="cb1-72"><a></a>  <span class="cf">if</span> (<span class="fu">is.null</span>(parsed)) <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="st">"JSON parse error"</span>))</span>
+<span id="cb1-73"><a></a></span>
+<span id="cb1-74"><a></a>  geogs <span class="ot">&lt;-</span> parsed<span class="sc">$</span>result<span class="sc">$</span>geographies</span>
+<span id="cb1-75"><a></a>  <span class="cf">if</span> (<span class="fu">is.null</span>(geogs) <span class="sc">||</span> <span class="fu">length</span>(geogs) <span class="sc">==</span> <span class="dv">0</span>) <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"nomatch"</span>, <span class="at">message =</span> <span class="st">"no geographies returned"</span>, <span class="at">raw =</span> parsed<span class="sc">$</span>result))</span>
+<span id="cb1-76"><a></a></span>
+<span id="cb1-77"><a></a>  <span class="fu">list</span>(<span class="at">status =</span> <span class="st">"ok"</span>, <span class="at">geographies =</span> geogs)</span>
+<span id="cb1-78"><a></a>}</span>
+<span id="cb1-79"><a></a></span>
+<span id="cb1-80"><a></a><span class="co"># fetch_acs_population: given 11-digit tract GEOID, query Census API for total population and NAME</span></span>
+<span id="cb1-81"><a></a><span class="co"># Returns list(status='ok', population=..., name=...) or structured error</span></span>
+<span id="cb1-82"><a></a>fetch_acs_population <span class="ot">&lt;-</span> <span class="cf">function</span>(tract_geoid, <span class="at">year =</span> <span class="dv">2021</span>, <span class="at">key =</span> <span class="fu">Sys.getenv</span>(<span class="st">"CENSUS_API_KEY"</span>, <span class="st">""</span>)) {</span>
+<span id="cb1-83"><a></a>  <span class="cf">if</span> (<span class="fu">missing</span>(tract_geoid) <span class="sc">||</span> <span class="fu">is.null</span>(tract_geoid) <span class="sc">||</span> <span class="fu">nchar</span>(<span class="fu">trimws</span>(tract_geoid)) <span class="sc">&lt;</span> <span class="dv">11</span>) <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="st">"invalid tract GEOID"</span>))</span>
+<span id="cb1-84"><a></a></span>
+<span id="cb1-85"><a></a>  state <span class="ot">&lt;-</span> <span class="fu">substr</span>(tract_geoid, <span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb1-86"><a></a>  county <span class="ot">&lt;-</span> <span class="fu">substr</span>(tract_geoid, <span class="dv">3</span>, <span class="dv">5</span>)</span>
+<span id="cb1-87"><a></a>  tract <span class="ot">&lt;-</span> <span class="fu">substr</span>(tract_geoid, <span class="dv">6</span>, <span class="dv">11</span>)</span>
+<span id="cb1-88"><a></a>  <span class="cf">if</span> (<span class="fu">nchar</span>(tract) <span class="sc">&lt;</span> <span class="dv">6</span>) tract <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">"%06s"</span>, tract)</span>
+<span id="cb1-89"><a></a></span>
+<span id="cb1-90"><a></a>  base <span class="ot">&lt;-</span> <span class="fu">sprintf</span>(<span class="st">"https://api.census.gov/data/%s/acs/acs5"</span>, <span class="fu">as.character</span>(year))</span>
+<span id="cb1-91"><a></a></span>
+<span id="cb1-92"><a></a>  <span class="co"># Try with the estimate variable (B01003_001E) which the ACS API accepts</span></span>
+<span id="cb1-93"><a></a>  query <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">get =</span> <span class="st">"B01003_001E,NAME"</span>)</span>
+<span id="cb1-94"><a></a>  query[[<span class="st">"for"</span>]] <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"tract:"</span>, tract)</span>
+<span id="cb1-95"><a></a>  query[[<span class="st">"in"</span>]] <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"state:"</span>, state, <span class="st">"+county:"</span>, county)</span>
+<span id="cb1-96"><a></a>  <span class="cf">if</span> (<span class="fu">nzchar</span>(key)) query<span class="sc">$</span>key <span class="ot">&lt;-</span> key</span>
+<span id="cb1-97"><a></a></span>
+<span id="cb1-98"><a></a>  resp <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>({ httr<span class="sc">::</span><span class="fu">GET</span>(base, <span class="at">query =</span> query, httr<span class="sc">::</span><span class="fu">timeout</span>(<span class="dv">15</span>)) }, <span class="at">error =</span> <span class="cf">function</span>(e) <span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="fu">paste0</span>(<span class="st">"HTTP error: "</span>, e<span class="sc">$</span>message)))</span>
+<span id="cb1-99"><a></a>  <span class="cf">if</span> (<span class="fu">is.list</span>(resp) <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">inherits</span>(resp, <span class="st">"response"</span>)) <span class="fu">return</span>(resp)</span>
+<span id="cb1-100"><a></a></span>
+<span id="cb1-101"><a></a>  status_code <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">status_code</span>(resp)</span>
+<span id="cb1-102"><a></a>  <span class="cf">if</span> (status_code <span class="sc">!=</span> <span class="dv">200</span>) {</span>
+<span id="cb1-103"><a></a>    <span class="co"># capture body for diagnostics</span></span>
+<span id="cb1-104"><a></a>    body <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>(httr<span class="sc">::</span><span class="fu">content</span>(resp, <span class="at">as =</span> <span class="st">"text"</span>, <span class="at">encoding =</span> <span class="st">"UTF-8"</span>), <span class="at">error =</span> <span class="cf">function</span>(e) <span class="st">""</span>)</span>
+<span id="cb1-105"><a></a>    <span class="co"># If variable unknown, try fallback to B01003_001 (non-E)</span></span>
+<span id="cb1-106"><a></a>    <span class="cf">if</span> (<span class="fu">grepl</span>(<span class="st">"unknown variable"</span>, body, <span class="at">ignore.case =</span> <span class="cn">TRUE</span>)) {</span>
+<span id="cb1-107"><a></a>      query2 <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="at">get =</span> <span class="st">"B01003_001,NAME"</span>)</span>
+<span id="cb1-108"><a></a>      query2[[<span class="st">"for"</span>]] <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"tract:"</span>, tract)</span>
+<span id="cb1-109"><a></a>      query2[[<span class="st">"in"</span>]] <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"state:"</span>, state, <span class="st">"+county:"</span>, county)</span>
+<span id="cb1-110"><a></a>      <span class="cf">if</span> (<span class="fu">nzchar</span>(key)) query2<span class="sc">$</span>key <span class="ot">&lt;-</span> key</span>
+<span id="cb1-111"><a></a>      resp2 <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>({ httr<span class="sc">::</span><span class="fu">GET</span>(base, <span class="at">query =</span> query2, httr<span class="sc">::</span><span class="fu">timeout</span>(<span class="dv">15</span>)) }, <span class="at">error =</span> <span class="cf">function</span>(e) <span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="fu">paste0</span>(<span class="st">"HTTP error: "</span>, e<span class="sc">$</span>message)))</span>
+<span id="cb1-112"><a></a>      <span class="cf">if</span> (<span class="fu">is.list</span>(resp2) <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">inherits</span>(resp2, <span class="st">"response"</span>)) <span class="fu">return</span>(resp2)</span>
+<span id="cb1-113"><a></a>      <span class="cf">if</span> (httr<span class="sc">::</span><span class="fu">status_code</span>(resp2) <span class="sc">==</span> <span class="dv">200</span>) {</span>
+<span id="cb1-114"><a></a>        txt2 <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">content</span>(resp2, <span class="at">as =</span> <span class="st">"text"</span>, <span class="at">encoding =</span> <span class="st">"UTF-8"</span>)</span>
+<span id="cb1-115"><a></a>        parsed2 <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>({ jsonlite<span class="sc">::</span><span class="fu">fromJSON</span>(txt2, <span class="at">simplifyVector =</span> <span class="cn">TRUE</span>) }, <span class="at">error =</span> <span class="cf">function</span>(e) <span class="cn">NULL</span>)</span>
+<span id="cb1-116"><a></a>        <span class="cf">if</span> (<span class="sc">!</span><span class="fu">is.null</span>(parsed2) <span class="sc">&amp;&amp;</span> <span class="fu">length</span>(parsed2) <span class="sc">&gt;=</span> <span class="dv">2</span>) {</span>
+<span id="cb1-117"><a></a>          hdr2 <span class="ot">&lt;-</span> parsed2[<span class="dv">1</span>, ]</span>
+<span id="cb1-118"><a></a>          vals2 <span class="ot">&lt;-</span> parsed2[<span class="dv">2</span>, ]</span>
+<span id="cb1-119"><a></a>          pop_idx2 <span class="ot">&lt;-</span> <span class="fu">which</span>(hdr2 <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"B01003_001E"</span>, <span class="st">"B01003_001"</span>))</span>
+<span id="cb1-120"><a></a>          name_idx2 <span class="ot">&lt;-</span> <span class="fu">which</span>(hdr2 <span class="sc">==</span> <span class="st">"NAME"</span>)</span>
+<span id="cb1-121"><a></a>          pop2 <span class="ot">&lt;-</span> <span class="cf">if</span> (<span class="fu">length</span>(pop_idx2) <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="fu">as.numeric</span>(vals2[[pop_idx2]]) <span class="cf">else</span> <span class="cn">NA</span></span>
+<span id="cb1-122"><a></a>          name2 <span class="ot">&lt;-</span> <span class="cf">if</span> (<span class="fu">length</span>(name_idx2) <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="fu">as.character</span>(vals2[[name_idx2]]) <span class="cf">else</span> <span class="cn">NA</span></span>
+<span id="cb1-123"><a></a>          <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"ok"</span>, <span class="at">population =</span> pop2, <span class="at">name =</span> name2, <span class="at">state =</span> state, <span class="at">county =</span> county, <span class="at">tract =</span> tract))</span>
+<span id="cb1-124"><a></a>        }</span>
+<span id="cb1-125"><a></a>      } <span class="cf">else</span> {</span>
+<span id="cb1-126"><a></a>        body2 <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>(httr<span class="sc">::</span><span class="fu">content</span>(resp2, <span class="at">as =</span> <span class="st">"text"</span>, <span class="at">encoding =</span> <span class="st">"UTF-8"</span>), <span class="at">error =</span> <span class="cf">function</span>(e) <span class="st">""</span>)</span>
+<span id="cb1-127"><a></a>        <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="fu">paste0</span>(<span class="st">"Census API status: "</span>, httr<span class="sc">::</span><span class="fu">status_code</span>(resp2), <span class="st">"; body: "</span>, body2)))</span>
+<span id="cb1-128"><a></a>      }</span>
+<span id="cb1-129"><a></a>    }</span>
+<span id="cb1-130"><a></a></span>
+<span id="cb1-131"><a></a>    <span class="co"># If 400 and no key, give helpful message</span></span>
+<span id="cb1-132"><a></a>    <span class="cf">if</span> (status_code <span class="sc">==</span> <span class="dv">400</span> <span class="sc">&amp;&amp;</span> <span class="sc">!</span><span class="fu">nzchar</span>(key)) <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="fu">paste0</span>(<span class="st">"Census API returned status 400. The Census API may require an API key for this endpoint. Set CENSUS_API_KEY in your environment. Body: "</span>, body)))</span>
+<span id="cb1-133"><a></a></span>
+<span id="cb1-134"><a></a>    <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="fu">paste0</span>(<span class="st">"Census API status: "</span>, status_code, <span class="st">"; body: "</span>, body)))</span>
+<span id="cb1-135"><a></a>  }</span>
+<span id="cb1-136"><a></a></span>
+<span id="cb1-137"><a></a>  txt <span class="ot">&lt;-</span> httr<span class="sc">::</span><span class="fu">content</span>(resp, <span class="at">as =</span> <span class="st">"text"</span>, <span class="at">encoding =</span> <span class="st">"UTF-8"</span>)</span>
+<span id="cb1-138"><a></a>  parsed <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>({ jsonlite<span class="sc">::</span><span class="fu">fromJSON</span>(txt, <span class="at">simplifyVector =</span> <span class="cn">TRUE</span>) }, <span class="at">error =</span> <span class="cf">function</span>(e) <span class="cn">NULL</span>)</span>
+<span id="cb1-139"><a></a>  <span class="cf">if</span> (<span class="fu">is.null</span>(parsed) <span class="sc">||</span> <span class="fu">length</span>(parsed) <span class="sc">&lt;</span> <span class="dv">2</span>) <span class="fu">return</span>(<span class="fu">list</span>(<span class="at">status =</span> <span class="st">"error"</span>, <span class="at">message =</span> <span class="st">"Census API returned no data"</span>))</span>
+<span id="cb1-140"><a></a></span>
+<span id="cb1-141"><a></a>  hdr <span class="ot">&lt;-</span> parsed[<span class="dv">1</span>, ]</span>
+<span id="cb1-142"><a></a>  vals <span class="ot">&lt;-</span> parsed[<span class="dv">2</span>, ]</span>
+<span id="cb1-143"><a></a>  pop_idx <span class="ot">&lt;-</span> <span class="fu">which</span>(hdr <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"B01003_001E"</span>, <span class="st">"B01003_001"</span>))</span>
+<span id="cb1-144"><a></a>  name_idx <span class="ot">&lt;-</span> <span class="fu">which</span>(hdr <span class="sc">==</span> <span class="st">"NAME"</span>)</span>
+<span id="cb1-145"><a></a>  pop <span class="ot">&lt;-</span> <span class="cf">if</span> (<span class="fu">length</span>(pop_idx) <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="fu">as.numeric</span>(vals[[pop_idx]]) <span class="cf">else</span> <span class="cn">NA</span></span>
+<span id="cb1-146"><a></a>  name <span class="ot">&lt;-</span> <span class="cf">if</span> (<span class="fu">length</span>(name_idx) <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="fu">as.character</span>(vals[[name_idx]]) <span class="cf">else</span> <span class="cn">NA</span></span>
+<span id="cb1-147"><a></a></span>
+<span id="cb1-148"><a></a>  <span class="fu">list</span>(<span class="at">status =</span> <span class="st">"ok"</span>, <span class="at">population =</span> pop, <span class="at">name =</span> name, <span class="at">state =</span> state, <span class="at">county =</span> county, <span class="at">tract =</span> tract)</span>
+<span id="cb1-149"><a></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div></div>
 </div>
@@ -707,13 +715,13 @@ OOH Session #142…<br><span class="honk">typst&nbsp;&nbsp;<br>INVOICE&nbsp;&nbs
 <li>did not touch after 1<sup>st</sup> week (total 1<sup>st</sup> week time = ~20 minutes)</li>
 </ul></li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb3-1"><a></a>I would like to build a Quarto dashboard, powered by </span>
-<span id="cb3-2"><a></a>R, that has 3 primary functions. #1 - user types an </span>
-<span id="cb3-3"><a></a>address, #2 - a map displays the address, and #3 -data </span>
-<span id="cb3-4"><a></a>is shown about the address. I do have a US Census </span>
-<span id="cb3-5"><a></a>API Key if we go that route for the address data, but </span>
-<span id="cb3-6"><a></a>I am open to alternatives. Please provide all code </span>
-<span id="cb3-7"><a></a>necessary to execute this dashboard </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a></a>I would like to build a Quarto dashboard, powered by </span>
+<span id="cb2-2"><a></a>R, that has 3 primary functions. #1 - user types an </span>
+<span id="cb2-3"><a></a>address, #2 - a map displays the address, and #3 -data </span>
+<span id="cb2-4"><a></a>is shown about the address. I do have a US Census </span>
+<span id="cb2-5"><a></a>API Key if we go that route for the address data, but </span>
+<span id="cb2-6"><a></a>I am open to alternatives. Please provide all code </span>
+<span id="cb2-7"><a></a>necessary to execute this dashboard </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:4%;">
 
 </div><div class="column" style="width:24%;">
@@ -736,8 +744,8 @@ OOH Session #142…<br><span class="honk">typst&nbsp;&nbsp;<br>INVOICE&nbsp;&nbs
 <p><img data-src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWo4M3FhcHVhN29mZnV5N3d1Z3Z5NWkxMGQyNmk3dTY2bHZ2NWdsciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cUBopbO2vnco8/giphy.gif" class="absolute tilt" style="top: 60px; right: -80px; height: 250px; "></p>
 <p><img data-src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWh2Zmk1dGE2ajhnZzRyZ294d2R6cHZ0Yjg3ZGdoM2V0MzEwODNhdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qzeCF4ymrgFXy/giphy.gif" class="absolute tilt2" style="left: -110px; bottom: 80px; height: 250px; "></p>
 </section>
-<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-august-10-2026-rendering" class="slide level2">
-<h2><iconify-icon role="img" inline="" icon="devicon:r" style="color:#82b1ff;;font-size: 2em;" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> &amp; <iconify-icon role="img" inline="" icon="material-icon-theme:quarto" style="font-size: 2em;" aria-label="Icon quarto from material-icon-theme Iconify.design set." title="Icon quarto from material-icon-theme Iconify.design set."></iconify-icon> Session Info (August 10, 2026) Rendering:</h2>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-august-11-2026-rendering" class="slide level2">
+<h2><iconify-icon role="img" inline="" icon="devicon:r" style="color:#82b1ff;;font-size: 2em;" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> &amp; <iconify-icon role="img" inline="" icon="material-icon-theme:quarto" style="font-size: 2em;" aria-label="Icon quarto from material-icon-theme Iconify.design set." title="Icon quarto from material-icon-theme Iconify.design set."></iconify-icon> Session Info (August 11, 2026) Rendering:</h2>
 <div class="columns">
 <div class="column" style="width:80%;">
 <div class="cell">

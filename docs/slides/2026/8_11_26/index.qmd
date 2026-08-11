@@ -84,6 +84,7 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 `app.R`:
 ```{r}
+#| code-line-numbers: "9"
 # app.R - standalone Shiny app that geocodes an address, shows it on a leaflet map,
 # displays lat/lon, matched address, and a small Census tract population (if available).
 # Updated: show ACS 'NAME' (pop$name) when available; attempt coords->geographies fallback when needed.
@@ -92,7 +93,7 @@ library(shiny)
 library(leaflet)
 
 # Load geocode and Census helper
-source("R/helpers.R")
+source("R/helpers.R")       #<1>
 
 ui <- fluidPage(
   titlePanel("Address → Map with info"),
@@ -325,6 +326,8 @@ server <- function(input, output, session) {
 
 shinyApp(ui, server)
 ```
+1. could also be folded into `app.R` -- "sourcing" an option for efficient scripting of primary capability. Note the subfolder location if replicating locally.
+
 :::
 
 ::: {.column width="50%"}
