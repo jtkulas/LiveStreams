@@ -5,3 +5,6 @@
 
 /.quarto/
 **/*.quarto_ipynb
+
+# Accidental/default Quarto output (never needed)
+/_site/

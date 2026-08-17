@@ -11,7 +11,7 @@ format:
     transition: convex
     transition-speed: slow
     code-overflow: wrap              ## has never "worked"
-    theme: ../../../css/theming2026.scss 
+    theme: ../../../css/theming2026 
     logo: https://www.nicepng.com/png/full/119-1195592_ben-ben-10-old-cartoon.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
     footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
     preview-links: false      ## true brings up iframe window instead of "site"
