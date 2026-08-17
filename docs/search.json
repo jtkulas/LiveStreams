@@ -1229,7 +1229,7 @@
     "href": "slides/2026/8_18_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7d-quarto-1.10",
     "title": "R is for Authoring!!",
     "section": " Quarto 1.10",
-    "text": "Quarto 1.10\n\n\n &lt; 1.10:\n\naxe-core checks\nshortcodes\npdf fonts\ntypst fonts\n\n\n = 1.10:\n\nclearer report\noperative within equations"
+    "text": "Quarto 1.10\n\n\n &lt; 1.10:\n\naxe-core checks\nshortcodes\npdf fonts\ntypst fonts\n\n\n = 1.10:\n\nclearer report\noperative within equations\nLuaLaTeX less likely to crash\nfurther css  typst integration & refinement"
   },
   {
     "objectID": "slides/2026/8_18_26/index.html#open-office-hours-august-13-2026",

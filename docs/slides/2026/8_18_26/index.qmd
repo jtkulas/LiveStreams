@@ -230,7 +230,7 @@ format:
 
 ::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="35%"}
 
 [{{< iconify material-icon-theme:quarto >}} < 1.10:]{.quarto .Bigger}
 
@@ -241,18 +241,20 @@ format:
 
 :::
 
-::: {.column width="50%"}
+::: {.column width="65%"}
 
 [[{{< iconify material-icon-theme:quarto >}} = 1.10:]{.quarto .Bigger}](https://opensource.posit.co/blog/2026-08-03_quarto-1-10/#other-important-fixes)
 
 + [clearer report](https://opensource.posit.co/blog/2026-08-03_quarto-1-10/#accessibility-checking-improvements)
-+ operative ***within equations***
++ operative [***within equations***](https://jtkulas.github.io/LiveStreams/slides/2026/8_18_26/shortcodes)
++ [`LuaLaTeX`](https://quarto.org/docs/output-formats/pdf-basics.html#fonts) less likely to crash
++ further css {{< iconify icomoon-free:arrow-left flip=horizontal >}} typst integration & refinement
 
 :::
 
 :::
 
-![](https://freepngimg.com/save/129890-10-number-png-free-photo/2000x2000){.absolute right="-130" top="-10" height="300"}
+![](https://www.freeiconspng.com/uploads/number-10-5.png){.absolute right="-130" top="-10" height="300"}
 
 ## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 
