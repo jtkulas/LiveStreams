@@ -1,0 +1,277 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: "OOH Session #143...<br>[{{< iconify material-icon-theme:quarto >}} Quarto 1.10]{.quarto2 .Bigger}"
+title-slide-attributes: 
+  data-background-image: /img/ben10.png #https://canvas-lb.tubitv.com/opts/lZ1x52alD-uvKg==/8e1bcac9-89d0-4298-8b66-e6f5b1df8cf4/CJ4GEMADOgUxLjEuOQ==  
+  data-background-opacity: ".8"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://www.nicepng.com/png/full/119-1195592_ben-ben-10-old-cartoon.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {.columns}
+::: {.column width="55%"}
++ Recap session #142
++ Today's topic(s):
+    + [[{{< iconify material-icon-theme:quarto >}} Quarto 1.10]{.quarto}](https://opensource.posit.co/blog/2026-08-03_quarto-1-10/)
++ Shared problem-solving
+
+:::
+
+::: {.column width="45%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 170px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/8_11_26">
+  <img src="/img/title142.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#142: 
+
+![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
+
+![](https://cdn-icons-png.flaticon.com/512/8354/8354688.png){.absolute top="295" right="130" height="180" .tiltpostit}
+
+## [[typst INVOICE]{.honk}](https://m.canouil.dev/quarto-invoice/)
+
+::: {.panel-tabset}
+
+
+### Install {{< iconify icon-park-twotone:install >}}
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+:::
+
+::: {.column width="60%"}
+
++ from a [`Project` directory](https://martinctc.github.io/blog/rstudio-projects-and-working-directories-a-beginner%27s-guide/)
++ navigate to [terminal](https://docs.posit.co/ide/user/ide/guide/tools/terminal.html)
++ paste the `quarto` command:
+
+```bash 
+quarto use template mcanouil/quarto-invoice@2.0.2
+```
+:::
+
+:::
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3AwMGxmZTNpdW55cmhhZGk5bm1ldHcyajUxZm91NzU4b3BzYWRwMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0Bgb5HhG5HXO0dbE3X/giphy.gif){.absolute left="-20" bottom="10" height="400"}
+
+### Script {{< iconify streamline-color:script-2-flat >}}
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+Elaborate:
+
+```{r}
+---
+title: Consulting 2026
+description: 2026/01/01 -- 2026/12/31
+sender:
+  name: Firstname LASTNAME
+  email: Firstname.LASTNAME@company.dev
+  address:
+    street: 123 Rue de la Paix
+    zip: 75000
+    city: Paris
+    country: France
+  registration: 123 456 789
+  vat: FR1234567890
+  exempted: "Exempted from VAT (article 259-1 du CGI, France)."
+invoice:
+  number: 2026-001
+  issued: 2026-01-01
+  due: 2026-01-31
+  reference: abcd1234
+  fee: 2.28
+  penalty: 40
+  currency: EUR
+  items:
+    - description: A very important deliverable
+      details: A description of the tasks.
+      quantity: 1
+      unit-price: 12345.67
+      vat: 0
+bank:
+  bic: AZERTYUI
+  iban: FR12 1234 4567 7890 1234 5678 901
+recipient:
+  name: Company, Inc.
+  address:
+    street: 123 Main Street
+    zip: 12345
+    city: New York
+    state: NY
+    country: United States
+format:
+  invoice-typst:
+    output-file: index
+    lang: en
+    region: UK
+    papersize: a4
+    margin:
+      x: 2.5cm
+      y: 2.5cm
+brand:
+  typography:
+    fonts:
+      - family: Alegreya Sans
+        source: google
+        weight: [400, 700]
+        style: [normal, italic]
+    base:
+      family: "Alegreya Sans"
+      size: 12pt
+    headings:
+      color: dodgerblue
+---
+```
+
+:::
+
+::: {.column width="50%"}
+
+Simplified:
+
+```{r}
+format:
+  invoice-typst:
+    sender:
+      name: "Example Consulting Ltd"
+    recipient:
+      name: "Director Doe & Co"
+    invoice:
+      number: "INV-2026-001"
+      issued: 2026-05-01
+      due: 2026-05-31
+      currency: GBP
+      reference: "ACME-2026-001"
+      items:
+        - description: Strategy workshop
+          quantity: 2
+          unit-price: 1500
+          vat: 20
+    bank:
+      bic: "EXAMPGB2L"
+      iban: "GB00 EXAM 0000 0000 0000 00"
+```
+
+
+:::
+
+:::
+
+### Invoice {{< iconify noto:money-bag >}}
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+![](/img/invoice1.JPG){.lightbox}
+
+:::
+
+::: {.column width="50%"}
+
+![](/img/invoice2.JPG){.lightbox}
+
+:::
+
+:::
+
+:::
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWo4M3FhcHVhN29mZnV5N3d1Z3Z5NWkxMGQyNmk3dTY2bHZ2NWdsciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cUBopbO2vnco8/giphy.gif){.absolute right="-150" top="-40" height="250"}
+
+# Today...
+
+![](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDlpaHpxenZqeGpqZXRpdW1pdHJyMzVkc3F3cTJwbDB6OHZuZHlneCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/JBCxJCJcf3S6s/giphy.gif)
+
+## [[{{< iconify material-icon-theme:quarto >}} Quarto 1.10]{.quarto .Bigger}](https://opensource.posit.co/blog/2026-08-03_quarto-1-10/)
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+[{{< iconify material-icon-theme:quarto >}} < 1.10:]{.quarto .Bigger}
+
++ axe-core checks
++ shortcodes
++ pdf fonts
++ typst fonts
+
+:::
+
+::: {.column width="50%"}
+
+[[{{< iconify material-icon-theme:quarto >}} = 1.10:]{.quarto .Bigger}](https://opensource.posit.co/blog/2026-08-03_quarto-1-10/#other-important-fixes)
+
++ [clearer report](https://opensource.posit.co/blog/2026-08-03_quarto-1-10/#accessibility-checking-improvements)
++ operative ***within equations***
+
+:::
+
+:::
+
+![](https://freepngimg.com/save/129890-10-number-png-free-photo/2000x2000){.absolute right="-130" top="-10" height="300"}
+
+## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+
+::: {.columns}
+
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| eval: true
+sessionInfo()
+```
+:::
+
+::: {.column width="20%"}
+
+Quarto version `r quarto::quarto_version()`  
+
+:::
+
+:::
+
+
