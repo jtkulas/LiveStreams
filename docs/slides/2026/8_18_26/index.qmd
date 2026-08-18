@@ -173,6 +173,7 @@ brand:
 Simplified:
 
 ```{r}
+---
 format:
   invoice-typst:
     sender:
@@ -193,6 +194,7 @@ format:
     bank:
       bic: "EXAMPGB2L"
       iban: "GB00 EXAM 0000 0000 0000 00"
+---
 ```
 
 
