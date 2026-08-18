@@ -254,7 +254,7 @@ format:
 
 :::
 
-![](https://www.freeiconspng.com/uploads/number-10-5.png){.absolute right="-130" top="-10" height="300"}
+![](https://www.freeiconspng.com/uploads/number-10-5.png){.absolute right="-130" top="10" height="300"}
 
 ## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 

@@ -11,7 +11,7 @@ format:
     transition: convex
     transition-speed: slow
     code-overflow: wrap              ## has never "worked"
-    theme: ../../../css/theming2026 
+    theme: ../../../css/theming2026.scss 
     logo: https://www.nicepng.com/png/full/119-1195592_ben-ben-10-old-cartoon.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
     footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
     preview-links: false      ## true brings up iframe window instead of "site"
@@ -254,7 +254,7 @@ format:
 
 :::
 
-![](https://www.freeiconspng.com/uploads/number-10-5.png){.absolute right="-130" top="-10" height="300"}
+![](https://www.freeiconspng.com/uploads/number-10-5.png){.absolute right="-130" top="10" height="300"}
 
 ## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 
