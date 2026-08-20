@@ -1,0 +1,146 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: "OOH Session #144...<br>[{{< iconify vaadin:tools >}}  [Customized]{.underline .bigger} {{< iconify streamline-freehand:design-tool-quill >}} <br>Presentation Slides]{.storyscript}"
+title-slide-attributes: 
+  data-background-image: /img/donaldslide.jpg  
+#  data-background-opacity: ".8"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://purepng.com/public/uploads/thumbnail//purepng.com-donald-duckdonald-duckdonaldduckcartooncharacter1934walt-disneywhite-duck-1701528546924iufpe.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {.columns}
+::: {.column width="55%"}
++ Recap session #143
++ Today's topic(s):
+    + [[{{< iconify vaadin:tools >}}  [Customized]{.underline .bigger} {{< iconify streamline-freehand:design-tool-quill >}} <br>Presentation Slides]{.storyscript}](https://quarto.org/docs/presentations/revealjs/themes.html#creating-themes)
++ Shared problem-solving
+
+:::
+
+::: {.column width="45%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 170px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/8_18_26">
+  <img src="/img/title143.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#143: 
+
+![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
+
+![](https://quarto.org/docs/presentations/revealjs/demo/images/quarto.png){.absolute top="350" right="85" height="65" .tilt45}
+
+## [[{{< iconify material-icon-theme:quarto >}} Quarto 1.10]{.quarto .Bigger}](https://opensource.posit.co/blog/2026-08-03_quarto-1-10/)
+
+::: {.columns}
+
+::: {.column width="35%"}
+
+[{{< iconify material-icon-theme:quarto >}} < 1.10:]{.quarto .Bigger}
+
++ axe-core checks
++ shortcodes
++ pdf fonts
++ typst fonts
+
+:::
+
+::: {.column width="65%"}
+
+[[{{< iconify material-icon-theme:quarto >}} = 1.10:]{.quarto .Bigger}](https://opensource.posit.co/blog/2026-08-03_quarto-1-10/#other-important-fixes)
+
++ [clearer report](https://opensource.posit.co/blog/2026-08-03_quarto-1-10/#accessibility-checking-improvements)
++ operative [***within equations***](https://jtkulas.github.io/LiveStreams/slides/2026/8_18_26/shortcodes)
++ [`LuaLaTeX`](https://quarto.org/docs/output-formats/pdf-basics.html#fonts) less likely to crash
++ further css {{< iconify icomoon-free:arrow-left flip=horizontal >}} typst integration & refinement
+
+:::
+
+:::
+
+![](https://www.freeiconspng.com/uploads/number-10-5.png){.absolute right="-130" top="10" height="300"}
+
+# Today...
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExemhmaHVsMHdpa2FoOHVnZGJwdmh3emlodmQwZXJ3bHFuM3dpd24yNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/HH6OMUTtGFxs8w91hd/giphy.gif)
+
+## [[{{< iconify vaadin:tools >}}  [Customized]{.underline .bigger} {{< iconify streamline-freehand:design-tool-quill >}} Presentation Slides]{.storyscript}](https://quarto.org/docs/presentations/revealjs/themes.html#creating-themes)
+
+[...via [{{< iconify selfhst:reveal-js >}} themes](https://druedin.com/notes/quarto-reveal-js-themes-gallery.html) (only applies to {{< iconify selfhst:reveal-js >}} slides)...]{.storyscript .bigger}
+
+::: {.columns}
+
+::: {.column width="50%"}
+...[for example](https://github.com/EmilHvitfeldt/quarto-revealjs-earth):
+<iframe src="https://emilhvitfeldt.github.io/quarto-revealjs-earth/#/theme-title1" style="width:500px; height:300px;">
+</iframe>
+
+:::
+
+::: {.column width="50%"}
+...[or](https://github.com/EmilHvitfeldt/quarto-revealjs-cinco-de-mayo):
+<iframe src="https://emilhvitfeldt.github.io/quarto-revealjs-cinco-de-mayo/#/theme-title1" style="width:500px; height:300px;">
+</iframe>
+
+:::
+
+
+:::
+
+## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+
+::: {.columns}
+
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| eval: true
+sessionInfo()
+```
+:::
+
+::: {.column width="20%"}
+
+Quarto version `r quarto::quarto_version()`  
+
+:::
+
+:::
+
+

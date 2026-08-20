@@ -38,8 +38,9 @@
 @import url('https://fonts.googleapis.com/css?family=Slackey');
 @import url('https://fonts.googleapis.com/css?family=Londrina Sketch');
 @import url('https://fonts.googleapis.com/css?family=DM Sans');
+@import url('https://fonts.googleapis.com/css?family=Story Script');
 
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
@@ -173,6 +174,10 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
 
 .tiltpostit {
   rotate: -3deg;
+}
+
+.tilt45 {
+  rotate: -45deg;
 }
 
 .smaller {
@@ -596,3 +601,8 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   color: #60b6ff;
 }
 
+.storyscript {
+  font-family: "Story Script";
+  font-weight: normal !important;
+  color: #f5cbd6;
+}
