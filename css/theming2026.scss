@@ -39,12 +39,13 @@
 @import url('https://fonts.googleapis.com/css?family=Londrina Sketch');
 @import url('https://fonts.googleapis.com/css?family=DM Sans');
 @import url('https://fonts.googleapis.com/css?family=Story Script');
+@import url('https://fonts.googleapis.com/css?family=Love Light');
 
 $presentation-title-slide-text-align: right;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
-  height: 120px !important;
+  height: 100px !important;
 }
 
 /* adding background to inline code elements */
@@ -605,4 +606,13 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-family: "Story Script";
   font-weight: normal !important;
   color: #f5cbd6;
+}
+
+.spreadsheet {
+  font-family: "Love Light";
+  font-size: 1.8em;
+  font-weight: normal !important;
+  color: #81e96e;
+//  text-shadow:
+//    2px 2px 0px black !important;
 }

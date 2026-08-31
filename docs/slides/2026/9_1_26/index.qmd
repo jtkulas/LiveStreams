@@ -1,0 +1,273 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: "OOH Session #145...<br>[Embedded]{.spreadsheet}<br>{{< iconify thesvg-color:google-sheets >}}[Spreadsheets ]{.spreadsheet} {{< iconify thesvg-color:microsoft-excel >}}"
+title-slide-attributes: 
+  data-background-image: /img/sleepbeaut.jpg
+  #https://pbs.twimg.com/media/G1WYPhhbQAIXnhz.jpg #https://pbs.twimg.com/media/GoY64IbXoAAsy2_.jpg 
+#  data-background-opacity: ".8"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://static.vecteezy.com/system/resources/thumbnails/039/398/085/small/ai-generated-bed-clipart-design-illustration-free-png.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {.columns}
+::: {.column width="55%"}
++ Recap session #144
++ Today's topic(s):
+    + [{{< iconify thesvg-color:microsoft-excel >}} [Embedded]{.spreadsheet} {{< iconify thesvg-color:google-sheets >}}<br>[Spreadsheets ]{.spreadsheet}](https://github.com/wearetechnative/embed-sheet)
++ Shared problem-solving
+
+:::
+
+::: {.column width="45%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 170px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/8_25_26">
+  <img src="/img/title144.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#144: 
+
+![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
+
+![](https://png.pngtree.com/png-vector/20221029/ourmid/pngtree-blue-custom-made-stamp-label-inkpad-illustration-vector-png-image_15142524.png){.absolute top="305" right="115" height="150"}
+
+## [[{{< iconify vaadin:tools >}}  [Customized]{.underline .bigger} {{< iconify streamline-freehand:design-tool-quill >}} Presentation Slides]{.storyscript}](https://quarto.org/docs/presentations/revealjs/themes.html#creating-themes)
+
+::: {.panel-tabset}
+
+### {{< iconify selfhst:reveal-js >}} Examples
+
+::: {.columns}
+
+::: {.column width="50%"}
+...[for example](https://github.com/EmilHvitfeldt/quarto-revealjs-earth):
+<iframe src="https://emilhvitfeldt.github.io/quarto-revealjs-earth/#/theme-title1" style="width:500px; height:300px;">
+</iframe>
+
+:::
+
+::: {.column width="50%"}
+...[or](https://github.com/EmilHvitfeldt/quarto-revealjs-cinco-de-mayo):
+<iframe src="https://emilhvitfeldt.github.io/quarto-revealjs-cinco-de-mayo/#/theme-title1" style="width:500px; height:300px;">
+</iframe>
+
+:::
+
+
+:::
+
+### SCSS ({{< iconify vscode-icons:file-type-scss >}}) Hacking {{< iconify game-icons:pirate-flag >}}
+
+::: {.columns}
+
+::: {.column width="50%" .Smaller}
+
+1. Find ["similar" template](https://quarto.org/docs/presentations/revealjs/#themes) to what you envision {{< iconify openmoji:light-bulb >}}
+2. Grab the [source code](https://github.com/quarto-dev/quarto-cli/tree/main/src/resources/formats/revealjs/themes)
+3. Modify .scss file
+4. Call out in your {{< iconify devicon:yaml >}}:
+
+```{r}
+#| code-line-numbers: "4"
+---
+title: "Awesome Slidez"
+format: revealjs
+theme: yourlook.scss
+---
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{css}
+/*-- scss:defaults --*/        
+
+@import url('https://fonts.googleapis.com/css?family=Irish Grover');   
+@import url('https://fonts.googleapis.com/css?family=UnifrakturMaguntia');  
+
+// Include theme-specific fonts
+$systemFontsSansSerif: UnifrakturMaguntia, Irish Grover, arial;
+$systemFontsMono: UnifrakturMaguntia, Irish Grover, arial;
+
+$background: #353E43;
+$foreground: #ffffe4;
+$selection: #44475a;
+$comment: #6272a4;
+$red: #ff5555;
+$orange: #ffb86c;
+$yellow: #f1fa8c;
+$green: #50fa7b;
+$purple: #9D00FF;
+$cyan: #8be9fd;
+$pink: #ff79c6;
+$badass: #bada55;
+
+// Override theme settings
+$body-color: $foreground !default;
+$presentation-heading-color: $cyan !default;
+$presentation-font-size-root: 60px !default;
+$presentation-heading-text-shadow: none !default;
+$presentation-heading-text-transform: none !default;
+$body-bg: $background !default;
+$link-color: $pink !default;
+$link-color-hover: $badass !default;
+$selection-bg: $selection !default;
+$code-color: $green !default;
+$presentation-list-bullet-color: $foreground !default;
+
+$font-family-sans-serif: $systemFontsSansSerif !default;
+$font-family-monospace: "Fira Code", $systemFontsMono !default;
+
+// Change text colors against light slide backgrounds
+$light-bg-text-color: $body-bg !default;
+
+/*-- scss:rules --*/
+
+// Define additional color effects based on Dracula spec
+// https://spec.draculatheme.com/
+:root {
+  --r-bold-color: #{$badass};
+  --r-italic-color: #{$yellow};
+  --r-inline-code-color: #{$code-color};
+  --r-list-bullet-color: #{$presentation-list-bullet-color};
+}
+
+.reveal {
+  strong,
+  b {
+    &:not(.callout-title strong, .callout-tile b) {
+      color: var(--r-bold-color);
+    }
+  }
+  em,
+  i,
+  blockquote {
+    color: var(--r-italic-color);
+  }
+  code {
+    color: var(--r-inline-code-color);
+  }
+  // Dracula colored list bullets and numbers
+  ul,
+  ol {
+    li::marker {
+      color: var(--r-list-bullet-color);
+    }
+  }
+}
+
+/**
+ * Dracula colors by Zeno Rocha
+ * https://draculatheme.com/contribute
+ */
+html * {
+  color-profile: sRGB;
+  rendering-intent: auto;
+}
+
+```
+1. Sequence of `scss:defaults` vs `scss:rules` important for Quarto docs
+2. Easy way to grab fonts -- requires internet connection
+
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute bottom="225" left="300" width="150"}
+
+:::
+
+:::
+
+# Today...
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmp1cWR5ZWFqZGp0NHJsNGJzMmU1OG94MDY0NjJxZjdvM2lob3R1MCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/mguPrVJAnEHIY/giphy.gif)
+
+## [{{< iconify thesvg-color:microsoft-excel >}} [Embedded Spreadsheets ]{.spreadsheet} {{< iconify thesvg-color:google-sheets >}}](https://github.com/wearetechnative/embed-sheet)
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+{{< iconify streamline-stickies-color:education-degree-duo size=2x >}} ...you can also simply specify an `iframe` w/in an html doc -- embedded file will update [as you edit the spreadsheet](https://docs.google.com/spreadsheets/d/1kLD8C7x5ko_tbypM6Xd4PJEsrPxrJpIlZhC8V7FADkc/edit?usp=sharing):
+
+``` bash
+<iframe
+  width="100%"
+  height="500"
+  src="https://docs.google.com/spreadsheets/d/1kLD8C7x5ko_tbypM6Xd4PJEsrPxrJpIlZhC8V7FADkc/edit?usp=sharing"
+  title="Spreadsheet">
+</iframe>
+```
+
+:::
+
+::: {.column width="50%"}
+
+<iframe
+  width="100%"
+  height="500"
+  src="https://docs.google.com/spreadsheets/d/1kLD8C7x5ko_tbypM6Xd4PJEsrPxrJpIlZhC8V7FADkc/edit?usp=sharing"
+  title="Spreadsheet">
+</iframe>
+
+:::
+
+:::
+
+## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+
+::: {.columns}
+
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| eval: true
+sessionInfo()
+```
+:::
+
+::: {.column width="20%"}
+
+Quarto version `r quarto::quarto_version()`  
+
+:::
+
+:::
+
+

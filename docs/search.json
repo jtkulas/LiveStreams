@@ -1349,5 +1349,75 @@
     "title": "R is for Authoring!!",
     "section": " &  Session Info (August 25, 2026) Rendering:",
     "text": "&  Session Info (August 25, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.10.18"
+  },
+  {
+    "objectID": "slides/2026/9_1_26/index.html#open-office-hours-august-26-2026",
+    "href": "slides/2026/9_1_26/index.html#open-office-hours-august-26-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (August 26, 2026)",
+    "text": "Open Office Hours (August 26, 2026)\n\n\n\nRecap session #144\nToday’s topic(s):\n\n Embedded Spreadsheets\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/9_1_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7d-quarto-1.10",
+    "href": "slides/2026/9_1_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f203e7d7d-quarto-1.10",
+    "title": "R is for Authoring!!",
+    "section": " Quarto 1.10",
+    "text": "Quarto 1.10\n\n\n &lt; 1.10:\n\naxe-core checks\nshortcodes\npdf fonts\ntypst fonts\n\n\n = 1.10:\n\nclearer report\noperative within equations\nLuaLaTeX less likely to crash\nfurther css  typst integration & refinement"
+  },
+  {
+    "objectID": "slides/2026/9_1_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792076616164696e3a746f6f6c73203e7d7d-customized-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792073747265616d6c696e652d6672656568616e643a64657369676e2d746f6f6c2d7175696c6c203e7d7d-presentation-slides",
+    "href": "slides/2026/9_1_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792076616164696e3a746f6f6c73203e7d7d-customized-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792073747265616d6c696e652d6672656568616e643a64657369676e2d746f6f6c2d7175696c6c203e7d7d-presentation-slides",
+    "title": "R is for Authoring!!",
+    "section": " Customized  Presentation Slides",
+    "text": "Customized  Presentation Slides\n\n ExamplesSCSS () Hacking \n\n\n\n\n…for example:  \n\n…or:  \n\n\n\n\n\n\nFind “similar” template to what you envision \nGrab the source code\nModify .scss file\nCall out in your :\n\n\n---\ntitle: \"Awesome Slidez\"\nformat: revealjs\ntheme: yourlook.scss\n---\n\n\n\n/*-- scss:defaults --*/        \n\n@import url('https://fonts.googleapis.com/css?family=Irish Grover');   \n@import url('https://fonts.googleapis.com/css?family=UnifrakturMaguntia');  \n\n// Include theme-specific fonts\n$systemFontsSansSerif: UnifrakturMaguntia, Irish Grover, arial;\n$systemFontsMono: UnifrakturMaguntia, Irish Grover, arial;\n\n$background: #353E43;\n$foreground: #ffffe4;\n$selection: #44475a;\n$comment: #6272a4;\n$red: #ff5555;\n$orange: #ffb86c;\n$yellow: #f1fa8c;\n$green: #50fa7b;\n$purple: #9D00FF;\n$cyan: #8be9fd;\n$pink: #ff79c6;\n$badass: #bada55;\n\n// Override theme settings\n$body-color: $foreground !default;\n$presentation-heading-color: $cyan !default;\n$presentation-font-size-root: 60px !default;\n$presentation-heading-text-shadow: none !default;\n$presentation-heading-text-transform: none !default;\n$body-bg: $background !default;\n$link-color: $pink !default;\n$link-color-hover: $badass !default;\n$selection-bg: $selection !default;\n$code-color: $green !default;\n$presentation-list-bullet-color: $foreground !default;\n\n$font-family-sans-serif: $systemFontsSansSerif !default;\n$font-family-monospace: \"Fira Code\", $systemFontsMono !default;\n\n// Change text colors against light slide backgrounds\n$light-bg-text-color: $body-bg !default;\n\n/*-- scss:rules --*/\n\n// Define additional color effects based on Dracula spec\n// https://spec.draculatheme.com/\n:root {\n  --r-bold-color: #{$badass};\n  --r-italic-color: #{$yellow};\n  --r-inline-code-color: #{$code-color};\n  --r-list-bullet-color: #{$presentation-list-bullet-color};\n}\n\n.reveal {\n  strong,\n  b {\n    &:not(.callout-title strong, .callout-tile b) {\n      color: var(--r-bold-color);\n    }\n  }\n  em,\n  i,\n  blockquote {\n    color: var(--r-italic-color);\n  }\n  code {\n    color: var(--r-inline-code-color);\n  }\n  // Dracula colored list bullets and numbers\n  ul,\n  ol {\n    li::marker {\n      color: var(--r-list-bullet-color);\n    }\n  }\n}\n\n/**\n * Dracula colors by Zeno Rocha\n * https://draculatheme.com/contribute\n */\nhtml * {\n  color-profile: sRGB;\n  rendering-intent: auto;\n}\n\n\nSequence of scss:defaults vs scss:rules important for Quarto docs\nEasy way to grab fonts – requires internet connection"
+  },
+  {
+    "objectID": "slides/2026/9_1_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-august-26-2026-rendering",
+    "href": "slides/2026/9_1_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-august-26-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (August 26, 2026) Rendering:",
+    "text": "&  Session Info (August 26, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.10.18"
+  },
+  {
+    "objectID": "slides/2026/9_1_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679207468657376672d636f6c6f723a6d6963726f736f66742d657863656c203e7d7d-embedded-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679207468657376672d636f6c6f723a676f6f676c652d736865657473203e7d7d-spreadsheets",
+    "href": "slides/2026/9_1_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679207468657376672d636f6c6f723a6d6963726f736f66742d657863656c203e7d7d-embedded-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679207468657376672d636f6c6f723a676f6f676c652d736865657473203e7d7d-spreadsheets",
+    "title": "R is for Authoring!!",
+    "section": " Embedded  Spreadsheets",
+    "text": "Embedded  Spreadsheets"
+  },
+  {
+    "objectID": "slides/2026/9_1_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679207468657376672d636f6c6f723a6d6963726f736f66742d657863656c203e7d7d-embedded-spreadsheets-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679207468657376672d636f6c6f723a676f6f676c652d736865657473203e7d7d",
+    "href": "slides/2026/9_1_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679207468657376672d636f6c6f723a6d6963726f736f66742d657863656c203e7d7d-embedded-spreadsheets-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679207468657376672d636f6c6f723a676f6f676c652d736865657473203e7d7d",
+    "title": "R is for Authoring!!",
+    "section": " Embedded Spreadsheets ",
+    "text": "Embedded Spreadsheets \n\n\n …you can also simply specify an iframe w/in an html doc – embedded file will update as you edit the spreadsheet:\n&lt;iframe\n  width=\"100%\"\n  height=\"500\"\n  src=\"https://docs.google.com/spreadsheets/d/1kLD8C7x5ko_tbypM6Xd4PJEsrPxrJpIlZhC8V7FADkc/edit?usp=sharing\"\n  title=\"Spreadsheet\"&gt;\n&lt;/iframe&gt;"
+  },
+  {
+    "objectID": "slides/2026/9_1_26/index.html#open-office-hours-august-28-2026",
+    "href": "slides/2026/9_1_26/index.html#open-office-hours-august-28-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (August 28, 2026)",
+    "text": "Open Office Hours (August 28, 2026)\n\n\n\nRecap session #144\nToday’s topic(s):\n\n Embedded Spreadsheets\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/9_1_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-august-28-2026-rendering",
+    "href": "slides/2026/9_1_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-august-28-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (August 28, 2026) Rendering:",
+    "text": "&  Session Info (August 28, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.10.18"
+  },
+  {
+    "objectID": "slides/2026/9_1_26/index.html#open-office-hours-august-31-2026",
+    "href": "slides/2026/9_1_26/index.html#open-office-hours-august-31-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (August 31, 2026)",
+    "text": "Open Office Hours (August 31, 2026)\n\n\n\nRecap session #144\nToday’s topic(s):\n\n Embedded Spreadsheets\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/9_1_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-august-31-2026-rendering",
+    "href": "slides/2026/9_1_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-august-31-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (August 31, 2026) Rendering:",
+    "text": "&  Session Info (August 31, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.10.18"
   }
 ]
