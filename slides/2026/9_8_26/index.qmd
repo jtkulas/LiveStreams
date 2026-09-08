@@ -112,7 +112,7 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 1. Add to PATH (via Windows)
 
-2. make LibreOffice visible (adding to PATH only makes `soffice.exe` visible, extension needs `libreoffice.exe` to be visible 
+2. make LibreOffice visible (adding to PATH only makes `soffice.exe` visible, extension needs `libreoffice.exe` to be visible) 
 
 :::
 
@@ -130,7 +130,7 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 #### Moral of the story: 
 
-extension is maximized with Unix operating systems, it's a pain--in--the--rear with Windows
+extension is maximized with {{< iconify devicon:unix >}}--styled operating systems (e.g., {{< iconify devicon:linux >}} or {{< iconify catppuccin:macos >}}), it's a pain--in--the--rear with {{< iconify selfhst:windows-retro >}}
 
 :::
 :::
