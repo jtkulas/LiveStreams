@@ -71,7 +71,7 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ::: {.panel-tabset}
 
-### Do dis...
+### Do dis... {{< iconify flat-color-icons:ok >}}
 
 ::: {.columns}
 
@@ -104,7 +104,7 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 :::
 
-### ...not dat
+### ...not dat {{< iconify emojione:no-entry >}}
 
 ::: {.columns .Smaller}
 
