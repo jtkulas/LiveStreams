@@ -1,0 +1,326 @@
+---
+title: "Grok ideas"
+format: html
+---
+
+I'll start by reviewing your repo so suggestions complement what you've already taught.The repo index is incomplete, so I’ll pull titles from the yearly folders and recent Quarto feature notes next.I’ll sample recent session files and look up your public listings so suggestions don’t repeat old episodes.A few more session titles should show what’s already been covered.Your series already covers a lot of the “how do I make nice RevealJS + Quarto artifacts” ground: books, APA Quarto, Mermaid, OJS, Typst (at least an intro), layouts, tables, GitHub, Positron, Pluto, Excalidraw, PRISMA diagrams, and several presentation extensions. The highest-leverage next sessions are the **project types and authoring features that landed after the early Quarto years**, plus a few extension/workflow topics that fit an Open Office Hours format.
+
+## Highest-value “new capability” sessions
+
+These are the ones I would schedule first. Each is a full Tuesday, not a sidebar.
+
+1. **Quarto Dashboards**  
+   `format: dashboard` is still the biggest format many R Markdown users have not used. Cover pages, rows/columns, tabsets, value boxes, sidebar inputs, and when to use static htmlwidgets vs Shiny vs Shinylive. A psychometric “scale dashboard” (item means, reliability, group comparisons) would feel native to your audience.
+
+2. **Quarto Manuscripts**  
+   Scholarly article as a project type: article + computational notebooks as the published record, not just a PDF. Good contrast with the APA Quarto session you already did. Show one manuscript that emits HTML + PDF/Typst + embedded notebook outputs.
+
+3. **`brand.yml` and brand extensions**  
+   One brand file driving HTML, RevealJS, dashboard, and Typst/PDF. Light/dark colors, logos, typography, `brand-mode: dark` for slides, and packaging a reusable brand extension. This is a very visual live-coding session.
+
+4. **Quarto Live / WebR exercises**  
+   Interactive R (and Python) cells that run in the browser inside HTML docs and RevealJS. This is the natural sequel to OJS: same “live in the slide” energy, but with R syntax your viewers already know. Great for homework, workshops, and self-paced labs.
+
+5. **Shinylive for R in Quarto**  
+   Embed a small Shiny app that runs client-side. Pair it with a dashboard session rather than treating it as a separate stack. Keep the app tiny (one slider, one plot, one table) so the lesson stays about authoring, not app architecture.
+
+6. **Light/dark renderings**  
+   Plots and tables that have separate light and dark versions, plus `respect-user-color-scheme`. Perfect if you already theme slides aggressively. Show ggplot2 and `gt` side by side.
+
+7. **LLM-friendly website output**  
+   Quarto 1.9’s machine-readable site output. A practical angle: “make your course site or methods site easy for students *and* tools to query.” Good companion to your GitHub Pages migration.
+
+8. **HTML accessibility checks**  
+   The built-in `axe` option, offline checking, WCAG targeting. Live-audit one of your existing decks. That is both new and immediately useful for a teaching series.
+
+## Authoring features that still teach well live
+
+These are less “new format,” more “people still fumble these.”
+
+9. **Custom cross-references**  
+   Div syntax, custom types in YAML, cross-referenceable listings (`lst-label` / `lst-cap`), callouts, remarks/solutions. Psychometrics-friendly demo: hypotheses, items, scales, and figures all numbered consistently.
+
+10. **Code annotations**  
+    Line-level comments that survive HTML and PDF. Better than dumping a wall of code on a slide.
+
+11. **`{{< contents >}}` and document surgery**  
+    Move an executed figure or table without duplicating the chunk. Useful for “results first, code later” reports.
+
+12. **Landscape blocks**  
+    `.landscape` sections in `docx`, PDF, and Typst. One wide correlation matrix or CFA diagram makes the point instantly.
+
+13. **List tables**  
+    Complex tables written as nested lists instead of pipe tables. Good for APA-ish multi-header tables without fighting Markdown.
+
+14. **Lightbox figures**  
+    Now built in. Galleries of path diagrams, item maps, or residual plots with captions and grouping.
+
+15. **Conditional content**  
+    `when-format`, `.content-visible`, `.content-hidden` for one source that is a workshop handout, slide deck, and solution key.
+
+16. **Profiles**  
+    `quarto render --profile student` vs `--profile instructor`. Same project, different execute/include settings.
+
+17. **Parameterized reports from one `.qmd`**  
+    Params for class section, dataset, or scale. Then `quarto render` in a loop. This is still the most practical literate-programming workflow for applied researchers.
+
+18. **Rendering R scripts**  
+    `knitr::spin()`-style scripts as reports. Nice for “I already have an analysis script, I do not want a notebook yet.”
+
+19. **The `quarto` R package as an API**  
+    Pass R objects into YAML metadata, render from scripts, build project-relative paths, insert Markdown into HTML tables. This is the missing glue episode for people who live in R but treat Quarto as a button.
+
+## Extensions worth a dedicated night
+
+You already use callouts, snow, quizzes, accordion, reveal-header, and Iconify. These would not feel like repeats:
+
+20. **Write a tiny extension live**  
+    A shortcode (`{{< item 12 >}}`) or a Lua filter that turns a div into a formatted scale-item card. This demystifies `_extensions/` better than installing five more.
+
+21. **Brand extension + custom format**  
+    Package your course look as something students can `quarto add`.
+
+22. **RevealJS “presenter power tools”**  
+    Jump-to-slide, scroll view, chalkboard/notes, multiplex, pointer, attribution. You have done a lot of slide chrome; this is the remaining presenter-ops set.
+
+23. **`quarto-revealjs-editable`**  
+    Edit positions, images, and shapes in the browser and write changes back to the `.qmd`. Very on-brand for your visual slide style.
+
+24. **Typst templates for real documents**  
+    You introduced Typst; the next step is templates: preprint, CV (`awesomecv-typst`), letter, or a book via the orange-book style path. Compare compile time and iteration speed against LaTeX.
+
+25. **Grouped tabsets, include-code-files, and partials**  
+    “Don’t paste the same chunk in three documents.” Good hygiene episode.
+
+26. **Quarto Wizard / extension management**  
+    Less sexy, but your repo already has a growing `_extensions` tree. A session on listing, updating, pinning, and not letting extensions rot would age well.
+
+## Workflow and publishing sessions
+
+These match the 2026 repo change (bookdown.org → GitHub Pages) and keep the series about *authoring as a system*.
+
+27. **Freeze, cache, and CI rendering**  
+    What `freeze: auto` actually saves you from. GitHub Actions that render only what changed.
+
+28. **Binder / easy compute environments**  
+    Quarto’s Binder helpers plus `renv`. “A student clones this and it runs.”
+
+29. **Posit Connect Cloud and scheduled documents**  
+    Especially parameterized departmental reports or email-style HTML output.
+
+30. **Website listings as a teaching archive**  
+    Auto-index weekly sessions from YAML instead of hand-maintaining `index.qmd`. You would be scratching your own itch.
+
+31. **Quarto 2 as a preview, not a migration**  
+    Collaborative editor, new parser, engine extensions, promised 1.x compatibility. One conceptual session is enough; I would not rebuild the course around it yet.
+
+## A few “series-native” episode ideas
+
+These play to *R is for Authoring* rather than generic Quarto docs:
+
+- **One analysis, five products:** same study becomes a dashboard, manuscript, RevealJS talk, Typst handout, and parameterized client PDF.
+- **Teaching with hidden solutions:** exercises in Quarto Live, instructor profile that reveals answers, student profile that does not.
+- **APA tables that survive HTML and Typst:** `gt` / `tinytable` + list tables + cross-refs.
+- **Accessible decks:** `axe` + alt text + color contrast + keyboard fragments.
+- **From messy `.R` to literate report:** spin, then promote to a manuscript project.
+
+If I were filling the next eight Tuesdays, I would do:
+
+1. Dashboards  
+2. Quarto Live / WebR  
+3. `brand.yml` + dark renderings  
+4. Manuscripts  
+5. Custom cross-refs + conditional content  
+6. Write a shortcode/filter  
+7. Freeze / CI / GitHub Pages archive  
+8. Typst templates for papers and CVs  
+
+That sequence stays inside literate programming, uses capabilities that are still new for most R Markdown users, and does not redo Mermaid, OJS, APA Quarto, or “what is Quarto.”
+
+## Regarding suggestion 16: 
+
+Quarto **profiles** let one project produce different documents from the same files. For a workshop, `student` and `instructor` is the most useful pair: students get the worksheet; you get the version with answers, notes, and executed output.
+
+Official docs: [Project Profiles](https://quarto.org/docs/projects/profiles.html).
+
+## What a profile actually is
+
+You keep a shared `_quarto.yml`, then add extra YAML files named `_quarto-<name>.yml`. When you render with `--profile <name>`, Quarto **merges** that file on top of the base config.
+
+Activation:
+
+```bash
+quarto render --profile student
+quarto render --profile instructor
+```
+
+Or:
+
+```bash
+export QUARTO_PROFILE=instructor
+quarto render
+```
+
+`--profile` replaces any `QUARTO_PROFILE` in the environment. You can activate several at once (`--profile instructor,prod`); for scalar keys the **first** listed profile wins. If you typo a profile name and there is no matching `_quarto-….yml`, Quarto **silently ignores** it.
+
+Four things change when a profile is active:
+
+1. Extra YAML is merged (`execute`, `format`, `output-dir`, titles, which files to render, etc.).
+2. Optional `_environment-<profile>` vars are applied.
+3. Content can be shown/hidden with `when-profile` / `unless-profile`.
+4. Code can read `Sys.getenv("QUARTO_PROFILE")` (R) or `os.environ["QUARTO_PROFILE"]` (Python).
+
+## A concrete student / instructor setup
+
+**`_quarto.yml`** (shared defaults):
+
+```yaml
+project:
+  type: default
+
+profile:
+  group:
+    - [student, instructor]
+  default: student
+
+execute:
+  echo: true
+  eval: true
+  warning: false
+```
+
+`profile.group` says these two are mutually exclusive, and the first name is the default if nobody passes `--profile`. That is handy so RStudio / VS Code preview “just works” as the student version.
+
+**`_quarto-student.yml`**:
+
+```yaml
+project:
+  output-dir: _student
+
+title: "Workshop worksheet"
+
+execute:
+  eval: false          # show starter code, do not run solutions
+  echo: true
+
+format:
+  html:
+    output-file: worksheet
+```
+
+**`_quarto-instructor.yml`**:
+
+```yaml
+project:
+  output-dir: _instructor
+
+title: "Workshop — instructor notes"
+
+execute:
+  eval: true
+  echo: true
+
+format:
+  html:
+    output-file: instructor-notes
+```
+
+Then:
+
+```bash
+quarto render --profile student
+quarto render --profile instructor
+```
+
+You get two output folders from one source tree.
+
+## Showing different *content*, not just different execute settings
+
+This is the part that makes student vs instructor shine.
+
+```markdown
+## Exercise 1
+
+Fit a linear model of `mpg` on `wt` using `mtcars`.
+
+```{r}
+# starter code students should complete
+# fit <- lm(...)
+```
+
+::: {.content-visible when-profile="instructor"}
+**Solution**
+
+```{r}
+fit <- lm(mpg ~ wt, data = mtcars)
+summary(fit)
+```
+
+Teaching note: ask what happens if they use `wt` in thousands of pounds vs raw `wt`.
+:::
+
+::: {.content-hidden when-profile="instructor"}
+Leave space for your answer.
+:::
+```
+
+Equivalents:
+
+```markdown
+::: {.content-visible unless-profile="instructor"}
+Student-only prompt
+:::
+
+::: {.content-hidden when-profile="student"}
+Instructor-only sidebar
+:::
+```
+
+Same idea as Tom Palmer’s questions/solutions worksheets: one `.qmd`, two profiles, solutions wrapped in `when-profile`.
+
+## Branching *inside code* with `QUARTO_PROFILE`
+
+If you would rather not wrap whole chunks in divs:
+
+```{r}
+#| echo: false
+is_instructor <- grepl("instructor", Sys.getenv("QUARTO_PROFILE"), fixed = TRUE)
+```
+
+```{r}
+#| eval: !expr is_instructor
+# hidden solution chunk
+```
+
+Or keep `eval: true` everywhere and gate prints:
+
+```{r}
+if (grepl("instructor", Sys.getenv("QUARTO_PROFILE"))) {
+  print(coef(fit))
+}
+```
+
+That is useful when the *same* chunk should run in both versions but only the instructor output should appear.
+
+## Typical workshop mappings
+
+| Goal | Student profile | Instructor profile |
+|---|---|---|
+| Starter vs answers | hide solution divs; `eval: false` on solution chunks | show solution divs; `eval: true` |
+| Don’t leak answers in HTML | `output-dir: _student` | `output-dir: _instructor` (don’t publish this folder) |
+| Different title / filename | `title` + `format.html.output-file` | same |
+| Notes / timing / demo scripts | `content-hidden` for students | `when-profile="instructor"` |
+| Freeze vs always re-run | `execute.freeze: true` | `execute.freeze: false` |
+| Secrets / DB creds | no keys in student env | `_environment-instructor` (don’t commit secrets; use `.local`) |
+
+Related teaching pattern: the [coatless-quarto/assign](https://github.com/coatless-quarto/assign) extension uses profiles `assign` / `solution` / `rubric` plus CSS classes (`.direction`, etc.) and separate `output-dir`s. Same idea, more homework-flavored.
+
+## Authoring tips so this doesn’t bite you in a live workshop
+
+1. Set `profile.default: student` so a casual Render button never dumps solutions.
+2. Put instructor output in a directory that is gitignored or unpublished.
+3. Don’t rely on `eval: false` alone to hide answers — students can still read the `.qmd`. Profiles hide *rendered* content; they are not encryption.
+4. If you use knitr, programmatic chunk options (`#| eval: !expr …`) remain the most flexible for R-only materials. Profiles are the cleaner route when you also have Python/Julia or want different titles, output dirs, and prose.
+5. Preview: `quarto preview --profile instructor` to check the teaching version before class.
+
+If you want, I can sketch a minimal 2-file demo project (`_quarto.yml` + one `exercises.qmd`) you could drop into the workshop repo as a live demo.

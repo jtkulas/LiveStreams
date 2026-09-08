@@ -1,0 +1,184 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: "OOH Session #146...<br>[{{< iconify selfhst:reveal-js >}} slides in<br>the classroom]{.schoolbell}"
+title-slide-attributes: 
+  data-background-image: /img/proftom.jpg
+  #https://pbs.twimg.com/media/G1WYPhhbQAIXnhz.jpg #https://pbs.twimg.com/media/GoY64IbXoAAsy2_.jpg 
+#  data-background-opacity: ".8"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: /img/tomcat.png #https://www.pngplay.com/wp-content/uploads/14/Pink-Panther-Thinking-Transparent-Images.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  ## https://github.com/shafayetShafee/reveal-header#readme
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {.columns}
+::: {.column width="55%"}
++ Recap session #145
++ Today's topic(s):
+    + [{{< iconify selfhst:reveal-js >}} slides in<br>the classroom]{.schoolbell}
++ Shared problem-solving
+
+:::
+
+::: {.column width="45%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 170px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/9_1_26">
+  <img src="/img/title145.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#145: 
+
+![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
+
+![](https://cdn-icons-png.flaticon.com/512/17666/17666949.png){.absolute top="300" right="130" height="170"}
+
+## [{{< iconify thesvg-color:microsoft-excel >}} [Embedded Spreadsheets ]{.spreadsheet} {{< iconify thesvg-color:google-sheets >}}](https://github.com/wearetechnative/embed-sheet)
+
+::: {.panel-tabset}
+
+### Do dis...
+
+::: {.columns}
+
+::: {.column width="50%"}
+
++ `![]()` for all file types, or 
++ `<iframe>` for html files:
+
+``` bash
+<iframe
+  width="100%"
+  height="400"
+  src="https://docs.google.com/spreadsheets/d/1kLD8C7x5ko_tbypM6Xd4PJEsrPxrJpIlZhC8V7FADkc/edit?usp=sharing"
+  title="Spreadsheet">
+</iframe>
+```
+
+:::
+
+::: {.column width="50%"}
+
+<iframe
+  width="100%"
+  height="400"
+  src="https://docs.google.com/spreadsheets/d/1kLD8C7x5ko_tbypM6Xd4PJEsrPxrJpIlZhC8V7FADkc/edit?usp=sharing"
+  title="Spreadsheet">
+</iframe>
+
+:::
+
+:::
+
+### ...not dat
+
+::: {.columns .Smaller}
+
+::: {.column width="39%"}
+
+1. Add to PATH (via Windows)
+
+2. make LibreOffice visible (adding to PATH only makes `soffice.exe` visible, extension needs `libreoffice.exe` to be visible 
+
+:::
+
+::: {.column width="35%"}
+
+3. Create `bin` folder at same level as project folder with `libreoffice.bat` file
+
+4. More windows PATH adjustments
+
+5. Restart IDE
+
+:::
+
+::: {.column width="26%"}
+
+#### Moral of the story: 
+
+extension is maximized with Unix operating systems, it's a pain--in--the--rear with Windows
+
+:::
+:::
+
+:::
+
+# Today...
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHJvNGVncmkzdTJ0eG82ZzhlM2FlejdiZ2I0cGR2Njc2MGRnaG13ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pRotk2UQTsozm/giphy.gif)
+
+## [{{< iconify selfhst:reveal-js >}} slides in the classroom]{.schoolbell}
+
+::: {.absolute style="top: 150px; left: -100px; width: 450px;" .tilt2}
+<a href="https://github.com/parmsam/quarto-quiz">
+  <img src="https://static.vecteezy.com/system/resources/thumbnails/050/703/026/small/speech-bubble-for-comic-text-quiz-cartoon-comic-sign-effects-explosion-png.png">
+</a>
+:::
+
+::: {.absolute style="bottom: -10px; left: 270px; width: 600px;"}
+<a href="https://quarto.org/docs/presentations/revealjs/presenting.html#multiplex">
+  <img src="https://popz.com/wp-content/themes/popz_wp/img/cinema-premier.png">
+</a>
+:::
+
+::: {.absolute style="top: 130px; right: -150px; width: 450px;"}
+<a href="https://quarto.org/docs/authoring/code-annotation.html">
+  <img src="https://www.freeiconspng.com/uploads/music-note-image-5.png">
+</a>
+:::
+
+## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+
+::: {.columns}
+
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| eval: true
+sessionInfo()
+```
+:::
+
+::: {.column width="20%"}
+
+Quarto version `r quarto::quarto_version()`  
+
+:::
+
+:::
+
+

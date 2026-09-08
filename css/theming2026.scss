@@ -40,8 +40,9 @@
 @import url('https://fonts.googleapis.com/css?family=DM Sans');
 @import url('https://fonts.googleapis.com/css?family=Story Script');
 @import url('https://fonts.googleapis.com/css?family=Love Light');
+@import url('https://fonts.googleapis.com/css?family=Schoolbell');
 
-$presentation-title-slide-text-align: right;
+$presentation-title-slide-text-align: left;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
@@ -615,4 +616,11 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   color: #81e96e;
 //  text-shadow:
 //    2px 2px 0px black !important;
+}
+
+.schoolbell {
+  font-family: "Schoolbell";
+  font-size: 1.3em;
+  font-weight: normal !important;
+  color: white;
 }
