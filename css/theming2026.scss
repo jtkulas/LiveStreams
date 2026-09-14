@@ -41,12 +41,13 @@
 @import url('https://fonts.googleapis.com/css?family=Story Script');
 @import url('https://fonts.googleapis.com/css?family=Love Light');
 @import url('https://fonts.googleapis.com/css?family=Schoolbell');
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
 
 $presentation-title-slide-text-align: left;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
-  height: 100px !important;
+  height: 120px !important;
 }
 
 /* adding background to inline code elements */
@@ -623,4 +624,12 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-size: 1.3em;
   font-weight: normal !important;
   color: white;
+}
+
+.frank {
+  font-family: "Audiowide";
+  font-weight: normal !important;
+  color: #6c1967;
+  text-shadow:
+    0px 0px 0px !important;
 }
