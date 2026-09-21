@@ -1,0 +1,265 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: "OOH [(+:05)]{.nofunny2} Session #148<br>[Résumés<br>& CVs!!]{.resume .Bigger}"
+title-slide-attributes: 
+  data-background-image: /img/barneyresume.jpg
+  #https://pbs.twimg.com/media/G1WYPhhbQAIXnhz.jpg #https://pbs.twimg.com/media/GoY64IbXoAAsy2_.jpg 
+#  data-background-opacity: ".7"
+format: 
+  live-revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://pngimg.com/uploads/cv/cv_PNG30.png 
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hour [(+:05)]{.nofunny2} <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {.columns}
+::: {.column width="55%"}
++ Recap session #147
++ Today's topic(s):
+    + [[Résumés & CVs]{.resume}](https://github.com/schochastics/quarto-cv)
++ Shared problem-solving
+
+:::
+
+::: {.column width="45%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 170px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/9_15_26">
+  <img src="/img/title147.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# [+:05???]{.nofunny2} {background-image="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXZxcnd3MHZ0bW9lcDA1b3BzZTl5b3dkM2RkMG05Z2k5emJvNW9taSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kL1cqqlwjlLPy/giphy.gif" background-size="contain"}
+
+# Recap of Session <br>#147: 
+
+![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
+
+![](https://itsalivepodcast.com/wp-content/uploads/2020/09/cropped-2020_logo.png){.absolute top="310" right="105" height="140" .tiltpostit}
+
+## [[{{< iconify game-icons:lightning-arc >}}]{.biggeR}[Quarto]{.frank}[{{< iconify game-icons:lightning-arc >}}]{.biggeR} {{< iconify ic:baseline-electric-bolt >}}[Live!!]{.frank .Bigger}{{< iconify game-icons:lightning-trio >}}](https://r-wasm.github.io/quarto-live/){#sec-quartolive}
+
+
+::: {.panel-tabset}
+
+### General Use
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+````{text}
+```{webr}
+for (x in 1:5) {
+  print(10 + x)
+}
+```
+````
+
+1. `webr` code block
+2.  {{< iconify devicon:r >}} (or {{< iconify devicon:python-wordmark >}}) commands
+3. run script & view output {{< iconify at-icons:arrow-up-right >}}
+
+:::
+
+::: {.column width="40%"}
+
+```{webr}
+#| eval: true
+for (x in 1:5) {
+  print(10 + x)
+}
+```
+
+:::
+
+:::
+
+### Options {{< iconify arcticons:settings >}}
+
+::: {.columns}
+
+::: {.column width="35%"}
+
+You can control the user experience via YAML or [chunk--level specifications](https://r-wasm.github.io/quarto-live/getting_started/editor.html):
+::: 
+
+::: {.column width="32%"}
+
+```{r}
+---
+format: live-html         #<1>
+webr:
+  packages:
+    - dplyr               #<2>
+    - palmerpenguins
+    - ggplot2             #<2>
+---
+```
+1. `live-` prefix for document type (must support interactive content)
+2. any packages you'd like to be available on the client--side
+
+
+::: 
+
+::: {.column width="33%"}
+
+````{r}
+```{webr}
+#| edit: false        
+#| autorun: true
+#| startover: false
+#| timelimit: 3       
+df <- c(1, 2, 3)
+df[1]
+```
+````
+
+::: 
+
+:::
+
+### Exercises {{< iconify fa:graduation-cap >}}
+
+::: {.columns}
+
+::: {.column width="30%"}
+
+Supporting exploration with [hints, solutions](https://r-wasm.github.io/quarto-live/exercises/exercises.html#adding-hints-and-solutions), and [grading](https://r-wasm.github.io/quarto-live/exercises/exercises.html):
+
+::: 
+
+::: {.column width="32%"}
+
+[Fill in the blank to achieve an answer of "10":]{.nofunny2}
+
+````{r}
+```{webr}              #<1>
+#| exercise: ex_1      #<2>
+
+1 + 2 + 3 + ______     #<3>
+```
+````
+1. code cell 'type' is `webr` 
+2. unique label (here, "ex_1") links different code chunks as well as hints, etc
+3. "blanks" identified by 6 or more underscores
+
+::: 
+
+::: {.column width="38%"}
+
+````{r}
+```{webr}
+#| exercise: ex_1
+#| check: true          #<1>
+
+if (identical(.result, 10)) {
+  list(correct = TRUE, message = "Nice work!")
+} else {
+  list(correct = FALSE, message = "You suck at math!!")
+}
+```
+````
+1. essentially serves as "`eval: true`" for exercises
+2. `identical(.result)` allows for multiple solutions (will only attend to output)
+
+::: 
+
+:::
+
+:::
+
+# Today...
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWkzazIzM20yNjZmejUzZHBoN29xNTJkcXY1OTV1cTBkbGJqOHNwNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RiykPw9tgdOylwFgUe/giphy.gif)
+
+## [[Résumés & CVs]{.resume}](https://github.com/schochastics/quarto-cv)
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+### RMarkdown {{< iconify logos:markdown >}}
+
++ [vitae](https://github.com/mitchelloharawild/vitae)  
++ [pagedown::html_resume](https://github.com/rstudio/pagedown#resume-pagedownhtml_resume)
++ [datadrivencv](https://github.com/nstrayer/datadrivencv)
+
+:::
+
+::: {.column width="50%"}
+
+### Quarto {{< iconify thesvg-color:quarto >}}
+
++ [quarto--cv (I)](https://github.com/schochastics/quarto-cv)
++ [quarto--cv (II)](https://github.com/mps9506/quarto-cv)
++ [quarto--cv (III)](https://github.com/mattwarkentin/quarto-cv)
++ [quarto--cv (IV)](https://github.com/christopherkenny/quarto-cv)
++ [quarto--cv (V)](https://github.com/produnis/quarto-cv)
++ [quarto--awesomecv--typst](https://github.com/kazuyanagimoto/quarto-awesomecv-typst)
+
+:::
+
+:::
+
+![](https://i.redd.it/5g42fliyou1z.png){.absolute right="-150" top="-40" height="380"}
+
+![](https://preview.redd.it/resume-writing-v0-udwfuqtjo0971.jpg?auto=webp&s=32c4d21930ae5d292bc2d3ab7e9c5492386ec43a){.absolute left="100" bottom="10" height="280"}
+
+![](https://www.nicepng.com/png/full/101-1010133_quill-clipart-scroll-quill-and-paper-transparent.png){.absolute right="-115" bottom="160" height="170"}
+
+![](https://cdn.pixabay.com/photo/2020/12/17/21/32/scroll-5840605_1280.png){.absolute bottom="100" left="-90" height="150"}
+
+## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+
+::: {.columns}
+
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| eval: true
+sessionInfo()
+```
+:::
+
+::: {.column width="20%"}
+
+Quarto version `r quarto::quarto_version()`  
+
+:::
+
+:::
+
+

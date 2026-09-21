@@ -42,12 +42,13 @@
 @import url('https://fonts.googleapis.com/css?family=Love Light');
 @import url('https://fonts.googleapis.com/css?family=Schoolbell');
 @import url('https://fonts.googleapis.com/css?family=Audiowide');
+@import url('https://fonts.googleapis.com/css?family=Commissioner');
 
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
-  height: 120px !important;
+  height: 100px !important;
 }
 
 /* adding background to inline code elements */
@@ -145,6 +146,12 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-weight: normal !important;
   text-shadow:
    0px 0px 0px !important;  
+}
+
+.nofunny2 {
+  font-family: 'Roboto' !important;
+  font-size: .6em !important;
+  color: white !important;
 }
 
 .foreground-image {
@@ -632,4 +639,9 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   color: #6c1967;
   text-shadow:
     0px 0px 0px !important;
+}
+
+.resume {
+  font-family: "Commissioner";
+  color: #dab04d;  // #997c6a #856b5a
 }
