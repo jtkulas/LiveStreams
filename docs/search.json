@@ -1628,7 +1628,7 @@
     "href": "slides/2026/9_22_26/index.html#résumés-cvs",
     "title": "R is for Authoring!!",
     "section": "Résumés & CVs",
-    "text": "Résumés & CVs\n\n\nRMarkdown \n\nvitae\n\npagedown::html_resume\ndatadrivencv\n\n\nQuarto \n\nquarto–cv (I)\nquarto–cv (II)\nquarto–cv (III)\nquarto–cv (IV)\nquarto–cv (V)\nquarto–awesomecv–typst"
+    "text": "Résumés & CVs\n\n\nRMarkdown \n\nvitae\n\npagedown::html_resume\ndatadrivencv I & II\n\n\nQuarto \n\nquarto–cv (I)\nquarto–cv (II)\nquarto–cv (III)\nquarto–cv (IV)\nquarto–cv (V)\nquarto–awesomecv–typst"
   },
   {
     "objectID": "slides/2026/9_22_26/index.html#open-office-hours-september-19-2026",

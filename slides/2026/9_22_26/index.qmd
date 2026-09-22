@@ -230,7 +230,7 @@ Do it this way!!!
 
 + [vitae](https://github.com/mitchelloharawild/vitae)  
 + [pagedown::html_resume](https://github.com/rstudio/pagedown#resume-pagedownhtml_resume)
-+ [datadrivencv](https://github.com/nstrayer/datadrivencv)
++ [datadrivencv I](https://github.com/nstrayer/datadrivencv) & [II](https://github.com/girordo/data-driven-cv)
 
 :::
 
