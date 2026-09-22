@@ -107,7 +107,7 @@
     code span.vs { color: #abe338; } /* VerbatimString */
     code span.wa { color: #dcc6e0; } /* Warning */
   </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-8b7386a6a29f2fb8c0c9301e00043692.css">
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-6a4641c23c4a1f636af9ca881492a68f.css">
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-8ZE61PCXCP"></script>
 
   <script type="text/javascript">
@@ -227,8 +227,8 @@ OOH <span class="nofunny2">(+:05)</span> Session #148<br><span class="resume Big
 </div>
 
 </section>
-<section id="open-office-hour-05-september-21-2026" class="slide level2">
-<h2>Open Office Hour <span class="nofunny2">(+:05)</span> <br>(September 21, 2026)</h2>
+<section id="open-office-hour-05-september-22-2026" class="slide level2">
+<h2>Open Office Hour <span class="nofunny2">(+:05)</span> <br>(September 22, 2026)</h2>
 <div class="columns">
 <div class="column" style="width:55%;">
 <ul>
@@ -346,10 +346,9 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZm9yICh4IGluIDE6NSkge1xu
 </div>
 <div id="tabset-1-3">
 <div class="columns">
-<div class="column" style="width:30%;">
-<p>Supporting exploration with <a href="https://r-wasm.github.io/quarto-live/exercises/exercises.html#adding-hints-and-solutions">hints, solutions</a>, and <a href="https://r-wasm.github.io/quarto-live/exercises/exercises.html">grading</a>:</p>
-</div><div class="column" style="width:32%;">
-<p><span class="nofunny2">Fill in the blank to achieve an answer of “10”:</span></p>
+<div class="column" style="width:33%;">
+<p><a href="https://r-wasm.github.io/quarto-live/exercises/exercises.html">specification</a>:</p>
+<p><span class="tiny links"><u>Fill in the blank to achieve an answer of “10”:</u></span></p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-4"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="1">1</button><span id="annotated-cell-4-1" class="code-annotation-target"><a href="#annotated-cell-4-1" aria-label="1"></a><span class="st">```</span><span class="at">{webr}</span></span>
 <button class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="2">2</button><span id="annotated-cell-4-2" class="code-annotation-target"><a href="#annotated-cell-4-2" aria-label="2"></a><span class="at">#| exercise: ex_1</span></span>
@@ -373,23 +372,47 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZm9yICh4IGluIDE6NSkge1xu
 </dl>
 </div>
 </div>
-</div><div class="column" style="width:38%;">
+</div><div class="column" style="width:35%;">
+<p><a href="https://r-wasm.github.io/quarto-live/exercises/exercises.html">grading</a>:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-5"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-5-1"><a href="#annotated-cell-5-1" aria-label="1"></a><span class="st">```</span><span class="at">{webr}</span></span>
-<span id="annotated-cell-5-2"><a href="#annotated-cell-5-2" aria-label="2"></a><span class="at">#| exercise: ex_1</span></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="1">1</button><span id="annotated-cell-5-3" class="code-annotation-target"><a href="#annotated-cell-5-3" aria-label="3"></a><span class="at">#| check: true</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="1">1</button><span id="annotated-cell-5-2" class="code-annotation-target"><a href="#annotated-cell-5-2" aria-label="2"></a><span class="at">#| exercise: ex_1</span></span>
+<span id="annotated-cell-5-3"><a href="#annotated-cell-5-3" aria-label="3"></a><span class="at">#| check: true          </span></span>
 <span id="annotated-cell-5-4"><a href="#annotated-cell-5-4" aria-label="4"></a></span>
-<span id="annotated-cell-5-5"><a href="#annotated-cell-5-5" aria-label="5"></a><span class="at">if (identical(.result, 10)) {</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="2">2</button><span id="annotated-cell-5-5" class="code-annotation-target"><a href="#annotated-cell-5-5" aria-label="5"></a><span class="at">if (identical(.result, 10)) {</span></span>
 <span id="annotated-cell-5-6"><a href="#annotated-cell-5-6" aria-label="6"></a><span class="at">  list(correct = TRUE, message = "Nice work!")</span></span>
 <span id="annotated-cell-5-7"><a href="#annotated-cell-5-7" aria-label="7"></a><span class="at">} else {</span></span>
-<span id="annotated-cell-5-8"><a href="#annotated-cell-5-8" aria-label="8"></a><span class="at">  list(correct = FALSE, message = "You suck at math!!")</span></span>
+<span id="annotated-cell-5-8"><a href="#annotated-cell-5-8" aria-label="8"></a><span class="at">  list(correct = FALSE, message = "You suck!!")</span></span>
 <span id="annotated-cell-5-9"><a href="#annotated-cell-5-9" aria-label="9"></a><span class="at">}</span></span>
 <span id="annotated-cell-5-10"><a href="#annotated-cell-5-10" aria-label="10"></a><span class="st">```</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-5" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-5" data-code-lines="3" data-code-annotation="1">essentially serves as “<code>eval: true</code>” for exercises</span>
+<span data-code-cell="annotated-cell-5" data-code-lines="2" data-code-annotation="1">needs to match corresponding exercise label</span>
+</dd>
+<dt data-target-cell="annotated-cell-5" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-5" data-code-lines="5" data-code-annotation="2"><code>identical(.result)</code> allows for multiple solutions (will only attend to output)</span>
+</dd>
+</dl>
+</div>
+</div>
+</div><div class="column" style="width:32%;">
+<p><a href="https://r-wasm.github.io/quarto-live/exercises/exercises.html#adding-hints-and-solutions">hints &amp; solutions</a>:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-6"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="1">1</button><span id="annotated-cell-6-1" class="code-annotation-target"><a href="#annotated-cell-6-1" aria-label="1"></a><span class="sc">:::</span> {.hint exercise<span class="ot">=</span><span class="st">"ex_1"</span>}</span>
+<span id="annotated-cell-6-2"><a href="#annotated-cell-6-2" aria-label="2"></a>This is your hint</span>
+<span id="annotated-cell-6-3"><a href="#annotated-cell-6-3" aria-label="3"></a><span class="sc">:::</span></span>
+<span id="annotated-cell-6-4"><a href="#annotated-cell-6-4" aria-label="4"></a></span>
+<span id="annotated-cell-6-5"><a href="#annotated-cell-6-5" aria-label="5"></a><span class="er">:::</span> {.solution exercise<span class="ot">=</span><span class="st">"ex_1"</span>}</span>
+<span id="annotated-cell-6-6"><a href="#annotated-cell-6-6" aria-label="6"></a>Do it this way<span class="sc">!!!</span></span>
+<span id="annotated-cell-6-7"><a href="#annotated-cell-6-7" aria-label="7"></a><span class="er">:::</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-6" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-6" data-code-lines="1,3" data-code-annotation="1">note these are specified within “floating” Quarto fences, not within code chunks</span>
 </dd>
 </dl>
 </div>
@@ -431,8 +454,8 @@ eyJhdHRyIjp7ImVkaXQiOnRydWUsImV2YWwiOnRydWV9LCJjb2RlIjoiZm9yICh4IGluIDE6NSkge1xu
 <p><img data-src="https://www.nicepng.com/png/full/101-1010133_quill-clipart-scroll-quill-and-paper-transparent.png" class="absolute" style="bottom: 160px; right: -115px; height: 170px; "></p>
 <p><img data-src="https://cdn.pixabay.com/photo/2020/12/17/21/32/scroll-5840605_1280.png" class="absolute" style="left: -90px; bottom: 100px; height: 150px; "></p>
 </section>
-<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-september-21-2026-rendering" class="slide level2">
-<h2><iconify-icon role="img" inline="" icon="devicon:r" style="color:#82b1ff;;font-size: 2em;" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> &amp; <iconify-icon role="img" inline="" icon="material-icon-theme:quarto" style="font-size: 2em;" aria-label="Icon quarto from material-icon-theme Iconify.design set." title="Icon quarto from material-icon-theme Iconify.design set."></iconify-icon> Session Info (September 21, 2026) Rendering:</h2>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-september-22-2026-rendering" class="slide level2">
+<h2><iconify-icon role="img" inline="" icon="devicon:r" style="color:#82b1ff;;font-size: 2em;" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> &amp; <iconify-icon role="img" inline="" icon="material-icon-theme:quarto" style="font-size: 2em;" aria-label="Icon quarto from material-icon-theme Iconify.design set." title="Icon quarto from material-icon-theme Iconify.design set."></iconify-icon> Session Info (September 22, 2026) Rendering:</h2>
 <div class="columns">
 <div class="column" style="width:80%;">
 <div class="cell">

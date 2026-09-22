@@ -155,15 +155,11 @@ df[1]
 
 ::: {.columns}
 
-::: {.column width="30%"}
+::: {.column width="33%"}
 
-Supporting exploration with [hints, solutions](https://r-wasm.github.io/quarto-live/exercises/exercises.html#adding-hints-and-solutions), and [grading](https://r-wasm.github.io/quarto-live/exercises/exercises.html):
+[specification](https://r-wasm.github.io/quarto-live/exercises/exercises.html):
 
-::: 
-
-::: {.column width="32%"}
-
-[Fill in the blank to achieve an answer of "10":]{.nofunny2}
+[Fill in the blank to achieve an answer of "10":]{.tiny .links .underline}
 
 ````{r}
 ```{webr}              #<1>
@@ -178,22 +174,41 @@ Supporting exploration with [hints, solutions](https://r-wasm.github.io/quarto-l
 
 ::: 
 
-::: {.column width="38%"}
+::: {.column width="35%"}
+
+[grading](https://r-wasm.github.io/quarto-live/exercises/exercises.html):
 
 ````{r}
 ```{webr}
-#| exercise: ex_1
-#| check: true          #<1>
+#| exercise: ex_1    #<1>
+#| check: true          
 
-if (identical(.result, 10)) {
+if (identical(.result, 10)) {                 #<2>
   list(correct = TRUE, message = "Nice work!")
 } else {
-  list(correct = FALSE, message = "You suck at math!!")
+  list(correct = FALSE, message = "You suck!!")
 }
 ```
 ````
-1. essentially serves as "`eval: true`" for exercises
+1. needs to match corresponding exercise label
 2. `identical(.result)` allows for multiple solutions (will only attend to output)
+
+::: 
+
+::: {.column width="32%"}
+
+[hints & solutions](https://r-wasm.github.io/quarto-live/exercises/exercises.html#adding-hints-and-solutions):
+
+```{r}
+::: {.hint exercise="ex_1"}    #<1>
+This is your hint
+:::                            #<1>
+
+::: {.solution exercise="ex_1"}
+Do it this way!!!
+:::
+```
+1. note these are specified within "floating" Quarto fences, not within code chunks
 
 ::: 
 

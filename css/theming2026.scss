@@ -202,6 +202,11 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-size: .6em;
 }
 
+.tiny {
+  font-size: .4em;
+  padding: 2px 0 !important; 
+}
+
 .bigger {
   font-size: 1.2em;
 }
@@ -235,6 +240,10 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
 }
 .indigo{
   color: #4b0082;
+}
+
+.links {
+  color: #90e0ef;
 }
 
 // forcing non-mainfont for callout-png banner
