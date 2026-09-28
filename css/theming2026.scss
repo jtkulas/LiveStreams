@@ -43,6 +43,7 @@
 @import url('https://fonts.googleapis.com/css?family=Schoolbell');
 @import url('https://fonts.googleapis.com/css?family=Audiowide');
 @import url('https://fonts.googleapis.com/css?family=Commissioner');
+@import url('https://fonts.googleapis.com/css?family=Fascinate Inline');
 
 $presentation-title-slide-text-align: right;
 
@@ -653,4 +654,10 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
 .resume {
   font-family: "Commissioner";
   color: #dab04d;  // #997c6a #856b5a
+}
+
+.cards {
+  font-family: "Fascinate Inline";
+  font-size: 1.7em;
+  color: #FFFDD0; 
 }

@@ -1,0 +1,185 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: "OOH Session #149...<br>[Biznezz<br>Cardz!!&nbsp;&nbsp;]{.cards}"
+title-slide-attributes: 
+  data-background-image: /img/card.png
+  #https://pbs.twimg.com/media/G1WYPhhbQAIXnhz.jpg #https://pbs.twimg.com/media/GoY64IbXoAAsy2_.jpg 
+#  data-background-opacity: ".7"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: /img/chuckjones.JPG 
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {.columns}
+::: {.column width="55%"}
++ Recap session #148
++ Today's topic(s):
+    + [[Biznezz Cardz!!]{.cards}](https://github.com/rstudio/pagedown#business-cards-pagedownbusiness_card)
++ Shared problem-solving
+
+:::
+
+::: {.column width="45%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 170px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/9_22_26">
+  <img src="/img/title148.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#148: 
+
+![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
+
+![](https://pngimg.com/uploads/cv/cv_PNG30.png){.absolute top="290" right="120" height="180" .tiltpostit}
+
+## [[Résumés & CVs]{.resume}](https://github.com/schochastics/quarto-cv)
+
+::: {.panel-tabset}
+
+### typst {{< iconify thesvg-color:typst >}}
+
+::: {.columns}
+
+::: {.column width="50%"}
+
++ [Quarto extension](https://github.com/kazuyanagimoto/quarto-awesomecv-typst)
++ .yml files for content
++ blazing fast renderings
++ nice color/font design
++ icon integration (links)
+
+:::
+
+::: {.column width="50%"}
+
+![](/img/typstresume.JPG)
+
+:::
+
+:::
+
+### pagedown {{< iconify emojione-v1:note-page >}}
+
+::: {.columns}
+
+::: {.column width="50%"}
+
++ [R package](https://github.com/rstudio/pagedown#resume-pagedownhtml_resume)
++ comfortable specifications
++ only html 
++ `self_contained: true` 
++ `knit: pagedown::chrome_print` 
+
+:::
+
+::: {.column width="50%"}
+![](/img/pagedownresume.JPG)
+:::
+
+:::
+
+### German muppet {{< iconify twemoji:flag-germany >}}
+
+::: {.columns}
+
+::: {.column width="50%"}
+
++ [Quarto extension](https://github.com/produnis/quarto-cv)
++ nice color/font design
++ .bib accomodation (academic cvs)
++ $\LaTeX$--styled formatting specifications
+
+:::
+
+::: {.column width="50%"}
+![](/img/muppetresume.JPG)
+:::
+
+:::
+
+:::
+
+
+![](https://www.nicepng.com/png/full/101-1010133_quill-clipart-scroll-quill-and-paper-transparent.png){.absolute right="-80" top="-30" height="220"}
+
+![](https://cdn.pixabay.com/photo/2020/12/17/21/32/scroll-5840605_1280.png){.absolute bottom="130" left="-140" height="150"}
+
+# Today...
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ24yNnk2aDN2NGZvNHY3eHRqb2xrMWxmdWpueDVkeXZwczR5MGtkeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26Ffd3CuW6BS8jjhK/giphy.gif)
+
+## [[Biznezz Cardz!!]{.cards}](https://github.com/rstudio/pagedown#business-cards-pagedownbusiness_card)
+
+
+![](https://www.liveabout.com/thmb/-pLw7K9MECJeAcDYbZIzfj-LPT8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/rob-balloon-58b8d5215f9b58af5c8e8744.jpg){.absolute left="-100" bottom="80" height="450"}
+
+![](https://www.liveabout.com/thmb/l3pP7Mj7Myb3IqdW2_OjOJLIcSE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/shoot-58b8d54f5f9b58af5c8e92a4.jpg){.absolute right="330" height="300" top="170"}
+
+![](https://www.liveabout.com/thmb/oh-yeFIyP2X1s0XAxzB5mje6xAU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/chewie-58b8d5433df78c353c22b992.jpg){.absolute bottom="10" right="180" height="220"}
+
+![](https://static.boredpanda.com/blog/wp-content/uploads/2019/01/funny-business-card-designs-42-5c48465087505__700.jpg){.absolute right="-110" top="170" height="280"}
+
+::: {.notes}
+
++ [`pagedown::business_card`](https://github.com/rstudio/pagedown#business-cards-pagedownbusiness_card)
++ `qmethod::make.cards()`
++ A small Typst Quarto format with papersize: 89mm, 51mm (or 85×55 mm)
+
+:::
+
+## {{< iconify devicon:r size=2x style="color:#82b1ff;" >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+
+::: {.columns}
+
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| eval: true
+sessionInfo()
+```
+:::
+
+::: {.column width="20%"}
+
+Quarto version `r quarto::quarto_version()`  
+
+:::
+
+:::
+
+
