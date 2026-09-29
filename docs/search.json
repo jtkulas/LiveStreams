@@ -1719,7 +1719,7 @@
     "href": "slides/2026/9_29_26/index.html#biznezz-cardz",
     "title": "R is for Authoring!!",
     "section": "Biznezz Cardz!!",
-    "text": "Biznezz Cardz!!\n\n\n\n\n\n\npagedown::business_card\nqmethod::make.cards()\nA small Typst Quarto format with papersize: 89mm, 51mm (or 85×55 mm)"
+    "text": "Biznezz Cardz!!\n\n\n\n\n\n\npagedown::business_card\nqmethod::make.cards()\nA small Typst Quarto format with papersize: 3.5” x 2”\n\n---\ntitle: \"\"\nformat:\n  pdf:\n    documentclass: article\n    geometry:\n      - paperwidth=3.5in\n      - paperheight=2in\n      - margin=0.15in\n    pagestyle: empty\n    keep-tex: true\n---\n\n**Jane Doe**  \nData Scientist\n\njane@example.com  \n+1 555 0100"
   },
   {
     "objectID": "slides/2026/9_29_26/index.html#open-office-hours-september-25-2026",

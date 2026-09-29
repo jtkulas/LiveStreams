@@ -158,7 +158,28 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 + [`pagedown::business_card`](https://github.com/rstudio/pagedown#business-cards-pagedownbusiness_card)
 + `qmethod::make.cards()`
-+ A small Typst Quarto format with papersize: 89mm, 51mm (or 85×55 mm)
++ A small Typst Quarto format with papersize: 3.5" x 2"
+
+```
+---
+title: ""
+format:
+  pdf:
+    documentclass: article
+    geometry:
+      - paperwidth=3.5in
+      - paperheight=2in
+      - margin=0.15in
+    pagestyle: empty
+    keep-tex: true
+---
+
+**Jane Doe**  
+Data Scientist
+
+jane@example.com  
++1 555 0100
+```
 
 :::
 

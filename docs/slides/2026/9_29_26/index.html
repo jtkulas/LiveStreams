@@ -262,8 +262,26 @@ OOH Session #149…<br><span class="cards">Biznezz<br>Cardz!!&nbsp;&nbsp;</span>
 <ul>
 <li><a href="https://github.com/rstudio/pagedown#business-cards-pagedownbusiness_card"><code>pagedown::business_card</code></a></li>
 <li><code>qmethod::make.cards()</code></li>
-<li>A small Typst Quarto format with papersize: 89mm, 51mm (or 85×55 mm)</li>
+<li>A small Typst Quarto format with papersize: 3.5” x 2”</li>
 </ul>
+<pre><code>---
+title: ""
+format:
+  pdf:
+    documentclass: article
+    geometry:
+      - paperwidth=3.5in
+      - paperheight=2in
+      - margin=0.15in
+    pagestyle: empty
+    keep-tex: true
+---
+
+**Jane Doe**  
+Data Scientist
+
+jane@example.com  
++1 555 0100</code></pre>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
