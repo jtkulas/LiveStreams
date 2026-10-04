@@ -1769,5 +1769,110 @@
     "title": "R is for Authoring!!",
     "section": " &  Session Info (September 29, 2026) Rendering:",
     "text": "&  Session Info (September 29, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.10.18"
+  },
+  {
+    "objectID": "slides/2026/10_6_26/index.html#open-office-hours-september-30-2026",
+    "href": "slides/2026/10_6_26/index.html#open-office-hours-september-30-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (September 30, 2026)",
+    "text": "Open Office Hours (September 30, 2026)\n\n\n\nRecap session #149\nToday’s topic(s):\n\nBadges?!?…we don’t need no stinking badges!!!\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/10_6_26/index.html#biznezz-cardz",
+    "href": "slides/2026/10_6_26/index.html#biznezz-cardz",
+    "title": "R is for Authoring!!",
+    "section": "Biznezz Cardz!!",
+    "text": "Biznezz Cardz!!\n\npagedown \\(\\LaTeX\\) \n\n\n\n\n\n---\nphone: \"+1 844-448-1212\"\nemail: \"info@posit.co\"\nurl: www.homehere.com\naddress: |\n  Minneapolis, MN\nlogo: \"logo.png\"\nperson: \n  - name: John Kulas\n    title: Janitor of All Messy\n    repeat: 12\ngooglefonts: \"`Pinyon Script`\" # feel free to try other fonts at https://fonts.google.com\npaperwidth: 8.5in\npaperheight: 11in\ncols: 4\nrows: 3\noutput: pagedown::business_card\n1knit: pagedown::chrome_print\n---\n\n&lt;!-- if you prefer you can create cards in markdown instead of YAML declaration --&gt;\n\n2```{css}\n.me {\n    font-size: 16px;\n    letter-spacing: 0.8px;\n    line-height: 1.7em;\n    padding: 0.4cm;\n}\n\n```\n&lt;!-- if you prefer black text on white background, set eval=TRUE on the chunk below \n--&gt;\n\n3```{css, eval=FALSE}\n.wrapper {\n  color: black;\n  background-color: white;\n  border: 4px dotted black;\n}\n.coordinates {\n  color: #333;\n}\n```\n\n\n1\n\npagedown::chrome_print will create .pdf representations of the focal .html file\n\n2\n\nWe wrote this to exert some control over font size within individual cards\n\n3\n\npagedown authors included this in template (you can activate by changing chunk command to eval=TRUE)\n\n\n\n\n\n\n\n\n\n\n\n\n\n---\ntitle: \"\"\nformat:\n  pdf:\n    documentclass: article\n1    geometry:\n      - paperwidth=3.5in\n      - paperheight=2in\n      - margin=0.15in\n    pagestyle: empty\n---\n\n**I.M. Fancy**  \nData Scientist\n\njenny@TuTone.com  \n+1 657 5309\n\n\n1\n\ncontrol card size & margin width here – geometry works well\n\n\n\n\n\n Professional printshops likely want the entire card specified in one .pdf (rather than multiple cards repeated on one page)"
+  },
+  {
+    "objectID": "slides/2026/10_6_26/index.html#biznezz-cardz-1",
+    "href": "slides/2026/10_6_26/index.html#biznezz-cardz-1",
+    "title": "R is for Authoring!!",
+    "section": "Biznezz Cardz!!",
+    "text": "Biznezz Cardz!!\n\n\n\n\n\n\npagedown::business_card\nqmethod::make.cards()\nA small Typst Quarto format with papersize: 3.5” x 2”\n\n---\ntitle: \"\"\nformat:\n  pdf:\n    documentclass: article\n    geometry:\n      - paperwidth=3.5in\n      - paperheight=2in\n      - margin=0.15in\n    pagestyle: empty\n    keep-tex: true\n---\n\n**Jane Doe**  \nData Scientist\n\njane@example.com  \n+1 555 0100"
+  },
+  {
+    "objectID": "slides/2026/10_6_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-september-30-2026-rendering",
+    "href": "slides/2026/10_6_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-september-30-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (September 30, 2026) Rendering:",
+    "text": "&  Session Info (September 30, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.10.18"
+  },
+  {
+    "objectID": "slides/2026/10_6_26/index.html#badges-we-dont-need-no-stinking-badges",
+    "href": "slides/2026/10_6_26/index.html#badges-we-dont-need-no-stinking-badges",
+    "title": "R is for Authoring!!",
+    "section": "Badges?!?…we don’t need no stinking badges!!!",
+    "text": "Badges?!?…we don’t need no stinking badges!!!\nPart of documentation process – easy to miss if written as prose .\nVocabulary is somewhat shared across developer projects\nR Package  & Quarto extension\n\n\n\ncolored ‘pill’ \nSmall, styled status labels\n\nwhen did the feature land?\nis it stable?\nis it experimental?\nis it depreciated?\n\n\n\nCommon uses: CI status, package version (npm, PyPI, CRAN), license, code coverage, docs site link, and custom labels like “experimental” or “deprecated.” Too many badges become noise; a short, grouped row is the usual pattern."
+  },
+  {
+    "objectID": "slides/2026/10_6_26/index.html#open-office-hours-october-01-2026",
+    "href": "slides/2026/10_6_26/index.html#open-office-hours-october-01-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (October 01, 2026)",
+    "text": "Open Office Hours (October 01, 2026)\n\n\n\nRecap session #149\nToday’s topic(s):\n\nBadges?!?…we don’t need no stinking badges!!!\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/10_6_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-october-01-2026-rendering",
+    "href": "slides/2026/10_6_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-october-01-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (October 01, 2026) Rendering:",
+    "text": "&  Session Info (October 01, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.10.18"
+  },
+  {
+    "objectID": "slides/2026/10_6_26/index.html#open-office-hours-october-02-2026",
+    "href": "slides/2026/10_6_26/index.html#open-office-hours-october-02-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (October 02, 2026)",
+    "text": "Open Office Hours (October 02, 2026)\n\n\n\nRecap session #149\nToday’s topic(s):\n\nBadges?!?…we don’t need no stinking badges!!!\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/10_6_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-october-02-2026-rendering",
+    "href": "slides/2026/10_6_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-october-02-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (October 02, 2026) Rendering:",
+    "text": "&  Session Info (October 02, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.10.18"
+  },
+  {
+    "objectID": "slides/2026/10_6_26/index.html#open-office-hours-october-03-2026",
+    "href": "slides/2026/10_6_26/index.html#open-office-hours-october-03-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (October 03, 2026)",
+    "text": "Open Office Hours (October 03, 2026)\n\n\n\nRecap session #149\nToday’s topic(s):\n\nBadge(R)s?!?…we don’t need no stinking badge(R)s!!!\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/10_6_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-october-03-2026-rendering",
+    "href": "slides/2026/10_6_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278207374796c653d22636f6c6f723a233832623166663b22203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-october-03-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (October 03, 2026) Rendering:",
+    "text": "&  Session Info (October 03, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] vctrs_0.7.2         cli_3.6.5           knitr_1.51         \n [4] rlang_1.1.7         xfun_0.57           otel_0.2.0         \n [7] generics_0.1.4      S7_0.2.1            jsonlite_2.0.0     \n[10] glue_1.8.0          htmltools_0.5.9     scales_1.4.0       \n[13] rmarkdown_2.31      dlstats_0.1.8       grid_4.5.0         \n[16] tibble_3.3.1        evaluate_1.0.5      fastmap_1.2.0      \n[19] yaml_2.3.12         lifecycle_1.0.5     BiocManager_1.30.27\n[22] rvcheck_0.2.1       compiler_4.5.0      dplyr_1.2.0        \n[25] fs_2.0.1            RColorBrewer_1.1-3  pkgconfig_2.0.3    \n[28] rstudioapi_0.18.0   farver_2.1.2        digest_0.6.39      \n[31] R6_2.6.1            tidyselect_1.2.1    pillar_1.11.1      \n[34] magrittr_2.0.4      tools_4.5.0         gtable_0.3.6       \n[37] badger_0.2.5        yulab.utils_0.2.0   ggplot2_4.0.3      \n\n\n\nQuarto version 1.10.18"
+  },
+  {
+    "objectID": "slides/2026/10_6_26/index.html#badgers-we-dont-need-no-stinking-badgers",
+    "href": "slides/2026/10_6_26/index.html#badgers-we-dont-need-no-stinking-badgers",
+    "title": "R is for Authoring!!",
+    "section": "Badge(r)s?!?…we don’t need no stinking badge(r)s!!!",
+    "text": "Badge(r)s?!?…we don’t need no stinking badge(r)s!!!\n\n\nPart of documentation process – easy to miss if written as prose.\nVocabulary is somewhat shared across developer projects\nR Package  & Quarto extension\n\n\ncolored ‘pill’ \nSmall, styled status labels\n\nwhen did the feature land?\nis it stable?\nis it experimental?\nis it depreciated?"
+  },
+  {
+    "objectID": "slides/2026/10_6_26/index.html#badgeb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a72203e7d7ds-we-dont-need-no-stinking-badgeb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278203e7d7ds",
+    "href": "slides/2026/10_6_26/index.html#badgeb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a72203e7d7ds-we-dont-need-no-stinking-badgeb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278203e7d7ds",
+    "title": "R is for Authoring!!",
+    "section": "Badge()s?!?…we don’t need no stinking badge()s!!!",
+    "text": "Badge()s?!?…we don’t need no stinking badge()s!!!\n\n\nPart of documentation process – easy to miss if written as prose.\nVocabulary is somewhat shared across developer projects\nR Package  & Quarto extension\n\n\ncolored ‘pill’ \nSmall, styled status labels\n\nwhen did the feature land?\nis it stable?\nis it experimental?\nis it depreciated?"
+  },
+  {
+    "objectID": "slides/2026/10_6_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-october-03-2026-rendering",
+    "href": "slides/2026/10_6_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-october-03-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (October 03, 2026) Rendering:",
+    "text": "&  Session Info (October 03, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] vctrs_0.7.2         cli_3.6.5           knitr_1.51         \n [4] rlang_1.1.7         xfun_0.57           otel_0.2.0         \n [7] generics_0.1.4      S7_0.2.1            jsonlite_2.0.0     \n[10] glue_1.8.0          htmltools_0.5.9     scales_1.4.0       \n[13] rmarkdown_2.31      dlstats_0.1.8       grid_4.5.0         \n[16] tibble_3.3.1        evaluate_1.0.5      fastmap_1.2.0      \n[19] yaml_2.3.12         lifecycle_1.0.5     BiocManager_1.30.27\n[22] rvcheck_0.2.1       compiler_4.5.0      dplyr_1.2.0        \n[25] fs_2.0.1            RColorBrewer_1.1-3  pkgconfig_2.0.3    \n[28] rstudioapi_0.18.0   farver_2.1.2        digest_0.6.39      \n[31] R6_2.6.1            tidyselect_1.2.1    pillar_1.11.1      \n[34] magrittr_2.0.4      tools_4.5.0         gtable_0.3.6       \n[37] badger_0.2.5        yulab.utils_0.2.0   ggplot2_4.0.3      \n\n\n\nQuarto version 1.10.18"
+  },
+  {
+    "objectID": "slides/2026/10_6_26/index.html#badgerswe-dont-need-no-stinking-badgers",
+    "href": "slides/2026/10_6_26/index.html#badgerswe-dont-need-no-stinking-badgers",
+    "title": "R is for Authoring!!",
+    "section": "Badge(R)s?!?…we don’t need no stinking badge(R)s!!!",
+    "text": "Badge(R)s?!?…we don’t need no stinking badge(R)s!!!\n\n\n\nPart of documentation process – easy to miss if written as prose.\nR Package  & Quarto extension \n\n\n\nSmall, styled status labels\ncolored ‘pill’ \n\nwhen did the feature land?\nis it stable?\nis it experimental?\nis it depreciated?"
   }
 ]

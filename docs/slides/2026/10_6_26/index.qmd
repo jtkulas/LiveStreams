@@ -1,0 +1,240 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: "OOH Session #150...<br>[Badges?!?]{.englebert .Bigger}<br>[...we don't need no stinking badges!!!]{.englebert}"
+title-slide-attributes: 
+  data-background-image: /img/depdawg.jpg
+#  data-background-opacity: ".7"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: /img/Deputy_dawg.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {.columns}
+::: {.column width="55%"}
++ Recap session #149
++ Today's topic(s):
+    + [[Badge(R)s?!?]{.englebert .Bigger}](https://m.canouil.dev/quarto-badge/)<br>[[...we don't need no stinking badge(R)s!!!]{.englebert}](https://github.com/GuangchuangYu/badger)
++ Shared problem-solving
+
+:::
+
+::: {.column width="45%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 170px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/9_29_26">
+  <img src="/img/title149.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#149: 
+
+![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
+
+![](/img/chuckjones.JPG){.absolute top="320" right="115" height="120" .tiltpostit}
+
+## [[Biznezz Cardz!!]{.cards}](https://github.com/rstudio/pagedown#business-cards-pagedownbusiness_card)
+
+::: {.panel-tabset}
+
+### pagedown {{< iconify emojione-v1:note-page >}}
+
+::: {.columns}
+
+::: {.column width="55%"}
+
+````{r}
+---
+phone: "+1 844-448-1212"
+email: "info@posit.co"
+url: www.homehere.com
+address: |
+  Minneapolis, MN
+logo: "logo.png"
+person: 
+  - name: John Kulas
+    title: Janitor of All Messy
+    repeat: 12
+googlefonts: "`Pinyon Script`" # feel free to try other fonts at https://fonts.google.com
+paperwidth: 8.5in
+paperheight: 11in
+cols: 4
+rows: 3
+output: pagedown::business_card
+knit: pagedown::chrome_print          #<1>
+---
+
+<!-- if you prefer you can create cards in markdown instead of YAML declaration -->
+
+```{css}                           #<2>
+.me {
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    line-height: 1.7em;
+    padding: 0.4cm;
+}                                  #<2>
+
+```
+<!-- if you prefer black text on white background, set eval=TRUE on the chunk below 
+-->
+
+```{css, eval=FALSE}               #<3>
+.wrapper {
+  color: black;
+  background-color: white;
+  border: 4px dotted black;
+}
+.coordinates {
+  color: #333;
+}
+```                               #<3>
+
+````
+1. `pagedown::chrome_print` will create .pdf representations of the focal .html file
+2. [We]{.underline} wrote this to exert some control over font size within individual cards 
+3. [`pagedown`]{.underline} authors included this in template (you can activate by changing chunk command to `eval=TRUE`)
+:::
+
+::: {.column width="45%"}
+
+:::
+
+:::
+
+![](/img/cardz.JPG){.absolute right="70" bottom="0" height="430"}
+
+### $\LaTeX$ {{< iconify skill-icons:latex-light >}}
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+```{r}
+---
+title: ""
+format:
+  pdf:
+    documentclass: article
+    geometry:                 #<1>
+      - paperwidth=3.5in
+      - paperheight=2in
+      - margin=0.15in         #<1>
+    pagestyle: empty
+---
+
+**I.M. Fancy**  
+Data Scientist
+
+jenny@TuTone.com  
++1 657 5309
+```
+1. control card size & margin width here -- [geometry](https://quarto.org/docs/output-formats/pdf-basics.html#output-options) works well 
+
+:::
+
+::: {.column width="50%"}
+
+<br>
+Professional printshops likely want the entire card specified in one .pdf (rather than multiple cards repeated on one page)
+
+:::
+
+:::
+
+:::
+
+![](https://www.pngkey.com/png/full/416-4169198_business-cards-visiting-card-clipart-png.png){.absolute right="-150" top="150" height="200"}
+
+![](https://cdn.creazilla.com/cliparts/7765791/hand-giving-business-card-clipart-lg.png){.absolute left="-140" top="70" height="200"}
+
+# Today...
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2VlOXJhNjdoZHRlemxtbThuczhrdGZlZWJxMnc1cmxrbGNsenBkZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OiDG29phYMfIY/giphy.gif)
+
+## [[Badge(R)s?!?]{.englebert}](https://m.canouil.dev/quarto-badge/)[[...we don't need no stinking badge(R)s!!!]{.englebert}](https://github.com/GuangchuangYu/badger)
+
+::: {.columns}
+
+::: {.column width="40%"}
+
++ Part of [documentation process](https://shields.io/badges) -- easy to miss if written as prose.
++ [R Package](https://github.com/GuangchuangYu/badger) [`r badger::badge_cran_release("badger", "orange")`]{.biggeR} & [Quarto extension {{< iconify material-icon-theme:quarto >}}](https://m.canouil.dev/quarto-badge/)
+
+:::
+
+::: {.column width="60%"}
+
++ Small, styled status labels
++ colored 'pill' {{< iconify streamline-emojis:pill >}}
+  + when did the feature land?
+  + is it stable?
+  + is it experimental?
+  + is it depreciated?
+  
+:::
+
+:::
+
+![](https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-badger-clipart-black-and-white-badger-is-shown-on-white-background-vector-png-image_6800436.png){.absolute top="50" right="-150" height="275" .mirror}
+
+![](https://pngimg.com/uploads/badger/badger_PNG5.png){.absolute top="-20" left="-130" height="100" .tilt2}
+
+![](https://freepngimg.com/save/129581-badger/400x524){.absolute bottom="-10" right="0" height="300"}
+
+![](https://freepngimg.com/thumb/badger/129504-badger.png){.absolute bottom="200" left="-170" height="250" .mirror}
+
+
+## {{< iconify devicon:r size=2x >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+
+::: {.columns}
+
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| eval: true
+sessionInfo()
+```
+:::
+
+::: {.column width="20%"}
+
+Quarto version `r quarto::quarto_version()`  
+
+:::
+
+:::
+
+
