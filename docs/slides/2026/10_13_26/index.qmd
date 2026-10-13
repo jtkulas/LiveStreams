@@ -1,0 +1,202 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: "OOH Session #151...<br>[...citing packages<br>with `packret`]{.pakret .bigger}"
+title-slide-attributes: 
+  data-background-image: /img/packrat.jpg
+#  data-background-opacity: ".7"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: /img/PakratShiny.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {.columns}
+::: {.column width="55%"}
++ Recap session #150
++ Today's topic(s):
+    + [[...citing packages with `packret`]{.pakret .bigger}](https://arnaudgallou.github.io/pakret/)
++ Shared problem-solving
+
+:::
+
+::: {.column width="45%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 170px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/10_6_26">
+  <img src="/img/title150.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#150: 
+
+![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
+
+![](/img/Deputy_dawg.png){.absolute top="270" right="100" height="220" .tiltpostit}
+
+## [[Badge(R)s?!?]{.englebert}](https://m.canouil.dev/quarto-badge/)[[...we don't need no stinking badge(R)s!!!]{.englebert}](https://github.com/GuangchuangYu/badger)
+
+::: {.panel-tabset}
+
+### {{< iconify material-icon-theme:quarto >}} extension {{< iconify carbon:tool-kit >}}
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+```{r}
+extensions:
+  badge:
+    badges:
+      - key: stable
+        colour: dodgerblue
+      - key: kulas
+        colour: "#bada55"
+        icon: alarm
+        href: https://www.google.com/
+        target: _blank
+        title: This is a popup message (upon cursor hover) 
+```
+
+:::
+
+::: {.column width="60%"}
+
+Renders [customized pills](https://m.canouil.dev/quarto-badge/):
+
+```{r}
+This is stable Version {{< badge stable 1.1 >}}
+This is Kulas Version {{< badge kulas 0.2.2 >}}
+```
+
+
+:::
+
+:::
+
+![](/img/badges.JPG){.absolute right="40" bottom="10"}
+
+![](https://freepngimg.com/save/129581-badger/400x524){.absolute bottom="150" right="-170" height="300"}
+
+### {{< iconify devicon:r >}} package {{< iconify fluent-emoji-flat:package >}}
+
+::: {.columns}
+
+::: {.column width="5%"}
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| eval: true
+#| echo: false
+library(badger)
+```
+
+
+Grabs [package meta--data](https://github.com/GuangchuangYu/badger):
+
+```{r}
+library(badger)
+
+`ggplot2`: `r badge_cran_release("ggplot2", "orange")`  
+
+Downloads:  
+  + Last week: `r badge_cran_download("ggplot2", "last-week", "green")`  
+  + Last month: `r badge_cran_download("ggplot2", "last-month", "green")`  
+  + All time: `r badge_cran_download("ggplot2", "grand-total", "green")`
+
+```
+:::
+
+::: {.column width="45%"}
+
+
+`ggplot2`: `r badge_cran_release("ggplot2", "orange")`  
+
++ Last week: `r badge_cran_download("ggplot2", "last-week", "green")`  
++ Last month: `r badge_cran_download("ggplot2", "last-month", "green")`  
++ All time: `r badge_cran_download("ggplot2", "grand-total", "green")`
+
+:::
+
+:::
+
+![](https://rstudio.github.io/cheatsheets/html/images/logo-ggplot2.png){.absolute right="-130" top="200"}
+
+![](https://freepngimg.com/thumb/badger/129504-badger.png){.absolute bottom="300" left="-170" height="250" .mirror}
+
+:::
+
+![](https://png.pngtree.com/png-vector/20230728/ourmid/pngtree-badger-clipart-black-and-white-badger-is-shown-on-white-background-vector-png-image_6800436.png){.absolute top="60" right="150" height="280" .mirror}
+
+
+# Today...
+
+![](https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3cTRieW1xdmpxMTMwZWRlbmZrcWIyZDBtb2Nhczcyc3JhcGcyeWoweSZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/l0Iy7cc0zqUL6iN1e/giphy.gif)
+
+## [[...citing packages with `packret`]{.pakret}](https://arnaudgallou.github.io/pakret/)
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXBraGNzcTRvajNsM3l0ZTFxbGdxNnQwdWFubmpkdWloNjdqMTJhayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l2QEilXOdTp3kKdeU/giphy.gif){.absolute left="100" height="500"}
+
+![](https://png.pngtree.com/png-clipart/20220724/ourmid/pngtree-cute-packaging-delivery-box-png-image_6046130.png){.absolute left="-170" bottom="270"}
+
+![](https://freepngimg.com/thumb/machine/46528-4-box-free-clipart-hd.png){.absolute right="-160" height="300" bottom="100"}
+
+![](https://raw.githubusercontent.com/dmi3kno/polite/master/data-raw/sticker.png){.absolute bottom="0" left="-100" height="250"}
+
+![](https://raw.githubusercontent.com/ckntav/gVenn/refs/heads/master/man/figures/gVenn_hex_sticker.png){.absolute right="-100" top="100" height="300"}
+
+## {{< iconify devicon:r size=2x >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+
+::: {.columns}
+
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| eval: true
+sessionInfo()
+```
+:::
+
+::: {.column width="20%"}
+
+Quarto version `r quarto::quarto_version()`  
+
+:::
+
+:::
+
+

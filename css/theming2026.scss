@@ -45,12 +45,13 @@
 @import url('https://fonts.googleapis.com/css?family=Commissioner');
 @import url('https://fonts.googleapis.com/css?family=Fascinate Inline');
 @import url('https://fonts.googleapis.com/css?family=Englebert');
+@import url('https://fonts.googleapis.com/css?family=Joti One');
 
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
-  height: 130px !important;
+  height: 80px !important;
 }
 
 /* adding background to inline code elements */
@@ -666,4 +667,9 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
 .englebert {
   font-family: "Englebert";
   color: #fedf30;
+}
+
+.pakret {
+  font-family: "Joti One";
+  color: #b3835e;
 }
