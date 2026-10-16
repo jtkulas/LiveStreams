@@ -46,6 +46,7 @@
 @import url('https://fonts.googleapis.com/css?family=Fascinate Inline');
 @import url('https://fonts.googleapis.com/css?family=Englebert');
 @import url('https://fonts.googleapis.com/css?family=Joti One');
+@import url('https://fonts.googleapis.com/css?family=Buenard');
 
 $presentation-title-slide-text-align: right;
 
@@ -549,6 +550,12 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-weight: normal !important;
   color: #ffefdb;
   font-size: 1.3em;
+}
+
+.typst2{
+  font-family: "Buenard";
+  font-weight: normal !important;
+  color: #239dad; //#ffefdb;
 }
 
 .bangers{

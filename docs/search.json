@@ -1972,5 +1972,75 @@
     "title": "R is for Authoring!!",
     "section": "…citing packages with pakret",
     "text": "…citing packages with pakret"
+  },
+  {
+    "objectID": "slides/2026/10_20_26/index.html#open-office-hours-october-14-2026",
+    "href": "slides/2026/10_20_26/index.html#open-office-hours-october-14-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (October 14, 2026)",
+    "text": "Open Office Hours (October 14, 2026)\n\n\n\nRecap session #151\nToday’s topic(s):\n\nAcademic typst\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/10_20_26/index.html#citing-packages-with-pakret",
+    "href": "slides/2026/10_20_26/index.html#citing-packages-with-pakret",
+    "title": "R is for Authoring!!",
+    "section": "…citing packages with pakret",
+    "text": "…citing packages with pakret\n\nOverviewpkrt()pkrt_list()pkrt_set()\n\n\n\n\nSmall, focused package with 3“on–the–fly” functions:\n\npkrt() – cite R or R package\npkrt_list() – cite collection of R packages\npkrt_set() – configure settings\n\n\nAlternative citation options:\n\nknitr::write_bib()\npapaja::r_refs()\ngrateful::cite_packages()\n\n\n\n\n\n\n\n```\nlibrary(plotly)\n1library(pakret)\n\nfig &lt;- plot_ly(data = iris, x = ~Sepal.Length, y = ~Petal.Length, color = ~Species, colors = \"Set1\")\n\nfig\n\n```\n\nwe used `r pkrt(\"plotly\")` for the graph, and `r pkrt(\"pakret\")` for references. \n\nBUT, we DID NOT use `r pkrt(\"purrr\")`\n\n\n1\n\nnote that a .bib file is NECESSARY (functions will fail without a pre–existing .bib file to append to) , also packages need to be locally installed (but do NOT need to be used in current project)\n\n\n\n\n\nwe used the ‘plotly’ package version 4.10.4 (Sievert 2020) for the graph, and the ‘pakret’ package version 0.3.1 (Gallou 2026) for references.\nBUT, we DID NOT use the ‘purrr’ package version 1.0.4 (Wickham and Henry 2025)\n\n\n\n\n\n\n...we also did not use \n`r pkrt_list(\"lubridate\", \n\"devtools\", \"dygraphs\", \n\"tinytable\")`\n\nNote the auto–prose within the listings (“and” placement & “v.” vs. “version”)\n\n…we also did not use ‘lubridate’ v. 1.9.5 (Grolemund and Wickham 2011), ‘devtools’ v. 2.4.5 (Wickham et al. 2022), ‘dygraphs’ v. 1.1.1.6 (Vanderkam et al. 2018), and ‘tinytable’ v. 0.8.0 (Arel-Bundock 2025)\n\n\n\n\n\n\n\npkrt_set(pkg = \n1        \"the Rrrridiculous package\n2         *:pkg*\n3         [Virgin :ver, :ref]\")\n\n\nWe used `r pkrt(\"cowsay\")`\n\n\n1\n\n“Auto”–prose appended with citation\n\n2\n\nFormatting permitted (here, italicized)\n\n3\n\nmore “auto”–prose, mixed with package–specific information (version [:ver] and reference [:ref]), note the parenthesis specification as well as the comma\n\n\n\n\n…you can control the appearance of the rendering, overriding the defaults\n\nWe used the Rrrridiculous package cowsay (Virgin 1.2.2, Chamberlain and Dobbyn 2025)."
+  },
+  {
+    "objectID": "slides/2026/10_20_26/index.html#citing-packages-with-pakret-1",
+    "href": "slides/2026/10_20_26/index.html#citing-packages-with-pakret-1",
+    "title": "R is for Authoring!!",
+    "section": "…citing packages with pakret",
+    "text": "…citing packages with pakret"
+  },
+  {
+    "objectID": "slides/2026/10_20_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-october-14-2026-rendering",
+    "href": "slides/2026/10_20_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-october-14-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (October 14, 2026) Rendering:",
+    "text": "&  Session Info (October 14, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.10.18"
+  },
+  {
+    "objectID": "slides/2026/10_20_26/index.html#academic-typst",
+    "href": "slides/2026/10_20_26/index.html#academic-typst",
+    "title": "R is for Authoring!!",
+    "section": "Academic typst",
+    "text": "Academic typst"
+  },
+  {
+    "objectID": "slides/2026/10_20_26/index.html#open-office-hours-october-15-2026",
+    "href": "slides/2026/10_20_26/index.html#open-office-hours-october-15-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (October 15, 2026)",
+    "text": "Open Office Hours (October 15, 2026)\n\n\n\nRecap session #151\nToday’s topic(s):\n\nAcademic typst\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/10_20_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-october-15-2026-rendering",
+    "href": "slides/2026/10_20_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-october-15-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (October 15, 2026) Rendering:",
+    "text": "&  Session Info (October 15, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n[1] pakret_0.3.1\n\nloaded via a namespace (and not attached):\n [1] digest_0.6.39     R6_2.6.1          fastmap_1.2.0     xfun_0.57        \n [5] tzdb_0.5.0        magrittr_2.0.4    glue_1.8.0        tibble_3.3.1     \n [9] knitr_1.51        pkgconfig_2.0.3   htmltools_0.5.9   rmarkdown_2.31   \n[13] lifecycle_1.0.5   readr_2.2.0       cli_3.6.5         vctrs_0.7.2      \n[17] compiler_4.5.0    rstudioapi_0.18.0 tools_4.5.0       hms_1.1.4        \n[21] pillar_1.11.1     evaluate_1.0.5    yaml_2.3.12       otel_0.2.0       \n[25] rlang_1.1.7       jsonlite_2.0.0   \n\n\n\nQuarto version 1.10.18"
+  },
+  {
+    "objectID": "slides/2026/10_20_26/index.html#references-from-pakret",
+    "href": "slides/2026/10_20_26/index.html#references-from-pakret",
+    "title": "R is for Authoring!!",
+    "section": "References (from pakret)",
+    "text": "References (from pakret)\n\n\n\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\nArel-Bundock, Vincent. 2025. tinytable: Simple and Configurable Tables in ’HTML’, ’LaTeX’, ’Markdown’, ’Word’, ’PNG’, ’PDF’, and ’Typst’ Formats. https://doi.org/10.32614/CRAN.package.tinytable.\n\n\nChamberlain, Scott, and Amanda Dobbyn. 2025. cowsay: Messages, Warnings, Strings with Ascii Animals. https://doi.org/10.32614/CRAN.package.cowsay.\n\n\nGallou, Arnaud. 2026. pakret: Cite ’R’ Packages on the Fly in ’R Markdown’ and ’Quarto’. https://doi.org/10.32614/CRAN.package.pakret.\n\n\nGrolemund, Garrett, and Hadley Wickham. 2011. “Dates and Times Made Easy with lubridate.” Journal of Statistical Software 40 (3): 1–25. https://www.jstatsoft.org/v40/i03/.\n\n\nSievert, Carson. 2020. Interactive Web-Based Data Visualization with R, plotly, and Shiny. Chapman; Hall/CRC. https://plotly-r.com.\n\n\nVanderkam, Dan, JJ Allaire, Jonathan Owen, Daniel Gromer, and Benoit Thieurmel. 2018. dygraphs: Interface to ’Dygraphs’ Interactive Time Series Charting Library. https://doi.org/10.32614/CRAN.package.dygraphs.\n\n\nWickham, Hadley, and Lionel Henry. 2025. purrr: Functional Programming Tools. https://doi.org/10.32614/CRAN.package.purrr.\n\n\nWickham, Hadley, Jim Hester, Winston Chang, and Jennifer Bryan. 2022. devtools: Tools to Make Developing R Packages Easier. https://doi.org/10.32614/CRAN.package.devtools."
+  },
+  {
+    "objectID": "slides/2026/10_20_26/index.html#open-office-hours-october-16-2026",
+    "href": "slides/2026/10_20_26/index.html#open-office-hours-october-16-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (October 16, 2026)",
+    "text": "Open Office Hours (October 16, 2026)\n\n\n\nRecap session #151\nToday’s topic(s):\n\nAcademic typst\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/10_20_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-october-16-2026-rendering",
+    "href": "slides/2026/10_20_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-october-16-2026-rendering",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (October 16, 2026) Rendering:",
+    "text": "&  Session Info (October 16, 2026) Rendering:\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nother attached packages:\n[1] pakret_0.3.1\n\nloaded via a namespace (and not attached):\n [1] digest_0.6.39     R6_2.6.1          fastmap_1.2.0     xfun_0.57        \n [5] tzdb_0.5.0        magrittr_2.0.4    glue_1.8.0        tibble_3.3.1     \n [9] knitr_1.51        pkgconfig_2.0.3   htmltools_0.5.9   rmarkdown_2.31   \n[13] lifecycle_1.0.5   readr_2.2.0       cli_3.6.5         vctrs_0.7.2      \n[17] compiler_4.5.0    rstudioapi_0.18.0 tools_4.5.0       hms_1.1.4        \n[21] pillar_1.11.1     evaluate_1.0.5    yaml_2.3.12       otel_0.2.0       \n[25] rlang_1.1.7       jsonlite_2.0.0   \n\n\n\nQuarto version 1.10.18"
   }
 ]
