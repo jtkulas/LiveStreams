@@ -1,0 +1,46 @@
+**Here are some of the best-known funny or niche-purpose packages on CRAN** (not exhaustive—there are always more obscure ones floating around):
+
+### Classic “just for fun” packages
+- **`fortunes`**: Random funny/witty quotes from the R-help mailing list, Stack Overflow, and the broader R community. Call `fortune()` for a random one (or search by keyword/author/number). It’s been around since 2004 and is a rite of passage for many R users.
+- **`cowsay`**: Print messages, warnings, or strings as ASCII art animals (cows, cats, frogs, chickens, ghosts, grumpy cats, and many more). Great for making error messages less painful.
+- **`fun`**: Games and silly diversions inside R, including Minesweeper, Gomoku (“five in a row”), sliding puzzles, and turtle graphics demos.
+- **`beepr`**: Play notification sounds when code finishes (Wilhelm scream, Zelda “item get,” Mario, etc.). Useful for long-running scripts and also just fun.
+
+### Text, jokes, and meme-related
+- **`spongebob`**: Convert text (or whole objects) to mocking SpongeBob case (`aLtErNaTiNg CaPs`). Also includes ASCII SpongeBob speech bubbles.
+- **`dadjoke`** and **`dadjokeapi`**: Serve up random (terrible) dad jokes. `dadjokeapi` pulls from the icanhazdadjoke.com API.
+- **`radlibs`**: Mad Libs-style sentence generator that fills in random nouns, verbs, adjectives, etc. Pair it with `cowsay` or `spongebob` for maximum silliness.
+- **`praise`**: Generates random encouraging/praise messages (“You are super-excellent!”). It’s used under the hood by packages like `testthat` for friendly feedback.
+
+### Visualization and teaching oddities
+- **`xkcd`**: Create ggplot2 graphics in the distinctive hand-drawn XKCD webcomic style (including stick figures).
+- **`ggpacman`**: Animate Pac-Man (and ghosts) using ggplot2 + gganimate. Pure novelty.
+- **`surreal`**: Generate datasets that hide images or messages inside residual plots (based on a 2007 “Residual (Sur)Realism” idea). Fun for teaching model diagnostics.
+
+### Quick start examples
+```r
+# Install a few
+install.packages(c("fortunes", "cowsay", "fun", "beepr", "spongebob", "dadjoke", "radlibs", "praise"))
+
+library(fortunes)
+fortune()
+
+library(cowsay)
+say("Hello from R!", by = "cow")
+
+library(spongebob)
+tospongebob("this is mocking spongebob case")
+
+library(dadjoke)
+dadjoke()
+
+library(radlibs)
+makeRadlibs("Playing with {noun}s is {adjective}!")
+
+library(praise)
+praise()
+```
+
+Many more exist (or used to) only on GitHub—things like full Pac-Man implementations, Oregon Trail, meme generators, or various joke APIs. The ones above are the most reliably available and frequently mentioned “fun” packages on CRAN itself.
+
+If you want more in a particular vein (games, memes, ASCII, sounds, teaching tricks, etc.), just say!
