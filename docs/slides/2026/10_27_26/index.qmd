@@ -1,6 +1,6 @@
 ---
 title: "[R is for <br>Authoring!!]{.shadowsharp}" 
-author: "OOH Session #153...<br>[{{< iconify  devicon:r >}}]{.huge} [Hallows' <br> Eve]{.jolly .huge}"
+author: 'OOH Session #153...<br>["{{< iconify  devicon:r >}}"<br> Hallows'' Eve]{.jolly .huge}'
 title-slide-attributes: 
   data-background-image: /img/duckula.jpg
 #  data-background-opacity: ".7"
@@ -19,6 +19,7 @@ format:
 engine: knitr                 ## not picking up inline codes
 filters: 
   - reveal-header
+bibliography: bib.bib
 execute: 
   eval: false       ## for fenced code 
   echo: true
@@ -30,7 +31,7 @@ execute:
 ::: {.column width="55%"}
 + Recap session #152
 + Today's topic(s):
-    + [{{< iconify  devicon:r >}}]{.huge} [Hallows' Eve]{.jolly .huge}
+    + [{{< iconify  devicon:r >}} Hallows' Eve]{.jolly .huge}
 + Shared problem-solving
 
 :::
@@ -64,111 +65,220 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
 
-![](/img/PakratShiny.png){.absolute top="275" right="110" height="210" .tiltpostit}
-
-## [[...citing packages with `pakret`]{.pakret}](https://arnaudgallou.github.io/pakret/)
-
-::: {.panel-tabset}
-
-### Overview
-
-::: {.columns}
-
-::: {.column width="60%"}
-
-Small, focused package with 3<br>{{< iconify andrsrxn:wing flip=horizontal >}}"on--the--fly"{{< iconify andrsrxn:wing >}} functions: 
-
-+ `pkrt()` -- cite R or R package
-+ `pkrt_list()` -- cite collection of R packages
-+ `pkrt_set()` -- configure settings
-
-:::
-
-::: {.column width="40%"} 
-
-Alternative citation options:
-
-+ [`knitr::write_bib()`](https://pkg.yihui.org/rmarkdown-cookbook/write-bib) 
-+ [`papaja::r_refs()`](https://frederikaust.com/papaja_man/writing.html#citations) 
-+ [`grateful::cite_packages()`](https://pakillo.github.io/grateful/reference/cite_packages.html)
-
-:::
-
-:::
-
-### `pkrt()`
-
-::: {.columns}
-
-::: {.column width="50%"}
-
-
-::: 
-
-::: {.column width="50%" .smaller}
-
-
-::: 
-
-:::
-
-### `pkrt_list()`
-
-::: {.columns}
-
-::: {.column width="40%"}
-
-
-::: 
-
-::: {.column width="60%"}
-
-::: 
-
-:::
-
-![](https://static.vecteezy.com/system/resources/previews/014/391/904/non_2x/right-arrow-curved-icon-isolated-on-transparent-background-free-png.png){.absolute bottom="0" left="200" height="120" .tilt}
-
-### `pkrt_set()`
-
-::: {.columns}
-
-::: {.column width="50%"}
-
-::: 
-
-::: {.column width="50%"}
-
-
-::: 
-
-:::
-
-![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjFmejIxMXl2NmZ5b3Qyb3BzaDN2eDZ3ZXcyMWxlMGF6bjg1M2QyeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QYWdj9WoicvEk/giphy.gif){.absolute right="50" bottom="30" height="250"}
-
-:::
-
-![](https://png.pngtree.com/png-clipart/20220724/ourmid/pngtree-cute-packaging-delivery-box-png-image_6046130.png){.absolute left="-180" top="-50" height="200"}
-
-![](https://freepngimg.com/thumb/machine/46528-4-box-free-clipart-hd.png){.absolute right="-150" top="-30" height="200"}
-
-![](https://raw.githubusercontent.com/dmi3kno/polite/master/data-raw/sticker.png){.absolute bottom="100" left="-140" height="150"}
-
-![](https://raw.githubusercontent.com/ckntav/gVenn/refs/heads/master/man/figures/gVenn_hex_sticker.png){.absolute right="-150" bottom="360" height="150"}
-
-# Today...
-
-![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExODk2MmJ3ZmdhZmFwb2k0bmRnbHk2ZXNvcDg4OGx5YnB0dnQ3ZnA5ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9J7iwZW2rMIYBBn0so/giphy.gif)
+![](https://www.freeiconspng.com/uploads/school-icon-png-5.png){.absolute top="290" right="120" height="190"}
 
 ## [[Academic typst]{.typst2 .bigger}](https://github.com/kazuyanagimoto/quarto-academic-typst)
 
-<iframe src="https://kazuyanagimoto.com/quarto-academic-typst/template-full.pdf" width="100%" height="550px" style="border:none;"></iframe>
 
 ![](https://www.freeiconspng.com/uploads/school-icon-png-5.png){.absolute right="-150" top="-40" height="300"}
 
 ![](https://www.freeiconspng.com/uploads/university-student-graduation-png-22.png){.absolute left="-150" bottom="200" height="300"}
 
 ![](https://www.nicepng.com/png/full/80-800304_quill-pen-quill-and-ink-clipart.png){.absolute right="-50" bottom="0" height="300"}
+
+# Today...
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGZiYmF1a2thbXNndWQ4cTNqdzNleGpuZHlsenkzbnloMnU0c3RjcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rmLr0yS8bBrY4/giphy.gif)
+
+## ["{{< iconify  devicon:r >}}" Hallows' Eve]{.jolly .Bigger}
+
+::: {.columns}
+
+::: {.column width="27%"}
+
+<br>
+
+### [`ggfoundry`](https://cgoo4.github.io/ggfoundry/index.html)
+
+```{r}
+#| echo: false
+#| eval: true
+#| fig-height: 11
+#| 
+library(ggplot2)
+library(ggfoundry)
+
+# Create a sample dataframe and cast the jackolantern shape
+df <- data.frame(x = 1, y = 1)
+
+ggplot(df, aes(x, y)) +
+  geom_casting(shape = "jackolantern", size = 1, fill = "orange", colour = "darkorange4") +
+  theme_void()
+```
+
+:::
+
+::: {.column width="50%"}
+
+### [[@2025-neon-ghosts-with-ggplot2]{.smaller}](https://drmowinckels.io/blog/2025/neon-ghosts/)
+
+```{r}
+#| eval: true
+#| echo: false
+#| fig-height: 9
+
+library(ggplot2)
+library(scales)
+
+#' Ghost plotting function
+#' @param ghost_df Data frame with x and y coordinates of the ghost shape
+#' @param ghost_color Color of the ghost (default is neon green)
+#' @return ggplot object of the ghost
+plot_simple_ghost <- function(ghost_df, ghost_color = "#39FF14") {
+  x_center <- mean(range(ghost_df$x))
+  y_top <- max(ghost_df$y)
+  y_bottom <- min(ghost_df$y)
+  ghost_height <- y_top - y_bottom
+  ghost_width <- diff(range(ghost_df$x))
+  
+  # Eyes
+  eye_y <- y_bottom + 0.7 * ghost_height
+  eye_x <- x_center + c(-0.06, 0.06) * ghost_width
+  eyes <- data.frame(x = eye_x, y = rep(eye_y, 2))
+  
+  # Mouth: several waves 
+  mouth_width <- ghost_width * 0.4
+  mouth_x <- seq(x_center - 0.3 * mouth_width, x_center + 0.3 * mouth_width, length.out = 80)
+  mouth_y <- y_bottom + 0.55 * ghost_height + sin(seq(0, 7 * pi, length.out = 80)) * 0.04 * ghost_height
+  mouth <- data.frame(x = mouth_x, y = mouth_y)
+  
+  # 8 neon glow layers
+  glow_layers <- data.frame(
+    linewidth = c(12, 10, 8, 6, 4.5, 3, 2, 1),
+    alpha = c(0.04, 0.06, 0.09, 0.13, 0.18, 0.25, 0.35, 0.5)
+  )
+  
+  p <- ggplot() +
+    geom_polygon(
+      data = ghost_df, aes(x, y),
+      fill = ghost_color, alpha = 0.15, color = NA
+    )
+  
+  # Glow layers for outline, eyes, and mouth
+  for(i in seq_len(nrow(glow_layers))) {
+    p <- p +
+      geom_polygon(
+        data = ghost_df, aes(x, y),
+        fill = NA, color = scales::alpha(ghost_color, glow_layers$alpha[i]),
+        linewidth = glow_layers$linewidth[i]
+      ) +
+      geom_point(
+        data = eyes, aes(x, y),
+        color = scales::alpha(ghost_color, glow_layers$alpha[i]),
+        size = glow_layers$linewidth[i] * 1.1
+      ) +
+      geom_path(
+        data = mouth, aes(x, y),
+        color = scales::alpha(ghost_color, glow_layers$alpha[i]),
+        linewidth = glow_layers$linewidth[i]
+      )
+  }
+  
+  # Solid black mouth and eyes
+  p <- p +
+    geom_path(
+      data = mouth, aes(x, y),
+      color = "black", linewidth = 1.2
+    ) +
+    geom_point(
+      data = eyes, aes(x, y),
+      color = "black",
+      size = 1.2
+    ) 
+  
+  # Fix aspect ratio and theme
+  p + 
+    coord_fixed(
+      xlim = c(-4, 4), 
+      ylim = c(-3, 8), 
+      expand = TRUE
+    ) +
+    theme_void() +
+    theme(
+      plot.background = element_rect(fill = "black", color = NA),
+      panel.background = element_rect(fill = "black", color = NA)
+    )
+}
+
+#' Generate a random ghost shape
+#' @param seed Optional seed for reproducibility
+#' @return Data frame with x and y coordinates of the ghost shape
+ghost_shape <- function(seed = NULL) {
+  if (!is.null(seed)) set.seed(seed)
+  width <- sample(seq(0.5, 3, length.out = 6), 1)  
+  height <- sample(1:6,1) 
+  x <- seq(-1, 1, length.out = 100) * width
+  amp <- runif(1, 0.15, 0.28)
+  freq <- sample(3:7, 1)
+  phase <- runif(1, 0, 2*pi)
+  y_top <- sqrt(1 - (x/width)^2) * height + runif(1, -0.03, 0.03)
+  y_bottom <- -0.5 * height + sin(seq(0, freq * pi, length.out = 100) + phase) * amp * height
+  data.frame(
+    x = c(x, rev(x)),
+    y = c(y_top, rev(y_bottom))
+  )
+}
+
+ghost_shape() |> 
+  plot_simple_ghost(ghost_color = "#39FF14")
+```
+
+:::
+
+::: {.column width="23%"}
+
+<br>
+
+### [`ggplot2`](https://ggplot2.tidyverse.org/)
+
+```{r}
+#| eval: true
+#| echo: false
+#| fig-height: 11
+# 1. Base pumpkin data (approximate curved segments using parametric or smooth paths)
+t <- seq(0, 2 * pi, length.out = 100)
+pumpkin_df <- data.frame(
+  x = 1.5 * cos(t),
+  y = 1.0 * sin(t)
+)
+
+# 2. Facial features (triangles for eyes/nose, polygon for smile)
+eyes <- data.frame(
+  x = c(-0.5, -0.7, -0.3, 0.3, 0.7, 0.5),
+  y = c(0.4, 0.1, 0.1, 0.1, 0.1, 0.4),
+  group = c(1, 1, 1, 2, 2, 2)
+)
+
+nose <- data.frame(
+  x = c(0, -0.15, 0.15),
+  y = c(0, -0.2, -0.2)
+)
+
+mouth <- data.frame(
+  x = c(-0.6, 0.6, 0.4, 0, -0.4),
+  y = c(-0.3, -0.3, -0.5, -0.6, -0.5)
+)
+
+# 3. Plotting the scene
+ggplot() +
+  # Pumpkin body
+  geom_polygon(data = pumpkin_df, aes(x = x, y = y), fill = "darkorange", color = "black", linewidth = 1) +
+  # Stem
+  geom_rect(aes(xmin = -0.15, xmax = 0.15, ymin = 1.0, ymax = 1.3), fill = "forestgreen", color = "black") +
+  # Eyes
+  geom_polygon(data = eyes, aes(x = x, y = y, group = group), fill = "gold", color = "black") +
+  # Nose
+  geom_polygon(data = nose, aes(x = x, y = y), fill = "gold", color = "black") +
+  # Mouth
+  geom_polygon(data = mouth, aes(x = x, y = y), fill = "gold", color = "black") +
+  coord_fixed() +
+  theme_void()
+```
+
+
+:::
+
+:::
 
 ## {{< iconify devicon:r size=2x >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
 
@@ -190,4 +300,5 @@ Quarto version `r quarto::quarto_version()`
 
 :::
 
+## References
 

@@ -6,14 +6,14 @@
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/quarto-contrib/reveal-header-1.0.0/add_header.js" defer="true"></script>
 <link href="../../../site_libs/quarto-contrib/reveal-header-1.0.0/add_header.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-contrib/grid-no-htext-1.0.0/grid_no_htext.css" rel="stylesheet">
 <script src="../../../site_libs/quarto-contrib/iconify-3.0.0/iconify-icon.min.js"></script><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.10.19">
+  <meta name="generator" content="quarto-1.10.18">
 
-  <meta name="author" content="OOH Session #153…  Hallows’   Eve">
+  <meta name="author" content="OOH Session #153… “”  Hallows’ Eve">
   <title>R is for  Authoring!!</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -38,8 +38,27 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
-  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-33d3f795e667e8374bd4dadd094255e3.css">
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-90fea67735819f96322d094e8764dd84.css">
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-8ZE61PCXCP"></script>
 
   <script type="text/javascript">
@@ -151,21 +170,21 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-OOH Session #153…<br><span class="huge"><iconify-icon role="img" inline="" icon="devicon:r" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon></span> <span class="jolly huge">Hallows’ <br> Eve</span>
+OOH Session #153…<br><span class="jolly huge">“<iconify-icon role="img" inline="" icon="devicon:r" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon>”<br> Hallows’ Eve</span>
 </div>
 </div>
 </div>
 
 </section>
-<section id="open-office-hours-october-18-2026" class="slide level2">
-<h2>Open Office Hours <br>(October 18, 2026)</h2>
+<section id="open-office-hours-october-22-2026" class="slide level2">
+<h2>Open Office Hours <br>(October 22, 2026)</h2>
 <div class="columns">
 <div class="column" style="width:55%;">
 <ul>
 <li>Recap session #152</li>
 <li>Today’s topic(s):
 <ul>
-<li><span class="huge"><iconify-icon role="img" inline="" icon="devicon:r" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon></span> <span class="jolly huge">Hallows’ Eve</span></li>
+<li><span class="jolly huge"><iconify-icon role="img" inline="" icon="devicon:r" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> Hallows’ Eve</span></li>
 </ul></li>
 <li>Shared problem-solving</li>
 </ul>
@@ -194,84 +213,66 @@ OOH Session #153…<br><span class="huge"><iconify-icon role="img" inline="" ico
 <section id="recap-of-session-152" class="title-slide slide level1 center">
 <h1>Recap of Session <br>#152:</h1>
 <p><img data-src="https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png" class="absolute" style="right: 100px; "></p>
-<p><img data-src="../../../img/PakratShiny.png" class="absolute tiltpostit" style="top: 275px; right: 110px; height: 210px; "></p>
+<p><img data-src="https://www.freeiconspng.com/uploads/school-icon-png-5.png" class="absolute" style="top: 290px; right: 120px; height: 190px; "></p>
 </section>
-<section id="citing-packages-with-pakret" class="slide level2">
-<h2><a href="https://arnaudgallou.github.io/pakret/"><span class="pakret">…citing packages with <code>pakret</code></span></a></h2>
-<div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Overview</a></li><li><a href="#tabset-1-2"><code>pkrt()</code></a></li><li><a href="#tabset-1-3"><code>pkrt_list()</code></a></li><li><a href="#tabset-1-4"><code>pkrt_set()</code></a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1">
-<div class="columns">
-<div class="column" style="width:60%;">
-<p>Small, focused package with 3<br><iconify-icon role="img" inline="" icon="andrsrxn:wing" aria-label="Icon wing from andrsrxn Iconify.design set." title="Icon wing from andrsrxn Iconify.design set." flip="horizontal"></iconify-icon>“on–the–fly”<iconify-icon role="img" inline="" icon="andrsrxn:wing" aria-label="Icon wing from andrsrxn Iconify.design set." title="Icon wing from andrsrxn Iconify.design set."></iconify-icon> functions:</p>
-<ul>
-<li><code>pkrt()</code> – cite R or R package</li>
-<li><code>pkrt_list()</code> – cite collection of R packages</li>
-<li><code>pkrt_set()</code> – configure settings</li>
-</ul>
-</div><div class="column" style="width:40%;">
-<p>Alternative citation options:</p>
-<ul>
-<li><a href="https://pkg.yihui.org/rmarkdown-cookbook/write-bib"><code>knitr::write_bib()</code></a></li>
-<li><a href="https://frederikaust.com/papaja_man/writing.html#citations"><code>papaja::r_refs()</code></a></li>
-<li><a href="https://pakillo.github.io/grateful/reference/cite_packages.html"><code>grateful::cite_packages()</code></a></li>
-</ul>
-</div></div>
-</div>
-<div id="tabset-1-2">
-<div class="columns">
-<div class="column" style="width:50%;">
-
-</div><div class="column smaller" style="width:50%;">
-
-</div></div>
-</div>
-<div id="tabset-1-3">
-<div class="columns">
-<div class="column" style="width:40%;">
-
-</div><div class="column" style="width:60%;">
-
-</div></div>
-<p><img data-src="https://static.vecteezy.com/system/resources/previews/014/391/904/non_2x/right-arrow-curved-icon-isolated-on-transparent-background-free-png.png" class="absolute tilt" style="left: 200px; bottom: 0px; height: 120px; "></p>
-</div>
-<div id="tabset-1-4">
-<div class="columns">
-<div class="column" style="width:50%;">
-
-</div><div class="column" style="width:50%;">
-
-</div></div>
-<p><img data-src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMjFmejIxMXl2NmZ5b3Qyb3BzaDN2eDZ3ZXcyMWxlMGF6bjg1M2QyeCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QYWdj9WoicvEk/giphy.gif" class="absolute" style="bottom: 30px; right: 50px; height: 250px; "></p>
-</div>
-</div>
-</div>
-<p><img data-src="https://png.pngtree.com/png-clipart/20220724/ourmid/pngtree-cute-packaging-delivery-box-png-image_6046130.png" class="absolute" style="top: -50px; left: -180px; height: 200px; "></p>
-<p><img data-src="https://freepngimg.com/thumb/machine/46528-4-box-free-clipart-hd.png" class="absolute" style="top: -30px; right: -150px; height: 200px; "></p>
-<p><img data-src="https://raw.githubusercontent.com/dmi3kno/polite/master/data-raw/sticker.png" class="absolute" style="left: -140px; bottom: 100px; height: 150px; "></p>
-<p><img data-src="https://raw.githubusercontent.com/ckntav/gVenn/refs/heads/master/man/figures/gVenn_hex_sticker.png" class="absolute" style="bottom: 360px; right: -150px; height: 150px; "></p>
+<section id="academic-typst" class="slide level2">
+<h2><a href="https://github.com/kazuyanagimoto/quarto-academic-typst"><span class="typst2 bigger">Academic typst</span></a></h2>
+<p><img data-src="https://www.freeiconspng.com/uploads/school-icon-png-5.png" class="absolute" style="top: -40px; right: -150px; height: 300px; "></p>
+<p><img data-src="https://www.freeiconspng.com/uploads/university-student-graduation-png-22.png" class="absolute" style="left: -150px; bottom: 200px; height: 300px; "></p>
+<p><img data-src="https://www.nicepng.com/png/full/80-800304_quill-pen-quill-and-ink-clipart.png" class="absolute" style="bottom: 0px; right: -50px; height: 300px; "></p>
 </section></section>
 <section>
 <section id="today" class="title-slide slide level1 center">
 <h1>Today…</h1>
 
-<img data-src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExODk2MmJ3ZmdhZmFwb2k0bmRnbHk2ZXNvcDg4OGx5YnB0dnQ3ZnA5ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/9J7iwZW2rMIYBBn0so/giphy.gif" class="r-stretch"></section>
-<section id="academic-typst" class="slide level2">
-<h2><a href="https://github.com/kazuyanagimoto/quarto-academic-typst"><span class="typst2 bigger">Academic typst</span></a></h2>
-<iframe src="https://kazuyanagimoto.com/quarto-academic-typst/template-full.pdf" width="100%" height="550px" style="border:none;">
-</iframe>
-<p><img data-src="https://www.freeiconspng.com/uploads/school-icon-png-5.png" class="absolute" style="top: -40px; right: -150px; height: 300px; "></p>
-<p><img data-src="https://www.freeiconspng.com/uploads/university-student-graduation-png-22.png" class="absolute" style="left: -150px; bottom: 200px; height: 300px; "></p>
-<p><img data-src="https://www.nicepng.com/png/full/80-800304_quill-pen-quill-and-ink-clipart.png" class="absolute" style="bottom: 0px; right: -50px; height: 300px; "></p>
+<img data-src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGZiYmF1a2thbXNndWQ4cTNqdzNleGpuZHlsenkzbnloMnU0c3RjcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rmLr0yS8bBrY4/giphy.gif" class="r-stretch"></section>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679202064657669636f6e3a72203e7d7d-hallows-eve" class="slide level2">
+<h2><span class="jolly Bigger">“<iconify-icon role="img" inline="" icon="devicon:r" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon>” Hallows’ Eve</span></h2>
+<div class="columns">
+<div class="column" style="width:27%;">
+<p><br></p>
+<h3 id="ggfoundry"><a href="https://cgoo4.github.io/ggfoundry/index.html"><code>ggfoundry</code></a></h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-1-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<h3 id="neon-ghosts-with-ggplot2"><a href="https://drmowinckels.io/blog/2025/neon-ghosts/"><span class="smaller"><span class="citation" data-cites="2025-neon-ghosts-with-ggplot2">Mowinckel (<span>2025</span>)</span></span></a></h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:23%;">
+<p><br></p>
+<h3 id="ggplot2"><a href="https://ggplot2.tidyverse.org/"><code>ggplot2</code></a></h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
 </section>
-<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-october-18-2026-rendering" class="slide level2">
-<h2><iconify-icon role="img" inline="" icon="devicon:r" style="font-size: 2em;" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> &amp; <iconify-icon role="img" inline="" icon="material-icon-theme:quarto" style="font-size: 2em;" aria-label="Icon quarto from material-icon-theme Iconify.design set." title="Icon quarto from material-icon-theme Iconify.design set."></iconify-icon> Session Info (October 18, 2026) Rendering:</h2>
+<section id="b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-october-22-2026-rendering" class="slide level2">
+<h2><iconify-icon role="img" inline="" icon="devicon:r" style="font-size: 2em;" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> &amp; <iconify-icon role="img" inline="" icon="material-icon-theme:quarto" style="font-size: 2em;" aria-label="Icon quarto from material-icon-theme Iconify.design set." title="Icon quarto from material-icon-theme Iconify.design set."></iconify-icon> Session Info (October 22, 2026) Rendering:</h2>
 <div class="columns">
 <div class="column" style="width:80%;">
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>R version 4.6.1 (2026-06-24 ucrt)
+<pre><code>R version 4.5.0 (2025-04-11 ucrt)
 Platform: x86_64-w64-mingw32/x64
 Running under: Windows 10 x64 (build 19045)
 
@@ -291,16 +292,28 @@ tzcode source: internal
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
+other attached packages:
+[1] scales_1.4.0    ggfoundry_0.4.0 ggplot2_4.0.3  
+
 loaded via a namespace (and not attached):
- [1] compiler_4.6.1    fastmap_1.2.0     cli_3.6.6         tools_4.6.1      
- [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.19.0 yaml_2.3.12      
- [9] rmarkdown_2.32    knitr_1.52        jsonlite_2.0.0    xfun_0.61        
-[13] digest_0.6.39     rlang_1.3.0       evaluate_1.0.5   </code></pre>
+ [1] gtable_0.3.6       jsonlite_2.0.0     dplyr_1.2.0        compiler_4.5.0    
+ [5] tidyselect_1.2.1   png_0.1-8          yaml_2.3.12        fastmap_1.2.0     
+ [9] R6_2.6.1           labeling_0.4.3     generics_0.1.4     grImport2_0.3-3   
+[13] knitr_1.51         XML_3.99-0.19      tibble_3.3.1       pillar_1.11.1     
+[17] RColorBrewer_1.1-3 rlang_1.1.7        xfun_0.57          S7_0.2.1          
+[21] otel_0.2.0         cli_3.6.5          withr_3.0.2        magrittr_2.0.4    
+[25] digest_0.6.39      grid_4.5.0         rstudioapi_0.18.0  base64enc_0.1-6   
+[29] lifecycle_1.0.5    vctrs_0.7.2        evaluate_1.0.5     glue_1.8.0        
+[33] farver_2.1.2       rmarkdown_2.31     tools_4.5.0        jpeg_0.1-11       
+[37] pkgconfig_2.0.3    htmltools_0.5.9   </code></pre>
 </div>
 </div>
 </div><div class="column" style="width:20%;">
-<p>Quarto version 1.10.19</p>
+<p>Quarto version 1.10.18</p>
 </div></div>
+</section>
+<section id="references" class="slide level2 smaller scrollable">
+<h2>References</h2>
 
 
 <div class="reveal-header">
@@ -315,6 +328,11 @@ loaded via a namespace (and not attached):
 </div>
 <div class="sb-title">
 <p> </p>
+</div>
+</div>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-2025-neon-ghosts-with-ggplot2" class="csl-entry" role="listitem">
+Mowinckel, Athanasia Monika. 2025. <em>Neon Ghosts with ‘Ggplot2‘</em>. <a href="https://www.doi.org/10.5281/zenodo.17496544">https://www.doi.org/10.5281/zenodo.17496544</a>.
 </div>
 </div>
 </section></section>
