@@ -1,6 +1,6 @@
 ---
 title: "[R is for <br>Authoring!!]{.shadowsharp}" 
-author: 'OOH Session #153...<br>["{{< iconify  devicon:r >}}"<br> Hallows'' Eve]{.jolly .huge}'
+author: 'OOH Session #153...<br>[{{< iconify noto-v1:ghost >}}]{.Bigger .mirror}["{{< iconify  devicon:r >}}"]{.jolly .huge}[{{< iconify noto:ghost >}}]{.Bigger}<br> [Hallows'' Eve]{.jolly .huge}'
 title-slide-attributes: 
   data-background-image: /img/duckula.jpg
 #  data-background-opacity: ".7"
@@ -31,7 +31,7 @@ execute:
 ::: {.column width="55%"}
 + Recap session #152
 + Today's topic(s):
-    + [{{< iconify  devicon:r >}} Hallows' Eve]{.jolly .huge}
+    + [{{< iconify  devicon:r >}} Hallows' Eve]{.jolly .huge} [{{< iconify openmoji:ghost >}} {{< iconify noto:jack-o-lantern >}} {{< iconify streamline-emojis:ghost >}}]{.Bigger}
 + Shared problem-solving
 
 :::
@@ -61,6 +61,30 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
 
+## [[...citing packages with `pakret` (UPDATE)]{.pakret}](https://arnaudgallou.github.io/pakret/)  
+
+...thanks [\@lysithea9293](https://www.youtube.com/live/HQJd0h_hdYg?si=4J9AtuOam-yPRwpf&t=3269)!!!
+
+::: {.columns .smaller}
+
+::: {.column width="50%"}
+
+### [`tinytable::tt(table)`](https://vincentarelbundock.github.io/tinytable/)
+
+:::
+
+::: {.column width="50%"}
+
+### [`knitr::kable(table)`](https://pkg.yihui.org/rmarkdown-cookbook/kable#kable)
+
+:::
+
+:::
+
+![](/img/pakret1.JPG){.absolute height="300" left="0"}
+
+![](/img/pakret2.JPG){.absolute right="-80"}
+
 # Recap of Session <br>#152: 
 
 ![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
@@ -69,29 +93,140 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ## [[Academic typst]{.typst2 .bigger}](https://github.com/kazuyanagimoto/quarto-academic-typst)
 
+::: {.columns}
 
-![](https://www.freeiconspng.com/uploads/school-icon-png-5.png){.absolute right="-150" top="-40" height="300"}
+::: {.column width="50%"}
 
-![](https://www.freeiconspng.com/uploads/university-student-graduation-png-22.png){.absolute left="-150" bottom="200" height="300"}
+````{r}
+---
+title: Quarto Academic Typst
+subtitle: A minimalistic Quarto + Typst template for academic writing
+author:
+  - name: Kazuharu Yanagimoto
+    email: kazuharu.yanagimoto@cemfi.edu.es
+    orcid: 0009-0007-1967-8304
+    affiliations:
+      - name: CEMFI
+abstract: |
+  {{< lipsum 1 >}}
+thanks: |
+  You can write acknowledgements here.
+keywords:
+  - Quarto
+  - Typst
+  - format
+date: today
+date-format: full
+bibliography: references.bib
+format:
+  academic-typst:
+    section-numbering: "1.1.1"
+execute:
+  echo: false
+---
 
-![](https://www.nicepng.com/png/full/80-800304_quill-pen-quill-and-ink-clipart.png){.absolute right="-50" bottom="0" height="300"}
+This document shows a minimal example of the template. For more information, see the [full demo](https://kazuyanagimoto.com/quarto-academic-typst/template-full.pdf) and its [source](https://github.com/kazuyanagimoto/quarto-academic-typst/blob/main/template-full.qmd).
+
+# Section as Heading Level 1
+
+Section numbering can be specified in the YAML `section-numbering` field as other Typst templates.
+
+## Subsection as Heading Level 2
+
+You can use LaTeX math expressions:
+
+$$
+Y_{it} = \alpha_i + \lambda_t + \sum_{k \neq -1} \tau_h \mathbb{1}\{E_i + k = t\} +
+\varepsilon_{it}.
+$$
+
+### Subsubsection as Heading Level 3
+
+I don't use and don't recommend using heading levels 3 and below but it works.
+
+## Citation
+
+You can cite a reference like this [@katsushika1831] or @horst2020. Typst has some built-in citation styles. Check the [Typst documentation](https://typst.app/docs/reference/model/bibliography/#parameters-style) for more information.
+
+# Figures and Tables
+
+## Figures
+
+As @fig-hist-mpg shows, the caption is displayed below the figure. As a caption of the figure (`fig-cap`), I use bold text for the title and use a normal text for the description.
+
+```{r}
+#| label: fig-hist-mpg
+#| fig-cap: "**Histogram of Miles per Gallon**. The x-axis shows the miles per gallon, and the y-axis shows the frequency."
+
+hist(mtcars$mpg)
+```
+
+## Tables
+
+You can use [tinytable](https://vincentarelbundock.github.io/tinytable/) for general tables and [modelsummary](https://vincentarelbundock.github.io/modelsummary/) for regression tables.[^1] As @tbl-mtcars-head shows, the caption is displayed above the table. The notes of the table can be added using the `notes` argument of the `tinytable::tt()` function.
+
+[^1]: Since the default backend of `modelsummary` is `tinytable`, you can use the customization options of `tinytable` for `modelsummary`.
+
+```{r}
+#| label: tbl-mtcars-head
+#| tbl-cap: Head of the mtcars Dataset
+
+nt <- "_Notes_: This table shows the first six rows of the mtcars dataset."
+mtcars[1:5, 1:5] |>
+  tinytable::tt(width = 0.8, notes = nt)         
+```
+
+# Last words
+
+I made this template for my working papers, so it may not be suitable for other fields than economics. I am happy to receive feedback and suggestions for improvement.
+
+{{< appendix >}}
+
+# Supplemental Figures
+
+The figure numbering will be reset to "A.1", "A.2", etc so that it is clear that these figures are part of the appendix.
+
+```{r}
+#| label: fig-scatter-car
+#| fig-cap: "**Scatter Plot of Car Data**. The x-axis shows the weight of the car, and the y-axis shows the miles per gallon."
+
+plot(mtcars$wt, mtcars$mpg)
+```
+
+{{< pagebreak >}} 
+
+````
+
+:::
+
+::: {.column width="50%"}
+
+<iframe src="academic.pdf" width="100%" height="550px" style="border:none;"></iframe>
+
+:::
+
+:::
+
+![](https://cdn-icons-png.magnific.com/256/9300/9300805.png?semt=ais_white_label){.absolute left="-150" bottom="50" height="170"}
+
+![](https://www.freeiconspng.com/uploads/university-student-graduation-png-22.png){.absolute right="-140" top="-30" height="200"}
+
+![](https://www.nicepng.com/png/full/80-800304_quill-pen-quill-and-ink-clipart.png){.absolute right="350" top="-50" height="200"}
 
 # Today...
 
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGZiYmF1a2thbXNndWQ4cTNqdzNleGpuZHlsenkzbnloMnU0c3RjcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rmLr0yS8bBrY4/giphy.gif)
 
-## ["{{< iconify  devicon:r >}}" Hallows' Eve]{.jolly .Bigger}
+## ["{{< iconify  devicon:r >}}" Hallows' Eve]{.jolly .Bigger} [{{< iconify emojione:bat >}} {{< iconify noto:ghost >}}]{.Bigger}
 
 ::: {.columns}
 
 ::: {.column width="27%"}
 
-<br>
-
 ### [`ggfoundry`](https://cgoo4.github.io/ggfoundry/index.html)
 
 ```{r}
-#| echo: false
+#| code-fold: true
 #| eval: true
 #| fig-height: 11
 #| 
@@ -227,13 +362,11 @@ ghost_shape() |>
 
 ::: {.column width="23%"}
 
-<br>
-
 ### [`ggplot2`](https://ggplot2.tidyverse.org/)
 
 ```{r}
 #| eval: true
-#| echo: false
+#| code-fold: true
 #| fig-height: 11
 # 1. Base pumpkin data (approximate curved segments using parametric or smooth paths)
 t <- seq(0, 2 * pi, length.out = 100)
@@ -274,7 +407,6 @@ ggplot() +
   coord_fixed() +
   theme_void()
 ```
-
 
 :::
 
