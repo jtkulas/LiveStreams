@@ -355,7 +355,7 @@ ghost_shape <- function(seed = NULL) {
 }
 
 ghost_shape() |> 
-  plot_simple_ghost(ghost_color = "#39FF14")
+  plot_simple_ghost(ghost_color = "#bada55")
 ```
 
 :::
@@ -455,11 +455,15 @@ library(ggfoundry)
 df <- data.frame(x = 1, y = 1)
 
 ggplot(df, aes(x, y)) +
-  geom_casting(shape = "skeleton", size = 1, fill = "white", colour = "#1E90FF") +
-  theme(splot.background = element_rect(fill = "black", color = NA),
-    panel.background = element_rect(fill = "black", color = NA),
-    panel.grid.major = element_line(color = "grey25"),
-    panel.grid.minor = element_line(color = "grey15"),
-    axis.text = element_text(color = "white"),
-    axis.title = element_text(color = "white"))
+  geom_casting(shape = "ghost", size = 1, 
+               fill = "white", 
+               colour = "#1E90FF") 
+
+#+
+#  theme(splot.background = element_rect(fill = "black", color = NA),
+#    panel.background = element_rect(fill = "black", color = NA),
+#    panel.grid.major = element_line(color = "grey25"),
+#    panel.grid.minor = element_line(color = "grey15"),
+#    axis.text = element_text(color = "white"),
+#    axis.title = element_text(color = "white"))
 ```

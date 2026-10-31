@@ -48,8 +48,9 @@
 @import url('https://fonts.googleapis.com/css?family=Joti One');
 @import url('https://fonts.googleapis.com/css?family=Buenard');
 @import url('https://fonts.googleapis.com/css?family=Jolly Lodger');
+@import url('https://fonts.googleapis.com/css?family=Grechen Fuemen');
 
-$presentation-title-slide-text-align: left;
+$presentation-title-slide-text-align: right;
 
 .reveal .slide-logo {       /*-- use for small image renderings --*/
   max-height: unset !important;
@@ -687,4 +688,10 @@ $presentation-heading-text-shadow: 1px 1px white;  //#e9cee5
   font-weight: normal !important;
   color: #73994c;
   line-height: .5;
+}
+
+.polling {
+  font-family: "Grechen Fuemen";
+  color: #1E90FF;
+  line-height: .7;
 }

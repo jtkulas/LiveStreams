@@ -1,0 +1,91 @@
+**The strongest option for Quarto + RevealJS + results going into a database you control is the dedicated Quarto extension `quarto-revealjs-live-questions`.** Several other viable paths exist (custom forms + Supabase/Firebase, older RevealJS plugins, or commercial embeds).
+
+### 1. Recommended: `quarto-revealjs-live-questions` (best fit)
+This Quarto extension keeps the questions in your `.qmd` file and backs them with a small self-hosted server.
+
+**Features**
+- Polls and quizzes (mark correct answers with `- [x]`)
+- Word clouds (with limits and presenter moderation)
+- Rating scales / Likert
+- Live results on the slide (or hidden until you reveal them)
+- Audience joins once via QR code; a phone-friendly page follows the deck as you advance
+- Static fallback (plain lists) for PDF or when the server is offline
+
+**Storage / database**
+- Cloudflare Workers + Durable Objects (SQLite per session; free tier friendly)
+- Or Docker (Node.js + JSON files per session on a volume)
+- Export all results via API (Bearer token):
+  ```bash
+  curl -H "Authorization: Bearer <PRESENTER_KEY>" \
+    https://your-server/api/s/<session>/export
+  ```
+- Presenter controls (open/close, reveal answers, reset) via a key in the URL
+
+**Quick start**
+```bash
+quarto add seandavi/quarto-revealjs-live-questions
+```
+
+In your document:
+```yaml
+filters:
+  - live-questions
+revealjs-plugins:
+  - live-questions
+live-questions:
+  server: https://your-server.workers.dev   # or your Docker host
+  session: my-talk-2026
+  results: live
+  qr: true
+```
+
+Example poll:
+```markdown
+::: {.poll #lang}
+- R
+- [x] Python
+- Julia
+:::
+```
+
+Deploy the server (Cloudflare with Wrangler or Docker Compose), then present with `?presenter=<key>`. Data lives on your server and is exportable.
+
+Repo: https://github.com/seandavi/quarto-revealjs-live-questions
+
+### 2. Custom HTML/JS forms → your own database (Supabase, Firebase, etc.)
+Full control with moderate extra work.
+
+- Drop raw HTML (buttons, radio lists, or simple forms) into a slide.
+- Use a small JavaScript snippet that posts votes to Supabase (or Firebase, a custom API, etc.).
+- Optionally subscribe to Supabase Realtime to update a chart on the slide live.
+- Store whatever schema you want (session ID, question ID, choice, timestamp, anonymous voter token, etc.).
+
+This works well because Quarto RevealJS slides are just HTML. You can include external JS/CSS or write inline scripts. Services like Supabase give you a Postgres database + free tier + simple client library.
+
+### 3. Existing RevealJS poll plugins (integrate into Quarto)
+These are pure RevealJS plugins you can wire up via raw HTML, includes, or by treating them as custom plugins.
+
+| Plugin | Backend | Notes |
+|--------|---------|-------|
+| **jschildgen/reveal.js-poll-plugin** | PHP + SQLite | Mobile voting site + API. Requires a PHP host; mark correct answers; shows bar charts. Integrate by copying the poll folder and adding the HTML markup + JS/CSS. |
+| **rajgoel seminar + poll** | Socket.io server | More full-featured (seminar rooms, Q&A, etc.). Heavier setup. |
+| **anycable/slide-quiz** | AnyCable (managed WebSockets) + serverless functions | Nice live quizzes/word clouds for RevealJS. Results are mostly session-only (not persistently stored for later export). |
+
+The jschildgen plugin is the closest classic “poll + SQLite database” option if you already have PHP hosting.
+
+### 4. Commercial tools with embeds or QR codes
+- **Mentimeter**: You can embed an entire Menti presentation as an `<iframe>` inside a Quarto slide. Use `data-external="1"` on the iframe if you have `embed-resources: true`. Results stay in Mentimeter (exportable from their dashboard).
+- **Slido, Poll Everywhere, AhaSlides, etc.**: Usually show a QR code on the slide; audience votes on their phones. Results live in their system (CSV/Excel export or API). Easy to set up, but the database is theirs.
+
+### 5. Local-only quizzes (no audience database)
+If you only need self-contained quizzes that the presenter or individual viewers interact with (no remote voting), look at:
+- `parmsam/quarto-quiz` (and the more feature-rich `quarto-learntest` fork)
+These do not collect votes from an external audience into a database.
+
+### Recommendation by goal
+- **Want questions in the `.qmd`, live results, and your own storage** → start with `quarto-revealjs-live-questions`.
+- **Want maximum schema control or already use Supabase/Firebase** → custom HTML/JS forms.
+- **Already have a PHP server and want a simple poll plugin** → jschildgen’s RevealJS poll plugin.
+- **Want zero hosting work** → Mentimeter (or similar) embed + their export.
+
+The live-questions extension is the closest thing to a turnkey solution that satisfies both the Quarto/RevealJS authoring style and the “results go to a database I can access” requirement. If you tell me more about your hosting preferences (Cloudflare, Docker, Supabase, etc.) or the exact poll types you need, I can sketch a more concrete setup.

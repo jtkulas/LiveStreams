@@ -1,0 +1,504 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: 'OOH Session #154...<br>[{{< iconify fluent:live-24-filled >}}]{.Bigger}[Live]{.polling .huge} [{{< iconify fluent:live-24-filled >}}]{.Bigger}<br>[Polling]{.polling .huge}'
+title-slide-attributes: 
+  data-background-image: /img/polling.jpg
+  data-background-opacity: ".8"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://cdn-icons-png.flaticon.com/512/3782/3782275.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+# bibliography: bib.bib
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {.columns}
+::: {.column width="55%"}
++ Recap session #153
++ Today's topic(s):
+    + [[{{< iconify fluent:live-24-filled >}}]{.Bigger}[Live]{.polling .huge} [{{< iconify fluent:live-24-filled >}}]{.Bigger} [Polling]{.polling .huge}](https://github.com/seandavi/quarto-revealjs-live-questions)
++ Shared problem-solving
+
+:::
+
+::: {.column width="45%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 170px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/10_27_26">
+  <img src="/img/title153.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#153: 
+
+![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
+
+![](https://www.pngarts.com/files/3/Halloween-Black-Cat-PNG-Transparent-Image.png){.absolute top="285" right="130" height="190"}
+
+## ["{{< iconify  devicon:r >}}" Hallows' Eve]{.jolly .Bigger} [{{< iconify emojione:bat >}} {{< iconify noto:ghost >}}]{.Bigger}
+
+::: {.panel-tabset}
+
+### [`ggfoundry` image]{.smaller}
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: true
+#| eval: false
+#| 
+library(ggplot2)
+library(ggfoundry)
+
+# Create a sample dataframe and cast the jackolantern shape
+df <- data.frame(x = 1, y = 1)
+
+ggplot(df, aes(x, y)) +
+  geom_casting(shape = "ghost", 
+  size = 1, fill = "white", 
+  colour = "#bad") +
+  theme_void()
+```
+
+:::
+
+::: {.column width="50%"}
+
+[`ggfoundry::shapes_cast()`](https://cgoo4.github.io/ggfoundry/articles/ggfoundry.html#available-shapes):
+
+```{r}
+#| eval: true
+#| echo: false
+#| 
+library(ggplot2)
+library(ggfoundry)
+
+# Create a sample dataframe and cast the jackolantern shape
+df <- data.frame(x = 1, 
+                 y = 1)
+
+ggplot(df, aes(x, y)) +
+  geom_casting(shape = "ghost", 
+  size = 1, fill = "white", 
+  colour = "#bad") +
+  theme_void()
+```
+
+:::
+
+:::
+
+### [`ggfoundry` figure]{.smaller}
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+```{r}
+library(ggfoundry)
+library(tidyverse)
+
+data(mtcars)
+mtcars <- as.data.frame(mtcars)
+cars <- rownames_to_column(mtcars, var = "car") |>
+  mutate(
+    car = fct_reorder(car, desc(-hp)),
+    # Binary split (adjust the cut point as needed)
+    # hp_cat = if_else(hp >= 150, "High HP", "Low HP")
+    # Or for more bins:
+   hp_cat = case_when(hp <= 140 ~ "Low HP",
+                      hp <= 200 ~ "Med HP",
+                      TRUE ~ "High HP")
+  )
+
+cars |>
+  ggplot(aes(x = hp, y = car, fill = hp, shape = hp_cat)) +
+  geom_segment(
+    aes(x = 0, xend = hp, yend = car),
+    colour = "grey85",
+    linewidth = 0.6
+  ) +
+  geom_casting(size = 0.135, colour = "black") +
+  scale_shape_manual(
+    values = c("Low HP" = "gravestone", "Med HP" = "skeleton", "High HP" = "grimreaper"),
+    name = "HP category"
+    # For more levels, extend the named vector, e.g.:
+    # values = c("Low" = "gravestone", "Med" = "pumpkin",
+    #            "High" = "jackolantern", "Very high" = "ghost")
+  ) +
+  scale_fill_gradient(low = "grey80", high = "black", guide = "none") +
+  theme_minimal()
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| eval: true
+#| echo: false
+#| fig-height: 8
+#| 
+library(ggfoundry)
+library(tidyverse)
+
+data(mtcars)
+mtcars <- as.data.frame(mtcars)
+cars <- rownames_to_column(mtcars, var = "car") |>
+  mutate(
+    car = fct_reorder(car, desc(-hp)),
+    # Binary split (adjust the cut point as needed)
+    # hp_cat = if_else(hp >= 150, "High HP", "Low HP")
+    # Or for more bins:
+   hp_cat = case_when(hp <= 140 ~ "Low HP",
+                      hp <= 200 ~ "Med HP",
+                      TRUE ~ "High HP")
+  )
+
+cars |>
+  ggplot(aes(x = hp, y = car, fill = hp, shape = hp_cat)) +
+  geom_segment(
+    aes(x = 0, xend = hp, yend = car),
+    colour = "grey85",
+    linewidth = 0.6
+  ) +
+  geom_casting(size = 0.135, colour = "black") +
+  scale_shape_manual(
+    values = c("Low HP" = "gravestone", "Med HP" = "skeleton", "High HP" = "grimreaper"),
+    name = "HP category"
+    # For more levels, extend the named vector, e.g.:
+    # values = c("Low" = "gravestone", "Med" = "pumpkin",
+    #            "High" = "jackolantern", "Very high" = "ghost")
+  ) +
+  scale_fill_gradient(low = "grey80", high = "black", guide = "none") +
+  theme_minimal()
+```
+
+:::
+
+:::
+
+### [`ggplot2` ghosts]{.smaller}
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+```{r}
+#| eval: false
+#| echo: true
+
+library(ggplot2)
+library(scales)
+
+#' Ghost plotting function
+#' @param ghost_df Data frame with x and y coordinates of the ghost shape
+#' @param ghost_color Color of the ghost (default is neon green)
+#' @return ggplot object of the ghost
+plot_simple_ghost <- function(ghost_df, ghost_color = "#39FF14") {
+  x_center <- mean(range(ghost_df$x))
+  y_top <- max(ghost_df$y)
+  y_bottom <- min(ghost_df$y)
+  ghost_height <- y_top - y_bottom
+  ghost_width <- diff(range(ghost_df$x))
+  
+  # Eyes
+  eye_y <- y_bottom + .7 * ghost_height        
+  eye_x <- x_center + c(-0.06, 0.06) * ghost_width
+  eyes <- data.frame(x = eye_x, y = rep(eye_y, 2))
+  
+  # Mouth: several waves 
+  mouth_width <- ghost_width * 0.4
+  mouth_x <- seq(x_center - 0.3 * mouth_width, x_center + 0.3 * mouth_width, length.out = 80)
+  mouth_y <- y_bottom + 0.55 * ghost_height + sin(seq(0, 7 * pi, length.out = 80)) * 0.04 * ghost_height
+  mouth <- data.frame(x = mouth_x, y = mouth_y)
+  
+  # 8 neon glow layers
+  glow_layers <- data.frame(
+    linewidth = c(12, 10, 8, 6, 4.5, 3, 2, 1),
+    alpha = c(0.04, 0.06, 0.09, 0.13, 0.18, 0.25, 0.35, 0.5)
+  )
+  
+  p <- ggplot() +
+    geom_polygon(
+      data = ghost_df, aes(x, y),
+      fill = ghost_color, alpha = 0.15, color = NA
+    )
+  
+  # Glow layers for outline, eyes, and mouth
+  for(i in seq_len(nrow(glow_layers))) {
+    p <- p +
+      geom_polygon(
+        data = ghost_df, aes(x, y),
+        fill = NA, color = scales::alpha(ghost_color, glow_layers$alpha[i]),
+        linewidth = glow_layers$linewidth[i]
+      ) +
+      geom_point(
+        data = eyes, aes(x, y),
+        color = scales::alpha(ghost_color, glow_layers$alpha[i]),
+        size = glow_layers$linewidth[i] * 2.1  ## 1.1
+      ) +
+      geom_path(
+        data = mouth, aes(x, y),
+        color = scales::alpha(ghost_color, glow_layers$alpha[i]),
+        linewidth = glow_layers$linewidth[i]
+      )
+  }
+  
+  # Solid black mouth and eyes
+  p <- p +
+    geom_path(
+      data = mouth, aes(x, y),
+      color = "#66ff00", linewidth = 1.2  ## with green ghost
+    ) +
+    geom_point(
+      data = eyes, aes(x, y),
+      color = "#66ff00",
+      size = 2
+    ) 
+  
+  # Fix aspect ratio and theme
+  p + 
+    coord_fixed(
+      xlim = c(-4, 4), 
+      ylim = c(-3, 8), 
+      expand = TRUE
+    ) +
+    theme_void() +
+    theme(
+      plot.background = element_rect(fill = "black", color = NA),
+      panel.background = element_rect(fill = "black", color = NA)
+    )
+}
+
+#' Generate a random ghost shape
+#' @param seed Optional seed for reproducibility
+#' @return Data frame with x and y coordinates of the ghost shape
+ghost_shape <- function(seed = NULL) {
+  if (!is.null(seed)) set.seed(seed)
+  width <- sample(seq(0.5, 3, length.out = 6), 1)  
+  height <- sample(1:6,1) 
+  x <- seq(-1, 1, length.out = 100) * width
+  amp <- runif(1, 0.15, 0.28)
+  freq <- sample(3:7, 1)
+  phase <- runif(1, 0, 2*pi)
+  y_top <- sqrt(1 - (x/width)^2) * height + runif(1, -0.03, 0.03)
+  y_bottom <- -0.5 * height + sin(seq(0, freq * pi, length.out = 100) + phase) * amp * height
+  data.frame(
+    x = c(x, rev(x)),
+    y = c(y_top, rev(y_bottom))
+  )
+}
+
+ghost_shape() |> 
+  plot_simple_ghost(ghost_color = "#39FF14")
+```
+
+:::
+
+::: {.column width="50%"}
+
+[Dr. Mowinckel's blog](https://drmowinckels.io/blog/2025/neon-ghosts/):
+
+```{r}
+#| eval: true
+#| echo: false
+#| fig-width: 8
+#| fig-height: 6
+#| out-width: "100%"
+#| fig-align: center
+#| fig-dpi: 150
+
+library(ggplot2)
+library(scales)
+
+#' Ghost plotting function
+#' @param ghost_df Data frame with x and y coordinates of the ghost shape
+#' @param ghost_color Color of the ghost (default is neon green)
+#' @return ggplot object of the ghost
+plot_simple_ghost <- function(ghost_df, ghost_color = "#39FF14") {
+  x_center <- mean(range(ghost_df$x))
+  y_top <- max(ghost_df$y)
+  y_bottom <- min(ghost_df$y)
+  ghost_height <- y_top - y_bottom
+  ghost_width <- diff(range(ghost_df$x))
+  
+  # Eyes
+  eye_y <- y_bottom + .7 * ghost_height        
+  eye_x <- x_center + c(-0.06, 0.06) * ghost_width
+  eyes <- data.frame(x = eye_x, y = rep(eye_y, 2))
+  
+  # Mouth: several waves 
+  mouth_width <- ghost_width * 0.4
+  mouth_x <- seq(x_center - 0.3 * mouth_width, x_center + 0.3 * mouth_width, length.out = 80)
+  mouth_y <- y_bottom + 0.55 * ghost_height + sin(seq(0, 7 * pi, length.out = 80)) * 0.04 * ghost_height
+  mouth <- data.frame(x = mouth_x, y = mouth_y)
+  
+  # 8 neon glow layers
+  glow_layers <- data.frame(
+    linewidth = c(12, 10, 8, 6, 4.5, 3, 2, 1),
+    alpha = c(0.04, 0.06, 0.09, 0.13, 0.18, 0.25, 0.35, 0.5)
+  )
+  
+  p <- ggplot() +
+    geom_polygon(
+      data = ghost_df, aes(x, y),
+      fill = ghost_color, alpha = 0.15, color = NA
+    )
+  
+  # Glow layers for outline, eyes, and mouth
+  for(i in seq_len(nrow(glow_layers))) {
+    p <- p +
+      geom_polygon(
+        data = ghost_df, aes(x, y),
+        fill = NA, color = scales::alpha(ghost_color, glow_layers$alpha[i]),
+        linewidth = glow_layers$linewidth[i]
+      ) +
+      geom_point(
+        data = eyes, aes(x, y),
+        color = scales::alpha(ghost_color, glow_layers$alpha[i]),
+        size = glow_layers$linewidth[i] * 2.1  ## 1.1
+      ) +
+      geom_path(
+        data = mouth, aes(x, y),
+        color = scales::alpha(ghost_color, glow_layers$alpha[i]),
+        linewidth = glow_layers$linewidth[i]
+      )
+  }
+  
+  # Solid black mouth and eyes
+  p <- p +
+    geom_path(
+      data = mouth, aes(x, y),
+      color = "#66ff00", linewidth = 1.2  ## with green ghost
+    ) +
+    geom_point(
+      data = eyes, aes(x, y),
+      color = "#66ff00",
+      size = 2
+    ) 
+  
+  # Fix aspect ratio and theme
+  p + 
+    coord_fixed(
+      xlim = c(-4, 4), 
+      ylim = c(-3, 8), 
+      expand = FALSE      ## working on margins
+    ) +
+    theme_void() +
+    theme(
+      plot.background = element_rect(fill = "black", color = NA),
+      panel.background = element_rect(fill = "black", color = NA),
+      plot.margin = margin(0, 0, 0, 0)   # margins
+    )
+}
+
+#' Generate a random ghost shape
+#' @param seed Optional seed for reproducibility
+#' @return Data frame with x and y coordinates of the ghost shape
+ghost_shape <- function(seed = NULL) {
+  if (!is.null(seed)) set.seed(seed)
+  width <- sample(seq(0.5, 3, length.out = 6), 1)  
+  height <- sample(1:6,1) 
+  x <- seq(-1, 1, length.out = 100) * width
+  amp <- runif(1, 0.15, 0.28)
+  freq <- sample(3:7, 1)
+  phase <- runif(1, 0, 2*pi)
+  y_top <- sqrt(1 - (x/width)^2) * height + runif(1, -0.03, 0.03)
+  y_bottom <- -0.5 * height + sin(seq(0, freq * pi, length.out = 100) + phase) * amp * height
+  data.frame(
+    x = c(x, rev(x)),
+    y = c(y_top, rev(y_bottom))
+  )
+}
+
+ghost_shape() |> 
+  plot_simple_ghost(ghost_color = "#39FF14")
+```
+
+::: 
+
+:::
+
+:::
+
+![](https://gallery.yopriceville.com/downloadfullsize/send/30997){.absolute left="350" top="-30" height="100"}
+
+![](https://freepngimg.com/thumb/halloween/112811-jack-o-lantern-halloween-free-png-hq.png){.absolute right="-150" top="40" height="250"}
+
+![](https://freesvg.org/img/Jack-o-Lantern-Orange.png){.absolute left="-150" bottom="70" height="150"}
+![](https://static.vecteezy.com/system/resources/thumbnails/046/854/157/small/black-pumpkin-jack-o-lantern-free-png.png){.absolute height="170" left="-160" bottom="290"}
+
+![](https://cdn.creazilla.com/cliparts/19007/black-cat-clipart-xl.png){.absolute right="-160" bottom="140" height="240"}
+
+![](https://cdn.creazilla.com/cliparts/7930033/halloween-black-cat-clipart-md.png){.absolute left="-120" top="-40" height="250"}
+
+# Today...
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDR1aXNqbDVyZG5yMXAyZjdyZ21uMjQ2bmF2NDlkeXRucWt0NDRxbSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7bu6ctZy3qGJyBkk/giphy.gif)
+
+## [[{{< iconify fluent:live-24-filled >}}]{.bigger}[Live]{.polling .Bigger} [{{< iconify fluent:live-24-filled >}}]{.bigger} [Polling]{.polling .Bigger}](https://github.com/seandavi/quarto-revealjs-live-questions)
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmU5d3E0M3h3eHFvOGthbjUzbWg0ZnJtdThmZmY3aTZ1cm55bWRieiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o6MbonSEXqAWTvqGQ/giphy.gif){.absolute left="-150" bottom="70" height="300"}
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdmd2MHdsY3BwY2Zpd2E3cmp5N2I5YzBoMnBuM2xwYWdlN2RubzZ0aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YTVYF3Peki4G4ETh10/giphy.gif){.absolute left="250" bottom="0" height="550"}
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExejRkdmlrMWViY3V3dHh3NDQyZWdlczh3cDF5d3FmMmlpdXJoa2JxNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uEAXNnhb2qOF4G8tOo/giphy.gif){.absolute right="-150" top="230" height="250"}
+
+![](https://cdn-icons-png.flaticon.com/512/927/927305.png){.absolute right="0" top="0" height="200"}
+
+![](https://static.vecteezy.com/system/resources/thumbnails/086/873/119/small/vote-box-with-question-mark-blue-3d-icon-for-election-ballots-surveys-polls-and-feedback-systems-free-png.png){.absolute left="-80" top="130" height="200"}
+
+## {{< iconify devicon:r size=2x >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`) Rendering: 
+
+::: {.columns}
+
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| eval: true
+sessionInfo()
+```
+:::
+
+::: {.column width="20%"}
+
+Quarto version `r quarto::quarto_version()`  
+
+:::
+
+:::
