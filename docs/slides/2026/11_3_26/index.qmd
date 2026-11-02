@@ -160,7 +160,7 @@ cars |>
     # values = c("Low" = "gravestone", "Med" = "pumpkin",
     #            "High" = "jackolantern", "Very high" = "ghost")
   ) +
-  scale_fill_gradient(low = "grey80", high = "black", guide = "none") +
+  scale_fill_gradient(low = "blue", high = "red", guide = "none") +
   theme_minimal()
 ```
 
@@ -204,7 +204,7 @@ cars |>
     # values = c("Low" = "gravestone", "Med" = "pumpkin",
     #            "High" = "jackolantern", "Very high" = "ghost")
   ) +
-  scale_fill_gradient(low = "grey80", high = "black", guide = "none") +
+  scale_fill_gradient(low = "blue", high = "red", guide = "none") +
   theme_minimal()
 ```
 
