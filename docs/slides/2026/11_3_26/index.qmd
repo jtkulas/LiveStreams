@@ -103,6 +103,7 @@ ggplot(df, aes(x, y)) +
 ```{r}
 #| eval: true
 #| echo: false
+#| lightbox: true
 #| 
 library(ggplot2)
 library(ggfoundry)
@@ -172,6 +173,7 @@ cars |>
 #| eval: true
 #| echo: false
 #| fig-height: 8
+#| lightbox: true
 #| 
 library(ggfoundry)
 library(tidyverse)
@@ -342,6 +344,7 @@ ghost_shape() |>
 #| out-width: "100%"
 #| fig-align: center
 #| fig-dpi: 150
+#| lightbox: true
 
 library(ggplot2)
 library(scales)
