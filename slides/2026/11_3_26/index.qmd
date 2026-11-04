@@ -19,11 +19,31 @@ format:
 engine: knitr                 ## not picking up inline codes
 filters: 
   - reveal-header
+  - live-questions
 # bibliography: bib.bib
 execute: 
   eval: false       ## for fenced code 
   echo: true
+revealjs-plugins:
+  - live-questions
+live-questions:
+  server: https://live-questions2.jtkulas.workers.dev   # your server (step 3)
+  session: stats101-week3                               # one room per talk
 ---
+
+## Which language do you use most?
+
+::: {.poll #lang}
+- R
+- Python
+- Julia
+- lemon popsicle
+:::
+
+## One word for today's lecture?
+
+::: {.wordcloud #mood max-words=2}
+:::
 
 ## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
 

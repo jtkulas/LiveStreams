@@ -121,6 +121,7 @@
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../../site_libs/revealjs/plugin/reveal-live-questions/live-questions.css" rel="stylesheet">
   <link href="../../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
     .reveal div.sourceCode {
@@ -209,6 +210,7 @@
       margin-right: 0; 
     }
   </style>
+  <script type="application/json" id="lq-config">{"closeOnLeave":true,"qr":true,"results":"live","server":"https://live-questions2.jtkulas.workers.dev","session":"stats101-week3"}</script>
 </head>
 <body class="quarto-dark">
   <div class="reveal">
@@ -225,6 +227,23 @@ OOH Session #154…<br><span class="Bigger"><iconify-icon role="img" inline="" i
 </div>
 </div>
 
+</section>
+<section id="which-language-do-you-use-most" class="slide level2">
+<h2>Which language do you use most?</h2>
+<div id="lang" class="lq-question lq-poll" data-lq="{&quot;id&quot;:&quot;lang&quot;,&quot;options&quot;:[&quot;R&quot;,&quot;Python&quot;,&quot;Julia&quot;,&quot;lemon popsicle&quot;],&quot;prompt&quot;:&quot;Which language do you use most?&quot;,&quot;results&quot;:&quot;live&quot;,&quot;type&quot;:&quot;poll&quot;}">
+<ul>
+<li>R</li>
+<li>Python</li>
+<li>Julia</li>
+<li>lemon popsicle</li>
+</ul>
+</div>
+</section>
+<section id="one-word-for-todays-lecture" class="slide level2">
+<h2>One word for today’s lecture?</h2>
+<div id="mood" class="lq-question lq-wordcloud" data-lq="{&quot;id&quot;:&quot;mood&quot;,&quot;maxAnswers&quot;:3,&quot;maxWords&quot;:2,&quot;prompt&quot;:&quot;One word for today’s lecture?&quot;,&quot;results&quot;:&quot;live&quot;,&quot;type&quot;:&quot;wordcloud&quot;}">
+
+</div>
 </section>
 <section id="open-office-hours-november-03-2026" class="slide level2">
 <h2>Open Office Hours <br>(November 03, 2026)</h2>
@@ -572,6 +591,7 @@ loaded via a namespace (and not attached):
   <script src="../../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
   <script src="../../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
   <script src="../../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../../site_libs/revealjs/plugin/reveal-live-questions/live-questions.js"></script>
   <script src="../../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
@@ -764,7 +784,7 @@ loaded via a namespace (and not attached):
         },
 
         // reveal.js plugins
-        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealLiveQuestions, QuartoSupport,
 
           RevealMath,
           RevealNotes,
