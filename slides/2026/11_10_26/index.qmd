@@ -1,0 +1,277 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: 'OOH Session #155...<br>[{{< iconify noto:black-nib >}}]{.bigger}[Letters of<br>Recommendation]{.calligraphy .Bigger}[{{< iconify noto:scroll >}}]{.bigger}'
+title-slide-attributes: 
+  data-background-image: /img/recletter.png
+  data-background-opacity: ".7"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://png.pngtree.com/png-vector/20230808/ourmid/pngtree-writing-a-letter-png-image_6930399.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+#  - live-questions
+# bibliography: bib.bib
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+#revealjs-plugins:
+#  - live-questions
+#live-questions:
+#  server: https://live-questions2.jtkulas.workers.dev   # your server (step 3)
+#  session: stats101-week3                               # one room per talk
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {.columns}
+::: {.column width="55%"}
++ Recap session #154
++ Today's topic(s):
+    + [{{< iconify noto:black-nib >}}]{.bigger}[Letters of<br>Recommendation]{.calligraphy .Bigger}[{{< iconify noto:scroll >}}]{.bigger}
++ Shared problem-solving
+
+:::
+
+::: {.column width="45%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 170px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/11_3_26">
+  <img src="/img/title154.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+## [[New Quarto Release!!](https://opensource.posit.co/blog/2026-11-02_quarto-1-11/)]{.Bigger} {background-image="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXd3MmNqbHUyYnJ2bXI1bmtlc2xkMmcwZmE4bm9tZjhlbnNteWNpMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wWcLeiYQ61220DMagm/giphy.gif" background-size="contain"}
+
+# Recap of Session <br>#154: 
+
+![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
+
+![](https://cdn-icons-png.flaticon.com/512/3782/3782275.png){.absolute top="280" right="120" height="190"}
+
+## [[{{< iconify fluent:live-24-filled >}}]{.bigger}[Live]{.polling .Bigger} [{{< iconify fluent:live-24-filled >}}]{.bigger} [Polling]{.polling .Bigger}](https://github.com/seandavi/quarto-revealjs-live-questions)
+
+::: {.panel-tabset}
+
+### Setup
+
+::: {.columns}
+
+::: {.column width="50%" .smaller}
+
+...if you have a GitHub account:
+
+1. sign--up at [{{< iconify logos:cloudflare >}}](https://www.cloudflare.com/)
+2. "Deploy" [via extension hyperlink](https://github.com/seandavi/quarto-revealjs-live-questions#cloudflare-worker--durable-object)  
+3. insert server address into YAML
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| code-line-numbers: "8-10"
+---
+title: "Week 3"
+format: revealjs
+filters:
+  - live-questions
+revealjs-plugins:
+  - live-questions
+live-questions:                         #<1>
+  server: https://live-questions.xxx
+  session: descriptivename              #<1>           
+---
+
+```
+1. `server` value provided by CloudFlare, `session` value is user--provided (something meaningful for your intended application)
+
+:::
+
+:::
+
+### Execution
+
+::: {.columns}
+
+::: {.column width="50%"}
+
++ (at least) 4 different .qmd question ***types*** (poll, quiz, word cloud, rating scale)  
++ QR code takes respondent to polling location (on phone)
+
+:::
+
+::: {.column width="50%"}
+
++ slides with QR code also [reflect polling results](https://jtkulas.github.io/LiveStreams/slides/2026/11_3_26/#/which-language-do-you-use-most)  
++ presenter controls active poll (phones synched to presenter action -- [multiplex](https://quarto.org/docs/presentations/revealjs/presenting.html#multiplex)--ish)
+
+:::
+
+:::
+
+:::
+
+
+![](https://gallery.yopriceville.com/downloadfullsize/send/28016){.absolute right="-80" top="-30" height="250"}
+
+# Today...
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2s3cWxzbHI2cXh1eWFheHdhazYyYjJ0OWlwbHIxbHozaXpmdndveCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/n3goANKAj0RfflwihW/giphy.gif)
+
+## {{< iconify noto:black-nib >}}[Letters of Recommendation]{.calligraphy .Bigger}{{< iconify noto:scroll >}}
+
+::: {.panel-tabset}
+
+### {{< iconify devicon:r >}}{{< iconify streamline-kameleon-color:quill-paper-duo >}} $\LaTeX$ (\*.Rmd)
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+````{r}
+---
+title: ''
+author: ''
+date: ''
+output:
+  bookdown::pdf_document2:                 ## pdf_document:
+    fig_caption: yes
+    latex_engine: xelatex
+    toc: false
+  word_document: default
+fontsize: 20pt
+header-includes: 
+  - \usepackage{fontawesome5}
+  - \usepackage{graphicx}
+  - \usepackage{multicol}
+  - \usepackage{fancyhdr}                                      ## header/footer logo
+  - \pagestyle{fancy}           
+  - \setlength{\headheight}{40pt}                        ## More space between line and text
+  - \addtolength{\topmargin}{-20pt}                      ## trying to pull text up (vertically)
+  - \rhead{\includegraphics[width = .1\textwidth]{erg2.png}}                  ## header
+  - \lhead{October 27, 2026}
+  - \cfoot{\includegraphics[width = .15\textwidth]{erg2.png}}            ## footer
+---
+\large
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\rightline{e{\faRProject}g}
+\rightline{Survey Reports}
+\rightline{\href{www.ergreports.com}{www.ergreports.com}}
+Dear selection committee,
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+Nunc ac dignissim magna. Vestibulum vitae egestas elit. Proin feugiat leo quis ante condimentum, eu ornare mauris feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris cursus laoreet ex, dignissim bibendum est posuere iaculis. Suspendisse et maximus elit. In fringilla gravida ornare. Aenean id lectus pulvinar, sagittis felis nec, rutrum risus. Nam vel neque eu arcu blandit fringilla et in quam. Aliquam luctus est sit amet vestibulum eleifend. Phasellus elementum sagittis molestie. Proin tempor lorem arcu, at condimentum purus volutpat eu. Fusce et pellentesque ligula. Pellentesque id tellus at erat luctus fringilla. Suspendisse potenti.
+
+Etiam maximus accumsan gravida. Maecenas at nunc dignissim, euismod enim ac, bibendum ipsum. Maecenas vehicula velit in nisl aliquet ultricies. Nam eget massa interdum, maximus arcu vel, pretium erat. Maecenas sit amet tempor purus, vitae aliquet nunc. Vivamus cursus urna velit, eleifend dictum magna laoreet ut. Duis eu erat mollis, blandit magna id, tincidunt ipsum. Integer massa nibh, commodo eu ex vel, venenatis efficitur ligula. Integer convallis lacus elit, maximus eleifend lacus ornare ac. Vestibulum scelerisque viverra urna id lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean eget enim at diam bibendum tincidunt eu non purus. Nullam id magna ultrices, sodales metus viverra, tempus turpis.
+
+Integer convallis lacus elit, maximus eleifend lacus ornare ac. Vestibulum scelerisque viverra urna id lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean eget enim at diam bibendum tincidunt eu non purus. Nullam id magna ultrices, sodales metus viverra, tempus turpis. Etiam maximus accumsan gravida. Maecenas at nunc dignissim, euismod enim ac, bibendum ipsum. Maecenas vehicula velit in nisl aliquet ultricies. Nam eget massa interdum, maximus arcu vel, pretium erat. Maecenas sit amet tempor purus, vitae aliquet nunc. Vivamus cursus urna velit, eleifend dictum magna laoreet ut.
+
+Regards, 
+\newline
+
+
+\begin{multicols}{3}
+John Kulas, Ph.D.  \\
+President, \href{www.ergreports.com}{e{\faRProject}g}  \\
+Minneapolis, MN 55421 \\
+\href{mailto:jtkulas@ergreports.com}{jtkulas@ergreports.com} \newline
+(651) 216-3353 \\
+
+\columnbreak
+
+\columnbreak
+
+Formerly  \\
+Professor, I/O Psychology  \\
+Montclair State University  \\
+Montclair, NJ 07043 \\
+\end{multicols}
+
+
+````
+
+:::
+
+::: {.column width="50%"}
+
+<iframe src="recletter_template.pdf" width="100%" height="450px" style="border:none;"></iframe>
+
+:::
+
+:::
+  
+### {{< iconify vscode-icons:file-type-quarto >}} (\*.qmd)
+
+::: {.columns}
+
+::: {.column width="50%" .smaller}
+
+New [Quarto extension](https://github.com/jtkulas/recletters-typst#letters-of-recommendation---quarto):  
+
+1. user provides letterhead 
+2. `emptyhead: value` shifts text up/down to accomodate header space  
+3. optional address & signature blocks
+
+:::
+
+::: {.column width="50%"}
+
+<iframe src="example.pdf" width="100%" height="450px" style="border:none;"></iframe>
+
+:::
+
+:::
+
+
+:::
+
+## {{< iconify devicon:r size=2x >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`): 
+
+::: {.columns}
+
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| eval: true
+sessionInfo()
+```
+:::
+
+::: {.column width="20%"}
+
+Quarto version `r quarto::quarto_version()`  
+
+:::
+
+:::
