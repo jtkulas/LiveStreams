@@ -37,7 +37,7 @@ execute:
 ::: {.column width="55%"}
 + Recap session #154
 + Today's topic(s):
-    + [{{< iconify noto:black-nib >}}]{.bigger}[Letters of<br>Recommendation]{.calligraphy .Bigger}[{{< iconify noto:scroll >}}]{.bigger}
+    + [[{{< iconify noto:black-nib >}}]{.bigger}[Letters of<br>Recommendation]{.calligraphy .Bigger}[{{< iconify noto:scroll >}}]{.bigger}](https://github.com/jtkulas/recletters-typst#letters-of-recommendation---quarto)
 + Shared problem-solving
 
 :::
@@ -136,16 +136,24 @@ live-questions:                         #<1>
 
 :::
 
+### User experience(s)
+
+![](https://github.com/seandavi/quarto-revealjs-live-questions/raw/main/docs/screenshots/hero.png)
+
 :::
 
 
 ![](https://gallery.yopriceville.com/downloadfullsize/send/28016){.absolute right="-80" top="-30" height="250"}
 
+![](https://png.pngtree.com/png-vector/20230504/ourmid/pngtree-set-of-cross-and-check-mark-sign-or-symbol-with-green-vector-png-image_7079782.png){.absolute left="-185" top="180" height="200"}
+
+![](https://api-gbv.org/wp-content/uploads/2017/06/Survey-transparent.png){.absolute right="-170" bottom="150" height="170" .tilt}
+
 # Today...
 
 ![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2s3cWxzbHI2cXh1eWFheHdhazYyYjJ0OWlwbHIxbHozaXpmdndveCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/n3goANKAj0RfflwihW/giphy.gif)
 
-## {{< iconify noto:black-nib >}}[Letters of Recommendation]{.calligraphy .Bigger}{{< iconify noto:scroll >}}
+## [{{< iconify noto:black-nib >}}[Letters of Recommendation]{.calligraphy .Bigger}{{< iconify noto:scroll >}}](https://github.com/jtkulas/recletters-typst#letters-of-recommendation---quarto)
 
 ::: {.panel-tabset}
 
