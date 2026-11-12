@@ -1,0 +1,142 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: 'OOH Session #156...<br>[Admonitions!!]{.kavoon .bigger}'
+title-slide-attributes: 
+  data-background-image: /img/tomspank.jpg
+#  data-background-opacity: ".7"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://www.mysafetysign.com/img/lg/S/do-not-enter-authorized-only-sign-s-7418.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+#  - live-questions
+# bibliography: bib.bib
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+#revealjs-plugins:
+#  - live-questions
+#live-questions:
+#  server: https://live-questions2.jtkulas.workers.dev   # your server (step 3)
+#  session: stats101-week3                               # one room per talk
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {.columns}
+::: {.column width="55%"}
++ Recap session #155
++ Today's topic(s):
+    + [[Admonitions!!]{.kavoon .bigger}](https://github.com/nessan/admonitions)
++ Shared problem-solving
+
+:::
+
+::: {.column width="45%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 170px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/11_10_26">
+  <img src="/img/title155.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#155: 
+
+![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
+
+![](https://cdn-icons-png.flaticon.com/512/207/207148.png){.absolute top="290" right="120" height="180"}
+
+## [{{< iconify noto:black-nib >}}[Letters of Recommendation]{.calligraphy .Bigger}{{< iconify noto:scroll >}}](https://github.com/jtkulas/recletters-typst#letters-of-recommendation---quarto)
+
+::: {.columns}
+
+::: {.column width="52%"}
+
+[\*.Rmd:]{.bigger .underline}
+
+{{< iconify emojione-v1:cross-mark >}} multiple $\LaTeX$ commands  
+{{< iconify emojione-v1:cross-mark >}} multiple $\LaTeX$ packages 
+{{< iconify emojione-v1:cross-mark >}} ground--up construction for look & feel  
+{{< iconify emojione-v1:left-check-mark >}} produces .pdf {{< iconify catppuccin:pdf >}}
+  
+:::
+
+::: {.column width="48%"}
+
+[\*.qmd:]{.bigger .underline}  
+
+{{< iconify emojione:person-shrugging-medium-skin-tone >}} requires > Quarto 1.10\
+{{< iconify emojione-v1:left-check-mark >}} dupes institutional letterhead\
+{{< iconify emojione-v1:left-check-mark >}} no construction\
+{{< iconify emojione-v1:left-check-mark >}} produces .pdf {{< iconify catppuccin:pdf >}}
+
+:::
+
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/060/562/626/non_2x/retro-style-ink-bottle-and-quill-on-transparent-background-free-png.png){.absolute right="-160" bottom="120" height="300"}
+
+![](https://www.pngmart.com/files/21/Academic-PNG-HD-Isolated.png){.absolute left="330" bottom="-10" height="230"}
+
+# Today...
+
+![](https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExdzF3dnpndmI4dThxeGVsdHhpc3N3a3pqc2tvemloNjk0bDB1ajB2YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pRotk2UQTsozm/giphy.gif)
+
+## [[Admonitions!!]{.kavoon .bigger}](https://github.com/nessan/admonitions)
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzBydnMwcTRvcWx1dWJ4amp3N2d1bHFsdzBnOXY1dzVyb3A3Nm1ydCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Hc0otiA7xwtNMK08H9/giphy.gif){.absolute height="550"}
+
+![](https://www.freeiconspng.com/uploads/do-not-sign-icon-png-4.png){.absolute right="-150" bottom="120" height="250"}
+
+![](https://static.vecteezy.com/system/resources/previews/022/168/542/non_2x/hazard-warning-attention-sign-isolated-on-transparent-background-yellow-symbol-for-your-design-free-png.png){.absolute left="-150" bottom="70" height="170"}
+
+![](https://www.onlygfx.com/wp-content/uploads/2017/12/warning-stamp-2.png){.absolute left="-160" top="120" height="250"}
+
+![](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/73e7e895-ebb4-4062-bc47-cd0f3505b1ae/dfhg8u9-97839e7c-399c-48ca-b1c4-84179a4fbbc4.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi83M2U3ZTg5NS1lYmI0LTQwNjItYmM0Ny1jZDBmMzUwNWIxYWUvZGZoZzh1OS05NzgzOWU3Yy0zOTljLTQ4Y2EtYjFjNC04NDE3OWE0ZmJiYzQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.jRui1_gyMFsczy0lyEsHQOHt9cVHJX--v1qNPSta6OE){.absolute right="-130" top="-30" height="350"}
+
+## {{< iconify devicon:r size=2x >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`): 
+
+::: {.columns}
+
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| eval: true
+sessionInfo()
+```
+:::
+
+::: {.column width="20%"}
+
+Quarto version `r quarto::quarto_version()`  
+
+:::
+
+:::

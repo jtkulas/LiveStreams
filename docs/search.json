@@ -453,5 +453,68 @@
     "title": "R is for Authoring!!",
     "section": " &  Session Info (November 10, 2026):",
     "text": "&  Session Info (November 10, 2026):\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.10.18"
+  },
+  {
+    "objectID": "slides/2026/11_17_26/index.html#open-office-hours-november-11-2026",
+    "href": "slides/2026/11_17_26/index.html#open-office-hours-november-11-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (November 11, 2026)",
+    "text": "Open Office Hours (November 11, 2026)\n\n\n\nRecap session #155\nToday’s topic(s):\n\nAdmonitions!!\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/11_17_26/index.html#new-quarto-release",
+    "href": "slides/2026/11_17_26/index.html#new-quarto-release",
+    "title": "R is for Authoring!!",
+    "section": "New Quarto Release!!",
+    "text": "New Quarto Release!!"
+  },
+  {
+    "objectID": "slides/2026/11_17_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e69667920666c75656e743a6c6976652d32342d66696c6c6564203e7d7dlive-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e69667920666c75656e743a6c6976652d32342d66696c6c6564203e7d7d-polling",
+    "href": "slides/2026/11_17_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e69667920666c75656e743a6c6976652d32342d66696c6c6564203e7d7dlive-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e69667920666c75656e743a6c6976652d32342d66696c6c6564203e7d7d-polling",
+    "title": "R is for Authoring!!",
+    "section": "Live  Polling",
+    "text": "Live  Polling\n\nSetupExecutionUser experience(s)\n\n\n\n\n…if you have a GitHub account:\n\nsign–up at \n“Deploy” via extension hyperlink\n\ninsert server address into YAML\n\n\n\n---\ntitle: \"Week 3\"\nformat: revealjs\nfilters:\n  - live-questions\nrevealjs-plugins:\n  - live-questions\n1live-questions:\n  server: https://live-questions.xxx\n  session: descriptivename\n---\n\n\n1\n\nserver value provided by CloudFlare, session value is user–provided (something meaningful for your intended application)\n\n\n\n\n\n\n\n\n\n\n(at least) 4 different .qmd question types (poll, quiz, word cloud, rating scale)\n\nQR code takes respondent to polling location (on phone)\n\n\n\nslides with QR code also reflect polling results\n\npresenter controls active poll (phones synched to presenter action – multiplex–ish)"
+  },
+  {
+    "objectID": "slides/2026/11_17_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206e6f746f3a626c61636b2d6e6962203e7d7dletters-of-recommendationb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206e6f746f3a7363726f6c6c203e7d7d",
+    "href": "slides/2026/11_17_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206e6f746f3a626c61636b2d6e6962203e7d7dletters-of-recommendationb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206e6f746f3a7363726f6c6c203e7d7d",
+    "title": "R is for Authoring!!",
+    "section": "Letters of Recommendation",
+    "text": "Letters of Recommendation\n\n\n*.Rmd:\n multiple \\(\\LaTeX\\) commands\n multiple \\(\\LaTeX\\) packages  ground–up construction for look & feel\n produces .pdf \n\n*.qmd:\n requires &gt; Quarto 1.10\n dupes institutional letterhead\n no construction\n produces .pdf"
+  },
+  {
+    "objectID": "slides/2026/11_17_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-november-11-2026",
+    "href": "slides/2026/11_17_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-november-11-2026",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (November 11, 2026):",
+    "text": "&  Session Info (November 11, 2026):\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.10.18"
+  },
+  {
+    "objectID": "slides/2026/11_17_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206e6f746f3a626c61636b2d6e6962203e7d7dletters-of-recommendationb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206e6f746f3a7363726f6c6c203e7d7d-1",
+    "href": "slides/2026/11_17_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206e6f746f3a626c61636b2d6e6962203e7d7dletters-of-recommendationb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206e6f746f3a7363726f6c6c203e7d7d-1",
+    "title": "R is for Authoring!!",
+    "section": "Letters of Recommendation",
+    "text": "Letters of Recommendation\n\n \\(\\LaTeX\\) (*.Rmd) (*.qmd)\n\n\n\n\n\n---\ntitle: ''\nauthor: ''\ndate: ''\noutput:\n  bookdown::pdf_document2:                 ## pdf_document:\n    fig_caption: yes\n    latex_engine: xelatex\n    toc: false\n  word_document: default\nfontsize: 20pt\nheader-includes: \n  - \\usepackage{fontawesome5}\n  - \\usepackage{graphicx}\n  - \\usepackage{multicol}\n  - \\usepackage{fancyhdr}                                      ## header/footer logo\n  - \\pagestyle{fancy}           \n  - \\setlength{\\headheight}{40pt}                        ## More space between line and text\n  - \\addtolength{\\topmargin}{-20pt}                      ## trying to pull text up (vertically)\n  - \\rhead{\\includegraphics[width = .1\\textwidth]{erg2.png}}                  ## header\n  - \\lhead{October 27, 2026}\n  - \\cfoot{\\includegraphics[width = .15\\textwidth]{erg2.png}}            ## footer\n---\n\\large\n```{r setup, include=FALSE}\nknitr::opts_chunk$set(echo = TRUE)\n```\n\n\\rightline{e{\\faRProject}g}\n\\rightline{Survey Reports}\n\\rightline{\\href{www.ergreports.com}{www.ergreports.com}}\nDear selection committee,\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nNunc ac dignissim magna. Vestibulum vitae egestas elit. Proin feugiat leo quis ante condimentum, eu ornare mauris feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris cursus laoreet ex, dignissim bibendum est posuere iaculis. Suspendisse et maximus elit. In fringilla gravida ornare. Aenean id lectus pulvinar, sagittis felis nec, rutrum risus. Nam vel neque eu arcu blandit fringilla et in quam. Aliquam luctus est sit amet vestibulum eleifend. Phasellus elementum sagittis molestie. Proin tempor lorem arcu, at condimentum purus volutpat eu. Fusce et pellentesque ligula. Pellentesque id tellus at erat luctus fringilla. Suspendisse potenti.\n\nEtiam maximus accumsan gravida. Maecenas at nunc dignissim, euismod enim ac, bibendum ipsum. Maecenas vehicula velit in nisl aliquet ultricies. Nam eget massa interdum, maximus arcu vel, pretium erat. Maecenas sit amet tempor purus, vitae aliquet nunc. Vivamus cursus urna velit, eleifend dictum magna laoreet ut. Duis eu erat mollis, blandit magna id, tincidunt ipsum. Integer massa nibh, commodo eu ex vel, venenatis efficitur ligula. Integer convallis lacus elit, maximus eleifend lacus ornare ac. Vestibulum scelerisque viverra urna id lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean eget enim at diam bibendum tincidunt eu non purus. Nullam id magna ultrices, sodales metus viverra, tempus turpis.\n\nInteger convallis lacus elit, maximus eleifend lacus ornare ac. Vestibulum scelerisque viverra urna id lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean eget enim at diam bibendum tincidunt eu non purus. Nullam id magna ultrices, sodales metus viverra, tempus turpis. Etiam maximus accumsan gravida. Maecenas at nunc dignissim, euismod enim ac, bibendum ipsum. Maecenas vehicula velit in nisl aliquet ultricies. Nam eget massa interdum, maximus arcu vel, pretium erat. Maecenas sit amet tempor purus, vitae aliquet nunc. Vivamus cursus urna velit, eleifend dictum magna laoreet ut.\n\nRegards, \n\\newline\n\n\n\\begin{multicols}{3}\nJohn Kulas, Ph.D.  \\\\\nPresident, \\href{www.ergreports.com}{e{\\faRProject}g}  \\\\\nMinneapolis, MN 55421 \\\\\n\\href{mailto:jtkulas@ergreports.com}{jtkulas@ergreports.com} \\newline\n(651) 216-3353 \\\\\n\n\\columnbreak\n\n\\columnbreak\n\nFormerly  \\\\\nProfessor, I/O Psychology  \\\\\nMontclair State University  \\\\\nMontclair, NJ 07043 \\\\\n\\end{multicols}\n\n\n\n\n\n\n\n\nNew Quarto extension:\n\nuser provides letterhead\nemptyhead: value shifts text up/down to accomodate header space\n\noptional address & signature blocks"
+  },
+  {
+    "objectID": "slides/2026/11_17_26/index.html#admonitions",
+    "href": "slides/2026/11_17_26/index.html#admonitions",
+    "title": "R is for Authoring!!",
+    "section": "Admonitions!!",
+    "text": "Admonitions!!"
+  },
+  {
+    "objectID": "slides/2026/11_17_26/index.html#open-office-hours-november-12-2026",
+    "href": "slides/2026/11_17_26/index.html#open-office-hours-november-12-2026",
+    "title": "R is for Authoring!!",
+    "section": "Open Office Hours (November 12, 2026)",
+    "text": "Open Office Hours (November 12, 2026)\n\n\n\nRecap session #155\nToday’s topic(s):\n\nAdmonitions!!\n\nShared problem-solving\n\n\n    \n\n\n\n\n\n\nReminder – check it out!! \n\n\nFantastic  resource!!"
+  },
+  {
+    "objectID": "slides/2026/11_17_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-november-12-2026",
+    "href": "slides/2026/11_17_26/index.html#b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e6966792064657669636f6e3a722073697a653d3278203e7d7d-b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206d6174657269616c2d69636f6e2d7468656d653a71756172746f2073697a653d3278203e7d7d-session-info-november-12-2026",
+    "title": "R is for Authoring!!",
+    "section": " &  Session Info (November 12, 2026):",
+    "text": "&  Session Info (November 12, 2026):\n\n\n\n\nR version 4.5.0 (2025-04-11 ucrt)\nPlatform: x86_64-w64-mingw32/x64\nRunning under: Windows 10 x64 (build 19045)\n\nMatrix products: default\n  LAPACK version 3.12.1\n\nlocale:\n[1] LC_COLLATE=English_United States.utf8 \n[2] LC_CTYPE=English_United States.utf8   \n[3] LC_MONETARY=English_United States.utf8\n[4] LC_NUMERIC=C                          \n[5] LC_TIME=English_United States.utf8    \n\ntime zone: America/Chicago\ntzcode source: internal\n\nattached base packages:\n[1] stats     graphics  grDevices utils     datasets  methods   base     \n\nloaded via a namespace (and not attached):\n [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      \n [5] htmltools_0.5.9   otel_0.2.0        rstudioapi_0.18.0 yaml_2.3.12      \n [9] rmarkdown_2.31    knitr_1.51        jsonlite_2.0.0    xfun_0.57        \n[13] digest_0.6.39     rlang_1.1.7       evaluate_1.0.5   \n\n\n\nQuarto version 1.10.18"
   }
 ]
