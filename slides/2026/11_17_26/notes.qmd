@@ -1,0 +1,85 @@
+**Admonitions** (also called callouts, alerts, or notices) are highlighted blocks for notes, tips, warnings, etc. Your Quarto extension uses the simple AsciiDoc-style paragraph syntax (`NOTE:`, `WARNING:`, etc.). There is no single universal standard, but many documentation systems and markup languages define overlapping sets of types, often with a severity hierarchy. The core five that appear most frequently are **Note**, **Tip**, **Important**, **Caution**, and **Warning**.
+
+### Major systems and their types
+
+**AsciiDoc** (the direct model for your extension)  
+Types: `NOTE`, `TIP`, `IMPORTANT`, `CAUTION`, `WARNING`.  
+Syntax: `WARNING: text` for a single paragraph, or `[WARNING]` + block delimiters for complex content.  
+Distinction: Use **CAUTION** to advise acting carefully; use **WARNING** for actual danger, harm, or consequences.
+
+**Quarto Callouts**  
+Types: `note`, `tip`, `important`, `caution`, `warning` (nearly identical to AsciiDoc).  
+Syntax: `::: {.callout-note} ... :::` (more verbose than the paragraph style your extension adds).
+
+**GitHub Alerts** (and similar in GitLab)  
+Types: `NOTE`, `TIP`, `IMPORTANT`, `WARNING`, `CAUTION`.  
+Syntax: blockquote starting with `> [!NOTE]` (or the other types). These are a platform extension, not part of CommonMark or GFM.
+
+**reStructuredText / Sphinx**  
+Types: `attention`, `caution`, `danger`, `error`, `hint`, `important`, `note`, `tip`, `warning`, `seealso`.  
+Syntax: `.. note::` (or other type) as a directive. These are classic and widely used in Python and technical docs.
+
+**MkDocs Material**  
+Types (with aliases): `note`, `abstract`/`summary`/`tldr`, `info`, `tip`/`hint`/`important`, `success`, `question`, `warning`/`caution`/`attention`, `failure`/`error`, `danger`, `bug`, `example`, `quote`.  
+Syntax: `!!! note` (or `???` for collapsible) with indented content. Highly customizable with icons and colors.
+
+**Obsidian Callouts**  
+Types (with aliases): `note`, `abstract`/`summary`/`tldr`, `info`, `todo`, `tip`/`hint`/`important`, `success`/`check`/`done`, `question`/`help`/`faq`, `warning`/`caution`/`attention`, `failure`/`fail`/`missing`, `danger`/`error`, `bug`, `example`, `quote`/`cite`.  
+Syntax: `> [!note]` (or with `+`/`-` for open/collapsed by default, plus optional title). Very flexible for personal knowledge bases.
+
+**Docusaurus**  
+Types: `note`, `tip`, `info`, `warning`, `danger` (plus some aliases such as `caution`).  
+Syntax: `:::note` ... `:::`.
+
+**MyST Markdown** (used in Jupyter Book and similar)  
+Types: `note`, `attention`, `important`, `caution`, `hint`, `warning`, `seealso`, `tip`, `danger`, `error`.  
+Similar in spirit to Sphinx directives, with good compatibility notes for other systems.
+
+**DITA**  
+Uses a `<note>` element with a `type` attribute. Common values include `note`, `tip`, `important`, `caution`, `danger`, `warning`, `notice`, `attention`, `remember`, `restriction`, and others. Some types (especially danger/warning/notice) are aligned with ANSI Z535 and ISO 3864 safety standards. There is also a more structured `<hazardstatement>` for formal safety messaging.
+
+### Safety and style-guide standards
+
+**ANSI Z535.6** (product safety information in manuals and collateral materials) defines signal words with a clear severity hierarchy:  
+- **DANGER** — will result in death or serious injury  
+- **WARNING** — could result in death or serious injury  
+- **CAUTION** — may result in minor or moderate injury  
+- **NOTICE** — no personal injury (property damage or important non-hazard information)  
+
+These influence many technical-writing systems (including parts of DITA and Metanorma). Related standards such as ISO 3864 cover similar concepts.
+
+**Google Developer Documentation Style Guide** recommends: Note, Caution, Warning, and Success. It emphasizes using them sparingly.
+
+**Metanorma** extends AsciiDoc with additional types such as `DANGER` and `SAFETY PRECAUTION`.
+
+### Practical notes for a session
+
+- The five-type set (Note / Tip / Important / Caution / Warning) is the most portable and widely recognized.  
+- Syntax is highly fragmented in Markdown (no CommonMark standard yet; there have been long-running discussions about directives or blockquote-based alerts). AsciiDoc, RST, and DITA are more standardized.  
+- Severity hierarchies and visual cues (color, icon) vary by tool, but the underlying intent (supplemental info → tips → important constraints → cautions → warnings) is consistent.  
+- Useful references to cite: AsciiDoc docs (for the syntax your extension emulates), Sphinx/RST, MkDocs Material, Obsidian, DITA language reference, and ANSI Z535.6 for the safety-oriented side.
+
+These cover the main specifications and conventions you can reference alongside Quarto callouts and GitHub alerts.
+
+In JupyterLab:
+
+`pip install jupyterlab_myst`
+
+```bash
+:::{note}
+This is a note.
+:::
+
+:::{warning}
+Watch out!
+:::
+
+:::{tip} Optional custom title
+Here’s a helpful tip.
+:::
+
+:::{admonition} Custom Title
+:class: caution
+You can also use the generic admonition directive.
+:::
+```

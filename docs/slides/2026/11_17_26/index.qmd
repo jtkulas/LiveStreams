@@ -79,7 +79,7 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ::: {.column width="52%"}
 
-[\*.Rmd:]{.bigger .underline}
+[[\*.Rmd:]{.bigger .underline}](https://jtkulas.github.io/LiveStreams/slides/2026/11_10_26/#/b58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206e6f746f3a626c61636b2d6e6962203e7d7dletters-of-recommendationb58fc729-690b-4000-b19f-365a4093b2ff7b7b3c2069636f6e696679206e6f746f3a7363726f6c6c203e7d7d)
 
 {{< iconify emojione-v1:cross-mark >}} multiple $\LaTeX$ commands  
 {{< iconify emojione-v1:cross-mark >}} multiple $\LaTeX$ packages 
@@ -90,7 +90,7 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ::: {.column width="48%"}
 
-[\*.qmd:]{.bigger .underline}  
+[[\*.qmd:]{.bigger .underline}](https://github.com/jtkulas/recletters-typst#letters-of-recommendation---quarto)  
 
 {{< iconify emojione:person-shrugging-medium-skin-tone >}} requires > Quarto 1.10\
 {{< iconify emojione-v1:left-check-mark >}} dupes institutional letterhead\
@@ -113,13 +113,29 @@ Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4s
 
 ![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzBydnMwcTRvcWx1dWJ4amp3N2d1bHFsdzBnOXY1dzVyb3A3Nm1ydCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Hc0otiA7xwtNMK08H9/giphy.gif){.absolute height="550"}
 
-![](https://www.freeiconspng.com/uploads/do-not-sign-icon-png-4.png){.absolute right="-150" bottom="120" height="250"}
+::: {.absolute style="bottom: 100px; right: -150px; width: 250px;"}
+<a href="https://quarto.org/docs/authoring/callouts.html">
+  <img src="https://www.freeiconspng.com/uploads/do-not-sign-icon-png-4.png">
+</a>
+:::
 
-![](https://static.vecteezy.com/system/resources/previews/022/168/542/non_2x/hazard-warning-attention-sign-isolated-on-transparent-background-yellow-symbol-for-your-design-free-png.png){.absolute left="-150" bottom="70" height="170"}
+::: {.absolute style="bottom: 70px; left: -150px; width: 210px;"}
+<a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts">
+  <img src="https://static.vecteezy.com/system/resources/previews/022/168/542/non_2x/hazard-warning-attention-sign-isolated-on-transparent-background-yellow-symbol-for-your-design-free-png.png">
+</a>
+:::
 
-![](https://www.onlygfx.com/wp-content/uploads/2017/12/warning-stamp-2.png){.absolute left="-160" top="120" height="250"}
+::: {.absolute style="top: 110px; left: -160px; width: 450px;"}
+<a href="https://obsidian.md/help/callouts">
+  <img src="https://www.onlygfx.com/wp-content/uploads/2017/12/warning-stamp-2.png">
+</a>
+:::
 
-![](https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/73e7e895-ebb4-4062-bc47-cd0f3505b1ae/dfhg8u9-97839e7c-399c-48ca-b1c4-84179a4fbbc4.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi83M2U3ZTg5NS1lYmI0LTQwNjItYmM0Ny1jZDBmMzUwNWIxYWUvZGZoZzh1OS05NzgzOWU3Yy0zOTljLTQ4Y2EtYjFjNC04NDE3OWE0ZmJiYzQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.jRui1_gyMFsczy0lyEsHQOHt9cVHJX--v1qNPSta6OE){.absolute right="-130" top="-30" height="350"}
+::: {.absolute style="top: -40px; right: -130px; width: 300px;"}
+<a href="https://mystmd.org/guide/admonitions">
+  <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/73e7e895-ebb4-4062-bc47-cd0f3505b1ae/dfhg8u9-97839e7c-399c-48ca-b1c4-84179a4fbbc4.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi83M2U3ZTg5NS1lYmI0LTQwNjItYmM0Ny1jZDBmMzUwNWIxYWUvZGZoZzh1OS05NzgzOWU3Yy0zOTljLTQ4Y2EtYjFjNC04NDE3OWE0ZmJiYzQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.jRui1_gyMFsczy0lyEsHQOHt9cVHJX--v1qNPSta6OE">
+</a>
+:::
 
 ## {{< iconify devicon:r size=2x >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`): 
 
