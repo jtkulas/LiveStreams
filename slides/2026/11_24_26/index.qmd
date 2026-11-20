@@ -1,0 +1,223 @@
+---
+title: "[R is for <br>Authoring!!]{.shadowsharp}" 
+author: 'OOH Session #157...<br>[download]{.downloadthis .bigger}<br>&nbsp;&nbsp;{{< iconify flat-color-icons:download >}}[this!!]{.downloadthis .bigger}{{< iconify flat-color-icons:download >}}'
+title-slide-attributes: 
+  data-background-image: /img/yogieating.jpg
+  data-background-opacity: ".7"
+format: 
+  revealjs:
+    mouse-wheel: true              
+    slide-tone: false
+    transition: convex
+    transition-speed: slow
+    code-overflow: wrap              ## has never "worked"
+    theme: ../../../css/theming2026.scss 
+    logo: https://www.jellystonemillrun.com/wp-content/uploads/2024/05/2019-yogi-booboo-running-with-picnic-basket-300x211-1.png
+    footer-logo-link: "https://github.com/jtkulas/LiveStreams"  
+    preview-links: false      ## true brings up iframe window instead of "site"
+    code-annotations: hover   ## select
+engine: knitr                 ## not picking up inline codes
+filters: 
+  - reveal-header
+  - admonitions 
+#  - live-questions
+# bibliography: bib.bib
+execute: 
+  eval: false       ## for fenced code 
+  echo: true
+#revealjs-plugins:
+#  - live-questions
+#live-questions:
+#  server: https://live-questions2.jtkulas.workers.dev   # your server (step 3)
+#  session: stats101-week3                               # one room per talk
+---
+
+## Open Office Hours <br>(`r format(Sys.Date(),"%B %d, %Y")`) 
+
+::: {.columns}
+::: {.column width="55%"}
++ Recap session #156
++ Today's topic(s):
+    + [[download]{.downloadthis .bigger}<br>&nbsp;&nbsp;{{< iconify flat-color-icons:download >}}[this!!]{.downloadthis .bigger}{{< iconify flat-color-icons:download >}}](https://github.com/shafayetShafee/downloadthis)
++ Shared problem-solving
+
+:::
+
+::: {.column width="45%"}
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+::: {.callout-note}
+## Reminder -- check it out!! {{< iconify emojione-v1:blue-book >}}{{< iconify emojione-v1:green-book >}}
+Fantastic [{{< iconify material-icon-theme:quarto >}} resource!! ](https://qmd4sci.njtierney.com/) 
+:::
+
+:::
+
+:::
+
+::: {.absolute style="top: 170px; right: -120px; width:550px;"}
+<a href="https://jtkulas.github.io/LiveStreams/slides/2026/11_17_26">
+  <img src="/img/title156.JPG">
+</a>
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/015/241/249/non_2x/glowing-neon-arrow-doodle-transparent-free-png.png){.absolute top="165" left="385" width="200"}
+
+# Recap of Session <br>#156: 
+
+![](https://pngimg.com/uploads/sticky_note/sticky_note_PNG18952.png){.absolute right="100"}
+
+![](https://img.magnific.com/premium-vector/vector-set-father-scolding-his-child-flat-design-style_995281-49855.jpg?semt=ais_hybrid&w=740&q=80){.absolute top="295" right="125" height="185" .tiltpostit}
+
+## [[Admonitions!!]{.kavoon .bigger}](https://www.linkedin.com/pulse/rules-admonitions-steve-arrants-wxwre/)
+
+::: {.panel-tabset}
+
+### {{< iconify devicon:jupyter-wordmark >}}+[[{]{style="color: #f37821;" .bigger}[MyST]{style="color: white;"}[}]{style="color: #f37821;" .bigger}]{.myst}
+
+::: {.columns}
+
+::: {.column width="50%"}
+
++ ten ["admonitions"](https://mystmd.org/guide/admonitions)
++ shared [{{< iconify game-icons:egyptian-sphinx >}} origin](https://www.sphinx-doc.org/en/master/) (w [{{< iconify material-icon-theme:quarto >}}](https://quarto.org/docs/authoring/callouts.html))  
++ dropdown capable (e.g., collapsable)
++ native support with:
+```text
+pip install jupyterlab_myst
+``` 
+
+:::
+
+::: {.column width="50%"}
+:::
+
+:::
+
+![](/img/myst5.JPG){.absolute right="-130" bottom="40" height="400"}
+
+### {{< iconify octicon:lockup-github-24 style="color: white;" >}}
+
+::: {.columns}
+
+::: {.column width="50%"}
+
++ five ["alerts"](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts)
++ recommends adherence to significance hierarchy
++ specificaiton indicated by "**special blockquote**":
+
+```text
+> [!NOTE]
+> content goes here
+```
+:::
+
+::: {.column width="50%"}
+:::
+
+:::
+
+![](/img/githubalerts.png){.absolute right="-150" bottom="90" height="350"}
+
+### {{< iconify logos:obsidian >}}
+
+::: {.columns}
+
+::: {.column width="50%"}
+
++ thirteen ["callout" types](https://obsidian.md/help/callouts)  
++ solid background color
++ [nestable!! {{< iconify noto:face-with-tongue >}}](https://obsidian.md/help/callouts#Nested+callouts)  
++ spex similar to {{< iconify akar-icons:github-fill style="color: white;" >}}:  
+
+```text
+> [!faq]- How foldable?
+> plus (+) or minus (-) directly 
+> after the type identifier.
+```
+
+:::
+
+::: {.column width="50%"}
+:::
+
+:::
+
+![](/img/obsidiancallouts.png){.absolute right="0" bottom="5" height="450"}
+
+### {{< iconify material-icon-theme:quarto >}}Extension
+
+::: {.columns}
+
+::: {.column width="50%"}
+
++ five ["ASCII--styled" callouts](https://github.com/nessan/admonitions)  
++ transparent background
++ undifferentiated (from plain--text) spex:
+
+```text
+TIP: This is a tip
+
+```
+:::
+
+::: {.column width="50%" .wee}
+
+TIP: Tip: Your waitress generously
+
+CAUTION: Caution: Watch your step {{< iconify at-icons:paw-print >}}
+
+WARNING: Warning: Ooh scary stuff!!!
+
+IMPORTANT: Important: Naw not really {{< iconify noto-v1:winking-face-with-tongue >}}
+
+NOTE: Note: Take notes here {{< iconify streamline-kameleon-color:quill-paper-pop >}}
+
+:::
+
+:::
+
+:::
+
+![](https://cdn-icons-png.flaticon.com/512/17872/17872453.png){.absolute right="-100" top="-50" height="250" .tilt}
+
+# Today...
+
+![](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHR2OGZ0dW4wMjJ3dmcwb2dkdDF1Yng1ZDBsZmV4YzkyOWFyY3g0biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lQ5jqMmipVyec/giphy.gif)
+
+## [[download]{.downloadthis .bigger} {{< iconify flat-color-icons:download >}}[this!!]{.downloadthis .bigger}{{< iconify flat-color-icons:download >}}](https://github.com/shafayetShafee/downloadthis)
+
+![](https://openclipart.org/image/800px/201887){.absolute right="-190" top="-20" height="150" .tilt}
+
+![](https://static.vecteezy.com/system/resources/previews/069/099/151/non_2x/purple-download-icon-high-quality-isolated-on-transparent-background-free-png.png){.absolute height="450" left="-180" top="70"}
+
+![](https://cdn-icons-png.flaticon.com/512/13424/13424091.png){.absolute right="-130" bottom="100" height="400"}
+
+![](https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnd5Nzg2MGV4MnhxZWYxOHpneDNqbWl6YTdoOHNiMGMxamYzdTV0MyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PSqwBQHGbsQurQbW2u/giphy.gif){.absolute bottom="80" left="280" height="500"}
+
+![](https://www.jellystonemillrun.com/wp-content/uploads/2024/05/160YOGIBU17083_CA_YOGI-S.png){.absolute left="-180" bottom="0" height="200"}
+
+## {{< iconify devicon:r size=2x >}} & {{< iconify material-icon-theme:quarto size=2x >}} Session Info (`r format(Sys.Date(),"%B %d, %Y")`): 
+
+::: {.columns}
+
+::: {.column width="80%"}
+```{r}
+#| echo: false
+#| eval: true
+sessionInfo()
+```
+:::
+
+::: {.column width="20%"}
+
+Quarto version `r quarto::quarto_version()`  
+
+:::
+
+:::
