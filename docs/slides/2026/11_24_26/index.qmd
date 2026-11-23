@@ -109,7 +109,7 @@ pip install jupyterlab_myst
 
 + five ["alerts"](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts)
 + recommends adherence to significance hierarchy
-+ specificaiton indicated by "**special blockquote**":
++ specification indicated by "special blockquote":
 
 ```text
 > [!NOTE]
@@ -132,7 +132,7 @@ pip install jupyterlab_myst
 
 + thirteen ["callout" types](https://obsidian.md/help/callouts)  
 + solid background color
-+ [nestable!! {{< iconify noto:face-with-tongue >}}](https://obsidian.md/help/callouts#Nested+callouts)  
++ [nestable!! {{< iconify twemoji:nest-with-eggs >}}](https://obsidian.md/help/callouts#Nested+callouts)  
 + spex similar to {{< iconify akar-icons:github-fill style="color: white;" >}}:  
 
 ```text
@@ -158,7 +158,7 @@ pip install jupyterlab_myst
 
 + five ["ASCII--styled" callouts](https://github.com/nessan/admonitions)  
 + transparent background
-+ undifferentiated (from plain--text) spex:
++ undifferentiated spex (from plain--text):
 
 ```text
 TIP: This is a tip
@@ -174,9 +174,9 @@ CAUTION: Caution: Watch your step {{< iconify at-icons:paw-print >}}
 
 WARNING: Warning: Ooh scary stuff!!!
 
-IMPORTANT: Important: Naw not really {{< iconify noto-v1:winking-face-with-tongue >}}
+IMPORTANT: Important: Nothing else matters {{< iconify icomoon-free:music >}}
 
-NOTE: Note: Take notes here {{< iconify streamline-kameleon-color:quill-paper-pop >}}
+NOTE: Note: Take notes here {{< iconify streamline-ultimate-color:paper-write >}}
 
 :::
 
